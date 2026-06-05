@@ -89,90 +89,29 @@
     </div>
     {% else %}
     <p style="color:var(--meta);">{{ "Season data is being updated." if lang == "en" else "Данные по сезонам уточняются." }}</p>
-    {% endif %}
+{% endif %}
 </section>
 
-<!-- BUDGET -->
+{% if country.slug == "maldives" and lang == "ru" %}
 <section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:1200px;margin:0 auto;">
-        <h2>{{ "How Much Does a Trip to " if lang == "en" else "Сколько стоит отдых в " }}{{ cname_prep }} {{ "Cost" if lang == "en" else "" }}</h2>
-        <p style="text-align:center;color:var(--meta);margin-bottom:40px;font-size:16px;">{{ "Estimated prices per person for 7 days, including flights. Actual cost depends on season, booking depth, and exchange rates." if lang == "en" else "Ориентировочные цены на 1 человека за 7 дней, включая перелёт. Фактическая стоимость зависит от сезона, глубины бронирования и курса валют." }}</p>
-        {% set bud = data.budget_en if lang == "en" else data.budget_ru %}
-        {% if data and bud %}
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-            {% for title, price, items in bud %}
-            <div style="background:var(--bg);padding:32px;border-radius:16px;">
-                <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;">{{ title }}</h3>
-                <p style="font-size:24px;color:var(--vermillion);font-weight:700;margin-bottom:20px;">{{ price }}</p>
-                <ul style="list-style:none;padding:0;">
-                    {% for item in items %}
-                    <li style="padding:6px 0;font-size:14px;color:var(--charcoal);border-bottom:1px solid rgba(0,0,0,0.06);">✓ {{ item }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endfor %}
+    <div style="max-width:800px;margin:0 auto;">
+        <h2 style="text-align:left;">📱 Как заполнить декларацию и получить QR-код для Мальдив</h2>
+        <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
+            <p><strong>Пошаговая инструкция:</strong></p>
+            <ol style="padding-left:20px;">
+                <li>За 96 часов до вылета заполните форму IMUGA на сайте <strong>imuga.immigration.gov.mv</strong></li>
+                <li>Укажите данные загранпаспорта, рейс, адрес проживания на Мальдивах</li>
+                <li>Загрузите фото паспорта и себя (селфи)</li>
+                <li>После заполнения вы получите <strong>QR-код</strong> — сохраните скриншот на телефон</li>
+                <li>QR-код нужно показать на паспортном контроле по прилёте</li>
+                <li>Также заполните форму на выезд за 96 часов до обратного рейса</li>
+                <li><strong>Важно:</strong> без заполненной IMUGA вас не посадят на рейс в Мальдивы</li>
+                <li>Если не получается заполнить самостоятельно — я помогаю своим туристам с оформлением</li>
+            </ol>
         </div>
-        {% endif %}
-        <p style="text-align:center;color:var(--meta);font-size:13px;margin-top:24px;">* {{ "Prices are approximate as of June 2026. Verify before booking." if lang == "en" else "Цены ориентировочные на июнь 2026. Требуют проверки перед бронированием." }}</p>
-    </div>
-</section>
-
-<!-- WHAT TO SEE -->
-<section class="section">
-    <h2>Что посмотреть в {{ country.name_ru }}</h2>
-    {% if data and data.what_to_see_ru %}
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:40px;">
-        {% for item in data.what_to_see_ru %}
-        <div style="background:#fff;padding:24px;border-radius:16px;display:flex;align-items:flex-start;gap:12px;">
-            <span style="font-size:24px;flex-shrink:0;">📍</span>
-            <span style="font-size:15px;color:var(--charcoal);line-height:1.5;">{{ item }}</span>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %}
-</section>
-
-<!-- HOTELS (Maldives-specific) -->
-{% if data and data.hotels_ru %}
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:1200px;margin:0 auto;">
-        <h2>Лучшие отели Мальдив — от бюджетных до люкс</h2>
-        <p style="text-align:center;color:var(--meta);margin-bottom:40px;font-size:16px;">15 проверенных вариантов с реальными ценами, описанием трансфера и партнёрскими ссылками для бронирования. Цены ориентировочные на 2026 год.</p>
-        {% for cat_title, cat_hotels in data.hotels_ru %}
-        <div style="margin-bottom:40px;">
-            <h3 style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--ink);">{{ cat_title }}</h3>
-            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;">
-                {% for name, desc, link in cat_hotels %}
-                <div style="background:var(--bg);padding:24px;border-radius:16px;display:flex;flex-direction:column;">
-                    <h4 style="font-size:17px;font-weight:700;margin-bottom:8px;color:var(--ink);">{{ name }}</h4>
-                    <p style="font-size:14px;color:var(--charcoal);line-height:1.6;flex:1;">{{ desc }}</p>
-                    <a href="{{ link }}" target="_blank" rel="nofollow sponsored" class="btn-outline" style="margin-top:16px;text-align:center;">Забронировать →</a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endfor %}
     </div>
 </section>
 {% endif %}
-
-<!-- WHERE TO STAY -->
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:1200px;margin:0 auto;">
-        <h2>{{ "Where to Stay in " if lang == "en" else "Где жить в " }}{{ cname_prep }}</h2>
-        {% set stay = data.where_to_stay_en if lang == "en" else data.where_to_stay_ru %}
-        {% if data and stay %}
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:40px;">
-            {% for name, desc in stay %}
-            <div style="background:var(--bg);padding:28px;border-radius:16px;">
-                <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;">{{ name }}</h3>
-                <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">{{ desc }}</p>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
-    </div>
-</section>
 
 <!-- PRACTICAL -->
 <section class="section">
