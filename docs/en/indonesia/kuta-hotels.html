@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/kuta-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,6 +277,7 @@
             <h1>Top 10 Hotels in Kuta 2026: Budget to Luxury</h1>
 
 <p>Kuta, Bali, remains one of Indonesia’s most dynamic tourist hubs, offering a spectrum of accommodations from backpacker-friendly hostels to five-star oceanfront resorts. As of 2026, the hotel infrastructure in Kuta has undergone significant modernization, with many properties completing renovations post-pandemic. The main strip along Jalan Legian and Jalan Pantai Kuta now features improved sidewalks, better drainage, and upgraded utility connections, while the beachfront area has seen new landscaping and public access points. Neighborhoods are clearly defined: the central Kuta area near the beach is bustling with nightlife and shopping, while the quieter side streets toward Tuban and the Bali Mandara Toll Road offer more peaceful stays. Prices in 2026 have stabilized after the post-COVID surge, with budget rooms averaging $25–$45 per night, mid-range options at $60–$130, and luxury suites starting at $180. The Indonesian government’s continued focus on tourism has kept value high, with many hotels offering free breakfast, airport transfers, and loyalty discounts.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 
@@ -261,7 +285,9 @@
 <p>Located just 200 meters from Kuta Beach, this refurbished property offers private bungalows and dormitory-style rooms. Prices range from $12 for a dorm bed to $35 for a private bungalow with air conditioning and en-suite bathroom. The property features a communal pool, free Wi-Fi, and a shared kitchen. Pros include excellent location and social atmosphere; cons are thin walls and occasional noise from nearby bars. Breakfast is an additional $3.</p>
 
 <h3>2. Grandmas Plus Hotel Legian</h3>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Le" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>A modern budget hotel on Jalan Legian, Grandmas Plus offers compact but clean rooms with flat-screen TVs and minibars. Rates start at $28 per night for a standard double room. The rooftop pool provides sunset views over the neighborhood. Pros: very central, 24-hour front desk, and reliable hot water. Cons: no on-site restaurant (though many eateries are nearby) and rooms can feel cramped for families. Average nightly cost with tax: $32.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. The Kuta Garden Inn</h3>
 <p>Set in a quiet lane off Jalan Raya Kuta, this family-run inn offers traditional Balinese-style bungalows surrounded by tropical gardens. Prices range from $22 to $45 per night depending on the season. Rooms include mosquito nets, ceiling fans, and private verandas. Pros: peaceful atmosphere, friendly staff, and free parking. Cons: no pool, limited English spoken by some staff, and a 10-minute walk to the beach. Best for budget travelers seeking cultural immersion.</p>
@@ -269,30 +295,40 @@
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Harris Hotel Kuta</h3>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ku" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>A reliable mid-range chain, Harris Hotel Kuta sits on Jalan Pantai Kuta, directly across from the beach. Standard rooms start at $65 per night, including buffet breakfast. The property boasts a large lagoon-style pool, fitness center, and a kids’ club. Highlights include a rooftop bar with live music on weekends and a business center. The hotel’s location makes it ideal for both beach access and shopping at Beachwalk Mall, which is a 3-minute walk.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ku" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. The ONE Legian</h3>
 <p>This stylish boutique hotel on Jalan Legian offers rooms with contemporary decor and smart technology. Rates range from $75 to $110 per night. The rooftop infinity pool overlooks the bustling street below, and the in-house restaurant serves Indonesian and Western fusion cuisine. Highlights include free evening canapés, a 24-hour gym, and a spa offering Balinese massages. The hotel is popular with young couples and solo travelers.</p>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Kuta Paradiso Hotel</h3>
 <p>A well-established property near the Kuta Art Market, Kuta Paradiso offers spacious rooms with traditional Balinese touches. Prices range from $80 to $130 per night, including a full breakfast buffet. The highlight is the massive free-form pool with a swim-up bar and water slide. Other amenities include a tennis court, three restaurants, and a kids’ play area. The hotel is a 5-minute walk from Kuta Beach and 10 minutes from the nightlife on Jalan Legian.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>4. Ramayana Suites & Resort</h3>
 <p>Located on Jalan Bakung Sari, this resort-style hotel is set within lush gardens. Rooms start at $55 for a superior room and go up to $140 for a suite with a private plunge pool. Highlights include a large main pool, a spa with hydrotherapy facilities, and a restaurant serving Balinese specialties. The hotel offers free shuttle service to Kuta Beach and the Discovery Shopping Mall. It is particularly popular with families due to its spacious rooms and children’s activities.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. The Westin Resort Nusa Dua (Kuta Area)</h3>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Nu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Though technically in the Nusa Dua enclave, The Westin is a 10-minute drive from central Kuta and offers a beachfront luxury experience. Suites and rooms start at $220 per night. Features include a world-class spa, multiple infinity pools, a 24-hour fitness center, and five restaurants, including a seafood grill. The hotel’s signature Heavenly Bed and Heavenly Bath amenities provide exceptional comfort. Guests also have access to a private beach area with cabana service.</p>
 
 <h3>2. Hard Rock Hotel Bali</h3>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>An iconic Kuta landmark on Jalan Pantai Banjar Pande Mas, Hard Rock Hotel Bali offers rock-themed luxury. Rooms start at $180 per night, with suites reaching $400. Features include a massive free-form pool with a sand-bottom area, a rock memorabilia museum, a recording studio, and a spa. The hotel has six bars and restaurants, including the famous Hard Rock Cafe. The highlight is the nightly live music performances and the kids’ club, which offers drum lessons and pool games.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. The Laguna, a Luxury Collection Resort & Spa</h3>
 <p>Located on the southern end of Kuta Beach, The Laguna offers five-star elegance with traditional Balinese architecture. Rates start at $250 per night for a garden-view room and go up to $800 for a presidential suite. Features include a 7,000-square-meter lagoon-style pool complex, a private beach, a world-class spa with Ayurvedic treatments, and four restaurants. The hotel also offers cultural activities such as Balinese dance lessons and temple visits. Service is exceptional, with a dedicated butler team for suite guests.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="al" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>How to Choose the Right Area</h2>
 <p>Selecting the best area in Kuta depends on your travel purpose. For beach lovers, the area directly along Jalan Pantai Kuta (from the Kuta Beach entrance to the Waterbom Bali side) offers the shortest walk to the sand, with properties like The Westin and Hard Rock Hotel providing direct beach access. For sightseeing, staying near Jalan Raya Kuta or the Kuta Art Market puts you within walking distance of attractions such as the Kuta Theatre, the Bali Bombing Memorial, and the traditional markets. For nightlife enthusiasts, the Jalan Legian corridor (between Jalan Melasti and Jalan Poppies II) is the epicenter of bars, clubs, and live music venues, with hotels like The ONE Legian and Grandmas Plus offering easy access to the party scene. If you prefer a quieter stay while still being close to action, the Tuban area (south of the airport) provides budget and mid-range options with less noise.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 <p>To save money on Kuta hotels in 2026, book directly through the hotel’s website, as many properties offer 10–15% discounts for direct bookings, plus perks like free breakfast or room upgrades. Avoid booking during peak Indonesian holidays (Easter, Idul Fitri, Christmas, and New Year) when prices can double. The best time to book is 6–8 weeks in advance for mid-range and luxury hotels, while budget properties can often be booked last-minute with deals on apps like Agoda or Booking.com. Use price comparison websites like Trivago or Kayak to check rates across platforms, but always verify the final price including taxes and service charges (often 21% in Bali). Consider using credit cards with no foreign transaction fees and check if your bank offers cashback on travel bookings. For loyalty program members, hotels like Harris and The Westin offer points that can be redeemed for free nights. Finally, read recent reviews on TripAdvisor or Google Hotels to check for renovation noise or construction, as Kuta is undergoing continuous development in 2026.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
@@ -375,9 +411,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

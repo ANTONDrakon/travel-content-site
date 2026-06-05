@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/nusa-dua-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,53 +277,69 @@
             <h1>Top 10 Hotels in Nusa Dua 2026: Budget to Luxury</h1>
 
 <p>Nusa Dua, located on the southern tip of Bali, is renowned for its pristine white-sand beaches, world-class golf courses, and meticulously planned resort enclave. Unlike the bustling streets of Kuta or the artistic vibe of Ubud, Nusa Dua offers a serene, upscale atmosphere with a heavy focus on hotel infrastructure. The area is divided into two main zones: the gated BTDC (Bali Tourism Development Corporation) complex, which houses most of the five-star resorts with direct beach access, and the surrounding neighborhoods like Tanjung Benoa and Sawangan, which offer a mix of mid-range and budget accommodations. As of 2026, the average nightly rate for a standard room in a luxury resort in the BTDC area hovers around $250–$450, while mid-range hotels in Sawangan range from $60 to $120. Budget options, often found in small guesthouses along Jalan Pratama or near the Bali Collection shopping center, start as low as $25 per night. Prices have risen approximately 8% since 2024 due to increased demand from Australian and European tourists, but Nusa Dua remains a premium destination for those seeking calm and security.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="en" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>The hotel landscape in Nusa Dua is dominated by large international chains such as The St. Regis, The Ritz-Carlton, and Westin, but there is a growing trend of boutique villas and eco-friendly lodges in the Sawangan area. The BTDC complex itself is a self-contained resort city with 24-hour security, manicured gardens, and a central convention center. Neighborhoods outside the BTDC gate offer more local flavor, with warungs (small restaurants), dive shops, and water sports facilities. For 2026, the key trend is the integration of wellness tourism, with many hotels adding dedicated yoga pavilions, organic farm-to-table restaurants, and advanced spa treatments. Whether you are a backpacker or a honeymooner, Nusa Dua provides a distinct choice for every traveler.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="la" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Grandmas Plus Hotel Airport Nusa Dua</h3>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ai" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Located just 3 kilometers from the BTDC area, Grandmas Plus offers clean, compact rooms starting at $32 per night in 2026. The hotel features a small swimming pool, a 24-hour front desk, and free Wi-Fi. Each room includes air conditioning, a flat-screen TV, and an en-suite bathroom with hot water. The on-site restaurant serves Indonesian staples like nasi goreng and mie goreng for under $4.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Pros:</strong> Close to the airport (15 minutes by taxi), very affordable, quiet neighborhood. <strong>Cons:</strong> No direct beach access, limited breakfast options, rooms are small (approximately 18 square meters).</p>
 
 <h3>2. Swiss-Belinn Nusa Dua</h3>
 <p>This three-star property on Jalan Pratama offers a pool, a fitness center, and a restaurant. Rates in 2026 start at $40 per night for a standard double room. The hotel provides a free shuttle to the nearby Geger Beach (10 minutes away) and to the Bali Collection shopping mall. Rooms are modern with wooden floors and rainfall showers.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Pros:</strong> Good value for money, helpful staff, free shuttle service. <strong>Cons:</strong> Beach is not walkable (requires shuttle), pool is small, breakfast buffet is basic (eggs, toast, fruit).</p>
 
 <h3>3. Nusa Dua Beach Hotel &amp; Spa (Budget Wing)</h3>
 <p>While primarily a luxury resort, the budget wing of Nusa Dua Beach Hotel offers garden-view rooms from $45 per night in 2026. Guests have access to the main pool, beachfront, and all facilities including the spa and several restaurants. The budget rooms are older but well-maintained with traditional Balinese decor.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Pros:</strong> Access to five-star facilities for a budget price, direct beach access, lush gardens. <strong>Cons:</strong> Budget rooms are in a separate block with no sea view, check-in can be slow, Wi-Fi is spotty in the budget wing.</p>
 
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Amnaya Resort Nusa Dua</h3>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Nu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Amnaya Resort, located in the quiet Tanjung Benoa area, offers a serene escape with Balinese-inspired architecture. Rates in 2026 range from $70 to $95 per night for a deluxe room. The resort features a large lagoon-style pool, a spa with traditional Balinese massages ($35 for 60 minutes), and a restaurant serving Indonesian and Western cuisine. Rooms are spacious (35 square meters) with four-poster beds and private balconies overlooking the garden.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Free afternoon tea daily, complimentary yoga classes on Tuesday and Thursday, and a free shuttle to Nusa Dua beach (5 minutes).</p>
 
 <h3>2. Hotel Santika Nusa Dua</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sa" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>A reliable three-star chain hotel located near the Bali Convention Center. Rates start at $55 per night in 2026, rising to $80 during peak season (July-August). The hotel has a large outdoor pool, a kids' club, and a 24-hour gym. Rooms are functional with modern furniture, a work desk, and a safe. The breakfast buffet is generous with both Indonesian and continental options.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="lo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Convenient location for business travelers (walking distance to the convention center), excellent value for families, and a 24-hour room service menu with prices under $10.</p>
 
 <h3>3. The Sakala Resort Bali</h3>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>An all-suite resort in the Sawangan area, The Sakala offers one-bedroom suites starting at $110 per night in 2026. Each suite includes a separate living area, a kitchenette, and a large bathroom with a bathtub. The resort boasts a stunning infinity pool overlooking the ocean, a private beach club, and a fine-dining restaurant called "Di Mare." The property is known for its exceptional service and spacious accommodations (suites are 55 square meters).</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Free airport transfer for stays of 3 nights or more, a daily afternoon tea service, and a 24-hour butler service for suite guests.</p>
 
 <h3>4. Novotel Bali Nusa Dua</h3>
 <p>A family-friendly four-star hotel within the BTDC complex. Rates range from $85 to $130 per night in 2026. The hotel features multiple pools (including a dedicated kids' pool), a water slide, a spa, and several restaurants including a Japanese teppanyaki grill. Rooms are modern with Balinese accents, and many offer garden or partial ocean views. The property is a 5-minute walk from the beach.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Kids stay and eat free (under 12), a large fitness center with daily classes, and direct access to the BTDC shuttle bus that stops at Bali Collection and the beach.</p>
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. The St. Regis Bali Resort</h3>
 <p>Arguably the most prestigious hotel in Nusa Dua, The St. Regis offers an unparalleled level of luxury. Rates in 2026 start at $450 per night for a garden-view suite, with ocean-view suites reaching $800. The resort features a 12,000-square-foot lagoon pool, a private beach with butler service, and the renowned "Kayuputi" restaurant (a fine-dining establishment with a 7-course tasting menu for $150 per person). Each suite is exquisitely decorated with Balinese art, marble bathrooms, and a private terrace. The resort also offers a 24-hour butler service, a Remède Spa with a hydrotherapy pool, and a daily champagne sabering ritual at sunset.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> Private butler for every suite, a 24-hour fitness center with personal trainers, and a complimentary Rolls-Royce airport transfer for suite guests.</p>
 
 <h3>2. The Ritz-Carlton, Bali</h3>
 <p>Perched on a cliff in the Sawangan area, The Ritz-Carlton offers breathtaking ocean views and a serene atmosphere. Rates start at $350 per night in 2026 for a resort-view room, with suites starting at $600. The hotel features a 60-meter infinity pool, a world-class spa with 11 treatment rooms, and six restaurants including "Beach Grill" for fresh seafood. Rooms are spacious (45 square meters) with floor-to-ceiling windows, a deep soaking tub, and a private balcony. The resort also has a kids' club, a cooking school, and a chapel for weddings.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> A dedicated concierge for each guest, a 24-hour fitness center with ocean views, and a complimentary afternoon tea in the lobby lounge.</p>
 
 <h3>3. Mulia Resort &amp; Villas Nusa Dua</h3>
 <p>One of the largest luxury resorts in the area, Mulia offers a mix of rooms, suites, and private villas. Rates in 2026 start at $280 per night for a garden-view room, with villas starting at $1,200. The resort is known for its opulent design, with crystal chandeliers, marble floors, and a massive 120-meter lagoon pool. Facilities include 12 dining venues, a 5,000-square-meter spa, a fitness center, and a private beach. The "Mulia Villa" category features private pools, outdoor living areas, and personal butler service.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> A 24-hour butler service for villa guests, a complimentary shuttle to Bali Collection, and a daily high tea service in the grand lobby.</p>
 
 <h2>How to Choose the Right Area</h2>
@@ -308,12 +347,15 @@
 <p><strong>For Beach Lovers:</strong> The best area is inside the BTDC complex, where you have direct access to the calm, protected beaches of Nusa Dua. Hotels like The St. Regis and Westin are right on the sand, with loungers, umbrellas, and water sports like kayaking and paddleboarding. The water is generally calm due to a reef barrier, making it ideal for swimming and families with children. Avoid the Tanjung Benoa area if you want a quiet beach, as it is busier with jet ski and banana boat operators.</p>
 
 <p><strong>For Sightseeing:</strong> Choose a hotel near the Bali Collection shopping center or on Jalan Pratama. These locations provide easy access to the main road for trips to Uluwatu Temple (30 minutes by car), the Garuda Wisnu Kencana Cultural Park (20 minutes), and the waterblow at Nusa Dua beach (10 minutes). Budget hotels like Swiss-Belinn are well-positioned for this purpose, as they are close to taxi stands and local bus stops. For a more cultural experience, stay in Sawangan near the Ritz-Carlton, which is close to the ancient Pura Geger temple.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="ne" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p><strong>For Nightlife:</strong> Nusa Dua is not a party destination, but for evening entertainment, stay near the BTDC complex. The Bali Collection has several bars and restaurants that stay open until 11 PM, and the Westin and Novotel have live music on weekends. For a livelier scene, you need to travel to Jimbaran (15 minutes by taxi) or Seminyak (30 minutes), so a hotel with easy taxi access like the Santika or Amnaya is preferable. Avoid staying in the far south of Sawangan if you want to walk to bars, as the area is very quiet after 9 PM.</p>
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
 <p>To save money on your Nusa Dua hotel in 2026, book at least 45 days in advance for the best rates, especially for luxury properties. Use aggregators like Booking.com or Agoda to compare prices, but also check the hotel's own website for direct booking perks such as free breakfast or room upgrades. The cheapest months to visit are February, March, and November, excluding the Christmas and New Year period. Avoid booking during school holidays (June-July for Australia, July-August for Europe) when prices can double. For budget hotels, consider using Hostelworld or Airbnb for private rooms in guesthouses, which can be 20% cheaper than hotel listings.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>For mid-range hotels, look for package deals that include airport transfers or meal plans. The Amnaya Resort and Sakala often offer "stay 4, pay 3" promotions during the low season. For luxury hotels, consider using a travel agent who has access to VIP rates or loyalty program discounts. The St. Regis and Ritz-Carlton frequently offer "third night free" deals if you book directly. Always read the cancellation policy carefully, as many budget hotels in Nusa Dua now require 48-hour notice for free cancellation. Finally, consider purchasing travel insurance that covers trip cancellations, as weather disruptions (rare but possible during the rainy season from December to March) can affect your plans.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -395,9 +437,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

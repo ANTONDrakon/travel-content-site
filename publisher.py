@@ -27,23 +27,24 @@ COUNTRY_IMAGES = {
     "uae": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
     "indonesia": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
     "china": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1200&q=80",
+    "maldives": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
 }
 
 CITY_IMAGES = {
     "istanbul": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
-    "antalya": "https://images.unsplash.com/photo-1589561458704-56175fc06797?w=800&q=80",
+    "antalya": "https://images.unsplash.com/photo-1504680177321-2e6a3f4358e1?w=800&q=80",
     "alanya": "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800&q=80",
     "bodrum": "https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=800&q=80",
-    "cappadocia": "https://images.unsplash.com/photo-1641128324972-af321a4c7bbd?w=800&q=80",
+    "cappadocia": "https://images.unsplash.com/photo-1611516491426-03025e6043c8?w=800&q=80",
     "bangkok": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80",
     "phuket": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80",
-    "pattaya": "https://images.unsplash.com/photo-1559592413-7cec4aad6220?w=800&q=80",
+    "pattaya": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&q=80",
     "koh-samui": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
     "krabi": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80",
-    "sharm-el-sheikh": "https://images.unsplash.com/photo-1539635278303-d4002c07eae2?w=800&q=80",
-    "hurghada": "https://images.unsplash.com/photo-1539768942893-d7ed1a06c3d4?w=800&q=80",
+    "sharm-el-sheikh": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
+    "hurghada": "https://images.unsplash.com/photo-1539635278303-d4002c07eae2?w=800&q=80",
     "cairo": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
-    "luxor": "https://images.unsplash.com/photo-1598981459244-cf64cb659ff4?w=800&q=80",
+    "luxor": "https://images.unsplash.com/photo-1560012057-4372e14b9fdb?w=800&q=80",
     "marsa-alam": "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?w=800&q=80",
     "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
     "abu-dhabi": "https://images.unsplash.com/photo-1512632578888-7928c05b1d3b?w=800&q=80",
@@ -60,6 +61,11 @@ CITY_IMAGES = {
     "beijing": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
     "shanghai": "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=800&q=80",
     "xian": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
+    "male": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
+    "hulhumale": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
+    "maafushi": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
+    "dhigurah": "https://images.unsplash.com/photo-1505881502356-5a2a8c4c4a3e?w=800&q=80",
+    "thulusdhoo": "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80",
 }
 
 
@@ -81,7 +87,7 @@ def get_country_image(country_slug):
 def get_country_emoji(slug):
     emojis = {
         "turkey": "🇹🇷", "thailand": "🇹🇭", "egypt": "🇪🇬",
-        "uae": "🇦🇪", "indonesia": "🇮🇩", "china": "🇨🇳",
+        "uae": "🇦🇪", "indonesia": "🇮🇩", "china": "🇨🇳", "maldives": "🇲🇻",
     }
     return emojis.get(slug, "🌍")
 
@@ -191,6 +197,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     from config.destinations import DESTINATIONS
     from agents.seo_optimizer import get_url_slug, build_seo_meta, generate_schema_article, generate_schema_faq, generate_faq
     from config.prompts import CONTENT_TYPES
+    from agents.image_injector import inject_hotel_images, inject_attraction_images
 
     country = DESTINATIONS.get(country_slug)
     if not country:
@@ -214,11 +221,17 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     if not article_data:
         return
 
+    body = article_data.get("body", "")
+    if content_type == "hotels":
+        body = inject_hotel_images(body)
+    if content_type == "attractions":
+        body = inject_attraction_images(body)
+
     article_meta = {
         "title": article_data.get("title", ""),
         "meta_description": article_data.get("meta_description", ""),
         "h1": article_data.get("h1", ""),
-        "body": article_data.get("body", ""),
+        "body": body,
     }
 
     seo = build_seo_meta(article_meta, city_name, country_slug, content_type, lang)

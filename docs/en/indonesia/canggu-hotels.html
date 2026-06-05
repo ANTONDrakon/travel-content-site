@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/canggu-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -253,7 +276,9 @@
         <div class="article-body">
             <h1>Top 10 Hotels in Canggu 2026: Budget to Luxury</h1>
 <p>Canggu, Bali, has transformed from a sleepy surf village into one of Southeast Asia’s most sought-after destinations. By 2026, the area’s hotel infrastructure has matured significantly, with new eco-resorts, boutique villas, and luxury chains opening along the coastline from Berawa to Pererenan. The neighborhoods are distinct: Berawa is the bustling epicenter of cafes and co-working spaces, Batu Bolong offers the classic surf-and-sunset vibe with a bohemian edge, while Pererenan remains quieter, attracting digital nomads and families seeking space. Prices have risen steadily—budget rooms now average $35–$50 per night, mid-range options cost $70–$150, and luxury suites start at $180 and climb to $800. The key to a great stay is matching your hotel’s location to your lifestyle, whether you want to walk to the beach, dine at world-class restaurants, or work remotely with reliable fiber internet.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>In 2026, Canggu’s hotel scene is defined by sustainability and design. Many properties have eliminated single-use plastics, installed solar panels, and use locally sourced materials. The best hotels offer more than a bed—they provide curated experiences like surf lessons, yoga sessions, and cooking classes. Below, I’ve handpicked ten hotels across three price tiers, each vetted for value, location, and guest feedback. Use the table and tips at the end to book smartly.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 <h3>1. The Farm Hostel Canggu</h3>
@@ -282,16 +307,19 @@
 
 <h3>5. The Slow Canggu</h3>
 <p><strong>Description:</strong> A design-forward hotel in Batu Bolong with 24 rooms, a ground-floor café, and a rooftop bar. Rooms feature concrete walls, terrazzo floors, and floor-to-ceiling windows. It’s known for its art gallery and rotating exhibitions.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> $80–$120/night.</p>
 <p><strong>Highlights:</strong> Rooftop infinity pool with ocean views, in-room Nespresso machines, free bike rental, walking distance to Old Man’s bar and the beach.</p>
 
 <h3>6. Desa Visesa Ubud (Canggu Outpost)</h3>
 <p><strong>Description:</strong> A new 2025 opening in Pererenan, this eco-resort has 30 suites built around a central rice terrace. Each suite has a private terrace or balcony. The property uses solar power and rainwater harvesting.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> $70–$110/night.</p>
 <p><strong>Highlights:</strong> Farm-to-table restaurant, free shuttle to Echo Beach, large saltwater pool, compost program, family-friendly with kids’ club.</p>
 
 <h3>7. COMO Uma Canggu</h3>
 <p><strong>Description:</strong> Part of the COMO brand, this hotel in Berawa offers 46 rooms and suites with a wellness focus. It has a COMO Shambhala spa, a fitness center, and a beach club. Rooms are minimalist with organic cotton linens.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> $120–$150/night.</p>
 <p><strong>Highlights:</strong> Daily yoga and meditation classes, healthy breakfast buffet, direct beach access via a private path, 20-meter lap pool, free use of surfboards.</p>
 
@@ -302,18 +330,22 @@
 <p><strong>Features:</strong> Two infinity pools, private beach cabanas, a Michelin-starred restaurant (Splash), 24-hour butler, in-room spa treatments, helicopter transfers available.</p>
 
 <h3>9. Hotel Tugu Bali</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Tu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Description:</strong> A heritage-style hotel in Batu Bolong with 21 suites and villas, each filled with antiques and art from across Indonesia. It has a museum-like atmosphere with a private temple on site.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> $180–$350/night.</p>
 <p><strong>Features:</strong> Beachfront restaurant, open-air spa with traditional treatments, free cultural tours, cooking classes, private yoga pavilion, sunset boat trips.</p>
 
 <h3>10. Soori Bali</h3>
 <p><strong>Description:</strong> A secluded luxury resort in Pererenan, set on a black sand beach with 48 villas. Each villa has a private pool, outdoor shower, and a garden. The architecture is inspired by Japanese ryokans and Balinese compounds.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> $400–$800/night.</p>
 <p><strong>Features:</strong> Two restaurants (one with a sake bar), a 50-meter infinity pool, a spa with hydrotherapy circuit, private butler, free bike and scooter rental, organic farm on property.</p>
 
 <h2>How to Choose the Right Area</h2>
 <h3>For Beach Lovers</h3>
 <p>Stay in Batu Bolong. The beach here is wide, with consistent waves for beginner and intermediate surfers. The sand is dark but clean, and the sunsets are iconic. Hotels like The Slow or Hotel Tugu put you steps from the shore. Avoid Berawa if you want quiet beach time—it’s crowded with clubs and sunbed rentals.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Tu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <h3>For Sightseeing and Culture</h3>
 <p>Choose Pererenan. It’s close to Tanah Lot temple (15 minutes by scooter) and the rice terraces of Tabanan. You’ll also find local warungs and art galleries. Desa Visesa and Soori Bali offer easy access to these attractions while maintaining a serene base. Berawa is too traffic-heavy for morning temple visits.</p>
 <h3>For Nightlife and Socializing</h3>
@@ -338,6 +370,7 @@
 <tr><td>COMO Uma</td><td>Mid-range</td><td>$120–$150</td><td>Wellness, fitness</td></tr>
 <tr><td>The Legian Wing</td><td>Luxury</td><td>$250–$500</td><td>Ultimate luxury, beachfront</td></tr>
 <tr><td>Hotel Tugu</td><td>Luxury</td><td>$180–$350</td><td>Culture, heritage</td></tr>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Tu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <tr><td>Soori Bali</td><td>Luxury</td><td>$400–$800</td><td>Seclusion, romance</td></tr>
 </tbody>
 </table><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
@@ -420,9 +453,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

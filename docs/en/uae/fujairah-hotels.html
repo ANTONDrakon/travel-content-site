@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/fujairah-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,20 +277,25 @@
             <h1>Top 10 Hotels in Fujairah 2026: Budget to Luxury</h1>
 
 <p>Fujairah, the only emirate on the eastern coast of the United Arab Emirates, has rapidly evolved into a premier destination for travelers seeking a blend of rugged mountains, pristine beaches, and rich cultural heritage. Unlike the futuristic skylines of Dubai or Abu Dhabi, Fujairah offers a more relaxed, nature-focused experience. By 2026, the hotel infrastructure has matured significantly, with new properties opening along the Al Aqah Beach strip, near the historic Fujairah Fort, and in the expanding city center. The neighborhoods are distinct: Al Aqah Beach is the epicenter of luxury resorts and water sports, while the city center (around Hamad Bin Abdulla Road) is ideal for budget-conscious travelers and those exploring souks and museums. Dibba, to the north, offers quieter, family-oriented beachfront stays.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Prices in Fujairah remain competitive compared to other emirates. Budget hotels in the city center often start as low as $30 per night, while mid-range properties along the coast average $80 to $120. Luxury resorts, particularly those with private beaches and dive centers, range from $180 to $400+ per night. The best deals are typically found from May to September (summer months) when temperatures peak, though winter (November to March) sees a 30-40% price surge. Below is a curated list of the top 10 hotels for 2026, organized by budget.</p>
 
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. City Tower Hotel Fujairah</h3>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Fu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price:</strong> $35–$45 per night (standard double room, including breakfast).</p>
 <p><strong>Description:</strong> Located in the heart of Fujairah City, just a 5-minute drive from the Fujairah Museum and the historic fort, this hotel offers clean, compact rooms with air conditioning, flat-screen TVs, and free Wi-Fi. The rooftop pool provides panoramic city views.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Pros:</strong> Excellent central location, free parking, 24-hour reception, and a decent on-site restaurant serving Emirati and Indian cuisine.</p>
 <p><strong>Cons:</strong> No beach access (20-minute drive to nearest public beach), limited soundproofing from street noise, and dated bathroom fixtures in some rooms.</p>
 
 <h3>2. Royal M Hotel Fujairah</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Fu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price:</strong> $40–$48 per night (deluxe room, with optional breakfast at $5 extra).</p>
 <p><strong>Description:</strong> A modern budget hotel near the Fujairah Shopping Centre and the central bus station. Rooms are minimalist with dark wood furniture, minibars, and en-suite bathrooms. The hotel features a small gym and a business center.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="ne" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Pros:</strong> Very affordable, close to public transport, friendly English-speaking staff, and a 24-hour convenience store on the ground floor.</p>
 <p><strong>Cons:</strong> No pool, no restaurant (only a breakfast box service), and the neighborhood is busy with traffic during peak hours.</p>
 
@@ -280,23 +308,28 @@
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>4. Concorde Hotel Fujairah</h3>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Fu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price:</strong> $65–$90 per night (superior room, breakfast included).</p>
 <p><strong>Description:</strong> A 4-star property on the Corniche Road, offering views of the Gulf of Oman. Rooms are spacious with marble bathrooms, balconies, and satellite TV. The hotel has a large outdoor pool, a fitness center, and two restaurants (Italian and Lebanese).</p>
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Direct access to a private beach club (5-minute shuttle), free Wi-Fi throughout, and a popular Friday brunch buffet for $25 per person.</p>
 
 <h3>5. Al Bahar Hotel & Resort</h3>
 <p><strong>Price:</strong> $80–$110 per night (standard room, breakfast extra at $12).</p>
 <p><strong>Description:</strong> Situated on the Al Aqah Beach strip, this resort offers a mix of hotel rooms and self-catering apartments. The property features a large lagoon-style pool, a children's play area, and a dive center offering PADI courses.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Beachfront location with loungers and umbrellas included, a spa with traditional hammam, and a 24-hour supermarket on site. Free shuttle to Fujairah City (15 km away).</p>
 
 <h3>6. Fujairah Rotana Resort & Spa</h3>
 <p><strong>Price:</strong> $100–$140 per night (deluxe sea-view room, breakfast included).</p>
 <p><strong>Description:</strong> A well-known chain property located on a private stretch of Al Aqah Beach. Rooms are contemporary with floor-to-ceiling windows, rain showers, and Nespresso machines. The resort has four restaurants, a fitness center, and a full-service spa.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Excellent snorkeling right off the beach, a kids' club with daily activities, and a 20-minute drive to the Friday Market (traditional handicrafts).</p>
 
 <h3>7. Novotel Fujairah</h3>
 <p><strong>Price:</strong> $55–$75 per night (standard room, breakfast included).</p>
 <p><strong>Description:</strong> Located in the city center, near the Fujairah Airport and the Fujairah Fort. This 4-star hotel offers modern rooms with ergonomic workspaces, soundproof windows, and 42-inch TVs. The property includes a rooftop pool, a tennis court, and a 24-hour gym.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Free airport shuttle, a business lounge with complimentary snacks, and a 10-minute walk to the Lulu Hypermarket. Good value for business travelers.</p>
 
 <h2>Luxury Hotels ($150+/night)</h2>
@@ -304,16 +337,20 @@
 <h3>8. InterContinental Fujairah Resort</h3>
 <p><strong>Price:</strong> $200–$350 per night (club room with lounge access, breakfast and evening cocktails included).</p>
 <p><strong>Description:</strong> A 5-star resort set on 1.5 km of private beach in Al Aqah. The architecture is inspired by traditional Arabian forts, with lush gardens, a massive infinity pool, and a private marina. Rooms are opulent with marble bathrooms, balconies, and butler service.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="se" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> Four swimming pools (one adults-only), a 9-hole golf course, a diving center with wreck dives, and five restaurants including a seafood grill on the beach. The spa offers treatments using organic local ingredients.</p>
 
 <h3>9. Address Beach Resort Fujairah</h3>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Fu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price:</strong> $250–$400 per night (premium ocean suite, breakfast and minibar included).</p>
 <p><strong>Description:</strong> Opened in 2024, this ultra-modern resort in Dibba features a dramatic glass-fronted lobby with ocean views. Suites are spacious (minimum 50 m²) with private plunge pools, smart home controls, and floor-to-ceiling windows. The resort is designed for wellness and privacy.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> A world-class spa with hydrotherapy pools, a yoga pavilion overlooking the sea, a gourmet restaurant by a Michelin-starred chef, and a private beach with cabana service. Complimentary kayaking and paddleboarding are included.</p>
 
 <h3>10. Fairmont Fujairah Beach Resort</h3>
 <p><strong>Price:</strong> $180–$280 per night (deluxe room, breakfast included).</p>
 <p><strong>Description:</strong> Located on a quiet stretch of beach near the Dibba border, this resort blends Moroccan and Mediterranean design. Rooms have hand-painted tiles, four-poster beds, and deep soaking tubs. The property is known for its lush gardens and lagoon-style pools.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="bl" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> A 1,500 m² spa with a snow room and salt cave, a kids' club with a mini water park, a diving school, and three restaurants including a rooftop lounge with sunset views. Free shuttle to the historic Al Badiyah Mosque (oldest in the UAE).</p>
 
 <h2>How to Choose the Right Area</h2>
@@ -326,12 +363,14 @@
 
 <h3>For Nightlife & Dining</h3>
 <p>Fujairah is not a nightlife destination, but Al Aqah Beach has the best concentration of hotel bars and lounges. The InterContinental and Rotana have popular evening venues with live music. For local dining, the city center has numerous Indian and Pakistani restaurants open late. Avoid Dibba if you want nightlife—it's very quiet after sunset.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
 <h3>How to Save Money</h3>
 <ul>
 <li>Book directly on hotel websites for loyalty points and flexible cancellation policies. Third-party sites like Booking.com or Agoda often offer 10-15% discounts for advance purchase (non-refundable).</li>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="we" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <li>Travel in summer (June to September) for rates up to 50% lower. However, expect temperatures above 40°C (104°F) and high humidity.</li>
 <li>Use credit card rewards or cashback portals like TopCashback or Rakuten for an extra 5-10% off.</li>
 <li>Consider package deals: many resorts offer "stay and dive" packages including PADI courses, which can save $50-$100 per person.</li>
@@ -367,6 +406,7 @@
 </tr>
 <tr>
 <td>Hotel websites directly</td>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="we" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <td>Luxury resorts (InterContinental, Fairmont)</td>
 <td>Members get free upgrades, late checkout, and spa credits.</td>
 </tr>
@@ -457,9 +497,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

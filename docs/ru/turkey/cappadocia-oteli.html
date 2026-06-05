@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Направления</div>
+        <a href="/ru/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Главная
+        </a>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/cappadocia-oteli.html" class="nav-pill nav-pill-outline">EN</a>
@@ -265,48 +288,62 @@
 
 <h3>2. Stone House Cappadocia</h3>
 <p>Этот отель в деревне Ортахисар предлагает 8 номеров в отреставрированном каменном здании 18 века. Цена — от $30/ночь за двухместный номер с общим душем и туалетом на этаже. Номера с собственной ванной стоят от $45/ночь. Отель славится своей террасой с видом на Ортахисарскую крепость.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Плюсы: очень низкая цена, аутентичная атмосфера, возможность приготовить чай на общей кухне, бесплатный трансфер от автовокзала. Минусы: удаленность от центра Гёреме (4 км), нет кондиционеров (только вентиляторы), горячая вода может заканчиваться вечером.</p>
 
 <h3>3. Flintstone Cave House</h3>
 <p>Бюджетный пещерный отель в Учхисаре, в 1,5 км от знаменитой смотровой площадки. Двухместный номер в пещере стоит $40/ночь. Отель имеет 6 номеров, каждый с уникальной формой скалы. Владелец — местный гид, предлагающий бесплатные пешие экскурсии по долине.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Плюсы: настоящий пещерный опыт, тишина и покой, бесплатный чай и кофе в течение дня, возможность заказать ужин за $10. Минусы: слабый Wi-Fi, нет телевизора, зимой в номерах прохладно (работают обогреватели).</p>
 
 <h2>Отели среднего класса ($50-150/ночь)</h2>
 
 <h3>4. Sultan Cave Suites</h3>
 <p>Один из самых фотографируемых отелей Каппадокии, расположенный на холме в Гёреме. Известен своей террасой, где каждое утро взлетают десятки воздушных шаров, создавая идеальный кадр. Стандартный двухместный номер стоит от $95/ночь, номер-люкс с джакузи — от $130/ночь. Отель насчитывает 25 номеров, включая 10 пещерных. Завтрак включен и подается на террасе до 10:30.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Фишки: бесплатный прокат велосипедов, ежедневная дегустация местного вина в 18:00, возможность забронировать полет на шаре прямо на стойке регистрации со скидкой 10%. Рейтинг на Booking.com — 9.1.</p>
 
 <h3>5. Mithra Cave Hotel</h3>
 <p>Находится в Гёреме, в 300 метрах от Sultan Cave Suites, но с более спокойной атмосферой. Цены начинаются от $80/ночь за стандартный номер и $110 за номер с видом на долину. Отель имеет 18 номеров, все в скале, с каменными стенами и сводчатыми потолками. В 2025 году отель прошел полную реновацию систем отопления и водоснабжения.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="им" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Фишки: большой сад с фруктовыми деревьями, бесплатный трансфер до аэропорта Кайсери (при бронировании от 3 ночей), спа-центр с турецкой баней за $20. Идеален для пар, ищущих романтику.</p>
 
 <h3>6. Heaven Cave House</h3>
 <p>Бутик-отель на 7 номеров в тихом районе Учхисар, в 500 метрах от замка. Цена: $70/ночь за двухместный номер и $100 за люкс с отдельным входом. Отель принадлежит семье, которая живет на первом этаже, что создает атмосферу домашнего уюта. Все номера имеют оригинальные скальные стены и современную сантехнику.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Фишки: хозяйка Мерием готовит традиционный турецкий завтрак с домашними лепешками и вареньем, бесплатный чай в любое время, возможность участвовать в мастер-классе по приготовлению гёзлеме ($15). Подходит для одиночных путешественников.</p>
 
 <h3>7. Cappadocia Caves Hotel</h3>
 <p>Расположен в Юргюпе, в 5 км от центра Гёреме, что обеспечивает более низкие цены и аутентичность. Стандартный номер — $55/ночь, пещерный люкс — $85/ночь. Отель имеет 14 номеров, большой открытый бассейн (работает с мая по сентябрь) и собственный виноградник. Вид на долину Гюльшехир — один из лучших в регионе.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="им" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Фишки: бесплатная дегустация домашнего вина, бесплатный велосипед, трансфер до Гёреме за $5. Минус — нет ресторана на территории, только завтрак. Отличный выбор для тех, кто арендует машину.</p>
 
 <h2>Люксовые отели (от $150/ночь)</h2>
 
 <h3>8. Museum Hotel Cappadocia</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Первый и единственный отель в Каппадокии, входящий в ассоциацию Leading Hotels of the World. Расположен в Учхисаре, на вершине холма. Цены начинаются от $350/ночь за стандартный номер и достигают $1200 за президентский люкс. Отель построен на месте древнего монастыря, многие артефакты выставлены в лобби. Имеет 30 номеров, включая 10 с частными бассейнами.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Особенности: собственный виноградник и винный погреб с более чем 200 сортами, ресторан Lil'a с мишленовским шеф-поваром, спа-центр с хаммамом 16 века, бесконечный бассейн с подогревом, с которого открывается панорама на всю долину. В стоимость включен завтрак, трансфер из аэропорта и приветственное шампанское. Рейтинг — 9.7.</p>
 
 <h3>9. Argos in Cappadocia</h3>
 <p>Отель, вырезанный в скалах на склоне холма в Учхисаре, предлагает 53 номера и люкса, каждый с уникальным дизайном. Минимальная цена — $280/ночь. Отель известен своим рестораном Seki, который подает блюда из местных продуктов, и спа-центром с крытым бассейном. В 2024 году отель получил награду World Travel Awards как лучший бутик-отель Турции.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="из" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Особенности: частная смотровая площадка для запуска воздушных шаров, библиотека с камином, кулинарные классы, винные туры по собственным погребам. Для гостей доступен бесплатный шаттл в Гёреме каждые 30 минут. Идеален для медовых месяцев.</p>
 
 <h3>10. Kayakapi Premium Caves</h3>
 <p>Уникальный отель, расположенный в историческом районе Каякапы в Учхисаре, который был восстановлен из древнего греческого поселения. Цены от $200/ночь за стандартный пещерный номер до $850 за виллу с тремя спальнями. Отель занимает территорию 40 000 кв. м и включает 65 номеров, 5 ресторанов, спа-центр площадью 1500 кв. м и открытый бассейн.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="за" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Особенности: в стоимость включен полный пансион (завтрак, обед, ужин) в ресторане "Kaya", бесплатный доступ к хаммаму и сауне, экскурсия по исторической части отеля с гидом. Отель имеет собственный органический сад, откуда поставляются овощи и фрукты. Подходит для больших семей и групп.</p>
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Как выбрать район</h2>
 <p>Выбор района в Каппадокии напрямую зависит от целей вашей поездки. Если ваша главная цель — пляжный отдых, стоит сразу отметить, что Каппадокия не имеет выхода к морю. Ближайший пляж находится в Анталии (500 км). Вместо этого регион предлагает бассейны в отелях и искусственные озера. Для пляжного отдыха лучше выбрать отель с большим открытым бассейном, например, Kayakapi Premium Caves или Cappadocia Caves Hotel.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Для экскурсий и осмотра достопримечательностей лучший район — Гёреме. Здесь находятся музей под открытым небом, долина любви и долина мечей. Отели Sultan Cave Suites и Mithra Cave Hotel расположены в пешей доступности от всех главных троп. Если вы планируете много ходить пешком, выбирайте Гёреме. Для тех, кто арендует машину, подойдет Юргюп или Учхисар — там меньше туристов и более спокойная атмосфера.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Для ночной жизни выбор невелик. Гёреме — единственный район с барами и клубами, работающими до 2:00 ночи. На главной улице есть несколько заведений с живой музыкой и кальяном. Ортахисар и Учхисар затихают после 22:00. Если вы хотите танцевать, выбирайте отель в центре Гёреме, но будьте готовы к шуму до полуночи.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Советы по бронированию</h2>
 <p>Чтобы сэкономить на проживании в Каппадокии, бронируйте отели за 3-4 месяца до поездки, особенно на высокий сезон (май-сентябрь). Самые низкие цены — в январе и феврале, когда туристов в 4 раза меньше. Используйте сайты-агрегаторы, такие как Booking.com (наиболее широкий выбор, бесплатная отмена), Agoda (часто дает скидки для азиатских туристов) и Expedia (пакеты отель+авиабилет). Для люксовых отелей выгодно бронировать напрямую через сайт отеля — часто предлагают ранний заезд или улучшение номера.</p>
@@ -390,9 +427,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Отправьте заявку — отвечу в течение часа!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Ваше имя" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Ваше имя *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Желаемое направление</option>
                         <option value="turkey">Турция</option>

@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/seminyak-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,6 +277,7 @@
             <h1>Top 10 Hotels in Seminyak 2026: Budget to Luxury</h1>
 
 <p>Seminyak, Bali's sophisticated coastal enclave, continues to evolve in 2026 as a premier destination blending high-end dining, boutique shopping, and world-class surf breaks. Unlike neighboring Kuta's frenetic energy or Canggu's laid-back bohemia, Seminyak offers a refined balance—tree-lined streets with chic cafes, five-star resorts, and a vibrant nightlife scene centered around Jalan Kayu Aya (Eat Street). The hotel infrastructure here ranges from intimate family-run guesthouses to sprawling luxury estates, with most properties concentrated along the coast between Double Six Beach and Petitenget Temple.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Accommodation prices in Seminyak have stabilized post-pandemic, with budget rooms averaging $35–$45 per night, mid-range options between $70–$120, and luxury suites commanding $200–$600+. The 2026 market sees a surge in eco-conscious boutique hotels and wellness-focused resorts, while iconic beachfront properties maintain their premium status. Neighborhood dynamics matter: the southern end near Double Six Beach is louder and more party-oriented, while the northern Petitenget area is quieter, with upscale villas and fine dining. For first-time visitors, staying within a 10-minute walk of Jalan Kayu Aya ensures access to the best restaurants and bars.</p>
 
@@ -268,6 +292,7 @@
 
 <h3>2. OYO 90896 Seminyak Central Inn</h3>
 <p>A 14-room budget hotel on Jalan Nakula, 800 meters from the main shopping area. Prices range $28–$35/night for a twin or double room. Rooms include a flat-screen TV, desk, and en-suite bathroom with hot water. The hotel has no pool but offers a small rooftop area with plastic chairs.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Pros:</strong> Extremely affordable, 24-hour front desk, close to minimarts and laundry services.</li>
 <li><strong>Cons:</strong> No breakfast, basic linens (thin towels), occasional plumbing issues reported by guests.</li>
@@ -284,6 +309,7 @@
 
 <h3>1. The Haven Suites Seminyak</h3>
 <p>A 98-suite property on Jalan Drupadi, 5 minutes from the beach. Prices range $85–$120/night for a one-bedroom suite with a separate living area and kitchenette. The hotel boasts a large lagoon pool, a swim-up bar, and a spa offering Balinese massages from $35. Free scheduled shuttle to Double Six Beach.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="bo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Highlights:</strong> Spacious suites (45 sqm), modern bathrooms with rain showers, daily afternoon tea with local cakes.</li>
 </ul>
@@ -296,12 +322,14 @@
 
 <h3>3. Alila Seminyak</h3>
 <p>A 240-room beachfront resort on Jalan Taman Ganesha, offering a blend of contemporary luxury and sustainability. Rates start at $110/night for a garden-view room, rising to $145 for ocean views. The property features three pools, a world-class spa, and the acclaimed Seasalt restaurant specializing in seafood.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Highlights:</strong> Direct beach access, eco-friendly practices (solar panels, water filtration), kids' club with Balinese craft classes.</li>
 </ul>
 
 <h3>4. The Samaya Seminyak</h3>
 <p>A boutique resort with 48 suites and villas on the beachfront. Prices range $95–$140/night for a suite. Each suite has a private balcony or terrace with daybeds, a deep soaking tub, and a minibar stocked with local snacks. The resort offers a complimentary afternoon high tea and a nightly turndown service with lavender scent.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Highlights:</strong> Beachfront dining at Breeze Restaurant, free bicycle rental, 24-hour butler service.</li>
 </ul>
@@ -310,18 +338,21 @@
 
 <h3>1. The Legian Bali</h3>
 <p>An iconic 67-suite property on the southern end of Seminyak Beach. Rates start at $280/night for a one-bedroom suite, with ocean-facing suites reaching $600. The hotel is renowned for its three-tiered infinity pool, the longest in Bali at 50 meters, and its private beach club. Suites feature hand-carved teak furniture, marble bathrooms, and personal butler service. The resort's restaurant, The Restaurant, serves a daily afternoon tea with live piano music.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Features:</strong> 24-hour fitness center, yoga pavilion, library with curated books, complimentary helicopter transfer from Ngurah Rai Airport for penthouse guests.</li>
 </ul>
 
 <h3>2. W Bali – Seminyak</h3>
 <p>A 237-room luxury hotel on Jalan Petitenget, with rates from $220/night for a Spectacular Room to $450 for a Marvelous Suite. The property is known for its vibrant design by AB Concept, featuring a dramatic lobby with a 15-meter chandelier. Amenities include the WET pool with underwater speakers, AWAY Spa with hydrotherapy, and the famous Woobar nightclub. The hotel's restaurant, Fire, specializes in grilled meats and seafood with live cooking stations.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Features:</strong> 24-hour room service, FIT gym with personal trainers, 24-hour concierge for booking exclusive experiences like private yacht charters.</li>
 </ul>
 
 <h3>3. The Mulia Resort & Villas – Seminyak</h3>
 <p>While technically in nearby Nusa Dua, the Mulia's Seminyak beach club and suites offer luxury proximity. Rates start at $190/night for a Mulia Suite, with private villas from $350. The resort features 6 pools, including a 60-meter ocean-view pool, 10 dining venues, and the Mulia Spa with 20 treatment rooms. The property's Seminyak Beach Club provides direct access to the sand with sun loungers and waiter service.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Features:</strong> Complimentary shuttle to Seminyak's main shopping area, kids' program with Balinese dance lessons, 24-hour butler service, and a dedicated events team for weddings.</li>
 </ul>
@@ -337,6 +368,7 @@
 <h2>Booking Tips</h2>
 
 <p><strong>How to Save Money:</strong> Book directly through hotel websites for exclusive perks like free breakfast or room upgrades. Use comparison sites like Booking.com and Agoda to check prices, but always cross-check with the hotel's own rate. Travel in shoulder seasons (April–June or September–October) for 20–30% discounts. For budget hotels, negotiate directly with owners—many offer cash discounts of 10–15%.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="we" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p><strong>When to Book:</strong> For peak season (July–August and December–January), book at least 3–4 months in advance. Mid-range and luxury hotels often release early-bird rates 6 months ahead. For last-minute deals, use apps like HotelTonight for unsold rooms at 40% off. Avoid booking during major holidays like Nyepi (March 2026) when many hotels close for 24 hours.</p>
 
@@ -422,9 +454,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

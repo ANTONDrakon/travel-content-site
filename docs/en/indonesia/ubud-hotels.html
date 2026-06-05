@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/ubud-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,6 +277,7 @@
             <h1>Top 10 Hotels in Ubud 2026: Budget to Luxury</h1>
 
 <p>Ubud, the cultural heart of Bali, has evolved significantly by 2026, with a hotel scene that ranges from humble family-run homestays to world-class luxury resorts. The infrastructure in Ubud has seen major improvements: the main Jalan Raya Ubud is now partially pedestrianized, and a new bypass road has reduced traffic to the Monkey Forest and Campuhan areas by nearly 30% compared to 2023. Neighborhoods have distinct characters: the central Ubud Market area is bustling with cafes and art galleries; Sayan and Kedewatan offer deep river valleys and rice terraces; Penestanan is a quiet artist colony; while Lodtunduh and Nyuh Kuning provide a more local, village-like atmosphere.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Prices in Ubud have risen moderately since the post-pandemic recovery. A budget double room that cost $30 in 2023 now averages $40–50. Mid-range properties have seen 10–15% increases, with many now including co-working spaces and digital detox packages. Luxury hotels have expanded their wellness offerings, with on-site Ayurvedic doctors and cryotherapy chambers becoming standard. The key to value in 2026 Ubud is booking direct or through specialized platforms that offer free cancellation, as walk-in rates at popular hotels can be 20–30% higher during peak season (July–August and December–January).</p>
 
@@ -278,37 +302,52 @@
 
 <h3>1. Bisma Eight</h3>
 <p><strong>Description:</strong> A boutique hotel on Jalan Bisma, just steps from the Campuhan Ridge Walk. Each of the 38 rooms features a private balcony or terrace. The design blends industrial chic with Balinese woodwork. The rooftop pool offers views over the jungle valley.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> Deluxe rooms from $95/night; suites from $145/night (breakfast included).</p>
 <p><strong>Highlights:</strong> The on-site restaurant, Copper Kitchen, serves excellent farm-to-table cuisine. The hotel offers a free daily shuttle to the Ubud Market. The staff-to-guest ratio is 3:1, ensuring personalized service.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Komaneka at Tanggayuda</h3>
 <p><strong>Description:</strong> Set in the Tanggayuda village, 10 minutes from the Ubud center, this resort is surrounded by working rice terraces and the Oos River. Rooms are spacious suites with separate living areas and large soaking tubs. The infinity pool overlooks the jungle canopy.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> One-bedroom suites from $110/night; two-bedroom from $180/night (breakfast and afternoon tea included).</p>
 <p><strong>Highlights:</strong> The resort has a dedicated art studio offering free batik and woodcarving classes. The spa uses organic ingredients grown on-site. The hotel provides a free scheduled shuttle to Ubud center every hour from 8 AM to 10 PM.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Ubud Wana Resort</h3>
 <p><strong>Description:</strong> Located in the quiet village of Lodtunduh, a 10-minute drive from the Ubud Monkey Forest. This resort features 42 rooms built into a hillside, each with a private plunge pool or jacuzzi. The architecture uses sustainable bamboo and recycled teak.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> Hillside rooms from $75/night; rooms with private pool from $130/night (breakfast included).</p>
 <p><strong>Highlights:</strong> The resort has an organic farm where guests can pick vegetables for their dinner. The infinity pool is one of the largest in the area at 40 meters. Free yoga classes are offered twice daily in the open-air pavilion.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>4. The Udaya Resorts & Spa</h3>
 <p><strong>Description:</strong> Situated in the Penestanan neighborhood, this resort channels traditional Balinese palace design. Rooms feature four-poster beds, carved stone bathrooms, and private garden courtyards. The central pool is shaped like a lotus pond.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ch" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Prices:</strong> Deluxe rooms from $88/night; Royal Suite from $148/night (breakfast and afternoon tea included).</p>
 <p><strong>Highlights:</strong> The resort offers a free "Cultural Immersion" program including temple visits, offering-making classes, and traditional dance performances. The spa has a hydrotherapy pool and steam room. The hotel provides a free shuttle to the Ubud Art Market every 30 minutes.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Mandapa, a Ritz-Carlton Reserve</h3>
 <p><strong>Description:</strong> Set in the Sayan valley along the Ayung River, this ultra-luxury resort has 60 suites and villas, each with a private pool and butler service. The architecture by renowned Indonesian architect Budiman Hendropurnomo integrates with the rice terraces. The resort spans 20 acres of tropical forest.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> The 2,500-square-meter spa offers Ayurvedic treatments, cryotherapy, and a hammam. The resort has three restaurants, including the fine-dining Kubu which overlooks the river. Guests have access to a private riverfront lounge, a 24-hour fitness center, and a yoga pavilion. Rates include a dedicated "Reserve Host" who arranges activities from white-water rafting to temple pilgrimages. Prices start at $450/night for a suite and exceed $2,000/night for the four-bedroom villa.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Capella Ubud, Bali</h3>
 <p><strong>Description:</strong> A tented camp resort hidden in the Wos River valley, inspired by 19th-century European explorers. Each of the 22 tents is custom-designed with a private plunge pool, outdoor shower, and a fireplace. The main camp includes a library, a bar, and a dining tent serving modern Indonesian cuisine.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="hi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> The resort has a 40-meter infinity pool that appears to merge with the jungle canopy. The Auriga Spa offers treatments using local herbs and spices. The "Explorer's Program" includes guided jungle treks, waterfall picnics, and silver-smithing workshops. The resort has a maximum of 44 guests, ensuring complete privacy. Prices start at $800/night for a tented suite, with the two-bedroom Lodge starting at $2,500/night.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Four Seasons Resort Bali at Sayan</h3>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Description:</strong> An iconic property perched above the Ayung River, known for its signature lotus pond roof. The resort has 60 villas and suites, each with a private pool and expansive outdoor living area. The design by John Heah uses local stone, bamboo, and thatch.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> The spa is a three-level sanctuary with a yoga pavilion, meditation cave, and treatment rooms suspended over the river. The resort has two restaurants: Ayung Terrace for Indonesian cuisine and the River Cafe for casual dining. The "Sayan Experience" includes a private dinner in the rice fields, a Balinese blessing ceremony, and a guided cycling tour. The resort has a 24-hour butler service and a children's program. Prices start at $600/night for a one-bedroom villa and go up to $3,500/night for the three-bedroom Royal Villa.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>How to Choose the Right Area</h2>
 
@@ -319,6 +358,7 @@
 <p><strong>For nightlife and socializing:</strong> Penestanan and the area around Jalan Raya Ubud have the most bars, live music venues, and late-night cafes. The Udaya Resorts & Spa is a good mid-range option here. Budget travelers should consider Puri Garden for its social vibe. Nightlife in Ubud is generally low-key (closing by midnight), but these areas have the most options.</p>
 
 <p><strong>For village immersion:</strong> Lodtunduh, Nyuh Kuning, and Sebatu offer authentic Balinese village life with fewer tourists. Ubud Wana Resort in Lodtunduh is excellent for mid-range. Budget travelers can find homestays for under $30/night in these areas. The trade-off is distance from central attractions.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
@@ -408,9 +448,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

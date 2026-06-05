@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Направления</div>
+        <a href="/ru/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Главная
+        </a>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/beijing-oteli.html" class="nav-pill nav-pill-outline">EN</a>
@@ -256,6 +279,7 @@
 <p>Друзья, если вы планируете поездку в Пекин в 2026 году, то знайте — вы попадете в город, где древность и футуризм сплелись в безумный, но прекрасный коктейль. Я, Валентина, объездила полмира, но Пекин каждый раз открывается мне заново. Гостиничная инфраструктура здесь развита настолько, что порой кажется, будто отели — это отдельные достопримечательности. В центре, у площади Тяньаньмэнь, вы найдете роскошные международные сети, а на окраинах, вроде района Хайдянь, — уютные бюджетные варианты, где живут студенты и молодые предприниматели. Цены в 2026 году, скажу честно, немного подросли из-за инфляции и туристического бума, но я подобрала для вас такие варианты, чтобы каждый чувствовал себя комфортно, не опустошая кошелек.</p>
 
 <p>Важно помнить: Пекин — это не только Запретный город и Великая стена. Это районы, которые живут своей жизнью. Например, Чаоян — деловой и тусовочный центр, а Дунчэн — историческое сердце с хутунами. Я рекомендую выбирать отель не только по цене, но и по логистике: если вы приехали за музеями, селитесь ближе к метро, а если за шопингом — в Ванфуцзине. И да, не бойтесь хостелов в старых переулках — там особая атмосфера, которую не купишь за деньги.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="не" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Бюджетные отели (до $50/ночь)</h2>
 
@@ -269,6 +293,7 @@
 
 <h3>3. Zizhu Hotel (Purple Bamboo)</h3>
 <p>Тихий отель в районе Хайдянь, рядом с Пекинским университетом. Идеален для тех, кто ценит покой. Номера просторнее, чем в центре, есть даже небольшие балконы. Цена: от <strong>$42</strong> за ночь. Плюсы: рядом парк Цзычжу, очень тихо, отличный китайский ресторанчик на первом этаже. Минусы: далеко от центра (30 минут на метро), вокруг мало развлечений, и персонал почти не говорит по-английски. Но если вы приехали работать или учиться — это рай.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Отели среднего класса ($50-150/ночь)</h2>
 
@@ -282,8 +307,10 @@
 
 <h3>3. The Emperor Beijing Forbidden City</h3>
 <p>О, этот отель — моя слабость! Бутик-отель в стиле "шик-минимализм" прямо у Запретного города. Номера с элементами традиционного китайского декора: шелковые подушки, резные ширмы. Цена: от <strong>$135</strong> за ночь. Фишка: терраса на крыше с видом на императорский дворец — там можно пить утренний кофе или вечернее вино. Плюсы: уникальная атмосфера, внимательный персонал, бесплатный велнес-центр. Минусы: дорогой ресторан (обед от $30), и вокруг много туристов. Но ради вида на Запретный город — стоит каждого юаня!</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>4. Beijing Marriott Hotel City Wall</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ci" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Марриотт — это классика. Расположен у южных ворот городской стены, рядом с парком Таожань. Номера просторные, с коврами и большими ваннами. Цена: от <strong>$118</strong> за ночь. Фишка: спа-центр с традиционным китайским массажем — после экскурсий это спасение! Плюсы: отличный фитнес, два ресторана (китайский и итальянский), детская комната. Минусы: до центра 15 минут на такси, и Wi-Fi в номерах слабоват. Но для семей с детьми — идеальный вариант.</p>
 
 <h2>Люксовые отели (от $150/ночь)</h2>
@@ -295,6 +322,7 @@
 
 <h3>2. The Ritz-Carlton Beijing, Financial Street</h3>
 <p>Отель для деловой элиты, но и туристам здесь рады. Находится в деловом районе, но до центра 10 минут на такси. Номера — от 50 кв.м, с панорамными видами на город. Цена: от <strong>$280</strong> за ночь. Особенности: ресторан с живой музыкой, лаунж-зона с камином, бассейн с подогревом. Плюсы: консьерж-сервис организует любую экскурсию, отличный завтрак с шампанским. Минусы: вокруг офисы, а не достопримечательности, и ужин в ресторане — от $100. Но для тех, кто ценит приватность — идеально.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="дл" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Aman Summer Palace</h3>
 <p>Это не отель, а сказка. Расположен прямо на территории Летнего дворца — вы просыпаетесь с видом на императорские сады. Цена: от <strong>$450</strong> за ночь. Особенности: номера в традиционном китайском стиле с современными удобствами, частный гид по дворцу, йога-сессии на рассвете. Плюсы: абсолютная тишина, уникальная архитектура, персонал помнит ваши предпочтения. Минусы: очень дорого (ужин от $150), и до центра далеко (40 минут на такси). Но для романтического побега или медового месяца — лучше не придумаешь.</p>
@@ -304,10 +332,12 @@
 <p>Друзья, выбор района в Пекине — это половина успеха вашей поездки. Я всегда советую исходить из цели визита. Если вы едете за пляжным отдыхом (да, в Пекине есть искусственные пляжи в парках), то выбирайте отели у озера Куньмин в районе Хайдянь. Там тихо, зелено, и можно арендовать лодку. Но имейте в виду: до центра 40 минут.</p>
 
 <p>Для экскурсий — район Дунчэн или Сичэн. Оттуда до Запретного города, Храма Неба и площади Тяньаньмэнь — рукой подать. Я рекомендую селиться рядом с метро "Цяньмэнь" — это исторический центр с хутунами и уличной едой. А если вы любите ночную жизнь, то вам в Чаоян. Там бары, клубы, рестораны на крышах — жизнь кипит до утра. Главное — выбирайте отель подальше от шумных улиц, чтобы высыпаться.</p>
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Советы по бронированию</h2>
 
 <p>О, это моя любимая тема! Как сэкономить и не попасть впросак. Во-первых, бронируйте отели за 2-3 месяца до поездки — цены в 2026 году будут расти ближе к сезону (апрель-май и сентябрь-октябрь). Во-вторых, используйте агрегаторы вроде Booking.com или Ctrip (китайский сервис, часто дешевле). Я лично проверяю цены на 3-4 сайтах и потом звоню в отель напрямую — иногда они дают скидку 10% за прямой заказ.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Еще один лайфхак: ищите отели с бесплатной отменой. Если вдруг найдете вариант дешевле, просто перебронируйте. И не забывайте про кэшбэк-сервисы — я часто получаю 5-7% назад. А чтобы сэкономить на еде, выбирайте отели с завтраком — это выгоднее, чем покупать его отдельно. И последнее: скачайте приложение WeChat — там можно найти купоны на отели и рестораны. Поверьте моему опыту, эти советы сэкономили мне тысячи юаней!</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
@@ -389,9 +419,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Отправьте заявку — отвечу в течение часа!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Ваше имя" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Ваше имя *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Желаемое направление</option>
                         <option value="turkey">Турция</option>

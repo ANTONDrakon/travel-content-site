@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Направления</div>
+        <a href="/ru/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Главная
+        </a>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/pattaya-oteli.html" class="nav-pill nav-pill-outline">EN</a>
@@ -261,27 +284,37 @@
 <h2>Бюджетные отели (до $50/ночь)</h2>
 
 <h3>1. Hotel Baraquda Pattaya (3 звезды, Центральная Паттайя)</h3>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Расположенный на улице Саут-Патак-роуд, Hotel Baraquda предлагает номера от $35 до $45 за ночь (в зависимости от сезона). Отель имеет 120 номеров с кондиционерами, мини-барами и спутниковым телевидением. На территории есть открытый бассейн, ресторан тайской кухни и небольшой фитнес-центр. Плюсы: близость к Walking Street (10 минут пешком), бесплатный Wi-Fi на всей территории, круглосуточная стойка регистрации. Минусы: завтрак не включён в стоимость (доплата $8), шум от ночных клубов слышен в номерах, выходящих на улицу. В 2026 году отель получил оценку 7.8 на Booking.com.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. The Windows Hotel Pattaya (3 звезды, район Джомтьен)</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Pa" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Этот отель расположен в 300 метрах от пляжа Джомтьен, предлагая номера от $28 до $42 за ночь. В номерах — деревянные полы, сейфы и балконы с видом на город. На крыше — бассейн с шезлонгами и бар. Плюсы: тихая улица, идеально для семей с детьми, рядом 7-Eleven и кафе с местной едой. Минусы: старая мебель, слабая звукоизоляция, бассейн работает только до 19:00. Средний рейтинг на Agoda — 7.5. В пик сезона (ноябрь-февраль) цены поднимаются до $48.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. LK Royal Wing Hotel (3 звезды, Центральная Паттайя)</h3>
 <p>Небольшой отель на 50 номеров, расположенный на Секонд-роуд. Цены: от $30 до $50 за ночь. Номера оснащены кондиционерами, телевизорами и ванными комнатами с душем. Плюсы: бесплатный трансфер до пляжа, приветственный напиток, близость к торговому центру Central Festival (5 минут). Минусы: нет лифта (только лестницы), маленький бассейн (всего 6 метров), завтрак скудный (только тосты и джем). Рейтинг — 7.2. Рекомендуется для тех, кто ищет базовое жильё рядом с развлечениями.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Отели среднего класса ($50-150/ночь)</h2>
 
 <h3>4. Siam Bayview Pattaya (4 звезды, Центральная Паттайя)</h3>
 <p>Отель на 250 номеров, расположенный на холме Пратамнак, с видом на Сиамский залив. Цены: от $65 до $120 за ночь. Номера — от 30 до 45 кв. м, с балконами, джакузи и мини-барами. Фишки: большой бассейн с водопадом, спа-центр с тайским массажем (от $40 за сеанс), рестораны с итальянской и японской кухней. Плюсы: бесплатный Wi-Fi (скорость до 50 Мбит/с), детский клуб, парковка. Минусы: пляжа нет (нужно спускаться к городскому пляжу), завтрак шведский стол однообразный. Рейтинг 8.4. В 2026 году отель обновил номера в стиле минимализм.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>5. Garden Cliff Resort & Spa (4 звезды, район На-Клуа)</h3>
 <p>Расположенный прямо на пляже Вонг-Амат, этот отель предлагает номера от $80 до $140 за ночь. 180 номеров с частными террасами, кондиционерами и сейфами. Фишки: частный пляж с зонтиками, два бассейна (один с подогревом), фитнес-центр и спа с гидромассажем. Плюсы: тишина и спокойствие, подходит для пар, бесплатный завтрак шведский стол с фруктами. Минусы: удалён от центра (20 минут на тук-туке до Walking Street), дорогие напитки в баре (коктейли от $12). Рейтинг 8.6. Цены в низкий сезон (май-октябрь) снижаются до $70.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>6. Centara Life Maris Resort Pattaya (4 звезды, район Джомтьен)</h3>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Pa" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Современный отель на 200 номеров, открытый в 2023 году, но уже популярный. Цены: от $55 до $110 за ночь. Номера — от 25 кв. м, с умными телевизорами, Bluetooth-колонками и дождевыми душами. Фишки: rooftop-бассейн с панорамным видом, ко-воркинг-зона, ресторан с фьюжн-кухней. Плюсы: отличное соотношение цена-качество, свежий ремонт, близость к пляжу (400 метров). Минусы: нет собственного пляжа, завтрак платный ($10), шум от стройки по соседству (планируется до 2027 года). Рейтинг 8.2.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>7. Holiday Inn Pattaya (4 звезды, Центральная Паттайя)</h3>
 <p>Международный бренд на Бич-роуд, прямо напротив пляжа. Цены: от $90 до $150 за ночь. 350 номеров с видом на море или город, с кондиционерами, мини-барами и ваннами. Фишки: большой бассейн с горками, детский клуб, 3 ресторана (включая суши-бар), бизнес-центр. Плюсы: расположение в центре, рядом магазины и рестораны, бесплатный Wi-Fi. Минусы: пляж общественный (но лежаки отеля платные — $5), парковка платная ($10 в день), цены на еду в ресторане высокие (обед от $25). Рейтинг 8.7. Рекомендуется для деловых поездок и семей.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пл" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Люксовые отели (от $150/ночь)</h2>
 
@@ -290,12 +323,15 @@
 
 <h3>9. Dusit Thani Pattaya (5 звезд, район На-Клуа)</h3>
 <p>Легендарный отель на пляже Вонг-Амат, работающий с 1980-х годов, но полностью обновлённый. Цены: от $200 до $600 за ночь. 300 номеров в тайском стиле, с частными садами или балконами. Особенности: частный пляж длиной 500 метров, огромный бассейн с лагуной, спа с традиционными процедурами, ресторан с морепродуктами. Плюсы: идеально для романтического отдыха, тишина, высокий сервис. Минусы: дорогой ресторан (ужин от $50), строгий дресс-код в некоторых зонах, удалённость от центра. Рейтинг 9.0. Цены в высокий сезон (декабрь-январь) достигают $700.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>10. InterContinental Pattaya Resort (5 звезд, район Пратамнак)</h3>
 <p>Роскошный курорт на холме с видом на залив, расположенный на 10 акрах тропического сада. Цены: от $250 до $800 за ночь. 156 номеров и вилл, с частными бассейнами или джакузи, смарт-управлением и премиум-мини-барами. Особенности: частный пляж, спа с хаммамом, 2 ресторана (гастрономический и тайский), бесконечный бассейн. Плюсы: эксклюзивность, консьерж-сервис, бесплатный трансфер. Минусы: очень высокие цены, минимальный срок бронирования — 2 ночи, нет детских программ. Рейтинг 9.3. В 2026 году отель получил награду World Travel Awards как лучший курорт Таиланда.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Как выбрать район</h2>
 <p>Выбор района в Паттайе напрямую зависит от целей вашей поездки. Для пляжного отдыха идеально подходит Джомтьен — здесь длинный песчаный пляж (около 6 км), спокойная вода и минимум водных мотоциклов. Лучшие отели там — The Windows Hotel и Centara Life Maris Resort. Для экскурсий выбирайте Центральную Паттайю: оттуда легко добраться до Храма Истины (10 минут), Сада Нонг Нуч (30 минут) и острова Ко Лан (паром от пирса Бали Хай). Бюджетные отели, такие как Hotel Baraquda, расположены в центре. Для ночной жизни — район Walking Street и Сои 6/1: здесь шумно, но весело, с отелями LK Royal Wing или Siam Bayview. Если вы ищете тишину и роскошь, выбирайте На-Клуа или Пратамнак — там находятся Royal Cliff и InterContinental.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="и" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Средняя стоимость тук-тука по городу — 10 бат (около $0.30), такси от аэропорта Утапао — 400-600 бат ($12-18). В 2026 году работает новая линия скоростного автобуса от Бангкока до Паттайи (время в пути — 2 часа, цена — 130 бат). Учитывайте, что в сезон дождей (июнь-октябрь) пляжи могут быть закрыты из-за волн, поэтому выбирайте отели с бассейнами.</p>
 
@@ -317,6 +353,7 @@
     <tr>
       <td>Бюджетный</td>
       <td>Hotel Baraquda</td>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
       <td>35-45</td>
       <td>7.8</td>
     </tr>
@@ -457,9 +494,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Отправьте заявку — отвечу в течение часа!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Ваше имя" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Ваше имя *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Желаемое направление</option>
                         <option value="turkey">Турция</option>

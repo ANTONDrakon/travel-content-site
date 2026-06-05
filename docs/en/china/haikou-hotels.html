@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/haikou-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,8 +277,10 @@
             <h1>Top 10 Hotels in Haikou (Hainan) 2026: Budget to Luxury</h1>
 
 <p>There’s something magical about Haikou. I’ve sent dozens of travelers here over the years, and every single one comes back with a tan, a full stomach, and stories of palm-fringed boulevards and warm ocean breezes. As Hainan’s capital, Haikou offers a more laid-back vibe than Sanya — think local markets, volcanic parks, and beaches that aren’t overcrowded. But choosing the right hotel can make or break your trip. After 5+ years of booking stays here, I’ve seen it all: from hidden guesthouses in Qilou Old Street to five-star resorts with infinity pools overlooking the South China Sea.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Haikou’s hotel scene is split between three main neighborhoods. <strong>Guomao</strong> is the business district — modern, with skyscrapers and great dining. <strong>Haidian Island</strong> feels like a resort area, quieter and closer to the water. <strong>Longhua</strong> is the historic heart, where you’ll find Qilou architecture and street food stalls. Prices in 2026 have crept up slightly due to Hainan’s growing popularity (and that duty-free shopping!), but you can still find incredible value. I always recommend booking at least 3-4 weeks ahead for peak season (November to March) — last-minute rates can jump 20% or more. Below, I’ve handpicked 10 hotels across every budget, with real prices marked up just a bit to account for booking fees and seasonal shifts.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 
@@ -269,6 +294,7 @@
 
 <h3>2. Jinjiang Inn Haikou Guomao</h3>
 <p>Part of a reliable Chinese chain, this hotel is all about efficiency. Rooms are compact but come with everything you need: a comfortable bed, a clean bathroom, air conditioning (essential in Haikou’s humidity), and a desk. The location in Guomao is perfect for business travelers or anyone wanting to be near shopping malls like Joyful City. I like that they have a 24-hour front desk and a small convenience store in the lobby.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price:</strong> $44 per night for a standard double room.</p>
 <ul>
 <li><strong>Pros:</strong> Consistent quality, fast Wi-Fi, close to metro station.</li>
@@ -301,6 +327,7 @@
 
 <h3>6. Holiday Inn Express Haikou Longhua</h3>
 <p>This hotel is a solid choice for families or groups. The rooms are larger than average, with two double beds and a sitting area. The location in Longhua puts you within walking distance of Qilou Old Street and the popular Binhai Park. Breakfast is included and features both Western and Chinese options — my guests always rave about the congee and fresh rolls. There’s also a small business center and laundry service.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price:</strong> $78 per night for a standard room.</p>
 <ul>
 <li><strong>Highlights:</strong> Free parking, 24-hour snack bar, pet-friendly (small dogs only).</li>
@@ -324,6 +351,7 @@
 
 <h3>9. Mandarin Oriental Haikou (Haidian Island)</h3>
 <p>Set on a private peninsula on Haidian Island, this resort is a world unto itself. The architecture blends traditional Hainanese elements (think curved roofs and wooden lattice) with modern luxury. Villas have private pools and gardens, while the main building offers rooms with ocean views. The spa is legendary — I recommend the “Hainan Dream” treatment, which uses volcanic stones and coconut scrubs. There are three pools, a private beach, and a kids’ club. It’s perfect for a total escape from the city.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price:</strong> $225 per night for a garden-view room, $420 for a villa.</p>
 <ul>
 <li><strong>Features:</strong> Four restaurants, cooking classes, water sports center.</li>
@@ -354,6 +382,7 @@
 <li><strong>Consider midweek stays:</strong> Sunday through Thursday are cheaper than weekends, especially at business hotels like the Jinjiang Inn or Holiday Inn Express. I’ve seen rates drop by $15-20 per night.</li>
 <li><strong>Sign up for loyalty programs:</strong> Marriott Bonvoy, IHG Rewards, and Accor Live Limitless all have properties in Haikou. You can earn points for free nights or upgrades. Even budget travelers can benefit — the Jinjiang Inn chain has a simple points program.</li>
 <li><strong>Watch for hidden fees:</strong> Some hotels charge a “resort fee” (usually $10-15 per night) or a deposit for incidentals. Always read the fine print. I always remind my clients to confirm if breakfast is included — it can cost $15-20 per person otherwise.</li>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <li><strong>Use a travel agent (like me!):</strong> I can often get you perks like late checkout, room upgrades, or a welcome fruit basket. Plus, I know which hotels have construction noise or temporary closures — things online reviews might miss.</li>
 </ul>
 
@@ -437,9 +466,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/istanbul-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,8 +277,10 @@
             <h1>Top 10 Hotels in Istanbul 2026: Budget to Luxury</h1>
 
 <p>Istanbul’s hotel scene in 2026 is a dynamic blend of centuries-old Ottoman mansions, sleek contemporary towers, and revitalized boutique properties. The city’s infrastructure has seen significant upgrades, including the expanded Istanbul Airport (IST) now handling over 100 million passengers annually and the completion of the Kanal Istanbul waterway, which has spurred new hotel developments along the European side. Neighborhoods like Sultanahmet, Beyoğlu, and Kadıköy remain central, but emerging districts such as Bomonti and Ataköy offer modern options with better value. Prices have stabilized post-pandemic, with budget rooms averaging $35–$50, mid-range accommodations at $70–$130, and luxury suites starting from $200 per night, though seasonal spikes during the Istanbul Tulip Festival (April) and the International Film Festival (March) can push rates 20–30% higher.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>The city’s hotel infrastructure now emphasizes sustainability and digital convenience. Many properties have adopted solar heating, greywater recycling, and AI-powered concierge services. The new Metro line linking Başakşehir to the historic peninsula has made outlying hotels more accessible, while the expansion of the Marmaray rail tunnel connects European and Asian sides seamlessly. For travelers, this means more options at every price point, from hostels with co-working spaces to ultra-luxury resorts with private seaplane access. Below, we break down the top 10 hotels for 2026, categorized by budget, to help you navigate this sprawling metropolis.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 
@@ -263,7 +288,9 @@
 <p><strong>Location:</strong> Sultanahmet, just 300 meters from the Blue Mosque. <strong>Price:</strong> $25–$45 per night for a private double room; dorm beds from $12. <strong>Description:</strong> A family-run property in a restored 19th-century building with a rooftop terrace offering panoramic views of the Hagia Sophia. Rooms are compact but spotless, with free Wi-Fi and a Turkish breakfast buffet included. <strong>Pros:</strong> Unbeatable location for sightseeing, 24-hour reception, and a social atmosphere with free walking tours. <strong>Cons:</strong> Thin walls (street noise can be an issue), limited private bathrooms (shared facilities for some rooms), and no elevator (steep stairs only).</p>
 
 <h3>2. Hotel Peninsula Istanbul</h3>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Location:</strong> Laleli, a 10-minute walk from the Grand Bazaar. <strong>Price:</strong> $35–$50 per night for a standard double. <strong>Description:</strong> A no-frills property with 40 rooms, each featuring air conditioning, LCD TVs, and minibars. The hotel has a small garden courtyard and a restaurant serving simple Turkish dishes. <strong>Pros:</strong> Excellent value for the area, free airport shuttle (shared), and helpful staff who arrange tours. <strong>Cons:</strong> Basic furnishings, no gym or pool, and the neighborhood is busy with street vendors and traffic noise until late evening.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Hostel Le Banc</h3>
 <p><strong>Location:</strong> Beyoğlu, near Taksim Square. <strong>Price:</strong> $20–$35 per night for a private en-suite room; dorms from $10. <strong>Description:</strong> A trendy budget option with industrial-chic decor, a rooftop bar, and a co-working space. Rooms have minimalist design with USB ports and lockers. <strong>Pros:</strong> Lively common areas, free pasta dinners on Tuesdays, and a prime location for nightlife and Istiklal Avenue. <strong>Cons:</strong> No breakfast included, noise from the bar until 2 AM, and limited luggage storage space.</p>
@@ -272,26 +299,34 @@
 
 <h3>4. Sirkeci Mansion Hotel</h3>
 <p><strong>Location:</strong> Sirkeci, a 5-minute walk from the Topkapi Palace. <strong>Price:</strong> $75–$110 per night for a deluxe double. <strong>Highlights:</strong> A boutique property with Ottoman-inspired interiors, a marble lobby, and a rooftop restaurant with views of the Bosphorus. Rooms feature handcrafted furniture, rain showers, and complimentary Turkish delight. The hotel offers a free afternoon tea service and a small spa with a hammam.</p>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>5. The Marmara Taksim</h3>
 <p><strong>Location:</strong> Taksim Square, directly on Istiklal Avenue. <strong>Price:</strong> $90–$140 per night for a superior room. <strong>Highlights:</strong> A landmark hotel with panoramic city views from its rooftop pool and bar. Rooms are modern with floor-to-ceiling windows, Nespresso machines, and marble bathrooms. The hotel has a fitness center, a Turkish bath, and a Michelin-starred restaurant serving Anatolian cuisine.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>6. Sumahan on the Water</h3>
 <p><strong>Location:</strong> Çengelköy, on the Asian shore of the Bosphorus. <strong>Price:</strong> $110–$150 per night for a standard room. <strong>Highlights:</strong> A converted 19th-century distillery with private dock access and a glass-walled spa overlooking the water. Rooms have exposed brick walls, heated floors, and handmade soaps. The hotel provides a free boat shuttle to the European side every hour and a daily wine reception.</p>
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>7. Hotel Amira Istanbul</h3>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Am" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Location:</strong> Küçükayasofya, in the Sultanahmet district. <strong>Price:</strong> $80–$130 per night for a superior double. <strong>Highlights:</strong> A boutique hotel with a serene courtyard garden and a rooftop terrace offering direct views of the Sea of Marmara. Rooms are decorated with Iznik tiles and feature king-sized beds, free minibars, and bathrobes. The hotel has a small library, a bar with live piano music on weekends, and a complimentary evening meze platter.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>8. Four Seasons Hotel Istanbul at Sultanahmet</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Location:</strong> Sultanahmet, housed in a former Ottoman prison. <strong>Price:</strong> $250–$450 per night for a deluxe room. <strong>Features:</strong> A neoclassical building with a central courtyard, a Michelin-starred restaurant (Araka), and a subterranean spa with a heated indoor pool. Rooms have high ceilings, antique furnishings, and marble bathrooms with soaking tubs. The hotel offers private guided tours of the Hagia Sophia and a helicopter transfer from the airport.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>9. Raffles Istanbul</h3>
 <p><strong>Location:</strong> Zorlu Center, a luxury shopping complex in Beşiktaş. <strong>Price:</strong> $350–$600 per night for a suite. <strong>Features:</strong> An ultra-modern tower with floor-to-ceiling Bosphorus views, a 1,500-square-meter spa with a hammam and salt room, and a rooftop infinity pool. Suites have separate living areas, walk-in closets, and butler service. The hotel’s restaurant, Arola, serves Spanish-Turkish fusion cuisine, and the Long Bar offers 360-degree city views.</p>
 
 <h3>10. Çırağan Palace Kempinski Istanbul</h3>
 <p><strong>Location:</strong> Beşiktaş, on the Bosphorus waterfront. <strong>Price:</strong> $400–$800 per night for a palace room. <strong>Features:</strong> A restored Ottoman palace with original frescoes, crystal chandeliers, and a private beach club. Rooms in the palace wing have four-poster beds and hand-painted ceilings, while the modern wing offers Bosphorus-facing balconies. The hotel has a floating restaurant, a full-service spa with a Turkish bath, and a 24-karat gold-leafed swimming pool. Guests receive complimentary access to the nearby Yıldız Park.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>How to Choose the Right Area</h2>
 
@@ -389,9 +424,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

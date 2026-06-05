@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/cappadocia-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,6 +277,7 @@
             <h1>Top 10 Hotels in Cappadocia 2026: Budget to Luxury</h1>
 
 <p>Cappadocia’s hotel infrastructure has evolved dramatically over the past decade, with a surge in boutique cave hotels and restored stone mansions that blend ancient architecture with modern comfort. The region’s core neighborhoods—Göreme, Ürgüp, Uçhisar, and Avanos—each offer distinct experiences. Göreme is the tourist epicenter, with the highest concentration of hotels, restaurants, and balloon launch points, while Ürgüp provides a more refined, wine-focused atmosphere with larger luxury properties. Uçhisar, dominated by its towering castle, offers panoramic views and quieter stays, and Avanos, along the Kızılırmak River, is known for pottery workshops and more affordable lodgings. In 2026, average nightly rates in Cappadocia range from $30 for basic pensions to over $800 for top-tier cave suites, with peak season (April to October) commanding premiums of 30–50%.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Prices in 2026 reflect a 12% increase from 2024 due to rising demand and inflation, but value remains high compared to European destinations. Most hotels include breakfast, airport transfers (for luxury properties), and free Wi-Fi. Budget options often require shared bathrooms or lack air conditioning, while mid-range and luxury hotels offer cave rooms with heated floors, jacuzzis, and private terraces. The key is to book early—at least 3–6 months ahead for summer stays—and to consider shoulder months (March, November) for lower rates and fewer crowds.</p>
 
@@ -267,31 +291,38 @@
 
 <h3>3. Avanos Riverside Hostel (Avanos)</h3>
 <p>This hybrid hostel/hotel offers private rooms at $28–$40 per night and dorm beds at $12. Pros: right on the Kızılırmak River, free pottery workshop demonstration, and a communal kitchen. Cons: basic furnishings, occasional noise from the riverfront bars, and no breakfast included. A good choice for solo travelers seeking social atmosphere.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Kelebek Special Cave Hotel (Göreme)</h3>
 <p>A mid-range icon, Kelebek offers 39 cave rooms and suites carved into a hillside, with prices from $95 to $140 per night in 2026. Highlights include multiple terraces for sunrise balloon views, a heated outdoor pool, and a complimentary Turkish breakfast with local honey and cheeses. The hotel also runs its own balloon tour company, offering guests a 10% discount. Book at least 2 months ahead for summer stays.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="al" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Cappadocia Cave Suites (Ürgüp)</h3>
 <p>Set in a restored 19th-century Greek mansion, this 18-room property charges $80–$120 per night. Each room features original stone walls, hand-carved fireplaces, and modern bathrooms. Highlights: wine cellar with tastings of local Şarapları wines, a rooftop bar with valley views, and a spa offering Turkish bath and massage. The hotel’s central Ürgüp location puts you steps from boutiques and restaurants.</p>
 
 <h3>3. Mithra Cave Hotel (Göreme)</h3>
 <p>A sibling property to Kelebek, Mithra has 25 rooms ranging from $70 to $110 per night. Highlights: a large terrace with iconic balloon-viewing spots, a children’s play area, and a library lounge. Rooms include cave suites with sunken seating areas and heated floors. The hotel offers free shuttle to Göreme’s center (5-minute walk). Best for families and couples seeking a quieter alternative to Kelebek.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>4. Anatolian Houses (Avanos)</h3>
 <p>This 12-room boutique hotel in Avanos charges $65–$90 per night. Highlights: direct access to the river for sunset walks, a pottery studio where guests can try their hand at the wheel, and a garden with fruit trees. Rooms are simple but comfortable, with air conditioning and en-suite bathrooms. The hotel’s restaurant serves regional dishes like testi kebab (clay pot stew). A solid choice for culture-focused travelers.</p>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Museum Hotel (Uçhisar)</h3>
 <p>A Relais & Châteaux property, Museum Hotel is a restored historic mansion with 30 rooms and suites, each a unique cave space filled with authentic antiques and artifacts. Prices start at $350 per night in 2026, with the top Presidential Suite reaching $1,200. Features: a heated infinity pool overlooking the valley, a private vineyard producing organic wines, a gourmet restaurant (Lil’a) with Michelin-trained chefs, and a spa with hammam and massage. The hotel also offers exclusive tours, including a private balloon flight and guided hikes through hidden valleys. Guests rave about the “wine hour” with complimentary local vintages.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Argos in Cappadocia (Uçhisar)</h3>
 <p>Carved into a hillside with 51 rooms, Argos is a luxury cave hotel that blends history with opulence. Rates range from $280 to $800 per night. Features: a subterranean wine cellar with over 400 labels, a restaurant (Seki) serving Anatolian cuisine with valley views, a heated pool, and a spa with treatment rooms. The property includes a chapel and ancient tunnels, offering a sense of discovery. The hotel’s location on a ridge provides 360-degree views of the fairy chimneys. Ideal for honeymooners and wine enthusiasts.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="th" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Taskonaklar (Ürgüp)</h3>
 <p>A 10-room boutique luxury hotel in Ürgüp, Taskonaklar charges $220–$500 per night. Features: each room is individually designed with handwoven textiles and local art, a private terrace with hot tub, a gourmet breakfast with organic ingredients, and a concierge service that arranges private balloon flights, horseback riding, and cooking classes. The hotel’s intimate size ensures personalized service, and its location near Ürgüp’s historic center makes it easy to explore. Best for travelers seeking a romantic, quiet escape.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>How to Choose the Right Area</h2>
 <p>Your choice of neighborhood in Cappadocia depends on your trip purpose:</p>
@@ -306,11 +337,13 @@
 <p>To save money and secure the best rooms in Cappadocia for 2026, follow these strategies:</p>
 <ul>
   <li><strong>Book early:</strong> For peak season (May–September), reserve 4–6 months in advance. Hotels like Kelebek and Museum Hotel often sell out by March. Use services like Booking.com or direct hotel websites for the best cancellation policies.</li>
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
   <li><strong>Consider shoulder months:</strong> April and October offer mild weather (50–70°F), lower rates (20–30% less), and fewer tourists. November is even cheaper but some hotels close for off-season.</li>
   <li><strong>Use price comparison tools:</strong> Check sites like HotelsCombined or Trivago, but also compare with the hotel’s own site—some offer 10–15% discounts for direct bookings (e.g., Taskonaklar and Argos).</li>
   <li><strong>Look for packages:</strong> Many luxury hotels include balloon flights (typically $150–$250 per person) in their packages, saving you money. For example, Museum Hotel’s “Romance Package” includes a balloon ride, dinner, and spa treatment for $600 per couple.</li>
   <li><strong>Avoid booking fees:</strong> Use platforms like Agoda or Expedia for free cancellation, but read the fine print—some budget hotels charge extra for airport transfers (typically $20–$30 per person).</li>
   <li><strong>Negotiate for longer stays:</strong> If you book 5+ nights, ask for a 10–20% discount, especially at mid-range hotels like Anatolian Houses or Cappadocia Cave Suites. Email the hotel directly before booking.</li>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="di" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
   <li><strong>Watch for hidden costs:</strong> Some hotels charge a “tourist tax” of 2–5% (common in Turkey), and luxury properties may add service charges for spa or dining. Confirm the total price at checkout.</li>
 </ul>
 <p>In 2026, the most reliable booking services for Cappadocia are Booking.com (largest inventory), direct hotel websites (best for luxury deals), and Airbnb (for apartments in Avanos or Ürgüp). Always read recent reviews (2025–2026) on TripAdvisor or Google to verify cleanliness and service quality.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
@@ -393,9 +426,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Направления</div>
+        <a href="/ru/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Главная
+        </a>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/haikou-oteli.html" class="nav-pill nav-pill-outline">EN</a>
@@ -269,6 +292,7 @@
 
 <h3>2. Jinjiang Inn Haikou</h3>
 <p>Сетевой отель китайской сети, который держит планку «чисто, дёшево и предсказуемо». Номера небольшие, но функциональные: есть всё необходимое — кровать, телевизор, чайник, душ. Рядом — остановка автобуса и несколько магазинов с фруктами. Я рекомендую его для тех, кто приезжает в командировку или просто переночевать перед рейсом.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="ки" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Цена:</strong> от $35 за ночь (стандартный двухместный номер)</li>
 <li><strong>Плюсы:</strong> стабильный Wi-Fi, завтрак включён, круглосуточная стойка регистрации</li>
@@ -294,6 +318,7 @@
 
 <h3>5. Grand Metropark Haikou</h3>
 <p>Отель в колониальном стиле, который напоминает мне старые фотографии Шанхая 30-х годов. Расположен в деловом центре, рядом с торговыми центрами и ресторанами. Номера оформлены с элементами китайской классики — резные деревянные панели, шёлковые подушки. Идеальный выбор для тех, кто совмещает отдых с шопингом.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Цена:</strong> от $72 за ночь (deluxe номер)</li>
 <li><strong>Фишки:</strong> ночной клуб на крыше, караоке-залы, собственный кондитерский цех</li>
@@ -301,6 +326,7 @@
 
 <h3>6. Holiday Inn Haikou</h3>
 <p>Надёжный вариант от всемирно известной сети. Отель расположен чуть в стороне от туристических троп, но рядом есть станция метро и автобусная остановка. Номера стандартные, но очень комфортные: хорошая звукоизоляция, удобные кровати, мощный кондиционер. Я часто селю здесь семьи с детьми — есть игровая комната и детское меню.</p>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Цена:</strong> от $63 за ночь (номер с двумя кроватями)</li>
 <li><strong>Фишки:</strong> круглосуточный бизнес-центр, прачечная, обмен валюты, парковка</li>
@@ -308,6 +334,7 @@
 
 <h3>7. Yalong Bay Vista Resort</h3>
 <p>Небольшой бутик-отель с уникальным дизайном — каждый номер оформлен в стиле разных стран мира. Есть и японский татами, и французский прованс, и даже африканское сафари. Расположен в тихом районе, в 15 минутах езды от центра. Очень романтичное место — я рекомендую его парам.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Цена:</strong> от $98 за ночь (тематический номер)</li>
 <li><strong>Фишки:</strong> джакузи в номере, свечи и лепестки роз по запросу, приватный ужин на террасе</li>
@@ -324,6 +351,7 @@
 
 <h3>9. Wanda Vista Haikou</h3>
 <p>Современный отель с футуристическим дизайном. Фасад здания напоминает гигантскую волну, а внутри — сплошные линии и стекло. Номера оснащены по последнему слову техники: голосовое управление, умные зеркала, автоматические шторы. Отель находится прямо на берегу, и из каждого номера слышен шум прибоя. Я обожаю их бесконечный бассейн на крыше — он кажется сливающимся с океаном.</p>
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Цена:</strong> от $185 за ночь (premium номер)</li>
 <li><strong>Особенности:</strong> вертолётная площадка, подводный ресторан, смотровая площадка на 40-м этаже, круглосуточный консьерж</li>
@@ -331,6 +359,7 @@
 
 <h3>10. Banyan Tree Haikou</h3>
 <p>Отель для тех, кто ценит уединение и восточную философию. Территория утопает в тропической зелени, каждый номер — это отдельная вилла с собственным бассейном и садом. Здесь царит атмосфера абсолютного спокойствия: ни музыки, ни шума, только пение птиц и шелест пальм. Спа-процедуры проводятся с использованием традиционных китайских трав, а йога на рассвете — это отдельный ритуал.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="дл" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Цена:</strong> от $260 за ночь (вилла с бассейном)</li>
 <li><strong>Особенности:</strong> частный повар, ритуалы чайной церемонии, медитации с монахами, велосипеды для гостей</li>
@@ -351,6 +380,7 @@
 <p>Во-вторых, используйте агрегаторы, но не забывайте проверять официальные сайты отелей. Часто они предлагают эксклюзивные тарифы с дополнительными услугами: бесплатный завтрак, поздний выезд, апгрейд номера. Я лично пользуюсь Booking.com и Agoda — у них удобная система фильтров и честные отзывы.</p>
 
 <p>И последний совет: не стесняйтесь писать в отель напрямую через форму обратной связи или социальные сети. Иногда можно договориться о скидке, особенно если вы планируете долгое проживание или путешествуете большой компанией. Один мой клиент так выторговал себе номер с видом на море по цене стандартного — просто потому, что вежливо попросил.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Надеюсь, мои рекомендации помогут вам выбрать идеальное место для отдыха в Хайкоу. Этот город умеет удивлять — стоит только дать ему шанс. Если остались вопросы, пишите мне в личные сообщения — я всегда рада помочь с подбором отеля под любой бюджет и любые пожелания!</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
@@ -432,9 +462,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Отправьте заявку — отвечу в течение часа!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Ваше имя" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Ваше имя *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Желаемое направление</option>
                         <option value="turkey">Турция</option>

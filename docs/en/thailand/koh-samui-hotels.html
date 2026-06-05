@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/koh-samui-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,6 +277,7 @@
             <h1>Top 10 Hotels in Koh Samui 2026: Budget to Luxury</h1>
 
 <p>Koh Samui, Thailand’s second-largest island, continues to evolve as a premier destination in 2026, with a hotel infrastructure that spans from rustic beachfront bungalows to opulent private-pool villas. The island’s accommodation landscape is defined by its diverse neighborhoods: the bustling, party-centric Chaweng Beach offers the widest range of high-rise resorts and nightlife, while the quieter, family-friendly Bophut and Maenam beaches provide a more relaxed atmosphere with boutique stays. Lamai Beach strikes a balance between activity and calm, and the northern coast’s Choeng Mon offers secluded luxury. Prices in 2026 have seen a modest 5-8% increase from 2025 due to rising demand and sustainable tourism initiatives, but savvy travelers can still find excellent value.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Budget travelers can secure a clean, fan-cooled room for as low as $25 per night in quieter areas, while mid-range options ($50-$150) dominate the market with modern amenities like infinity pools and beachfront access. Luxury properties ($150+ per night) have pushed boundaries with overwater villas and private butlers, with top-tier suites reaching $1,200 per night during peak season (December to March). The island’s infrastructure has improved with better roads and expanded airport capacity, making it easier to explore. Below is a curated list of the top 10 hotels across three price tiers, each selected for quality, location, and value in 2026.</p>
 
@@ -275,8 +299,10 @@
 
 <h3>3. Baan Samui Resort (Budget Wing)</h3>
 <p><strong>Location:</strong> Maenam Beach, northern Koh Samui. <strong>Price Range:</strong> $35-$48/night. This budget wing of a larger resort offers 15 garden-view rooms with shared facilities, including a large saltwater pool and a beachfront sun deck. Rooms are simple but spotless, with air conditioning and free parking.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Pros:</strong> Access to resort pool and beach, quiet area, free kayaks.</li>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="po" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <li><strong>Cons:</strong> No restaurant in budget wing, must walk to main building (200 meters), limited privacy.</li>
 </ul>
 
@@ -284,24 +310,28 @@
 
 <h3>4. The Library Koh Samui</h3>
 <p><strong>Location:</strong> Chaweng Beach. <strong>Price Range:</strong> $85-$130/night. A design-forward boutique hotel with 26 minimalist suites, each featuring a private library of books and a tablet-controlled room system. The iconic red pool is a Instagram hotspot. Rooms are spacious (40 sqm) with rainfall showers and premium linens.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Highlights:</strong> Free minibar (soft drinks), complimentary yoga classes, beachfront location with direct access to Chaweng’s sand.</li>
 </ul>
 
 <h3>5. Bophut Beach Hotel</h3>
 <p><strong>Location:</strong> Bophut Beach (Fisherman’s Village). <strong>Price Range:</strong> $70-$110/night. A family-run property with 40 rooms, half of which offer sea views. The hotel features a large free-form pool, a Thai cooking school, and a restaurant serving fresh seafood. Rooms are Thai-style with wooden furniture and balconies.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Highlights:</strong> Walking distance to Fisherman’s Village night market (every Friday), free shuttle to Chaweng, excellent breakfast buffet ($12 extra).</li>
 </ul>
 
 <h3>6. Samui Paradise Chaweng</h3>
 <p><strong>Location:</strong> Chaweng Noi, a quieter part of Chaweng. <strong>Price Range:</strong> $60-$95/night. This 50-room resort offers a mix of garden and ocean-view rooms, all with air conditioning, flat-screen TVs, and private bathrooms. The infinity pool overlooks the Gulf of Thailand, and the on-site spa offers Thai massages from $30.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Highlights:</strong> Free snorkeling gear, poolside bar with happy hour (4-6 PM), 10-minute walk to central Chaweng.</li>
 </ul>
 
 <h3>7. The Kala Samui</h3>
 <p><strong>Location:</strong> Choeng Mon Beach, north-east coast. <strong>Price Range:</strong> $95-$145/night. A boutique resort with 35 suites, each with a private balcony or terrace. The property is built into a hillside, offering panoramic ocean views. Suites include kitchenettes and living areas, ideal for longer stays.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Highlights:</strong> Free shuttle to Chaweng (20 minutes), two pools (one adults-only), complimentary afternoon tea.</li>
 </ul>
@@ -310,18 +340,21 @@
 
 <h3>8. Four Seasons Koh Samui</h3>
 <p><strong>Location:</strong> Laem Yai Bay, north-west coast. <strong>Price Range:</strong> $450-$1,200/night. This ultra-luxury resort features 60 private villas, each with a personal infinity pool and outdoor sala. Villas range from 100 sqm (one-bedroom) to 400 sqm (multi-bedroom). The property includes a world-class spa, three restaurants (including a Michelin-starred chef collaboration), and a private beach.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Features:</strong> Personal butler service, free non-motorized water sports, kids’ club, yoga pavilion.</li>
 </ul>
 
 <h3>9. W Koh Samui</h3>
 <p><strong>Location:</strong> Maenam Beach. <strong>Price Range:</strong> $350-$800/night. A modern luxury hotel with 74 villas, all featuring private pools and floor-to-ceiling windows. The W brand is known for its vibrant design, with a signature “Living Room” lobby and a beachfront pool with underwater speakers. The on-site restaurant, The Beach House, serves international cuisine.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Features:</strong> 24-hour fitness center, spa with Thai treatments, free Wi-Fi, complimentary kayaks and paddleboards.</li>
 </ul>
 
 <h3>10. Soneva Kiri by Six Senses</h3>
 <p><strong>Location:</strong> Koh Kood (private island, accessible by speedboat from Koh Samui). <strong>Price Range:</strong> $800-$2,500/night. While technically on a nearby island, this resort is marketed as a Koh Samui escape. It offers 29 villas, each with a private pool, outdoor bathroom, and a dedicated “Mister/Miss Friday” butler. The resort is carbon-neutral and features a treetop dining pod.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
 <li><strong>Features:</strong> Private speedboat transfers, organic garden, cinema under the stars, complimentary ice cream and chocolate room.</li>
 </ul>
@@ -331,6 +364,7 @@
 
 <h2>Booking Tips for 2026</h2>
 <p>To save money on Koh Samui hotels, book at least 60 days in advance for peak season (December-March) and 30 days for low season (May-October). Use aggregators like Booking.com or Agoda for price comparisons, but check the hotel’s direct website for loyalty discounts or packages (e.g., free breakfast or airport transfers). Consider booking a refundable rate if travel plans are uncertain—many hotels in 2026 offer free cancellation up to 48 hours before check-in. For luxury stays, look for “stay 4 nights, pay 3” deals on hotel websites. Avoid booking through third-party resellers for high-end properties, as they may not include perks like spa credits or room upgrades. Finally, consider traveling in the shoulder months (November or April) when prices drop 20-30% and weather remains pleasant.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="we" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <table>
 <caption>Quick Price Comparison (2026 Average Nightly Rates)</caption>
@@ -425,9 +459,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

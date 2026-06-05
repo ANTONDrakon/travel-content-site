@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/abu-dhabi-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,46 +277,59 @@
             <h1>Top 10 Hotels in Abu Dhabi 2026: Budget to Luxury</h1>
 
 <p>Abu Dhabi, the capital of the United Arab Emirates, has undergone a remarkable transformation in its hospitality sector over the past five years. By 2026, the city offers a diverse range of accommodation options spanning from ultra-budget hostels and three-star business hotels to world-renowned seven-star palaces. The hotel infrastructure is concentrated primarily along the Corniche, on Yas Island, and in the expanding Al Reem Island and Saadiyat Island districts. The Corniche district remains the historic heart of the city’s hospitality, featuring a 8-kilometer stretch of public beaches and high-rise hotels with direct sea views. Yas Island, home to the Yas Marina Circuit and Ferrari World, has evolved into a self-contained entertainment hub with over 15 hotels, while Saadiyat Island now boasts the Louvre Abu Dhabi and several cultural institutions, driving demand for luxury properties. Average hotel prices in 2026 have stabilized after the post-pandemic boom, with budget rooms averaging $40–$55 per night, mid-range options at $80–$140, and luxury suites ranging from $200 to over $1,500 per night. The city’s occupancy rates hover around 82% year-round, with peak season (November to March) seeing rates surge by 30–40%.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Premier Inn Abu Dhabi Capital Centre</h3>
 <p>Located directly opposite the Abu Dhabi National Exhibition Centre (ADNEC), this 352-room property offers the most consistent budget experience in the city. Standard double rooms in 2026 average $42 per night, including complimentary Wi-Fi and a continental breakfast. The hotel features a small outdoor pool, a 24-hour fitness center, and a restaurant serving international buffet meals starting at $15. The primary advantage is its proximity to ADNEC and the Al Wahda Mall, which is a 5-minute taxi ride away. A notable con is the lack of beach access; the nearest public beach is 6 kilometers away. The hotel is also situated on a busy main road, so rooms facing the street can experience traffic noise, especially during weekday mornings.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Ibis Abu Dhabi Gate</h3>
 <p>Part of the Accor group, this 288-room hotel sits near the Abu Dhabi Gate, close to the border with Dubai, making it ideal for travelers transiting between the two emirates. Nightly rates in 2026 start at $38 for a standard room. The hotel provides a free shuttle bus to the city center three times daily, though the journey takes 25 minutes. Amenities include a rooftop swimming pool, a business center, and a 24-hour convenience store. The major pro is the extremely low price and the free parking for rental car users. The con is its isolated location—there are no restaurants or shops within walking distance, and the nearest metro station is 3 kilometers away. The hotel’s decor is functional but dated, with furnishings from the 2015 renovation showing wear.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="si" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Holiday Inn Express Abu Dhabi Yas Island</h3>
 <p>Despite being on Yas Island, this 208-room property maintains budget-friendly rates averaging $48 per night. It is 1.5 kilometers from the Yas Marina Circuit and 2 kilometers from Ferrari World. The hotel offers a complimentary breakfast buffet with hot items, a small gym, and a business center. The standout feature is the free shuttle to Yas Waterworld and the Warner Bros. World theme park. However, guests report that the rooms are compact (22 square meters) and that the pool is small and often crowded. Noise from the nearby Formula 1 track can be an issue during race weekends (December), when rates double. This is the best budget option for theme park visitors but not for those seeking a quiet, beachfront stay.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Riu Palace Abu Dhabi</h3>
 <p>This all-inclusive resort on the Corniche offers exceptional value for mid-range travelers. Standard sea-view rooms in 2026 cost $120 per night, which includes all meals, drinks (including alcohol), and non-motorized water sports. The hotel features three pools, a private beach area, and six restaurants serving cuisine from Spanish to Asian. The highlight is the 24-hour all-inclusive policy, rare for this price point. The main drawback is the large size (500 rooms), which can lead to long waits at buffets during peak hours. The location is 4 kilometers from the city center, requiring taxis for sightseeing.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Centro Yas Island by Rotana</h3>
 <p>A 423-room hotel geared toward business and leisure travelers, with rates averaging $95 per night. The hotel is connected to the Yas Island shopping mall and is a 10-minute walk from the Yas Marina. Rooms are modern with floor-to-ceiling windows and smart TVs. The highlight is the rooftop infinity pool with views of the Formula 1 track. The hotel also offers a free shuttle to the Abu Dhabi airport (5 kilometers away). The downside is that the pool closes at 8 PM, and the on-site restaurant is expensive for dinner, with mains averaging $30. Parking is free, but spaces are limited.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ge" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Hilton Abu Dhabi Yas Island</h3>
 <p>This 550-room hotel sits directly on Yas Beach, offering private access to a 1.2-kilometer stretch of sand. Nightly rates in 2026 range from $110 to $145. The hotel features a large lagoon pool, a spa with 12 treatment rooms, and four dining venues, including a seafood restaurant on the beach. The highlight is the family-friendly atmosphere, with a kids’ club and daily activities like kayaking and paddleboarding included. The con is that the beach can get crowded during weekends (Friday and Saturday), and the hotel charges $20 per day for valet parking. The location is excellent for Yas Island attractions but 20 minutes from downtown Abu Dhabi.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="si" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>4. Park Rotana Abu Dhabi</h3>
 <p>Located in the Khalifa Park area, this 298-room hotel offers a balance of comfort and convenience. Standard rooms cost $85 per night, with suites starting at $130. The hotel has a large outdoor pool, a tennis court, and a 24-hour fitness center. The highlight is the free shuttle to the Sheikh Zayed Grand Mosque (5 minutes away) and the Abu Dhabi Mall. The hotel’s restaurant, “Bella,” serves Italian cuisine with pasta dishes under $20. The main con is that the hotel is 3 kilometers from the nearest beach, and the surrounding area is mostly residential with limited dining options. The decor is slightly dated, with carpets showing signs of wear in hallways.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Emirates Palace Mandarin Oriental</h3>
 <p>This iconic 394-room property on a 1.3-kilometer private beach remains Abu Dhabi’s most recognizable luxury hotel. In 2026, standard rooms start at $450 per night, with suites exceeding $1,200. The hotel features a 1.5-kilometer-long pool, 14 restaurants and bars, a 2,500-square-meter spa, and a private marina. The highlight is the gold-leaf interior and the 24-carat gold vending machine in the lobby. Guests receive complimentary access to the Talise Spa and a personal butler for every suite. The con is the immense scale—walking from the lobby to a room can take 10 minutes, and the dining prices are extreme, with afternoon tea costing $120 per person. The hotel is 15 kilometers from the city center, requiring taxis for most excursions.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. The St. Regis Saadiyat Island Resort</h3>
 <p>Set on Saadiyat Island’s pristine beach, this 377-room resort offers direct access to the Saadiyat Beach Golf Club and is a 5-minute drive from the Louvre Abu Dhabi. Rates in 2026 range from $350 to $800 per night. The resort features a 50-meter infinity pool, a 1,500-square-meter spa with hammam treatments, and five restaurants, including a Michelin-starred Japanese venue. The highlight is the butler service, available 24/7 for all guests, including unpacking and packing services. The con is the isolated location—there are no shops or restaurants within walking distance, and taxi fares to downtown Abu Dhabi average $25 each way. The resort also charges a $50 daily resort fee for beach chairs and umbrellas.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Four Seasons Hotel Abu Dhabi at Al Maryah Island</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ab" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>This 200-room hotel sits on Al Maryah Island, Abu Dhabi’s financial district, offering skyline views of the city. Standard rooms start at $280 per night, with executive suites at $600. The hotel features a 44-meter lap pool, a 1,000-square-meter spa, and four restaurants, including a rooftop bar with panoramic views. The highlight is the direct access to the Galleria Mall, Abu Dhabi’s premier luxury shopping destination, and the free shuttle to the city center. The con is that the beach is artificial and small (100 meters), and the area is primarily business-oriented, with limited nightlife within walking distance. The hotel’s design is modern and minimalist, which some guests find less cozy than traditional luxury properties.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="si" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>How to Choose the Right Area</h2>
 
 <p>Choosing the right neighborhood in Abu Dhabi depends heavily on your travel purpose. For beach-focused vacations, the Corniche district and Saadiyat Island are the best choices. The Corniche offers 8 kilometers of public beach with gentle waves and lifeguard stations, while Saadiyat Island provides secluded, pristine sands with fewer crowds. Hotels on Yas Island also have beach access, but the water is calmer and more lagoon-like, ideal for families with young children. For sightseeing, the central Al Zahiyah area (near the Corniche) provides easy access to the Sheikh Zayed Grand Mosque (15 minutes by taxi), the Qasr Al Hosn fort (10 minutes), and the Heritage Village (5 minutes). Saadiyat Island is best for museum lovers, with the Louvre Abu Dhabi and the upcoming Guggenheim Abu Dhabi (opening late 2026) within walking distance of luxury resorts. For nightlife, Al Maryah Island and the Yas Marina area are the hubs. Al Maryah Island features upscale lounges and bars like the “Sky Lounge” at the Four Seasons, while Yas Marina has a concentrated strip of nightclubs and sports bars along the waterfront, including “The Irish Village” and “Yas Beach Club,” which hosts live DJs on weekends. The Corniche area has a more subdued evening scene, with most entertainment limited to hotel bars and shisha cafes.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
@@ -377,9 +413,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

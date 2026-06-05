@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/bangkok-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,6 +277,7 @@
             <h1>Top 10 Hotels in Bangkok 2026: Budget to Luxury</h1>
 
 <p>Bangkok’s hotel scene in 2026 is more dynamic than ever, with new properties opening alongside iconic landmarks. The city’s infrastructure improvements, including the expanded BTS Skytrain lines reaching farther into suburbs and the completion of the MRT Orange Line, have made previously remote neighborhoods highly accessible. Hotel prices have risen approximately 8–12% since 2024 due to increased demand from both leisure and business travelers, but savvy visitors can still find excellent value. Neighborhoods like Sukhumvit continue to dominate for convenience, while Rattanakosin offers cultural immersion near temples, and Riverside provides a tranquil escape with stunning views of the Chao Phraya River. Whether you seek a hostel-style budget stay or a five-star suite with butler service, Bangkok delivers an unmatched range of accommodations.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Price ranges in this guide reflect average nightly rates for a standard double room in January 2026, including taxes and service charges. Budget hotels under $50 often lack pools or gyms but compensate with central locations. Mid-range options ($50–150) typically include breakfast and modern amenities. Luxury properties ($150+) offer world-class spas, infinity pools, and Michelin-starred dining. Below, we detail ten top hotels across these tiers, with honest assessments of their strengths and weaknesses.</p>
 
@@ -261,26 +285,32 @@
 
 <h3>1. Lub d Bangkok Siam</h3>
 <p><strong>Price:</strong> $25–40/night. Located in the heart of Siam Square, this hostel-style hotel offers private rooms and dorms. The rooftop bar overlooks the bustling shopping district. <strong>Pros:</strong> Unbeatable location near BTS Siam, free Wi-Fi, and a social atmosphere. <strong>Cons:</strong> Thin walls; noise from common areas can be disruptive. Ideal for solo travelers under 35.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Niras Bankok Culture Hostel</h3>
 <p><strong>Price:</strong> $18–35/night. A boutique hostel in Banglamphu, near Khao San Road. The property features Thai-inspired decor, a garden courtyard, and a library. <strong>Pros:</strong> Quiet despite proximity to nightlife, excellent staff, and free walking tours. <strong>Cons:</strong> No elevator; rooms on upper floors require stair climbing. Shared bathrooms may not suit all.</p>
 
 <h3>3. The Warehouse Bangkok</h3>
 <p><strong>Price:</strong> $30–48/night. A converted 1950s warehouse in Khlong Toei, now a hip hotel with industrial-chic design. Rooms feature exposed brick and concrete. <strong>Pros:</strong> Unique architecture, rooftop pool, and a lively bar. <strong>Cons:</strong> Located in a gritty district; walking alone at night is not recommended. Limited dining options nearby.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Mid-Range Hotels ($50–150/night)</h2>
 
 <h3>4. Holiday Inn Express Bangkok Siam</h3>
 <p><strong>Price:</strong> $65–95/night. A reliable chain hotel on Phayathai Road, steps from BTS Ratchathewi. Rooms are compact but efficient, with blackout curtains and power showers. <strong>Highlights:</strong> Free breakfast buffet with Thai and Western options, a small fitness center, and a 24-hour business center. Best for business travelers or families needing a central base.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>5. The Quarter Hualamphong by UHG</h3>
 <p><strong>Price:</strong> $55–85/night. Located opposite the historic Hualamphong Train Station, this hotel blends vintage railway themes with modern comfort. The rooftop bar offers views of the station’s clock tower. <strong>Highlights:</strong> Spacious rooms with railway memorabilia, a saltwater pool, and a Thai restaurant serving local classics. Perfect for train enthusiasts or those exploring Chinatown.</p>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="bl" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>6. Ariyasom Villa</h3>
 <p><strong>Price:</strong> $90–140/night. A tranquil boutique hotel in Sukhumvit Soi 1, set in a restored 1940s villa. Rooms feature teakwood floors and claw-foot bathtubs. <strong>Highlights:</strong> An organic spa, a lush garden pool, and a vegetarian-friendly restaurant. The hotel hosts weekly cooking classes. Ideal for couples seeking romance away from the crowds.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>7. The Sukosol Hotel</h3>
 <p><strong>Price:</strong> $70–110/night. Near Phaya Thai BTS station, this hotel is known for its antique collection—over 500 pieces of Thai art and furniture. Rooms are elegant, with silk cushions and marble bathrooms. <strong>Highlights:</strong> A large outdoor pool, a jazz bar with live music on weekends, and a free shuttle to Siam Paragon. Great for culture lovers who want modern amenities.</p>
+<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
@@ -292,10 +322,12 @@
 
 <h3>10. Rosewood Bangkok</h3>
 <p><strong>Price:</strong> $300–600/night. A skyscraper hotel in Ploenchit, with a dramatic 30-meter lobby waterfall. Rooms have floor-to-ceiling windows overlooking the city. <strong>Features:</strong> The Lakehouse restaurant on the 19th floor, a spa with Himalayan salt sauna, and a rooftop bar with 360-degree views. The hotel’s infinity pool on the 20th floor appears to merge with the sky. Perfect for business travelers and luxury shoppers.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>How to Choose the Right Area</h2>
 
 <p>Selecting the right neighborhood in Bangkok can make or break your trip. For beach access, consider hotels near the Chao Phraya River (Riverside area) or those offering shuttle boats to Koh Kret. The Mandarin Oriental and The Siam Hotel both provide private piers. For sightseeing, stay in Rattanakosin (near the Grand Palace and Wat Pho) or Siam (for shopping at MBK and CentralWorld). Budget hotels like Lub d Bangkok Siam put you steps from BTS connections to all major attractions. For nightlife, Sukhumvit Soi 11 and Thonglor are epicenters. The Quarter Hualamphong offers quick access to Khao San Road’s bars via a short taxi ride. Families should prioritize Sukhumvit for its parks and kid-friendly restaurants, while business travelers benefit from Ploenchit’s proximity to offices and the BTS.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="bo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
@@ -379,9 +411,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

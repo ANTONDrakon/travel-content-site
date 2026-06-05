@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/sharm-el-sheikh-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,11 +277,13 @@
             <h1>Top 10 Hotels in Sharm El Sheikh 2026: Budget to Luxury</h1>
 
 <p>Sharm El Sheikh, the crown jewel of Egypt’s Red Sea Riviera, continues to evolve its hotel infrastructure in 2026, blending world-class diving resorts with expanding desert luxury compounds. The city is divided into distinct neighborhoods: Naama Bay remains the bustling heart with restaurants and nightlife, while Shark’s Bay and Ras Um Sid offer quieter, dive-focused stays. Hadaba and Nabq Bay are emerging as value zones with newer all-inclusive resorts. Prices in 2026 reflect a 10-15% increase from 2023 due to rising energy costs and tourism demand, but competition keeps options affordable. Budget rooms average $35-50 per night, mid-range properties range from $60-130, and luxury suites start at $180, with peak winter rates (December-February) adding 20-30%. The Egyptian pound’s fluctuation against the dollar can offer additional savings for international travelers paying in foreign currency.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Camel Dive Club & Hotel</h3>
 <p>Located in Naama Bay, this iconic budget hotel is a favorite among scuba divers. Rooms are simple but clean, with air conditioning and private bathrooms. The on-site dive center offers PADI courses. Prices start at $38 per night for a standard double room (2026 rates).</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Pros:</strong> Direct beach access, best dive shop in town, lively bar. <strong>Cons:</strong> No pool, rooms can be noisy from nightlife, basic breakfast included.</p>
 
 <h3>2. Sharm Cliff Hotel</h3>
@@ -267,36 +292,45 @@
 
 <h3>3. Oonas Dive Club</h3>
 <p>In Naama Bay’s quieter southern end, this hotel caters to budget-conscious divers. Rooms are basic but have balconies overlooking the garden. A pool and dive center are on-site. Prices start at $45 per night for a double room with breakfast.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Pros:</strong> Friendly staff, good snorkeling from the jetty, free shuttle to Naama Bay. <strong>Cons:</strong> Rooms are dated, no in-room safe, breakfast is limited to bread and jam.</p>
 
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Reef Oasis Beach Resort</h3>
 <p>Situated in Shark’s Bay, this resort features a private beach with coral reefs. Rooms are modern with minibars and balconies. The property includes three pools, a spa, and a buffet restaurant. Rates range from $85-120 per night for a standard room (2026).</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> House reef with turtles, kids’ club, evening entertainment.</p>
 
 <h3>2. Jaz Belvedere Resort</h3>
 <p>In the quiet Nabq Bay area, this all-inclusive resort offers value for families. Rooms are spacious with sitting areas. Facilities include four pools, a water park, and multiple restaurants. Standard rooms cost $70-100 per night, all-inclusive.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Large pool complex, free shuttle to Naama Bay, excellent buffet variety.</p>
 
 <h3>3. Novotel Sharm El Sheikh</h3>
 <p>Located in Naama Bay, this chain hotel provides reliable comfort. Rooms are soundproofed with modern furnishings. The property has a large pool, tennis courts, and a private beach. Rates are $95-130 per night for a double room with breakfast.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Central location steps from nightlife, good gym, professional staff.</p>
 
 <h3>4. Sol Y Mar Sharm El Sheikh</h3>
 <p>In Hadaba, this resort offers a balance of price and amenities. Rooms are bright with Egyptian cotton linens. Facilities include two pools, a spa, and a dive center. Standard rooms cost $60-80 per night, half-board.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Highlights:</strong> Quiet setting, free yoga classes, excellent snorkeling from the pier.</p>
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Four Seasons Resort Sharm El Sheikh</h3>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Sh" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Set on a private peninsula in Shark’s Bay, this resort epitomizes luxury. Rooms are palatial with marble bathrooms and sea views. Features include a world-class spa, six restaurants, and a private beach with coral reef. Suites start at $450 per night, with villas exceeding $1,200. The resort offers butler service, a diving school, and a kids’ program.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ep" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Rixos Sharm El Sheikh</h3>
 <p>In Nabq Bay, this all-inclusive luxury resort targets adults seeking relaxation. Rooms are contemporary with hydro-massage bathtubs. The property boasts a lagoon-style pool, a private beach, and a Turkish hammam. Rates begin at $220 per night for a deluxe room. Features include 24-hour room service, a spa, and a dive center.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ta" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Savoy Sharm El Sheikh</h3>
 <p>Located in the SOHO Square area, this resort combines luxury with entertainment. Rooms are elegantly furnished with balconies overlooking gardens. The resort has five pools, a casino, and a shopping arcade. Suites start at $180 per night. Highlights include a private beach shuttle, multiple restaurants, and a nightclub.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="co" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>How to Choose the Right Area</h2>
 <p>Selecting the right neighborhood in Sharm El Sheikh depends on your travel purpose. For beach and diving enthusiasts, Shark’s Bay and Ras Um Sid offer the best house reefs and calm waters, with resorts like Reef Oasis and Four Seasons providing direct access. For sightseeing and cultural activities, Naama Bay is the hub—walk to the Old Market, the Al Mustafa Mosque, and the Naama Bay promenade. Hotels like Camel Dive Club and Novotel put you steps from the action. For nightlife and entertainment, SOHO Square in the Hadaba district is the epicenter, with casinos, bars, and live shows; Savoy Sharm El Sheikh is an ideal base. If you prioritize peace and quiet, Nabq Bay’s sprawling resorts (Jaz Belvedere, Rixos) offer seclusion with shuttle access to Naama Bay.</p>
@@ -382,9 +416,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/pattaya-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,13 +277,17 @@
             <h1>Top 10 Hotels in Pattaya 2026: Budget to Luxury</h1>
 
 <p>Pattaya’s hotel infrastructure has evolved dramatically over the past decade, with a 2026 landscape that blends ultramodern high-rises along Beach Road with charming boutique properties in quieter soi. The city now boasts over 1,200 registered hotels, ranging from backpacker hostels at $15 a night to five-star oceanfront resorts exceeding $500. Key neighborhoods have sharpened their identities: Central Pattaya remains the bustling heart, Jomtien offers family-friendly beaches, Pratumnak Hill delivers panoramic views, and Naklua provides a serene, upscale escape. Average hotel occupancy in 2025 hit 78%, and prices have risen 12% since 2023, driven by new direct flights from Europe and China.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Room rates in 2026 reflect this demand. A standard double in a budget hotel averages $35–$45, mid-range properties command $70–$120, and luxury suites start at $180 and climb to $800 for penthouse units. Off-peak months (May–October) see 20–30% discounts. The city’s beachfront is nearly fully developed, so newer hotels are rising in Pratumnak and Jomtien, offering better value. Below is a curated list of the top ten hotels across every price tier, with specific prices, verified pros and cons, and insider tips for 2026.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="av" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. The Bed Hotel Pattaya</h3>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pa" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Located on Soi Buakhao, a 10-minute walk from Central Festival Pattaya Beach, The Bed Hotel is a modern 4-story property with 82 rooms. It opened in 2022 and maintains a 4.3-star rating on Booking.com. Rooms are compact (16–20 m²) but feature smart TVs, rain showers, and free high-speed Wi-Fi. The rooftop pool is small but offers sunset views over the city.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $28–$38 per night for a standard double. Breakfast not included.</p>
 <ul>
 <li><strong>Pros:</strong> Central location, clean and modern, 24-hour reception, free parking for motorcycles.</li>
@@ -269,6 +296,7 @@
 
 <h3>2. Siam View Hotel</h3>
 <p>A long-standing favorite on Soi 10, Siam View Hotel offers 120 rooms across 8 floors, with a direct view of Pattaya Bay from its upper floors. It’s a 3-minute walk to the beach and 5 minutes to Walking Street. Rooms are basic but spacious (25–30 m²) with tiled floors, air conditioning, and small balconies. The hotel has a large outdoor pool and a restaurant serving Thai and Western dishes.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $32–$45 per night for a sea-view double. Breakfast included.</p>
 <ul>
 <li><strong>Pros:</strong> Great sea views, friendly staff, large pool, close to nightlife but quiet at night.</li>
@@ -277,6 +305,7 @@
 
 <h3>3. LK Royal Suite</h3>
 <p>In the quieter LK Metro area, LK Royal Suite is a 7-story hotel with 98 rooms, popular with repeat visitors. It offers a mix of studio and one-bedroom suites (30–40 m²) with kitchenettes and separate living areas. The property includes a rooftop pool, a small gym, and a lobby bar. It’s a 15-minute walk to the beach but surrounded by local restaurants and massage shops.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $38–$48 per night for a studio suite. Breakfast optional for $8.</p>
 <ul>
 <li><strong>Pros:</strong> Spacious suites, quiet location, good value for long stays, free Wi-Fi.</li>
@@ -287,13 +316,16 @@
 
 <h3>4. Amari Pattaya</h3>
 <p>Perched on Pattaya’s northern headland, Amari Pattaya is a 4-star resort with 223 rooms, including 40 suites. It underwent a major renovation in 2024, updating all rooms with contemporary Thai décor and smart technology. Facilities include three pools (one infinity-edge), a full-service spa, four restaurants, and direct beach access via a private walkway. The hotel is a 10-minute drive from Central Pattaya and 15 minutes from Walking Street.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $85–$120 per night for a deluxe sea-view room. Breakfast included.</p>
 <ul>
 <li><strong>Highlights:</strong> Stunning sunset views from the infinity pool, excellent breakfast buffet (Thai, Japanese, Western), free shuttle to city center, kids’ club.</li>
 </ul>
 
 <h3>5. Centara Grand Mirage Beach Resort Pattaya</h3>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Pa" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Located on North Pattaya Beach, this massive 555-room resort is designed as a “Lost World” theme with a water park featuring 10 slides, a lazy river, and a wave pool. Rooms are spacious (32–45 m²) with modern furnishings and balconies. The resort has 7 restaurants, a spa, and a fitness center. It’s a 5-minute walk to Terminal 21 shopping mall and 10 minutes to the beach.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $95–$140 per night for a deluxe garden-view room. Breakfast included.</p>
 <ul>
 <li><strong>Highlights:</strong> Incredible water park (free for guests), family-friendly with kids’ activities, multiple dining options including a rooftop steakhouse, direct beach access.</li>
@@ -301,6 +333,7 @@
 
 <h3>6. Hilton Pattaya</h3>
 <p>A landmark on Central Pattaya Beach, the Hilton occupies floors 15–32 of the CentralFestival complex. It offers 300 rooms and suites with floor-to-ceiling windows overlooking the bay. The hotel features an iconic outdoor pool with a glass edge, a world-class spa, and three restaurants including the renowned Edge. It’s directly connected to the shopping mall and a 2-minute walk to the beach.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $110–$150 per night for a deluxe city-view room. Breakfast not included (add $25).</p>
 <ul>
 <li><strong>Highlights:</strong> Prime location above the mall, spectacular pool with bay views, excellent service, great for couples and business travelers, rooftop bar.</li>
@@ -308,6 +341,7 @@
 
 <h3>7. Pullman Pattaya Hotel G</h3>
 <p>Set on Pratumnak Hill, the Pullman Pattaya Hotel G is a 5-star resort with 352 rooms and suites, all with private balconies. It opened in 2020 and has become a favorite for its modern design, large lagoon-style pool, and private beach club. Facilities include a fitness center, spa, three restaurants, and a kids’ club. The hotel is a 5-minute drive to Walking Street but feels secluded.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="G" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $100–$145 per night for a deluxe ocean-view room. Breakfast included.</p>
 <ul>
 <li><strong>Highlights:</strong> Stunning infinity pool overlooking the Gulf of Thailand, private beach access, modern Thai cuisine at the restaurant, free shuttle to Central Pattaya, quiet and romantic setting.</li>
@@ -324,6 +358,7 @@
 
 <h3>9. InterContinental Pattaya Resort</h3>
 <p>Nestled on a private beach in Naklua, the InterContinental Pattaya Resort offers 156 rooms and suites in a low-rise tropical setting. Rooms are luxurious (45–60 m²) with Thai silk accents, marble bathrooms, and private terraces. The resort features a large free-form pool, a spa with hydrotherapy, four restaurants, and a kids’ club. It’s a 15-minute drive from Central Pattaya, ensuring peace and privacy.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $200–$350 per night for a deluxe ocean-view room. Breakfast included.</p>
 <ul>
 <li><strong>Features:</strong> Private beach with water sports, award-winning spa (signature Thai massage), infinity pool, fine dining at the Elements restaurant, complimentary shuttle to city center, butler service for suites.</li>
@@ -331,6 +366,7 @@
 
 <h3>10. Cape Dara Resort</h3>
 <p>Perched on a cliff in North Pattaya, Cape Dara Resort offers 260 rooms and suites with dramatic ocean views. It opened in 2019 and quickly became a top luxury choice. Rooms are contemporary (40–70 m²) with floor-to-ceiling windows, deep soaking tubs, and smart home controls. Facilities include a stunning rooftop infinity pool, a spa, a fitness center, and three restaurants. The resort has a private beach cove and is a 10-minute drive from Walking Street.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Price in 2026:</strong> $220–$500 per night for a junior suite. Breakfast included.</p>
 <ul>
 <li><strong>Features:</strong> Rooftop infinity pool with 360-degree views, private beach cove, modern Thai and Japanese dining, free shuttle service, butler service, 24-hour room service, panoramic sunset views from every room.</li>
@@ -342,6 +378,7 @@
 <li><strong>For Beach and Relaxation:</strong> Choose Jomtien Beach (south) or Naklua (north). Jomtien has a 5-km long, quieter beach with budget to mid-range hotels like the Pullman. Naklua offers luxury resorts like the InterContinental with private beach access. Avoid Central Pattaya beach, which is crowded and has narrow sand.</li>
 <li><strong>For Sightseeing and Shopping:</strong> Stay in Central Pattaya (Soi 1–10) or near Terminal 21. You’ll be walking distance to Sanctuary of Truth, Art in Paradise, and major malls. Hotels like the Hilton and Centara Grand are ideal. Pratumnak Hill is also good for views and proximity to Big Buddha Temple.</li>
 <li><strong>For Nightlife and Entertainment:</strong> Base yourself near Walking Street (South Pattaya) or Soi Buakhao. Walking Street has the densest concentration of clubs, bars, and shows. Budget hotels like The Bed Hotel are perfect. For a quieter nightlife scene, LK Metro offers go-go bars and beer bars without the chaos.</li>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="ar" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 </ul>
 
 <h2>Booking Tips</h2>
@@ -349,6 +386,7 @@
 <ul>
 <li><strong>Book Early or Late:</strong> For peak season (November–February), book 3–4 months in advance for 15–20% discounts. For low season (May–October), last-minute bookings (1–2 weeks before) often yield 30% off.</li>
 <li><strong>Use Multiple Platforms:</strong> Compare prices on Booking.com, Agoda, and Expedia. Agoda often has exclusive deals for Asian properties. Direct booking on hotel websites sometimes includes perks like free breakfast or late checkout.</li>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="we" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <li><strong>Consider Package Deals:</strong> Many luxury hotels (e.g., Royal Cliff, InterContinental) offer packages that include spa credits, dinner, or airport transfers. These can save $50–$100 per night.</li>
 <li><strong>Check for Hidden Fees:</strong> Some hotels add a 10% service charge and 7% VAT at checkout. Always confirm the total price in advance. Budget hotels usually include taxes.</li>
 <li><strong>Join Loyalty Programs:</strong> Hilton Honors, IHG Rewards, and Accor Live Limitless offer free nights and upgrades. Even mid-range chains like Centara have programs with member-only rates.</li>
@@ -433,9 +471,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

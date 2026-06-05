@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/krabi-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -256,6 +279,7 @@
 <p>Krabi, Thailand, continues to captivate travelers in 2026 with its dramatic limestone karsts, emerald waters, and world-class beaches. The province encompasses several distinct neighborhoods, each offering a unique atmosphere. Ao Nang is the most developed tourist hub, packed with restaurants, bars, and long-tail boat services to nearby islands. Railay Beach, accessible only by boat, offers a serene escape with stunning rock climbing and pristine sands. Krabi Town, the provincial capital, provides a more authentic Thai experience with a vibrant night market and lower accommodation prices. For those seeking pure relaxation, the beaches of Klong Muang and Tubkaek offer a quieter alternative with panoramic sunset views of the Andaman Sea.</p>
 
 <p>Hotel infrastructure in Krabi has matured significantly by 2026, with properties ranging from basic bungalows to ultra-luxury resorts. Prices fluctuate dramatically by season: high season (November to March) sees rates increase by 40-60% compared to the low season (May to October). Budget travelers can find clean, air-conditioned rooms for under $30/night, while mid-range options offer pools and beach access for $60-120/night. Luxury resorts command $200-1,000+/night, often including private pools, spa facilities, and dedicated concierge services. The following curated list highlights the top 10 hotels across three price categories, based on traveler reviews, location, and value for money in 2026.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Budget Hotels (under $50/night)</h2>
 
@@ -264,34 +288,43 @@
 
 <h3>2. Baan Nong Bua Resort (Ao Nang)</h3>
 <p>This family-run resort offers excellent value just a 15-minute walk from Ao Nang Beach. Private bungalows with air conditioning and en-suite bathrooms start at $38/night in low season and $48/night in high season. The property features a small pool, a garden setting, and free parking. Pros: Quiet, peaceful environment away from the main strip, friendly owners who provide local tips, and affordable rates for Ao Nang. Cons: No on-site restaurant (breakfast is not included), and the walk to the beach involves a steep hill in some sections.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Railay Bay Resort & Spa (Budget Wing) (Railay East)</h3>
 <p>While primarily a mid-range resort, the budget wing at Railay Bay Resort offers simple fan rooms for $28-40/night. These rooms are basic but clean, with shared bathroom facilities and access to the resort’s swimming pool and beachfront location on Railay East. Pros: Unbeatable location on Railay Beach, access to resort amenities (pool, kayak rentals, restaurant), and the cheapest option on Railay. Cons: Rooms are dated, noise from the resort’s bar can be audible until 11 PM, and the shared bathrooms are less private.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Centara Ao Nang Beach Resort & Spa (Ao Nang)</h3>
 <p>Situated directly on Ao Nang Beach, this 4-star resort offers a perfect balance of comfort and location. Standard rooms start at $85/night in low season and $130/night in high season. Highlights include two large swimming pools (one with a swim-up bar), a spa, and three dining venues. The resort is steps away from the beach and a 5-minute walk to the main dining and shopping street. Guests praise the breakfast buffet (included in many rates) and the attentive staff. The resort underwent a full renovation in early 2025, updating all rooms with modern Thai decor.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Anyavee Tubkaek Beach Resort (Tubkaek Beach)</h3>
 <p>For those seeking tranquility, Anyavee Tubkaek Beach Resort offers deluxe rooms from $70-110/night. Located on the quieter Tubkaek Beach, the property features spacious rooms with private balconies, a large infinity pool overlooking the Andaman Sea, and direct beach access. Highlights include complimentary kayak and paddleboard rentals, a Thai cooking school, and spectacular sunset views of the Hong Islands. The resort is a 20-minute drive from Ao Nang, making it ideal for couples or families wanting peace without complete isolation.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Bhu Nga Thani Resort & Spa (Ao Nang)</h3>
 <p>This boutique resort is tucked away in a lush tropical garden, a 10-minute walk from Ao Nang Beach. Rooms start at $65/night in low season and $95/night in high season. The resort features a beautiful saltwater pool, a spa, and an on-site restaurant serving Thai and international cuisine. Highlights: The resort offers free shuttle service to the beach and Ao Nang center, a quiet pool area with sun loungers, and spacious rooms with separate living areas. The staff are known for exceptional service, arranging tours and transportation efficiently.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>4. Railay Great View Resort (Railay West)</h3>
 <p>Perched on the cliffs of Railay West, this resort offers stunning ocean views and direct access to the famous Phra Nang Cave Beach. Deluxe rooms start at $90/night in low season and $140/night in high season. Highlights include a cliffside swimming pool with panoramic views, a restaurant serving fresh seafood, and a private beach area. The resort is a 15-minute walk from the Railay East pier. Guests love the dramatic sunset views and the proximity to rock climbing routes. Note that the resort involves climbing stairs, making it less suitable for those with mobility issues.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Rayavadee (Railay Beach)</h3>
 <p>Rayavadee is Krabi’s most iconic luxury resort, set on 26 acres of tropical gardens between Railay West and Phra Nang Cave Beach. Pavilions and villas start at $450/night in low season and $750/night in high season. Each accommodation is a two-story pavilion with a private terrace, outdoor bathtub, and luxurious Thai silk furnishings. Features include three restaurants (including the renowned Krua Phranang serving Southern Thai cuisine), two infinity pools, a world-class spa, and complimentary use of kayaks, mountain bikes, and tennis courts. The resort is accessible only by boat, ensuring complete privacy. Rayavadee is consistently rated among the top resorts in Thailand for its service, location, and attention to detail.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Pimalai Resort & Spa (Koh Lanta)</h3>
 <p>While technically on Koh Lanta (a 2-hour ferry from Krabi mainland), Pimalai is often included in Krabi itineraries due to its proximity and reputation. This 5-star resort sprawls over 100 acres of hillside and beachfront. Rooms start at $250/night in low season and $400/night in high season. Features include a private 900-meter beach, a stunning infinity pool overlooking the Andaman Sea, a holistic spa, and five dining venues. The resort offers a free shuttle to Koh Lanta’s main town. Highlights include the Seven Seas restaurant with panoramic views, a cooking school, and a dive center. Pimalai is ideal for honeymooners and luxury seekers wanting a secluded island experience.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sp" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. The ShellSea Krabi (Klong Muang Beach)</h3>
 <p>Opened in 2023, The ShellSea Krabi quickly became a top-tier luxury option on Klong Muang Beach. Villas start at $350/night in low season and $550/night in high season. Each villa features a private pool, outdoor rain shower, and floor-to-ceiling windows with ocean or garden views. Features include a 50-meter saltwater infinity pool, a fine-dining restaurant specializing in seafood and Thai fusion, a full-service spa with traditional Thai massages, and a fitness center. The resort offers complimentary afternoon tea and a daily sunset cocktail hour. The ShellSea is praised for its modern design, exceptional service, and quiet beachfront location away from crowds.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>How to Choose the Right Area</h2>
 
@@ -333,6 +366,7 @@
 <h2>Booking Tips</h2>
 
 <p>To maximize value when booking a hotel in Krabi in 2026, follow these practical tips. First, book directly through the hotel’s website or call them directly. Many properties offer 10-15% discounts for direct bookings, along with perks like free breakfast, room upgrades, or late checkout. Compare prices on booking aggregators like Booking.com, Agoda, or Expedia, but always check the hotel’s own site before finalizing. Second, book at least 4-6 weeks in advance for high season (November to March) and 2-3 weeks for low season. Last-minute deals are rare in Krabi during peak periods, though low-season walk-ins can yield 20-30% discounts at some resorts.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Third, consider the total cost of your stay, including transportation. A hotel far from the beach may seem cheaper, but daily songthaew rides ($2-3 per trip) or taxi fares ($10-15 each way) can add up quickly. Fourth, use credit cards with no foreign transaction fees and consider travel insurance that covers trip cancellation or weather-related delays, especially during the monsoon season (June to October). Fifth, join hotel loyalty programs or use cashback sites like TopCashback or Rakuten for additional savings. Finally, read recent reviews (within the last 3 months) on TripAdvisor or Google to check for construction noise, maintenance issues, or changes in management. By planning ahead and using these strategies, you can secure excellent accommodation in Krabi that fits your budget and preferences.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -414,9 +448,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

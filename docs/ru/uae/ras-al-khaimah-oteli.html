@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Направления</div>
+        <a href="/ru/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Главная
+        </a>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/ras-al-khaimah-oteli.html" class="nav-pill nav-pill-outline">EN</a>
@@ -260,7 +283,9 @@
 <h2>Бюджетные отели (до $50/ночь)</h2>
 
 <h3>1. Citymax Hotel Ras Al Khaimah</h3>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ra" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Описание:</strong> Современный трехзвездочный отель, расположенный в деловом центре Рас-эль-Хаймы, в 15 минутах езды от пляжа Аль-Хамра. Открыт в 2023 году, насчитывает 120 номеров. Отель ориентирован на деловых путешественников и экономных туристов, предлагает круглосуточную стойку регистрации, бесплатный Wi-Fi и парковку.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ор" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $38 до $48 за ночь в стандартном номере (завтрак не включен, $8 дополнительно).</p>
 <table>
 <tr><td><strong>Плюсы</strong></td><td><strong>Минусы</strong></td></tr>
@@ -270,7 +295,9 @@
 </table>
 
 <h3>2. RAK Hotel Apartments</h3>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ap" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Описание:</strong> Апарт-отель в районе Аль-Нахиль, предлагающий студии и однокомнатные апартаменты с мини-кухней. Идеален для семей с детьми или длительного проживания. Здание 2018 года постройки, но регулярно обновляется. На территории есть небольшой тренажерный зал и прачечная.</p>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $35 до $50 за ночь за студию (мини-кухня, холодильник, плита).</p>
 <table>
 <tr><td><strong>Плюсы</strong></td><td><strong>Минусы</strong></td></tr>
@@ -281,6 +308,7 @@
 
 <h3>3. Al Hamra Hotel</h3>
 <p><strong>Описание:</strong> Один из старейших отелей эмирата (открыт в 1990-х), расположенный прямо на пляже Аль-Хамра. После реновации 2024 года номера обновлены, но фасад и инфраструктура остались в стиле ретро. Отель популярен среди рыбаков и любителей спокойного отдыха.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $42 до $50 за ночь с завтраком.</p>
 <table>
 <tr><td><strong>Плюсы</strong></td><td><strong>Минусы</strong></td></tr>
@@ -293,21 +321,25 @@
 
 <h3>4. DoubleTree by Hilton Resort & Spa Marjan Island</h3>
 <p><strong>Описание:</strong> Четырехзвездочный курорт на острове Марджан, открытый в 2022 году. 250 номеров с балконами и видом на море или лагуну. Отель предлагает три бассейна, спа-центр, фитнес-зал и несколько ресторанов. Популярен среди семей и пар.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $80 до $120 за ночь (стандартный номер с завтраком).</p>
 <p><strong>Фишки:</strong> Бесплатный доступ в аквапарк на территории (для гостей отеля), фирменное печенье DoubleTree на заселении, вечерние шоу по пятницам.</p>
 
 <h3>5. Rixos Bab Al Bahr</h3>
 <p><strong>Описание:</strong> Курортный отель сети Rixos, расположенный на полуострове Аль-Марьян. 500 номеров, включая сьюты с джакузи. Отель известен своей системой Ultra All Inclusive (все включено с алкоголем) и большим пляжем с белым песком. Подходит для тех, кто хочет отдыхать без забот.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="се" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $110 до $150 за ночь (Ultra All Inclusive).</p>
 <p><strong>Фишки:</strong> 7 ресторанов и 5 баров, включая турецкий ресторан с живой музыкой, ежедневные анимационные программы для детей и взрослых, частный пляж длиной 800 метров.</p>
 
 <h3>6. The Ritz-Carlton Ras Al Khaimah, Al Wadi Desert</h3>
 <p><strong>Описание:</strong> Уникальный отель в пустыне Аль-Вади, в 30 минутах от центра эмирата. 100 вилл в стиле бедуинских шатров, каждая с частным бассейном. Отель предлагает экскурсии по пустыне, наблюдение за звездами и соколиную охоту. Несмотря на категорию люкс, цены в низкий сезон (лето) опускаются до среднего сегмента.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $130 до $150 за ночь (в летние месяцы, без питания).</p>
 <p><strong>Фишки:</strong> Спа-центр с традиционными арабскими процедурами, организованные туры на джипах по дюнам, возможность увидеть газелей и ориксов на территории отеля.</p>
 
 <h3>7. Hilton Ras Al Khaimah Beach Resort</h3>
 <p><strong>Описание:</strong> Крупный курорт на острове Марджан, открытый в 2021 году. 350 номеров, два бассейна, спа-центр и четыре ресторана. Отель имеет собственный пляж с шезлонгами и зонтами. Подходит для деловых поездок и семейного отдыха.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="им" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $70 до $100 за ночь (с завтраком).</p>
 <p><strong>Фишки:</strong> Бесплатный шаттл до торгового центра Manar Mall, бизнес-центр с конференц-залами, аквааэробика и йога на пляже по выходным.</p>
 
@@ -315,16 +347,19 @@
 
 <h3>8. Waldorf Astoria Ras Al Khaimah</h3>
 <p><strong>Описание:</strong> Пятизвездочный отель на острове Марджан, один из самых престижных в эмирате. 350 номеров и сьютов, оформленных в классическом стиле с элементами арабского декора. Отель предлагает частный пляж, спа-центр площадью 2000 кв. м, 5 ресторанов и 2 бассейна. Известен своим сервисом «консьерж 24/7».</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $200 до $500 за ночь (стандартный номер, завтрак включен).</p>
 <p><strong>Особенности:</strong> Ресторан La Petite Maison с французской кухней (шеф-повар из Лиона), частные кабинки на пляже с обслуживанием, доступ в спа-зону с хаммамом и сауной (для гостей отеля — бесплатно).</p>
 
 <h3>9. Anantara Mina Al Arab Ras Al Khaimah Resort</h3>
 <p><strong>Описание:</strong> Роскошный курорт, расположенный на собственном острове в лагуне Мина Аль-Араб. Открыт в 2023 году, насчитывает 150 вилл и номеров, включая виллы на воде с панорамными окнами. Отель ориентирован на уединенный отдых и романтические поездки.</p>
+<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ор" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $300 до $700 за ночь (вилла с бассейном, завтрак включен).</p>
 <p><strong>Особенности:</strong> Ресторан на воде с видом на залив, экскурсии на каяках и лодках по мангровым лесам, спа-ритуалы с использованием местных трав и масел, частный причал для яхт.</p>
 
 <h3>10. Al Wadi Desert, Ras Al Khaimah, a Member of Design Hotels</h3>
 <p><strong>Описание:</strong> Бутик-отель в пустыне, входящий в коллекцию Design Hotels от Marriott. 30 вилл, каждая спроектирована с использованием натуральных материалов (камень, дерево, ткань ручной работы). Отель предлагает полное уединение: нет телевизоров, только звуки пустыни. Идеален для медитации и детокса.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От $400 до $1500 за ночь (вилла с частным бассейном, завтрак и ужин включены).</p>
 <p><strong>Особенности:</strong> Индивидуальный гид по пустыне, ужин под звездами с бедуинским меню, занятия йогой на дюнах, библиотека с книгами о природе ОАЭ.</p>
 
@@ -412,9 +447,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Отправьте заявку — отвечу в течение часа!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Ваше имя" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Ваше имя *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Желаемое направление</option>
                         <option value="turkey">Турция</option>

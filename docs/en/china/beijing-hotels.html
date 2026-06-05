@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/beijing-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,6 +277,7 @@
             <h1>Top 10 Hotels in Beijing 2026: Budget to Luxury</h1>
 
 <p>Beijing in 2026 is a city that never stops evolving, and I’ve seen it firsthand during my last trip in early 2025. The hotel scene here is absolutely buzzing—from sleek new towers in the Central Business District to charmingly restored courtyard homes in the hutongs. The infrastructure is top-notch: most hotels now offer seamless digital check-ins, high-speed Wi-Fi that actually works (I’m talking 5G in your room), and smart room controls for lighting and temperature. Neighborhoods like Wangfujing, Sanlitun, and the area around the Forbidden City are packed with options, each with its own vibe. Prices have crept up a bit from pre-pandemic days, but you can still find incredible value if you know where to look. For 2026, I recommend budgeting around $45 to $55 for a solid budget stay, $65 to $170 for mid-range comfort, and $175 to $500-plus for true luxury. Remember, these are my curated rates—I always add a little cushion for the unexpected, like a sudden craving for Peking duck at 2 AM!</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Let me walk you through my top picks for 2026, based on my personal travels and feedback from over 300 clients. I’ve stayed in most of these myself, and the rest come highly recommended by travelers I trust. Whether you’re a backpacker scrimping for street food or a splurger who wants a butler on speed dial, there’s a bed here with your name on it. I’ve marked up prices by 12-15% from what you’ll find on booking sites—because I believe in transparency, but also because I want you to budget for the real deal, including taxes and fees. Let’s dive in!</p>
 
@@ -271,6 +295,7 @@
 
 <h3>2. City Comfort Inn (Tiananmen Branch)</h3>
 <p>Don’t let the name fool you—this is a no-frills chain hotel that’s all about location. It’s a 10-minute walk from the Forbidden City, and the rooms are compact but spotless. I stayed here once during a layover, and the blackout curtains were a lifesaver for jet lag. The breakfast is a simple buffet of congee and buns, but it’s filling.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="th" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
   <li><strong>Price:</strong> $48 per night (standard room, breakfast included)</li>
   <li><strong>Pros:</strong> Unbeatable location, 24-hour front desk, quiet at night</li>
@@ -279,6 +304,7 @@
 
 <h3>3. 365 Inn (Sanlitun)</h3>
 <p>This hostel-hotel hybrid is a favorite among young travelers who want to be in the action. It’s in Sanlitun, so you’re steps from bars, clubs, and the best shopping. The dorms are cheap, but I recommend the private rooms—they’re tiny but have their own bathroom. The rooftop terrace is a highlight, with views of the city skyline.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="hy" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
   <li><strong>Price:</strong> $42 per night (private room, no breakfast)</li>
   <li><strong>Pros:</strong> Lively neighborhood, great social scene, affordable private rooms</li>
@@ -291,6 +317,7 @@
 
 <h3>1. The Emperor Beijing Forbidden City</h3>
 <p>This boutique hotel is a stunner—modern Chinese design with a touch of imperial flair. It’s just a 5-minute walk from the Forbidden City, and the rooms have floor-to-ceiling windows with views of the ancient rooftops. The restaurant serves amazing dim sum, and there’s a small but lovely spa. I recommend the Deluxe Room for extra space.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
   <li><strong>Price:</strong> $125 per night (Deluxe Room, breakfast included)</li>
   <li><strong>Highlights:</strong> Rooftop bar, free bicycle rental, cultural activities like calligraphy classes</li>
@@ -305,6 +332,7 @@
 
 <h3>3. The Orchid Hotel</h3>
 <p>This is my hidden gem for couples. It’s a small, family-run hotel in a quiet hutong near Gulou. Each room is uniquely decorated with antique furniture and modern touches. The rooftop restaurant is magical at sunset, serving fusion dishes like lamb skewers with pomegranate glaze. It’s intimate and romantic.</p>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
   <li><strong>Price:</strong> $112 per night (superior room, breakfast included)</li>
   <li><strong>Highlights:</strong> Personal service, beautiful rooftop, free afternoon tea</li>
@@ -353,6 +381,7 @@
 <p><strong>For Business or Shopping:</strong> The Central Business District (CBD) or Financial Street are your best bets. Novotel and Ritz-Carlton are here. You’ll have easy access to malls and corporate offices, but it’s less charming.</p>
 
 <p><strong>For Relaxation:</strong> If you want peace, stay near the Summer Palace or the Olympic Park. Aman Summer Palace is ideal, or try a hotel in Haidian district. It’s a bit out of the way, but the tranquility is worth it.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
@@ -440,9 +469,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>

@@ -22,6 +22,26 @@
 
     <meta name="twitter:card" content="summary_large_image">
 
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="ai-content-type" content="travel guide, expert review">
+    <meta name="ai-audience" content="travelers, tourists, vacation planners">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TravelHub",
+      "url": "https://ANTONDrakon.github.io/travel-content-site",
+      "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "i@turkov-1.ru",
+        "contactType": "customer service",
+        "availableLanguage": ["Russian", "English"]
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
@@ -103,7 +123,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -121,11 +142,11 @@
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
-        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
-        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
         .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
         .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
@@ -208,7 +229,9 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" style="display:flex;align-items:center;gap:6px;font-size:15px;color:var(--ink);text-decoration:none;font-weight:500;">
+            <span style="font-size:20px;">←</span> Home
+        </a>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/shanghai-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -254,6 +277,7 @@
             <h1>Top 10 Hotels in Shanghai 2026: Budget to Luxury</h1>
 
 <p>Shanghai is a city that pulses with energy—neon lights reflecting off the Huangpu River, the scent of street food mingling with the hum of electric scooters, and a skyline that feels like a sci-fi dream. I’ve sent over 300 travelers here, and every single one has come back with a story. The hotel you choose shapes that story. Whether you’re here for the Bund’s colonial charm, the futuristic Pudong towers, or the hidden alleyways of the French Concession, your base matters more than you think. After years of navigating Shanghai’s ever-evolving hotel scene, I’ve narrowed down the top 10 for 2026—from crash pads that won’t break the bank to suites that redefine opulence. All prices I’ve listed include a markup of 12-15% above real market rates (rounded up for convenience), so you can budget with confidence without the shock of hidden fees.</p>
+<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="yo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Shanghai’s neighborhoods are as diverse as its hotels. For first-timers, the Bund and People’s Square area offers iconic views and easy access to the subway. The French Concession, with its tree-lined streets and art deco buildings, is perfect for couples and culture lovers. Pudong, across the river, is a business hub with sky-high luxury hotels. And for nightlife, Jing’an or Xintiandi are unbeatable. In 2026, expect more eco-friendly hotels, contactless check-ins, and a surge in boutique properties. Here’s my curated list to help you sleep well in this dazzling city.</p>
 
@@ -264,6 +288,7 @@
 
 <h3>2. Jinjiang Inn (Nanjing Road)</h3>
 <p>This chain hotel is a lifesaver for solo travelers or backpackers. Located on a bustling street near Nanjing Road’s shopping frenzy, it’s a no-frills gem. Rooms are small but spotless, with a tiny desk and a TV that gets only Chinese channels. The bed is surprisingly firm—some love it, others miss a plush pillow. Breakfast is a simple affair of congee and steamed buns, but it fills you up. Prices: $44/night. Pros: Super central, reliable cleanliness, 24-hour front desk. Cons: No character, street noise can seep in, no gym or extras.</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Shanghai Old Town Guesthouse</h3>
 <p>Tucked in the historic Old Town near the Yuyuan Garden, this guesthouse feels like stepping back in time. The building has creaky wooden floors and a tiny courtyard with a goldfish pond. Rooms are basic—a bed, a lamp, a fan—but the charm is off the charts. The owner, a retired teacher, offers homemade dumplings for breakfast. It’s not for everyone, but for travelers who crave authenticity, it’s magic. Prices: $35/night. Pros: Unique atmosphere, close to Yuyuan, very cheap. Cons: No air conditioning in some rooms, shared bathroom, no Wi-Fi in rooms.</p>
@@ -272,6 +297,7 @@
 
 <h3>1. The Waterhouse at South Bund</h3>
 <p>This boutique hotel is a converted 1930s warehouse, and it oozes industrial chic. Exposed brick walls, dark wood beams, and floor-to-ceiling windows overlooking the Huangpu River. Rooms are spacious with rainfall showers and Nespresso machines. The rooftop bar, “Above the Bund,” is a local favorite for cocktails and views. I recommend booking a river-view room—the sunrise over Pudong is worth every penny. Prices: $112/night. Highlights: Unique design, excellent restaurant, free bike rentals.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Holiday Inn Express (Jing’an)</h3>
 <p>For reliability and comfort, this is my go-to for business travelers or families. Located in Jing’an, it’s close to the temple and endless dining options. Rooms are modern with crisp white linens, a work desk, and a flat-screen TV. The free breakfast buffet has both Western and Chinese options—pancakes and congee side by side. The staff speak excellent English and are quick to help with taxi bookings. Prices: $78/night. Highlights: Free Wi-Fi, gym, laundry service.</p>
@@ -280,7 +306,9 @@
 <p>This is a hidden gem in the Taikoo Hui complex, blending Italian design with Shanghai soul. Rooms are minimalist but warm—think soft gray walls, a bathtub with a view, and handmade ceramics. The pool is stunning, with a glass ceiling that lets in natural light. The restaurant, “Sui,” serves modern Shanghainese dishes I still dream about. It’s a bit pricier for mid-range, but the value is incredible. Prices: $142/night. Highlights: Pool, spa, exceptional service, art-filled lobby.</p>
 
 <h3>4. The PuLi Hotel and Spa</h3>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="an" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Located in the French Concession, this hotel is an oasis of calm. The lobby has a reflecting pool and bamboo garden, and rooms feel like zen retreats with dark wood, silk accents, and heated floors. The spa is top-notch—try the bamboo massage. The concierge can arrange private tours of the Concession’s hidden lanes. It’s perfect for couples or solo travelers seeking luxury without the luxury price tag. Prices: $135/night. Highlights: Spa, garden views, free afternoon tea.</p>
+<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
@@ -289,6 +317,7 @@
 
 <h3>2. The Ritz-Carlton Shanghai, Pudong</h3>
 <p>Perched on the 52nd floor of the IFC Tower, this hotel is a modern marvel. Rooms are sleek with floor-to-ceiling windows, and the infinity pool on the 55th floor feels like swimming in the sky. The restaurant, “Jin Xuan,” serves dim sum that rivals Hong Kong’s best. The location is unbeatable for business travelers—connected to the IFC mall and subway. Prices: $345/night. Features: Infinity pool, Michelin-starred restaurant, butler service.</p>
+<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. The W Shanghai – The Bund</h3>
 <p>For those who want energy and edge, the W is a blast. The lobby has neon lights and DJs on weekends, and rooms are playful with bold colors and a “bedroom” concept that blends the bed with the living area. The rooftop bar, “Wet Bar,” has a pool and views that make you feel on top of the world. It’s loud, it’s fun, and it’s perfect for night owls. Prices: $278/night. Features: Nightlife-focused, pool, spa, 24-hour room service.</p>
@@ -379,9 +408,9 @@
             <div>
                 <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <input type="text" name="name" placeholder="Your name *" required>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram/MAX) *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         <option value="turkey">Turkey</option>
