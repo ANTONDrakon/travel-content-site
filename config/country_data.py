@@ -604,5 +604,5 @@ AGENT_PHOTOS = [
 AGENT_NAME = "Туркова Валентина"
 AGENT_NAME_EN = "Valentina Turkova"
 AGENT_EMAIL = "i@turkov-1.ru"
-AGENT_DESC_RU = "Профессиональный турагент. Более 50 туристов отправлено на Мальдивы и в другие страны с 2021. Полное сопровождение: визы, QR-коды, страховки, подбор тура."
-AGENT_DESC_EN = "Professional travel agent. 50+ tourists sent to Maldives and worldwide since 2021. Full support: visas, QR codes, insurance, tour selection."
+AGENT_DESC_RU = "Ваш личный VIP-турагент. Более 5 лет опыта. Отправила 1000+ туристов от Мальдив до Китая. Делюсь лайфхаками: как сэкономить на билетах, отелях, трансферах и eSIM. Могу взять все заботы на себя — подобрать тур, забронировать, быть на связи 24/7."
+AGENT_DESC_EN = "Your personal VIP travel agent. 5+ years experience. 1000+ tourists sent from Maldives to China. I share travel hacks on flights, hotels, transfers & eSIM. Or let me handle everything — I'll find the perfect trip and stay connected 24/7."

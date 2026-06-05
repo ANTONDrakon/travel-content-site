@@ -311,20 +311,20 @@
         <div class="agent-grid">
             <div>
                 <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:16px;">
-                    {{ "Hi! I'm Valentina, a professional travel agent. I've helped more than 50 tourists organize their dream vacations to the Maldives and worldwide." if lang == "en" else "Привет! Я Валентина, профессиональный турагент. Отправила более 50 туристов на Мальдивы и в другие страны." }}
+                    {{ "Hi! I'm Valentina, your personal VIP travel agent with 5+ years of experience. I've helped 1000+ travelers discover perfect vacations — from the Maldives to China, across Russia, and exotic destinations worldwide. On this site I share travel hacks: how to save on flights, book the best hotels, order affordable transfers, and stay connected with eSIM. Want to skip the planning? Let me handle everything — I'll find your ideal hotel, consider every wish, and stay in touch 24/7 so your trip becomes unforgettable." if lang == "en" else "Привет! Я Валентина, ваш личный VIP-турагент с опытом более 5 лет. Отправила 1000+ туристов в путешествия мечты — от Мальдив до Китая, по России и экзотическим странам. На этом сайте я делюсь лайфхаками: как сэкономить на билетах, выбрать лучший отель, заказать недорогой трансфер и оставаться на связи с eSIM. Не хотите заморачиваться? Доверьте заботы мне — я подберу идеальный отель, учту все пожелания и буду на связи 24/7, чтобы ваш отдых стал незабываемым." }}
                 </p>
                 <ul class="agent-benefits">
-                    <li>{{ "24/7 support throughout your trip" if lang == "en" else "Сопровождение 24/7 на всём протяжении поездки" }}</li>
-                    <li>{{ "Full tour selection based on your preferences" if lang == "en" else "Подбор тура по вашим пожеланиям и бюджету" }}</li>
-                    <li>{{ "Visa assistance and QR code setup (China, etc.)" if lang == "en" else "Помощь с визами и QR-кодами (Китай и др.)" }}</li>
-                    <li>{{ "Hotel and flight booking at the best price" if lang == "en" else "Бронирование отелей и билетов по лучшей цене" }}</li>
-                    <li>{{ "Travel insurance with full coverage" if lang == "en" else "Оформление страховки с полным покрытием" }}</li>
-                    <li>{{ "300+ happy travelers since 2021" if lang == "en" else "300+ довольных путешественников с 2021 года" }}</li>
-                    <li>{{ "Tours across Russia and worldwide" if lang == "en" else "Туры по России и всему миру" }}</li>
+                    <li>{{ "24/7 personal support — I'm always in touch" if lang == "en" else "Персональное сопровождение 24/7 — я всегда на связи" }}</li>
+                    <li>{{ "1000+ happy travelers since 2021" if lang == "en" else "1000+ счастливых путешественников с 2021 года" }}</li>
+                    <li>{{ "Tours from Maldives to China, across Russia & exotic countries" if lang == "en" else "Туры от Мальдив до Китая, по России и экзотическим странам" }}</li>
+                    <li>{{ "I share lifehacks on flights, hotels, eSIM & transfers" if lang == "en" else "Делюсь лайфхаками по билетам, отелям, eSIM и трансферам" }}</li>
+                    <li>{{ "Perfect hotel matching — I consider every wish" if lang == "en" else "Идеальный подбор отеля — учитываю каждое пожелание" }}</li>
+                    <li>{{ "Visa support, QR codes, insurance — all included" if lang == "en" else "Помощь с визами, QR-кодами, страховками — всё беру на себя" }}</li>
+                    <li>{{ "Or find everything yourself — hacks are right here on the site" if lang == "en" else "Или найдите всё сами — лайфхаки прямо здесь, на сайте" }}</li>
                 </ul>
             </div>
             <div>
-                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">{{ "Send a request — I'll reply within an hour!" if lang == "en" else "Отправьте заявку — отвечу в течение часа!" }}</p>
+                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">{{ "Tell me your dream — I'll make it happen!" if lang == "en" else "Расскажите о вашей мечте — я воплощу её в жизнь!" }}</p>
                 <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
                     <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required>
                     <input type="email" name="email" placeholder="Email">
@@ -370,9 +370,10 @@
         <div>
             <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">{{ "Contact" if lang == "en" else "Контакты" }}</h4>
             <p style="font-size:14px;line-height:1.8;">
-                {{ "Tour agent Valentina" if lang == "en" else "Турагент Валентина" }}<br>
+                {{ "VIP Travel Agent Valentina" if lang == "en" else "VIP-турагент Валентина" }}<br>
+                {{ "1000+ travelers since 2021" if lang == "en" else "1000+ путешественников с 2021" }}<br>
                 Email: i@turkov-1.ru<br>
-                {{ "24/7 online support" if lang == "en" else "На связи 24/7" }}
+                {{ "Always in touch 24/7" if lang == "en" else "Всегда на связи 24/7" }}
             </p>
         </div>
     </div>
