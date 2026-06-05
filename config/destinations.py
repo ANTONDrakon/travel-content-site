@@ -1,6 +1,7 @@
 DESTINATIONS = {
     "turkey": {
         "name_ru": "Турция",
+        "name_ru_prepositional": "Турции",
         "name_en": "Turkey",
         "slug": "turkey",
         "currency": "TRY",
@@ -47,6 +48,7 @@ DESTINATIONS = {
     },
     "thailand": {
         "name_ru": "Таиланд",
+        "name_ru_prepositional": "Таиланде",
         "name_en": "Thailand",
         "slug": "thailand",
         "currency": "THB",
@@ -93,6 +95,7 @@ DESTINATIONS = {
     },
     "egypt": {
         "name_ru": "Египет",
+        "name_ru_prepositional": "Египте",
         "name_en": "Egypt",
         "slug": "egypt",
         "currency": "EGP",
@@ -139,6 +142,7 @@ DESTINATIONS = {
     },
     "uae": {
         "name_ru": "ОАЭ",
+        "name_ru_prepositional": "ОАЭ",
         "name_en": "UAE",
         "slug": "uae",
         "currency": "AED",
@@ -185,6 +189,7 @@ DESTINATIONS = {
     },
     "indonesia": {
         "name_ru": "Индонезия",
+        "name_ru_prepositional": "Индонезии",
         "name_en": "Indonesia",
         "slug": "indonesia",
         "currency": "IDR",
@@ -231,6 +236,7 @@ DESTINATIONS = {
     },
     "china": {
         "name_ru": "Китай",
+        "name_ru_prepositional": "Китае",
         "name_en": "China",
         "slug": "china",
         "currency": "CNY",
@@ -277,6 +283,7 @@ DESTINATIONS = {
     },
     "maldives": {
         "name_ru": "Мальдивы",
+        "name_ru_prepositional": "Мальдивах",
         "name_en": "Maldives",
         "slug": "maldives",
         "currency": "MVR (USD accepted)",

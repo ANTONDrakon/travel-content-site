@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ "TravelHub — Expert Travel Guides 2026" if lang == "en" else "TravelHub — Экспертные путеводители 2026" }}{% endblock %}
-{% block meta_description %}{{ "Expert travel guides for 30 cities across 6 countries. Hotels, cheap flights, top attractions. Turkey, Thailand, Egypt, UAE, Indonesia, China." if lang == "en" else "Экспертные гайды по 30 городам в 6 странах. Отели, дешёвые билеты, топ достопримечательностей. Турция, Таиланд, Египет, ОАЭ, Индонезия, Китай." }}{% endblock %}
+{% block meta_description %}{{ "Expert travel guides for 35 cities across 7 countries. Hotels, cheap flights, top attractions. Turkey, Thailand, Egypt, UAE, Indonesia, China, Maldives." if lang == "en" else "Экспертные гайды по 35 городам в 7 странах. Отели, дешёвые билеты, топ достопримечательностей. Турция, Таиланд, Египет, ОАЭ, Индонезия, Китай, Мальдивы." }}{% endblock %}
 
 {% block en_alt %}index.html{% endblock %}
 {% block ru_alt %}index.html{% endblock %}
@@ -12,7 +12,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>{{ "Your Dream Trip Starts Here" if lang == "en" else "Ваше путешествие начинается здесь" }}</h1>
-        <p>{{ "Expert guides for 30 cities across 6 countries. Hotels, flights, attractions — everything you need for the perfect trip in 2026." if lang == "en" else "Экспертные гайды по 30 городам в 6 странах. Отели, билеты, достопримечательности — всё для идеального путешествия в 2026." }}</p>
+        <p>{{ "Expert guides for 35 cities across 7 countries. Hotels, flights, attractions — everything you need for the perfect trip in 2026." if lang == "en" else "Экспертные гайды по 35 городам в 7 странах. Отели, билеты, достопримечательности — всё для идеального путешествия в 2026." }}</p>
         <div class="scroll-arrow" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})">↓</div>
     </div>
 </div>

@@ -11,16 +11,14 @@
 <div class="hero-section" style="background-image:url('{{ hero_image }}');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>{{ article.h1 }}</h1>
+        <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">{{ article.h1 }}</div>
     </div>
 </div>
 {% endif %}
 
 <div class="section" style="padding-top:{{ '40px' if hero_image else '100px' }};">
     <div class="article-layout">
-        {% if not hero_image %}
         <h1 style="font-size:42px;font-weight:700;letter-spacing:-0.03em;margin-bottom:12px;line-height:1.15;">{{ article.h1 }}</h1>
-        {% endif %}
         <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
             <span>{{ "Updated: June 2026" if lang == "en" else "Обновлено: июнь 2026" }}</span>
             <span>&bull;</span>

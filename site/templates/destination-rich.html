@@ -1,6 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Отдых в {{ country.name_ru }} 2026 — полный путеводитель | TravelHub{% endblock %}
-{% block meta_description %}Отдых в {{ country.name_ru }} 2026: лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд по {{ country.name_ru }}.{% endblock %}
+{% set cname_prep = country.name_en if lang == "en" else country.name_ru_prepositional %}
+{% set cname_nom = country.name_en if lang == "en" else country.name_ru %}
+{% set prep = "Vacation in " if lang == "en" else ("Отдых на " if country.slug == "maldives" else "Отдых в ") %}
+{% block title %}{{ prep }}{{ cname_prep }} 2026 — {{ "Complete Guide | TravelHub" if lang == "en" else "полный путеводитель | TravelHub" }}{% endblock %}
+{% block meta_description %}{{ prep }}{{ cname_prep }} 2026: {{ "best resorts, hotels, prices, seasons, attractions. Full guide." if lang == "en" else "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд." }}{% endblock %}
 
 {% block en_alt %}{{ country.slug }}/index.html{% endblock %}
 {% block ru_alt %}{{ country.slug }}/index.html{% endblock %}
@@ -11,26 +14,27 @@
 <div class="hero-section" style="background-image:url('{{ hero_image }}');min-height:560px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>Отдых в {{ country.name_ru }} 2026</h1>
-        <p>{{ data.hero_subtitle_ru if data.hero_subtitle_ru else '' }}</p>
+        <h1>{{ prep }}{{ cname_prep }} 2026</h1>
+        <p>{{ data.hero_subtitle_en if lang == "en" and data.hero_subtitle_en else data.hero_subtitle_ru if data.hero_subtitle_ru else '' }}</p>
         <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px;flex-wrap:wrap;">
-            <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">Подобрать тур →</a>
+            <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Find a Tour →" if lang == "en" else "Подобрать тур →" }}</a>
             {% if data %}
             <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);padding:8px 16px;border-radius:50px;">
-                <img src="{{ agent_photo }}" alt="Туркова Валентина" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
-                <span style="color:#fff;font-size:14px;font-weight:500;">Туркова Валентина<br><span style="font-size:12px;opacity:0.8;">Турагент-эксперт</span></span>
+                <img src="{{ agent_photo }}" alt="Валентина" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
+                <span style="color:#fff;font-size:14px;font-weight:500;">{{ "Valentina Turkova" if lang == "en" else "Туркова Валентина" }}<br><span style="font-size:12px;opacity:0.8;">{{ "Expert Travel Agent" if lang == "en" else "Турагент-эксперт" }}</span></span>
             </div>
             {% endif %}
         </div>
     </div>
 </div>
 
-<!-- WHY -->
+<!-- WHY {{ cname_nom }} -->
 <section class="section">
-    <h2>Почему туристы выбирают {{ country.name_ru }}</h2>
+    <h2>{{ "Why Travelers Choose " if lang == "en" else "Почему туристы выбирают " }}{{ cname_nom }}</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px;">
-        {% if data and data.advantages_ru %}
-        {% for emoji, title, desc in data.advantages_ru %}
+        {% set adv = data.advantages_en if lang == "en" else data.advantages_ru %}
+        {% if data and adv %}
+        {% for emoji, title, desc in adv %}
         <div style="background:#fff;padding:28px;border-radius:16px;border-top:4px solid var(--vermillion);">
             <div style="font-size:36px;margin-bottom:12px;">{{ emoji }}</div>
             <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">{{ title }}</h3>
@@ -38,7 +42,7 @@
         </div>
         {% endfor %}
         {% else %}
-        <p style="color:var(--meta);">Данные уточняются.</p>
+        <p style="color:var(--meta);">{{ "Data is being updated." if lang == "en" else "Данные уточняются." }}</p>
         {% endif %}
     </div>
 </section>
@@ -46,13 +50,13 @@
 <!-- CITIES -->
 <section class="section" style="background:#fff;max-width:100%;">
     <div style="max-width:1200px;margin:0 auto;">
-        <h2>Города и курорты {{ country.name_ru }}</h2>
+        <h2>{{ "Cities & Resorts of " if lang == "en" else "Города и курорты " }}{{ cname_nom }}</h2>
         <div class="cards-grid" style="margin-top:40px;">
             {% for city_slug, city_data in cities.items() %}
-            <a href="/ru/{{ country.slug }}/{{ city_data.articles[0].url }}.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
-                <img src="{{ city_data.image }}" alt="{{ city_data.name_ru }}" class="card-img" loading="lazy" style="height:220px;">
+            <a href="/{{ lang }}/{{ country.slug }}/{{ city_data.articles[0].url }}.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+                <img src="{{ city_data.image }}" alt="{{ city_data.name_en if lang == 'en' else city_data.name_ru }}" class="card-img" loading="lazy" style="height:220px;">
                 <div class="card-body" style="padding:24px;">
-                    <h3>{{ city_data.name_ru }}</h3>
+                    <h3>{{ city_data.name_en if lang == "en" else city_data.name_ru }}</h3>
                     {% if city_data.desc %}<p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">{{ city_data.desc }}</p>{% endif %}
                     <ul style="list-style:none;padding:0;margin:0;">
                         {% for a in city_data.articles %}
@@ -70,10 +74,11 @@
 
 <!-- SEASONS -->
 <section class="section">
-    <h2>Когда лучше ехать в {{ country.name_ru }}</h2>
-    {% if data and data.seasons_ru %}
+    <h2>{{ "Best Time to Visit " if lang == "en" else "Когда лучше ехать в " }}{{ cname_prep }}</h2>
+    {% set seas = data.seasons_en if lang == "en" else data.seasons_ru %}
+    {% if data and seas %}
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;">
-        {% for emoji, title, temp, desc in data.seasons_ru %}
+        {% for emoji, title, temp, desc in seas %}
         <div style="background:#fff;padding:28px;border-radius:16px;border-top:3px solid var(--vermillion);">
             <div style="font-size:32px;margin-bottom:8px;">{{ emoji }}</div>
             <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;">{{ title }}</h3>
@@ -83,18 +88,19 @@
         {% endfor %}
     </div>
     {% else %}
-    <p style="color:var(--meta);">Данные по сезонам уточняются.</p>
+    <p style="color:var(--meta);">{{ "Season data is being updated." if lang == "en" else "Данные по сезонам уточняются." }}</p>
     {% endif %}
 </section>
 
 <!-- BUDGET -->
 <section class="section" style="background:#fff;max-width:100%;">
     <div style="max-width:1200px;margin:0 auto;">
-        <h2>Сколько стоит отдых в {{ country.name_ru }}</h2>
-        <p style="text-align:center;color:var(--meta);margin-bottom:40px;font-size:16px;">Ориентировочные цены на 1 человека за 7 дней, включая перелёт. Фактическая стоимость зависит от сезона, глубины бронирования и курса валют.</p>
-        {% if data and data.budget_ru %}
+        <h2>{{ "How Much Does a Trip to " if lang == "en" else "Сколько стоит отдых в " }}{{ cname_prep }} {{ "Cost" if lang == "en" else "" }}</h2>
+        <p style="text-align:center;color:var(--meta);margin-bottom:40px;font-size:16px;">{{ "Estimated prices per person for 7 days, including flights. Actual cost depends on season, booking depth, and exchange rates." if lang == "en" else "Ориентировочные цены на 1 человека за 7 дней, включая перелёт. Фактическая стоимость зависит от сезона, глубины бронирования и курса валют." }}</p>
+        {% set bud = data.budget_en if lang == "en" else data.budget_ru %}
+        {% if data and bud %}
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
-            {% for title, price, items in data.budget_ru %}
+            {% for title, price, items in bud %}
             <div style="background:var(--bg);padding:32px;border-radius:16px;">
                 <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;">{{ title }}</h3>
                 <p style="font-size:24px;color:var(--vermillion);font-weight:700;margin-bottom:20px;">{{ price }}</p>
@@ -107,7 +113,7 @@
             {% endfor %}
         </div>
         {% endif %}
-        <p style="text-align:center;color:var(--meta);font-size:13px;margin-top:24px;">* Цены ориентировочные на июнь 2026. Требуют проверки перед бронированием.</p>
+        <p style="text-align:center;color:var(--meta);font-size:13px;margin-top:24px;">* {{ "Prices are approximate as of June 2026. Verify before booking." if lang == "en" else "Цены ориентировочные на июнь 2026. Требуют проверки перед бронированием." }}</p>
     </div>
 </section>
 
@@ -126,13 +132,38 @@
     {% endif %}
 </section>
 
+<!-- HOTELS (Maldives-specific) -->
+{% if data and data.hotels_ru %}
+<section class="section" style="background:#fff;max-width:100%;">
+    <div style="max-width:1200px;margin:0 auto;">
+        <h2>Лучшие отели Мальдив — от бюджетных до люкс</h2>
+        <p style="text-align:center;color:var(--meta);margin-bottom:40px;font-size:16px;">15 проверенных вариантов с реальными ценами, описанием трансфера и партнёрскими ссылками для бронирования. Цены ориентировочные на 2026 год.</p>
+        {% for cat_title, cat_hotels in data.hotels_ru %}
+        <div style="margin-bottom:40px;">
+            <h3 style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--ink);">{{ cat_title }}</h3>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;">
+                {% for name, desc, link in cat_hotels %}
+                <div style="background:var(--bg);padding:24px;border-radius:16px;display:flex;flex-direction:column;">
+                    <h4 style="font-size:17px;font-weight:700;margin-bottom:8px;color:var(--ink);">{{ name }}</h4>
+                    <p style="font-size:14px;color:var(--charcoal);line-height:1.6;flex:1;">{{ desc }}</p>
+                    <a href="{{ link }}" target="_blank" rel="nofollow sponsored" class="btn-outline" style="margin-top:16px;text-align:center;">Забронировать →</a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
 <!-- WHERE TO STAY -->
 <section class="section" style="background:#fff;max-width:100%;">
     <div style="max-width:1200px;margin:0 auto;">
-        <h2>Где жить в {{ country.name_ru }}</h2>
-        {% if data and data.where_to_stay_ru %}
+        <h2>{{ "Where to Stay in " if lang == "en" else "Где жить в " }}{{ cname_prep }}</h2>
+        {% set stay = data.where_to_stay_en if lang == "en" else data.where_to_stay_ru %}
+        {% if data and stay %}
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:40px;">
-            {% for name, desc in data.where_to_stay_ru %}
+            {% for name, desc in stay %}
             <div style="background:var(--bg);padding:28px;border-radius:16px;">
                 <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;">{{ name }}</h3>
                 <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">{{ desc }}</p>
@@ -145,11 +176,16 @@
 
 <!-- PRACTICAL -->
 <section class="section">
-    <h2>Практическая информация</h2>
-    {% if data and data.practical_ru %}
+    <h2>{{ "Practical Information" if lang == "en" else "Практическая информация" }}</h2>
+    {% set prac = data.practical_en if lang == "en" else data.practical_ru %}
+    {% if data and prac %}
+    {% if lang == "en" %}
+    {% set labels = {"visa":"🛂 Visa","currency":"💱 Currency","language":"🗣 Language","transport":"🚌 Transport","safety":"🛡 Safety","internet":"📶 Internet & SIM"} %}
+    {% else %}
+    {% set labels = {"visa":"🛂 Виза","currency":"💱 Валюта","language":"🗣 Язык","transport":"🚌 Транспорт","safety":"🛡 Безопасность","internet":"📶 Связь и интернет"} %}
+    {% endif %}
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:40px;">
-        {% set labels = {"visa":"🛂 Виза","currency":"💱 Валюта","language":"🗣 Язык","transport":"🚌 Транспорт","safety":"🛡 Безопасность","internet":"📶 Связь и интернет"} %}
-        {% for key, value in data.practical_ru.items() %}
+        {% for key, value in prac.items() %}
         <div style="background:#fff;padding:24px;border-radius:16px;">
             <h4 style="font-size:16px;font-weight:700;margin-bottom:8px;">{{ labels.get(key, key) }}</h4>
             <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">{{ value }}</p>
@@ -159,19 +195,38 @@
     {% endif %}
 </section>
 
-<!-- FAQ -->
+<!-- FAQ with Schema -->
 <section class="section" style="background:#fff;max-width:100%;">
     <div style="max-width:900px;margin:0 auto;">
-        <h2>Часто задаваемые вопросы</h2>
-        {% if data and data.faq_ru %}
+        <h2>{{ "Frequently Asked Questions" if lang == "en" else "Часто задаваемые вопросы" }}</h2>
+        {% set faqs = data.faq_en if lang == "en" else data.faq_ru %}
+        {% if data and faqs %}
         <div class="faq" style="margin-top:40px;">
-            {% for q, a in data.faq_ru %}
+            {% for q, a in faqs %}
             <details style="margin-bottom:4px;">
                 <summary>{{ q }}</summary>
                 <p>{{ a }}</p>
             </details>
             {% endfor %}
         </div>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {% for q, a in faqs %}
+            {
+              "@type": "Question",
+              "name": "{{ q | replace('"', '\\"') }}",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ a | replace('"', '\\"') }}"
+              }
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+          ]
+        }
+        </script>
         {% endif %}
     </div>
 </section>
@@ -182,28 +237,26 @@
         <div style="display:flex;align-items:center;gap:24px;margin-bottom:28px;flex-wrap:wrap;">
             <div class="agent-carousel" style="width:160px;height:160px;border-radius:50%;overflow:hidden;border:3px solid var(--vermillion);position:relative;flex-shrink:0;">
                 {% for photo in agent_photos %}
-                <img src="{{ photo }}" alt="Туркова Валентина" class="agent-carousel-img" loading="{{ 'eager' if loop.first else 'lazy' }}" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:{{ '1' if loop.first else '0' }};transition:opacity 0.8s;">
+                <img src="{{ photo }}" alt="Valentina" class="agent-carousel-img" loading="{{ 'eager' if loop.first else 'lazy' }}" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:{{ '1' if loop.first else '0' }};transition:opacity 0.8s;">
                 {% endfor %}
             </div>
             <div>
-                <h2 style="font-size:24px;font-weight:700;margin-bottom:4px;text-align:left;">Туркова Валентина</h2>
-                <p style="font-size:15px;color:var(--meta);">Профессиональный турагент • 300+ клиентов с 2021</p>
+                <h2 style="font-size:24px;font-weight:700;margin-bottom:4px;text-align:left;">{{ "Valentina Turkova" if lang == "en" else "Туркова Валентина" }}</h2>
+                <p style="font-size:15px;color:var(--meta);">{{ "Professional travel agent • 300+ clients since 2021" if lang == "en" else "Профессиональный турагент • 300+ клиентов с 2021" }}</p>
             </div>
         </div>
         <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;">
-            Материал подготовлен как путеводитель. Цены ориентировочные и требуют проверки перед бронированием. 
-            Если хотите, чтобы я лично подобрала тур с учётом ваших пожеланий, дат и бюджета — 
-            оставьте заявку. Я проверю актуальные цены и предложу варианты.
+            {{ "This page is a travel guide. All prices are approximate and should be verified before booking. If you want me to personally find a tour based on your preferences, dates, and budget — send a request. I'll check current prices and offer options." if lang == "en" else "Материал подготовлен как путеводитель. Цены ориентировочные и требуют проверки перед бронированием. Если хотите, чтобы я лично подобрала тур с учётом ваших пожеланий, дат и бюджета — оставьте заявку. Я проверю актуальные цены и предложу варианты." }}
         </p>
         <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                <input type="text" name="name" placeholder="Ваше имя *" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
-                <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram) *" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+                <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+                <input type="tel" name="phone" placeholder="{{ 'Phone (WhatsApp/Telegram) *' if lang == 'en' else 'Телефон (WhatsApp/Telegram) *' }}" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
             </div>
-            <textarea name="message" rows="2" placeholder="Куда хотите, даты, бюджет..." style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;"></textarea>
-            <input type="hidden" name="destination" value="{{ country.name_ru }}">
-            <input type="hidden" name="_subject" value="Заявка на тур в {{ country.name_ru }} | TravelHub">
-            <button type="submit" class="btn-cta" style="margin-top:12px;cursor:pointer;">Отправить заявку →</button>
+            <textarea name="message" rows="2" placeholder="{{ 'Where, dates, budget...' if lang == 'en' else 'Куда хотите, даты, бюджет...' }}" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;"></textarea>
+            <input type="hidden" name="destination" value="{{ cname_nom }}">
+            <input type="hidden" name="_subject" value="{{ 'Tour request: ' + cname_nom if lang == 'en' else 'Заявка на тур в ' + cname_nom }} | TravelHub">
+            <button type="submit" class="btn-cta" style="margin-top:12px;cursor:pointer;">{{ "Send Request →" if lang == "en" else "Отправить заявку →" }}</button>
         </form>
     </div>
 </section>

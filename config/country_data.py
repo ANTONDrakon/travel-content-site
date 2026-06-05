@@ -41,7 +41,7 @@ COUNTRY_DATA = {
         ],
         "practical_ru": {
             "visa": "Безвизовый въезд до 90 дней для граждан РФ.",
-            "currency": "Турецкая лира (TRY). 1₺ ≈ 3 рубля. Доллары и евро принимают в туристических зонах.",
+            "currency": "Турецкая лира (TRY). Ориентировочно: 1₺ ≈ 3.5 рубля (июнь 2026). Доллары и евро принимают в туристических зонах.",
             "language": "Турецкий. В туристических зонах — английский, часто русский.",
             "transport": "Междугородние автобусы, внутренние авиарейсы, долмуши. Аренда авто от €25/день.",
             "safety": "Туристические зоны безопасны. Рекомендуется стандартная осторожность в крупных городах.",
@@ -49,7 +49,7 @@ COUNTRY_DATA = {
         },
         "practical_en": {
             "visa": "Visa-free entry up to 90 days for Russian citizens.",
-            "currency": "Turkish Lira (TRY). $1 ≈ 30₺. USD and EUR accepted in tourist areas.",
+            "currency": "Turkish Lira (TRY). Approx. $1 ≈ 31₺ (June 2026). USD and EUR accepted in tourist areas.",
             "language": "Turkish. English widely spoken in tourist areas, often Russian.",
             "transport": "Intercity buses, domestic flights, dolmus. Car rental from €25/day.",
             "safety": "Tourist areas are safe. Standard caution advised in large cities.",
@@ -129,7 +129,7 @@ COUNTRY_DATA = {
         ],
         "practical_ru": {
             "visa": "Безвизовый въезд до 30 дней. Можно продлить ещё на 30 дней в иммиграционном офисе.",
-            "currency": "Тайский бат (THB). 1฿ ≈ 2.5 рубля. Обменивайте в Таиланде — курс лучше.",
+            "currency": "Тайский бат (THB). Ориентировочно: 1฿ ≈ 2.8 рубля (июнь 2026). Обменивайте в Таиланде — курс лучше.",
             "language": "Тайский. В туристических зонах — английский, частично русский.",
             "transport": "Метро/скайтрейн в Бангкоке, тук-туки, сонгтео, паромы. Аренда байка от ฿200/день.",
             "safety": "Очень безопасно для туристов. Остерегайтесь карманников в людных местах.",
@@ -213,7 +213,7 @@ COUNTRY_DATA = {
         ],
         "practical_ru": {
             "visa": "Виза по прибытии для граждан РФ ($25). Или электронная виза заранее на visa2egypt.gov.eg.",
-            "currency": "Египетский фунт (EGP). 1 EGP ≈ 3 рубля. Доллары принимают повсеместно.",
+            "currency": "Египетский фунт (EGP). Ориентировочно: 1 EGP ≈ 1.8 рубля (июнь 2026). Доллары принимают повсеместно.",
             "language": "Арабский. В туристических зонах — русский и английский. Вывески на русском.",
             "transport": "Такси (Uber/Careem в Каире), маршрутки, внутренние рейсы.",
             "safety": "Туристические зоны безопасны. Не покидайте курортные зоны самостоятельно. Пейте бутилированную воду.",
@@ -297,7 +297,7 @@ COUNTRY_DATA = {
         ],
         "practical_ru": {
             "visa": "Безвизовый въезд до 90 дней для РФ. Загранпаспорт — 6+ месяцев от даты въезда.",
-            "currency": "Дирхам ОАЭ (AED). 1 AED ≈ 25 рублей. Доллары и карты принимают везде.",
+            "currency": "Дирхам ОАЭ (AED). Ориентировочно: 1 AED ≈ 24 рубля (июнь 2026). Доллары и карты принимают везде.",
             "language": "Арабский (официальный). Английский — везде. Русский — в крупных отелях.",
             "transport": "Метро Дубая, такси (Careem/Uber), аренда авто от ₽3 500/день. Автобусы между эмиратами.",
             "safety": "Одна из самых безопасных стран. Строгие законы: алкоголь — в отелях, одежда — скромная.",
@@ -463,7 +463,7 @@ COUNTRY_DATA = {
         ],
         "practical_ru": {
             "visa": "Виза требуется. Хайнань — безвизовый въезд до 30 дней через туроператора.",
-            "currency": "Китайский юань (CNY). 1 CNY ≈ 12 рублей. WeChat/Alipay — основные способы оплаты.",
+            "currency": "Китайский юань (CNY). Ориентировочно: 1 CNY ≈ 13.5 рублей (июнь 2026). WeChat/Alipay — основные способы оплаты.",
             "language": "Китайский. Английский — в отелях. Русский — на Хайнане. Рекомендуется переводчик.",
             "transport": "Скоростные поезда, метро, такси (Didi). Внутренние рейсы.",
             "safety": "Очень безопасно. VPN обязателен (Google, WhatsApp заблокированы).",
@@ -584,6 +584,52 @@ COUNTRY_DATA = {
             ("Maafushi", "Most popular local island. Guesthouses from $25/night."),
             ("Hulhumale", "Near airport. Hotels from $60/night."),
             ("South Male Atoll", "Premium resorts: Anantara, Naladhu. From $400/night."),
+        ],
+        "hotels_ru": [
+            ("🏨 Бюджетные (локальные острова, от $25/ночь)", [
+                ("Kaani Village & Spa (Маафуши)", "Популярный гестхаус с бассейном на крыше. Номера с кондиционером, 5 минут до пляжа бикини. Трансфер: паром из Мале ($2).", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=maafushi_kaani"),
+                ("Arena Beach Hotel (Маафуши)", "Отель на первой линии с собственным пляжем. Дайв-центр, ресторан. Трансфер: скоростной катер ($25).", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=maafushi_arena"),
+                ("Crystal Sands (Маафуши)", "Современный отель с панорамным рестораном. Снорклинг прямо у рифа. Трансфер: паром.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=maafushi_crystal"),
+                ("Reveries Diving Village (Дигура)", "Гестхаус для дайверов. Рядом место встречи с китовыми акулами. Трансфер: внутренний рейс + катер.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=dhigurah_reveries"),
+                ("Season Holidays (Тулусду)", "Сёрф-гестхаус рядом со спотом Chickens. Прокат досок, школа сёрфинга. Трансфер: паром + катер.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=thulusdhoo_season"),
+            ]),
+            ("💎 Комфорт (4*, от $150/ночь)", [
+                ("Adaaran Select Hudhuranfushi (Северный Мале)", "Курорт на отдельном острове. Сёрф-спот мирового уровня. All Inclusive. Трансфер: скоростной катер 30 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=hudhuranfushi"),
+                ("Sun Siyam Olhuveli (Южный Мале)", "Два острова соединены мостом. 4 ресторана, спа-центр. Трансфер: скоростной катер 45 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=olhuveli"),
+                ("Kandima (Даалу Атолл)", "Молодёжный курорт с арт-пространством. Самая длинная лагуна на Мальдивах. Трансфер: гидросамолёт 30 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=kandima"),
+                ("Meeru Island Resort (Северный Мале)", "Крупный курорт с отличным хаус-рифом. All Inclusive, спа, гольф. Трансфер: скоростной катер 50 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=meeru"),
+                ("Vilamendhoo Island Resort (Южный Ари)", "Дайверский курорт с рифом вокруг острова. Китовые акулы и манты. All Inclusive. Трансфер: гидросамолёт 25 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=vilamendhoo"),
+            ]),
+            ("👑 Люкс (5* Deluxe, от $500/ночь)", [
+                ("Soneva Jani (Нуну Атолл)", "Водные виллы с горками в океан. Открывающаяся крыша для наблюдения за звёздами. Личный батлер. Трансфер: гидросамолёт.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=soneva_jani"),
+                ("Conrad Maldives Rangali Island (Южный Ари)", "Подводный ресторан Ithaa. Подводный номер Muraka ($50 000/ночь). Два острова. Трансфер: гидросамолёт 30 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=conrad_rangali"),
+                ("Anantara Kihavah (Баа Атолл)", "Водные виллы с бассейном. Подводный ресторан Sea. Обсерватория. Биосферный заповедник ЮНЕСКО. Трансфер: гидросамолёт 35 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=anantara_kihavah"),
+                ("One&Only Reethi Rah (Северный Мале)", "Огромные виллы (от 135 м²). 12 ресторанов. Личный батлер. Трансфер: яхта 45 мин или гидросамолёт 15 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=reethi_rah"),
+                ("Cheval Blanc Randheli (Нуну Атолл)", "Принадлежит LVMH. Дизайн Жана-Мишеля Гати. Частный остров. Трансфер: гидросамолёт 40 мин.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=cheval_blanc"),
+            ]),
+        ],
+        "hotels_en": [
+            ("🏨 Budget (local islands, from $25/night)", [
+                ("Kaani Village & Spa (Maafushi)", "Popular guesthouse with rooftop pool. AC rooms, 5 min to bikini beach. Transfer: ferry from Male ($2).", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=maafushi_kaani"),
+                ("Arena Beach Hotel (Maafushi)", "Beachfront hotel with private beach. Dive center, restaurant. Transfer: speedboat ($25).", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=maafushi_arena"),
+                ("Crystal Sands (Maafushi)", "Modern hotel with panoramic restaurant. Snorkeling at the reef. Transfer: ferry.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=maafushi_crystal"),
+                ("Reveries Diving Village (Dhigurah)", "Guesthouse for divers. Near whale shark meeting point. Transfer: domestic flight + boat.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=dhigurah_reveries"),
+                ("Season Holidays (Thulusdhoo)", "Surf guesthouse near Chickens break. Board rental, surf school. Transfer: ferry + boat.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=thulusdhoo_season"),
+            ]),
+            ("💎 Comfort (4*, from $150/night)", [
+                ("Adaaran Select Hudhuranfushi (North Male)", "Resort on private island. World-class surf break. All Inclusive. Transfer: speedboat 30 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=hudhuranfushi"),
+                ("Sun Siyam Olhuveli (South Male)", "Two islands connected by bridge. 4 restaurants, spa. Transfer: speedboat 45 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=olhuveli"),
+                ("Kandima (Dhaalu Atoll)", "Youth resort with art space. Longest lagoon in Maldives. Transfer: seaplane 30 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=kandima"),
+                ("Meeru Island Resort (North Male)", "Large resort with excellent house reef. All Inclusive, spa, golf. Transfer: speedboat 50 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=meeru"),
+                ("Vilamendhoo Island Resort (South Ari)", "Diver resort with reef around island. Whale sharks & mantas. All Inclusive. Transfer: seaplane 25 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=vilamendhoo"),
+            ]),
+            ("👑 Luxury (5* Deluxe, from $500/night)", [
+                ("Soneva Jani (Noonu Atoll)", "Water villas with slides into ocean. Retractable roof for stargazing. Personal butler. Transfer: seaplane.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=soneva_jani"),
+                ("Conrad Maldives Rangali Island (South Ari)", "Underwater restaurant Ithaa. Underwater suite Muraka. Two islands. Transfer: seaplane 30 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=conrad_rangali"),
+                ("Anantara Kihavah (Baa Atoll)", "Water villas with pool. Underwater restaurant Sea. Observatory. UNESCO biosphere. Transfer: seaplane 35 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=anantara_kihavah"),
+                ("One&Only Reethi Rah (North Male)", "Huge villas (from 135 m²). 12 restaurants. Personal butler. Transfer: yacht 45 min or seaplane 15 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=reethi_rah"),
+                ("Cheval Blanc Randheli (Noonu Atoll)", "Owned by LVMH. Design by Jean-Michel Gathy. Private island. Transfer: seaplane 40 min.", "https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=cheval_blanc"),
+            ]),
         ],
     },
 }

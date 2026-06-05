@@ -23,20 +23,20 @@ def get_url_slug(content_type, city_slug, lang):
     return f"{city_slug}-{type_slug}"
 
 
-def build_seo_meta(article_meta, city_name, country_name, content_type, lang):
-    slug = get_url_slug(content_type, city_name, lang)
+def build_seo_meta(article_meta, city_slug, country_slug, content_type, lang):
+    slug = get_url_slug(content_type, city_slug, lang)
 
     if not article_meta.get("title"):
-        article_meta["title"] = f"{city_name} Travel Guide 2026"
+        article_meta["title"] = f"{city_slug.replace('-', ' ').title()} Travel Guide 2026"
     if not article_meta.get("meta_description"):
-        article_meta["meta_description"] = f"Complete travel guide to {city_name} 2026. Hotels, attractions, flights, tips. Plan your trip to {city_name} today."
+        article_meta["meta_description"] = f"Complete travel guide to {city_slug.replace('-', ' ').title()} 2026. Hotels, attractions, flights, tips."
 
     seo = {
         "title": article_meta["title"],
         "meta_description": article_meta["meta_description"][:160],
         "h1": article_meta.get("h1", article_meta["title"]),
         "slug": slug,
-        "canonical": f"/{lang}/{country_name}/{slug}.html",
+        "canonical": f"/{lang}/{country_slug}/{slug}.html",
     }
     return seo
 
