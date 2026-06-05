@@ -132,6 +132,10 @@ def build_destination_page(country_slug, lang):
         print(f"  Unknown country: {country_slug}")
         return
 
+    from config.country_data import COUNTRY_DATA, AGENT_PHOTO
+
+    country_data = COUNTRY_DATA.get(country_slug, {})
+
     icons = {
         "guide": "📖", "hotels": "🏨", "flights": "✈️",
         "attractions": "🏛", "seasons": "☀️",
@@ -170,27 +174,7 @@ def build_destination_page(country_slug, lang):
 
     city_names_list = [c["name_en"] if lang == "en" else c["name_ru"] for c in country["cities"].values()]
 
-    if country_slug == "uae":
-        template = env.get_template("destination-uae.html")
-    else:
-        template = env.get_template("destination.html")
-
-    city_descriptions = {
-        "dubai": "Город будущего: небоскрёбы, шопинг, развлечения. Самый популярный эмират.",
-        "abu-dhabi": "Столица ОАЭ: культура, Лувр, мечеть шейха Зайда. Спокойный и респектабельный.",
-        "sharjah": "Культурная столица: музеи, heritage-районы. Самый строгий, но бюджетный.",
-        "fujairah": "Единственный эмират на Индийском океане. Дайвинг, снорклинг, горы Хаджар.",
-        "ras-al-khaimah": "Природа и приключения: самая высокая гора ОАЭ, мангровые заросли, уединение.",
-        "dubai_en": "City of the future: skyscrapers, shopping, entertainment. The most popular emirate.",
-        "abu-dhabi_en": "Capital of UAE: culture, Louvre, Sheikh Zayed Mosque. Calm and respectable.",
-        "sharjah_en": "Cultural capital: museums, heritage districts. Strictest but most affordable.",
-        "fujairah_en": "Only emirate on the Indian Ocean. Diving, snorkeling, Hajar Mountains.",
-        "ras-al-khaimah_en": "Nature & adventure: UAE's highest mountain, mangroves, total seclusion.",
-    }
-
-    for city_slug in cities_with_images:
-        desc_key = f"{city_slug}_en" if lang == "en" else city_slug
-        cities_with_images[city_slug]["desc"] = city_descriptions.get(desc_key, "")
+    template = env.get_template("destination-rich.html")
 
     html = template.render(
         lang=lang,
@@ -200,6 +184,8 @@ def build_destination_page(country_slug, lang):
         articles_count=len(country["cities"]) * 5,
         hero_image=get_country_image(country_slug),
         insurance_link=insurance_link(),
+        data=country_data,
+        agent_photo=AGENT_PHOTO,
         alternate_url=f"{lang}/{country_slug}/index.html",
         breadcrumbs=[
             {"label": "Home" if lang == "en" else "Главная", "url": f"/{lang}/index.html"},

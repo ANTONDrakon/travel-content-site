@@ -1,0 +1,187 @@
+COUNTRY_DATA = {
+    "turkey": {
+        "hero_subtitle_ru": "Древняя история, лазурное побережье и восточное гостеприимство. От шумных базаров Стамбула до воздушных шаров Каппадокии.",
+        "hero_subtitle_en": "Ancient history, turquoise coastline, and eastern hospitality. From Istanbul's bustling bazaars to Cappadocia's hot air balloons.",
+        "advantages_ru": [
+            ("🏖", "Пляжный отдых", "Более 8000 км береговой линии. Голубой флаг на 500+ пляжах. Температура воды +24–28°C в сезон."),
+            ("🏛", "История и культура", "20 объектов ЮНЕСКО. Античные города Эфес, Троя, Пергам. Османская архитектура Стамбула."),
+            ("💱", "Доступные цены", "В 2026 году курс лиры делает Турцию одним из самых бюджетных направлений. Отели All Inclusive от $40/ночь."),
+            ("🍽", "Гастрономия", "Турецкая кухня — одна из трёх великих кухонь мира. Кебабы, мезе, баклава, турецкий чай и кофе."),
+            ("🛍", "Шопинг", "Гранд-базар в Стамбуле — 4000 магазинов. Кожа, текстиль, ковры, золото, специи."),
+            ("👨‍👩‍👧", "Семейный отдых", "All Inclusive отели с детскими клубами, аквапарками и анимацией. Безвизовый въезд."),
+        ],
+        "advantages_en": [
+            ("🏖", "Beach Vacation", "Over 8000 km of coastline. Blue Flag on 500+ beaches. Water temperature +24–28°C in season."),
+            ("🏛", "History & Culture", "20 UNESCO sites. Ancient cities of Ephesus, Troy, Pergamon. Ottoman architecture in Istanbul."),
+            ("💱", "Affordable Prices", "In 2026, the lira exchange rate makes Turkey one of the most budget-friendly destinations. All Inclusive from $40/night."),
+            ("🍽", "Gastronomy", "Turkish cuisine is one of the world's three great cuisines. Kebabs, meze, baklava, Turkish tea and coffee."),
+            ("👨‍👩‍👧", "Family-Friendly", "All Inclusive hotels with kids' clubs, water parks, and animation. Visa-free entry."),
+        ],
+        "seasons_ru": [
+            ("🌸", "Весна (апрель–май)", "+18–25°C", "Идеально для экскурсий. Цены умеренные. Цветение тюльпанов в Стамбуле."),
+            ("☀️", "Лето (июнь–сентябрь)", "+28–38°C", "Пляжный сезон. Высокие цены. Бронировать за 3–4 месяца."),
+            ("🍂", "Осень (октябрь–ноябрь)", "+20–28°C", "Бархатный сезон. Тёплое море, меньше туристов. Цены снижаются."),
+            ("❄️", "Зима (декабрь–март)", "+5–16°C", "Низкий сезон. Минимальные цены. Горные лыжи в Улудаге и Эрджиесе."),
+        ],
+        "seasons_en": [
+            ("🌸", "Spring (Apr–May)", "+18–25°C", "Ideal for sightseeing. Moderate prices. Tulip bloom in Istanbul."),
+            ("☀️", "Summer (Jun–Sep)", "+28–38°C", "Beach season. High prices. Book 3–4 months ahead."),
+            ("🍂", "Autumn (Oct–Nov)", "+20–28°C", "Velvet season. Warm sea, fewer tourists. Prices decrease."),
+            ("❄️", "Winter (Dec–Mar)", "+5–16°C", "Low season. Minimal prices. Skiing in Uludag and Erciyes."),
+        ],
+        "budget_ru": [
+            ("💰 Эконом", "₽70 000–110 000", ["Отель 3* / апартаменты: от ₽2 000/ночь", "Питание в lokanta: ₽300–600/чел", "Транспорт: автобусы, долмуши", "Пляжи: муниципальные (бесплатно)"]),
+            ("💎 Комфорт", "₽140 000–250 000", ["Отель 4–5*: от ₽5 000/ночь", "All Inclusive / рестораны: ₽1 000–2 500/чел", "Трансфер из аэропорта, такси", "Экскурсии, аквапарки, яхтинг"]),
+            ("👑 Премиум", "₽350 000+", ["Отель 5* Deluxe / вилла: от ₽15 000/ночь", "Частный трансфер, гид", "Рестораны премиум-класса", "VIP-яхтинг, вертолётные туры"]),
+        ],
+        "budget_en": [
+            ("💰 Economy", "$700–1 100", ["3* hotel / apartment: from $20/night", "Local lokanta: $3–6/person", "Transport: buses, dolmus", "Beaches: public (free)"]),
+            ("💎 Comfort", "$1 400–2 500", ["4–5* hotel: from $50/night", "All Inclusive / restaurants: $10–25/person", "Airport transfer, taxi", "Excursions, water parks, yachting"]),
+            ("👑 Premium", "$3 500+", ["5* Deluxe / villa: from $150/night", "Private transfer, guide", "Premium restaurants", "VIP yachting, helicopter tours"]),
+        ],
+        "practical_ru": {
+            "visa": "Безвизовый въезд до 90 дней для граждан РФ.",
+            "currency": "Турецкая лира (TRY). 1₺ ≈ 3 рубля. Доллары и евро принимают в туристических зонах.",
+            "language": "Турецкий. В туристических зонах — английский, часто русский.",
+            "transport": "Междугородние автобусы, внутренние авиарейсы, долмуши. Аренда авто от €25/день.",
+            "safety": "Туристические зоны безопасны. Рекомендуется стандартная осторожность в крупных городах.",
+            "internet": "Wi-Fi в отелях. Местная SIM-карта (Turkcell, Vodafone) — от $10 с 20 ГБ.",
+        },
+        "practical_en": {
+            "visa": "Visa-free entry up to 90 days for Russian citizens.",
+            "currency": "Turkish Lira (TRY). $1 ≈ 30₺. USD and EUR accepted in tourist areas.",
+            "language": "Turkish. English widely spoken in tourist areas, often Russian.",
+            "transport": "Intercity buses, domestic flights, dolmus. Car rental from €25/day.",
+            "safety": "Tourist areas are safe. Standard caution advised in large cities.",
+            "internet": "Wi-Fi in hotels. Local SIM (Turkcell, Vodafone) — from $10 with 20 GB.",
+        },
+        "faq_ru": [
+            ("Нужна ли виза в Турцию?", "Нет. Безвизовый въезд до 90 дней для граждан РФ. Загранпаспорт должен действовать не менее 120 дней с даты въезда."),
+            ("Какая валюта в Турции?", "Турецкая лира (TRY). Рекомендуем менять валюту в Турции — курс выгоднее. Доллары и евро принимают в туристических зонах."),
+            ("Когда лучше ехать в Турцию?", "Для пляжного отдыха: июнь–сентябрь. Для экскурсий: апрель–май, октябрь. Зимой — горные лыжи."),
+            ("Сколько стоит отдых в Турции в 2026?", "Эконом: от ₽70 000 на человека за неделю. Комфорт: от ₽140 000. Премиум: от ₽350 000. Цены на перелёт включены."),
+            ("Где лучше отдыхать с детьми?", "Анталья и Бодрум — лучшие All Inclusive отели с детскими клубами. Аланья — пологий вход в море."),
+            ("Безопасно ли в Турции?", "Туристические зоны безопасны. Соблюдайте стандартные меры: не оставляйте вещи без присмотра на пляже."),
+            ("Какой курорт выбрать?", "Анталья — универсальный. Бодрум — европейский стиль. Аланья — бюджетный. Каппадокия — экскурсионный. Стамбул — городской."),
+            ("Нужно ли знать турецкий язык?", "Нет. В туристических зонах говорят по-русски и по-английски. Вывески часто на русском."),
+            ("Что привезти из Турции?", "Специи, рахат-лукум, турецкий чай, керамику, кожу, текстиль, золото, кофе в турке."),
+        ],
+        "faq_en": [
+            ("Do I need a visa for Turkey?", "Russian citizens: visa-free up to 90 days. Passport must be valid for at least 120 days from entry."),
+            ("What currency is used in Turkey?", "Turkish Lira (TRY). Exchange in Turkey for better rates. USD and EUR accepted in tourist areas."),
+            ("When is the best time to visit?", "Beach: June–September. Sightseeing: April–May, October. Winter: skiing in Uludag."),
+            ("How much does a trip to Turkey cost in 2026?", "Economy: from $700/person per week. Comfort: from $1 400. Premium: from $3 500. Flights included."),
+            ("Where to go with children?", "Antalya and Bodrum — best All Inclusive hotels with kids' clubs. Alanya — shallow beach entry."),
+            ("Is Turkey safe?", "Tourist areas are safe. Follow standard precautions: don't leave valuables unattended on the beach."),
+            ("Which resort to choose?", "Antalya — universal. Bodrum — European style. Alanya — budget. Cappadocia — sightseeing. Istanbul — city break."),
+            ("Do I need to speak Turkish?", "No. English and Russian are widely spoken in tourist areas. Signs are often in Russian."),
+            ("What souvenirs to bring?", "Spices, Turkish delight, tea, ceramics, leather, textiles, gold, Turkish coffee."),
+        ],
+        "what_to_see_ru": ["Айя-София и Голубая мечеть (Стамбул)", "Воздушные шары Каппадокии", "Античный Эфес", "Памуккале — белые травертины", "Пляж Клеопатры (Аланья)", "Замок Святого Петра (Бодрум)"],
+        "what_to_see_en": ["Hagia Sophia & Blue Mosque (Istanbul)", "Cappadocia hot air balloons", "Ancient Ephesus", "Pamukkale white travertines", "Cleopatra Beach (Alanya)", "St. Peter's Castle (Bodrum)"],
+        "where_to_stay_ru": [
+            ("Султанахмет (Стамбул)", "Исторический центр. Для любителей экскурсий. Отели 3–5*, от €40/ночь."),
+            ("Лара (Анталья)", "Пляжная зона с All Inclusive отелями. Для семей и пакетного отдыха. Отели 5*, от €60/ночь."),
+            ("Гюмбет (Бодрум)", "Молодёжный район с барами и клубами. Для тусовок. Отели 3–4*, от €30/ночь."),
+        ],
+        "where_to_stay_en": [
+            ("Sultanahmet (Istanbul)", "Historic center. For sightseeing. 3–5* hotels, from €40/night."),
+            ("Lara (Antalya)", "Beach area with All Inclusive hotels. For families and package tours. 5* hotels, from €60/night."),
+            ("Gumbet (Bodrum)", "Youth area with bars and clubs. For nightlife. 3–4* hotels, from €30/night."),
+        ],
+    },
+    "thailand": {
+        "hero_subtitle_ru": "Бирюзовое море, буддийские храмы и улыбки. От небоскрёбов Бангкока до нетронутых пляжей Краби.",
+        "hero_subtitle_en": "Turquoise sea, Buddhist temples, and smiles. From Bangkok skyscrapers to untouched Krabi beaches.",
+        "advantages_ru": [
+            ("🏖", "Райские пляжи", "Андаманское море и Сиамский залив. Острова Пхи-Пхи, Самуи, Пхукет. Белый песок, пальмы."),
+            ("💰", "Доступный отдых", "Цены в 2–3 раза ниже европейских. Уличная еда от $1. Массаж от $5."),
+            ("🛕", "Культура и храмы", "Более 40 000 буддийских храмов. Королевский дворец в Бангкоке. Белый храм в Чианграе."),
+            ("🤿", "Дайвинг и снорклинг", "Одни из лучших дайв-сайтов мира. Симиланские острова, Ко Тао. Китовые акулы, манты."),
+            ("🧘", "Оздоровление", "Массаж, йога, детокс-программы. Тайский массаж признан ЮНЕСКО нематериальным наследием."),
+        ],
+        "advantages_en": [
+            ("🏖", "Paradise Beaches", "Andaman Sea & Gulf of Thailand. Phi Phi Islands, Samui, Phuket. White sand, palm trees."),
+            ("💰", "Affordable", "2–3x cheaper than Europe. Street food from $1. Massage from $5."),
+            ("🛕", "Culture & Temples", "Over 40 000 Buddhist temples. Grand Palace in Bangkok. White Temple in Chiang Rai."),
+            ("🤿", "Diving & Snorkeling", "World-class dive sites. Similan Islands, Koh Tao. Whale sharks, manta rays."),
+            ("🧘", "Wellness", "Massage, yoga, detox programs. Thai massage recognized as UNESCO intangible heritage."),
+        ],
+        "seasons_ru": [
+            ("☀️", "Высокий сезон (ноябрь–март)", "+28–33°C", "Сухо, солнечно. Идеальная погода. Цены максимальные. Бронировать за 3–4 месяца."),
+            ("🔥", "Жаркий сезон (апрель–май)", "+30–38°C", "Очень жарко. Цены снижаются. Тайский Новый год (Сонгкран) в апреле."),
+            ("🌧", "Сезон дождей (июнь–октябрь)", "+28–32°C", "Кратковременные ливни, в основном вечером. Самые низкие цены. Зелень и водопады."),
+        ],
+        "seasons_en": [
+            ("☀️", "High Season (Nov–Mar)", "+28–33°C", "Dry and sunny. Perfect weather. Maximum prices. Book 3–4 months ahead."),
+            ("🔥", "Hot Season (Apr–May)", "+30–38°C", "Very hot. Prices decrease. Thai New Year (Songkran) in April."),
+            ("🌧", "Rainy Season (Jun–Oct)", "+28–32°C", "Short showers, mostly evening. Lowest prices. Lush greenery and waterfalls."),
+        ],
+        "budget_ru": [
+            ("💰 Эконом", "₽90 000–140 000", ["Гестхаус / хостел: от ₽700/ночь", "Уличная еда: ₽100–300/чел", "Общественный транспорт, тук-туки", "Бесплатные пляжи, храмы"]),
+            ("💎 Комфорт", "₽180 000–300 000", ["Отель 4*: от ₽3 500/ночь", "Рестораны среднего класса: ₽500–1 500/чел", "Такси, аренда байка", "Экскурсии на острова, дайвинг"]),
+            ("👑 Премиум", "₽400 000+", ["Вилла / курорт 5*: от ₽15 000/ночь", "Fine dining, частный гид", "Аренда авто с водителем", "VIP-туры, спа-программы"]),
+        ],
+        "budget_en": [
+            ("💰 Economy", "$900–1 400", ["Guesthouse / hostel: from $7/night", "Street food: $1–3/person", "Public transport, tuk-tuks", "Free beaches, temples"]),
+            ("💎 Comfort", "$1 800–3 000", ["4* hotel: from $35/night", "Mid-range restaurants: $5–15/person", "Taxi, scooter rental", "Island excursions, diving"]),
+            ("👑 Premium", "$4 000+", ["Villa / 5* resort: from $150/night", "Fine dining, private guide", "Car with driver", "VIP tours, spa programs"]),
+        ],
+        "practical_ru": {
+            "visa": "Безвизовый въезд до 30 дней. Можно продлить ещё на 30 дней в иммиграционном офисе.",
+            "currency": "Тайский бат (THB). 1฿ ≈ 2.5 рубля. Обменивайте в Таиланде — курс лучше.",
+            "language": "Тайский. В туристических зонах — английский, частично русский.",
+            "transport": "Метро/скайтрейн в Бангкоке, тук-туки, сонгтео, паромы. Аренда байка от ฿200/день.",
+            "safety": "Очень безопасно для туристов. Остерегайтесь карманников в людных местах.",
+            "internet": "Wi-Fi повсеместно. Местная SIM (AIS, TrueMove) — от ฿200 с безлимитным интернетом на 7 дней.",
+        },
+        "practical_en": {
+            "visa": "Visa-free entry up to 30 days. Can extend for another 30 days at immigration office.",
+            "currency": "Thai Baht (THB). Exchange in Thailand for better rates.",
+            "language": "Thai. English widely spoken in tourist areas, some Russian.",
+            "transport": "BTS/MRT in Bangkok, tuk-tuks, songthaews, ferries. Scooter rental from ฿200/day.",
+            "safety": "Very safe for tourists. Beware of pickpockets in crowded areas.",
+            "internet": "Wi-Fi everywhere. Local SIM (AIS, TrueMove) — from ฿200 with unlimited internet for 7 days.",
+        },
+        "faq_ru": [
+            ("Нужна ли виза в Таиланд?", "Гражданам РФ — безвизовый въезд до 30 дней. Загранпаспорт должен действовать не менее 6 месяцев."),
+            ("Какая валюта в Таиланде?", "Тайский бат (THB). Обменивайте в Таиланде, курс выгоднее. Карты принимают в крупных магазинах и отелях."),
+            ("Когда лучше ехать в Таиланд?", "Ноябрь–март — высокий сезон, сухо. Апрель–май — жарко. Июнь–октябрь — дожди, но цены ниже."),
+            ("Сколько стоит отдых в Таиланде?", "Эконом: от ₽90 000/чел. Комфорт: от ₽180 000. Премиум: от ₽400 000. Цены с перелётом."),
+            ("Какой курорт выбрать?", "Пхукет — универсальный. Самуи — спокойный. Паттайя — тусовки. Краби — природа и скалы."),
+            ("Безопасно ли в Таиланде?", "Очень безопасно для туристов. Таиланд — «страна улыбок». Осторожнее с арендой байка без прав."),
+            ("Что попробовать из еды?", "Пад Тай, Том Ям, Сом Там, манго стики райс. Уличная еда безопасна — выбирайте оживлённые лотки."),
+            ("Нужны ли прививки?", "Официально не требуются. Рекомендуется прививка от гепатита А и брюшного тифа."),
+        ],
+        "faq_en": [
+            ("Do I need a visa for Thailand?", "Russian citizens: visa-free up to 30 days. Passport valid for at least 6 months."),
+            ("What currency is used?", "Thai Baht (THB). Exchange in Thailand for better rates."),
+            ("When is the best time to visit?", "November–March: high season, dry. April–May: hot. June–October: rain, lower prices."),
+            ("How much does a trip cost?", "Economy: from $900/person. Comfort: from $1 800. Premium: from $4 000. Flights included."),
+            ("Which resort to choose?", "Phuket — universal. Samui — relaxed. Pattaya — nightlife. Krabi — nature and cliffs."),
+            ("Is Thailand safe?", "Very safe for tourists. Thailand is the 'Land of Smiles'. Be careful with scooter rental without a license."),
+            ("What food to try?", "Pad Thai, Tom Yum, Som Tam, Mango Sticky Rice. Street food is safe — choose busy stalls."),
+            ("Do I need vaccinations?", "Not officially required. Hepatitis A and typhoid recommended."),
+        ],
+        "what_to_see_ru": ["Большой дворец (Бангкок)", "Острова Пхи-Пхи", "Белый храм (Чианграй)", "Древний город Аюттхая", "Водопад Эраван (Канчанабури)", "Дайвинг на Симиланах"],
+        "what_to_see_en": ["Grand Palace (Bangkok)", "Phi Phi Islands", "White Temple (Chiang Rai)", "Ancient Ayutthaya", "Erawan Waterfall", "Similan Islands diving"],
+        "where_to_stay_ru": [
+            ("Сукхумвит (Бангкок)", "Деловой и развлекательный центр. Для молодёжи и шопинга. Отели 4–5*, от ฿1 500/ночь."),
+            ("Ката/Карон (Пхукет)", "Спокойные пляжи, хорошая инфраструктура. Для семей. Отели 3–5*, от ฿1 200/ночь."),
+            ("Чавенг (Самуи)", "Главный пляж острова с ресторанами и барами. Универсальный. Отели 3–5*, от ฿1 000/ночь."),
+        ],
+        "where_to_stay_en": [
+            ("Sukhumvit (Bangkok)", "Business & entertainment hub. For youth and shopping. 4–5* hotels, from ฿1 500/night."),
+            ("Kata/Karon (Phuket)", "Quiet beaches, good infrastructure. For families. 3–5* hotels, from ฿1 200/night."),
+            ("Chaweng (Samui)", "Main island beach with restaurants and bars. Universal. 3–5* hotels, from ฿1 000/night."),
+        ],
+    },
+}
+
+AGENT_PHOTO = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+
+AGENT_NAME = "Туркова Валентина"
+AGENT_NAME_EN = "Valentina Turkova"
+AGENT_EMAIL = "i@turkov-1.ru"
+AGENT_DESC_RU = "Профессиональный турагент. Более 300 клиентов с 2021. Полное сопровождение: визы, QR-коды, страховки, подбор тура."
+AGENT_DESC_EN = "Professional travel agent. 300+ clients since 2021. Full support: visas, QR codes, insurance, tour selection."
