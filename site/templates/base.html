@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Travel Guide Hub{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Your ultimate travel guide: hotels, flights, attractions, and tips for the best destinations worldwide.{% endblock %}">
+
+    <link rel="alternate" hreflang="ru" href="{{ site_url }}/ru/{{ alternate_url or '' }}">
+    <link rel="alternate" hreflang="en" href="{{ site_url }}/en/{{ alternate_url or '' }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site_url }}/en/{{ alternate_url or '' }}">
+
+    {% if canonical %}
+    <link rel="canonical" href="{{ site_url }}{{ canonical }}">
+    {% endif %}
+
+    <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{{ self.meta_description() }}{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site_url }}/{{ lang }}/">
+    <meta property="og:locale" content="{{ 'ru_RU' if lang == 'ru' else 'en_US' }}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ self.og_title() }}">
+    <meta name="twitter:description" content="{{ self.og_description() }}">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .affiliate-link {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 8px 4px;
+        }
+        .affiliate-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        .affiliate-banner {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 32px 0;
+            text-align: center;
+        }
+        .affiliate-banner p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        article h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+        }
+        article h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #2d2d44;
+        }
+        article p {
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #374151;
+        }
+        article ul, article ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        article li {
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+        article table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        article th, article td {
+            border: 1px solid #e5e7eb;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        article th {
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+        .breadcrumbs a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+        .lang-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: border-color 0.2s;
+        }
+        .lang-switch:hover {
+            border-color: #667eea;
+        }
+        @media (max-width: 768px) {
+            article h2 { font-size: 1.4rem; }
+            article h3 { font-size: 1.15rem; }
+        }
+    </style>
+
+    {% if schema_data %}
+    <script type="application/ld+json">
+    {{ schema_data | tojson | safe }}
+    </script>
+    {% endif %}
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="/{{ lang }}/index.html" class="flex items-center gap-2">
+                    <span class="text-2xl">🌍</span>
+                    <span class="text-xl font-extrabold text-gray-900">Travel Guide Hub</span>
+                </a>
+                <div class="flex items-center gap-4">
+                    <a href="/en/{% block en_alt %}{% endblock %}" class="lang-switch" title="English">
+                        <span>🇬🇧</span> <span>EN</span>
+                    </a>
+                    <a href="/ru/{% block ru_alt %}{% endblock %}" class="lang-switch" title="Русский">
+                        <span>🇷🇺</span> <span>RU</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% if breadcrumbs %}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <nav class="breadcrumbs text-sm text-gray-500">
+            {% for bc in breadcrumbs %}
+                {% if not loop.last %}
+                    <a href="{{ bc.url }}">{{ bc.label }}</a>
+                    <span class="mx-2">/</span>
+                {% else %}
+                    <span class="text-gray-900 font-medium">{{ bc.label }}</span>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    </div>
+    {% endif %}
+
+    <main class="flex-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">🌍 Travel Guide Hub</h3>
+                    <p class="text-sm">{{ "Your trusted travel guide: hotels, flights, attractions, and expert tips for the best destinations." if lang == "en" else "Ваш надёжный путеводитель: отели, билеты, достопримечательности и советы экспертов." }}</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">{{ "Popular Destinations" if lang == "en" else "Популярные направления" }}</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/{{ lang }}/turkey/index.html" class="hover:text-white transition">{{ "Turkey" if lang == "en" else "Турция" }}</a></li>
+                        <li><a href="/{{ lang }}/thailand/index.html" class="hover:text-white transition">{{ "Thailand" if lang == "en" else "Таиланд" }}</a></li>
+                        <li><a href="/{{ lang }}/egypt/index.html" class="hover:text-white transition">{{ "Egypt" if lang == "en" else "Египет" }}</a></li>
+                        <li><a href="/{{ lang }}/uae/index.html" class="hover:text-white transition">{{ "UAE" if lang == "en" else "ОАЭ" }}</a></li>
+                        <li><a href="/{{ lang }}/indonesia/index.html" class="hover:text-white transition">{{ "Indonesia" if lang == "en" else "Индонезия" }}</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">{{ "About" if lang == "en" else "О сайте" }}</h3>
+                    <p class="text-sm">{{ "We help travelers find the best deals on hotels, flights, and tours. Our guides are updated for 2026." if lang == "en" else "Мы помогаем путешественникам находить лучшие предложения на отели, билеты и туры. Гайды обновлены на 2026 год." }}</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+                <p>&copy; 2026 Travel Guide Hub. {{ "All rights reserved." if lang == "en" else "Все права защищены." }}</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

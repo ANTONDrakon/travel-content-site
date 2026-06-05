@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}{{ "Travel Guide Hub — Best Travel Guides 2026" if lang == "en" else "Travel Guide Hub — Лучшие путеводители 2026" }}{% endblock %}
+{% block meta_description %}{{ "Complete travel guides for 2026: hotels, flights, attractions. Turkey, Thailand, Egypt, UAE, Indonesia and more." if lang == "en" else "Полные путеводители 2026: отели, билеты, достопримечательности. Турция, Таиланд, Египет, ОАЭ, Индонезия и другие направления." }}{% endblock %}
+
+{% block en_alt %}index.html{% endblock %}
+{% block ru_alt %}index.html{% endblock %}
+
+{% block content %}
+<section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">
+            {% if lang == "en" %}
+                Your Ultimate <span class="text-yellow-300">Travel Guide</span> 2026
+            {% else %}
+                Ваш лучший <span class="text-yellow-300">путеводитель</span> 2026
+            {% endif %}
+        </h1>
+        <p class="text-lg sm:text-xl text-indigo-100 max-w-2xl mx-auto mb-8">
+            {% if lang == "en" %}
+                Expert guides for 25 cities across 5 countries. Hotels, cheap flights, top attractions, and insider tips — everything you need for the perfect trip.
+            {% else %}
+                Экспертные гайды по 25 городам в 5 странах. Отели, дешёвые билеты, топ достопримечательностей и советы — всё для идеального путешествия.
+            {% endif %}
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+            <a href="#destinations" class="px-8 py-4 bg-white text-indigo-700 font-bold rounded-xl hover:bg-gray-100 transition text-lg">
+                {% if lang == "en" %}Explore Destinations{% else %}Выбрать направление{% endif %}
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="destinations" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
+        {% if lang == "en" %}Popular Destinations 2026{% else %}Популярные направления 2026{% endif %}
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for country in countries %}
+        <a href="/{{ lang }}/{{ country.slug }}/index.html" class="card block group">
+            <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden">
+                <span class="text-6xl">{{ country.emoji }}</span>
+                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition"></div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition">
+                    {{ country.name_en if lang == "en" else country.name_ru }}
+                </h3>
+                <p class="text-gray-500 mt-2 text-sm">
+                    {% set count = country.cities|length %}
+                    {% if lang == "en" %}
+                        {{ count }} cities &bull; {{ 5 * count }} guides
+                    {% else %}
+                        {{ count }} городов &bull; {{ 5 * count }} гайдов
+                    {% endif %}
+                </p>
+                <div class="mt-3 flex flex-wrap gap-1">
+                    {% for city_slug, city in country.cities.items() %}
+                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
+                        {{ city.name_en if lang == "en" else city.name_ru }}
+                    </span>
+                    {% endfor %}
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
+            {% if lang == "en" %}What We Cover{% else %}Что мы освещаем{% endif %}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {% set items = [
+                ("📖", "Travel Guides" if lang == "en" else "Путеводители", "Complete city handbooks" if lang == "en" else "Полные гайды по городам"),
+                ("🏨", "Hotels" if lang == "en" else "Отели", "Top-10 for every budget" if lang == "en" else "Топ-10 под любой бюджет"),
+                ("✈️", "Flights" if lang == "en" else "Авиабилеты", "Cheap tickets & hacks" if lang == "en" else "Дешёвые билеты и лайфхаки"),
+                ("🏛", "Attractions" if lang == "en" else "Достопримечательности", "15 best places to visit" if lang == "en" else "15 лучших мест"),
+                ("☀️", "Seasons" if lang == "en" else "Сезоны", "Weather & best time" if lang == "en" else "Погода и лучшее время"),
+            ] %}
+            {% for emoji, title, desc in items %}
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">{{ emoji }}</div>
+                <h3 class="font-bold text-gray-900 mb-1">{{ title }}</h3>
+                <p class="text-sm text-gray-500">{{ desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

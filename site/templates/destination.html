@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}{{ country.name_en if lang == "en" else country.name_ru }} — {{ "Travel Guide 2026" if lang == "en" else "Путеводитель 2026" }}{% endblock %}
+{% block meta_description %}{{ "Complete travel guide to " if lang == "en" else "Полный путеводитель по " }}{{ country.name_en if lang == "en" else country.name_ru }} 2026. {{ "Hotels, flights, attractions in" if lang == "en" else "Отели, билеты, достопримечательности в" }} {{ cities|join(", ") }}.{% endblock %}
+
+{% block en_alt %}{{ country.slug }}/index.html{% endblock %}
+{% block ru_alt %}{{ country.slug }}/index.html{% endblock %}
+
+{% block content %}
+<section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 class="text-3xl sm:text-4xl font-extrabold mb-4">
+            {{ country.name_en if lang == "en" else country.name_ru }}
+            <span class="text-indigo-200 text-xl font-normal">
+                — {{ "Travel Guide 2026" if lang == "en" else "Путеводитель 2026" }}
+            </span>
+        </h1>
+        <p class="text-lg text-indigo-100 max-w-2xl">
+            {{ "Explore" if lang == "en" else "Исследуйте" }} {{ cities|length }} {{ "cities with" if lang == "en" else "городов с" }} {{ articles_count }} {{ "detailed guides" if lang == "en" else "подробными гайдами" }}.
+            {{ "Visa:" if lang == "en" else "Виза:" }} {{ country.visa_en if lang == "en" else country.visa_ru }}.
+            {{ "Currency:" if lang == "en" else "Валюта:" }} {{ country.currency }}.
+        </p>
+    </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-extrabold text-gray-900 mb-8">
+        {{ "Cities & Guides" if lang == "en" else "Города и гайды" }}
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for city_slug, city_data in cities.items() %}
+        <div class="card">
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                    {{ city_data.name_en if lang == "en" else city_data.name_ru }}
+                </h3>
+                <ul class="space-y-2">
+                    {% for article in all_articles[city_slug] %}
+                    <li>
+                        <a href="/{{ lang }}/{{ country.slug }}/{{ article.url }}.html"
+                           class="text-indigo-600 hover:text-indigo-800 flex items-center gap-2 text-sm">
+                            <span>{{ article.icon }}</span> {{ article.label }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-extrabold text-gray-900 mb-8">
+            {{ "Travel Tips for" if lang == "en" else "Советы для поездки в" }} {{ country.name_en if lang == "en" else country.name_ru }}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+                <div class="text-3xl mb-3">🛂</div>
+                <h3 class="font-bold text-gray-900 mb-2">{{ "Visa" if lang == "en" else "Виза" }}</h3>
+                <p class="text-sm text-gray-600">{{ country.visa_en if lang == "en" else country.visa_ru }}</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6">
+                <div class="text-3xl mb-3">💵</div>
+                <h3 class="font-bold text-gray-900 mb-2">{{ "Currency" if lang == "en" else "Валюта" }}</h3>
+                <p class="text-sm text-gray-600">1 USD ≈ {{ country.currency }}</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6">
+                <div class="text-3xl mb-3">🏥</div>
+                <h3 class="font-bold text-gray-900 mb-2">{{ "Insurance" if lang == "en" else "Страховка" }}</h3>
+                <p class="text-sm text-gray-600">{{ "Highly recommended" if lang == "en" else "Настоятельно рекомендуется" }}</p>
+                <a href="{{ insurance_link }}" target="_blank" rel="nofollow sponsored" class="text-indigo-600 text-sm font-semibold hover:underline mt-2 inline-block">
+                    {{ "Get insurance →" if lang == "en" else "Оформить страховку →" }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
