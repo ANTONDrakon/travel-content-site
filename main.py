@@ -42,6 +42,10 @@ def save_article(country_slug, city_slug, content_type, lang, article_data):
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / f"{content_slug}.json"
 
+    if out_path.exists():
+        print(f"  Skip (exists): {out_path.name}")
+        return out_path
+
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(article_data, f, ensure_ascii=False, indent=2)
 

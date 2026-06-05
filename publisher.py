@@ -1,6 +1,5 @@
 import os
 import json
-import shutil
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -16,9 +15,52 @@ env = Environment(
     loader=FileSystemLoader(str(TEMPLATES_DIR)),
     autoescape=select_autoescape(["html", "xml"]),
 )
-
-env.globals["site_url"] = os.getenv("SITE_URL", "https://YOUR_USERNAME.github.io/travel-content-site")
+env.globals["site_url"] = os.getenv("SITE_URL", "https://antondrakon.github.io/travel-content-site")
+env.globals["formspree_id"] = "meoovajb"
 env.globals["enumerate"] = enumerate
+
+
+COUNTRY_IMAGES = {
+    "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
+    "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
+    "egypt": "https://images.unsplash.com/photo-1539768942893-d7ed1a06c3d4?w=1200&q=80",
+    "uae": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
+    "indonesia": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
+    "china": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1200&q=80",
+}
+
+CITY_IMAGES = {
+    "istanbul": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
+    "antalya": "https://images.unsplash.com/photo-1589561458704-56175fc06797?w=800&q=80",
+    "alanya": "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800&q=80",
+    "bodrum": "https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=800&q=80",
+    "cappadocia": "https://images.unsplash.com/photo-1641128324972-af321a4c7bbd?w=800&q=80",
+    "bangkok": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80",
+    "phuket": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80",
+    "pattaya": "https://images.unsplash.com/photo-1559592413-7cec4aad6220?w=800&q=80",
+    "koh-samui": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
+    "krabi": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80",
+    "sharm-el-sheikh": "https://images.unsplash.com/photo-1539635278303-d4002c07eae2?w=800&q=80",
+    "hurghada": "https://images.unsplash.com/photo-1539768942893-d7ed1a06c3d4?w=800&q=80",
+    "cairo": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
+    "luxor": "https://images.unsplash.com/photo-1598981459244-cf64cb659ff4?w=800&q=80",
+    "marsa-alam": "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?w=800&q=80",
+    "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+    "abu-dhabi": "https://images.unsplash.com/photo-1512632578888-7928c05b1d3b?w=800&q=80",
+    "sharjah": "https://images.unsplash.com/photo-1572443492525-f46d5c22e5b9?w=800&q=80",
+    "ras-al-khaimah": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    "fujairah": "https://images.unsplash.com/photo-1582719350-3f9b1ff050ad?w=800&q=80",
+    "ubud": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+    "kuta": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    "seminyak": "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&q=80",
+    "canggu": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&q=80",
+    "nusa-dua": "https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&q=80",
+    "sanya": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=800&q=80",
+    "haikou": "https://images.unsplash.com/photo-1517697471339-4aa32003c11a?w=800&q=80",
+    "beijing": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
+    "shanghai": "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=800&q=80",
+    "xian": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
+}
 
 
 def load_json(path):
@@ -28,15 +70,18 @@ def load_json(path):
         return json.load(f)
 
 
-def load_articles_index():
-    path = CONTENT_DIR / "articles_index.json"
-    return load_json(path)
+def get_city_image(city_slug):
+    return CITY_IMAGES.get(city_slug, "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80")
+
+
+def get_country_image(country_slug):
+    return COUNTRY_IMAGES.get(country_slug, "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80")
 
 
 def get_country_emoji(slug):
     emojis = {
         "turkey": "🇹🇷", "thailand": "🇹🇭", "egypt": "🇪🇬",
-        "uae": "🇦🇪", "indonesia": "🇮🇩",
+        "uae": "🇦🇪", "indonesia": "🇮🇩", "china": "🇨🇳",
     }
     return emojis.get(slug, "🌍")
 
@@ -51,7 +96,10 @@ def build_home_page(lang):
             "name_ru": country["name_ru"],
             "name_en": country["name_en"],
             "emoji": get_country_emoji(slug),
+            "image": get_country_image(slug),
             "cities": country["cities"],
+            "cities_count": len(country["cities"]),
+            "guides_count": len(country["cities"]) * 5,
         })
 
     template = env.get_template("home.html")
@@ -70,7 +118,7 @@ def build_home_page(lang):
 
 def build_destination_page(country_slug, lang):
     from config.destinations import DESTINATIONS
-    from agents.seo_optimizer import get_url_slug, SLUGS_RU, SLUGS_EN
+    from agents.seo_optimizer import get_url_slug
     from config.affiliates import insurance_link
 
     country = DESTINATIONS.get(country_slug)
@@ -105,13 +153,25 @@ def build_destination_page(country_slug, lang):
             })
         all_articles[city_slug] = city_articles
 
+    cities_with_images = {}
+    for city_slug, city_data in country["cities"].items():
+        cities_with_images[city_slug] = {
+            "name_ru": city_data["name_ru"],
+            "name_en": city_data["name_en"],
+            "articles": all_articles[city_slug],
+            "image": get_city_image(city_slug),
+        }
+
+    city_names_list = [c["name_en"] if lang == "en" else c["name_ru"] for c in country["cities"].values()]
+
     template = env.get_template("destination.html")
     html = template.render(
         lang=lang,
         country=country,
-        cities=country["cities"],
-        all_articles=all_articles,
+        cities=cities_with_images,
+        city_names=city_names_list,
         articles_count=len(country["cities"]) * 5,
+        hero_image=get_country_image(country_slug),
         insurance_link=insurance_link(),
         alternate_url=f"{lang}/{country_slug}/index.html",
         breadcrumbs=[
@@ -166,7 +226,6 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     faq_data = generate_faq(city_name, content_type, lang)
 
     alt_url = f"{country_slug}/{content_type_slug}.html"
-
     url = f"/{lang}/{country_slug}/{content_type_slug}.html"
 
     schema_article = generate_schema_article(seo, city_name, country_name, url, lang)
@@ -187,9 +246,13 @@ def build_article_page(country_slug, city_slug, content_type, lang):
             rel_slug = get_url_slug(ct_slug, city_slug, lang)
             related.append({
                 "url": f"{country_slug}/{rel_slug}.html",
-                "title": city_name_for_breadcrumb if lang == "ru" else city_name_for_breadcrumb,
+                "title": city_name_for_breadcrumb,
                 "type": ct_info["category_ru"] if lang == "ru" else ct_info["category_en"],
             })
+
+    hero_image = None
+    if content_type == "guide":
+        hero_image = get_city_image(city_slug)
 
     template = env.get_template("article.html")
     html = template.render(
@@ -208,6 +271,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         schema_data=schema_data,
         breadcrumbs=breadcrumbs,
         alternate_url=alt_url,
+        hero_image=hero_image,
     )
 
     out = OUTPUT_DIR / lang / country_slug / f"{content_type_slug}.html"
@@ -219,19 +283,10 @@ def build_article_page(country_slug, city_slug, content_type, lang):
 def build_index_redirect():
     html = """<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=/en/index.html">
-    <title>Travel Guide Hub</title>
-    <script>window.location.href="/en/index.html";</script>
-</head>
-<body>
-    <p>Redirecting to <a href="/en/index.html">Travel Guide Hub</a>...</p>
-</body>
-</html>"""
-    out = OUTPUT_DIR / "index.html"
-    out.write_text(html, encoding="utf-8")
-    print(f"  Built root redirect: {out}")
+<head><meta charset="UTF-8"><meta http-equiv="refresh" content="0;url=/en/index.html">
+<title>TravelHub</title><script>window.location.href="/en/index.html";</script></head>
+<body><p>Redirecting to <a href="/en/index.html">TravelHub</a>...</p></body></html>"""
+    (OUTPUT_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
 def build_all():
@@ -247,18 +302,14 @@ def build_all():
 
     for country_slug in DESTINATIONS:
         for lang in ["ru", "en"]:
-            print(f"\n[{lang.upper()}] Building {country_slug} destination...")
+            print(f"\n[{lang.upper()}] Building {country_slug}...")
             build_destination_page(country_slug, lang)
-
             for city_slug in DESTINATIONS[country_slug]["cities"]:
                 for ct_slug in CONTENT_TYPES:
                     build_article_page(country_slug, city_slug, ct_slug, lang)
 
     build_index_redirect()
-
-    print("\n=== Site built successfully! ===\n")
-    print(f"Output: {OUTPUT_DIR.resolve()}")
-    print(f"Open: {OUTPUT_DIR / 'index.html'}")
+    print("\n=== Site built ===\n")
 
 
 if __name__ == "__main__":

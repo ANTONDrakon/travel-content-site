@@ -21,118 +21,179 @@
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Топ-10 отелей в Чангу 2026: от бюджета до люкса">
-    <meta name="twitter:description" content="Топ-10 отелей в Чангу 2026: от бюджета до люкса Чанг — один из самых динамично развивающихся туристических районов Таиланда, расположенный на юго-восточном п...">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .affiliate-link {
-            display: inline-block;
-            padding: 12px 28px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white !important;
-            border-radius: 12px;
-            font-weight: 600;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
+
+        :root {
+            --bg: #fcf0f3;
+            --ink: #1a1a1a;
+            --charcoal: #333333;
+            --vermillion: #ed2e38;
+            --violet: #4d49fc;
+            --border: #1a1a1a;
+            --meta: #595959;
+            --frame: #e8d5da;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation pills */
+        .nav-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 18px; border-radius: 50px;
+            font-size: 14px; font-weight: 480; letter-spacing: -0.01em;
+            transition: all 0.2s;
             text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-            margin: 8px 4px;
         }
-        .affiliate-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        .nav-pill-solid { background: var(--ink); color: #fff; }
+        .nav-pill-solid:hover { background: var(--vermillion); }
+        .nav-pill-outline { border: 1.5px solid var(--border); color: var(--ink); }
+        .nav-pill-outline:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
+        /* Wordmark */
+        .wordmark { font-weight: 700; font-size: 18px; color: var(--vermillion); text-decoration: none; letter-spacing: -0.02em; }
+
+        /* Outlined vermillion button */
+        .btn-outline {
+            display: inline-block; padding: 10px 28px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 14px; font-weight: 520;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; background: transparent;
         }
-        .affiliate-banner {
-            background: #fef3c7;
-            border: 2px solid #f59e0b;
-            border-radius: 16px;
-            padding: 24px;
-            margin: 32px 0;
-            text-align: center;
+        .btn-outline:hover { background: var(--vermillion); color: #fff; }
+
+        /* Solid violet CTA */
+        .btn-cta {
+            display: inline-block; padding: 12px 28px;
+            background: var(--violet); border-radius: 8px;
+            color: #fff; font-size: 14px; font-weight: 520;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; border: none;
         }
-        .affiliate-banner p {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
+        .btn-cta:hover { background: #3b37e0; transform: translateY(-1px); }
+
+        /* Hero */
+        .hero-section {
+            position: relative; width: 100%; min-height: 520px;
+            display: flex; align-items: center; justify-content: center;
+            background-size: cover; background-position: center;
         }
-        article h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: #1a1a2e;
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
         }
-        article h3 {
-            font-size: 1.35rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: #2d2d44;
+        .hero-content { position: relative; text-align: center; padding: 0 24px; max-width: 800px; }
+        .hero-content h1 {
+            font-size: clamp(36px, 8vw, 72px); font-weight: 700;
+            line-height: 1.05; letter-spacing: -0.035em; color: #fff;
         }
-        article p {
-            line-height: 1.8;
-            margin-bottom: 1.2rem;
-            color: #374151;
+        .hero-content p { font-size: 18px; color: rgba(255,255,255,0.85); margin-top: 16px; line-height: 1.5; }
+
+        /* Section */
+        .section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
+
+        /* Cards grid */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+
+        .destination-card {
+            background: #fff; overflow: hidden;
+            transition: transform 0.25s; text-decoration: none; color: inherit;
+            display: block;
         }
-        article ul, article ol {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
+        .destination-card:hover { transform: translateY(-6px); }
+        .destination-card .card-img {
+            width: 100%; height: 240px; object-fit: cover; display: block;
         }
-        article li {
-            line-height: 1.7;
-            margin-bottom: 0.5rem;
-            color: #374151;
+        .destination-card .card-body { padding: 28px; }
+        .destination-card .card-body h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; color: var(--ink); }
+        .destination-card .card-body .card-cities { font-size: 13px; color: var(--meta); letter-spacing: -0.005em; display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+        .destination-card .card-body .card-cities span { background: var(--bg); color: var(--charcoal); padding: 4px 10px; border-radius: 4px; }
+
+        /* Article content */
+        .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
+        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+        .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
+        .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
+        .article-body img { width: 100%; border-radius: 0; margin: 24px 0; }
+
+        /* Affiliate block */
+        .affiliate-block {
+            background: #fff; padding: 20px 28px; margin: 28px 0;
+            border-left: 3px solid var(--vermillion);
         }
-        article table {
+        .affiliate-block a {
+            display: inline-block; padding: 10px 24px; border: 1.5px solid var(--vermillion);
+            border-radius: 14px; color: var(--vermillion); font-size: 14px; font-weight: 520;
+            text-decoration: none; margin: 6px 8px 6px 0; transition: all 0.2s;
+        }
+        .affiliate-block a:hover { background: var(--vermillion); color: #fff; }
+
+        /* Agent block */
+        .agent-block {
+            background: #fff; padding: 40px; margin: 60px 0;
+            border-top: 4px solid var(--vermillion);
+        }
+        .agent-block h2 { font-size: 28px; text-align: left; margin-bottom: 20px; }
+        .agent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .agent-benefits { list-style: none; padding: 0; }
+        .agent-benefits li { padding: 8px 0; padding-left: 24px; position: relative; font-size: 15px; color: var(--charcoal); }
+        .agent-benefits li::before { content: '✓'; position: absolute; left: 0; color: var(--vermillion); font-weight: 700; }
+
+        /* Contact form */
+        .contact-form { display: flex; flex-direction: column; gap: 14px; }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            background: var(--bg); border: none; padding: 14px 16px;
+            font-size: 15px; font-family: 'Inter', sans-serif; color: var(--ink);
             width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
         }
-        article th, article td {
-            border: 1px solid #e5e7eb;
-            padding: 10px 14px;
-            text-align: left;
+        .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--vermillion); outline-offset: -2px; }
+        .contact-form button { align-self: flex-start; cursor: pointer; }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 16px 0; font-size: 13px; color: var(--meta); max-width: 800px; margin: 0 auto; }
+        .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+
+        /* Footer */
+        .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
+        .site-footer a { color: #fff; text-decoration: none; }
+        .site-footer a:hover { color: var(--vermillion); }
+
+        /* FAQ */
+        .faq details { background: #fff; padding: 20px 24px; margin-bottom: 8px; }
+        .faq summary { font-weight: 600; font-size: 16px; cursor: pointer; color: var(--ink); }
+        .faq details p { margin-top: 12px; color: var(--charcoal); font-size: 15px; line-height: 1.6; }
+
+        /* Scroll arrow */
+        .scroll-arrow {
+            display: block; margin: 32px auto 0;
+            width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 50%; color: #fff; font-size: 20px; text-align: center;
+            line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
-        article th {
-            background: #f3f4f6;
-            font-weight: 600;
-        }
-        .breadcrumbs a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        .breadcrumbs a:hover {
-            text-decoration: underline;
-        }
-        .card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: transform 0.2s, box-shadow 0.2s;
-            overflow: hidden;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-        }
-        .lang-switch {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.875rem;
-            transition: border-color 0.2s;
-        }
-        .lang-switch:hover {
-            border-color: #667eea;
-        }
+        @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
         @media (max-width: 768px) {
-            article h2 { font-size: 1.4rem; }
-            article h3 { font-size: 1.15rem; }
+            .agent-grid { grid-template-columns: 1fr; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .section { padding: 40px 16px; }
+            .section h2 { font-size: 30px; }
+            .hero-content h1 { font-size: 32px; }
         }
     </style>
 
@@ -142,61 +203,55 @@
     </script>
     
 </head>
-<body class="bg-gray-50 min-h-screen flex flex-col">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="/ru/index.html" class="flex items-center gap-2">
-                    <span class="text-2xl">🌍</span>
-                    <span class="text-xl font-extrabold text-gray-900">Travel Guide Hub</span>
-                </a>
-                <div class="flex items-center gap-4">
-                    <a href="/en/indonesia/canggu-oteli.html" class="lang-switch" title="English">
-                        <span>🇬🇧</span> <span>EN</span>
-                    </a>
-                    <a href="/ru/indonesia/canggu-oteli.html" class="lang-switch" title="Русский">
-                        <span>🇷🇺</span> <span>RU</span>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
+<body>
 
-    
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <nav class="breadcrumbs text-sm text-gray-500">
-            
-                
-                    <a href="/ru/index.html">Главная</a>
-                    <span class="mx-2">/</span>
-                
-            
-                
-                    <a href="/ru/indonesia/index.html">Индонезия</a>
-                    <span class="mx-2">/</span>
-                
-            
-                
-                    <span class="text-gray-900 font-medium">Чангу</span>
-                
-            
-        </nav>
-    </div>
-    
-
-    <main class="flex-1">
-        
-<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <header class="mb-8">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Топ-10 отелей в Чангу 2026: от бюджета до люкса</h1>
-        <div class="flex items-center gap-4 text-sm text-gray-500">
-            <span>📅 Обновлено: июнь 2026</span>
-            <span>⏱ 15 мин чтения</span>
+<!-- NAV -->
+<header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Направления</div>
+        <a href="/ru/index.html" class="wordmark">TravelHub</a>
+        <div style="display:flex;gap:8px;">
+            <a href="/en/indonesia/canggu-oteli.html" class="nav-pill nav-pill-outline">EN</a>
+            <a href="/ru/indonesia/canggu-oteli.html" class="nav-pill nav-pill-outline">RU</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <div class="prose prose-lg max-w-none">
-        <h1>Топ-10 отелей в Чангу 2026: от бюджета до люкса</h1>
+
+<div class="breadcrumbs" style="padding-top:80px;">
+    
+        
+            <a href="/ru/index.html">Главная</a> /
+        
+    
+        
+            <a href="/ru/indonesia/index.html">Индонезия</a> /
+        
+    
+        
+            <span>Чангу</span>
+        
+    
+</div>
+
+
+
+
+
+
+<div class="section" style="padding-top:100px;">
+    <div class="article-layout">
+        
+        <h1 style="font-size:42px;font-weight:700;letter-spacing:-0.03em;margin-bottom:12px;line-height:1.15;">Топ-10 отелей в Чангу 2026: от бюджета до люкса</h1>
+        
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
+            <span>Обновлено: июнь 2026</span>
+            <span>&bull;</span>
+            <span>Экспертный гайд</span>
+        </div>
+
+        <div class="article-body">
+            <h1>Топ-10 отелей в Чангу 2026: от бюджета до люкса</h1>
 
 <p>Чанг — один из самых динамично развивающихся туристических районов Таиланда, расположенный на юго-восточном побережье страны. В 2026 году гостиничная инфраструктура здесь достигла нового уровня: от ультрабюджетных гестхаусов до пятизвездочных курортов с частными пляжами. Основные кластеры отелей сосредоточены вдоль пляжей Чанг Ной, Чанг Яй и в районе маяка Лаем Сонг, где за последние три года открылось более 40 новых объектов размещения. Средняя загрузка отелей в высокий сезон (ноябрь-февраль) составляет 85%, а цены на проживание выросли на 12% по сравнению с 2024 годом.</p>
 
@@ -254,89 +309,139 @@
 <li><strong>Лучшие сервисы:</strong> Agoda — лучший для Азии (часто низкие цены), Booking.com — для гибкой отмены, и Airbnb — для вилл и апартаментов. Для люксовых отелей рекомендую Amex Travel или Virtuoso, которые дают эксклюзивные привилегии (ранний заезд, апгрейд номера).</li>
 <li><strong>Дополнительные советы:</strong> избегайте бронирования в день заезда — цены могут быть на 30% выше. Всегда проверяйте отзывы на Google Maps (не менее 4.0) и смотрите фото на TripAdvisor. Для бюджетных отелей берите с собой наличные — часто дают скидку 5-10% при оплате на месте.</li>
 </ul><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+        </div>
+
+        
+        <div class="faq" style="margin-top:60px;">
+            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
+                Часто задаваемые вопросы
+            </h2>
+            
+            <details>
+                <summary>Сколько стоит отель в Чангу?</summary>
+                <p>Цены на отели: от $20 за бюджетный номер до $300+ за люкс.</p>
+            </details>
+            
+            <details>
+                <summary>Где лучше остановиться в Чангу?</summary>
+                <p>Выбор района зависит от цели поездки: центр для экскурсий, побережье для пляжа.</p>
+            </details>
+            
+        </div>
+        
+
+        
+        <div style="margin-top:60px;">
+            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
+                Похожие статьи
+            </h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+                
+                <a href="/ru/indonesia/canggu-putevoditel.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Путеводители</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Чангу</p>
+                </a>
+                
+                <a href="/ru/indonesia/canggu-aviabilety.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Авиабилеты</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Чангу</p>
+                </a>
+                
+                <a href="/ru/indonesia/canggu-dostoprimechatelnosti.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Достопримечательности</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Чангу</p>
+                </a>
+                
+                <a href="/ru/indonesia/canggu-kogda-luchshe-ekhat.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Сезоны и погода</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Чангу</p>
+                </a>
+                
+            </div>
+        </div>
+        
     </div>
+</div>
 
-    
-    <section class="mt-12 bg-gray-50 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">
-            Часто задаваемые вопросы
-        </h2>
-        <div class="space-y-4">
-            
-            <details class="bg-white rounded-xl p-4 shadow-sm">
-                <summary class="font-semibold text-gray-900 cursor-pointer">Сколько стоит отель в Чангу?</summary>
-                <p class="mt-3 text-gray-600">Цены на отели: от $20 за бюджетный номер до $300+ за люкс.</p>
-            </details>
-            
-            <details class="bg-white rounded-xl p-4 shadow-sm">
-                <summary class="font-semibold text-gray-900 cursor-pointer">Где лучше остановиться в Чангу?</summary>
-                <p class="mt-3 text-gray-600">Выбор района зависит от цели поездки: центр для экскурсий, побережье для пляжа.</p>
-            </details>
-            
-        </div>
-    </section>
-    
 
-    
-    <section class="mt-12">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">
-            Похожие статьи
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <a href="/ru/indonesia/canggu-putevoditel.html" class="card block group p-5">
-                <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition">Чангу</h3>
-                <p class="text-sm text-gray-500 mt-2">Путеводители</p>
-            </a>
-            
-            <a href="/ru/indonesia/canggu-aviabilety.html" class="card block group p-5">
-                <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition">Чангу</h3>
-                <p class="text-sm text-gray-500 mt-2">Авиабилеты</p>
-            </a>
-            
-            <a href="/ru/indonesia/canggu-dostoprimechatelnosti.html" class="card block group p-5">
-                <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition">Чангу</h3>
-                <p class="text-sm text-gray-500 mt-2">Достопримечательности</p>
-            </a>
-            
-            <a href="/ru/indonesia/canggu-kogda-luchshe-ekhat.html" class="card block group p-5">
-                <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition">Чангу</h3>
-                <p class="text-sm text-gray-500 mt-2">Сезоны и погода</p>
-            </a>
-            
-        </div>
-    </section>
-    
-</article>
 
-    </main>
+<!-- AGENT BLOCK -->
 
-    <footer class="bg-gray-900 text-gray-300 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">🌍 Travel Guide Hub</h3>
-                    <p class="text-sm">Ваш надёжный путеводитель: отели, билеты, достопримечательности и советы экспертов.</p>
-                </div>
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">Популярные направления</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="/ru/turkey/index.html" class="hover:text-white transition">Турция</a></li>
-                        <li><a href="/ru/thailand/index.html" class="hover:text-white transition">Таиланд</a></li>
-                        <li><a href="/ru/egypt/index.html" class="hover:text-white transition">Египет</a></li>
-                        <li><a href="/ru/uae/index.html" class="hover:text-white transition">ОАЭ</a></li>
-                        <li><a href="/ru/indonesia/index.html" class="hover:text-white transition">Индонезия</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">О сайте</h3>
-                    <p class="text-sm">Мы помогаем путешественникам находить лучшие предложения на отели, билеты и туры. Гайды обновлены на 2026 год.</p>
-                </div>
+<section class="section">
+    <div class="agent-block">
+        <h2>Нужна помощь в организации путешествия?</h2>
+        <div class="agent-grid">
+            <div>
+                <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:16px;">
+                    Привет! Я Валентина, профессиональный турагент с опытом более 5 лет. Помогла более 300 путешественникам организовать отдых мечты — от Мальдив до Китая, а также туры по России.
+                </p>
+                <ul class="agent-benefits">
+                    <li>Сопровождение 24/7 на всём протяжении поездки</li>
+                    <li>Подбор тура по вашим пожеланиям и бюджету</li>
+                    <li>Помощь с визами и QR-кодами (Китай и др.)</li>
+                    <li>Бронирование отелей и билетов по лучшей цене</li>
+                    <li>Оформление страховки с полным покрытием</li>
+                    <li>300+ довольных путешественников с 2021 года</li>
+                    <li>Туры по России и всему миру</li>
+                </ul>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
-                <p>&copy; 2026 Travel Guide Hub. Все права защищены.</p>
+            <div>
+                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Отправьте заявку — отвечу в течение часа!</p>
+                <form class="contact-form" action="https://formspree.io/f/meoovajb" method="POST">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram)">
+                    <select name="destination">
+                        <option value="">Желаемое направление</option>
+                        <option value="turkey">Турция</option>
+                        <option value="thailand">Таиланд</option>
+                        <option value="egypt">Египет</option>
+                        <option value="uae">ОАЭ</option>
+                        <option value="indonesia">Индонезия</option>
+                        <option value="china">Китай (Хайнань)</option>
+                        <option value="other">Другое</option>
+                    </select>
+                    <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
+                    <input type="hidden" name="_subject" value="Заявка на тур с TravelHub">
+                    <input type="hidden" name="_replyto" value="i@turkov-1.ru">
+                    <button type="submit" class="btn-cta">Отправить заявку →</button>
+                </form>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;">
+        <div>
+            <div class="wordmark" style="margin-bottom:12px;">TravelHub</div>
+            <p style="font-size:14px;line-height:1.6;">Ваш надёжный путеводитель: отели, билеты, достопримечательности и советы экспертов.</p>
+        </div>
+        <div>
+            <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Направления</h4>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
+                <li><a href="/ru/turkey/index.html">Турция</a></li>
+                <li><a href="/ru/thailand/index.html">Таиланд</a></li>
+                <li><a href="/ru/egypt/index.html">Египет</a></li>
+                <li><a href="/ru/uae/index.html">ОАЭ</a></li>
+                <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
+                <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Контакты</h4>
+            <p style="font-size:14px;line-height:1.8;">
+                Турагент Валентина<br>
+                Email: i@turkov-1.ru<br>
+                На связи 24/7
+            </p>
+        </div>
+    </div>
+    <div style="max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:13px;">
+        &copy; 2026 TravelHub. Все права защищены.
+    </div>
+</footer>
+
 </body>
 </html>

@@ -1,64 +1,38 @@
 {% extends "base.html" %}
-{% block title %}{{ "Travel Guide Hub — Best Travel Guides 2026" if lang == "en" else "Travel Guide Hub — Лучшие путеводители 2026" }}{% endblock %}
-{% block meta_description %}{{ "Complete travel guides for 2026: hotels, flights, attractions. Turkey, Thailand, Egypt, UAE, Indonesia and more." if lang == "en" else "Полные путеводители 2026: отели, билеты, достопримечательности. Турция, Таиланд, Египет, ОАЭ, Индонезия и другие направления." }}{% endblock %}
+{% block title %}{{ "TravelHub — Expert Travel Guides 2026" if lang == "en" else "TravelHub — Экспертные путеводители 2026" }}{% endblock %}
+{% block meta_description %}{{ "Expert travel guides for 30 cities across 6 countries. Hotels, cheap flights, top attractions. Turkey, Thailand, Egypt, UAE, Indonesia, China." if lang == "en" else "Экспертные гайды по 30 городам в 6 странах. Отели, дешёвые билеты, топ достопримечательностей. Турция, Таиланд, Египет, ОАЭ, Индонезия, Китай." }}{% endblock %}
 
 {% block en_alt %}index.html{% endblock %}
 {% block ru_alt %}index.html{% endblock %}
 
 {% block content %}
-<section class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6">
-            {% if lang == "en" %}
-                Your Ultimate <span class="text-yellow-300">Travel Guide</span> 2026
-            {% else %}
-                Ваш лучший <span class="text-yellow-300">путеводитель</span> 2026
-            {% endif %}
-        </h1>
-        <p class="text-lg sm:text-xl text-indigo-100 max-w-2xl mx-auto mb-8">
-            {% if lang == "en" %}
-                Expert guides for 25 cities across 5 countries. Hotels, cheap flights, top attractions, and insider tips — everything you need for the perfect trip.
-            {% else %}
-                Экспертные гайды по 25 городам в 5 странах. Отели, дешёвые билеты, топ достопримечательностей и советы — всё для идеального путешествия.
-            {% endif %}
-        </p>
-        <div class="flex flex-wrap justify-center gap-3">
-            <a href="#destinations" class="px-8 py-4 bg-white text-indigo-700 font-bold rounded-xl hover:bg-gray-100 transition text-lg">
-                {% if lang == "en" %}Explore Destinations{% else %}Выбрать направление{% endif %}
-            </a>
-        </div>
+
+<!-- HERO -->
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1400&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>{{ "Your Dream Trip Starts Here" if lang == "en" else "Ваше путешествие начинается здесь" }}</h1>
+        <p>{{ "Expert guides for 30 cities across 6 countries. Hotels, flights, attractions — everything you need for the perfect trip in 2026." if lang == "en" else "Экспертные гайды по 30 городам в 6 странах. Отели, билеты, достопримечательности — всё для идеального путешествия в 2026." }}</p>
+        <div class="scroll-arrow" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})">↓</div>
     </div>
-</section>
+</div>
 
-<section id="destinations" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
-        {% if lang == "en" %}Popular Destinations 2026{% else %}Популярные направления 2026{% endif %}
-    </h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- DESTINATIONS -->
+<section id="destinations" class="section">
+    <h2>{{ "Choose Your Destination" if lang == "en" else "Выберите направление" }}</h2>
+    <div class="cards-grid">
         {% for country in countries %}
-        <a href="/{{ lang }}/{{ country.slug }}/index.html" class="card block group">
-            <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden">
-                <span class="text-6xl">{{ country.emoji }}</span>
-                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition"></div>
-            </div>
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition">
-                    {{ country.name_en if lang == "en" else country.name_ru }}
-                </h3>
-                <p class="text-gray-500 mt-2 text-sm">
-                    {% set count = country.cities|length %}
-                    {% if lang == "en" %}
-                        {{ count }} cities &bull; {{ 5 * count }} guides
-                    {% else %}
-                        {{ count }} городов &bull; {{ 5 * count }} гайдов
-                    {% endif %}
+        <a href="/{{ lang }}/{{ country.slug }}/index.html" class="destination-card">
+            <img src="{{ country.image }}" alt="{{ country.name_en }}" class="card-img" loading="lazy">
+            <div class="card-body">
+                <h3>{{ country.name_en if lang == "en" else country.name_ru }}</h3>
+                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
+                    {{ country.cities_count }} {{ "cities" if lang == "en" else "городов" }}
+                    &bull; {{ country.guides_count }} {{ "guides" if lang == "en" else "гайда" }}
                 </p>
-                <div class="mt-3 flex flex-wrap gap-1">
+                <div class="card-cities">
                     {% for city_slug, city in country.cities.items() %}
-                    <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">
-                        {{ city.name_en if lang == "en" else city.name_ru }}
-                    </span>
+                    <span>{{ city.name_en if lang == "en" else city.name_ru }}</span>
                     {% endfor %}
                 </div>
             </div>
@@ -67,27 +41,43 @@
     </div>
 </section>
 
-<section class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
-            {% if lang == "en" %}What We Cover{% else %}Что мы освещаем{% endif %}
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {% set items = [
-                ("📖", "Travel Guides" if lang == "en" else "Путеводители", "Complete city handbooks" if lang == "en" else "Полные гайды по городам"),
-                ("🏨", "Hotels" if lang == "en" else "Отели", "Top-10 for every budget" if lang == "en" else "Топ-10 под любой бюджет"),
-                ("✈️", "Flights" if lang == "en" else "Авиабилеты", "Cheap tickets & hacks" if lang == "en" else "Дешёвые билеты и лайфхаки"),
-                ("🏛", "Attractions" if lang == "en" else "Достопримечательности", "15 best places to visit" if lang == "en" else "15 лучших мест"),
-                ("☀️", "Seasons" if lang == "en" else "Сезоны", "Weather & best time" if lang == "en" else "Погода и лучшее время"),
+<!-- FEATURES -->
+<section class="section" style="background:#fff;max-width:100%;">
+    <div style="max-width:1200px;margin:0 auto;">
+        <h2>{{ "Everything You Need for Travel" if lang == "en" else "Всё для путешествия" }}</h2>
+        <div class="cards-grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px;">
+            {% set features = [
+                ("📖", "Travel Guides" if lang == "en" else "Путеводители", "Complete city handbooks with local tips" if lang == "en" else "Полные гайды с советами местных"),
+                ("🏨", "Hotels" if lang == "en" else "Отели", "Best picks for every budget" if lang == "en" else "Лучшие варианты под любой бюджет"),
+                ("✈️", "Flights" if lang == "en" else "Авиабилеты", "Cheap tickets, dates & hacks" if lang == "en" else "Дешёвые билеты, даты и лайфхаки"),
+                ("🏛", "Attractions" if lang == "en" else "Достопримечательности", "Must-see places with prices" if lang == "en" else "Главные места с ценами"),
+                ("☀️", "Seasons" if lang == "en" else "Сезоны", "Weather & best time to visit" if lang == "en" else "Погода и лучшее время"),
+                ("🛡", "Insurance" if lang == "en" else "Страховка", "Full coverage from $5" if lang == "en" else "Полное покрытие от 500₽"),
+                ("🎯", "Tours" if lang == "en" else "Туры", "Ready packages with flights" if lang == "en" else "Готовые пакеты с перелётом"),
+                ("💬", "Support 24/7" if lang == "en" else "Поддержка 24/7", "Personal travel agent" if lang == "en" else "Персональный турагент"),
             ] %}
-            {% for emoji, title, desc in items %}
-            <div class="text-center p-6">
-                <div class="text-4xl mb-4">{{ emoji }}</div>
-                <h3 class="font-bold text-gray-900 mb-1">{{ title }}</h3>
-                <p class="text-sm text-gray-500">{{ desc }}</p>
+            {% for emoji, title, desc in features %}
+            <div style="text-align:center;padding:24px 12px;">
+                <div style="font-size:36px;margin-bottom:12px;">{{ emoji }}</div>
+                <h3 style="font-size:16px;font-weight:600;margin-bottom:6px;color:var(--ink);">{{ title }}</h3>
+                <p style="font-size:13px;color:var(--meta);line-height:1.5;">{{ desc }}</p>
             </div>
             {% endfor %}
         </div>
     </div>
 </section>
+
+<!-- AGENT PROMO -->
+<section class="section">
+    <div style="background:var(--ink);color:#fff;padding:48px;text-align:center;">
+        <h2 style="color:#fff;font-size:36px;font-weight:700;letter-spacing:-0.03em;margin-bottom:16px;">
+            {{ "Don't want to plan alone?" if lang == "en" else "Не хотите планировать сами?" }}
+        </h2>
+        <p style="font-size:18px;color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;">
+            {{ "Tour agent Valentina will organize your perfect trip — from visas to hotel check-in. 300+ happy travelers since 2021." if lang == "en" else "Турагент Валентина организует ваш идеальный отдых — от виз до заселения в отель. 300+ довольных путешественников с 2021 года." }}
+        </p>
+        <a href="#agent-form" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Contact Valentina →" if lang == "en" else "Связаться с Валентиной →" }}</a>
+    </div>
+</section>
+
 {% endblock %}

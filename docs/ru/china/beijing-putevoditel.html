@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пекин: полный путеводитель 2026</title>
+    <meta name="description" content="Пекин: полный путеводитель 2026 Пекин — это город, который невозможно забыть. Я обожаю его за контрасты: здесь древние императорские дворцы соседствуют с уль...">
+
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/beijing-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-putevoditel.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-putevoditel.html">
+
+    
+    <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/Пекин-putevoditel.html">
+    
+
+    <meta property="og:title" content="Пекин: полный путеводитель 2026">
+    <meta property="og:description" content="Пекин: полный путеводитель 2026 Пекин — это город, который невозможно забыть. Я обожаю его за контрасты: здесь древние императорские дворцы соседствуют с уль...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:locale" content="ru_RU">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
+
+        :root {
+            --bg: #fcf0f3;
+            --ink: #1a1a1a;
+            --charcoal: #333333;
+            --vermillion: #ed2e38;
+            --violet: #4d49fc;
+            --border: #1a1a1a;
+            --meta: #595959;
+            --frame: #e8d5da;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation pills */
+        .nav-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 18px; border-radius: 50px;
+            font-size: 14px; font-weight: 480; letter-spacing: -0.01em;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .nav-pill-solid { background: var(--ink); color: #fff; }
+        .nav-pill-solid:hover { background: var(--vermillion); }
+        .nav-pill-outline { border: 1.5px solid var(--border); color: var(--ink); }
+        .nav-pill-outline:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
+        /* Wordmark */
+        .wordmark { font-weight: 700; font-size: 18px; color: var(--vermillion); text-decoration: none; letter-spacing: -0.02em; }
+
+        /* Outlined vermillion button */
+        .btn-outline {
+            display: inline-block; padding: 10px 28px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 14px; font-weight: 520;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; background: transparent;
+        }
+        .btn-outline:hover { background: var(--vermillion); color: #fff; }
+
+        /* Solid violet CTA */
+        .btn-cta {
+            display: inline-block; padding: 12px 28px;
+            background: var(--violet); border-radius: 8px;
+            color: #fff; font-size: 14px; font-weight: 520;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; border: none;
+        }
+        .btn-cta:hover { background: #3b37e0; transform: translateY(-1px); }
+
+        /* Hero */
+        .hero-section {
+            position: relative; width: 100%; min-height: 520px;
+            display: flex; align-items: center; justify-content: center;
+            background-size: cover; background-position: center;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
+        }
+        .hero-content { position: relative; text-align: center; padding: 0 24px; max-width: 800px; }
+        .hero-content h1 {
+            font-size: clamp(36px, 8vw, 72px); font-weight: 700;
+            line-height: 1.05; letter-spacing: -0.035em; color: #fff;
+        }
+        .hero-content p { font-size: 18px; color: rgba(255,255,255,0.85); margin-top: 16px; line-height: 1.5; }
+
+        /* Section */
+        .section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
+
+        /* Cards grid */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+
+        .destination-card {
+            background: #fff; overflow: hidden;
+            transition: transform 0.25s; text-decoration: none; color: inherit;
+            display: block;
+        }
+        .destination-card:hover { transform: translateY(-6px); }
+        .destination-card .card-img {
+            width: 100%; height: 240px; object-fit: cover; display: block;
+        }
+        .destination-card .card-body { padding: 28px; }
+        .destination-card .card-body h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; color: var(--ink); }
+        .destination-card .card-body .card-cities { font-size: 13px; color: var(--meta); letter-spacing: -0.005em; display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+        .destination-card .card-body .card-cities span { background: var(--bg); color: var(--charcoal); padding: 4px 10px; border-radius: 4px; }
+
+        /* Article content */
+        .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
+        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+        .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
+        .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
+        .article-body img { width: 100%; border-radius: 0; margin: 24px 0; }
+
+        /* Affiliate block */
+        .affiliate-block {
+            background: #fff; padding: 20px 28px; margin: 28px 0;
+            border-left: 3px solid var(--vermillion);
+        }
+        .affiliate-block a {
+            display: inline-block; padding: 10px 24px; border: 1.5px solid var(--vermillion);
+            border-radius: 14px; color: var(--vermillion); font-size: 14px; font-weight: 520;
+            text-decoration: none; margin: 6px 8px 6px 0; transition: all 0.2s;
+        }
+        .affiliate-block a:hover { background: var(--vermillion); color: #fff; }
+
+        /* Agent block */
+        .agent-block {
+            background: #fff; padding: 40px; margin: 60px 0;
+            border-top: 4px solid var(--vermillion);
+        }
+        .agent-block h2 { font-size: 28px; text-align: left; margin-bottom: 20px; }
+        .agent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .agent-benefits { list-style: none; padding: 0; }
+        .agent-benefits li { padding: 8px 0; padding-left: 24px; position: relative; font-size: 15px; color: var(--charcoal); }
+        .agent-benefits li::before { content: '✓'; position: absolute; left: 0; color: var(--vermillion); font-weight: 700; }
+
+        /* Contact form */
+        .contact-form { display: flex; flex-direction: column; gap: 14px; }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            background: var(--bg); border: none; padding: 14px 16px;
+            font-size: 15px; font-family: 'Inter', sans-serif; color: var(--ink);
+            width: 100%;
+        }
+        .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--vermillion); outline-offset: -2px; }
+        .contact-form button { align-self: flex-start; cursor: pointer; }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 16px 0; font-size: 13px; color: var(--meta); max-width: 800px; margin: 0 auto; }
+        .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+
+        /* Footer */
+        .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
+        .site-footer a { color: #fff; text-decoration: none; }
+        .site-footer a:hover { color: var(--vermillion); }
+
+        /* FAQ */
+        .faq details { background: #fff; padding: 20px 24px; margin-bottom: 8px; }
+        .faq summary { font-weight: 600; font-size: 16px; cursor: pointer; color: var(--ink); }
+        .faq details p { margin-top: 12px; color: var(--charcoal); font-size: 15px; line-height: 1.6; }
+
+        /* Scroll arrow */
+        .scroll-arrow {
+            display: block; margin: 32px auto 0;
+            width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 50%; color: #fff; font-size: 20px; text-align: center;
+            line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
+        }
+        @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        @media (max-width: 768px) {
+            .agent-grid { grid-template-columns: 1fr; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .section { padding: 40px 16px; }
+            .section h2 { font-size: 30px; }
+            .hero-content h1 { font-size: 32px; }
+        }
+    </style>
+
+    
+    <script type="application/ld+json">
+    [{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "Travel Guide Hub"}, "dateModified": "2026-06-01", "datePublished": "2026-01-15", "description": "\u041f\u0435\u043a\u0438\u043d: \u043f\u043e\u043b\u043d\u044b\u0439 \u043f\u0443\u0442\u0435\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c 2026 \u041f\u0435\u043a\u0438\u043d \u2014 \u044d\u0442\u043e \u0433\u043e\u0440\u043e\u0434, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043d\u0435\u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u0437\u0430\u0431\u044b\u0442\u044c. \u042f \u043e\u0431\u043e\u0436\u0430\u044e \u0435\u0433\u043e \u0437\u0430 \u043a\u043e\u043d\u0442\u0440\u0430\u0441\u0442\u044b: \u0437\u0434\u0435\u0441\u044c \u0434\u0440\u0435\u0432\u043d\u0438\u0435 \u0438\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u043a\u0438\u0435 \u0434\u0432\u043e\u0440\u0446\u044b \u0441\u043e\u0441\u0435\u0434\u0441\u0442\u0432\u0443\u044e\u0442 \u0441 \u0443\u043b\u044c...", "headline": "\u041f\u0435\u043a\u0438\u043d: \u043f\u043e\u043b\u043d\u044b\u0439 \u043f\u0443\u0442\u0435\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c 2026", "mainEntityOfPage": {"@id": "/ru/china/beijing-putevoditel.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "Travel Guide Hub"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0414\u043b\u044f \u043f\u043e\u043b\u043d\u043e\u0446\u0435\u043d\u043d\u043e\u0433\u043e \u0437\u043d\u0430\u043a\u043e\u043c\u0441\u0442\u0432\u0430 \u0441 \u041f\u0435\u043a\u0438\u043d \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u043c 4-7 \u0434\u043d\u0435\u0439."}, "name": "\u0421\u043a\u043e\u043b\u044c\u043a\u043e \u0434\u043d\u0435\u0439 \u043d\u0443\u0436\u043d\u043e \u043d\u0430 \u043e\u0441\u043c\u043e\u0442\u0440 \u041f\u0435\u043a\u0438\u043d?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u0431\u044e\u0434\u0436\u0435\u0442 \u043d\u0430 \u043d\u0435\u0434\u0435\u043b\u044e: \u043e\u0442 $500 \u043d\u0430 \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430 \u0431\u0435\u0437 \u0443\u0447\u0451\u0442\u0430 \u043f\u0435\u0440\u0435\u043b\u0451\u0442\u0430."}, "name": "\u041a\u0430\u043a\u043e\u0439 \u0431\u044e\u0434\u0436\u0435\u0442 \u043d\u0443\u0436\u0435\u043d \u043d\u0430 \u043f\u043e\u0435\u0437\u0434\u043a\u0443 \u0432 \u041f\u0435\u043a\u0438\u043d?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0413\u0440\u0430\u0436\u0434\u0430\u043d\u0430\u043c \u0420\u0424 \u0434\u043b\u044f \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u044f \u041f\u0435\u043a\u0438\u043d \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0437\u0430\u0433\u0440\u0430\u043d\u043f\u0430\u0441\u043f\u043e\u0440\u0442."}, "name": "\u041d\u0443\u0436\u043d\u0430 \u043b\u0438 \u0432\u0438\u0437\u0430 \u0434\u043b\u044f \u043f\u043e\u0435\u0437\u0434\u043a\u0438 \u0432 \u041f\u0435\u043a\u0438\u043d?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u041b\u0443\u0447\u0448\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u0434\u043b\u044f \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u044f: \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0441\u0435\u0437\u043e\u043d\u0430 \u2014 \u0441\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u043d\u0430\u0448 \u0433\u0438\u0434 \u043f\u043e \u0441\u0435\u0437\u043e\u043d\u0430\u043c."}, "name": "\u041a\u043e\u0433\u0434\u0430 \u043b\u0443\u0447\u0448\u0435 \u0435\u0445\u0430\u0442\u044c \u0432 \u041f\u0435\u043a\u0438\u043d?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u041f\u0435\u043a\u0438\u043d \u2014 \u043f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u043e\u0435 \u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435, \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0435 \u043f\u0440\u0438 \u0441\u043e\u0431\u043b\u044e\u0434\u0435\u043d\u0438\u0438 \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0445 \u043c\u0435\u0440."}, "name": "\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e \u043b\u0438 \u0432 \u041f\u0435\u043a\u0438\u043d?"}]}]
+    </script>
+    
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Направления</div>
+        <a href="/ru/index.html" class="wordmark">TravelHub</a>
+        <div style="display:flex;gap:8px;">
+            <a href="/en/china/beijing-putevoditel.html" class="nav-pill nav-pill-outline">EN</a>
+            <a href="/ru/china/beijing-putevoditel.html" class="nav-pill nav-pill-outline">RU</a>
+        </div>
+    </div>
+</header>
+
+
+<div class="breadcrumbs" style="padding-top:80px;">
+    
+        
+            <a href="/ru/index.html">Главная</a> /
+        
+    
+        
+            <a href="/ru/china/index.html">Китай</a> /
+        
+    
+        
+            <span>Пекин</span>
+        
+    
+</div>
+
+
+
+
+
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&amp;q=80');min-height:380px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Пекин: полный путеводитель 2026</h1>
+    </div>
+</div>
+
+
+<div class="section" style="padding-top:40px;">
+    <div class="article-layout">
+        
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
+            <span>Обновлено: июнь 2026</span>
+            <span>&bull;</span>
+            <span>Экспертный гайд</span>
+        </div>
+
+        <div class="article-body">
+            <article>
+<h1>Пекин: полный путеводитель 2026</h1>
+
+<p>Пекин — это город, который невозможно забыть. Я обожаю его за контрасты: здесь древние императорские дворцы соседствуют с ультрасовременными небоскрёбами, а тихие хутуны (старые переулки) прячутся в тени оживлённых магистралей. Когда я впервые приехала сюда, меня поразила энергия этого мегаполиса — он одновременно давит своим масштабом и вдохновляет своей историей. Если вы ищете путешествие, которое перевернёт ваше представление о Китае, Пекин — идеальный старт. Здесь вы почувствуете пульс страны, попробуете настоящую утку по-пекински и прикоснётесь к Великой стене, которая до сих пор кажется чудом света.</p>
+
+<p>Почему стоит поехать именно в 2026 году? Город активно готовится к новому туристическому буму: реставрируются старые кварталы, открываются современные музеи, а инфраструктура становится ещё удобнее для иностранцев. Я рекомендую планировать поездку минимум на 7–10 дней, чтобы успеть прочувствовать атмосферу, а не просто «галочку» поставить. Пекин — это не только Запретный город, но и шумные ночные рынки, чайные церемонии в хутунах и прогулки по паркам, где местные жители практикуют тайцзи. Честно говоря, я влюбилась в этот город с первого визита и возвращаюсь сюда снова и снова.</p>
+
+<p>Для тех, кто едет впервые, важно знать: Пекин — безопасный город, но с ярко выраженной культурой очередей и правил. Здесь ценят порядок, поэтому советую скачать приложение-переводчик (например, Google Translate или Baidu Translate) и быть готовым к тому, что английский понимают не везде. Но не пугайтесь — местные жители очень приветливы и всегда готовы помочь, даже если для этого придётся жестикулировать. В этом путеводителе я собрала всё, что нужно знать для идеальной поездки: от визы до бюджета. Поехали!</p>
+
+<h2>Как добраться</h2>
+
+<p>В Пекине два крупных международных аэропорта: <strong>Пекин Столичный (PEK)</strong> и <strong>Пекин Дасин (PKX)</strong>. Оба принимают рейсы из России, но я советую выбирать PEK — он ближе к центру (около 30 км) и лучше связан с метро. PKX находится в 46 км к югу, но он современнее и менее загружен. Прямые рейсы из Москвы выполняют «Аэрофлот» и China Southern, время в пути — около 7,5 часов. Из Санкт-Петербурга летают стыковочные рейсы через Москву или Дубай.</p>
+
+<p>Средняя цена билета в 2026 году: эконом-класс из Москвы — от <strong>48 000 до 70 000 рублей</strong> (туда-обратно). Из регионов (Новосибирск, Владивосток) — от <strong>35 000 рублей</strong>. Я рекомендую бронировать за 2–3 месяца — так вы сэкономите до 20%. Советую также проверить акции China Eastern или Hainan Airlines — они часто предлагают скидки на перелёты в Пекин. Не забудьте про страховку: медицинская страховка для Китая обязательна, и её лучше оформить онлайн (от 1 500 рублей на неделю).</p>
+
+<p>Из аэропорта в город: такси — от <strong>1 200 до 1 800 рублей</strong> (в зависимости от аэропорта и времени суток), метро — около <strong>250 рублей</strong> (линия Airport Express). Если летите ночью, такси будет дороже — до 2 500 рублей. Я советую скачать приложение Didi (китайский аналог Uber) — цены там на 15–20% ниже, чем у таксистов на месте.</p>
+
+<h2>Где остановиться</h2>
+
+<p>Пекин — город-гигант, и выбор района для проживания критически важен. Я рекомендую ориентироваться на центр и доступ к метро. Вот три лучших варианта для разного бюджета:</p>
+
+<ul>
+  <li><strong>Район Дунчэн (Dongcheng)</strong> — сердце Пекина. Здесь находятся Запретный город, площадь Тяньаньмэнь и хутуны. Идеально для туристов, которые хотят быть в эпицентре событий. <strong>Отель: Novotel Beijing Peace</strong> — 4 звезды, от <strong>7 500 рублей</strong> за ночь (с завтраком). Я останавливалась здесь — удобное расположение, чистые номера, приятный персонал.</li>
+  <li><strong>Район Чаоян (Chaoyang)</strong> — деловой и ночной центр. Много ресторанов, баров и торговых центров. Подходит для молодёжи и любителей тусовок. <strong>Отель: Beijing Marriott Hotel City Wall</strong> — 5 звезд, от <strong>11 500 рублей</strong> за ночь. Шикарный вид на город, бассейн и отличный сервис.</li>
+  <li><strong>Район Сичэн (Xicheng)</strong> — более спокойный и аутентичный. Здесь меньше туристов, но много парков и исторических мест. <strong>Отель: The Orchid Hotel</strong> — бутик-отель в хутуне, от <strong>5 000 рублей</strong> за ночь. Очень уютно, номера с традиционным декором, на крыше — кафе с видом на старый город. Я обожаю это место за атмосферу!</li>
+</ul>
+
+<p>Для бюджетных путешественников советую хостелы: <strong>Peking International Youth Hostel</strong> (от <strong>1 200 рублей</strong> за койку в общем номере) или <strong>Leo Hostel</strong> (от <strong>1 500 рублей</strong>). Оба расположены в хутунах и предлагают бесплатные экскурсии. Бронируйте заранее — в сезон цены могут вырасти на 30%.</p>
+
+<h2>Топ-15 достопримечательностей</h2>
+
+<p>Я собрала для вас 15 мест, которые обязательно стоит увидеть. Цены указаны на 2026 год с учётом моей наценки (реальные чуть ниже, но я округляю для удобства). Часы работы могут меняться в праздники, всегда проверяйте на месте.</p>
+
+<table>
+  <tr>
+    <th>№</th>
+    <th>Название</th>
+    <th>Описание</th>
+    <th>Цена билета</th>
+    <th>Часы работы</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Запретный город (Гугун)</td>
+    <td>Главный императорский дворец династий Мин и Цин. Огромный комплекс из 980 зданий — выделите минимум 3–4 часа. Я советую взять аудиогид (на русском есть).</td>
+    <td>1 150 рублей</td>
+    <td>08:30–17:00 (вход до 16:00), выходной — понедельник</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Великая Китайская стена (Бадалин)</td>
+    <td>Самый популярный участок в 70 км от Пекина. Многолюдно, но виды потрясающие. Лучше ехать утром в будни.</td>
+    <td>850 рублей</td>
+    <td>07:30–18:00 (летом), 08:00–17:00 (зимой)</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Площадь Тяньаньмэнь</td>
+    <td>Крупнейшая площадь в мире. Здесь же — мавзолей Мао Цзэдуна (вход бесплатный, но строгий дресс-код). Вход бесплатный.</td>
+    <td>Бесплатно</td>
+    <td>Круглосуточно (мавзолей — 08:00–12:00, выходной — понедельник)</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Храм Неба (Тяньтань)</td>
+    <td>Красивейший храмовый комплекс, где императоры молились об урожае. Обязательно прогуляйтесь по парку — там местные играют в маджонг и поют.</td>
+    <td>550 рублей</td>
+    <td>08:00–17:30</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Летний дворец (Ихэюань)</td>
+    <td>Императорский сад с озером Куньмин и пагодой на холме. Идеально для спокойной прогулки — я провела здесь полдня, каталась на лодке.</td>
+    <td>650 рублей</td>
+    <td>07:00–19:00 (летом), 08:00–17:00 (зимой)</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Хутуны (район Наньлуогусян)</td>
+    <td>Старые пекинские переулки с чайными, сувенирными лавками и уличной едой. Берите рикшу — это весело и стоит около 500 рублей за 30 минут.</td>
+    <td>Бесплатно (прогулка)</td>
+    <td>Круглосуточно (лавки — до 22:00)</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Национальный стадион «Птичье гнездо»</td>
+    <td>Олимпийский объект 2008 года. Внутри — музей спорта, а снаружи — классные фото. Вечером включают подсветку.</td>
+    <td>350 рублей</td>
+    <td>09:00–18:00</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Храм Ламы (Юнхэгун)</td>
+    <td>Крупнейший тибетский буддийский храм за пределами Тибета. Очень атмосферно — пахнет благовониями, а статуя Будды из сандалового дерева поражает размерами.</td>
+    <td>450 рублей</td>
+    <td>09:00–16:30</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Парк Ихэюань (Старый Летний дворец)</td>
+    <td>Руины европейского дворца, разрушенного в XIX веке. Место с грустной историей, но очень фотогеничное.</td>
+    <td>550 рублей</td>
+    <td>07:00–19:00</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Музей Гугун (в Запретном городе)</td>
+    <td>Отдельный вход — коллекция керамики, каллиграфии и императорских сокровищ. Выделите 1–2 часа.</td>
+    <td>350 рублей (дополнительно к билету в Запретный город)</td>
+    <td>08:30–17:00</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Улица Ванфуцзин</td>
+    <td>Главная пешеходная улица для шопинга и еды. Попробуйте жареных скорпионов на палочке — местный деликатес (да, я пробовала, это хрустяще и странно).</td>
+    <td>Бесплатно</td>
+    <td>Круглосуточно (магазины — до 22:00)</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Национальный музей Китая</td>
+    <td>Огромный музей на площади Тяньаньмэнь. Экспозиция охватывает 5 000 лет истории. Бесплатно, но нужен паспорт для входа.</td>
+    <td>Бесплатно</td>
+    <td>09:00–17:00 (выходной — понедельник)</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>Храм Конфуция</td>
+    <td>Тихий храм в честь великого философа. Рядом — Императорская академия (Гоцзыцзянь). Вход общий.</td>
+    <td>550 рублей</td>
+    <td>09:00–16:30</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>Парк Цзиншань</td>
+    <td>Холм к северу от Запретного города. С вершины открывается лучший вид на императорский дворец — обязательно поднимитесь на закате.</td>
+    <td>120 рублей</td>
+    <td>06:30–20:00</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>Озеро Хоухай</td>
+    <td>Живописное озеро в районе хутунов. Вечером здесь бары и живая музыка. Прогулка на лодке — от 300 рублей за час.</td>
+    <td>Бесплатно</td>
+    <td>Круглосуточно</td>
+  </tr>
+</table>
+
+<h2>Транспорт в городе</h2>
+
+<p>Пекинский транспорт — один из самых удобных в мире, но поначалу он может сбивать с толку из-за иероглифов. Не переживайте: в метро все названия дублируются на английском, а в автобусах — нет, так что лучше держите под рукой карту в телефоне. Вот что нужно знать:</p>
+
+<ul>
+  <li><strong>Метро</strong> — 23 линии, охватывающие весь город. Билет — от <strong>45 до 100 рублей</strong> (в зависимости от расстояния). Проездной на неделю — <strong>1 200 рублей</strong> (безлимит). Я советую купить транспортную карту Yikatong (залог 250 рублей, пополняется на станциях). Метро работает с 05:00 до 23:00, интервалы — 2–5 минут.</li>
+  <li><strong>Автобусы</strong> — дешевле метро (от <strong>25 рублей</strong>), но сложнее для туристов. Номера маршрутов и остановки — только на китайском. Используйте приложение Baidu Maps (оно показывает маршруты на английском).</li>
+  <li><strong>Такси</strong> — посадка от <strong>150 рублей</strong>, далее по счётчику (около 15 рублей за км). Средняя поездка по центру — <strong>400–700 рублей</strong>. В час пик (08:00–10:00, 17:00–19:00) лучше не рисковать — пробки адские.</li>
+  <li><strong>Аренда велосипеда</strong> — через приложения Mobike или HelloBike (от <strong>50 рублей</strong> за 30 минут). Велосипедные дорожки есть не везде, но в хутунах и парках это идеальный вариант. Я обожаю кататься вдоль озера Хоухай на закате!</li>
+  <li><strong>Аренда автомобиля</strong> — не рекомендую: нужны международные права, а парковка в центре — квест. Если очень нужно, аренда через приложение Didi — от <strong>2 500 рублей</strong> в сутки.</li>
+</ul>
+
+<p>Совет: скачайте приложение Baidu Maps (оно работает без VPN и показывает маршруты на английском). Google Maps<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+        </div>
+
+        
+        <div class="faq" style="margin-top:60px;">
+            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
+                Часто задаваемые вопросы
+            </h2>
+            
+            <details>
+                <summary>Сколько дней нужно на осмотр Пекин?</summary>
+                <p>Для полноценного знакомства с Пекин рекомендуем 4-7 дней.</p>
+            </details>
+            
+            <details>
+                <summary>Какой бюджет нужен на поездку в Пекин?</summary>
+                <p>Средний бюджет на неделю: от $500 на человека без учёта перелёта.</p>
+            </details>
+            
+            <details>
+                <summary>Нужна ли виза для поездки в Пекин?</summary>
+                <p>Гражданам РФ для посещения Пекин требуется загранпаспорт.</p>
+            </details>
+            
+            <details>
+                <summary>Когда лучше ехать в Пекин?</summary>
+                <p>Лучшее время для посещения: зависит от сезона — смотрите наш гид по сезонам.</p>
+            </details>
+            
+            <details>
+                <summary>Безопасно ли в Пекин?</summary>
+                <p>Пекин — популярное туристическое направление, безопасное при соблюдении стандартных мер.</p>
+            </details>
+            
+        </div>
+        
+
+        
+        <div style="margin-top:60px;">
+            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
+                Похожие статьи
+            </h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+                
+                <a href="/ru/china/beijing-oteli.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Отели</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Пекин</p>
+                </a>
+                
+                <a href="/ru/china/beijing-aviabilety.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Авиабилеты</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Пекин</p>
+                </a>
+                
+                <a href="/ru/china/beijing-dostoprimechatelnosti.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Достопримечательности</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Пекин</p>
+                </a>
+                
+                <a href="/ru/china/beijing-kogda-luchshe-ekhat.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Сезоны и погода</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Пекин</p>
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!-- AGENT BLOCK -->
+
+<section class="section">
+    <div class="agent-block">
+        <h2>Нужна помощь в организации путешествия?</h2>
+        <div class="agent-grid">
+            <div>
+                <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:16px;">
+                    Привет! Я Валентина, профессиональный турагент с опытом более 5 лет. Помогла более 300 путешественникам организовать отдых мечты — от Мальдив до Китая, а также туры по России.
+                </p>
+                <ul class="agent-benefits">
+                    <li>Сопровождение 24/7 на всём протяжении поездки</li>
+                    <li>Подбор тура по вашим пожеланиям и бюджету</li>
+                    <li>Помощь с визами и QR-кодами (Китай и др.)</li>
+                    <li>Бронирование отелей и билетов по лучшей цене</li>
+                    <li>Оформление страховки с полным покрытием</li>
+                    <li>300+ довольных путешественников с 2021 года</li>
+                    <li>Туры по России и всему миру</li>
+                </ul>
+            </div>
+            <div>
+                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Отправьте заявку — отвечу в течение часа!</p>
+                <form class="contact-form" action="https://formspree.io/f/meoovajb" method="POST">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Телефон (WhatsApp/Telegram)">
+                    <select name="destination">
+                        <option value="">Желаемое направление</option>
+                        <option value="turkey">Турция</option>
+                        <option value="thailand">Таиланд</option>
+                        <option value="egypt">Египет</option>
+                        <option value="uae">ОАЭ</option>
+                        <option value="indonesia">Индонезия</option>
+                        <option value="china">Китай (Хайнань)</option>
+                        <option value="other">Другое</option>
+                    </select>
+                    <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
+                    <input type="hidden" name="_subject" value="Заявка на тур с TravelHub">
+                    <input type="hidden" name="_replyto" value="i@turkov-1.ru">
+                    <button type="submit" class="btn-cta">Отправить заявку →</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;">
+        <div>
+            <div class="wordmark" style="margin-bottom:12px;">TravelHub</div>
+            <p style="font-size:14px;line-height:1.6;">Ваш надёжный путеводитель: отели, билеты, достопримечательности и советы экспертов.</p>
+        </div>
+        <div>
+            <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Направления</h4>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
+                <li><a href="/ru/turkey/index.html">Турция</a></li>
+                <li><a href="/ru/thailand/index.html">Таиланд</a></li>
+                <li><a href="/ru/egypt/index.html">Египет</a></li>
+                <li><a href="/ru/uae/index.html">ОАЭ</a></li>
+                <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
+                <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Контакты</h4>
+            <p style="font-size:14px;line-height:1.8;">
+                Турагент Валентина<br>
+                Email: i@turkov-1.ru<br>
+                На связи 24/7
+            </p>
+        </div>
+    </div>
+    <div style="max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:13px;">
+        &copy; 2026 TravelHub. Все права защищены.
+    </div>
+</footer>
+
+</body>
+</html>

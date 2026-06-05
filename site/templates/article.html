@@ -6,49 +6,61 @@
 {% block ru_alt %}{{ ru_alt_url }}{% endblock %}
 
 {% block content %}
-<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <header class="mb-8">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">{{ article.h1 }}</h1>
-        <div class="flex items-center gap-4 text-sm text-gray-500">
-            <span>📅 {{ "Updated: June 2026" if lang == "en" else "Обновлено: июнь 2026" }}</span>
-            <span>⏱ {{ "15 min read" if lang == "en" else "15 мин чтения" }}</span>
-        </div>
-    </header>
 
-    <div class="prose prose-lg max-w-none">
-        {{ article.body | safe }}
+{% if hero_image %}
+<div class="hero-section" style="background-image:url('{{ hero_image }}');min-height:380px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>{{ article.h1 }}</h1>
     </div>
+</div>
+{% endif %}
 
-    {% if faq %}
-    <section class="mt-12 bg-gray-50 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">
-            {{ "Frequently Asked Questions" if lang == "en" else "Часто задаваемые вопросы" }}
-        </h2>
-        <div class="space-y-4">
+<div class="section" style="padding-top:{{ '40px' if hero_image else '100px' }};">
+    <div class="article-layout">
+        {% if not hero_image %}
+        <h1 style="font-size:42px;font-weight:700;letter-spacing:-0.03em;margin-bottom:12px;line-height:1.15;">{{ article.h1 }}</h1>
+        {% endif %}
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
+            <span>{{ "Updated: June 2026" if lang == "en" else "Обновлено: июнь 2026" }}</span>
+            <span>&bull;</span>
+            <span>{{ "Expert guide" if lang == "en" else "Экспертный гайд" }}</span>
+        </div>
+
+        <div class="article-body">
+            {{ article.body | safe }}
+        </div>
+
+        {% if faq %}
+        <div class="faq" style="margin-top:60px;">
+            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
+                {{ "FAQ" if lang == "en" else "Часто задаваемые вопросы" }}
+            </h2>
             {% for q, a in faq %}
-            <details class="bg-white rounded-xl p-4 shadow-sm">
-                <summary class="font-semibold text-gray-900 cursor-pointer">{{ q }}</summary>
-                <p class="mt-3 text-gray-600">{{ a }}</p>
+            <details>
+                <summary>{{ q }}</summary>
+                <p>{{ a }}</p>
             </details>
             {% endfor %}
         </div>
-    </section>
-    {% endif %}
+        {% endif %}
 
-    {% if related %}
-    <section class="mt-12">
-        <h2 class="text-2xl font-bold text-gray-900 mb-6">
-            {{ "Related Articles" if lang == "en" else "Похожие статьи" }}
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {% for rel in related %}
-            <a href="/{{ lang }}/{{ rel.url }}" class="card block group p-5">
-                <h3 class="font-semibold text-gray-900 group-hover:text-indigo-600 transition">{{ rel.title }}</h3>
-                <p class="text-sm text-gray-500 mt-2">{{ rel.type }}</p>
-            </a>
-            {% endfor %}
+        {% if related %}
+        <div style="margin-top:60px;">
+            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
+                {{ "Related Articles" if lang == "en" else "Похожие статьи" }}
+            </h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+                {% for rel in related %}
+                <a href="/{{ lang }}/{{ rel.url }}" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">{{ rel.type }}</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">{{ rel.title }}</p>
+                </a>
+                {% endfor %}
+            </div>
         </div>
-    </section>
-    {% endif %}
-</article>
+        {% endif %}
+    </div>
+</div>
+
 {% endblock %}

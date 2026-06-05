@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanghai Travel Guide 2026</title>
+    <meta name="description" content="Shanghai Travel Guide 2026 Shanghai is a city that pulses with an energy you can feel in your bones the moment you step off the plane. It’s a place where fut...">
+
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/shanghai-travel-guide.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-travel-guide.html">
+
+    
+    <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/en/china/Shanghai-travel-guide.html">
+    
+
+    <meta property="og:title" content="Shanghai Travel Guide 2026">
+    <meta property="og:description" content="Shanghai Travel Guide 2026 Shanghai is a city that pulses with an energy you can feel in your bones the moment you step off the plane. It’s a place where fut...">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
+
+        :root {
+            --bg: #fcf0f3;
+            --ink: #1a1a1a;
+            --charcoal: #333333;
+            --vermillion: #ed2e38;
+            --violet: #4d49fc;
+            --border: #1a1a1a;
+            --meta: #595959;
+            --frame: #e8d5da;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation pills */
+        .nav-pill {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 18px; border-radius: 50px;
+            font-size: 14px; font-weight: 480; letter-spacing: -0.01em;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .nav-pill-solid { background: var(--ink); color: #fff; }
+        .nav-pill-solid:hover { background: var(--vermillion); }
+        .nav-pill-outline { border: 1.5px solid var(--border); color: var(--ink); }
+        .nav-pill-outline:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
+        /* Wordmark */
+        .wordmark { font-weight: 700; font-size: 18px; color: var(--vermillion); text-decoration: none; letter-spacing: -0.02em; }
+
+        /* Outlined vermillion button */
+        .btn-outline {
+            display: inline-block; padding: 10px 28px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 14px; font-weight: 520;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; background: transparent;
+        }
+        .btn-outline:hover { background: var(--vermillion); color: #fff; }
+
+        /* Solid violet CTA */
+        .btn-cta {
+            display: inline-block; padding: 12px 28px;
+            background: var(--violet); border-radius: 8px;
+            color: #fff; font-size: 14px; font-weight: 520;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; border: none;
+        }
+        .btn-cta:hover { background: #3b37e0; transform: translateY(-1px); }
+
+        /* Hero */
+        .hero-section {
+            position: relative; width: 100%; min-height: 520px;
+            display: flex; align-items: center; justify-content: center;
+            background-size: cover; background-position: center;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
+        }
+        .hero-content { position: relative; text-align: center; padding: 0 24px; max-width: 800px; }
+        .hero-content h1 {
+            font-size: clamp(36px, 8vw, 72px); font-weight: 700;
+            line-height: 1.05; letter-spacing: -0.035em; color: #fff;
+        }
+        .hero-content p { font-size: 18px; color: rgba(255,255,255,0.85); margin-top: 16px; line-height: 1.5; }
+
+        /* Section */
+        .section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
+
+        /* Cards grid */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 32px; }
+
+        .destination-card {
+            background: #fff; overflow: hidden;
+            transition: transform 0.25s; text-decoration: none; color: inherit;
+            display: block;
+        }
+        .destination-card:hover { transform: translateY(-6px); }
+        .destination-card .card-img {
+            width: 100%; height: 240px; object-fit: cover; display: block;
+        }
+        .destination-card .card-body { padding: 28px; }
+        .destination-card .card-body h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; color: var(--ink); }
+        .destination-card .card-body .card-cities { font-size: 13px; color: var(--meta); letter-spacing: -0.005em; display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+        .destination-card .card-body .card-cities span { background: var(--bg); color: var(--charcoal); padding: 4px 10px; border-radius: 4px; }
+
+        /* Article content */
+        .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .article-body h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h3 { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
+        .article-body p { font-size: 17px; line-height: 1.75; color: var(--charcoal); margin-bottom: 20px; }
+        .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
+        .article-body li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 8px; }
+        .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+        .article-body th, .article-body td { border-bottom: 1px solid var(--frame); padding: 12px 16px; text-align: left; }
+        .article-body th { font-weight: 600; color: var(--ink); font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
+        .article-body img { width: 100%; border-radius: 0; margin: 24px 0; }
+
+        /* Affiliate block */
+        .affiliate-block {
+            background: #fff; padding: 20px 28px; margin: 28px 0;
+            border-left: 3px solid var(--vermillion);
+        }
+        .affiliate-block a {
+            display: inline-block; padding: 10px 24px; border: 1.5px solid var(--vermillion);
+            border-radius: 14px; color: var(--vermillion); font-size: 14px; font-weight: 520;
+            text-decoration: none; margin: 6px 8px 6px 0; transition: all 0.2s;
+        }
+        .affiliate-block a:hover { background: var(--vermillion); color: #fff; }
+
+        /* Agent block */
+        .agent-block {
+            background: #fff; padding: 40px; margin: 60px 0;
+            border-top: 4px solid var(--vermillion);
+        }
+        .agent-block h2 { font-size: 28px; text-align: left; margin-bottom: 20px; }
+        .agent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .agent-benefits { list-style: none; padding: 0; }
+        .agent-benefits li { padding: 8px 0; padding-left: 24px; position: relative; font-size: 15px; color: var(--charcoal); }
+        .agent-benefits li::before { content: '✓'; position: absolute; left: 0; color: var(--vermillion); font-weight: 700; }
+
+        /* Contact form */
+        .contact-form { display: flex; flex-direction: column; gap: 14px; }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            background: var(--bg); border: none; padding: 14px 16px;
+            font-size: 15px; font-family: 'Inter', sans-serif; color: var(--ink);
+            width: 100%;
+        }
+        .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--vermillion); outline-offset: -2px; }
+        .contact-form button { align-self: flex-start; cursor: pointer; }
+
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 16px 0; font-size: 13px; color: var(--meta); max-width: 800px; margin: 0 auto; }
+        .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+
+        /* Footer */
+        .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
+        .site-footer a { color: #fff; text-decoration: none; }
+        .site-footer a:hover { color: var(--vermillion); }
+
+        /* FAQ */
+        .faq details { background: #fff; padding: 20px 24px; margin-bottom: 8px; }
+        .faq summary { font-weight: 600; font-size: 16px; cursor: pointer; color: var(--ink); }
+        .faq details p { margin-top: 12px; color: var(--charcoal); font-size: 15px; line-height: 1.6; }
+
+        /* Scroll arrow */
+        .scroll-arrow {
+            display: block; margin: 32px auto 0;
+            width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 50%; color: #fff; font-size: 20px; text-align: center;
+            line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
+        }
+        @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        @media (max-width: 768px) {
+            .agent-grid { grid-template-columns: 1fr; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .section { padding: 40px 16px; }
+            .section h2 { font-size: 30px; }
+            .hero-content h1 { font-size: 32px; }
+        }
+    </style>
+
+    
+    <script type="application/ld+json">
+    [{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "Travel Guide Hub"}, "dateModified": "2026-06-01", "datePublished": "2026-01-15", "description": "Shanghai Travel Guide 2026 Shanghai is a city that pulses with an energy you can feel in your bones the moment you step off the plane. It\u2019s a place where fut...", "headline": "Shanghai Travel Guide 2026", "mainEntityOfPage": {"@id": "/en/china/shanghai-travel-guide.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "Travel Guide Hub"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "For a full experience of Shanghai, we recommend 4-7 days."}, "name": "How many days do I need in Shanghai?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Average weekly budget: from $500 per person excluding flights."}, "name": "What\u0027s the budget for a trip to Shanghai?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Visa requirements depend on your nationality \u2014 check with the local embassy."}, "name": "Do I need a visa for Shanghai?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Best time depends on the season \u2014 check our seasons guide."}, "name": "When is the best time to visit Shanghai?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Shanghai is a popular tourist destination, safe with standard precautions."}, "name": "Is Shanghai safe?"}]}]
+    </script>
+    
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+        <div class="nav-pill nav-pill-solid" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">Destinations</div>
+        <a href="/en/index.html" class="wordmark">TravelHub</a>
+        <div style="display:flex;gap:8px;">
+            <a href="/en/china/shanghai-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
+            <a href="/ru/china/shanghai-travel-guide.html" class="nav-pill nav-pill-outline">RU</a>
+        </div>
+    </div>
+</header>
+
+
+<div class="breadcrumbs" style="padding-top:80px;">
+    
+        
+            <a href="/en/index.html">Home</a> /
+        
+    
+        
+            <a href="/en/china/index.html">China</a> /
+        
+    
+        
+            <span>Shanghai</span>
+        
+    
+</div>
+
+
+
+
+
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=800&amp;q=80');min-height:380px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Shanghai Travel Guide 2026</h1>
+    </div>
+</div>
+
+
+<div class="section" style="padding-top:40px;">
+    <div class="article-layout">
+        
+        <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
+            <span>Updated: June 2026</span>
+            <span>&bull;</span>
+            <span>Expert guide</span>
+        </div>
+
+        <div class="article-body">
+            <h1>Shanghai Travel Guide 2026</h1>
+<p>Shanghai is a city that pulses with an energy you can feel in your bones the moment you step off the plane. It’s a place where futuristic skyscrapers cast long shadows over ancient temples, and where the scent of sizzling street food mingles with the crisp air of the Huangpu River. I’ve sent over 300 travelers here, and every single one comes back with a story that starts with, “I didn’t expect it to feel so alive.” The city’s atmosphere is a thrilling contradiction—glittering and gritty, chaotic and serene, all at once. Whether you’re gazing at the neon-lit skyline from the Bund or wandering through the quiet, tree-lined lanes of the French Concession, Shanghai grabs you and doesn’t let go.</p>
+<p>Why visit in 2026? Because this is the year the city is truly coming into its own. New cultural hubs have opened, the metro system is more efficient than ever, and the food scene is exploding with creativity. You’ll find world-class museums, a nightlife scene that rivals Tokyo or New York, and a deep history that whispers from every corner. I recommend coming here if you want to experience China’s future while touching its past—it’s a trip that will change how you see the world. Plus, the shopping is absolutely legendary, from luxury boutiques on Nanjing Road to hidden vintage stalls in Tianzifang.</p>
+<p>For me, the magic of Shanghai is in the details: the way a grandmother practices tai chi in the park at dawn, the hum of a thousand electric scooters, the taste of xiaolongbao so fresh it practically sings. This guide is built from my own experiences and the feedback from hundreds of travelers I’ve helped plan their journeys. I’ve marked up all prices by about 12-15% to give you a realistic, stress-free budget—because I’ve learned that a little cushion makes a trip feel luxurious instead of tight. Let’s dive in!</p>
+
+<h2>How to Get There</h2>
+<p>Shanghai is served by two major airports: Pudong International Airport (PVG) and Hongqiao International Airport (SHA). PVG handles most international flights and is about 45 minutes to an hour from the city center by taxi or metro. SHA is closer to downtown and handles domestic flights plus some regional routes. From the US, expect flights from Los Angeles, San Francisco, New York, and Chicago to cost between $780 and $1,150 round trip in economy (I’ve seen prices hit $1,300 during peak seasons, so book early!). From Europe, flights from London, Paris, and Frankfurt range from $550 to $850. From Australia, Sydney and Melbourne flights run $600 to $900. I recommend booking at least three months ahead for the best deals—and always check for layovers in Hong Kong or Seoul, which can save you $100-$150.</p>
+
+<h2>Where to Stay</h2>
+<p>Choosing the right neighborhood is key to loving Shanghai. Here are my top picks for every budget, based on real traveler feedback and my own visits.</p>
+<h3>Luxury (Over $320/night)</h3>
+<ul>
+<li><strong>The Peninsula Shanghai</strong> (Bund area) – Classic elegance with river views. Rooms start at $540/night. You’ll feel like royalty.</li>
+<li><strong>W Shanghai – The Bund</strong> – Trendy, vibrant, with a rooftop bar. From $410/night.</li>
+<li><strong>Four Seasons Hotel Shanghai</strong> (Pudong) – Impeccable service. From $370/night.</li>
+</ul>
+<h3>Mid-Range ($120–$300/night)</h3>
+<ul>
+<li><strong>Jing’an Hotel</strong> (Jing’an district) – Charming boutique hotel near the temple. From $175/night.</li>
+<li><strong>Holiday Inn Express Shanghai Zhabei</strong> – Clean, reliable, close to metro. From $135/night.</li>
+<li><strong>Citadines Apart’hotel</strong> (French Concession) – Great for families, with kitchenettes. From $155/night.</li>
+</ul>
+<h3>Budget (Under $100/night)</h3>
+<ul>
+<li><strong>Mingtown Etour Youth Hostel</strong> (People’s Square) – Social vibe, dorms from $28/night, private rooms $75/night.</li>
+<li><strong>Shanghai Little Alley Hostel</strong> (French Concession) – Cozy and clean. Private rooms from $65/night.</li>
+<li><strong>Home Inn (Nanjing Road)</strong> – Basic but central. Doubles from $55/night.</li>
+</ul>
+
+<h2>Top 15 Attractions</h2>
+<p>Here are the must-see spots, with prices I’ve rounded up slightly to cover any surprises. Trust me, these are worth every yuan.</p>
+<table>
+<tr><th>#</th><th>Attraction</th><th>Description</th><th>Ticket Price</th><th>Opening Hours</th></tr>
+<tr><td>1</td><td>The Bund</td><td>Iconic waterfront promenade with stunning views of Pudong’s skyscrapers. Best at sunset. Free to walk.</td><td>Free</td><td>24/7</td></tr>
+<tr><td>2</td><td>Oriental Pearl Tower</td><td>Futuristic TV tower with a glass-floor observation deck. A bit touristy, but the view is unbeatable.</td><td>$42</td><td>8:00 AM–9:30 PM</td></tr>
+<tr><td>3</td><td>Yu Garden</td><td>Ming Dynasty garden with intricate rockeries and pavilions. A peaceful oasis in the old city.</td><td>$12</td><td>9:00 AM–4:30 PM</td></tr>
+<tr><td>4</td><td>Shanghai Museum</td><td>World-class collection of ancient Chinese art, including bronzes and ceramics. Free entry!</td><td>Free</td><td>9:00 AM–5:00 PM (closed Mon)</td></tr>
+<tr><td>5</td><td>Nanjing Road</td><td>China’s premier shopping street, buzzing with neon lights and department stores. Great for people-watching.</td><td>Free</td><td>24/7</td></tr>
+<tr><td>6</td><td>French Concession</td><td>Leafy, historic district with art deco buildings, cafes, and boutiques. Perfect for a leisurely stroll.</td><td>Free</td><td>24/7</td></tr>
+<tr><td>7</td><td>Shanghai Tower</td><td>Second-tallest building in the world. The observation deck at 118th floor is dizzying and incredible.</td><td>$38</td><td>9:00 AM–10:00 PM</td></tr>
+<tr><td>8</td><td>Jade Buddha Temple</td><td>Active Buddhist temple housing two jade Buddha statues. Serene and spiritual.</td><td>$7</td><td>8:00 AM–4:30 PM</td></tr>
+<tr><td>9</td><td>Huangpu River Cruise</td><td>Boat ride that shows you the city from the water, especially magical at night.</td><td>$28 (1-hour)</td><td>10:00 AM–9:00 PM</td></tr>
+<tr><td>10</td><td>Tianzifang</td><td>Artsy maze of narrow alleys filled with studios, cafes, and quirky shops. A photographer’s dream.</td><td>Free</td><td>10:00 AM–9:00 PM</td></tr>
+<tr><td>11</td><td>Shanghai Disneyland</td><td>Larger than Hong Kong’s, with unique attractions like the TRON Lightcycle Run. A full-day adventure.</td><td>$85</td><td>8:30 AM–8:30 PM</td></tr>
+<tr><td>12</td><td>Lujiazui Financial District</td><td>Futuristic skyline with skyscrapers like the Jin Mao Tower. Best viewed from the Bund.</td><td>Free (walking)</td><td>24/7</td></tr>
+<tr><td>13</td><td>Shanghai Natural History Museum</td><td>Fascinating exhibits on dinosaurs and evolution. A hit with kids and adults alike.</td><td>$15</td><td>9:00 AM–5:15 PM (closed Mon)</td></tr>
+<tr><td>14</td><td>Old City (Chenghuangmiao)</td><td>Traditional market area near Yu Garden, full of snacks, souvenirs, and tea houses.</td><td>Free</td><td>9:00 AM–9:00 PM</td></tr>
+<tr><td>15</td><td>M50 Art District</td><td>Contemporary art galleries in a former textile mill. Cutting-edge and often free.</td><td>Free</td><td>10:00 AM–6:00 PM (closed Mon)</td></tr>
+</table>
+
+<h2>Getting Around</h2>
+<p>Shanghai’s public transport is a dream—efficient, cheap, and easy to navigate. The metro is my favorite way to get around. It has 16 lines covering the entire city, and a single ride costs between $0.40 and $1.20 depending on distance. I recommend buying a Shanghai Public Transportation Card for $3 (refundable) and loading it with $15—it works on metro, buses, and some taxis. Buses are even cheaper at $0.30 per ride, but they’re slower due to traffic. Taxis start at $2.50 and add about $0.60 per kilometer—always use the meter, and have your destination written in Chinese. Ride-hailing apps like DiDi (China’s Uber) are widely used and cost about the same as taxis. For a splurge, rent a car with a driver for $80/day—great for day trips to nearby water towns like Zhujiajiao. Avoid renting a car yourself unless you’re a very confident driver; the traffic is chaotic!</p>
+
+<h2>Where to Eat</h2>
+<p>Shanghai’s food scene is a love letter to your taste buds. You have to try xiaolongbao (soup dumplings) at <strong>Din Tai Fung</strong>—a basket of 10 costs around $12, and they’re perfection. For street food, head to <strong>Yunnan Road Food Street</strong> where you can get shengjianbao (pan-fried pork buns) for $1 each, or jianbing (Chinese crepes) for $2.50. I always recommend <strong>Lost Heaven</strong> on the Bund for Yunnan-style dishes—a full meal for two is about $65, and the ambiance is stunning. For local Shanghai cuisine, try <strong>Jesse Restaurant</strong> in the French Concession for their famous braised pork belly (around $18 per dish). Budget eaters can feast at noodle shops like <strong>Lanzhou Lamian</strong> for $4 a bowl. Fine dining at <strong>Ultraviolet by Paul Pairet</strong> is an unforgettable experience at $450 per person, but book months ahead. Overall, expect to spend $10-$20 per day on food if you’re eating local, or $40-$80 if you’re hitting mid-range restaurants.</p>
+
+<h2>Best Time to Visit</h2>
+<p>I’ve been to Shanghai in every season, and here’s the honest truth: spring (March to May) and autumn (September to November) are the sweet spots. March sees temperatures of 8°C–15°C (46°F–59°F) with some rain, but by April it warms to 12°C–20°C (54°F–68°F) and the cherry blossoms are out. May is perfect at 18°C–25°C (64°F–77°F). Autumn is equally lovely: September has lingering warmth (22°C–28°C / 72°F–82°F), October is crisp and sunny (15°C–22°C / 59°F–72°F), and November is cool but pleasant (10°C–17°C / 50°F–63°F). Summer (June to August) is hot and humid, with temperatures hitting 35°C (95°F) and frequent typhoons—hotel prices drop, but you’ll sweat. Winter (December to February) is cold (0°C–8°C / 32°F–46°F) and damp, but the city is less crowded and flights are cheapest. I recommend visiting in October for the best weather and the Shanghai Tourism Festival.</p>
+
+<h2>Visa & Documents</h2>
+<p>Most travelers need a visa to enter mainland China, and I always process these through a trusted tour operator to avoid headaches. A standard tourist visa (L-visa) costs around $160 and takes 4-7 business days. You’ll need a valid passport with at least six months remaining, a completed application, a recent photo, and proof of accommodation and flight bookings. For a smoother experience, consider traveling to Hainan Island—it’s visa-free for up to 30 days if you go through a tour operator (I can arrange this!). Also, you must have a Health QR code via WeChat or Alipay—download these apps before you go. The QR code is required for entering many public places like malls and museums. I always tell my travelers to set this up at home; it’s a lifesaver. No other vaccinations are required, but I recommend being up-to-date on routine shots.</p>
+
+<h2>Weekly Trip Budget</h2>
+<p>Here’s a realistic weekly budget for one person, with my 12-15% markup included to give you breathing room. Prices are in USD.</p>
+<table>
+<tr><th>Category</th><th>Budget</th><th>Mid-Range</th><th>Luxury</th></tr>
+<tr><td>Accommodation (7 nights)</td><td>$385</td><td>$1,050</td><td>$2,800</td></tr>
+<tr><td>Food (7 days)</td><td>$105</td><td>$280</td><td>$560</td></tr>
+<tr><td>Transport (metro/taxi)</td><td>$35</td><td>$70</td><td>$140</td></tr>
+<tr><td>Attractions (entry fees)</td><td>$85</td><td>$140</td><td>$210</td></tr>
+<tr><td>Miscellaneous (snacks, tips, etc.)</td><td>$50</td><td>$100</td><td>$200</td></tr>
+<tr><td><strong>Total (approx.)</strong></td><td><strong>$660</strong></td><td><strong>$1,640</strong></td><td><strong>$3,910</strong></td></tr>
+</table>
+<p>These are estimates—I’ve seen budget travelers stretch $500 for a week by staying in hostels and eating street food, while luxury travelers can easily spend $5,000. The key is to book ahead and use the metro!</p>
+
+<h2>10 Travel Tips</h2>
+<ul>
+<li><strong>Download WeChat and Alipay before you go.</strong> China is nearly cashless, and you’ll need these apps for everything from paying at restaurants to scanning QR codes for entry. Link your credit card at home.</li>
+<li><strong>Learn a few Chinese phrases.</strong> “Ni hao” (hello), “xie xie” (thank you), and “duo shao qian?” (how much?) will earn you smiles. English is limited outside tourist areas.</li>
+<li><strong>Carry a portable charger.</strong> You’ll use your phone constantly for maps, payments, and translation. Power banks are cheap—buy one for $15.</li>
+<li><strong>Beware of tap water.</strong> Always drink bottled or boiled water. I buy a 1.5-liter bottle for $0.50 at any convenience store.</li>
+<li><strong>Use the metro during rush hour.</strong> It’s crowded but faster than taxis. Avoid 8:00-9:00 AM and 5:00-7:00 PM if possible.</li>
+<li><strong>Dress in layers.</strong> Shanghai’s weather can change in an hour. A light jacket is your best friend, even in summer for air-conditioned malls.</li>
+<li><strong>Negotiate at markets.</strong> At places like the Pearl Market, start at 30% of the asking price. Smile and be friendly—it’s part of the fun.</li>
+<li><strong>Book attractions online in advance.</strong> Popular spots like the Shanghai Tower can sell out. I use Trip.com or the official WeChat mini-programs.</li>
+<li><strong>Stay connected with a local SIM card.</strong> Buy one at the airport for $15-$25 with 10GB of data. It’s a lifesaver for maps and DiDi.</li>
+<li><strong>Respect local customs.</strong> Remove shoes in temples, don’t point with your finger, and avoid discussing politics. A little courtesy goes a long way.</li>
+</ul><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+        </div>
+
+        
+        <div class="faq" style="margin-top:60px;">
+            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
+                FAQ
+            </h2>
+            
+            <details>
+                <summary>How many days do I need in Shanghai?</summary>
+                <p>For a full experience of Shanghai, we recommend 4-7 days.</p>
+            </details>
+            
+            <details>
+                <summary>What&#39;s the budget for a trip to Shanghai?</summary>
+                <p>Average weekly budget: from $500 per person excluding flights.</p>
+            </details>
+            
+            <details>
+                <summary>Do I need a visa for Shanghai?</summary>
+                <p>Visa requirements depend on your nationality — check with the local embassy.</p>
+            </details>
+            
+            <details>
+                <summary>When is the best time to visit Shanghai?</summary>
+                <p>Best time depends on the season — check our seasons guide.</p>
+            </details>
+            
+            <details>
+                <summary>Is Shanghai safe?</summary>
+                <p>Shanghai is a popular tourist destination, safe with standard precautions.</p>
+            </details>
+            
+        </div>
+        
+
+        
+        <div style="margin-top:60px;">
+            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
+                Related Articles
+            </h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+                
+                <a href="/en/china/shanghai-hotels.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Hotels</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Shanghai</p>
+                </a>
+                
+                <a href="/en/china/shanghai-cheap-flights.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Flights</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Shanghai</p>
+                </a>
+                
+                <a href="/en/china/shanghai-things-to-do.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Attractions</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Shanghai</p>
+                </a>
+                
+                <a href="/en/china/shanghai-best-time-to-visit.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Seasons &amp; Weather</span>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Shanghai</p>
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<!-- AGENT BLOCK -->
+
+<section class="section">
+    <div class="agent-block">
+        <h2>Need help planning your trip?</h2>
+        <div class="agent-grid">
+            <div>
+                <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:16px;">
+                    Hi! I&#39;m Valentina, a professional travel agent with over 5 years of experience. I&#39;ve helped more than 300 travelers organize their dream vacations — from the Maldives to China, and across Russia.
+                </p>
+                <ul class="agent-benefits">
+                    <li>24/7 support throughout your trip</li>
+                    <li>Full tour selection based on your preferences</li>
+                    <li>Visa assistance and QR code setup (China, etc.)</li>
+                    <li>Hotel and flight booking at the best price</li>
+                    <li>Travel insurance with full coverage</li>
+                    <li>300+ happy travelers since 2021</li>
+                    <li>Tours across Russia and worldwide</li>
+                </ul>
+            </div>
+            <div>
+                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Send a request — I&#39;ll reply within an hour!</p>
+                <form class="contact-form" action="https://formspree.io/f/meoovajb" method="POST">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone (WhatsApp/Telegram)">
+                    <select name="destination">
+                        <option value="">Preferred destination</option>
+                        <option value="turkey">Turkey</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="egypt">Egypt</option>
+                        <option value="uae">UAE</option>
+                        <option value="indonesia">Indonesia</option>
+                        <option value="china">China (Hainan)</option>
+                        <option value="other">Other / Другое</option>
+                    </select>
+                    <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
+                    <input type="hidden" name="_subject" value="Tour request from TravelHub">
+                    <input type="hidden" name="_replyto" value="i@turkov-1.ru">
+                    <button type="submit" class="btn-cta">Send request →</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;">
+        <div>
+            <div class="wordmark" style="margin-bottom:12px;">TravelHub</div>
+            <p style="font-size:14px;line-height:1.6;">Your trusted travel guide: hotels, flights, attractions, and expert tips for the best destinations.</p>
+        </div>
+        <div>
+            <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Destinations</h4>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
+                <li><a href="/en/turkey/index.html">Turkey</a></li>
+                <li><a href="/en/thailand/index.html">Thailand</a></li>
+                <li><a href="/en/egypt/index.html">Egypt</a></li>
+                <li><a href="/en/uae/index.html">UAE</a></li>
+                <li><a href="/en/indonesia/index.html">Indonesia</a></li>
+                <li><a href="/en/china/index.html">China (Hainan)</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Contact</h4>
+            <p style="font-size:14px;line-height:1.8;">
+                Tour agent Valentina<br>
+                Email: i@turkov-1.ru<br>
+                24/7 online support
+            </p>
+        </div>
+    </div>
+    <div style="max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:13px;">
+        &copy; 2026 TravelHub. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
