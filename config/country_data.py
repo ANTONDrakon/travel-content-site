@@ -604,5 +604,5 @@ AGENT_PHOTOS = [
 AGENT_NAME = "Туркова Валентина"
 AGENT_NAME_EN = "Valentina Turkova"
 AGENT_EMAIL = "i@turkov-1.ru"
-AGENT_DESC_RU = "Профессиональный турагент. Более 300 клиентов с 2021. Полное сопровождение: визы, QR-коды, страховки, подбор тура."
-AGENT_DESC_EN = "Professional travel agent. 300+ clients since 2021. Full support: visas, QR codes, insurance, tour selection."
+AGENT_DESC_RU = "Профессиональный турагент. Более 50 туристов отправлено на Мальдивы и в другие страны с 2021. Полное сопровождение: визы, QR-коды, страховки, подбор тура."
+AGENT_DESC_EN = "Professional travel agent. 50+ tourists sent to Maldives and worldwide since 2021. Full support: visas, QR codes, insurance, tour selection."

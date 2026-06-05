@@ -1,6 +1,38 @@
 import os
+import re
 import json
 from pathlib import Path
+
+MARKER = "736226"
+
+SERVICES = [
+    ("Aviasales", f"https://tp.media/click?shmarker={MARKER}&promo_id=3770&source_type=link&type=click&campaign_id=100&trs=aviasales"),
+    ("Hotellook", f"https://tp.media/click?shmarker={MARKER}&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=hotellook"),
+    ("Booking.com", f"https://tp.media/click?shmarker={MARKER}&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking"),
+    ("Booking", f"https://tp.media/click?shmarker={MARKER}&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking"),
+    ("Agoda", f"https://tp.media/click?shmarker={MARKER}&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda"),
+    ("GetYourGuide", f"https://tp.media/click?shmarker={MARKER}&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide"),
+    ("Viator", f"https://tp.media/click?shmarker={MARKER}&promo_id=3775&source_type=link&type=click&campaign_id=107&trs=viator"),
+    ("Kiwitaxi", f"https://tp.media/click?shmarker={MARKER}&promo_id=3782&source_type=link&type=click&campaign_id=112&trs=kiwitaxi"),
+    ("Airalo", f"https://tp.media/click?shmarker={MARKER}&promo_id=3803&source_type=link&type=click&campaign_id=118&trs=airalo"),
+    ("DiscoverCars", f"https://tp.media/click?shmarker={MARKER}&promo_id=3780&source_type=link&type=click&campaign_id=111&trs=discovercars"),
+    ("Localrent", f"https://tp.media/click?shmarker={MARKER}&promo_id=3783&source_type=link&type=click&campaign_id=113&trs=localrent"),
+    ("Tiqets", f"https://tp.media/click?shmarker={MARKER}&promo_id=3801&source_type=link&type=click&campaign_id=116&trs=tiqets"),
+    ("Klook", f"https://tp.media/click?shmarker={MARKER}&promo_id=3797&source_type=link&type=click&campaign_id=120&trs=klook"),
+    ("Kiwi.com", f"https://tp.media/click?shmarker={MARKER}&promo_id=3799&source_type=link&type=click&campaign_id=114&trs=kiwicom"),
+    ("Trip.com", f"https://tp.media/click?shmarker={MARKER}&promo_id=3802&source_type=link&type=click&campaign_id=119&trs=tripcom"),
+    ("Compensair", f"https://tp.media/click?shmarker={MARKER}&promo_id=3800&source_type=link&type=click&campaign_id=117&trs=compensair"),
+    ("Cherehapa", f"https://tp.media/click?shmarker={MARKER}&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=insurance"),
+    ("12Go", f"https://tp.media/click?shmarker={MARKER}&promo_id=4127&source_type=link&type=click&campaign_id=121&trs=12go"),
+]
+
+def linkify_services(body):
+    for name, url in SERVICES:
+        if name in body:
+            pattern = re.compile(r'(?<!["\'>])(' + re.escape(name) + r')(?!["\'<])')
+            replacement = f'<a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">{name}</a>'
+            body = pattern.sub(replacement, body, count=1)
+    return body
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -312,6 +344,8 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         body = inject_hotel_images(body)
     if content_type == "attractions":
         body = inject_attraction_images(body)
+
+    body = linkify_services(body)
 
     import re as _re
     body = _re.sub(r'<h1[^>]*>.*?</h1>\s*', '', body, count=1)
