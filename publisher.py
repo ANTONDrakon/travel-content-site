@@ -34,6 +34,47 @@ def linkify_services(body):
             body = pattern.sub(replacement, body, count=1)
     return body
 
+PRICE_CONVERSIONS = {
+    "$": "≈ ₽{rub}", "€": "≈ ₽{rub}", "AED": "≈ ₽{rub}",
+    "฿": "≈ ₽{rub}", "THB": "≈ ₽{rub}", "₺": "≈ ₽{rub}",
+    "TRY": "≈ ₽{rub}", "EGP": "≈ ₽{rub}", "¥": "≈ ₽{rub}",
+    "CNY": "≈ ₽{rub}", "IDR": "≈ ₽{rub}",
+}
+
+def convert_prices_to_rub(body):
+    # $X → ₽Y (≈ $X)
+    def dollar_convert(m):
+        amt = m.group(1)
+        try:
+            rub = int(float(amt.replace(",", "")) * 95)
+            return f"₽{rub:,} (≈ ${amt})".replace(",", " ")
+        except:
+            return m.group(0)
+    body = re.sub(r'\$(\d[\d,.]*)', dollar_convert, body)
+
+    # €X → ₽Y (≈ €X)
+    def euro_convert(m):
+        amt = m.group(1)
+        try:
+            rub = int(float(amt.replace(",", "")) * 103)
+            return f"₽{rub:,} (≈ €{amt})".replace(",", " ")
+        except:
+            return m.group(0)
+    body = re.sub(r'€(\d[\d,.]*)', euro_convert, body)
+
+    return body
+
+def inject_maldives_qr(body, country_slug):
+    if country_slug != "maldives":
+        return body
+    qr_text = '<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p>'
+    visa_pattern = re.compile(r'(<h2[^>]*>.*?(?:виза|visa|документ|document).*?</h2>.*?)(<h2)', re.IGNORECASE | re.DOTALL)
+    match = visa_pattern.search(body)
+    if match:
+        insert_pos = match.end(1)
+        body = body[:insert_pos] + qr_text + body[insert_pos:]
+    return body
+
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
@@ -346,6 +387,8 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         body = inject_attraction_images(body)
 
     body = linkify_services(body)
+    body = convert_prices_to_rub(body)
+    body = inject_maldives_qr(body, country_slug)
 
     import re as _re
     body = _re.sub(r'<h1[^>]*>.*?</h1>\s*', '', body, count=1)

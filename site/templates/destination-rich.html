@@ -58,13 +58,11 @@
                 <div class="card-body" style="padding:24px;">
                     <h3>{{ city_data.name_en if lang == "en" else city_data.name_ru }}</h3>
                     {% if city_data.desc %}<p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">{{ city_data.desc }}</p>{% endif %}
-                    <ul style="list-style:none;padding:0;margin:0;">
-                        {% for a in city_data.articles %}
-                        <li style="margin-bottom:4px;">
-                            <span style="font-size:13px;color:var(--vermillion);">{{ a.icon }} {{ a.label }}</span>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                    <div style="margin-top:8px;">
+                    {% for a in city_data.articles %}
+                    <a href="/{{ lang }}/{{ country.slug }}/{{ a.url }}.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">{{ a.icon }} {{ a.label }}</a>
+                    {% endfor %}
+                    </div>
                 </div>
             </a>
             {% endfor %}
