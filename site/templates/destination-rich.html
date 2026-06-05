@@ -180,7 +180,11 @@
 <section class="section" id="agent">
     <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;padding:48px;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
         <div style="display:flex;align-items:center;gap:24px;margin-bottom:28px;flex-wrap:wrap;">
-            <img src="{{ agent_photo }}" alt="Туркова Валентина" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--vermillion);">
+            <div class="agent-carousel" style="width:160px;height:160px;border-radius:50%;overflow:hidden;border:3px solid var(--vermillion);position:relative;flex-shrink:0;">
+                {% for photo in agent_photos %}
+                <img src="{{ photo }}" alt="Туркова Валентина" class="agent-carousel-img" loading="{{ 'eager' if loop.first else 'lazy' }}" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:{{ '1' if loop.first else '0' }};transition:opacity 0.8s;">
+                {% endfor %}
+            </div>
             <div>
                 <h2 style="font-size:24px;font-weight:700;margin-bottom:4px;text-align:left;">Туркова Валентина</h2>
                 <p style="font-size:15px;color:var(--meta);">Профессиональный турагент • 300+ клиентов с 2021</p>

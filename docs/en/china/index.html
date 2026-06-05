@@ -230,6 +230,17 @@
                 this.style.objectFit = 'contain';
             });
         });
+        var carousels = document.querySelectorAll('.agent-carousel');
+        carousels.forEach(function(carousel) {
+            var imgs = carousel.querySelectorAll('.agent-carousel-img');
+            if (imgs.length < 2) return;
+            var current = 0;
+            setInterval(function() {
+                imgs[current].style.opacity = '0';
+                current = (current + 1) % imgs.length;
+                imgs[current].style.opacity = '1';
+            }, 3000);
+        });
     });
     </script>
 
@@ -277,7 +288,7 @@
             <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">Подобрать тур →</a>
             
             <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);padding:8px 16px;border-radius:50px;">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&amp;q=80" alt="Туркова Валентина" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-06.jpg" alt="Туркова Валентина" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
                 <span style="color:#fff;font-size:14px;font-weight:500;">Туркова Валентина<br><span style="font-size:12px;opacity:0.8;">Турагент-эксперт</span></span>
             </div>
             
@@ -744,7 +755,27 @@
 <section class="section" id="agent">
     <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;padding:48px;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
         <div style="display:flex;align-items:center;gap:24px;margin-bottom:28px;flex-wrap:wrap;">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&amp;q=80" alt="Туркова Валентина" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--vermillion);">
+            <div class="agent-carousel" style="width:160px;height:160px;border-radius:50%;overflow:hidden;border:3px solid var(--vermillion);position:relative;flex-shrink:0;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-51-06.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:1;transition:opacity 0.8s;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-51-10.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-51-17.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-51-44.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-51-49.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-51-53.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-51-58.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-52-01.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                
+                <img src="/assets/agent/photo_2026-06-06_00-52-05.jpg" alt="Туркова Валентина" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                
+            </div>
             <div>
                 <h2 style="font-size:24px;font-weight:700;margin-bottom:4px;text-align:left;">Туркова Валентина</h2>
                 <p style="font-size:15px;color:var(--meta);">Профессиональный турагент • 300+ клиентов с 2021</p>

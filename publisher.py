@@ -132,7 +132,7 @@ def build_destination_page(country_slug, lang):
         print(f"  Unknown country: {country_slug}")
         return
 
-    from config.country_data import COUNTRY_DATA, AGENT_PHOTO
+    from config.country_data import COUNTRY_DATA, AGENT_PHOTO, AGENT_PHOTOS
 
     country_data = COUNTRY_DATA.get(country_slug, {})
 
@@ -186,6 +186,7 @@ def build_destination_page(country_slug, lang):
         insurance_link=insurance_link(),
         data=country_data,
         agent_photo=AGENT_PHOTO,
+        agent_photos=AGENT_PHOTOS,
         alternate_url=f"{lang}/{country_slug}/index.html",
         breadcrumbs=[
             {"label": "Home" if lang == "en" else "Главная", "url": f"/{lang}/index.html"},

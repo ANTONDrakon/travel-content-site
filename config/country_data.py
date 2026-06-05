@@ -588,7 +588,18 @@ COUNTRY_DATA = {
     },
 }
 
-AGENT_PHOTO = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+AGENT_PHOTO = "/assets/agent/photo_2026-06-06_00-51-06.jpg"
+AGENT_PHOTOS = [
+    "/assets/agent/photo_2026-06-06_00-51-06.jpg",
+    "/assets/agent/photo_2026-06-06_00-51-10.jpg",
+    "/assets/agent/photo_2026-06-06_00-51-17.jpg",
+    "/assets/agent/photo_2026-06-06_00-51-44.jpg",
+    "/assets/agent/photo_2026-06-06_00-51-49.jpg",
+    "/assets/agent/photo_2026-06-06_00-51-53.jpg",
+    "/assets/agent/photo_2026-06-06_00-51-58.jpg",
+    "/assets/agent/photo_2026-06-06_00-52-01.jpg",
+    "/assets/agent/photo_2026-06-06_00-52-05.jpg",
+]
 
 AGENT_NAME = "Туркова Валентина"
 AGENT_NAME_EN = "Valentina Turkova"
