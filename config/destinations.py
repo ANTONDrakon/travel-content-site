@@ -326,6 +326,13 @@ DESTINATIONS = {
                 "airport_codes": ["MLE"],
                 "lat": 3.5267, "lon": 72.9258,
             },
+            "resort-islands": {
+                "name_ru": "Резорт Острова",
+                "name_en": "Resort Islands",
+                "slug": "resort-islands",
+                "airport_codes": ["MLE"],
+                "lat": 4.0, "lon": 73.0,
+            },
         },
     },
 }

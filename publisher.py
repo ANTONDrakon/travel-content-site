@@ -21,10 +21,10 @@ env.globals["enumerate"] = enumerate
 
 
 COUNTRY_IMAGES = {
-    "turkey": "https://images.unsplash.com/photo-1599685315640-a40242a91a4a?w=1200&q=80",
+    "turkey": "https://as2.ftcdn.net/jpg/08/45/68/41/1000_F_845684119_DjY0EbNBL7XLomrwnYvTEZU9LvUYfi3U.jpg",
     "thailand": "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1200&q=80",
     "egypt": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=1200&q=80",
-    "uae": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=1200&q=80",
+    "uae": "https://plantravel.ru/Upload/images/other/php8loD6m.jpg",
     "indonesia": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
     "china": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&q=80",
     "maldives": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
@@ -61,11 +61,12 @@ CITY_IMAGES = {
     "beijing": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
     "shanghai": "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=800&q=80",
     "xian": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
-    "male": "https://www.themaldivestravel.com/blog-data/uploads/2022/09/13907826048_645e97966c_k.jpg",
+    "male": "https://cs.pikabu.ru/post_img/big/2013/03/30/2/1364602604_1624085555.jpg",
     "hulhumale": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/70683603.jpg?k=a299869c220804e8410738b0afa5f166be86303ebfda1b3b989e7fb65128a3c5&o=",
     "maafushi": "https://vectorme.ru/wp-content/uploads/2023/03/ostrov-maafushi-2048x1091.png",
     "dhigurah": "https://i.ytimg.com/vi/p6XxR6fn8xA/maxresdefault.jpg",
     "thulusdhoo": "https://www.hotels-maldives.net/data/Photos/OriginalPhoto/7901/790145/790145394.JPEG",
+    "resort-islands": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
 }
 
 
