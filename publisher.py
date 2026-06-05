@@ -23,7 +23,7 @@ env.globals["enumerate"] = enumerate
 COUNTRY_IMAGES = {
     "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
     "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
-    "egypt": "https://images.unsplash.com/photo-1539768942893-d7ed1a06c3d4?w=1200&q=80",
+    "egypt": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=1200&q=80",
     "uae": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
     "indonesia": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
     "china": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1200&q=80",
@@ -41,11 +41,11 @@ CITY_IMAGES = {
     "pattaya": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&q=80",
     "koh-samui": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
     "krabi": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80",
-    "sharm-el-sheikh": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
+    "sharm-el-sheikh": "https://images.unsplash.com/photo-1539635278303-d4002c07eae2?w=800&q=80",
     "hurghada": "https://images.unsplash.com/photo-1539635278303-d4002c07eae2?w=800&q=80",
     "cairo": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
     "luxor": "https://images.unsplash.com/photo-1560012057-4372e14b9fdb?w=800&q=80",
-    "marsa-alam": "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?w=800&q=80",
+    "marsa-alam": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80",
     "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
     "abu-dhabi": "https://images.unsplash.com/photo-1512632578888-7928c05b1d3b?w=800&q=80",
     "sharjah": "https://images.unsplash.com/photo-1572443492525-f46d5c22e5b9?w=800&q=80",
@@ -170,7 +170,28 @@ def build_destination_page(country_slug, lang):
 
     city_names_list = [c["name_en"] if lang == "en" else c["name_ru"] for c in country["cities"].values()]
 
-    template = env.get_template("destination.html")
+    if country_slug == "uae":
+        template = env.get_template("destination-uae.html")
+    else:
+        template = env.get_template("destination.html")
+
+    city_descriptions = {
+        "dubai": "Город будущего: небоскрёбы, шопинг, развлечения. Самый популярный эмират.",
+        "abu-dhabi": "Столица ОАЭ: культура, Лувр, мечеть шейха Зайда. Спокойный и респектабельный.",
+        "sharjah": "Культурная столица: музеи, heritage-районы. Самый строгий, но бюджетный.",
+        "fujairah": "Единственный эмират на Индийском океане. Дайвинг, снорклинг, горы Хаджар.",
+        "ras-al-khaimah": "Природа и приключения: самая высокая гора ОАЭ, мангровые заросли, уединение.",
+        "dubai_en": "City of the future: skyscrapers, shopping, entertainment. The most popular emirate.",
+        "abu-dhabi_en": "Capital of UAE: culture, Louvre, Sheikh Zayed Mosque. Calm and respectable.",
+        "sharjah_en": "Cultural capital: museums, heritage districts. Strictest but most affordable.",
+        "fujairah_en": "Only emirate on the Indian Ocean. Diving, snorkeling, Hajar Mountains.",
+        "ras-al-khaimah_en": "Nature & adventure: UAE's highest mountain, mangroves, total seclusion.",
+    }
+
+    for city_slug in cities_with_images:
+        desc_key = f"{city_slug}_en" if lang == "en" else city_slug
+        cities_with_images[city_slug]["desc"] = city_descriptions.get(desc_key, "")
+
     html = template.render(
         lang=lang,
         country=country,

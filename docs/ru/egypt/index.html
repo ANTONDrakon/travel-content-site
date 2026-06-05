@@ -127,15 +127,15 @@
         .destination-card {
             background: #fff; overflow: hidden;
             transition: transform 0.25s; text-decoration: none; color: inherit;
-            display: block;
+            display: flex; flex-direction: column;
         }
         .destination-card:hover { transform: translateY(-6px); }
         .destination-card .card-img {
-            width: 100%; height: 240px; object-fit: cover; display: block;
+            width: 100%; height: 220px; object-fit: cover; display: block; flex-shrink: 0;
         }
-        .destination-card .card-body { padding: 28px; }
+        .destination-card .card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
         .destination-card .card-body h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; color: var(--ink); }
-        .destination-card .card-body .card-cities { font-size: 13px; color: var(--meta); letter-spacing: -0.005em; display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+        .destination-card .card-body .card-cities { font-size: 13px; color: var(--meta); letter-spacing: -0.005em; display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; padding-top: 12px; }
         .destination-card .card-body .card-cities span { background: var(--bg); color: var(--charcoal); padding: 4px 10px; border-radius: 4px; }
 
         /* Article content */
@@ -250,7 +250,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1539768942893-d7ed1a06c3d4?w=1200&amp;q=80');">
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=1200&amp;q=80');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Египет</h1>
@@ -267,7 +267,7 @@
     <div class="cards-grid">
         
         <a href="/ru/egypt/sharm-el-sheikh-putevoditel.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&amp;q=80" alt="Sharm El Sheikh" class="card-img" loading="lazy" style="height:200px;">
+            <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae2?w=800&amp;q=80" alt="Sharm El Sheikh" class="card-img" loading="lazy" style="height:200px;">
             <div class="card-body">
                 <h3>Шарм-эль-Шейх</h3>
                 <ul style="list-style:none;padding:0;margin-top:8px;">
@@ -387,7 +387,7 @@
         </a>
         
         <a href="/ru/egypt/marsa-alam-putevoditel.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?w=800&amp;q=80" alt="Marsa Alam" class="card-img" loading="lazy" style="height:200px;">
+            <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&amp;q=80" alt="Marsa Alam" class="card-img" loading="lazy" style="height:200px;">
             <div class="card-body">
                 <h3>Марса-Алам</h3>
                 <ul style="list-style:none;padding:0;margin-top:8px;">
