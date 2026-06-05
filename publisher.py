@@ -16,7 +16,7 @@ env = Environment(
     autoescape=select_autoescape(["html", "xml"]),
 )
 env.globals["site_url"] = os.getenv("SITE_URL", "https://antondrakon.github.io/travel-content-site")
-env.globals["formspree_id"] = "meoovajb"
+env.globals["formspree_id"] = "xnjyjnnd"
 env.globals["enumerate"] = enumerate
 
 
