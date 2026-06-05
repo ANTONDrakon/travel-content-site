@@ -284,9 +284,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
                 "type": ct_info["category_ru"] if lang == "ru" else ct_info["category_en"],
             })
 
-    hero_image = None
-    if content_type == "guide":
-        hero_image = get_city_image(city_slug)
+    hero_image = get_city_image(city_slug)
 
     template = env.get_template("article.html")
     html = template.render(

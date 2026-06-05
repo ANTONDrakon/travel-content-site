@@ -216,7 +216,24 @@
             .section h2 { font-size: 30px; }
             .hero-content h1 { font-size: 32px; }
         }
+
+        img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
+        img[src*="unsplash"] { min-height: 200px; }
+        img[src*="unsplash"]:not([src]):after,
+        img[src*="unsplash"][src=""],
+        img[src*="unsplash"][src="#"] {}
     </style>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('img').forEach(function(img) {
+            img.addEventListener('error', function() {
+                this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400"><rect fill="#fcf0f3" width="800" height="400"/><text fill="#ed2e38" font-family="sans-serif" font-size="20" text-anchor="middle" x="400" y="200">📷 ' + (this.alt || 'Photo') + '</text></svg>');
+                this.style.objectFit = 'contain';
+            });
+        });
+    });
+    </script>
 
     
     <script type="application/ld+json">
@@ -261,11 +278,16 @@
 
 
 
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1560012057-4372e14b9fdb?w=800&amp;q=80');min-height:380px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Как дёшево добраться до Луксор в 2026</h1>
+    </div>
+</div>
 
-<div class="section" style="padding-top:100px;">
+
+<div class="section" style="padding-top:40px;">
     <div class="article-layout">
-        
-        <h1 style="font-size:42px;font-weight:700;letter-spacing:-0.03em;margin-bottom:12px;line-height:1.15;">Как дёшево добраться до Луксор в 2026</h1>
         
         <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
             <span>Обновлено: июнь 2026</span>
@@ -518,6 +540,9 @@
         &copy; 2026 TravelHub. Все права защищены.
     </div>
 </footer>
+
+<!-- SCROLL TO TOP -->
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
 
 </body>
 </html>

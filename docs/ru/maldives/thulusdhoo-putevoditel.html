@@ -216,7 +216,24 @@
             .section h2 { font-size: 30px; }
             .hero-content h1 { font-size: 32px; }
         }
+
+        img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
+        img[src*="unsplash"] { min-height: 200px; }
+        img[src*="unsplash"]:not([src]):after,
+        img[src*="unsplash"][src=""],
+        img[src*="unsplash"][src="#"] {}
     </style>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('img').forEach(function(img) {
+            img.addEventListener('error', function() {
+                this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400"><rect fill="#fcf0f3" width="800" height="400"/><text fill="#ed2e38" font-family="sans-serif" font-size="20" text-anchor="middle" x="400" y="200">📷 ' + (this.alt || 'Photo') + '</text></svg>');
+                this.style.objectFit = 'contain';
+            });
+        });
+    });
+    </script>
 
     
     <script type="application/ld+json">
@@ -525,6 +542,9 @@
         &copy; 2026 TravelHub. Все права защищены.
     </div>
 </footer>
+
+<!-- SCROLL TO TOP -->
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
 
 </body>
 </html>
