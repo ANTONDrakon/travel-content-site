@@ -28,23 +28,14 @@ def replace_placeholders(body, city_name_en, lang):
 
 def inject_insurance_block(body, lang):
     from config.affiliates import insurance_link, AFFILIATE_HTML
-
-    insurance_html = AFFILIATE_HTML["insurance_en" if lang == "en" else "insurance"].format(
-        url=insurance_link()
-    )
-
+    insurance_html = AFFILIATE_HTML["insurance_en" if lang == "en" else "insurance"].format(url=insurance_link())
     insurance_block = f'<div class="affiliate-banner"><p>{"Don\'t forget travel insurance!" if lang == "en" else "Не забудьте оформить страховку для путешествия!"}</p>{insurance_html}</div>'
 
-    close_body = "</article>"
-    if close_body not in body and "</div>" in body:
-        last_div = body.rfind("</div>")
-        body = body[:last_div] + insurance_block + body[last_div:]
-    elif "</section>" in body:
-        last_section = body.rfind("</section>")
-        body = body[:last_section] + insurance_block + body[last_section:]
+    close_article = body.rfind("</article>")
+    if close_article != -1:
+        body = body[:close_article] + insurance_block + body[close_article:]
     else:
         body += insurance_block
-
     return body
 
 

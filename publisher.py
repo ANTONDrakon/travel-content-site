@@ -41,27 +41,34 @@ PRICE_CONVERSIONS = {
     "CNY": "≈ ₽{rub}", "IDR": "≈ ₽{rub}",
 }
 
-def convert_prices_to_rub(body):
-    # $X → ₽Y (≈ $X)
-    def dollar_convert(m):
-        amt = m.group(1)
-        try:
-            rub = int(float(amt.replace(",", "")) * 95)
-            return f"₽{rub:,} (≈ ${amt})".replace(",", " ")
-        except:
-            return m.group(0)
-    body = re.sub(r'\$(\d[\d,.]*)', dollar_convert, body)
+def convert_prices_to_rub(body, lang="ru"):
+    if lang == "ru":
+        def dollar_convert(m):
+            amt = m.group(1)
+            try:
+                rub = int(float(amt.replace(",", "")) * 95)
+                return f"₽{rub:,} (≈ ${amt})".replace(",", " ")
+            except:
+                return m.group(0)
+        body = re.sub(r'\$(\d[\d,.]*)', dollar_convert, body)
 
-    # €X → ₽Y (≈ €X)
-    def euro_convert(m):
-        amt = m.group(1)
-        try:
-            rub = int(float(amt.replace(",", "")) * 103)
-            return f"₽{rub:,} (≈ €{amt})".replace(",", " ")
-        except:
-            return m.group(0)
-    body = re.sub(r'€(\d[\d,.]*)', euro_convert, body)
-
+        def euro_convert(m):
+            amt = m.group(1)
+            try:
+                rub = int(float(amt.replace(",", "")) * 103)
+                return f"₽{rub:,} (≈ €{amt})".replace(",", " ")
+            except:
+                return m.group(0)
+        body = re.sub(r'€(\d[\d,.]*)', euro_convert, body)
+    else:
+        def dollar_add_rub(m):
+            amt = m.group(1)
+            try:
+                rub = int(float(amt.replace(",", "")) * 95)
+                return f"${amt} (≈ ₽{rub:,})".replace(",", " ")
+            except:
+                return m.group(0)
+        body = re.sub(r'\$(\d[\d,.]*)', dollar_add_rub, body)
     return body
 
 def inject_maldives_qr(body, country_slug):
@@ -387,7 +394,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         body = inject_attraction_images(body)
 
     body = linkify_services(body)
-    body = convert_prices_to_rub(body)
+    body = convert_prices_to_rub(body, lang)
     body = inject_maldives_qr(body, country_slug)
 
     import re as _re
@@ -405,6 +412,8 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     faq_data = generate_faq(city_name, content_type, lang)
 
     alt_url = f"{country_slug}/{content_type_slug}.html"
+    en_alt_slug = get_url_slug(content_type, city_slug, "en")
+    ru_alt_slug = get_url_slug(content_type, city_slug, "ru")
     url = f"/{lang}/{country_slug}/{content_type_slug}.html"
 
     schema_article = generate_schema_article(seo, city_name, country_name, url, lang)
@@ -446,8 +455,8 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         faq=faq_data,
         related=related,
         canonical=seo["canonical"],
-        en_alt_url=alt_url if lang == "en" else alt_url,
-        ru_alt_url=alt_url if lang == "ru" else alt_url,
+        en_alt_url=f"{country_slug}/{en_alt_slug}.html",
+        ru_alt_url=f"{country_slug}/{ru_alt_slug}.html",
         schema_data=schema_data,
         breadcrumbs=breadcrumbs,
         alternate_url=alt_url,
