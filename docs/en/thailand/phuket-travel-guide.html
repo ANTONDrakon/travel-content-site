@@ -6,7 +6,7 @@
     <title>Phuket Travel Guide 2026</title>
     <meta name="description" content="Phuket Travel Guide 2026 Phuket, Thailand’s largest island, sprawls across 543 square kilometers in the Andaman Sea. It is a destination of stark contrasts: ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/phuket-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/phuket-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Phuket Travel Guide 2026">
     <meta property="og:description" content="Phuket Travel Guide 2026 Phuket, Thailand’s largest island, sprawls across 543 square kilometers in the Andaman Sea. It is a destination of stark contrasts: ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/phuket-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/phuket.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Phuket Travel Guide 2026</div>
@@ -369,38 +393,38 @@
 <h2>How to Get There</h2>
 <p>Phuket International Airport (HKT) is the primary gateway, located 32 kilometers north of Phuket Town. It handles over 16 million passengers annually. Direct flights are available from:</p>
 <ul>
-<li><strong>Bangkok (BKK/DMK):</strong> 1.5 hours, average price $30 (≈ ₽2 850)–$60 (≈ ₽5 700) (1,100–2,200 THB) with Thai AirAsia, Bangkok Airways, or Thai Lion.</li>
-<li><strong>Singapore (SIN):</strong> 2 hours, average price $80 (≈ ₽7 600)–$150 (≈ ₽14 250) (2,900–5,400 THB) with Scoot, Jetstar, or Singapore Airlines.</li>
-<li><strong>Kuala Lumpur (KUL):</strong> 1.5 hours, average price $40 (≈ ₽3 800)–$90 (≈ ₽8 550) (1,500–3,300 THB) with AirAsia.</li>
-<li><strong>Hong Kong (HKG):</strong> 3.5 hours, average price $150 (≈ ₽14 250)–$250 (≈ ₽23 750) (5,500–9,100 THB) with Cathay Pacific or HK Express.</li>
-<li><strong>Dubai (DXB):</strong> 7 hours, average price $400 (≈ ₽38 000)–$600 (≈ ₽57 000) (14,600–21,900 THB) with Emirates (seasonal).</li>
-<li><strong>London (LHR):</strong> 11–13 hours (one stop), average price $500 (≈ ₽47 500)–$800 (≈ ₽76 000) (18,250–29,200 THB) with Qatar Airways or Etihad.</li>
+<li><strong>Bangkok (BKK/DMK):</strong> 1.5 hours, average price $30–$60(1,100–2,200 THB) with Thai AirAsia, Bangkok Airways, or Thai Lion.</li>
+<li><strong>Singapore (SIN):</strong> 2 hours, average price $80–$150(2,900–5,400 THB) with Scoot, Jetstar, or Singapore Airlines.</li>
+<li><strong>Kuala Lumpur (KUL):</strong> 1.5 hours, average price $40–$90(1,500–3,300 THB) with AirAsia.</li>
+<li><strong>Hong Kong (HKG):</strong> 3.5 hours, average price $150–$250(5,500–9,100 THB) with Cathay Pacific or HK Express.</li>
+<li><strong>Dubai (DXB):</strong> 7 hours, average price $400–$600(14,600–21,900 THB) with Emirates (seasonal).</li>
+<li><strong>London (LHR):</strong> 11–13 hours (one stop), average price $500–$800(18,250–29,200 THB) with Qatar Airways or Etihad.</li>
 </ul>
-<p>From the airport, a taxi to Patong costs a fixed 800 THB ($22 (≈ ₽2 090)), to Phuket Town 600 THB ($17 (≈ ₽1 615)), and to Bang Tao 700 THB ($19 (≈ ₽1 805)). The new Airport Bus (RTC Smart Bus) costs 100 THB ($2.80 (≈ ₽266)) to Phuket Town and operates every 30 minutes from 6:00 AM to 8:00 PM.</p>
+<p>From the airport, a taxi to Patong costs a fixed 800 THB ($22), to Phuket Town 600 THB ($17), and to Bang Tao 700 THB ($19). The new Airport Bus (RTC Smart Bus) costs 100 THB ($3) to Phuket Town and operates every 30 minutes from 6:00 AM to 8:00 PM.</p>
 
 <h2>Where to Stay</h2>
 <h3>Patong (Nightlife & Budget)</h3>
 <ul>
-<li><strong>Budget:</strong> Lub d Phuket Patong – dorm beds from $12 (≈ ₽1 140)/night (430 THB), private rooms from $40 (≈ ₽3 800) (1,460 THB).</li>
-<li><strong>Mid-range:</strong> Holiday Inn Resort Patong – $80 (≈ ₽7 600)–$120 (≈ ₽11 400)/night (2,900–4,400 THB).</li>
-<li><strong>Luxury:</strong> Amari Phuket – $180 (≈ ₽17 100)–$350 (≈ ₽33 250)/night (6,600–12,800 THB), cliffside views.</li>
+<li><strong>Budget:</strong> Lub d Phuket Patong – dorm beds from $12/night (430 THB), private rooms from $40(1,460 THB).</li>
+<li><strong>Mid-range:</strong> Holiday Inn Resort Patong – $80–$120/night (2,900–4,400 THB).</li>
+<li><strong>Luxury:</strong> Amari Phuket – $180–$350/night (6,600–12,800 THB), cliffside views.</li>
 </ul>
 <h3>Kata & Karon (Family & Relaxed)</h3>
 <ul>
-<li><strong>Budget:</strong> The Boathouse Phuket – $50 (≈ ₽4 750)/night (1,830 THB) for basic rooms.</li>
-<li><strong>Mid-range:</strong> Kata Beach Resort – $90 (≈ ₽8 550)–$130 (≈ ₽12 350)/night (3,300–4,750 THB).</li>
-<li><strong>Luxury:</strong> The Shore at Katathani – $250 (≈ ₽23 750)–$500 (≈ ₽47 500)/night (9,100–18,250 THB).</li>
+<li><strong>Budget:</strong> The Boathouse Phuket – $50/night (1,830 THB) for basic rooms.</li>
+<li><strong>Mid-range:</strong> Kata Beach Resort – $90–$130/night (3,300–4,750 THB).</li>
+<li><strong>Luxury:</strong> The Shore at Katathani – $250–$500/night (9,100–18,250 THB).</li>
 </ul>
 <h3>Rawai & Nai Harn (Quiet & Nature)</h3>
 <ul>
-<li><strong>Budget:</strong> Baan Krating Phuket Resort – $35 (≈ ₽3 325)/night (1,280 THB).</li>
-<li><strong>Mid-range:</strong> The Vijitt Resort – $110 (≈ ₽10 450)/night (4,000 THB).</li>
-<li><strong>Luxury:</strong> The Nai Harn – $300 (≈ ₽28 500)–$600 (≈ ₽57 000)/night (10,950–21,900 THB).</li>
+<li><strong>Budget:</strong> Baan Krating Phuket Resort – $35/night (1,280 THB).</li>
+<li><strong>Mid-range:</strong> The Vijitt Resort – $110/night (4,000 THB).</li>
+<li><strong>Luxury:</strong> The Nai Harn – $300–$600/night (10,950–21,900 THB).</li>
 </ul>
 <h3>Phuket Town (Culture & Budget)</h3>
 <ul>
-<li><strong>Budget:</strong> The Memory at On On Hotel – $25 (≈ ₽2 375)/night (910 THB).</li>
-<li><strong>Mid-range:</strong> The Blue Elephant Hotel – $70 (≈ ₽6 650)/night (2,550 THB).</li>
+<li><strong>Budget:</strong> The Memory at On On Hotel – $25/night (910 THB).</li>
+<li><strong>Mid-range:</strong> The Blue Elephant Hotel – $70/night (2,550 THB).</li>
 </ul>
 
 <h2>Top 15 Attractions</h2>
@@ -408,54 +432,54 @@
 <tr><th>#</th><th>Attraction</th><th>Description</th><th>Ticket Price</th><th>Opening Hours</th></tr>
 <tr><td>1</td><td>Big Buddha (Wat Phra Sing)</td><td>A 45-meter-tall marble Buddha statue atop Nakkerd Hill, offering panoramic views of Phuket. The site includes a meditation hall and small museum.</td><td>Free (donations welcome)</td><td>6:00 AM – 6:30 PM daily</td></tr>
 <tr><td>2</td><td>Wat Chalong</td><td>The largest and most revered Buddhist temple in Phuket. Features a 60-meter-high chedi containing a relic of the Buddha.</td><td>Free</td><td>7:00 AM – 5:00 PM daily</td></tr>
-<tr><td>3</td><td>Phi Phi Islands (day trip)</td><td>Iconic limestone karst islands with Maya Bay, Pileh Lagoon, and Viking Cave. Snorkeling and beach time included.</td><td>Day tour: $40 (≈ ₽3 800)–$80 (≈ ₽7 600) (1,460–2,920 THB) including ferry, lunch, and snorkel gear</td><td>Ferries depart 7:00 AM – 8:30 AM; return 4:00 PM</td></tr>
-<tr><td>4</td><td>Similan Islands</td><td>World-class diving site with crystal-clear visibility (10–30 meters), granite boulders, and sea turtles. Closed October–May for monsoon.</td><td>Day tour: $80 (≈ ₽7 600)–$120 (≈ ₽11 400) (2,920–4,380 THB) including national park fee (500 THB foreigner)</td><td>Open: October 15 – May 15; daily 8:00 AM – 5:00 PM</td></tr>
-<tr><td>5</td><td>James Bond Island (Phang Nga Bay)</td><td>Dramatic limestone karst featured in "The Man with the Golden Gun." Explore by longtail boat, kayak through sea caves.</td><td>Day tour: $50 (≈ ₽4 750)–$90 (≈ ₽8 550) (1,830–3,290 THB)</td><td>Departures 7:30 AM – 1:00 PM</td></tr>
-<tr><td>6</td><td>Old Phuket Town</td><td>Historic district with Sino-Portuguese shophouses, street art, and the Phuket Thai Hua Museum. Best explored on foot.</td><td>Free (museum: 200 THB/$5.50 (≈ ₽522))</td><td>Museum: 9:00 AM – 5:00 PM (closed Mon)</td></tr>
+<tr><td>3</td><td>Phi Phi Islands (day trip)</td><td>Iconic limestone karst islands with Maya Bay, Pileh Lagoon, and Viking Cave. Snorkeling and beach time included.</td><td>Day tour: $40–$80(1,460–2,920 THB) including ferry, lunch, and snorkel gear</td><td>Ferries depart 7:00 AM – 8:30 AM; return 4:00 PM</td></tr>
+<tr><td>4</td><td>Similan Islands</td><td>World-class diving site with crystal-clear visibility (10–30 meters), granite boulders, and sea turtles. Closed October–May for monsoon.</td><td>Day tour: $80–$120(2,920–4,380 THB) including national park fee (500 THB foreigner)</td><td>Open: October 15 – May 15; daily 8:00 AM – 5:00 PM</td></tr>
+<tr><td>5</td><td>James Bond Island (Phang Nga Bay)</td><td>Dramatic limestone karst featured in "The Man with the Golden Gun." Explore by longtail boat, kayak through sea caves.</td><td>Day tour: $50–$90(1,830–3,290 THB)</td><td>Departures 7:30 AM – 1:00 PM</td></tr>
+<tr><td>6</td><td>Old Phuket Town</td><td>Historic district with Sino-Portuguese shophouses, street art, and the Phuket Thai Hua Museum. Best explored on foot.</td><td>Free (museum: 200 THB/$6)</td><td>Museum: 9:00 AM – 5:00 PM (closed Mon)</td></tr>
 <tr><td>7</td><td>Patong Beach</td><td>Phuket’s most famous beach, 3.5 km long. Bustling with jet skis, parasailing, and nightlife along Bangla Road.</td><td>Free</td><td>24/7</td></tr>
 <tr><td>8</td><td>Kata Viewpoint</td><td>Three-beach viewpoint overlooking Kata Yai, Kata Noi, and Karon. Popular for sunset photography.</td><td>Free</td><td>24/7 (best at 5:30 PM – 6:30 PM)</td></tr>
-<tr><td>9</td><td>Phuket Elephant Sanctuary</td><td>Ethical sanctuary where rescued elephants roam freely. No riding; feeding and mud baths allowed.</td><td>$80 (≈ ₽7 600) (2,920 THB) for half-day visit</td><td>8:00 AM – 12:00 PM or 1:00 PM – 5:00 PM</td></tr>
+<tr><td>9</td><td>Phuket Elephant Sanctuary</td><td>Ethical sanctuary where rescued elephants roam freely. No riding; feeding and mud baths allowed.</td><td>$80(2,920 THB) for half-day visit</td><td>8:00 AM – 12:00 PM or 1:00 PM – 5:00 PM</td></tr>
 <tr><td>10</td><td>Promthep Cape</td><td>Southernmost point of Phuket, famous for sunset views. Lighthouse and small shrine on site.</td><td>Free</td><td>24/7 (sunset around 6:00 PM–6:30 PM)</td></tr>
-<tr><td>11</td><td>Bangla Road (Walking Street)</td><td>Pedestrian-only street in Patong, packed with bars, nightclubs, and street performers. Open from 6:00 PM to 4:00 AM.</td><td>Free entry; drinks $3 (≈ ₽285)–$10 (≈ ₽950) (110–365 THB)</td><td>6:00 PM – 4:00 AM daily</td></tr>
-<tr><td>12</td><td>Phuket FantaSea</td><td>Cultural theme park with a buffet dinner, carnival games, and a Las Vegas-style show about Thai mythology.</td><td>$50 (≈ ₽4 750) (1,830 THB) including dinner and show</td><td>5:30 PM – 11:00 PM (show at 8:30 PM)</td></tr>
-<tr><td>13</td><td>Splash Jungle Water Park</td><td>Water park with 12 slides, a wave pool, and a lazy river. Good for families.</td><td>$25 (≈ ₽2 375) (910 THB) adults, $15 (≈ ₽1 425) (550 THB) children</td><td>10:00 AM – 5:00 PM daily</td></tr>
-<tr><td>14</td><td>Gibbon Rehabilitation Centre</td><td>Rescue center for gibbons confiscated from the illegal pet trade. Educational talks and walking trails.</td><td>Free (donation suggested: 200 THB/$5.50 (≈ ₽522))</td><td>9:00 AM – 4:00 PM daily</td></tr>
-<tr><td>15</td><td>Khao Sok National Park (day trip)</td><td>Jungle park 2 hours north of Phuket, with Cheow Lan Lake, limestone cliffs, and wild elephants. Overnight stays recommended.</td><td>Day tour: $70 (≈ ₽6 650)–$100 (≈ ₽9 500) (2,550–3,650 THB) including park fee (300 THB foreigner)</td><td>Departures 6:00 AM; return 8:00 PM</td></tr>
+<tr><td>11</td><td>Bangla Road (Walking Street)</td><td>Pedestrian-only street in Patong, packed with bars, nightclubs, and street performers. Open from 6:00 PM to 4:00 AM.</td><td>Free entry; drinks $3–$10(110–365 THB)</td><td>6:00 PM – 4:00 AM daily</td></tr>
+<tr><td>12</td><td>Phuket FantaSea</td><td>Cultural theme park with a buffet dinner, carnival games, and a Las Vegas-style show about Thai mythology.</td><td>$50(1,830 THB) including dinner and show</td><td>5:30 PM – 11:00 PM (show at 8:30 PM)</td></tr>
+<tr><td>13</td><td>Splash Jungle Water Park</td><td>Water park with 12 slides, a wave pool, and a lazy river. Good for families.</td><td>$25(910 THB) adults, $15(550 THB) children</td><td>10:00 AM – 5:00 PM daily</td></tr>
+<tr><td>14</td><td>Gibbon Rehabilitation Centre</td><td>Rescue center for gibbons confiscated from the illegal pet trade. Educational talks and walking trails.</td><td>Free (donation suggested: 200 THB/$6)</td><td>9:00 AM – 4:00 PM daily</td></tr>
+<tr><td>15</td><td>Khao Sok National Park (day trip)</td><td>Jungle park 2 hours north of Phuket, with Cheow Lan Lake, limestone cliffs, and wild elephants. Overnight stays recommended.</td><td>Day tour: $70–$100(2,550–3,650 THB) including park fee (300 THB foreigner)</td><td>Departures 6:00 AM; return 8:00 PM</td></tr>
 </table>
 
 <h2>Getting Around</h2>
 <p>Phuket’s traffic has improved with the new LRT, but taxis and tuk-tuks remain the most common options.</p>
 <ul>
-<li><strong>Phuket Light Rail (LRT):</strong> Partially open from Phuket Airport to Phuket Town (10 stations). Fares: 20–50 THB ($0.55 (≈ ₽52)–$1.40 (≈ ₽133)). Frequency: every 10 minutes, 6:00 AM–10:00 PM. Extensions to Patong and Chalong expected by late 2026.</li>
-<li><strong>Smart Bus (RTC):</strong> Airport to Phuket Town: 100 THB ($2.80 (≈ ₽266)). Airport to Patong: 170 THB ($4.70 (≈ ₽446)). Runs every 30 minutes.</li>
-<li><strong>Songthaew (shared trucks):</strong> Fixed routes between towns. Phuket Town to Patong: 40 THB ($1.10 (≈ ₽104)). No fixed schedule; flag down on main roads.</li>
-<li><strong>Taxi (metered):</strong> From airport: 600–800 THB ($17 (≈ ₽1 615)–$22 (≈ ₽2 090)). Within town: 200–400 THB ($5.50 (≈ ₽522)–$11 (≈ ₽1 045)). Always negotiate or use Grab app (100–300 THB for short trips).</li>
-<li><strong>Tuk-tuk:</strong> Short rides in Patong: 150–300 THB ($4 (≈ ₽380)–$8 (≈ ₽760)). Longer trips (e.g., Patong to Kata): 400–600 THB ($11 (≈ ₽1 045)–$17 (≈ ₽1 615)).</li>
-<li><strong>Motorbike rental:</strong> 200–300 THB/day ($5.50 (≈ ₽522)–$8.30 (≈ ₽788)). Requires an International Driving Permit (IDP). Police checkpoints common; fines for no license: 500–1,000 THB ($14 (≈ ₽1 330)–$28 (≈ ₽2 660)).</li>
-<li><strong>Car rental:</strong> 800–1,500 THB/day ($22 (≈ ₽2 090)–$41 (≈ ₽3 895)) from Hertz, Avis, or local agencies. Gas: 35 THB/liter ($0.96 (≈ ₽91)).</li>
+<li><strong>Phuket Light Rail (LRT):</strong> Partially open from Phuket Airport to Phuket Town (10 stations). Fares: 20–50 THB ($1–$1). Frequency: every 10 minutes, 6:00 AM–10:00 PM. Extensions to Patong and Chalong expected by late 2026.</li>
+<li><strong>Smart Bus (RTC):</strong> Airport to Phuket Town: 100 THB ($3). Airport to Patong: 170 THB ($5). Runs every 30 minutes.</li>
+<li><strong>Songthaew (shared trucks):</strong> Fixed routes between towns. Phuket Town to Patong: 40 THB ($1). No fixed schedule; flag down on main roads.</li>
+<li><strong>Taxi (metered):</strong> From airport: 600–800 THB ($17–$22). Within town: 200–400 THB ($6–$11). Always negotiate or use Grab app (100–300 THB for short trips).</li>
+<li><strong>Tuk-tuk:</strong> Short rides in Patong: 150–300 THB ($4–$8). Longer trips (e.g., Patong to Kata): 400–600 THB ($11–$17).</li>
+<li><strong>Motorbike rental:</strong> 200–300 THB/day ($6–$8). Requires an International Driving Permit (IDP). Police checkpoints common; fines for no license: 500–1,000 THB ($14–$28).</li>
+<li><strong>Car rental:</strong> 800–1,500 THB/day ($22–$41) from Hertz, Avis, or local agencies. Gas: 35 THB/liter ($1).</li>
 </ul>
 
 <h2>Where to Eat</h2>
 <h3>Street Food & Local Markets</h3>
 <ul>
-<li><strong>Rassada Market (Phuket Town):</strong> Open 4:00 AM–10:00 AM. Pad Thai 50 THB ($1.40 (≈ ₽133)), mango sticky rice 60 THB ($1.70 (≈ ₽161)).</li>
-<li><strong>Chillva Market (Phuket Town):</strong> Open 4:00 PM–11:00 PM (closed Mon). Grilled seafood skewers 80 THB ($2.20 (≈ ₽209)), roti 30 THB ($0.80 (≈ ₽76)).</li>
-<li><strong>Patong Walking Street:</strong> Night market. Tom yum soup 120 THB ($3.30 (≈ ₽313)), fresh spring rolls 40 THB ($1.10 (≈ ₽104)).</li>
+<li><strong>Rassada Market (Phuket Town):</strong> Open 4:00 AM–10:00 AM. Pad Thai 50 THB ($1), mango sticky rice 60 THB ($2).</li>
+<li><strong>Chillva Market (Phuket Town):</strong> Open 4:00 PM–11:00 PM (closed Mon). Grilled seafood skewers 80 THB ($2), roti 30 THB ($1).</li>
+<li><strong>Patong Walking Street:</strong> Night market. Tom yum soup 120 THB ($3), fresh spring rolls 40 THB ($1).</li>
 </ul>
 <h3>Restaurants (Mid-Range)</h3>
 <ul>
-<li><strong>Kan Eang@Pier (Chalong):</strong> Seafood platter for two: 800 THB ($22 (≈ ₽2 090)). Open 10:00 AM–10:00 PM.</li>
-<li><strong>Suay Restaurant (Phuket Town):</strong> Modern Thai. Green curry with soft-shell crab: 350 THB ($9.60 (≈ ₽912)). Open 5:00 PM–11:00 PM.</li>
-<li><strong>The Boathouse Wine & Grill (Kata):</strong> Fine dining. Steak 1,200 THB ($33 (≈ ₽3 135)). Open 6:00 PM–10:00 PM.</li>
+<li><strong>Kan Eang@Pier (Chalong):</strong> Seafood platter for two: 800 THB ($22). Open 10:00 AM–10:00 PM.</li>
+<li><strong>Suay Restaurant (Phuket Town):</strong> Modern Thai. Green curry with soft-shell crab: 350 THB ($10). Open 5:00 PM–11:00 PM.</li>
+<li><strong>The Boathouse Wine & Grill (Kata):</strong> Fine dining. Steak 1,200 THB ($33). Open 6:00 PM–10:00 PM.</li>
 </ul>
 <h3>Local Dishes to Try</h3>
 <ul>
-<li><strong>Hokkien Mee:</strong> Stir-fried yellow noodles with pork, squid, and soy sauce. 60–100 THB ($1.70 (≈ ₽161)–$2.80 (≈ ₽266)).</li>
-<li><strong>Tom Yam Goong:</strong> Spicy shrimp soup with lemongrass and galangal. 150–250 THB ($4.10 (≈ ₽389)–$6.80 (≈ ₽646)).</li>
-<li><strong>Gaeng Som:</strong> Sour orange curry with fish. 120–180 THB ($3.30 (≈ ₽313)–$4.90 (≈ ₽465)).</li>
-<li><strong>Moo Hong:</strong> Phuket-style braised pork belly. 100–150 THB ($2.80 (≈ ₽266)–$4.10 (≈ ₽389)).</li>
+<li><strong>Hokkien Mee:</strong> Stir-fried yellow noodles with pork, squid, and soy sauce. 60–100 THB ($2–$3).</li>
+<li><strong>Tom Yam Goong:</strong> Spicy shrimp soup with lemongrass and galangal. 150–250 THB ($4–$7).</li>
+<li><strong>Gaeng Som:</strong> Sour orange curry with fish. 120–180 THB ($3–$5).</li>
+<li><strong>Moo Hong:</strong> Phuket-style braised pork belly. 100–150 THB ($3–$4).</li>
 </ul>
-<p>Average meal costs: Street food $2 (≈ ₽190)–$4  (≈ ₽380) mid-range restaurant $8 (≈ ₽760)–$15  (≈ ₽1 425) fine dining $25 (≈ ₽2 375)+ per person.</p>
+<p>Average meal costs: Street food $2–$4mid-range restaurant $8–$15fine dining $25+ per person.</p>
 
 <h2>Best Time to Visit</h2>
 <table>
@@ -573,6 +597,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -601,6 +626,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -618,8 +644,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

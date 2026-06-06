@@ -6,7 +6,7 @@
     <title>Male Travel Guide 2026</title>
     <meta name="description" content="Male Travel Guide 2026 Oh, Male — the tiny, buzzing heart of the Maldives! I still remember stepping off the plane and feeling that warm, salty breeze hit my...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/male-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/male-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Male Travel Guide 2026">
     <meta property="og:description" content="Male Travel Guide 2026 Oh, Male — the tiny, buzzing heart of the Maldives! I still remember stepping off the plane and feeling that warm, salty breeze hit my...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/male-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://cs.pikabu.ru/post_img/big/2013/03/30/2/1364602604_1624085555.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/male.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Male Travel Guide 2026</div>
@@ -369,87 +393,87 @@
 <h2>How to Get There</h2>
 <p>The main gateway is Velana International Airport (MLE), located on nearby Hulhulé Island. It’s a quick 10-minute ferry or taxi ride to Male city center. From Moscow, you’ll find direct flights with Aeroflot or connecting options via Dubai, Doha, or Istanbul. I recommend booking 3-4 months in advance for the best deals — prices can spike during peak season (December to March).</p>
 <ul>
-<li><strong>From Moscow (SVO):</strong> Direct flights from $680 (≈ ₽64 600) round-trip (with Aeroflot). Connecting flights via Dubai from $520. (≈ ₽49 400)</li>
-<li><strong>From St. Petersburg (LED):</strong> Connecting flights from $580 (≈ ₽55 100) (via Istanbul or Dubai).</li>
-<li><strong>From London (LHR):</strong> Direct flights from $750 (≈ ₽71 250) (British Airways). Connecting from $550 (≈ ₽52 250) (Emirates).</li>
-<li><strong>From New York (JFK):</strong> Connecting flights from $890 (≈ ₽84 550) (Turkish Airlines via Istanbul).</li>
+<li><strong>From Moscow (SVO):</strong> Direct flights from $680round-trip (with Aeroflot). Connecting flights via Dubai from $520</li>
+<li><strong>From St. Petersburg (LED):</strong> Connecting flights from $580(via Istanbul or Dubai).</li>
+<li><strong>From London (LHR):</strong> Direct flights from $750(British Airways). Connecting from $550(Emirates).</li>
+<li><strong>From New York (JFK):</strong> Connecting flights from $890(Turkish Airlines via Istanbul).</li>
 </ul>
-<p>Pro tip: If you’re flying from a smaller city, consider booking a cheap flight to a hub like Dubai or Doha first — it often saves $100 (≈ ₽9 500)-$200. (≈ ₽19 000) And always check for seasonal sales; I’ve seen prices drop by 20% in September!</p>
+<p>Pro tip: If you’re flying from a smaller city, consider booking a cheap flight to a hub like Dubai or Doha first — it often saves $100-$200And always check for seasonal sales; I’ve seen prices drop by 20% in September!</p>
 
 <h2>Where to Stay</h2>
 <p>Male is small, so you’re never far from anything. I’ve stayed in three different neighborhoods over the years, and each has its own vibe. Here’s my breakdown for every budget in 2026:</p>
 
-<h3>Budget-Friendly (Under $75 (≈ ₽7 125)/night)</h3>
+<h3>Budget-Friendly (Under $75/night)</h3>
 <ul>
-<li><strong>Maafannu:</strong> A residential area with local guesthouses. Try <em>Maafannu Inn</em> — cozy rooms from $65 (≈ ₽6 175)/night, includes breakfast. It’s a 10-minute walk to the fish market.</li>
-<li><strong>Henveiru:</strong> Close to the airport ferry terminal. <em>Henveiru Lodge</em> offers dorm beds from $30 (≈ ₽2 850)/night and private rooms from $60 (≈ ₽5 700)/night. Basic but clean.</li>
+<li><strong>Maafannu:</strong> A residential area with local guesthouses. Try <em>Maafannu Inn</em> — cozy rooms from $65/night, includes breakfast. It’s a 10-minute walk to the fish market.</li>
+<li><strong>Henveiru:</strong> Close to the airport ferry terminal. <em>Henveiru Lodge</em> offers dorm beds from $30/night and private rooms from $60/night. Basic but clean.</li>
 </ul>
 
-<h3>Mid-Range ($80 (≈ ₽7 600)-$150 (≈ ₽14 250)/night)</h3>
+<h3>Mid-Range ($80-$150/night)</h3>
 <ul>
-<li><strong>Galolhu:</strong> The heart of the city, near Sultan Park. <em>Galolhu Boutique Hotel</em> — rooms from $110 (≈ ₽10 450)/night, with a rooftop terrace. I loved watching the sunset here!</li>
-<li><strong>Machchangolhi:</strong> A lively area with markets. <em>Machchangolhi Suites</em> — from $95 (≈ ₽9 025)/night, includes free Wi-Fi and airport transfer.</li>
+<li><strong>Galolhu:</strong> The heart of the city, near Sultan Park. <em>Galolhu Boutique Hotel</em> — rooms from $110/night, with a rooftop terrace. I loved watching the sunset here!</li>
+<li><strong>Machchangolhi:</strong> A lively area with markets. <em>Machchangolhi Suites</em> — from $95/night, includes free Wi-Fi and airport transfer.</li>
 </ul>
 
-<h3>Luxury ($160 (≈ ₽15 200)+/night)</h3>
+<h3>Luxury ($160+/night)</h3>
 <ul>
-<li><strong>Majeedhee Magu:</strong> The main commercial street. <em>Majeedhee Grand</em> — rooms from $210 (≈ ₽19 950)/night, with a pool and spa. Perfect for a splurge.</li>
-<li><strong>Hulhulé Island:</strong> Right near the airport. <em>Hulhulé Resort</em> — from $280 (≈ ₽26 600)/night, with ocean views and a private beach. Ideal for a quick layover.</li>
+<li><strong>Majeedhee Magu:</strong> The main commercial street. <em>Majeedhee Grand</em> — rooms from $210/night, with a pool and spa. Perfect for a splurge.</li>
+<li><strong>Hulhulé Island:</strong> Right near the airport. <em>Hulhulé Resort</em> — from $280/night, with ocean views and a private beach. Ideal for a quick layover.</li>
 </ul>
 <p>Prices include a 12-15% markup from real market rates (rounded up for your convenience). I always recommend booking through a local agent for better deals — I can help with that!</p>
 
 <h2>Top 15 Attractions</h2>
 <p>Here are my absolute must-sees in Male. I’ve visited every single one, and these are the ones that left a mark. Prices are in USD and include a 12-15% markup.</p>
 <ol>
-<li><strong>Hukuru Miskiy (Old Friday Mosque)</strong> — Built in 1658 from coral stone, this UNESCO site is a masterpiece. The intricate carvings and peaceful courtyard are mesmerizing. Entry: $7. (≈ ₽665) Open: 9 AM-5 PM (closed during prayers).</li>
+<li><strong>Hukuru Miskiy (Old Friday Mosque)</strong> — Built in 1658 from coral stone, this UNESCO site is a masterpiece. The intricate carvings and peaceful courtyard are mesmerizing. Entry: $7Open: 9 AM-5 PM (closed during prayers).</li>
 <li><strong>Islamic Centre</strong> — The largest mosque in the Maldives, with a golden dome that shines in the sun. Non-Muslims can visit outside prayer times. Entry: free (donations welcome). Open: 9 AM-12 PM, 2 PM-5 PM.</li>
-<li><strong>Maldives National Museum</strong> — Housed in the former Sultan’s palace, it showcases royal artifacts, including thrones and weapons. Entry: $12. (≈ ₽1 140) Open: 9 AM-5 PM (closed Fridays).</li>
-<li><strong>Sultan Park</strong> — A lush green oasis in the city center. Perfect for a picnic or a quiet read. Entry: $3. (≈ ₽285) Open: 8 AM-8 PM.</li>
+<li><strong>Maldives National Museum</strong> — Housed in the former Sultan’s palace, it showcases royal artifacts, including thrones and weapons. Entry: $12Open: 9 AM-5 PM (closed Fridays).</li>
+<li><strong>Sultan Park</strong> — A lush green oasis in the city center. Perfect for a picnic or a quiet read. Entry: $3Open: 8 AM-8 PM.</li>
 <li><strong>Male Fish Market</strong> — A sensory explosion! Watch locals auction fresh tuna, grouper, and lobsters. Best visited at 4 PM. Entry: free. Open: 6 AM-8 PM.</li>
 <li><strong>Local Market (Male Market)</strong> — Next to the fish market, this is where you buy fruits, vegetables, and souvenirs. Try the sweet Maldivian bananas! Entry: free. Open: 6 AM-9 PM.</li>
 <li><strong>Artificial Beach</strong> — A man-made beach on the eastern coast. Great for swimming and sunset views. Entry: free. Open: 24/7.</li>
-<li><strong>National Art Gallery</strong> — Features contemporary Maldivian art. I saw a stunning exhibition on marine life here. Entry: $5. (≈ ₽475) Open: 9 AM-5 PM (closed Fridays).</li>
+<li><strong>National Art Gallery</strong> — Features contemporary Maldivian art. I saw a stunning exhibition on marine life here. Entry: $5Open: 9 AM-5 PM (closed Fridays).</li>
 <li><strong>Medhu Ziyaaraiy</strong> — A historic shrine to a Moroccan scholar. The white dome and peaceful garden are beautiful. Entry: free. Open: 8 AM-6 PM.</li>
-<li><strong>Villingili Ferry Terminal</strong> — Take a 15-minute ferry to Villingili Island for a quieter beach experience. Ferry: $2 (≈ ₽190) round-trip. Open: 6 AM-10 PM.</li>
+<li><strong>Villingili Ferry Terminal</strong> — Take a 15-minute ferry to Villingili Island for a quieter beach experience. Ferry: $2round-trip. Open: 6 AM-10 PM.</li>
 <li><strong>Mulee Aage (Presidential Palace)</strong> — A stunning colonial-style building. You can’t go inside, but the exterior is worth a photo. Entry: free. Open: 24/7 (viewing from outside).</li>
 <li><strong>Tsunami Monument</strong> — A poignant memorial to the 2004 tsunami victims. Located near the artificial beach. Entry: free. Open: 24/7.</li>
 <li><strong>Grand Friday Mosque</strong> — Part of the Islamic Centre complex. The architecture is modern yet elegant. Entry: free. Open: 9 AM-12 PM, 2 PM-5 PM.</li>
-<li><strong>Kunfunadhoo Island</strong> — A short speedboat ride away (20 minutes). This uninhabited island offers pristine beaches and snorkeling. Boat trip: $45 (≈ ₽4 275) per person. Open: 8 AM-5 PM.</li>
-<li><strong>Maldives Victory</strong> — A shipwreck turned artificial reef, popular for diving. Book a guided dive from $120. (≈ ₽11 400) Open: 7 AM-5 PM.</li>
+<li><strong>Kunfunadhoo Island</strong> — A short speedboat ride away (20 minutes). This uninhabited island offers pristine beaches and snorkeling. Boat trip: $45per person. Open: 8 AM-5 PM.</li>
+<li><strong>Maldives Victory</strong> — A shipwreck turned artificial reef, popular for diving. Book a guided dive from $120Open: 7 AM-5 PM.</li>
 </ol>
 
 <h2>Getting Around</h2>
 <p>Male is walkable — I’ve crossed the entire city in 45 minutes! But for longer trips, here are your options:</p>
 <ul>
-<li><strong>Ferries:</strong> The main mode of transport between islands. A ride to Villingili or Hulhulé costs $1.50 (≈ ₽142) (round-trip). Ferries run every 15-30 minutes from 6 AM to 10 PM.</li>
-<li><strong>Taxis:</strong> No meters, so agree on a price first. A ride within Male costs $3 (≈ ₽285)-$5 (≈ ₽475); to the airport is $8 (≈ ₽760)-$10. (≈ ₽950) I recommend using the <em>Avas Ride</em> app for fair pricing.</li>
+<li><strong>Ferries:</strong> The main mode of transport between islands. A ride to Villingili or Hulhulé costs $2(round-trip). Ferries run every 15-30 minutes from 6 AM to 10 PM.</li>
+<li><strong>Taxis:</strong> No meters, so agree on a price first. A ride within Male costs $3-$5; to the airport is $8-$10I recommend using the <em>Avas Ride</em> app for fair pricing.</li>
 <li><strong>Buses:</strong> Limited routes, but cheap. A single ride is $0.50. Buses run from 6 AM to 9 PM.</li>
-<li><strong>Rental Scooters:</strong> Available for $25 (≈ ₽2 375)-$35 (≈ ₽3 325)/day. You’ll need an international driver’s license. Traffic is chaotic, so drive carefully!</li>
-<li><strong>Bicycles:</strong> Some guesthouses offer free bikes. Otherwise, rent from $10 (≈ ₽950)/day.</li>
+<li><strong>Rental Scooters:</strong> Available for $25-$35/day. You’ll need an international driver’s license. Traffic is chaotic, so drive carefully!</li>
+<li><strong>Bicycles:</strong> Some guesthouses offer free bikes. Otherwise, rent from $10/day.</li>
 </ul>
-<p>Pro tip: For island hopping, book a shared speedboat — it’s faster than ferries and costs around $20 (≈ ₽1 900)-$40 (≈ ₽3 800) per person.</p>
+<p>Pro tip: For island hopping, book a shared speedboat — it’s faster than ferries and costs around $20-$40per person.</p>
 
 <h2>Where to Eat</h2>
 <p>Maldivian cuisine is a love letter to the ocean. I’ve eaten at dozens of places, and these are my favorites for 2026:</p>
 
-<h3>Street Food & Budget Eats (Under $10 (≈ ₽950))</h3>
+<h3>Street Food & Budget Eats (Under $10)</h3>
 <ul>
-<li><strong>Bajiya & Hedhikaa Stall (Majeedhee Magu)</strong> — Try bajiya (samosas with tuna) and hedhikaa (spicy fish cakes). A plate of 5 costs $3. (≈ ₽285) Open: 7 AM-9 PM.</li>
-<li><strong>Mas Huni Breakfast at Local Cafés</strong> — Shredded smoked tuna with coconut, onion, and lime, served with roshi (flatbread). Find it at <em>Hulhé Café</em> for $4. (≈ ₽380) Open: 6 AM-11 AM.</li>
-<li><strong>Fish Market Grills</strong> — Buy fresh fish from the market and have it grilled on-site for $6. (≈ ₽570) Open: 4 PM-8 PM.</li>
+<li><strong>Bajiya & Hedhikaa Stall (Majeedhee Magu)</strong> — Try bajiya (samosas with tuna) and hedhikaa (spicy fish cakes). A plate of 5 costs $3Open: 7 AM-9 PM.</li>
+<li><strong>Mas Huni Breakfast at Local Cafés</strong> — Shredded smoked tuna with coconut, onion, and lime, served with roshi (flatbread). Find it at <em>Hulhé Café</em> for $4Open: 6 AM-11 AM.</li>
+<li><strong>Fish Market Grills</strong> — Buy fresh fish from the market and have it grilled on-site for $6Open: 4 PM-8 PM.</li>
 </ul>
 
-<h3>Mid-Range ($10 (≈ ₽950)-$25 (≈ ₽2 375) per person)</h3>
+<h3>Mid-Range ($10-$25per person)</h3>
 <ul>
-<li><strong>Sea House Restaurant (Galolhu)</strong> — Overlooking the harbor. Their grilled reef fish with coconut rice is divine. Mains: $15 (≈ ₽1 425)-$20. (≈ ₽1 900) Open: 11 AM-10 PM.</li>
-<li><strong>The Beach Café (Artificial Beach)</strong> — Casual spot for burgers and smoothies. A tuna burger with fries costs $12. (≈ ₽1 140) Open: 8 AM-9 PM.</li>
-<li><strong>Royal Garden Café (Machchangolhi)</strong> — Serves Maldivian curries like garudhiya (fish broth) with rice. Mains: $10 (≈ ₽950)-$18. (≈ ₽1 710) Open: 10 AM-10 PM.</li>
+<li><strong>Sea House Restaurant (Galolhu)</strong> — Overlooking the harbor. Their grilled reef fish with coconut rice is divine. Mains: $15-$20Open: 11 AM-10 PM.</li>
+<li><strong>The Beach Café (Artificial Beach)</strong> — Casual spot for burgers and smoothies. A tuna burger with fries costs $12Open: 8 AM-9 PM.</li>
+<li><strong>Royal Garden Café (Machchangolhi)</strong> — Serves Maldivian curries like garudhiya (fish broth) with rice. Mains: $10-$18Open: 10 AM-10 PM.</li>
 </ul>
 
-<h3>Fine Dining ($30 (≈ ₽2 850)-$60 (≈ ₽5 700) per person)</h3>
+<h3>Fine Dining ($30-$60per person)</h3>
 <ul>
-<li><strong>Ithaa Undersea Restaurant (Hulhulé)</strong> — Yes, it’s a splurge, but dining 5 meters underwater is unforgettable. Set menu: $55. (≈ ₽5 225) Open: 12 PM-3 PM, 6 PM-10 PM.</li>
-<li><strong>Manta Restaurant (Majeedhee Magu)</strong> — Rooftop dining with ocean views. Their lobster thermidor is $45. (≈ ₽4 275) Open: 6 PM-11 PM.</li>
+<li><strong>Ithaa Undersea Restaurant (Hulhulé)</strong> — Yes, it’s a splurge, but dining 5 meters underwater is unforgettable. Set menu: $55Open: 12 PM-3 PM, 6 PM-10 PM.</li>
+<li><strong>Manta Restaurant (Majeedhee Magu)</strong> — Rooftop dining with ocean views. Their lobster thermidor is $45Open: 6 PM-11 PM.</li>
 </ul>
 <p>Prices include a 12-15% markup. I always carry cash — some smaller stalls don’t take cards.</p>
 
@@ -480,14 +504,14 @@
 <p>Here’s a realistic breakdown for a 7-day trip to Male in 2026. Prices include a 12-15% markup and are per person.</p>
 <table>
 <tr><th>Category</th><th>Budget (USD)</th><th>Mid-Range (USD)</th><th>Luxury (USD)</th></tr>
-<tr><td>Accommodation (7 nights)</td><td>$245 (≈ ₽23 275)</td><td>$665 (≈ ₽63 175)</td><td>$1 470 (≈ ₽139 650)</td></tr>
-<tr><td>Food (3 meals/day)</td><td>$140 (≈ ₽13 300)</td><td>$280 (≈ ₽26 600)</td><td>$490 (≈ ₽46 550)</td></tr>
-<tr><td>Local transport</td><td>$35 (≈ ₽3 325)</td><td>$70 (≈ ₽6 650)</td><td>$140 (≈ ₽13 300)</td></tr>
-<tr><td>Attractions & activities</td><td>$70 (≈ ₽6 650)</td><td>$140 (≈ ₽13 300)</td><td>$350 (≈ ₽33 250)</td></tr>
-<tr><td>Miscellaneous (souvenirs, tips)</td><td>$50 (≈ ₽4 750)</td><td>$100 (≈ ₽9 500)</td><td>$200 (≈ ₽19 000)</td></tr>
-<tr><td><strong>Total</strong></td><td><strong>$540 (≈ ₽51 300)</strong></td><td><strong>$1 255 (≈ ₽119 225)</strong></td><td><strong>$2 650 (≈ ₽251 750)</strong></td></tr>
+<tr><td>Accommodation (7 nights)</td><td>$245</td><td>$665</td><td>$1 470</td></tr>
+<tr><td>Food (3 meals/day)</td><td>$140</td><td>$280</td><td>$490</td></tr>
+<tr><td>Local transport</td><td>$35</td><td>$70</td><td>$140</td></tr>
+<tr><td>Attractions & activities</td><td>$70</td><td>$140</td><td>$350</td></tr>
+<tr><td>Miscellaneous (souvenirs, tips)</td><td>$50</td><td>$100</td><td>$200</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>$540</strong></td><td><strong>$1 255</strong></td><td><strong>$2 650</strong></td></tr>
 </table>
-<p>Flights are extra — budget $520 (≈ ₽49 400)-$890 (≈ ₽84 550) round-trip from major cities. I’ve seen travelers on a shoestring do it for $400 (≈ ₽38 000)/week by staying in dorms and eating street food. But for comfort, I’d budget at least $1 000. (≈ ₽95 000)</p>
+<p>Flights are extra — budget $520-$890round-trip from major cities. I’ve seen travelers on a shoestring do it for $400/week by staying in dorms and eating street food. But for comfort, I’d budget at least $1 000</p>
 
 <h2>10 Travel Tips</h2>
 <p>After 5+ years of sending travelers to Male, here are my golden rules for first-timers:</p>
@@ -598,6 +622,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -626,6 +651,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -643,8 +669,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="description" content="Рас-эль-Хайма: полный путеводитель 2026 Рас-эль-Хайма (RAK) — это эмират, который часто называют «природным заповедником ОАЭ». В отличие от шумного Дубая или...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/ras-al-khaimah-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/ras-al-khaimah-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Рас-эль-Хайма: полный путеводитель 2026">
     <meta property="og:description" content="Рас-эль-Хайма: полный путеводитель 2026 Рас-эль-Хайма (RAK) — это эмират, который часто называют «природным заповедником ОАЭ». В отличие от шумного Дубая или...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/ras-al-khaimah-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/ras-al-khaimah-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://fs.tonkosti.ru/sized/c800x800/8d/ut/8dutekrq5hwc0kwgw4gs4wooc.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ras-al-khaimah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Рас-эль-Хайма: полный путеводитель 2026</div>
@@ -401,7 +425,7 @@
 
 <h2>Топ-15 достопримечательностей</h2>
 
-<p>Вот 15 мест, которые обязательно нужно посетить в Рас-эль-Хайме в 2026 году. Для каждого указана цена билета и часы работы (все цены в дирхамах ОАЭ, 1 AED ≈ 20 рублей).</p>
+<p>Вот 15 мест, которые обязательно нужно посетить в Рас-эль-Хайме в 2026 году. Для каждого указана цена билета и часы работы (все цены в дирхамах ОАЭ₽25 (1 AED) ≈ 20 рублей).</p>
 
 <table>
   <tr>
@@ -415,34 +439,34 @@
     <td>1</td>
     <td>Гора Джебель-Джайс</td>
     <td>Самая высокая точка ОАЭ (1934 м). Отсюда открывается панорамный вид на Хаджарские горы и Персидский залив. На вершине — смотровая площадка и кафе.</td>
-    <td>Бесплатно (дорога платная — 30 AED за машину)</td>
+    <td>Бесплатно (дорога платная —₽777 (30 AED) за машину)</td>
     <td>Круглосуточно</td>
   </tr>
   <tr>
     <td>2</td>
     <td>Зиплайн Jebel Jais Flight</td>
     <td>Самая длинная зиплайн в мире (2,83 км). Скорость достигает 120–150 км/ч. Полёт длится около 3 минут.</td>
-    <td>300 AED (6000 рублей)</td>
+    <td>₽7 770 (300 AED) (6000 рублей)</td>
     <td>Ежедневно 09:00–17:00</td>
   </tr>
   <tr>
     <td>3</td>
     <td>Форт Дхая</td>
     <td>Исторический форт XVIII века, построенный из глины и камня. Служил оборонительным сооружением. Внутри — музей с артефактами.</td>
-    <td>5 AED (100 рублей)</td>
+    <td>₽129 (5 AED) (100 рублей)</td>
     <td>Сб–Чт 09:00–17:00, Пт 14:00–17:00</td>
   </tr>
   <tr>
     <td>4</td>
     <td>Национальный музей Рас-эль-Хаймы</td>
     <td>Расположен в бывшем дворце шейха. Экспозиция включает археологические находки, оружие, керамику и традиционные костюмы.</td>
-    <td>10 AED (200 рублей)</td>
+    <td>₽259 (10 AED) (200 рублей)</td>
     <td>Ежедневно 09:00–17:00</td>
   </tr>
   <tr>
     <td>5</td>
     <td>Мангровый заповедник</td>
-    <td>Экосистема мангровых лесов вдоль побережья. Можно взять экскурсию на каяке (2 часа) — 100 AED (2000 рублей). Встречаются фламинго и цапли.</td>
+    <td>Экосистема мангровых лесов вдоль побережья. Можно взять экскурсию на каяке (2 часа) —₽2 590 (100 AED) (2000 рублей). Встречаются фламинго и цапли.</td>
     <td>Бесплатно (экскурсии платные)</td>
     <td>Круглосуточно</td>
   </tr>
@@ -450,7 +474,7 @@
     <td>6</td>
     <td>Аквапарк Ice Land Water Park</td>
     <td>Один из крупнейших аквапарков ОАЭ. 30 горок, волновой бассейн и зона для детей. Тематика — ледниковый период.</td>
-    <td>150 AED (3000 рублей)</td>
+    <td>₽3 885 (150 AED) (3000 рублей)</td>
     <td>Ежедневно 10:00–18:00</td>
   </tr>
   <tr>
@@ -463,7 +487,7 @@
   <tr>
     <td>8</td>
     <td>Пляж Аль-Хамра</td>
-    <td>Общественный пляж с белым песком и чистой водой. Есть шезлонги (20 AED) и душевые. Идеально для купания и снорклинга.</td>
+    <td>Общественный пляж с белым песком и чистой водой. Есть шезлонги (₽518 (20 AED)) и душевые. Идеально для купания и снорклинга.</td>
     <td>Бесплатно</td>
     <td>Круглосуточно</td>
   </tr>
@@ -478,13 +502,13 @@
     <td>10</td>
     <td>Горячие источники Хатт</td>
     <td>Природные термальные источники у подножия гор. Температура воды — 40–50°C. Есть оборудованные бассейны.</td>
-    <td>10 AED (200 рублей)</td>
+    <td>₽259 (10 AED) (200 рублей)</td>
     <td>Ежедневно 08:00–20:00</td>
   </tr>
   <tr>
     <td>11</td>
     <td>Парк пустыни Рас-эль-Хайма</td>
-    <td>Охраняемая территория площадью 100 км². Здесь обитают газели, аравийские ориксы и пустынные лисы. Сафари на джипе — 200 AED (4000 рублей).</td>
+    <td>Охраняемая территория площадью 100 км². Здесь обитают газели, аравийские ориксы и пустынные лисы. Сафари на джипе —₽5 180 (200 AED) (4000 рублей).</td>
     <td>Бесплатно (сафари платное)</td>
     <td>Круглосуточно</td>
   </tr>
@@ -506,13 +530,13 @@
     <td>14</td>
     <td>Парк «Сады Аль-Хаир»</td>
     <td>Ботанический сад с более чем 500 видами растений. Есть оранжерея с тропическими цветами и детская игровая зона.</td>
-    <td>15 AED (300 рублей)</td>
+    <td>₽388 (15 AED) (300 рублей)</td>
     <td>Ежедневно 09:00–18:00</td>
   </tr>
   <tr>
     <td>15</td>
     <td>Марина Рас-эль-Хайма</td>
-    <td>Современная яхтенная марина на 300 судов. Рестораны с морепродуктами, прогулки на лодках (50 AED в час).</td>
+    <td>Современная яхтенная марина на 300 судов. Рестораны с морепродуктами, прогулки на лодках (₽1 295 (50 AED) в час).</td>
     <td>Бесплатно</td>
     <td>Круглосуточно</td>
   </tr>
@@ -520,13 +544,13 @@
 
 <h2>Транспорт в городе</h2>
 
-<p>В Рас-эль-Хайме нет метро. Основной общественный транспорт — автобусы, но их маршрутная сеть ограничена. Автобусы ходят по 5 маршрутам (например, №1 от центра до пляжа Аль-Хамра). Стоимость проезда — 5 AED (100 рублей). Интервал движения — 30–60 минут. Работают с 06:00 до 22:00.</p>
+<p>В Рас-эль-Хайме нет метро. Основной общественный транспорт — автобусы, но их маршрутная сеть ограничена. Автобусы ходят по 5 маршрутам (например, №1 от центра до пляжа Аль-Хамра). Стоимость проезда —₽129 (5 AED) (100 рублей). Интервал движения — 30–60 минут. Работают с 06:00 до 22:00.</p>
 
-<p>Такси — самый удобный способ передвижения. В городе работают как государственные такси (белые с зелёной крышей), так и частные (например, Uber и Careem). Стоимость посадки — 5 AED (100 рублей), далее 1,5 AED за километр. Поездка через весь город обойдётся в 30–50 AED (600–1000 рублей). С 2025 года в такси можно оплачивать банковской картой.</p>
+<p>Такси — самый удобный способ передвижения. В городе работают как государственные такси (белые с зелёной крышей), так и частные (например, Uber и Careem). Стоимость посадки —₽129 (5 AED) (100 рублей), далее₽388 (15 AED) за километр. Поездка через весь город обойдётся в 30–₽1 295 (50 AED) (600–1000 рублей). С 2025 года в такси можно оплачивать банковской картой.</p>
 
-<p>Аренда автомобиля — популярный вариант для туристов. Средняя цена — 120–200 AED (2400–4000 рублей) в сутки за экономичный седан. Топливо — 3,5 AED за литр (70 рублей). Дороги в отличном состоянии, парковка в основном бесплатная. Для аренды нужны международные права и кредитная карта. Минимальный возраст — 21 год.</p>
+<p>Аренда автомобиля — популярный вариант для туристов. Средняя цена — 120–₽5 180 (200 AED) (2400–4000 рублей) в сутки за экономичный седан. Топливо —₽906 (35 AED) за литр (70 рублей). Дороги в отличном состоянии, парковка в основном бесплатная. Для аренды нужны международные права и кредитная карта. Минимальный возраст — 21 год.</p>
 
-<p>Велосипеды и электросамокаты можно арендовать в прокатах (например, на пляже Аль-Хамра). Цена — 30 AED в час (600 рублей). Для длительных поездок лучше брать машину из-за жары.</p>
+<p>Велосипеды и электросамокаты можно арендовать в прокатах (например, на пляже Аль-Хамра). Цена —₽777 (30 AED) в час (600 рублей). Для длительных поездок лучше брать машину из-за жары.</p>
 
 <h2>Где поесть</h2>
 
@@ -636,6 +660,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -664,6 +689,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -681,8 +707,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Кута 2026: от бюджета до люкса Кута — это сердце туристического Бали, где сосредоточена лучшая инфраструктура острова. В 2026 году гостинична...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Кута 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Кута 2026: от бюджета до люкса Кута — это сердце туристического Бали, где сосредоточена лучшая инфраструктура острова. В 2026 году гостинична...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/kuta-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/kuta.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Кута 2026: от бюджета до люкса</div>
@@ -362,114 +386,173 @@
 
 <p>Кута — это сердце туристического Бали, где сосредоточена лучшая инфраструктура острова. В 2026 году гостиничная сеть района насчитывает более 450 объектов разного уровня: от скромных гестхаусов до пятизвездочных курортов. Большинство отелей расположены вдоль главной магистрали Jalan Legian и набережной Jalan Pantai Kuta, что обеспечивает гостям быстрый доступ к пляжу, торговым центрам и ночным клубам. Средняя загрузка отелей в высокий сезон (июль–август и декабрь–январь) достигает 92%, поэтому бронировать номера рекомендуется за 3–4 месяца.</p>
 
-<p>Цены на проживание в Кута варьируются от ₽1 425 (≈ $15) за ночь в хостеле до ₽47 500 (≈ $500) в президентском сьюте. В 2026 году наблюдается тренд на повышение стоимости номеров среднего сегмента на 8–10% из-за роста популярности «рабочих каникул» (workation). При этом бюджетный сегмент остается стабильным благодаря высокой конкуренции среди местных гестхаусов. Ниже представлен детальный обзор 10 лучших отелей, разделенных по ценовым категориям, с реальными отзывами и проверенными данными.</p>
+<p>Цены на проживание в Кута варьируются от ₽1 425 ($15)за ночь в хостеле до ₽47 500 ($500)в президентском сьюте. В 2026 году наблюдается тренд на повышение стоимости номеров среднего сегмента на 8–10% из-за роста популярности «рабочих каникул» (workation). При этом бюджетный сегмент остается стабильным благодаря высокой конкуренции среди местных гестхаусов. Ниже представлен детальный обзор 10 лучших отелей, разделенных по ценовым категориям, с реальными отзывами и проверенными данными.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Kuta Beach Hostel</h3>
-<p>Расположение: Jalan Pantai Kuta, в 200 метрах от пляжа. Цена: от ₽1 425 (≈ $15) за место в дормитории, от ₽3 325 (≈ $35) за приватный номер. Номерной фонд: 12 дормиториев и 8 приватных комнат. В стоимость включен завтрак (тосты, яйца, фрукты) и бесплатный Wi-Fi (скорость до 50 Мбит/с).</p>
+<div id="hc_782081" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Kuta Beach Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Kuta Beach Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_782081 .hc-slide');var d=document.querySelectorAll('#hc_782081 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_782081 .hc-slide');var d=document.querySelectorAll('#hc_782081 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kuta Beach Hostel &bull; 2 photos</p></div>
+<p>Расположение: Jalan Pantai Kuta, в 200 метрах от пляжа. Цена: от ₽1 425 ($15)за место в дормитории, от ₽3 325 ($35)за приватный номер. Номерной фонд: 12 дормиториев и 8 приватных комнат. В стоимость включен завтрак (тосты, яйца, фрукты) и бесплатный Wi-Fi (скорость до 50 Мбит/с).</p>
 <ul>
 <li>Плюсы: круглосуточная стойка регистрации, общая кухня с плитой и холодильником, еженедельные вечеринки с живой музыкой по пятницам.</li>
 <li>Минусы: шумно после 23:00 из-за близости к клубам, кондиционер работает только с 18:00 до 08:00, отсутствие личного сейфа.</li>
 </ul>
 
 <h3>2. Puri Agung Homestay</h3>
-<p>Расположение: тихий переулок на Jalan Benesari, в 10 минутах пешком от пляжа. Цена: от ₽2 375 (≈ $25) за ночь (двухместный номер с вентилятором). Номерной фонд: 15 бунгало в традиционном балийском стиле. На территории — небольшой бассейн (4х8 метров) и сад с орхидеями.</p>
+<div id="hc_82818" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Puri Agung Homestay - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Puri Agung Homestay - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_82818 .hc-slide');var d=document.querySelectorAll('#hc_82818 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_82818 .hc-slide');var d=document.querySelectorAll('#hc_82818 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Puri Agung Homestay &bull; 2 photos</p></div>
+<p>Расположение: тихий переулок на Jalan Benesari, в 10 минутах пешком от пляжа. Цена: от ₽2 375 ($25)за ночь (двухместный номер с вентилятором). Номерной фонд: 15 бунгало в традиционном балийском стиле. На территории — небольшой бассейн (4х8 метров) и сад с орхидеями.</p>
 <ul>
-<li>Плюсы: очень отзывчивый персонал (владельцы живут на территории), бесплатный чай и кофе в лобби, возможность арендовать скутер за ₽475 (≈ $5)/день.</li>
+<li>Плюсы: очень отзывчивый персонал (владельцы живут на территории), бесплатный чай и кофе в лобби, возможность арендовать скутер за ₽475 ($5)/день.</li>
 <li>Минусы: тонкие стены (слышны соседи), горячая вода нестабильна в дождливый сезон, нет парковки для автомобилей.</li>
 </ul>
 
 <h3>3. Grandmas Plus Hotel Kuta</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ku" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположение: Jalan Pantai Kuta, прямо напротив пляжа. Цена: от ₽4 275 (≈ $45) за стандартный номер с завтраком. Номерной фонд: 52 номера, все с кондиционером и телевизором. Отель входит в сеть Grandmas Hotels, известную своим соотношением «цена-качество».</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="вх" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_314298" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Grandmas Plus Hotel Kuta - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Grandmas Plus Hotel Kuta - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_314298 .hc-slide');var d=document.querySelectorAll('#hc_314298 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_314298 .hc-slide');var d=document.querySelectorAll('#hc_314298 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grandmas Plus Hotel Kuta &bull; 2 photos</p></div>
+<p>Расположение: Jalan Pantai Kuta, прямо напротив пляжа. Цена: от ₽4 275 ($45)за стандартный номер с завтраком. Номерной фонд: 52 номера, все с кондиционером и телевизором. Отель входит в сеть Grandmas Hotels, известную своим соотношением «цена-качество».</p>
+<div id="hc_56590" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Grandmas Hotels, известную своим соотношением «цена-качество». - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Grandmas Hotels, известную своим соотношением «цена-качество». - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_56590 .hc-slide');var d=document.querySelectorAll('#hc_56590 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_56590 .hc-slide');var d=document.querySelectorAll('#hc_56590 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grandmas Hotels, известную своим соотношением «цена-качество». &bull; 2 photos</p></div>
 <ul>
-<li>Плюсы: собственный ресторан с завтраком «шведский стол» (включен в стоимость), крытый бассейн с подогревом (редкость для бюджетного сегмента), услуги прачечной за ₽285 (≈ $3.)</li>
+<li>Плюсы: собственный ресторан с завтраком «шведский стол» (включен в стоимость), крытый бассейн с подогревом (редкость для бюджетного сегмента), услуги прачечной за ₽285 ($3)</li>
 <li>Минусы: интерьер устарел (мебель 2018 года), Wi-Fi тормозит в часы пик (после 19:00), нет лифта (номера на 2-м и 3-м этажах).</li>
 </ul>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. The Stones Hotel – Legian</h3>
-<p>Расположение: Jalan Legian, в 5 минутах от пляжа. Цена: от ₽6 175 (≈ $65) за делюкс-номер. Номерной фонд: 140 номеров, включая семейные сьюты (до 4 человек). Отель управляется международной сетью Aston International.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="уп" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Расположение: Jalan Legian, в 5 минутах от пляжа. Цена: от ₽6 175 ($65)за делюкс-номер. Номерной фонд: 140 номеров, включая семейные сьюты (до 4 человек). Отель управляется международной сетью Aston International.</p>
 <ul>
-<li>Фишки: огромный лагунообразный бассейн (площадь 800 кв. м), спа-центр с балийским массажем (от ₽2 850 (≈ $30) за 60 минут), бесплатный шаттл до торгового центра Beachwalk.</li>
+<li>Фишки: огромный лагунообразный бассейн (площадь 800 кв. м), спа-центр с балийским массажем (от ₽2 850 ($30)за 60 минут), бесплатный шаттл до торгового центра Beachwalk.</li>
 <li>Дополнительно: работает 3 ресторана — итальянский, японский и гриль-бар. Для детей — игровая комната и мини-клуб.</li>
 </ul>
 
 <h3>5. Amaris Hotel Kuta</h3>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ku" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположение: Jalan Pantai Kuta, в 100 метрах от пляжа. Цена: от ₽5 225 (≈ $55) за номер с завтраком. Номерной фонд: 100 номеров, все с современным дизайном (белый, серый, акцентный синий). Отель входит в индонезийскую сеть Amaris.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="вх" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_653550" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Amaris Hotel Kuta - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Amaris Hotel Kuta - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_653550 .hc-slide');var d=document.querySelectorAll('#hc_653550 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_653550 .hc-slide');var d=document.querySelectorAll('#hc_653550 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amaris Hotel Kuta &bull; 2 photos</p></div>
+<p>Расположение: Jalan Pantai Kuta, в 100 метрах от пляжа. Цена: от ₽5 225 ($55)за номер с завтраком. Номерной фонд: 100 номеров, все с современным дизайном (белый, серый, акцентный синий). Отель входит в индонезийскую сеть Amaris.</p>
+<div id="hc_68590" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Amaris. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Amaris. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_68590 .hc-slide');var d=document.querySelectorAll('#hc_68590 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_68590 .hc-slide');var d=document.querySelectorAll('#hc_68590 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amaris. &bull; 2 photos</p></div>
 <ul>
 <li>Фишки: круглосуточный снэк-бар (бургеры, сэндвичи), бизнес-центр с принтером, система самообслуживания (онлайн-чекин, ключ-карты).</li>
-<li>Дополнительно: бассейн на крыше (панорамный вид на океан), тренажерный зал с кардиотренажерами. Рядом — остановка такси и пункт проката велосипедов (₽285 (≈ $3)/день).</li>
+<li>Дополнительно: бассейн на крыше (панорамный вид на океан), тренажерный зал с кардиотренажерами. Рядом — остановка такси и пункт проката велосипедов (₽285 ($3)/день).</li>
 </ul>
 
 <h3>6. Kuta Paradiso Hotel</h3>
-<p>Расположение: Jalan Kartika Plaza, в центре туристической зоны. Цена: от ₽8 075 (≈ $85) за стандартный номер. Номерной фонд: 260 номеров, включая номера для гостей с ограниченными возможностями. Отель построен в 1998 году, прошел реновацию в 2023 году.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_399800" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Kuta Paradiso Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Kuta Paradiso Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_399800 .hc-slide');var d=document.querySelectorAll('#hc_399800 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_399800 .hc-slide');var d=document.querySelectorAll('#hc_399800 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kuta Paradiso Hotel &bull; 2 photos</p></div>
+<p>Расположение: Jalan Kartika Plaza, в центре туристической зоны. Цена: от ₽8 075 ($85)за стандартный номер. Номерной фонд: 260 номеров, включая номера для гостей с ограниченными возможностями. Отель построен в 1998 году, прошел реновацию в 2023 году.</p>
 <ul>
 <li>Фишки: самый большой бассейн в Кута (1200 кв. м, с водными горками), 4 ресторана (в том числе суши-бар и стейк-хаус), живая музыка каждый вечер в лобби-баре.</li>
 <li>Дополнительно: конференц-залы на 300 человек, бесплатный паркинг, экскурсионное бюро на стойке регистрации.</li>
 </ul>
 
 <h3>7. Padma Resort Legian</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Le" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположение: Jalan Padma, в 2 минутах от пляжа Legian. Цена: от ₽11 400 (≈ $120) за номер с завтраком. Номерной фонд: 200 номеров, все с балконом или террасой. Отель входит в престижную сеть Padma Hotels.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="вх" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_735597" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Padma Resort Legian - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Padma Resort Legian - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_735597 .hc-slide');var d=document.querySelectorAll('#hc_735597 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_735597 .hc-slide');var d=document.querySelectorAll('#hc_735597 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Padma Resort Legian &bull; 2 photos</p></div>
+<p>Расположение: Jalan Padma, в 2 минутах от пляжа Legian. Цена: от ₽11 400 ($120)за номер с завтраком. Номерной фонд: 200 номеров, все с балконом или террасой. Отель входит в престижную сеть Padma Hotels.</p>
+<div id="hc_944191" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Padma, в 2 минутах от пляжа Legian. Цена: от ₽11 400 - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Padma, в 2 минутах от пляжа Legian. Цена: от ₽11 400 - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_944191 .hc-slide');var d=document.querySelectorAll('#hc_944191 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_944191 .hc-slide');var d=document.querySelectorAll('#hc_944191 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Padma, в 2 минутах от пляжа Legian. Цена: от ₽11 400 &bull; 2 photos</p></div>
 <ul>
 <li>Фишки: двухуровневый бассейн с лаунж-зонами, спа-центр с хаммамом и джакузи, частный доступ к пляжу (шезлонги и зонтики бесплатно для гостей).</li>
 <li>Дополнительно: ресторан «Sundara» с панорамным видом на закат, детский клуб «Padma Kids» (с 10:00 до 18:00), бесплатный Wi-Fi на всей территории.</li>
 </ul>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. The Trans Resort Bali</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположение: Jalan Kartika Plaza, в 10 минутах от международного аэропорта Нгурах-Рай. Цена: от ₽17 100 (≈ $180) за делюкс-номер, от ₽38 000 (≈ $400) за президентский сьют. Номерной фонд: 200 номеров и 50 вилл с частными бассейнами. Отель входит в сеть Trans Hotels (подразделение CT Corp).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="вх" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_42510" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="The Trans Resort Bali - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="The Trans Resort Bali - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Trans Resort Bali - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_42510 .hc-slide');var d=document.querySelectorAll('#hc_42510 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_42510 .hc-slide');var d=document.querySelectorAll('#hc_42510 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_42510 .hc-slide');var d=document.querySelectorAll('#hc_42510 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Trans Resort Bali &bull; 3 photos</p></div>
+<p>Расположение: Jalan Kartika Plaza, в 10 минутах от международного аэропорта Нгурах-Рай. Цена: от ₽17 100 ($180)за делюкс-номер, от ₽38 000 ($400)за президентский сьют. Номерной фонд: 200 номеров и 50 вилл с частными бассейнами. Отель входит в сеть Trans Hotels (подразделение CT Corp).</p>
 <ul>
 <li>Особенности: спа-центр площадью 2000 кв. м (включая финскую сауну, паровую баню и 8 массажных кабинетов), 5 ресторанов (в том числе ресторан с мишленовским шеф-поваром), собственный ночной клуб «Sky Garden» на крыше.</li>
 <li>Дополнительно: бассейн с гидромассажем, фитнес-центр с персональными тренерами, услуги консьержа 24/7 (организация трансфера, экскурсий, бронирование столиков).</li>
 </ul>
 
 <h3>9. The Legian Resort & Spa</h3>
-<p>Расположение: Jalan Legian, на первой линии пляжа. Цена: от ₽23 750 (≈ $250) за номер с видом на океан. Номерной фонд: 150 номеров, все с панорамными окнами от пола до потолка. Отель принадлежит группе GHM (General Hotel Management).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Расположение: Jalan Legian, на первой линии пляжа. Цена: от ₽23 750 ($250)за номер с видом на океан. Номерной фонд: 150 номеров, все с панорамными окнами от пола до потолка. Отель принадлежит группе GHM (General Hotel Management).</p>
 <ul>
-<li>Особенности: частный пляжный клуб с шезлонгами и полотенцами, спа-центр с балийскими ритуалами (от ₽7 600 (≈ $80)), ресторан «The Lounge» с дегустационным меню из 7 блюд.</li>
-<li>Дополнительно: бассейн с бесконечным краем (infinity pool), библиотека с книгами на 6 языках, услуги няни (₽950 (≈ $10)/час), бесплатный йога-класс по утрам.</li>
+<li>Особенности: частный пляжный клуб с шезлонгами и полотенцами, спа-центр с балийскими ритуалами (от ₽7 600 ($80)), ресторан «The Lounge» с дегустационным меню из 7 блюд.</li>
+<li>Дополнительно: бассейн с бесконечным краем (infinity pool), библиотека с книгами на 6 языках, услуги няни (₽950 ($10)/час), бесплатный йога-класс по утрам.</li>
 </ul>
 
 <h3>10. The St. Regis Bali Resort</h3>
-<p>Расположение: Jalan Raya Nusa Dua Selatan (в 15 минутах от Кута, в районе Нуса-Дуа). Цена: от ₽33 250 (≈ $350) за номер, от ₽76 000 (≈ $800) за виллу с бассейном. Номерной фонд: 100 номеров и 50 вилл. Отель входит в сеть Marriott International (категория Luxury Collection).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="вх" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Расположение: Jalan Raya Nusa Dua Selatan (в 15 минутах от Кута, в районе Нуса-Дуа). Цена: от ₽33 250 ($350)за номер, от ₽76 000 ($800)за виллу с бассейном. Номерной фонд: 100 номеров и 50 вилл. Отель входит в сеть Marriott International (категория Luxury Collection).</p>
 <ul>
-<li>Особенности: спа-центр Iridium Spa (900 кв. м) с фирменным ритуалом «Bali Bliss» (2,5 часа, ₽23 750 (≈ $250)), ресторан «Kayuputi» с мишленовской звездой (шеф-повар из Австралии), частный пляж с белым песком.</li>
+<li>Особенности: спа-центр Iridium Spa (900 кв. м) с фирменным ритуалом «Bali Bliss» (2,5 часа, ₽23 750 ($250)), ресторан «Kayuputi» с мишленовской звездой (шеф-повар из Австралии), частный пляж с белым песком.</li>
 <li>Дополнительно: бассейн с мозаикой и подогревом, бутик-магазин с дизайнерскими вещами (Louis Vuitton, Gucci), услуги дворецкого для каждого номера (упаковка вещей, заказ цветов, организация романтических ужинов).</li>
 </ul>
 
 <h2>Как выбрать район</h2>
 
 <h3>Для пляжного отдыха</h3>
-<p>Выбирайте отели на первой линии Jalan Pantai Kuta или Jalan Legian. Здесь лучший песок, волны для серфинга (особенно утром) и развитая инфраструктура: лежаки (₽475 (≈ $5)/день), кафе на пляже (от ₽285 (≈ $3) за кокос), пункты проката досок (₽950 (≈ $10)/час). Рекомендуемые отели: The Stones Hotel (средний класс) или The Legian Resort (люкс).</p>
+<p>Выбирайте отели на первой линии Jalan Pantai Kuta или Jalan Legian. Здесь лучший песок, волны для серфинга (особенно утром) и развитая инфраструктура: лежаки (₽475 ($5)/день), кафе на пляже (от ₽285 ($3)за кокос), пункты проката досок (₽950 ($10)/час). Рекомендуемые отели: The Stones Hotel (средний класс) или The Legian Resort (люкс).</p>
 
 <h3>Для экскурсий</h3>
-<p>Лучше остановиться в районе Jalan Kartika Plaza — отсюда быстрый выезд на трассу By Pass Ngurah Rai, ведущую к храму Улувату (30 минут), рисовым террасам Тегалаланг (1,5 часа) и вулкану Батур (2 часа). Отели: Kuta Paradiso Hotel (средний класс) или The Trans Resort Bali (люкс). Рядом находятся автобусные остановки (билет до Убуда — ₽380 (≈ $4)).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Лучше остановиться в районе Jalan Kartika Plaza — отсюда быстрый выезд на трассу By Pass Ngurah Rai, ведущую к храму Улувату (30 минут), рисовым террасам Тегалаланг (1,5 часа) и вулкану Батур (2 часа). Отели: Kuta Paradiso Hotel (средний класс) или The Trans Resort Bali (люкс). Рядом находятся автобусные остановки (билет до Убуда — ₽380 ($4)).</p>
 
 <h3>Для ночной жизни</h3>
-<p>Выбирайте район Jalan Legian (участок от Jalan Benesari до Jalan Melasti). Здесь сконцентрированы лучшие клубы: Sky Garden (вход ₽950 (≈ $10 ) работает до 04:00), Bounty Club (живая музыка, до 02:00), Hard Rock Cafe (рок-тематика). Отели: Grandmas Plus Hotel (бюджет) или The Stones Hotel (средний класс). Учтите, что шум от клубов слышен до 2–3 часов ночи.</p>
+<p>Выбирайте район Jalan Legian (участок от Jalan Benesari до Jalan Melasti). Здесь сконцентрированы лучшие клубы: Sky Garden (вход ₽950 ($10)работает до 04:00), Bounty Club (живая музыка, до 02:00), Hard Rock Cafe (рок-тематика). Отели: Grandmas Plus Hotel (бюджет) или The Stones Hotel (средний класс). Учтите, что шум от клубов слышен до 2–3 часов ночи.</p>
 
 <h2>Советы по бронированию</h2>
 
 <h3>Как сэкономить</h3>
 <ul>
 <li>Бронируйте за 60–90 дней — средняя скидка составляет 15–20% по сравнению с бронированием за 2 недели. Используйте сервисы <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> (гарантия лучшей цены) и <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (часто дает промокоды на 10% для новых пользователей).</li>
-<li>Выбирайте номера без завтрака — завтрак в отеле стоит ₽760 (≈ $8)–15, а в уличных кафе (₽285 (≈ $3)–5) выбор больше (наси горенг, фруктовые тарелки, свежевыжатые соки).</li>
+<li>Выбирайте номера без завтрака — завтрак в отеле стоит ₽760 ($8)–15, а в уличных кафе (₽285 ($3)–5) выбор больше (наси горенг, фруктовые тарелки, свежевыжатые соки).</li>
 <li>Путешествуйте в низкий сезон (февраль–апрель, октябрь–ноябрь) — цены падают на 30–40%, а загрузка отелей снижается до 60%.</li>
 </ul>
 
@@ -507,13 +590,13 @@
 </tr>
 <tr>
 <td>Airbnb</td>
-<td>Аренда квартир и вилл (от ₽2 850 (≈ $30)/ночь), подходит для групп (до 8 человек), гибкие условия заселения</td>
+<td>Аренда квартир и вилл (от ₽2 850 ($30)/ночь), подходит для групп (до 8 человек), гибкие условия заселения</td>
 <td>5–15% для гостей</td>
 </tr>
 </tbody>
 </table>
 
-<p>Дополнительно: используйте сайт HotelsCombined для сравнения цен между сервисами. В 2026 году средняя разница в цене на один и тот же номер между <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com и Agoda составляет ₽475 (≈ $5)–12, поэтому проверка не будет лишней. Для люксовых отелей рекомендуем бронировать напрямую через сайт отеля — часто предлагаются привилегии (бесплатный трансфер из аэропорта, поздний выезд до 16:00, приветственное шампанское).</p>
+<p>Дополнительно: используйте сайт HotelsCombined для сравнения цен между сервисами. В 2026 году средняя разница в цене на один и тот же номер между <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com и Agoda составляет ₽475 ($5)–12, поэтому проверка не будет лишней. Для люксовых отелей рекомендуем бронировать напрямую через сайт отеля — часто предлагаются привилегии (бесплатный трансфер из аэропорта, поздний выезд до 16:00, приветственное шампанское).</p>
 
 <p>Кута в 2026 году — это идеальное место для любого бюджета и стиля путешествия. От бюджетных хостелов с серферской атмосферой до пятизвездочных курортов с дворецкими — каждый найдет свой вариант. Главное — заранее определиться с районом и целями поездки, а затем использовать проверенные сервисы для бронирования. Приятного отдыха на Бали<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
@@ -606,6 +689,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -634,6 +718,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -651,8 +736,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

@@ -4,11 +4,15 @@
 
 {% block en_alt %}index.html{% endblock %}
 {% block ru_alt %}index.html{% endblock %}
+{% set ru_alternate_url = "index.html" %}
+{% set en_alternate_url = "index.html" %}
+{% set canonical = "/" + lang + "/index.html" %}
+{% set hide_back = True %}
 
 {% block content %}
 
 <!-- HERO -->
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1400&q=80');">
+<div class="hero-section" style="background-image:url('/assets/countries/travel-hero.webp');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>{{ "Your Dream Trip Starts Here" if lang == "en" else "Ваше путешествие начинается здесь" }}</h1>

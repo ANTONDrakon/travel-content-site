@@ -6,7 +6,7 @@
     <title>Maafushi Travel Guide 2026</title>
     <meta name="description" content="Maafushi Travel Guide 2026 I still remember the first time I stepped off the ferry onto Maafushi Island — the turquoise water lapping at the white sand, the ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/maafushi-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/maafushi-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Maafushi Travel Guide 2026">
     <meta property="og:description" content="Maafushi Travel Guide 2026 I still remember the first time I stepped off the ferry onto Maafushi Island — the turquoise water lapping at the white sand, the ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/maafushi-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://vectorme.ru/wp-content/uploads/2023/03/ostrov-maafushi-2048x1091.png');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/maafushi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Maafushi Travel Guide 2026</div>
@@ -360,7 +384,7 @@
             <article>
 <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
-<p>I still remember the first time I stepped off the ferry onto Maafushi Island — the turquoise water lapping at the white sand, the warm breeze carrying the scent of salt and coconut, and the genuine smiles of locals welcoming me. Maafushi is not your typical Maldives resort island; it’s a local island where you can experience authentic Maldivian life without the $1 000 (≈ ₽95 000)-per-night price tag. If you’re dreaming of crystal-clear lagoons, vibrant coral reefs, and a laid-back vibe, Maafushi is your sweet spot. In 2026, it’s more accessible than ever, with new guesthouses and improved ferry services making it a top pick for budget-conscious travelers who refuse to compromise on beauty.</p>
+<p>I still remember the first time I stepped off the ferry onto Maafushi Island — the turquoise water lapping at the white sand, the warm breeze carrying the scent of salt and coconut, and the genuine smiles of locals welcoming me. Maafushi is not your typical Maldives resort island; it’s a local island where you can experience authentic Maldivian life without the $1 000-per-night price tag. If you’re dreaming of crystal-clear lagoons, vibrant coral reefs, and a laid-back vibe, Maafushi is your sweet spot. In 2026, it’s more accessible than ever, with new guesthouses and improved ferry services making it a top pick for budget-conscious travelers who refuse to compromise on beauty.</p>
 
 <p>Why visit Maafushi? Because it’s the perfect blend of paradise and practicality. You can snorkel with sea turtles in the morning, enjoy fresh tuna curry for lunch, and watch a stunning sunset from a sandbank by evening — all without breaking the bank. The island is compact enough to explore on foot, but its surrounding waters offer world-class diving, dolphin-spotting cruises, and even bioluminescent plankton tours. I’ve sent dozens of travelers here, and every single one has come back raving about the warmth of the locals and the untouched charm that still lingers despite growing popularity. In 2026, Maafushi remains a gem — just a bit more polished, with better infrastructure and more eco-conscious options.</p>
 
@@ -368,29 +392,29 @@
 
 <h2>How to Get There</h2>
 
-<p>Your journey begins at Velana International Airport (MLE) in Malé, the main gateway to the Maldives. From major cities like Moscow, Dubai, or London, you’ll find direct flights with airlines like Emirates, Qatar Airways, and Aeroflot. In 2026, expect average round-trip prices from Moscow to MLE to hover around $680 (≈ ₽64 600)–$850 (≈ ₽80 750) (with my 12-15% markup, I recommend budgeting $780 (≈ ₽74 100)–$980 (≈ ₽93 100)). From Dubai, it’s a quick 4-hour flight at $320 (≈ ₽30 400)–$450 (≈ ₽42 750) marked up to $370 (≈ ₽35 150)–$520. (≈ ₽49 400) Pro tip: book 3-4 months ahead for the best deals, especially during peak season (December to March).</p>
+<p>Your journey begins at Velana International Airport (MLE) in Malé, the main gateway to the Maldives. From major cities like Moscow, Dubai, or London, you’ll find direct flights with airlines like Emirates, Qatar Airways, and Aeroflot. In 2026, expect average round-trip prices from Moscow to MLE to hover around $680–$850(with my 12-15% markup, I recommend budgeting $780–$980). From Dubai, it’s a quick 4-hour flight at $320–$450marked up to $370–$520Pro tip: book 3-4 months ahead for the best deals, especially during peak season (December to March).</p>
 
-<p>Once at MLE, you have two options to reach Maafushi: a public ferry or a speedboat. The public ferry is the budget-friendly choice at $5 (≈ ₽475) per person (marked up to $6 (≈ ₽570)), running once daily (departing Malé at 3 PM, returning from Maafushi at 7:30 AM). It takes about 90 minutes and is an adventure in itself — you’ll share the ride with locals and their cargo. For speed and flexibility, a speedboat costs $30 (≈ ₽2 850)–$40 (≈ ₽3 800) per person (marked up to $35 (≈ ₽3 325)–$46 (≈ ₽4 370)) and zips you to Maafushi in just 30 minutes. I always recommend the speedboat if you’re arriving on a late flight or want to maximize your island time. Book through your guesthouse or a local operator like Maafushi Speedboat Services for reliability.</p>
+<p>Once at MLE, you have two options to reach Maafushi: a public ferry or a speedboat. The public ferry is the budget-friendly choice at $5per person (marked up to $6), running once daily (departing Malé at 3 PM, returning from Maafushi at 7:30 AM). It takes about 90 minutes and is an adventure in itself — you’ll share the ride with locals and their cargo. For speed and flexibility, a speedboat costs $30–$40per person (marked up to $35–$46) and zips you to Maafushi in just 30 minutes. I always recommend the speedboat if you’re arriving on a late flight or want to maximize your island time. Book through your guesthouse or a local operator like Maafushi Speedboat Services for reliability.</p>
 
 <h2>Where to Stay</h2>
 
 <p>Maafushi’s accommodation scene has blossomed in 2026, offering everything from cozy guesthouses to mid-range boutique hotels. The island is small, so no matter where you stay, you’re never more than a 10-minute walk from the beach. Here are my top picks for every budget:</p>
 
-<h3>Budge Travelers (Under $80 (≈ ₽7 600) per night)</h3>
+<h3>Budge Travelers (Under $80per night)</h3>
 <ul>
-<li><strong>Arena Beach Hotel</strong> – A favorite among backpackers, with clean, air-conditioned rooms starting at $55 (≈ ₽5 225) per night (marked up to $63 (≈ ₽5 985)). Free breakfast, rooftop terrace, and a friendly staff that feels like family. Located near the bikini beach.</li>
-<li><strong>Maafushi Inn</strong> – Simple but spotless rooms from $45 (≈ ₽4 275) per night (marked up to $52 (≈ ₽4 940)). Great for solo travelers, with a communal vibe and affordable scooter rentals.</li>
+<li><strong>Arena Beach Hotel</strong> – A favorite among backpackers, with clean, air-conditioned rooms starting at $55per night (marked up to $63). Free breakfast, rooftop terrace, and a friendly staff that feels like family. Located near the bikini beach.</li>
+<li><strong>Maafushi Inn</strong> – Simple but spotless rooms from $45per night (marked up to $52). Great for solo travelers, with a communal vibe and affordable scooter rentals.</li>
 </ul>
 
-<h3>Mid-Range ($80 (≈ ₽7 600)–$150 (≈ ₽14 250) per night)</h3>
+<h3>Mid-Range ($80–$150per night)</h3>
 <ul>
-<li><strong>Kaani Beach Hotel</strong> – My personal go-to! Rooms from $95 (≈ ₽9 025) per night (marked up to $109 (≈ ₽10 355)). Features a pool, beachfront access, and an excellent restaurant. The staff helped me arrange a dolphin cruise on the spot.</li>
-<li><strong>White Sand Hotel</strong> – Modern rooms with sea views from $110 (≈ ₽10 450) per night (marked up to $127 (≈ ₽12 065)). Perfect for couples, with a romantic rooftop dining area.</li>
+<li><strong>Kaani Beach Hotel</strong> – My personal go-to! Rooms from $95per night (marked up to $109). Features a pool, beachfront access, and an excellent restaurant. The staff helped me arrange a dolphin cruise on the spot.</li>
+<li><strong>White Sand Hotel</strong> – Modern rooms with sea views from $110per night (marked up to $127). Perfect for couples, with a romantic rooftop dining area.</li>
 </ul>
 
-<h3>Premium (Above $150 (≈ ₽14 250) per night)</h3>
+<h3>Premium (Above $150per night)</h3>
 <ul>
-<li><strong>Maafushi View Inn</strong> – The island’s top choice for luxury on a local island, with suites from $180 (≈ ₽17 100) per night (marked up to $207 (≈ ₽19 665)). Private balcony, spa services, and a gourmet breakfast. Worth the splurge for a special occasion.</li>
+<li><strong>Maafushi View Inn</strong> – The island’s top choice for luxury on a local island, with suites from $180per night (marked up to $207). Private balcony, spa services, and a gourmet breakfast. Worth the splurge for a special occasion.</li>
 </ul>
 
 <h2>Top 15 Attractions</h2>
@@ -423,21 +447,21 @@
 <td>3</td>
 <td>Sandbank Trip</td>
 <td>A half-day excursion to a pristine sandbank. Crystal-clear water, no crowds, and incredible photo ops. Includes snorkeling and lunch.</td>
-<td>$35 (≈ ₽3 325) per person</td>
+<td>$35per person</td>
 <td>9 AM–2 PM (book via guesthouse)</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Dolphin-Watching Cruise</td>
 <td>Evening cruise to spot spinner dolphins. They often leap and dance around the boat. I’ve seen pods of 50+ dolphins here!</td>
-<td>$30 (≈ ₽2 850) per person</td>
+<td>$30per person</td>
 <td>4 PM–6 PM daily</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Fishing Trip</td>
 <td>Traditional Maldivian fishing with locals. Catch tuna, snapper, or barracuda. The crew cooks your catch for dinner.</td>
-<td>$40 (≈ ₽3 800) per person</td>
+<td>$40per person</td>
 <td>3 PM–7 PM</td>
 </tr>
 <tr>
@@ -451,35 +475,35 @@
 <td>7</td>
 <td>Local Market</td>
 <td>Fresh produce, spices, and souvenirs. Try the sweet Maldivian chili bites and buy hand-painted sarongs.</td>
-<td>Free entry; items from $2 (≈ ₽190)</td>
+<td>Free entry; items from $2</td>
 <td>7 AM–9 PM (closed Friday mornings)</td>
 </tr>
 <tr>
 <td>8</td>
 <td>Manta Point</td>
 <td>A snorkeling spot 20 minutes by boat where manta rays gather to feed. Best from November to April. I saw three mantas in one dive!</td>
-<td>$50 (≈ ₽4 750) per person (including gear)</td>
+<td>$50per person (including gear)</td>
 <td>8 AM–12 PM (seasonal)</td>
 </tr>
 <tr>
 <td>9</td>
 <td>Kuda Bandos Island</td>
 <td>A nearby uninhabited island with a stunning beach and lagoon. Perfect for a picnic and snorkeling. Day trips available.</td>
-<td>$25 (≈ ₽2 375) per person (ferry included)</td>
+<td>$25per person (ferry included)</td>
 <td>9 AM–4 PM</td>
 </tr>
 <tr>
 <td>10</td>
 <td>Water Sports Center</td>
 <td>Jet skiing, parasailing, and banana boat rides. The adrenaline rush against the turquoise backdrop is unforgettable.</td>
-<td>Jet ski: $60 (≈ ₽5 700) for 30 min; parasailing: $80 (≈ ₽7 600)</td>
+<td>Jet ski: $60for 30 min; parasailing: $80</td>
 <td>9 AM–6 PM</td>
 </tr>
 <tr>
 <td>11</td>
 <td>Bioluminescent Plankton Tour</td>
 <td>Nighttime kayak trip to see glowing plankton in the lagoon. It feels like paddling through stars. Magical!</td>
-<td>$45 (≈ ₽4 275) per person</td>
+<td>$45per person</td>
 <td>8 PM–10 PM (new moon nights)</td>
 </tr>
 <tr>
@@ -493,14 +517,14 @@
 <td>13</td>
 <td>Guraidhoo Island</td>
 <td>A 15-minute ferry ride to a quieter local island. Explore its narrow streets, visit the local school, and snorkel at a less-crowded reef.</td>
-<td>Ferry: $2 (≈ ₽190)</td>
+<td>Ferry: $2</td>
 <td>Ferries hourly 6 AM–6 PM</td>
 </tr>
 <tr>
 <td>14</td>
 <td>Underwater Restaurant (Nearby)</td>
 <td>A unique dining experience at a floating restaurant 20 minutes away. Watch fish swim by while eating Maldivian lobster.</td>
-<td>$120 (≈ ₽11 400) per person (meal included)</td>
+<td>$120per person (meal included)</td>
 <td>12 PM–10 PM (reservation needed)</td>
 </tr>
 <tr>
@@ -518,9 +542,9 @@
 
 <ul>
 <li><strong>Walking</strong> – My favorite way. The island’s sandy paths are safe and scenic. Free and healthy!</li>
-<li><strong>Bicycle Rental</strong> – Available at most guesthouses for $8 (≈ ₽760) per day (marked up to $9 (≈ ₽855)). Great for covering the island faster, especially with gear.</li>
-<li><strong>Taxi (Local Buggy)</strong> – Electric buggies for luggage or late-night rides. $3 (≈ ₽285) per trip (marked up to $4 (≈ ₽380)). Flag one down near the harbor.</li>
-<li><strong>Ferry to Other Islands</strong> – Public ferries to Malé, Guraidhoo, or Fulidhoo cost $2 (≈ ₽190)–$5 (≈ ₽475) (marked up to $3 (≈ ₽285)–$6 (≈ ₽570)). Speedboats to nearby resorts or sandbanks are $20 (≈ ₽1 900)–$40 (≈ ₽3 800) per person (marked up to $23 (≈ ₽2 185)–$46 (≈ ₽4 370)). Book at the harbor office.</li>
+<li><strong>Bicycle Rental</strong> – Available at most guesthouses for $8per day (marked up to $9). Great for covering the island faster, especially with gear.</li>
+<li><strong>Taxi (Local Buggy)</strong> – Electric buggies for luggage or late-night rides. $3per trip (marked up to $4). Flag one down near the harbor.</li>
+<li><strong>Ferry to Other Islands</strong> – Public ferries to Malé, Guraidhoo, or Fulidhoo cost $2–$5(marked up to $3–$6). Speedboats to nearby resorts or sandbanks are $20–$40per person (marked up to $23–$46). Book at the harbor office.</li>
 </ul>
 
 <h2>Where to Eat</h2>
@@ -528,14 +552,14 @@
 <p>Maldivian cuisine is a seafood lover’s paradise, with influences from India and Sri Lanka. On Maafushi, you’ll find everything from street-side curry stalls to cozy restaurants. Here are my top picks:</p>
 
 <ul>
-<li><strong>Hot Bite</strong> – A local institution! Try their mas huni (shredded smoked tuna with coconut and chili) for breakfast at $4 (≈ ₽380) (marked up to $5 (≈ ₽475)). Dinner mains like grilled reef fish start at $10 (≈ ₽950) (marked up to $12 (≈ ₽1 140)). Open 7 AM–10 PM.</li>
-<li><strong>Stone Grill Restaurant</strong> – Cook your own steak or seafood on a hot stone. A fun, interactive experience. Mains $15 (≈ ₽1 425)–$25 (≈ ₽2 375) (marked up to $17 (≈ ₽1 615)–$29 (≈ ₽2 755)). Open 6 PM–11 PM.</li>
-<li><strong>Alia Café</strong> – Perfect for coffee and pastries, plus Maldivian short eats (samosas, bajiya). Snacks from $2 (≈ ₽190) (marked up to $3 (≈ ₽285)). Open 8 AM–9 PM.</li>
-<li><strong>Street Food Stalls</strong> – Near the harbor, try hedhikaa (local snacks) like fish cakes and coconut buns for $1 (≈ ₽95)–$2 (≈ ₽190) each (marked up to $1.50 (≈ ₽142)–$2.50 (≈ ₽237)). Best in the evening.</li>
-<li><strong>Fine Dining at Kaani Beach</strong> – For a splurge, the restaurant here serves Maldivian lobster curry and tuna steak. Mains $20 (≈ ₽1 900)–$35 (≈ ₽3 325) (marked up to $23 (≈ ₽2 185)–$40 (≈ ₽3 800)). Open 12 PM–10 PM.</li>
+<li><strong>Hot Bite</strong> – A local institution! Try their mas huni (shredded smoked tuna with coconut and chili) for breakfast at $4(marked up to $5). Dinner mains like grilled reef fish start at $10(marked up to $12). Open 7 AM–10 PM.</li>
+<li><strong>Stone Grill Restaurant</strong> – Cook your own steak or seafood on a hot stone. A fun, interactive experience. Mains $15–$25(marked up to $17–$29). Open 6 PM–11 PM.</li>
+<li><strong>Alia Café</strong> – Perfect for coffee and pastries, plus Maldivian short eats (samosas, bajiya). Snacks from $2(marked up to $3). Open 8 AM–9 PM.</li>
+<li><strong>Street Food Stalls</strong> – Near the harbor, try hedhikaa (local snacks) like fish cakes and coconut buns for $1–$2each (marked up to $2–$2). Best in the evening.</li>
+<li><strong>Fine Dining at Kaani Beach</strong> – For a splurge, the restaurant here serves Maldivian lobster curry and tuna steak. Mains $20–$35(marked up to $23–$40). Open 12 PM–10 PM.</li>
 </ul>
 
-<p>Price ranges: Breakfast $3 (≈ ₽285)–$8  (≈ ₽760) lunch $5 (≈ ₽475)–$15  (≈ ₽1 425) dinner $10 (≈ ₽950)–$30 (≈ ₽2 850) per person (all marked up 12-15%).</p>
+<p>Price ranges: Breakfast $3–$8lunch $5–$15dinner $10–$30per person (all marked up 12-15%).</p>
 
 <h2>Best Time to Visit</h2>
 
@@ -566,43 +590,43 @@
 </tr>
 <tr>
 <td>Accommodation (7 nights)</td>
-<td>$370 (≈ ₽35 150) (guesthouse)</td>
-<td>$760 (≈ ₽72 200) (Kaani Beach)</td>
-<td>$1 450 (≈ ₽137 750) (Maafushi View Inn)</td>
+<td>$370(guesthouse)</td>
+<td>$760(Kaani Beach)</td>
+<td>$1 450(Maafushi View Inn)</td>
 </tr>
 <tr>
 <td>Food (7 days)</td>
-<td>$140 (≈ ₽13 300) (local eateries)</td>
-<td>$280 (≈ ₽26 600) (mix of casual and fine dining)</td>
-<td>$420 (≈ ₽39 900) (restaurants and special meals)</td>
+<td>$140(local eateries)</td>
+<td>$280(mix of casual and fine dining)</td>
+<td>$420(restaurants and special meals)</td>
 </tr>
 <tr>
 <td>Transport (ferries, local)</td>
-<td>$30 (≈ ₽2 850) (public ferry, walking)</td>
-<td>$60 (≈ ₽5 700) (speedboat, bike rental)</td>
-<td>$150 (≈ ₽14 250) (private speedboats, buggies)</td>
+<td>$30(public ferry, walking)</td>
+<td>$60(speedboat, bike rental)</td>
+<td>$150(private speedboats, buggies)</td>
 </tr>
 <tr>
 <td>Activities (excursions, gear)</td>
-<td>$140 (≈ ₽13 300) (sandbank, snorkel gear)</td>
-<td>$300 (≈ ₽28 500) (dolphin cruise, manta trip, fishing)</td>
-<td>$500 (≈ ₽47 500) (all top attractions, water sports)</td>
+<td>$140(sandbank, snorkel gear)</td>
+<td>$300(dolphin cruise, manta trip, fishing)</td>
+<td>$500(all top attractions, water sports)</td>
 </tr>
 <tr>
 <td>Miscellaneous (souvenirs, tips)</td>
-<td>$50 (≈ ₽4 750)</td>
-<td>$100 (≈ ₽9 500)</td>
-<td>$200 (≈ ₽19 000)</td>
+<td>$50</td>
+<td>$100</td>
+<td>$200</td>
 </tr>
 <tr>
 <td><strong>Total (per person)</strong></td>
-<td><strong>$730 (≈ ₽69 350)</strong></td>
-<td><strong>$1 500 (≈ ₽142 500)</strong></td>
-<td><strong>$2 720 (≈ ₽258 400)</strong></td>
+<td><strong>$730</strong></td>
+<td><strong>$1 500</strong></td>
+<td><strong>$2 720</strong></td>
 </tr>
 </table>
 
-<p>These prices include my 12-15% markup. Budget travelers can easily enjoy Maafushi on $100 (≈ ₽9 500)–$120 (≈ ₽11 400) per day, while mid-range offers comfort without fuss.</p>
+<p>These prices include my 12-15% markup. Budget travelers can easily enjoy Maafushi on $100–$120per day, while mid-range offers comfort without fuss.</p>
 
 <h2>10 Travel Tips</h2>
 
@@ -718,6 +742,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -746,6 +771,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -763,8 +789,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

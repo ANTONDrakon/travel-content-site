@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Абу-Даби 2026: от бюджета до люкса Абу-Даби, столица Объединенных Арабских Эмиратов, стремительно превратилась в один из самых динамичных тур...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Абу-Даби 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Абу-Даби 2026: от бюджета до люкса Абу-Даби, столица Объединенных Арабских Эмиратов, стремительно превратилась в один из самых динамичных тур...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/abu-dhabi-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://ic.pics.livejournal.com/pantv/14908973/12182338/12182338_original.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/abu-dhabi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Абу-Даби 2026: от бюджета до люкса</div>
@@ -363,11 +387,19 @@
 
 <p>Цены на проживание в Абу-Даби варьируются в зависимости от сезона, района и класса отеля. Высокий сезон (ноябрь-апрель) характеризуется пиковыми ценами, особенно на люксовые номера, которые могут достигать 800-1200 долларов за ночь. В низкий сезон (июнь-сентябрь) стоимость проживания падает на 40-60%, что делает город доступным для бюджетных путешественников. Средняя цена за ночь в трехзвездочном отеле в 2026 году составляет около 45 долларов, в четырехзвездочном — 85 долларов, а в пятизвездочном — 220 долларов. Мы отобрали 10 лучших отелей, которые представляют все три ценовых сегмента, основываясь на отзывах гостей за 2025-2026 годы, рейтингах <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> и TripAdvisor, а также на данных о новых открытиях.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Premier Inn Abu Dhabi Capital Centre</h3>
+<div id="hc_450586" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Premier Inn Abu Dhabi Capital Centre &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Этот отель расположен в деловом районе, рядом с Национальным выставочным центром (ADNEC). Номера чистые, функциональные, с кондиционером и телевизором с плоским экраном. В отеле есть круглосуточная стойка регистрации, бесплатный Wi-Fi и небольшой фитнес-зал. Завтрак — шведский стол, включен в стоимость.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> от 38 долларов за ночь в стандартном двухместном номере.</p>
 <ul>
 <li><strong>Плюсы:</strong> Бесплатный трансфер до торгового центра Yas Mall и пляжа. Отличное соотношение цены и качества. Рядом станция метро.</li>
@@ -375,8 +407,16 @@
 </ul>
 
 <h3>2. Ibis Abu Dhabi Gate</h3>
+<div id="hc_428767" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ibis Abu Dhabi Gate - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ibis Abu Dhabi Gate - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ibis Abu Dhabi Gate - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ibis Abu Dhabi Gate &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Часть международной сети Ibis, этот отель предлагает стандартизированный сервис и чистоту. Номера компактные, но продуманные: есть письменный стол, сейф, чайник. Ресторан отеля подает блюда интернациональной кухни. На территории есть круглосуточный мини-маркет.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> от 35 долларов за ночь.</p>
 <ul>
 <li><strong>Плюсы:</strong> Бесплатный Wi-Fi с хорошей скоростью. Круглосуточная стойка регистрации. Близость к автобусной остановке (маршрут до центра).</li>
@@ -384,6 +424,15 @@
 </ul>
 
 <h3>3. City Seasons Suites</h3>
+<div id="hc_430234" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="City Seasons Suites - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="City Seasons Suites - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="City Seasons Suites - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_430234 .hc-slide');var d=document.querySelectorAll('#hc_430234 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_430234 .hc-slide');var d=document.querySelectorAll('#hc_430234 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_430234 .hc-slide');var d=document.querySelectorAll('#hc_430234 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">City Seasons Suites &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Апарт-отель, расположенный в центре города, на улице Хамдан. Номера представляют собой студии с мини-кухней (плита, микроволновка, холодильник). Идеальный вариант для длительного проживания или для тех, кто предпочитает готовить самостоятельно. В здании есть тренажерный зал и сауна.</p>
 <p><strong>Цены:</strong> от 48 долларов за ночь за студию.</p>
 <ul>
@@ -391,60 +440,108 @@
 <li><strong>Минусы:</strong> Устаревшая мебель в некоторых номерах. Нет бассейна. Шумные кондиционеры.</li>
 </ul>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>1. Centro Capital Centre by Rotana</h3>
+<div id="hc_893398" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Centro Capital Centre by Rotana - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Centro Capital Centre by Rotana - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Centro Capital Centre by Rotana - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_893398 .hc-slide');var d=document.querySelectorAll('#hc_893398 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_893398 .hc-slide');var d=document.querySelectorAll('#hc_893398 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_893398 .hc-slide');var d=document.querySelectorAll('#hc_893398 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Centro Capital Centre by Rotana &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Современный отель от сети Rotana, известной своим высоким уровнем сервиса. Номера оформлены в минималистичном стиле, оснащены системой умного дома. В отеле есть открытый бассейн, фитнес-центр и ресторан с панорамным видом. Расположение рядом с ADNEC делает его популярным среди бизнес-туристов.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="от" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> от 65 долларов за ночь.</p>
 <ul>
 <li><strong>Фишки:</strong> Бесплатный шаттл до торгового центра Yas Mall и Ferrari World. Номера с звукоизоляцией. Круглосуточный room service.</li>
 </ul>
 
 <h3>2. Novotel Abu Dhabi Al Bustan</h3>
+<div id="hc_754210" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Novotel Abu Dhabi Al Bustan - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Novotel Abu Dhabi Al Bustan - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_754210 .hc-slide');var d=document.querySelectorAll('#hc_754210 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_754210 .hc-slide');var d=document.querySelectorAll('#hc_754210 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Novotel Abu Dhabi Al Bustan &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Этот отель расположен в тихом районе, в окружении садов. Номера просторные, с балконами, выходящими на бассейн или город. В отеле есть спа-центр с хаммамом, несколько ресторанов (включая итальянский и азиатский) и детский клуб.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> от 80 долларов за ночь.</p>
 <ul>
 <li><strong>Фишки:</strong> Большая зеленая территория с тремя бассейнами. Бесплатный трансфер до пляжа. Отличный завтрак с восточными сладостями.</li>
 </ul>
 
 <h3>3. Holiday Inn Abu Dhabi Downtown</h3>
+<div id="hc_510686" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Abu Dhabi Downtown - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Abu Dhabi Downtown - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_510686 .hc-slide');var d=document.querySelectorAll('#hc_510686 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_510686 .hc-slide');var d=document.querySelectorAll('#hc_510686 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Abu Dhabi Downtown &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Отель международной сети, расположенный на главной улице города. Номера классические, с ковровым покрытием и деревянной мебелью. В отеле есть бизнес-центр, фитнес-зал и ресторан, специализирующийся на блюдах местной кухни.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="ме" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> от 55 долларов за ночь.</p>
 <ul>
 <li><strong>Фишки:</strong> Расположение в пешей доступности от набережной Корниш. Бесплатный Wi-Fi на всей территории. Часто проводятся акции с бесплатным ужином при бронировании.</li>
 </ul>
 
 <h3>4. Aloft Abu Dhabi</h3>
+<div id="hc_61190" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Aloft Abu Dhabi - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Aloft Abu Dhabi - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Aloft Abu Dhabi - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_61190 .hc-slide');var d=document.querySelectorAll('#hc_61190 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_61190 .hc-slide');var d=document.querySelectorAll('#hc_61190 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_61190 .hc-slide');var d=document.querySelectorAll('#hc_61190 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Aloft Abu Dhabi &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Стильный отель на острове Аль-Марья, ориентированный на молодежь и деловых путешественников. Интерьеры яркие, с элементами современного искусства. В номерах — огромные кровати, душевые кабины с тропическим душем и панорамные окна.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> от 90 долларов за ночь.</p>
 <ul>
 <li><strong>Фишки:</strong> Живая музыка в лобби-баре по выходным. Крытый бассейн с подсветкой. Бесплатный трансфер до пляжа и торгового центра Galleria.</li>
 </ul>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>1. Emirates Palace Mandarin Oriental</h3>
+<div id="hc_490565" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Emirates Palace Mandarin Oriental - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Emirates Palace Mandarin Oriental - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_490565 .hc-slide');var d=document.querySelectorAll('#hc_490565 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_490565 .hc-slide');var d=document.querySelectorAll('#hc_490565 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Emirates Palace Mandarin Oriental &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Один из самых знаковых отелей Абу-Даби, расположенный на частном пляже длиной 1,3 километра. Архитектура в арабском стиле с золотыми куполами и мраморными полами. Номера площадью от 55 квадратных метров оснащены мраморными ванными комнатами и индивидуальным консьерж-сервисом. На территории отеля находится 14 ресторанов и баров, включая знаменитый ресторан Hakkasan.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> от 450 долларов за ночь.</p>
 <ul>
 <li><strong>Особенности:</strong> Собственный пляж с белым песком. Спа-центр площадью 1000 квадратных метров. Услуги дворецкого (butler service).</li>
 </ul>
 
 <h3>2. The St. Regis Saadiyat Island Resort</h3>
+<div id="hc_12786" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="The St. Regis Saadiyat Island Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The St. Regis Saadiyat Island Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_12786 .hc-slide');var d=document.querySelectorAll('#hc_12786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_12786 .hc-slide');var d=document.querySelectorAll('#hc_12786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The St. Regis Saadiyat Island Resort &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Курорт на острове Саадият, рядом с Лувром Абу-Даби. Отель спроектирован так, чтобы гармонировать с природным ландшафтом. Номера оформлены в спокойных бежевых тонах, с видом на океан или мангровые заросли. В отеле есть 4 бассейна, поле для гольфа на 18 лунок и спа-центр.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="сп" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> от 350 долларов за ночь.</p>
 <ul>
 <li><strong>Особенности:</strong> Бесплатный доступ в Лувр Абу-Даби для гостей. Частный пляж с зоной для каякинга. Ресторан с мишленовской звездой.</li>
 </ul>
 
 <h3>3. Qasr Al Sarab Desert Resort by Anantara</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="by" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_206533" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Qasr Al Sarab Desert Resort by Anantara - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Qasr Al Sarab Desert Resort by Anantara - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Qasr Al Sarab Desert Resort by Anantara - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_206533 .hc-slide');var d=document.querySelectorAll('#hc_206533 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_206533 .hc-slide');var d=document.querySelectorAll('#hc_206533 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_206533 .hc-slide');var d=document.querySelectorAll('#hc_206533 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Qasr Al Sarab Desert Resort by Anantara &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Уникальный отель, расположенный в пустыне Руб-эль-Хали, в 200 километрах от города. Номера выполнены в стиле бедуинской крепости, с террасами, выходящими на бескрайние пески. Гостям предлагают сафари на джипах, верховую езду на верблюдах и ужины под звездами.</p>
 <p><strong>Цены:</strong> от 600 долларов за ночь.</p>
 <ul>
@@ -575,6 +672,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -603,6 +701,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -620,8 +719,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

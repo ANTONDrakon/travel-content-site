@@ -6,7 +6,7 @@
     <title>Cappadocia Travel Guide 2026</title>
     <meta name="description" content="Cappadocia Travel Guide 2026 Cappadocia, located in central Anatolia, Turkey, is a surreal landscape of fairy chimneys, ancient cave dwellings, and undergrou...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/cappadocia-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/cappadocia-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/cappadocia-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/cappadocia-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Cappadocia Travel Guide 2026">
     <meta property="og:description" content="Cappadocia Travel Guide 2026 Cappadocia, located in central Anatolia, Turkey, is a surreal landscape of fairy chimneys, ancient cave dwellings, and undergrou...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/turkey/cappadocia-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/cappadocia-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/173895/RfFySz3wO2UvbxBAH17Q.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/cappadocia.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Cappadocia Travel Guide 2026</div>
@@ -362,51 +386,51 @@
 <p>Why visit in 2026? The region continues to evolve with improved infrastructure and sustainable tourism initiatives. You can explore open-air museums carved into soft tuff rock, hike through rose-colored valleys, and stay in a cave hotel carved into a hillside. Cappadocia is a top destination for photographers, history buffs, and adventure seekers. The combination of ancient Byzantine frescoes, underground cities like Derinkuyu (extending 85 meters deep), and the iconic balloon flights over Göreme National Park (a UNESCO World Heritage Site) makes it a once-in-a-lifetime experience. Expect to see around 2.5 million visitors annually, with 2026 projected to be a peak year for cultural tourism.</p>
 
 <h2>How to Get There</h2>
-<p>Two main airports serve Cappadocia: Nevşehir Kapadokya Airport (NAV) and Kayseri Erkilet Airport (ASR). NAV is 30 km from Göreme, while ASR is 75 km away. From Istanbul, Turkish Airlines and Pegasus operate daily flights lasting about 1 hour 20 minutes. Average one-way ticket prices in 2026 range from $50 (≈ ₽4 750) to $120 (≈ ₽11 400) (economy class), depending on advance booking and season. From Ankara, flights are cheaper, averaging $30 (≈ ₽2 850) to $70. (≈ ₽6 650) Budget airlines also offer seasonal deals. Shuttle buses from both airports to Göreme cost around $10 (≈ ₽950)-15 per person, with frequent departures.</p>
+<p>Two main airports serve Cappadocia: Nevşehir Kapadokya Airport (NAV) and Kayseri Erkilet Airport (ASR). NAV is 30 km from Göreme, while ASR is 75 km away. From Istanbul, Turkish Airlines and Pegasus operate daily flights lasting about 1 hour 20 minutes. Average one-way ticket prices in 2026 range from $50to $120(economy class), depending on advance booking and season. From Ankara, flights are cheaper, averaging $30to $70Budget airlines also offer seasonal deals. Shuttle buses from both airports to Göreme cost around $10-15 per person, with frequent departures.</p>
 
 <h2>Where to Stay</h2>
-<p>Accommodation options range from budget hostels to luxurious cave suites. For budget travelers, the Göreme Hostel offers dorm beds from $15 (≈ ₽1 425) per night, with clean facilities and a communal terrace. Mid-range options include the Kelebek Special Cave Hotel, with double rooms from $80 (≈ ₽7 600) per night, featuring traditional décor and a pool. Luxury seekers should book the Museum Hotel in Ürgüp, a Relais & Châteaux property with rooms from $350 (≈ ₽33 250) per night, offering panoramic views and a gourmet restaurant. Avanos is quieter and cheaper, with guesthouses from $40 (≈ ₽3 800) per night. For the best sunrise balloon views, stay in Göreme’s central neighborhood.</p>
+<p>Accommodation options range from budget hostels to luxurious cave suites. For budget travelers, the Göreme Hostel offers dorm beds from $15per night, with clean facilities and a communal terrace. Mid-range options include the Kelebek Special Cave Hotel, with double rooms from $80per night, featuring traditional décor and a pool. Luxury seekers should book the Museum Hotel in Ürgüp, a Relais & Châteaux property with rooms from $350per night, offering panoramic views and a gourmet restaurant. Avanos is quieter and cheaper, with guesthouses from $40per night. For the best sunrise balloon views, stay in Göreme’s central neighborhood.</p>
 
 <h2>Top 15 Attractions</h2>
 <table>
 <tr><th>#</th><th>Place</th><th>Description</th><th>Ticket Price (USD)</th><th>Opening Hours</th></tr>
-<tr><td>1</td><td>Göreme Open-Air Museum</td><td>A monastic complex with rock-cut churches and frescoes from the 10th-12th centuries. Highlights include the Dark Church with vivid biblical scenes.</td><td>$15 (≈ ₽1 425) (Dark Church extra $5 (≈ ₽475))</td><td>8:00-17:00 (winter), 8:00-19:00 (summer)</td></tr>
-<tr><td>2</td><td>Derinkuyu Underground City</td><td>An 8-level subterranean city reaching 85 meters deep, housing up to 20,000 people. Features ventilation shafts and a chapel.</td><td>$10 (≈ ₽950)</td><td>8:00-17:00 (winter), 8:00-19:00 (summer)</td></tr>
-<tr><td>3</td><td>Kaymaklı Underground City</td><td>Smaller but less crowded, with 4 levels open to the public. Excellent for understanding daily life underground.</td><td>$10 (≈ ₽950)</td><td>8:00-17:00</td></tr>
-<tr><td>4</td><td>Uçhisar Castle</td><td>A natural rock fortress with panoramic views. Climb to the top for a 360-degree view of the region.</td><td>$5 (≈ ₽475)</td><td>8:00-18:00</td></tr>
-<tr><td>5</td><td>Pasabag (Monks Valley)</td><td>Famous for three-headed fairy chimneys and hermit caves. Free to enter, but parking costs $2. (≈ ₽190)</td><td>Free</td><td>Open 24 hours</td></tr>
+<tr><td>1</td><td>Göreme Open-Air Museum</td><td>A monastic complex with rock-cut churches and frescoes from the 10th-12th centuries. Highlights include the Dark Church with vivid biblical scenes.</td><td>$15(Dark Church extra $5)</td><td>8:00-17:00 (winter), 8:00-19:00 (summer)</td></tr>
+<tr><td>2</td><td>Derinkuyu Underground City</td><td>An 8-level subterranean city reaching 85 meters deep, housing up to 20,000 people. Features ventilation shafts and a chapel.</td><td>$10</td><td>8:00-17:00 (winter), 8:00-19:00 (summer)</td></tr>
+<tr><td>3</td><td>Kaymaklı Underground City</td><td>Smaller but less crowded, with 4 levels open to the public. Excellent for understanding daily life underground.</td><td>$10</td><td>8:00-17:00</td></tr>
+<tr><td>4</td><td>Uçhisar Castle</td><td>A natural rock fortress with panoramic views. Climb to the top for a 360-degree view of the region.</td><td>$5</td><td>8:00-18:00</td></tr>
+<tr><td>5</td><td>Pasabag (Monks Valley)</td><td>Famous for three-headed fairy chimneys and hermit caves. Free to enter, but parking costs $2</td><td>Free</td><td>Open 24 hours</td></tr>
 <tr><td>6</td><td>Devrent Valley (Imagination Valley)</td><td>Rock formations resembling animals, such as a camel and a dolphin. Great for photography at sunset.</td><td>Free</td><td>Open 24 hours</td></tr>
 <tr><td>7</td><td>Love Valley</td><td>Known for phallic-shaped rock pillars. Ideal for hiking and balloon watching from below.</td><td>Free</td><td>Open 24 hours</td></tr>
-<tr><td>8</td><td>Zelve Open-Air Museum</td><td>An abandoned village with cave homes, a mosque, and a church. Less crowded than Göreme.</td><td>$10 (≈ ₽950)</td><td>8:00-17:00</td></tr>
-<tr><td>9</td><td>Ihlara Valley</td><td>A 14 km gorge with rock-cut churches along the Melendiz River. Entrance near the Belisirma village.</td><td>$8 (≈ ₽760)</td><td>8:00-17:00</td></tr>
-<tr><td>10</td><td>Hot Air Balloon Ride</td><td>A 1-hour flight over fairy chimneys at dawn. Prices range from $150 (≈ ₽14 250) to $250 (≈ ₽23 750) per person, including breakfast and champagne.</td><td>$150 (≈ ₽14 250)-250</td><td>Departures at 5:00-6:00 AM</td></tr>
+<tr><td>8</td><td>Zelve Open-Air Museum</td><td>An abandoned village with cave homes, a mosque, and a church. Less crowded than Göreme.</td><td>$10</td><td>8:00-17:00</td></tr>
+<tr><td>9</td><td>Ihlara Valley</td><td>A 14 km gorge with rock-cut churches along the Melendiz River. Entrance near the Belisirma village.</td><td>$8</td><td>8:00-17:00</td></tr>
+<tr><td>10</td><td>Hot Air Balloon Ride</td><td>A 1-hour flight over fairy chimneys at dawn. Prices range from $150to $250per person, including breakfast and champagne.</td><td>$150-250</td><td>Departures at 5:00-6:00 AM</td></tr>
 <tr><td>11</td><td>Göreme Panorama</td><td>A viewpoint on the road to Uçhisar. Offers a classic postcard view of the region.</td><td>Free</td><td>Open 24 hours</td></tr>
-<tr><td>12</td><td>Ortahisar Castle</td><td>A smaller castle with fewer tourists. Climb for a view of the surrounding valleys.</td><td>$3 (≈ ₽285)</td><td>8:00-17:00</td></tr>
+<tr><td>12</td><td>Ortahisar Castle</td><td>A smaller castle with fewer tourists. Climb for a view of the surrounding valleys.</td><td>$3</td><td>8:00-17:00</td></tr>
 <tr><td>13</td><td>Çavuşin Village</td><td>An old Greek village with a massive rock-cut church and abandoned houses. Free to explore.</td><td>Free</td><td>Open 24 hours</td></tr>
 <tr><td>14</td><td>Mustafapaşa Village</td><td>A historic town with Ottoman-era architecture and the Church of St. Constantine.</td><td>Free</td><td>Open 24 hours</td></tr>
 <tr><td>15</td><td>Red Valley</td><td>Known for its red-hued rocks at sunset. Hike from Çavuşin to the famous cross-shaped church.</td><td>Free</td><td>Open 24 hours</td></tr>
 </table>
 
 <h2>Getting Around</h2>
-<p>Cappadocia has no metro system. The most common transport is the minibus (dolmuş), which connects Göreme, Ürgüp, Avanos, and Nevşehir. Fares are $1 (≈ ₽95)-2 per ride. Taxis are available but expensive: a 10 km trip costs around $15 (≈ ₽1 425)-20. For flexibility, rent a car from $30 (≈ ₽2 850) per day (including insurance). Scooter rentals are $20 (≈ ₽1 900) per day, but roads can be winding. Many attractions are within walking distance in Göreme. For remote valleys like Ihlara, consider a guided tour ($50 (≈ ₽4 750)-80 per person).</p>
+<p>Cappadocia has no metro system. The most common transport is the minibus (dolmuş), which connects Göreme, Ürgüp, Avanos, and Nevşehir. Fares are $1-2 per ride. Taxis are available but expensive: a 10 km trip costs around $15-20. For flexibility, rent a car from $30per day (including insurance). Scooter rentals are $20per day, but roads can be winding. Many attractions are within walking distance in Göreme. For remote valleys like Ihlara, consider a guided tour ($50-80 per person).</p>
 
 <h2>Where to Eat</h2>
-<p>Local cuisine is rich and earthy. Testi kebab (clay pot stew) is a must-try, costing $10 (≈ ₽950)-15 in restaurants like Dibek in Göreme. For street food, try gözleme (stuffed flatbread) for $3 (≈ ₽285)-5 at local stalls. Avanos is famous for pottery and pide (Turkish pizza), around $5 (≈ ₽475)-8. Fine dining at Seki Restaurant in Ürgüp offers tasting menus from $40. (≈ ₽3 800) Budget meals at cafes start at $6 (≈ ₽570) for a kebab plate. Vegetarians should try mercimek çorbası (lentil soup) for $2. (≈ ₽190) Tipping is customary at 10-15%.</p>
+<p>Local cuisine is rich and earthy. Testi kebab (clay pot stew) is a must-try, costing $10-15 in restaurants like Dibek in Göreme. For street food, try gözleme (stuffed flatbread) for $3-5 at local stalls. Avanos is famous for pottery and pide (Turkish pizza), around $5-8. Fine dining at Seki Restaurant in Ürgüp offers tasting menus from $40Budget meals at cafes start at $6for a kebab plate. Vegetarians should try mercimek çorbası (lentil soup) for $2Tipping is customary at 10-15%.</p>
 
 <h2>Best Time to Visit</h2>
 <p>Spring (April-May) and autumn (September-October) are ideal, with temperatures 15-25°C and lower crowds. Summer (June-August) is hot (30-35°C) and busy, with hotel prices peaking. Winter (November-March) is cold (0-10°C) and snowy, but beautiful for photography. Balloon flights are most reliable in summer, though flights can be canceled due to wind. Prices are lowest in January-February, with hotel discounts up to 40%.</p>
 
 <h2>Visa & Documents</h2>
-<p>Russian citizens do not require a visa for stays up to 60 days. A valid passport (with at least 6 months validity) is sufficient. For other nationalities, check the Turkish e-Visa system; many countries (US, UK, EU) can obtain a visa online for $50. (≈ ₽4 750) Travel insurance is recommended.</p>
+<p>Russian citizens do not require a visa for stays up to 60 days. A valid passport (with at least 6 months validity) is sufficient. For other nationalities, check the Turkish e-Visa system; many countries (US, UK, EU) can obtain a visa online for $50Travel insurance is recommended.</p>
 
 <h2>Weekly Trip Budget</h2>
 <table>
 <tr><th>Category</th><th>Budget (USD)</th><th>Mid-Range (USD)</th><th>Luxury (USD)</th></tr>
-<tr><td>Accommodation (7 nights)</td><td>$105 (≈ ₽9 975) (hostel)</td><td>$560 (≈ ₽53 200) (mid-range hotel)</td><td>$2 450 (≈ ₽232 750) (luxury cave hotel)</td></tr>
-<tr><td>Food (7 days)</td><td>$70 (≈ ₽6 650) (street food)</td><td>$210 (≈ ₽19 950) (restaurants)</td><td>$490 (≈ ₽46 550) (fine dining)</td></tr>
-<tr><td>Transport (local)</td><td>$30 (≈ ₽2 850) (buses)</td><td>$70 (≈ ₽6 650) (car rental)</td><td>$140 (≈ ₽13 300) (taxis+tours)</td></tr>
-<tr><td>Entertainment</td><td>$50 (≈ ₽4 750) (3 museums)</td><td>$200 (≈ ₽19 000) (balloon+1 tour)</td><td>$400 (≈ ₽38 000) (balloon+all museums)</td></tr>
-<tr><td>Total</td><td>$255 (≈ ₽24 225)</td><td>$1 040 (≈ ₽98 800)</td><td>$3 480 (≈ ₽330 600)</td></tr>
+<tr><td>Accommodation (7 nights)</td><td>$105(hostel)</td><td>$560(mid-range hotel)</td><td>$2 450(luxury cave hotel)</td></tr>
+<tr><td>Food (7 days)</td><td>$70(street food)</td><td>$210(restaurants)</td><td>$490(fine dining)</td></tr>
+<tr><td>Transport (local)</td><td>$30(buses)</td><td>$70(car rental)</td><td>$140(taxis+tours)</td></tr>
+<tr><td>Entertainment</td><td>$50(3 museums)</td><td>$200(balloon+1 tour)</td><td>$400(balloon+all museums)</td></tr>
+<tr><td>Total</td><td>$255</td><td>$1 040</td><td>$3 480</td></tr>
 </table>
 
 <h2>10 Travel Tips</h2>
@@ -527,6 +551,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -555,6 +580,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -572,8 +598,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Аланья 2026: от бюджета до люкса Аланья — один из самых динамично развивающихся курортов Турции, который ежегодно привлекает более 2,5 миллио...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/alanya-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/alanya-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/alanya-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/alanya-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/alanya-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/alanya-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Аланья 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Аланья 2026: от бюджета до люкса Аланья — один из самых динамично развивающихся курортов Турции, который ежегодно привлекает более 2,5 миллио...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/alanya-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/alanya-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/alanya.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Аланья 2026: от бюджета до люкса</div>
@@ -358,47 +382,63 @@
 
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
-<p>Аланья — один из самых динамично развивающихся курортов Турции, который ежегодно привлекает более 2,5 миллионов туристов. Гостиничная инфраструктура здесь впечатляет: от скромных семейных пансионов до пятизвездочных комплексов с частными пляжами. Основные районы сосредоточены вдоль 70-километровой береговой линии: центр (Клеопатра-бич), восточная часть (Конаклы) и западная (Авсаллар). Цены на проживание в 2026 году варьируются от ₽3 325 (≈ $35) за ночь в бюджетном отеле до ₽38 000 (≈ $400) в люксовых номерах, причем средняя стоимость выросла на 12% по сравнению с 2025 годом из-за инфляции турецкой лиры и роста спроса.</p>
+<p>Аланья — один из самых динамично развивающихся курортов Турции, который ежегодно привлекает более 2,5 миллионов туристов. Гостиничная инфраструктура здесь впечатляет: от скромных семейных пансионов до пятизвездочных комплексов с частными пляжами. Основные районы сосредоточены вдоль 70-километровой береговой линии: центр (Клеопатра-бич), восточная часть (Конаклы) и западная (Авсаллар). Цены на проживание в 2026 году варьируются от ₽3 325 ($35)за ночь в бюджетном отеле до ₽38 000 ($400)в люксовых номерах, причем средняя стоимость выросла на 12% по сравнению с 2025 годом из-за инфляции турецкой лиры и роста спроса.</p>
 <p>Туристический сезон 2026 года обещает быть рекордным: по данным Ассоциации отельеров Аланьи, загрузка отелей в июле-августе ожидается на уровне 95%. Важно учитывать, что большинство гостиниц работают по системе «все включено», но бюджетные варианты часто предлагают только завтраки. В этой статье мы разберем 10 лучших отелей по трем ценовым категориям, чтобы вы могли выбрать идеальный вариант для своего бюджета и целей поездки.</p>
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
-<p>Для путешественников, которые ценят экономию и готовы жертвовать некоторыми удобствами ради низкой цены, Аланья предлагает отличные варианты. В 2026 году бюджетный сегмент представлен в основном трехзвездочными отелями и апартаментами, расположенными в 10-15 минутах от пляжа. Средняя цена — ₽3 800 (≈ $40) за ночь с завтраком.</p>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
+<p>Для путешественников, которые ценят экономию и готовы жертвовать некоторыми удобствами ради низкой цены, Аланья предлагает отличные варианты. В 2026 году бюджетный сегмент представлен в основном трехзвездочными отелями и апартаментами, расположенными в 10-15 минутах от пляжа. Средняя цена — ₽3 800 ($40)за ночь с завтраком.</p>
 <ul>
-<li><strong>Hotel Sunlife (район Конаклы, ₽3 610 (≈ $38)/ночь)</strong> — небольшой отель на 40 номеров с открытым бассейном и собственной парковкой. Номера оснащены кондиционером, мини-холодильником и телевизором. Плюсы: тихое место, дружелюбный персонал, бесплатный Wi-Fi. Минусы: пляж в 15 минутах пешком, нет анимации, завтрак скромный (сыр, оливки, хлеб, чай). Подходит для пар без детей.</li>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Su" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<li><strong>Oba Garden Hotel (район Оба, ₽3 990 (≈ $42)/ночь)</strong> — семейный отель с зеленой территорией и детской площадкой. Цена включает завтрак-шведский стол. Плюсы: рядом супермаркет Migros, автобусная остановка до центра (5 минут), есть сад с мангалом. Минусы: устаревшая мебель, слабая звукоизоляция, бассейн маленький (6x4 метра). Идеален для бюджетных семей.</li>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<li><strong>Palm Garden Apart Hotel (район Клеопатра, ₽4 275 (≈ $45)/ночь)</strong> — апартаменты с мини-кухней (плита, микроволновка, посуда). Цена указана за номер на двоих. Плюсы: близость к пляжу (7 минут), возможность готовить самостоятельно, круглосуточная стойка регистрации. Минусы: нет уборки номера (только по запросу), шумно из-за близости к дороге, бассейн не работает в низкий сезон. Отличный выбор для длительного проживания (от 7 ночей).</li>
+<li><strong>Hotel Sunlife (район Конаклы, ₽3 610 ($38)/ночь)</strong> — небольшой отель на 40 номеров с открытым бассейном и собственной парковкой. Номера оснащены кондиционером, мини-холодильником и телевизором. Плюсы: тихое место, дружелюбный персонал, бесплатный Wi-Fi. Минусы: пляж в 15 минутах пешком, нет анимации, завтрак скромный (сыр, оливки, хлеб, чай). Подходит для пар без детей.</li>
+<li><strong>Oba Garden Hotel (район Оба, ₽3 990 ($42)/ночь)</strong> — семейный отель с зеленой территорией и детской площадкой. Цена включает завтрак-шведский стол. Плюсы: рядом супермаркет Migros, автобусная остановка до центра (5 минут), есть сад с мангалом. Минусы: устаревшая мебель, слабая звукоизоляция, бассейн маленький (6x4 метра). Идеален для бюджетных семей.</li>
+<li><strong>Palm Garden Apart Hotel (район Клеопатра, ₽4 275 ($45)/ночь)</strong> — апартаменты с мини-кухней (плита, микроволновка, посуда). Цена указана за номер на двоих. Плюсы: близость к пляжу (7 минут), возможность готовить самостоятельно, круглосуточная стойка регистрации. Минусы: нет уборки номера (только по запросу), шумно из-за близости к дороге, бассейн не работает в низкий сезон. Отличный выбор для длительного проживания (от 7 ночей).</li>
 </ul>
 <p>Эти отели имеют средний рейтинг 7.5/10 на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>, но при раннем бронировании (за 3-4 месяца) можно сэкономить до 20%. Советуем проверять отзывы за 2025-2026 годы, так как некоторые объекты меняют управление.</p>
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
-<p>Средний сегмент — самый популярный в Аланье: здесь представлены четырехзвездочные отели с развитой инфраструктурой и системой «все включено». Цены в 2026 году колеблются от ₽6 650 (≈ $70) до ₽12 350 (≈ $130) за ночь в зависимости от сезона и расположения. Эти отели идеальны для пар и семей, которые хотят комфорта без переплаты.</p>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
+<p>Средний сегмент — самый популярный в Аланье: здесь представлены четырехзвездочные отели с развитой инфраструктурой и системой «все включено». Цены в 2026 году колеблются от ₽6 650 ($70)до ₽12 350 ($130)за ночь в зависимости от сезона и расположения. Эти отели идеальны для пар и семей, которые хотят комфорта без переплаты.</p>
 <ul>
-<li><strong>Grand Okan Hotel (район Клеопатра, ₽8 075 (≈ $85)/ночь)</strong> — отель 4 звезды с собственным пляжем (шезлонги и зонтики бесплатно). Номера с балконами и видом на море. Фишки: два бассейна (взрослый и детский), турецкая баня, вечерняя анимация. Цена включает трехразовое питание (шведский стол). Единственный минус — пляж галечный, но есть понтон для входа в море. Рейтинг — 8.3.</li>
-<li><strong>Club Turban (район Авсаллар, ₽9 025 (≈ $95)/ночь)</strong> — большой комплекс на 250 номеров с аквапарком (4 горки) и теннисным кортом. Система «ультра все включено» (алкоголь местный, закуски в течение дня). Фишки: вечеринки с диджеями по пятницам, спа-центр с массажем, детский клуб. Минус — удаленность от центра Аланьи (20 минут на такси). Идеален для молодежи.</li>
-<li><strong>Sunprime C-Lounge (район Конаклы, ₽9 975 (≈ $105)/ночь)</strong> — отель для взрослых (только с 16 лет) с концепцией «тихий роскошь». Номера с современным дизайном, ламинат, смарт-ТВ. Фишки: бесконечный бассейн с видом на море, ресторан с средиземноморской кухней, йога-терраса. Цена — полупансион (завтрак и ужин). Минус — нет пляжа (общественный в 200 метрах). Подходит для пар без детей.</li>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="дл" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<li><strong>Alaiye Resort & Spa (район Оба, ₽11 400 (≈ $120)/ночь)</strong> — премиальный четырехзвездочный отель с частным песчаным пляжем (протяженность 150 метров). Фишки: спа-центр с хаммамом, открытый бассейн с подогревом в апреле-октябре, три ресторана (включая рыбный). Номера с джакузи на балконе. Минус — в сезон шумно из-за анимации до 23:00. Рейтинг — 8.7, лучший в категории.</li>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<li><strong>Grand Okan Hotel (район Клеопатра, ₽8 075 ($85)/ночь)</strong> — отель 4 звезды с собственным пляжем (шезлонги и зонтики бесплатно). Номера с балконами и видом на море. Фишки: два бассейна (взрослый и детский), турецкая баня, вечерняя анимация. Цена включает трехразовое питание (шведский стол). Единственный минус — пляж галечный, но есть понтон для входа в море. Рейтинг — 8.3.</li>
+<li><strong>Club Turban (район Авсаллар, ₽9 025 ($95)/ночь)</strong> — большой комплекс на 250 номеров с аквапарком (4 горки) и теннисным кортом. Система «ультра все включено» (алкоголь местный, закуски в течение дня). Фишки: вечеринки с диджеями по пятницам, спа-центр с массажем, детский клуб. Минус — удаленность от центра Аланьи (20 минут на такси). Идеален для молодежи.</li>
+<li><strong>Sunprime C-Lounge (район Конаклы, ₽9 975 ($105)/ночь)</strong> — отель для взрослых (только с 16 лет) с концепцией «тихий роскошь». Номера с современным дизайном, ламинат, смарт-ТВ. Фишки: бесконечный бассейн с видом на море, ресторан с средиземноморской кухней, йога-терраса. Цена — полупансион (завтрак и ужин). Минус — нет пляжа (общественный в 200 метрах). Подходит для пар без детей.</li>
+<li><strong>Alaiye Resort & Spa (район Оба, ₽11 400 ($120)/ночь)</strong> — премиальный четырехзвездочный отель с частным песчаным пляжем (протяженность 150 метров). Фишки: спа-центр с хаммамом, открытый бассейн с подогревом в апреле-октябре, три ресторана (включая рыбный). Номера с джакузи на балконе. Минус — в сезон шумно из-за анимации до 23:00. Рейтинг — 8.7, лучший в категории.</li>
 </ul>
-<p>Все отели среднего класса предлагают трансфер от аэропорта Газипаша (30-40 минут, ₽1 425 (≈ $15)-20). При бронировании на 7+ ночей многие дают скидку 10-15%.</p>
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
-<p>Люксовый сегмент Аланьи в 2026 году представлен пятизвездочными комплексами с эксклюзивными услугами и территориями до 10 гектаров. Цены стартуют от ₽17 100 (≈ $180) за ночь и достигают ₽38 000 (≈ $400) в пик сезона. Эти отели выбирают те, кто ищет максимальный комфорт, приватность и высокий сервис.</p>
+<p>Все отели среднего класса предлагают трансфер от аэропорта Газипаша (30-40 минут, ₽1 425 ($15)-20). При бронировании на 7+ ночей многие дают скидку 10-15%.</p>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
+<p>Люксовый сегмент Аланьи в 2026 году представлен пятизвездочными комплексами с эксклюзивными услугами и территориями до 10 гектаров. Цены стартуют от ₽17 100 ($180)за ночь и достигают ₽38 000 ($400)в пик сезона. Эти отели выбирают те, кто ищет максимальный комфорт, приватность и высокий сервис.</p>
 <ul>
-<li><strong>Kempinski Hotel The Dome (район Клеопатра, ₽20 900 (≈ $220)/ночь)</strong> — единственный отель сети Kempinski в Аланье, расположенный прямо на знаменитом пляже Клеопатра. Номера площадью от 35 м² с мраморными ваннами и панорамными окнами. Особенности: частный пляж с пляжными домиками, ресторан с мишленовским шеф-поваром (средиземноморская кухня), спа-центр с финской сауной и бассейном с морской водой. Минус — высокая цена на дополнительные услуги (массаж от ₽9 500 (≈ $100)). Идеален для романтических поездок.</li>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Th" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<li><strong>Rixos Sungate (район Конаклы, ₽26 600 (≈ $280)/ночь)</strong> — легендарный отель на первой линии с собственной лагуной и аквапарком на 10 горок. Номера от 40 м² с дизайнерской мебелью и мини-баром (наполнение бесплатно). Особенности: 7 ресторанов (итальянский, японский, турецкий), детский клуб с нянями, вечерние шоу с живой музыкой. Минус — большая территория (нужно ходить пешком или на электрокарах). Рейтинг — 9.2, лучший для семей.</li>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<li><strong>Maxx Royal Kemer (район Авсаллар, ₽33 250 (≈ $350)/ночь)</strong> — ультра-люксовый отель с концепцией «все включено премиум» (включая импортный алкоголь и трюфели). Номера-виллы с частными бассейнами и саунами. Особенности: спа-центр площадью 3000 м², ресторан с дегустационным меню, частный песчаный пляж с персональными шезлонгами. Минус — удаленность от города (30 минут на такси). Идеален для VIP-отдыха и знаменитостей.</li>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<li><strong>Kempinski Hotel The Dome (район Клеопатра, ₽20 900 ($220)/ночь)</strong> — единственный отель сети Kempinski в Аланье, расположенный прямо на знаменитом пляже Клеопатра. Номера площадью от 35 м² с мраморными ваннами и панорамными окнами. Особенности: частный пляж с пляжными домиками, ресторан с мишленовским шеф-поваром (средиземноморская кухня), спа-центр с финской сауной и бассейном с морской водой. Минус — высокая цена на дополнительные услуги (массаж от ₽9 500 ($100)). Идеален для романтических поездок.</li>
+<div id="hc_324738" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Kempinski Hotel The Dome - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Kempinski Hotel The Dome - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1549638441-b787d2e11f14?w=800&q=80" alt="Kempinski Hotel The Dome - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_324738 .hc-slide');var d=document.querySelectorAll('#hc_324738 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_324738 .hc-slide');var d=document.querySelectorAll('#hc_324738 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_324738 .hc-slide');var d=document.querySelectorAll('#hc_324738 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kempinski Hotel The Dome &bull; 3 photos</p></div>
+<li><strong>Rixos Sungate (район Конаклы, ₽26 600 ($280)/ночь)</strong> — легендарный отель на первой линии с собственной лагуной и аквапарком на 10 горок. Номера от 40 м² с дизайнерской мебелью и мини-баром (наполнение бесплатно). Особенности: 7 ресторанов (итальянский, японский, турецкий), детский клуб с нянями, вечерние шоу с живой музыкой. Минус — большая территория (нужно ходить пешком или на электрокарах). Рейтинг — 9.2, лучший для семей.</li>
+<div id="hc_847245" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Rixos Sungate - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Rixos Sungate - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_847245 .hc-slide');var d=document.querySelectorAll('#hc_847245 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_847245 .hc-slide');var d=document.querySelectorAll('#hc_847245 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rixos Sungate &bull; 2 photos</p></div>
+<li><strong>Maxx Royal Kemer (район Авсаллар, ₽33 250 ($350)/ночь)</strong> — ультра-люксовый отель с концепцией «все включено премиум» (включая импортный алкоголь и трюфели). Номера-виллы с частными бассейнами и саунами. Особенности: спа-центр площадью 3000 м², ресторан с дегустационным меню, частный песчаный пляж с персональными шезлонгами. Минус — удаленность от города (30 минут на такси). Идеален для VIP-отдыха и знаменитостей.</li>
 </ul>
 <p>Люксовые отели требуют бронирования за 6-12 месяцев, особенно на август. В 2026 году ожидается повышение цен на 15% из-за новых налогов на роскошь в Турции.</p>
 <h2>Как выбрать район</h2>
 <p>Выбор района в Аланье зависит от целей поездки. Для пляжного отдыха лучший вариант — Клеопатра-бич с его золотистым песком и пологим входом в море. Здесь расположены отели Kempinski и Grand Okan, а также множество кафе и магазинов. Пляж Клеопатра протяженностью 2,5 км считается одним из самых чистых в Турции (голубой флаг).</p>
-<p>Для экскурсий выбирайте район Оба или Конаклы. Отсюда ближе к историческим достопримечательностям: крепость Аланьи (14 век), пещера Дамлаташ (сталактитовая пещера, открыта в 1948 году) и водопад Дим (35 км от города). Отели в этих районах часто организуют трансферы до ключевых точек. Среднее время в пути до центра — 10 минут на автобусе (₽47 (≈ $0.50)).</p>
+<p>Для экскурсий выбирайте район Оба или Конаклы. Отсюда ближе к историческим достопримечательностям: крепость Аланьи (14 век), пещера Дамлаташ (сталактитовая пещера, открыта в 1948 году) и водопад Дим (35 км от города). Отели в этих районах часто организуют трансферы до ключевых точек. Среднее время в пути до центра — 10 минут на автобусе (₽47 ($0)).</p>
 <p>Для ночной жизни идеален центр Аланьи (район порта и Клеопатра). Здесь сосредоточены клубы, бары и дискотеки, работающие до 4 утра. Отели среднего класса и люксовые в центре предлагают вечерние шоу, но для тусовок лучше выбирать апартаменты или отели без ограничений по шуму. Район Авсаллар, наоборот, тихий и семейный, с акцентом на спа-центры и пляжи.</p>
 <h2>Советы по бронированию</h2>
 <p>Чтобы сэкономить на проживании в Аланье, бронируйте отели за 3-4 месяца до поездки — это дает скидку до 25% по сравнению с бронированием за месяц. Избегайте пиковых дат: первая неделя августа и новогодние праздники (цены взлетают на 40%). Лучшие сервисы для бронирования — <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com (широкий выбор), <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (скидки для азиатских туристов) и официальные сайты отелей (часто дают бонусы, например, бесплатный трансфер).</p>
 <p>Проверяйте отзывы на Tripadvisor за последние 6 месяцев — в 2026 году многие отели обновили номера после пандемии. Используйте фильтры на сайтах для поиска акций: «раннее бронирование» или «last minute» (за 2 недели до заезда). Для бюджетных отелей выгодно платить наличными при заселении — это позволяет избежать комиссии банка (до 3%). И наконец, всегда уточняйте систему питания: «все включено» в бюджетных отелях часто означает только завтрак и ужин, а в люксовых — полный набор услуг.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<div id="hc_838739" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия &bull; 2 photos</p></div>
         </div>
 
         
@@ -489,6 +529,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -517,6 +558,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -534,8 +576,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

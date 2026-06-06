@@ -7,8 +7,8 @@
     <meta name="description" content="Что посмотреть в Самуи: 15 лучших мест 2026 Остров Самуи, расположенный в Сиамском заливе Таиланда, остается одним из самых востребованных направлений Юго-Во...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/koh-samui-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/koh-samui-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/koh-samui-dostoprimechatelnosti.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/koh-samui-things-to-do.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/koh-samui-things-to-do.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/koh-samui-dostoprimechatelnosti.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Что посмотреть в Самуи: 15 лучших мест 2026">
     <meta property="og:description" content="Что посмотреть в Самуи: 15 лучших мест 2026 Остров Самуи, расположенный в Сиамском заливе Таиланда, остается одним из самых востребованных направлений Юго-Во...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/koh-samui-dostoprimechatelnosti.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/koh-samui-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/koh-samui.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Что посмотреть в Самуи: 15 лучших мест 2026</div>
@@ -361,7 +385,6 @@
 <p>Остров Самуи, расположенный в Сиамском заливе Таиланда, остается одним из самых востребованных направлений Юго-Восточной Азии. В 2026 году туристов привлекает не только пляжный отдых, но и уникальное сочетание природных, культурных и исторических объектов. Здесь каждый найдет что-то для себя: от буддийских храмов с вековой историей до скрытых водопадов и смотровых площадок с панорамным видом на океан. Инфраструктура острова постоянно развивается, а количество туристов, по данным Туристического управления Таиланда, ежегодно растет на 8–10%, что делает Самуи идеальным местом для изучения его главных достопримечательностей.</p>
 
 <h2>15 лучших достопримечательностей</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <p>Ниже представлен список ключевых мест, которые стоит посетить в 2026 году. Каждое описание включает актуальные цены, часы работы и практические советы.</p>
 
 <h3>1. Большой Будда (Wat Phra Yai)</h3>
@@ -425,7 +448,6 @@
 <p>Для тех, кто предпочитает организованные поездки, доступны различные экскурсии. Средняя цена группового тура в 2026 году составляет 1500–3000 бат (3000–6000 рублей) на человека. Индивидуальные туры стоят от 4000 бат (8000 рублей). Популярные варианты: тур на остров Анг Тонг (морской национальный парк) — 2000 бат, включает сноркелинг и обед; джип-сафари по водопадам и храмам — 2500 бат; вечерний круиз с ужином — 1800 бат. Рекомендуется бронировать через официальные агентства, такие как Samui Tour Center, расположенные в Чавенге и Ламаи. <a href="https://tp.media/click?shmarker=736226&promo_id=3774&source_type=link&type=click&campaign_id=103&trs=search_tours_koh_samui" target="_blank" rel="nofollow sponsored" class="affiliate-link">🏝 Подобрать тур в Koh Samui</a></p>
 
 <h2>Бесплатные достопримечательности</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <p>Самуи предлагает множество мест, которые можно посетить без билетов. Среди них: пляжи Чавенг и Ламаи — бесплатный вход и лежаки за символическую плату; смотровые площадки Лад Кох и Као Хуа Чук; храмы Большого Будды, Ват Плай Лаем и Ват Лаем Суа — пожертвования необязательны; Fisherman's Village в любое время, кроме пятничного рынка; прогулки по набережной Натона с видом на залив. Эти места позволяют сэкономить до 1000 бат в день.</p>
 
 <h2>Практические советы</h2>
@@ -515,6 +537,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -543,6 +566,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -560,8 +584,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

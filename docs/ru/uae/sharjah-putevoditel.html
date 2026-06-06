@@ -7,8 +7,8 @@
     <meta name="description" content="Шарджа: полный путеводитель 2026 Шарджа — третий по величине эмират Объединенных Арабских Эмиратов, который часто называют культурной столицей региона. В отл...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/sharjah-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/sharjah-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Шарджа: полный путеводитель 2026">
     <meta property="og:description" content="Шарджа: полный путеводитель 2026 Шарджа — третий по величине эмират Объединенных Арабских Эмиратов, который часто называют культурной столицей региона. В отл...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/sharjah-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/sharjah-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://i.pinimg.com/originals/b9/a2/23/b9a223075cf4d19a0c15c66dfaedac01.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/sharjah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Шарджа: полный путеводитель 2026</div>
@@ -368,13 +392,13 @@
 
 <p>Главные воздушные ворота — международный аэропорт Шарджи (SHJ), расположенный в 13 километрах к юго-востоку от центра города. Аэропорт принимает рейсы из более чем 40 стран, включая прямые рейсы из России. Из Москвы (аэропорт Домодедово) авиакомпания Air Arabia выполняет ежедневные рейсы, время в пути — 5 часов 10 минут. Средняя цена билета в оба конца в 2025–2026 годах составляет 35 000–45 000 рублей (около 350–450 долларов США) при бронировании за 2–3 месяца. Из Санкт-Петербурга рейсы выполняются три раза в неделю, билеты стоят от 40 000 рублей.</p>
 
-<p>Альтернативный вариант — прилететь в Дубай (аэропорт DXB, 30 км от Шарджи) и доехать на такси (40–60 минут, 80–100 дирхамов ОАЭ, AED) или на автобусе E303 (15 AED, 1 час 15 минут). Аэропорт Шарджи — хаб лоукостера Air Arabia, поэтому билеты часто дешевле, чем в Дубай. Такси из аэропорта Шарджи до центра стоит 25–35 AED (около 500–700 рублей).</p>
+<p>Альтернативный вариант — прилететь в Дубай (аэропорт DXB, 30 км от Шарджи) и доехать на такси (40–60 минут, 80–100 дирхамов ОАЭ, AED) или на автобусе E303 (₽388 (15 AED), 1 час 15 минут). Аэропорт Шарджи — хаб лоукостера Air Arabia, поэтому билеты часто дешевле, чем в Дубай. Такси из аэропорта Шарджи до центра стоит 25–₽906 (35 AED) (около 500–700 рублей).</p>
 
 <h2>Где остановиться</h2>
 
-<p>Шарджа предлагает разнообразные варианты размещения на любой бюджет. Центральный район Аль-Маджаз (Al Majaz) — самый популярный среди туристов: здесь находятся Корниш (набережная), парки, рестораны и фонтаны. Отель 4* Al Majaz Premier Hotel Suites стоит от 250 AED (около 5000 рублей) за ночь с завтраком. Бюджетный вариант — ibis Styles Sharjah (от 180 AED за ночь) в районе Al Qasba, рядом с каналами и культурными центрами.</p>
+<p>Шарджа предлагает разнообразные варианты размещения на любой бюджет. Центральный район Аль-Маджаз (Al Majaz) — самый популярный среди туристов: здесь находятся Корниш (набережная), парки, рестораны и фонтаны. Отель 4* Al Majaz Premier Hotel Suites стоит от₽6 475 (250 AED) (около 5000 рублей) за ночь с завтраком. Бюджетный вариант — ibis Styles Sharjah (от₽4 662 (180 AED) за ночь) в районе Al Qasba, рядом с каналами и культурными центрами.</p>
 
-<p>Для любителей роскоши подойдет отель 5* Sheraton Sharjah Beach Resort & Spa на берегу Персидского залива: цены от 600 AED за ночь, с собственным пляжем и спа-центром. В историческом районе Al Hisn (Старый город) можно остановиться в бутик-отеле Sharjah Heritage Hotel (от 350 AED) — это отреставрированное здание XIX века с традиционным интерьером. Для экономных путешественников — хостел Sharjah Youth Hostel (от 70 AED за койко-место) в 10 минутах от центра.</p>
+<p>Для любителей роскоши подойдет отель 5* Sheraton Sharjah Beach Resort & Spa на берегу Персидского залива: цены от₽15 540 (600 AED) за ночь, с собственным пляжем и спа-центром. В историческом районе Al Hisn (Старый город) можно остановиться в бутик-отеле Sharjah Heritage Hotel (от₽9 065 (350 AED)) — это отреставрированное здание XIX века с традиционным интерьером. Для экономных путешественников — хостел Sharjah Youth Hostel (от₽1 813 (70 AED) за койко-место) в 10 минутах от центра.</p>
 
 <h2>Топ-15 достопримечательностей</h2>
 
@@ -392,22 +416,22 @@
 <tr><td>10</td><td>Центр живой природы (Arabian Wildlife Centre)</td><td>Часть Desert Park. Ночные животные, рептилии, птицы. Имитация пещер и пустынных ландшафтов.</td><td>15</td><td>09:00–17:30 (пт 14:00–17:30)</td></tr>
 <tr><td>11</td><td>Район Аль-Кашба (Al Qasba)</td><td>Культурно-развлекательный район с каналами. Здесь находится колесо обозрения «Глаз Эмиратов» (высота 60 метров).</td><td>30 (колесо обозрения)</td><td>10:00–22:00</td></tr>
 <tr><td>12</td><td>Музей искусства Шарджи</td><td>Современное здание с 32 галереями. Коллекция включает работы арабских художников XX–XXI веков. Вход бесплатный по пятницам.</td><td>10</td><td>08:00–20:00 (пт 16:00–20:00)</td></tr>
-<tr><td>13</td><td>Пляж Аль-Хан (Al Khan Beach)</td><td>Городской пляж длиной 2 км. Белый песок, шезлонги (20 AED), водные виды спорта. Оборудован душевыми и раздевалками.</td><td>Бесплатно</td><td>08:00–20:00</td></tr>
+<tr><td>13</td><td>Пляж Аль-Хан (Al Khan Beach)</td><td>Городской пляж длиной 2 км. Белый песок, шезлонги (₽518 (20 AED)), водные виды спорта. Оборудован душевыми и раздевалками.</td><td>Бесплатно</td><td>08:00–20:00</td></tr>
 <tr><td>14</td><td>Парк Аль-Маджаз (Al Majaz Park)</td><td>Парк площадью 7 га с детскими площадками, озером и амфитеатром. Проводятся концерты и фестивали.</td><td>5</td><td>08:00–23:00</td></tr>
 <tr><td>15</td><td>Остров Аль-Нур (Al Noor Island)</td><td>Искусственный остров с ботаническим садом, бабочками и арт-инсталляциями. Ночью подсветка.</td><td>20</td><td>09:00–22:00</td></tr>
 </table>
 
 <h2>Транспорт в городе</h2>
 
-<p>Общественный транспорт Шарджи — это автобусы, такси и аренда автомобилей. Метро в городе нет, но автобусная сеть (Sharjah Public Transport, SPT) покрывает все основные районы. Проезд на автобусе стоит 6 AED (около 120 рублей) за одну поездку, билет можно купить у водителя или через приложение SPT. С 6:00 до 23:00 автобусы ходят каждые 15–20 минут на популярных маршрутах (например, №14 от аэропорта до центра).</p>
+<p>Общественный транспорт Шарджи — это автобусы, такси и аренда автомобилей. Метро в городе нет, но автобусная сеть (Sharjah Public Transport, SPT) покрывает все основные районы. Проезд на автобусе стоит₽155 (6 AED) (около 120 рублей) за одну поездку, билет можно купить у водителя или через приложение SPT. С 6:00 до 23:00 автобусы ходят каждые 15–20 минут на популярных маршрутах (например, №14 от аэропорта до центра).</p>
 
-<p>Такси — самый удобный вид транспорта. Стоимость посадки — 3,50 AED, далее 1,60 AED за километр. Поездка из центра до аэропорта стоит 25–35 AED. Работают агрегаторы: Careem и Uber, цены на 10–15% выше, чем обычное такси. Аренда автомобиля — от 100 AED в сутки (например, Nissan Micra). Требуются международные права и кредитная карта. Парковка в центре платная: 2 AED в час (с 08:00 до 22:00), на окраинах бесплатно.</p>
+<p>Такси — самый удобный вид транспорта. Стоимость посадки —₽9 065 (350 AED), далее₽4 144 (160 AED) за километр. Поездка из центра до аэропорта стоит 25–₽906 (35 AED). Работают агрегаторы: Careem и Uber, цены на 10–15% выше, чем обычное такси. Аренда автомобиля — от₽2 590 (100 AED) в сутки (например, Nissan Micra). Требуются международные права и кредитная карта. Парковка в центре платная:₽51 (2 AED) в час (с 08:00 до 22:00), на окраинах бесплатно.</p>
 
 <h2>Где поесть</h2>
 
-<p>Кухня Шарджи — это смесь арабских, индийских и персидских традиций. Местная еда: хумус, фалафель, шаурма, манакиш (лепешки с сыром или мясом), а также морепродукты — креветки, лобстеры, рыба хамур. Уличная еда: на рынках Аль-Арса и Blue Souk можно попробовать шварму за 10–15 AED (200–300 рублей) или фалафель за 5 AED.</p>
+<p>Кухня Шарджи — это смесь арабских, индийских и персидских традиций. Местная еда: хумус, фалафель, шаурма, манакиш (лепешки с сыром или мясом), а также морепродукты — креветки, лобстеры, рыба хамур. Уличная еда: на рынках Аль-Арса и Blue Souk можно попробовать шварму за 10–₽388 (15 AED) (200–300 рублей) или фалафель за₽129 (5 AED).</p>
 
-<p>Рестораны среднего уровня: Al Fanar Restaurant (арабская кухня, средний чек 80–120 AED), Al Qasba Seafood (свежая рыба, 100–150 AED). Ресторан Shabestan (персидская кухня, 150–200 AED) славится шашлыками и пловом. Для экономного обеда — кафе-столовые в торговых центрах (например, в Sahara Centre), где обед стоит 30–50 AED. Завтрак в отеле — от 40 AED (шведский стол). Чаевые не обязательны, но принято оставлять 10% в ресторанах.</p>
+<p>Рестораны среднего уровня: Al Fanar Restaurant (арабская кухня, средний чек 80–₽3 108 (120 AED)), Al Qasba Seafood (свежая рыба, 100–₽3 885 (150 AED)). Ресторан Shabestan (персидская кухня, 150–₽5 180 (200 AED)) славится шашлыками и пловом. Для экономного обеда — кафе-столовые в торговых центрах (например, в Sahara Centre), где обед стоит 30–₽1 295 (50 AED). Завтрак в отеле — от₽1 036 (40 AED) (шведский стол). Чаевые не обязательны, но принято оставлять 10% в ресторанах.</p>
 
 <h2>Лучшее время для поездки</h2>
 
@@ -425,13 +449,13 @@
 
 <p>Примерные расходы на одного человека на 7 дней (в дирхамах ОАЭ, AED):</p>
 <ul>
-<li><strong>Проживание</strong>: 3-звездочный отель — 1200–1800 AED (170–250 AED/ночь), 4-звездочный — 2100–3500 AED (300–500 AED/ночь), хостел — 490 AED (70 AED/ночь).</li>
-<li><strong>Еда</strong>: уличная еда/кафе — 350–500 AED (50–70 AED/день), рестораны среднего уровня — 700–1000 AED (100–150 AED/день).</li>
-<li><strong>Транспорт</strong>: автобусы/такси — 200–400 AED (30–60 AED/день), аренда авто — 700 AED (100 AED/день + бензин 2,5 AED/литр).</li>
-<li><strong>Достопримечательности</strong>: входные билеты — 150–250 AED (средняя цена музея 10–20 AED).</li>
-<li><strong>Прочее</strong>: сувениры, вода, связь — 200–300 AED.</li>
+<li><strong>Проживание</strong>: 3-звездочный отель — 1200–₽46 620 (1 ₽20 720 (800 AED)) (170–₽6 475 (250 AED)/ночь), 4-звездочный — 2100–₽90 650 (3 ₽12 950 (500 AED)) (300–₽12 950 (500 AED)/ночь), хостел —₽12 691 (490 AED) (₽1 813 (70 AED)/ночь).</li>
+<li><strong>Еда</strong>: уличная еда/кафе — 350–₽12 950 (500 AED) (50–₽1 813 (70 AED)/день), рестораны среднего уровня — 700–₽25 900 (1 ₽0 (000 AED)) (100–₽3 885 (150 AED)/день).</li>
+<li><strong>Транспорт</strong>: автобусы/такси — 200–₽10 360 (400 AED) (30–₽1 554 (60 AED)/день), аренда авто —₽18 130 (700 AED) (₽2 590 (100 AED)/день + бензин₽647 (25 AED)/литр).</li>
+<li><strong>Достопримечательности</strong>: входные билеты — 150–₽6 475 (250 AED) (средняя цена музея 10–₽518 (20 AED)).</li>
+<li><strong>Прочее</strong>: сувениры, вода, связь — 200–₽7 770 (300 AED).</li>
 </ul>
-<p><strong>Итого бюджетный вариант</strong>: 2400–3000 AED (около 48 000–60 000 рублей) на неде<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p><strong>Итого бюджетный вариант</strong>: 2400–₽77 700 (3 ₽0 (000 AED)) (около 48 000–60 000 рублей) на неде<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -537,6 +561,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -565,6 +590,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -582,8 +608,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

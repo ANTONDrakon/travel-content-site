@@ -6,7 +6,7 @@
     <title>Luxor Travel Guide 2026</title>
     <meta name="description" content="Luxor Travel Guide 2026 Luxor, often called the world’s greatest open-air museum, is a city in southern Egypt that straddles the Nile River. The city is divi...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/luxor-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/luxor-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/luxor-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/luxor-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Luxor Travel Guide 2026">
     <meta property="og:description" content="Luxor Travel Guide 2026 Luxor, often called the world’s greatest open-air museum, is a city in southern Egypt that straddles the Nile River. The city is divi...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/luxor-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/luxor-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://hurghadaexcurs.com/wp-content/uploads/2024/05/EXCURSION_TO_LUXOR_2_DAYS_INDIVIDUALLY_FROM_HURGHADA_main.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/luxor.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Luxor Travel Guide 2026</div>
@@ -367,34 +391,34 @@
 <p>Luxor is also a gateway to understanding ancient Egyptian cosmology. The temples are aligned with the winter solstice and the Nile’s annual flood cycles. In 2026, expect fewer crowds than in previous years due to global travel shifts, but still significant numbers from Europe and Asia. The city’s population is about 500,000, but it receives over 3 million tourists annually. The best approach is to spend at least three full days: one for the East Bank, one for the West Bank, and one for a hot air balloon ride over the Valley of the Kings at dawn.</p>
 
 <h2>How to Get There</h2>
-<p>Luxor International Airport (LXR) is located about 6 kilometers east of the city center. It serves direct flights from major hubs. For example, EgyptAir operates daily flights from Cairo (1 hour 10 minutes, average round-trip $150 (≈ ₽14 250)–$250 (≈ ₽23 750)). Turkish Airlines flies from Istanbul (2 hours 45 minutes, round-trip $300 (≈ ₽28 500)–$500 (≈ ₽47 500)). From London (LHR), British Airways offers seasonal direct flights (5 hours, round-trip $400 (≈ ₽38 000)–$700 (≈ ₽66 500)). From Paris (CDG), Air France flies direct (4 hours 30 minutes, round-trip $350 (≈ ₽33 250)–$600 (≈ ₽57 000)). From Dubai (DXB), Emirates has daily flights (3 hours 45 minutes, round-trip $400 (≈ ₽38 000)–$650 (≈ ₽61 750)). Average ticket prices in 2026 are expected to be 10–15% higher than 2023 due to inflation, but advance booking (3 months ahead) can save up to 30%.</p>
+<p>Luxor International Airport (LXR) is located about 6 kilometers east of the city center. It serves direct flights from major hubs. For example, EgyptAir operates daily flights from Cairo (1 hour 10 minutes, average round-trip $150–$250). Turkish Airlines flies from Istanbul (2 hours 45 minutes, round-trip $300–$500). From London (LHR), British Airways offers seasonal direct flights (5 hours, round-trip $400–$700). From Paris (CDG), Air France flies direct (4 hours 30 minutes, round-trip $350–$600). From Dubai (DXB), Emirates has daily flights (3 hours 45 minutes, round-trip $400–$650). Average ticket prices in 2026 are expected to be 10–15% higher than 2023 due to inflation, but advance booking (3 months ahead) can save up to 30%.</p>
 
-<p>Alternatively, you can fly into Cairo (CAI) and take a domestic flight or a night train. The sleeper train from Cairo to Luxor (Wagons-Lits) costs about $80 (≈ ₽7 600)–$120 (≈ ₽11 400) per person for a two-berth cabin, takes 10–12 hours, and includes dinner and breakfast. This is a popular option for those wanting to save a night’s accommodation.</p>
+<p>Alternatively, you can fly into Cairo (CAI) and take a domestic flight or a night train. The sleeper train from Cairo to Luxor (Wagons-Lits) costs about $80–$120per person for a two-berth cabin, takes 10–12 hours, and includes dinner and breakfast. This is a popular option for those wanting to save a night’s accommodation.</p>
 
 <h2>Where to Stay</h2>
 <p>Luxor’s accommodation ranges from budget hostels to world-class resorts. The main areas are the East Bank (convenient for temples and restaurants) and the West Bank (quieter, closer to tombs, with stunning desert views).</p>
 
 <h3>East Bank</h3>
 <ul>
-<li><strong>Budget ($15 (≈ ₽1 425)–$40 (≈ ₽3 800)/night):</strong> Bob Marley Peace Hotel (dorm beds $15  (≈ ₽1 425) private rooms $30 (≈ ₽2 850)). Located near Luxor Temple. Basic but clean, with a rooftop terrace.</li>
-<li><strong>Mid-Range ($50 (≈ ₽4 750)–$120 (≈ ₽11 400)/night):</strong> Steigenberger Nile Palace (4-star, double rooms $90 (≈ ₽8 550)–$120 (≈ ₽11 400)). Includes pool, spa, and a Nile view. Also the Mercure Luxor Karnak (5-star, doubles $80 (≈ ₽7 600)–$110 (≈ ₽10 450)).</li>
-<li><strong>Luxury ($150 (≈ ₽14 250)–$400 (≈ ₽38 000)/night):</strong> Sofitel Winter Palace Luxor (historic 5-star, doubles $200 (≈ ₽19 000)–$350 (≈ ₽33 250)). Built in 1886, with gardens and a famous bar. Also Hilton Luxor Resort & Spa (5-star, doubles $180 (≈ ₽17 100)–$300 (≈ ₽28 500)).</li>
+<li><strong>Budget ($15–$40/night):</strong> Bob Marley Peace Hotel (dorm beds $15private rooms $30). Located near Luxor Temple. Basic but clean, with a rooftop terrace.</li>
+<li><strong>Mid-Range ($50–$120/night):</strong> Steigenberger Nile Palace (4-star, double rooms $90–$120). Includes pool, spa, and a Nile view. Also the Mercure Luxor Karnak (5-star, doubles $80–$110).</li>
+<li><strong>Luxury ($150–$400/night):</strong> Sofitel Winter Palace Luxor (historic 5-star, doubles $200–$350). Built in 1886, with gardens and a famous bar. Also Hilton Luxor Resort & Spa (5-star, doubles $180–$300).</li>
 </ul>
 
 <h3>West Bank</h3>
 <ul>
-<li><strong>Budget ($20 (≈ ₽1 900)–$50 (≈ ₽4 750)/night):</strong> Al Moudira Hotel (boutique, doubles $50 (≈ ₽4 750)–$80 (≈ ₽7 600)). A charming villa-style hotel with gardens and a pool. Also many local guesthouses near the Valley of the Kings for $25 (≈ ₽2 375)–$40. (≈ ₽3 800)</li>
-<li><strong>Mid-Range ($60 (≈ ₽5 700)–$130 (≈ ₽12 350)/night):</strong> Marsam Hotel (doubles $70 (≈ ₽6 650)–$100 (≈ ₽9 500)). Run by the same family for decades, simple but authentic, with views of the Theban Hills.</li>
-<li><strong>Luxury ($150 (≈ ₽14 250)–$300 (≈ ₽28 500)/night):</strong> Pavillon Winter Luxor (part of Sofitel, doubles $150 (≈ ₽14 250)–$250 (≈ ₽23 750)). More modern than the main Winter Palace, with a large pool.</li>
+<li><strong>Budget ($20–$50/night):</strong> Al Moudira Hotel (boutique, doubles $50–$80). A charming villa-style hotel with gardens and a pool. Also many local guesthouses near the Valley of the Kings for $25–$40</li>
+<li><strong>Mid-Range ($60–$130/night):</strong> Marsam Hotel (doubles $70–$100). Run by the same family for decades, simple but authentic, with views of the Theban Hills.</li>
+<li><strong>Luxury ($150–$300/night):</strong> Pavillon Winter Luxor (part of Sofitel, doubles $150–$250). More modern than the main Winter Palace, with a large pool.</li>
 </ul>
 
 <h2>Top 15 Attractions</h2>
-<p>All prices are in Egyptian Pounds (EGP). As of 2026, $1 (≈ ₽95) USD ≈ 50 EGP. Prices are subject to change, but these are accurate as of early 2026. Most sites are open daily, but hours vary by season (summer: 6:00 AM–5:00 PM; winter: 6:00 AM–4:00 PM).</p>
+<p>All prices are in Egyptian Pounds (EGP). As of 2026, $1USD ≈$1 (50 EGP). Prices are subject to change, but these are accurate as of early 2026. Most sites are open daily, but hours vary by season (summer: 6:00 AM–5:00 PM; winter: 6:00 AM–4:00 PM).</p>
 
 <table>
 <tr><th>#</th><th>Attraction</th><th>Description</th><th>Ticket Price (EGP)</th><th>Opening Hours</th></tr>
-<tr><td>1</td><td>Valley of the Kings</td><td>Over 60 tombs, including Tutankhamun’s (KV62). Three tombs included in standard ticket. Extra fee for specific tombs (e.g., Seti I, 1000 EGP).</td><td>600</td><td>6:00 AM–4:00 PM</td></tr>
-<tr><td>2</td><td>Valley of the Queens</td><td>Tombs of queens and royal children, including Nefertari’s tomb (extra 1400 EGP).</td><td>200</td><td>6:00 AM–4:00 PM</td></tr>
+<tr><td>1</td><td>Valley of the Kings</td><td>Over 60 tombs, including Tutankhamun’s (KV62). Three tombs included in standard ticket. Extra fee for specific tombs (e.g., Seti I$20 (1 $0 (000 EGP))).</td><td>600</td><td>6:00 AM–4:00 PM</td></tr>
+<tr><td>2</td><td>Valley of the Queens</td><td>Tombs of queens and royal children, including Nefertari’s tomb (extra$28 (1 $8 (400 EGP))).</td><td>200</td><td>6:00 AM–4:00 PM</td></tr>
 <tr><td>3</td><td>Temple of Hatshepsut</td><td>Mortuary temple of Egypt’s female pharaoh, built into a cliff. Three terraces with colonnades.</td><td>360</td><td>6:00 AM–4:00 PM</td></tr>
 <tr><td>4</td><td>Colossi of Memnon</td><td>Two massive stone statues (18 meters tall) of Pharaoh Amenhotep III. Free to view from the road.</td><td>Free</td><td>24/7</td></tr>
 <tr><td>5</td><td>Medinet Habu</td><td>Mortuary temple of Ramesses III, well-preserved with colorful reliefs.</td><td>200</td><td>6:00 AM–4:00 PM</td></tr>
@@ -407,42 +431,42 @@
 <tr><td>12</td><td>Luxor Museum</td><td>Modern museum with two floors of artifacts, including the mummy of Ramesses I.</td><td>300</td><td>9:00 AM–9:00 PM</td></tr>
 <tr><td>13</td><td>Mummification Museum</td><td>Explains the mummification process. Small but informative.</td><td>150</td><td>9:00 AM–9:00 PM</td></tr>
 <tr><td>14</td><td>Mountain of the Dead / Tombs of the Nobles</td><td>Hundreds of rock-cut tombs of officials. Less crowded than the Valley.</td><td>200</td><td>6:00 AM–4:00 PM</td></tr>
-<tr><td>15</td><td>Hot Air Balloon Ride</td><td>Over the West Bank at sunrise. 45–60 minutes. Book through operators like Magic Horizon.</td><td>$100 (≈ ₽9 500)–$150 (≈ ₽14 250) USD</td><td>5:00 AM–7:00 AM</td></tr>
+<tr><td>15</td><td>Hot Air Balloon Ride</td><td>Over the West Bank at sunrise. 45–60 minutes. Book through operators like Magic Horizon.</td><td>$100–$150USD</td><td>5:00 AM–7:00 AM</td></tr>
 </table>
 
 <h2>Getting Around</h2>
 <p>Luxor has no metro system. The main modes of transport are taxis, buses, and boats.</p>
 <ul>
-<li><strong>Taxis:</strong> White taxis with blue stripes. No meters; negotiate before riding. Short trips within East Bank: 20–40 EGP ($0.40 (≈ ₽38)–$0.80 (≈ ₽76)). From East Bank to West Bank (via bridge or ferry): 50–100 EGP ($1 (≈ ₽95)–$2 (≈ ₽190)). Full-day private hire: 400–800 EGP ($8 (≈ ₽760)–$16 (≈ ₽1 520)).</li>
-<li><strong>Motorized Rickshaws (Tuk-tuks):</strong> Common for short distances. 10–20 EGP per ride. Negotiate.</li>
-<li><strong>Public Buses:</strong> Limited and crowded. Route 1 runs along the Corniche (riverfront) for 5 EGP. Not recommended for tourists.</li>
-<li><strong>Ferry (Motorboat):</strong> Cross the Nile from East Bank (Luxor Temple area) to West Bank (near Valley of the Kings). 5–10 EGP per person. Runs 6:00 AM–9:00 PM.</li>
-<li><strong>Car Rental:</strong> Available at the airport or hotels. Expect $30 (≈ ₽2 850)–$50 (≈ ₽4 750) per day for a small car. Requires an International Driving Permit. Parking is limited near temples.</li>
-<li><strong>Bicycle:</strong> Rent for $5 (≈ ₽475)–$10 (≈ ₽950) per day. Good for the West Bank, but roads can be dusty.</li>
+<li><strong>Taxis:</strong> White taxis with blue stripes. No meters; negotiate before riding. Short trips within East Bank: 20–$1 (40 EGP) ($0–$1). From East Bank to West Bank (via bridge or ferry): 50–$2 (100 EGP) ($1–$2). Full-day private hire: 400–$16 (800 EGP) ($8–$16).</li>
+<li><strong>Motorized Rickshaws (Tuk-tuks):</strong> Common for short distances. 10–$0 (20 EGP) per ride. Negotiate.</li>
+<li><strong>Public Buses:</strong> Limited and crowded. Route 1 runs along the Corniche (riverfront) for$0 (5 EGP). Not recommended for tourists.</li>
+<li><strong>Ferry (Motorboat):</strong> Cross the Nile from East Bank (Luxor Temple area) to West Bank (near Valley of the Kings). 5–$0 (10 EGP) per person. Runs 6:00 AM–9:00 PM.</li>
+<li><strong>Car Rental:</strong> Available at the airport or hotels. Expect $30–$50per day for a small car. Requires an International Driving Permit. Parking is limited near temples.</li>
+<li><strong>Bicycle:</strong> Rent for $5–$10per day. Good for the West Bank, but roads can be dusty.</li>
 </ul>
 
 <h2>Where to Eat</h2>
 <p>Luxor offers a mix of Egyptian staples (koshari, ful medames, taameya) and international cuisine. Most restaurants add a 12% service charge.</p>
 
-<h3>Street Food & Budget ($1 (≈ ₽95)–$5 (≈ ₽475) per meal)</h3>
+<h3>Street Food & Budget ($1–$5per meal)</h3>
 <ul>
-<li><strong>Koshari El Tahrir (East Bank):</strong> Classic Egyptian dish of rice, lentils, pasta, chickpeas, and tomato sauce. Plate: 25 EGP ($0.50 (≈ ₽47)).</li>
-<li><strong>Foul & Taameya (various stalls near Luxor Temple):</strong> Fava bean stew (ful) and falafel (taameya) sandwiches. 10–15 EGP each.</li>
-<li><strong>Sofra Restaurant & Café (East Bank):</strong> Mid-range but affordable lunch menu: 100–150 EGP for a full meal of grilled meats and salads.</li>
+<li><strong>Koshari El Tahrir (East Bank):</strong> Classic Egyptian dish of rice, lentils, pasta, chickpeas, and tomato sauce. Plate:$0 (25 EGP) ($0).</li>
+<li><strong>Foul & Taameya (various stalls near Luxor Temple):</strong> Fava bean stew (ful) and falafel (taameya) sandwiches. 10–$0 (15 EGP) each.</li>
+<li><strong>Sofra Restaurant & Café (East Bank):</strong> Mid-range but affordable lunch menu: 100–$3 (150 EGP) for a full meal of grilled meats and salads.</li>
 </ul>
 
-<h3>Mid-Range ($10 (≈ ₽950)–$25 (≈ ₽2 375) per meal)</h3>
+<h3>Mid-Range ($10–$25per meal)</h3>
 <ul>
-<li><strong>El Kababgy (East Bank, near Winter Palace):</strong> Egyptian and Middle Eastern grill. Mixed grill plate: 200 EGP ($4 (≈ ₽380)).</li>
-<li><strong>Marsam Hotel Restaurant (West Bank):</strong> Simple rooftop dining with views of the Theban Hills. Stuffed pigeon (hamam): 150 EGP.</li>
-<li><strong>Al Moudira Hotel Restaurant (West Bank):</strong> Garden setting. International and Egyptian menu. Main courses: 250–400 EGP.</li>
+<li><strong>El Kababgy (East Bank, near Winter Palace):</strong> Egyptian and Middle Eastern grill. Mixed grill plate:$4 (200 EGP) ($4).</li>
+<li><strong>Marsam Hotel Restaurant (West Bank):</strong> Simple rooftop dining with views of the Theban Hills. Stuffed pigeon (hamam):$3 (150 EGP).</li>
+<li><strong>Al Moudira Hotel Restaurant (West Bank):</strong> Garden setting. International and Egyptian menu. Main courses: 250–$8 (400 EGP).</li>
 </ul>
 
-<h3>Fine Dining ($30 (≈ ₽2 850)–$60 (≈ ₽5 700) per meal)</h3>
+<h3>Fine Dining ($30–$60per meal)</h3>
 <ul>
-<li><strong>1886 Restaurant (Sofitel Winter Palace):</strong> Fine French-Egyptian fusion. Tasting menu: 1,200 EGP ($24 (≈ ₽2 280)).</li>
-<li><strong>Nile Ritz-Carlton (East Bank):</strong> Rooftop dining with Nile views. Steak or seafood: 800–1,500 EGP.</li>
-<li><strong>Moon Valley (West Bank):</strong> Set menu with traditional Egyptian dishes in a Bedouin-style tent. 500–800 EGP.</li>
+<li><strong>1886 Restaurant (Sofitel Winter Palace):</strong> Fine French-Egyptian fusion. Tasting menu:$24 (1 $4 (200 EGP)) ($24).</li>
+<li><strong>Nile Ritz-Carlton (East Bank):</strong> Rooftop dining with Nile views. Steak or seafood: 800–$30 (1 $10 (500 EGP)).</li>
+<li><strong>Moon Valley (West Bank):</strong> Set menu with traditional Egyptian dishes in a Bedouin-style tent. 500–$16 (800 EGP).</li>
 </ul>
 
 <h2>Best Time to Visit</h2>
@@ -450,30 +474,30 @@
 
 <table>
 <tr><th>Month</th><th>Avg High (°C)</th><th>Avg Low (°C)</th><th>Rainfall (mm)</th><th>Tourist Season</th><th>Hotel Price (mid-range)</th></tr>
-<tr><td>January</td><td>23</td><td>8</td><td>0</td><td>Peak</td><td>$80 (≈ ₽7 600)–$120 (≈ ₽11 400)</td></tr>
-<tr><td>February</td><td>25</td><td>10</td><td>0</td><td>Peak</td><td>$80 (≈ ₽7 600)–$120 (≈ ₽11 400)</td></tr>
-<tr><td>March</td><td>28</td><td>13</td><td>0</td><td>Peak</td><td>$70 (≈ ₽6 650)–$110 (≈ ₽10 450)</td></tr>
-<tr><td>April</td><td>34</td><td>18</td><td>0</td><td>Shoulder</td><td>$60 (≈ ₽5 700)–$100 (≈ ₽9 500)</td></tr>
-<tr><td>May</td><td>39</td><td>23</td><td>0</td><td>Low</td><td>$40 (≈ ₽3 800)–$80 (≈ ₽7 600)</td></tr>
-<tr><td>June</td><td>41</td><td>26</td><td>0</td><td>Low</td><td>$35 (≈ ₽3 325)–$70 (≈ ₽6 650)</td></tr>
-<tr><td>July</td><td>41</td><td>27</td><td>0</td><td>Low</td><td>$35 (≈ ₽3 325)–$70 (≈ ₽6 650)</td></tr>
-<tr><td>August</td><td>41</td><td>27</td><td>0</td><td>Low</td><td>$35 (≈ ₽3 325)–$70 (≈ ₽6 650)</td></tr>
-<tr><td>September</td><td>39</td><td>24</td><td>0</td><td>Shoulder</td><td>$50 (≈ ₽4 750)–$90 (≈ ₽8 550)</td></tr>
-<tr><td>October</td><td>35</td><td>20</td><td>0</td><td>Peak</td><td>$70 (≈ ₽6 650)–$110 (≈ ₽10 450)</td></tr>
-<tr><td>November</td><td>29</td><td>14</td><td>0</td><td>Peak</td><td>$80 (≈ ₽7 600)–$120 (≈ ₽11 400)</td></tr>
-<tr><td>December</td><td>25</td><td>10</td><td>0</td><td>Peak</td><td>$80 (≈ ₽7 600)–$120 (≈ ₽11 400)</td></tr>
+<tr><td>January</td><td>23</td><td>8</td><td>0</td><td>Peak</td><td>$80–$120</td></tr>
+<tr><td>February</td><td>25</td><td>10</td><td>0</td><td>Peak</td><td>$80–$120</td></tr>
+<tr><td>March</td><td>28</td><td>13</td><td>0</td><td>Peak</td><td>$70–$110</td></tr>
+<tr><td>April</td><td>34</td><td>18</td><td>0</td><td>Shoulder</td><td>$60–$100</td></tr>
+<tr><td>May</td><td>39</td><td>23</td><td>0</td><td>Low</td><td>$40–$80</td></tr>
+<tr><td>June</td><td>41</td><td>26</td><td>0</td><td>Low</td><td>$35–$70</td></tr>
+<tr><td>July</td><td>41</td><td>27</td><td>0</td><td>Low</td><td>$35–$70</td></tr>
+<tr><td>August</td><td>41</td><td>27</td><td>0</td><td>Low</td><td>$35–$70</td></tr>
+<tr><td>September</td><td>39</td><td>24</td><td>0</td><td>Shoulder</td><td>$50–$90</td></tr>
+<tr><td>October</td><td>35</td><td>20</td><td>0</td><td>Peak</td><td>$70–$110</td></tr>
+<tr><td>November</td><td>29</td><td>14</td><td>0</td><td>Peak</td><td>$80–$120</td></tr>
+<tr><td>December</td><td>25</td><td>10</td><td>0</td><td>Peak</td><td>$80–$120</td></tr>
 </table>
 
 <h2>Visa & Documents</h2>
-<p>Most nationalities can obtain a visa on arrival at Luxor Airport. The cost is $25 (≈ ₽2 375) USD (cash only, exact change recommended). You will receive a sticker valid for 30 days. Alternatively, apply online for an e-Visa ($25 (≈ ₽2 375) + $5 (≈ ₽475) processing fee) before travel. Your passport must be valid for at least 6 months from the date of entry. No vaccinations are required, but Hepatitis A and Typhoid shots are recommended. Bring a photocopy of your passport and visa.</p>
+<p>Most nationalities can obtain a visa on arrival at Luxor Airport. The cost is $25USD (cash only, exact change recommended). You will receive a sticker valid for 30 days. Alternatively, apply online for an e-Visa ($25+ $5processing fee) before travel. Your passport must be valid for at least 6 months from the date of entry. No vaccinations are required, but Hepatitis A and Typhoid shots are recommended. Bring a photocopy of your passport and visa.</p>
 
 <h2>Weekly Trip Budget</h2>
 <p>Estimated costs for a 7-day trip in 2026, per person, in USD.</p>
 
 <table>
 <tr><th>Category</th><th>Budget</th><th>Mid-Range</th><th>Luxury</th></tr>
-<tr><td>Accommodation (7 nights)</td><td>$105 (≈ ₽9 975)–$280 (≈ ₽26 600)</td><td>$350 (≈ ₽33 250)–$840 (≈ ₽79 800)</td><td>$1 050 (≈ ₽99 750)–$2 800 (≈ ₽266 000)</td></tr>
-<tr><td>Food (3 meals/day)</td><td>$70 (≈ ₽6 650)–$140 (≈ ₽13 300)</td><td>$210 (≈ ₽19 950)–$420 (≈ ₽39 900)</td><td>$420 (≈ ₽39 900)–$840 (≈ ₽79 800)</td></tr>
+<tr><td>Accommodation (7 nights)</td><td>$105–$280</td><td>$350–$840</td><td>$1 050–$2 800</td></tr>
+<tr><td>Food (3 meals/day)</td><td>$70–$140</td><td>$210–$420</td><td>$420–$840</td></tr>
 <tr><td>Transport (t<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
@@ -580,6 +604,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -608,6 +633,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -625,8 +651,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

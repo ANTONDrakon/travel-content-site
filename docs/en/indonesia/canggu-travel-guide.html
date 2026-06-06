@@ -6,7 +6,7 @@
     <title>Canggu Travel Guide 2026</title>
     <meta name="description" content="Canggu Travel Guide 2026 Canggu, once a sleepy fishing village on Bali’s southwest coast, has transformed into a global hub for digital nomads, surfers, and ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Canggu Travel Guide 2026">
     <meta property="og:description" content="Canggu Travel Guide 2026 Canggu, once a sleepy fishing village on Bali’s southwest coast, has transformed into a global hub for digital nomads, surfers, and ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/canggu-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/canggu.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Canggu Travel Guide 2026</div>
@@ -364,30 +388,30 @@
 <p>Why visit Canggu in 2026? It remains one of the most dynamic and affordable destinations for combining work and play in Southeast Asia. While it has grown significantly, the core appeal endures: a high quality of life at a low cost, world-class surf, a thriving food scene, and a strong sense of community. The infrastructure is constantly improving, with new roads, reliable fiber-optic internet, and an ever-expanding selection of accommodation. For the first-time visitor, Canggu offers a perfect introduction to modern Bali—a place where tradition and trend collide in the most photogenic way possible.</p>
 
 <h2>How to Get There</h2>
-<p>The primary gateway is Ngurah Rai International Airport (DPS) in Denpasar, approximately 45 minutes to 1.5 hours away by car, depending on traffic. In 2026, direct flights are available from major hubs including Singapore (Changi), Kuala Lumpur, Bangkok, Hong Kong, Tokyo, Sydney, Melbourne, and select European cities like Amsterdam and London (via Doha or Dubai). Average round-trip economy fares from Singapore start at 180 SGD, from Kuala Lumpur at 250 MYR, from Sydney at 800 AUD, and from London at 650 GBP. Budget carriers such as AirAsia, Scoot, and Jetstar offer competitive prices, while full-service airlines like Singapore Airlines and Garuda Indonesia provide more comfort. Upon arrival, pre-book a private taxi via apps like Gojek or Grab for a fixed price of around 200,000–300,000 IDR, or take a pre-paid airport taxi for 250,000–350,000 IDR. Avoid hailing drivers outside the terminal without a pre-arranged fare.</p>
+<p>The primary gateway is Ngurah Rai International Airport (DPS) in Denpasar, approximately 45 minutes to 1.5 hours away by car, depending on traffic. In 2026, direct flights are available from major hubs including Singapore (Changi), Kuala Lumpur, Bangkok, Hong Kong, Tokyo, Sydney, Melbourne, and select European cities like Amsterdam and London (via Doha or Dubai). Average round-trip economy fares from Singapore start at 180 SGD, from Kuala Lumpur at 250 MYR, from Sydney at 800 AUD, and from London at 650 GBP. Budget carriers such as AirAsia, Scoot, and Jetstar offer competitive prices, while full-service airlines like Singapore Airlines and Garuda Indonesia provide more comfort. Upon arrival, pre-book a private taxi via apps like Gojek or Grab for a fixed price of around 200,000–$19 (300 $0 (000 IDR)), or take a pre-paid airport taxi for 250,000–$22 (350 $0 (000 IDR)). Avoid hailing drivers outside the terminal without a pre-arranged fare.</p>
 
 <h2>Where to Stay</h2>
 <p>Canggu is divided into several distinct neighborhoods, each with its own vibe. Accommodation ranges from budget-friendly hostels to ultra-luxury villas.</p>
 
-<h3>Budget (Under 400,000 IDR/night)</h3>
+<h3>Budget (Under$25 (400 $0 (000 IDR))/night)</h3>
 <ul>
 <li><strong>Neighborhood:</strong> Padang Linjong. A quieter area close to Echo Beach.</li>
-<li><strong>Recommended:</strong> The Farm Hostel Canggu. A stylish, modern hostel with a pool, co-working space, and dorm beds from 150,000 IDR. Private rooms start at 350,000 IDR.</li>
-<li><strong>Alternative:</strong> Kos (local guesthouses) in the rice fields near Pererenan, from 200,000–350,000 IDR for a basic private room.</li>
+<li><strong>Recommended:</strong> The Farm Hostel Canggu. A stylish, modern hostel with a pool, co-working space, and dorm beds from$9 (150 $0 (000 IDR)). Private rooms start at$22 (350 $0 (000 IDR)).</li>
+<li><strong>Alternative:</strong> Kos (local guesthouses) in the rice fields near Pererenan, from 200,000–$22 (350 $0 (000 IDR)) for a basic private room.</li>
 </ul>
 
-<h3>Mid-Range (400,000 – 1,200,000 IDR/night)</h3>
+<h3>Mid-Range (400,000 –$76 (1 $13 (200000 IDR))/night)</h3>
 <ul>
 <li><strong>Neighborhood:</strong> Batu Bolong. The epicenter of cafes and social life.</li>
-<li><strong>Recommended:</strong> The Slow. A boutique hotel with a famous pool, restaurant, and rooms from 800,000 IDR. Book 3 months in advance.</li>
-<li><strong>Alternative:</strong> Ametis Villa. Private one-bedroom villas with plunge pools from 900,000 IDR.</li>
+<li><strong>Recommended:</strong> The Slow. A boutique hotel with a famous pool, restaurant, and rooms from$51 (800 $0 (000 IDR)). Book 3 months in advance.</li>
+<li><strong>Alternative:</strong> Ametis Villa. Private one-bedroom villas with plunge pools from$57 (900 $0 (000 IDR)).</li>
 </ul>
 
-<h3>Luxury (Over 1,200,000 IDR/night)</h3>
+<h3>Luxury (Over$76 (1 $13 (200000 IDR))/night)</h3>
 <ul>
 <li><strong>Neighborhood:</strong> Berawa. Home to high-end dining and the Finns Recreation Club.</li>
-<li><strong>Recommended:</strong> The Legian Bali. A five-star resort with ocean views, a spa, and suites from 2,500,000 IDR.</li>
-<li><strong>Alternative:</strong> COMO Uma Canggu. A sleek, wellness-focused resort with a world-class spa and rooms from 3,000,000 IDR.</li>
+<li><strong>Recommended:</strong> The Legian Bali. A five-star resort with ocean views, a spa, and suites from$158 (2 $32 (500000 IDR)).</li>
+<li><strong>Alternative:</strong> COMO Uma Canggu. A sleek, wellness-focused resort with a world-class spa and rooms from$189 (3 $0 (000000 IDR)).</li>
 </ul>
 
 <h2>Top 15 Attractions</h2>
@@ -395,47 +419,47 @@
 <li><strong>Batu Bolong Beach</strong> – The most popular surf break and social hub. Black sand, consistent waves, and a reef break. Free entry. Open 24 hours.</li>
 <li><strong>Echo Beach</strong> – Known for powerful waves and dramatic sunsets. Surf schools and warungs line the sand. Free entry. Open 24 hours.</li>
 <li><strong>Berawa Beach</strong> – A wide, family-friendly beach with a long stretch of sand. Great for beginners and jogging. Free entry. Open 24 hours.</li>
-<li><strong>Tanah Lot Temple</strong> – A 15-minute drive north. A 16th-century sea temple perched on a rocky outcrop. Ticket: 60,000 IDR. Open 7:00 AM – 7:00 PM.</li>
-<li><strong>Finns Recreation Club</strong> – A massive water park, gym, and sports complex with a swim-up bar. Ticket: 200,000 IDR (day pass). Open 8:00 AM – 10:00 PM.</li>
-<li><strong>La Brisa Bali</strong> – A stunning beach club built from recycled driftwood. Great for sunset cocktails and live music. Free entry (minimum spend 300,000 IDR). Open 9:00 AM – 11:00 PM.</li>
+<li><strong>Tanah Lot Temple</strong> – A 15-minute drive north. A 16th-century sea temple perched on a rocky outcrop. Ticket:$4 (60 $0 (000 IDR)). Open 7:00 AM – 7:00 PM.</li>
+<li><strong>Finns Recreation Club</strong> – A massive water park, gym, and sports complex with a swim-up bar. Ticket:$13 (200 $0 (000 IDR)) (day pass). Open 8:00 AM – 10:00 PM.</li>
+<li><strong>La Brisa Bali</strong> – A stunning beach club built from recycled driftwood. Great for sunset cocktails and live music. Free entry (minimum spend$19 (300 $0 (000 IDR))). Open 9:00 AM – 11:00 PM.</li>
 <li><strong>Old Man’s</strong> – The iconic surfer bar. Live music, cheap beers, and a lively atmosphere. Free entry. Open 8:00 AM – 2:00 AM.</li>
 <li><strong>Deus Ex Machina</strong> – A temple of custom motorbikes, surfboards, and art. Also has a café and a gallery. Free entry. Open 8:00 AM – 10:00 PM.</li>
-<li><strong>The Practice</strong> – A world-class yoga studio offering daily classes in a bamboo shala. Drop-in class: 150,000 IDR. Open 6:00 AM – 9:00 PM.</li>
+<li><strong>The Practice</strong> – A world-class yoga studio offering daily classes in a bamboo shala. Drop-in class:$9 (150 $0 (000 IDR)). Open 6:00 AM – 9:00 PM.</li>
 <li><strong>Canggu Market</strong> – A Sunday morning market with organic produce, artisan goods, and food stalls. Free entry. Open every Sunday 7:00 AM – 1:00 PM.</li>
 <li><strong>Pura Batu Bolong</strong> – A small, active Hindu temple at the end of Batu Bolong beach. Respectful dress required. Free entry. Open daylight hours.</li>
 <li><strong>Berawa Kitchen</strong> – A vibrant food market every Friday evening with live music and 20+ food vendors. Free entry. Open Fridays 5:00 PM – 10:00 PM.</li>
-<li><strong>Surf Lessons at Rip Curl School of Surf</strong> – Beginner lessons at Kuta Beach (10 minutes south) or Batu Bolong. 2-hour group lesson: 350,000 IDR. Open 7:00 AM – 5:00 PM.</li>
+<li><strong>Surf Lessons at Rip Curl School of Surf</strong> – Beginner lessons at Kuta Beach (10 minutes south) or Batu Bolong. 2-hour group lesson:$22 (350 $0 (000 IDR)). Open 7:00 AM – 5:00 PM.</li>
 <li><strong>Chillhouse Bali</strong> – A creative space with a saltwater pool, café, and art gallery. Free entry. Open 7:00 AM – 11:00 PM.</li>
 <li><strong>Subak Rice Terraces (Sangeh)</strong> – A 20-minute drive north. Walk through UNESCO-listed irrigation systems and green rice paddies. Free entry (donation requested). Open daylight hours.</li>
 </ol>
 
 <h2>Getting Around</h2>
-<p>The most common and practical way to get around Canggu is by scooter. Rental prices are 50,000–80,000 IDR per day for a standard automatic scooter (e.g., Honda Vario). A valid international driving permit (IDP) is required by law, though enforcement is inconsistent. Fuel costs about 10,000 IDR per liter.</p>
-<p>For those who prefer not to drive, ride-hailing apps Gojek and Grab are ubiquitous. A short trip within Canggu (e.g., Batu Bolong to Berawa) costs 15,000–25,000 IDR. Longer trips to Seminyak or Kuta cost 40,000–60,000 IDR. A ride to the airport is 150,000–200,000 IDR.</p>
-<p>Taxis are also available but more expensive. Blue Bird taxis are the most reliable. There is no metro or train system in Canggu. Walking is possible in the central areas but can be dusty and hot. Bicycle rental is available (30,000–50,000 IDR/day) but traffic and narrow roads make it challenging.</p>
+<p>The most common and practical way to get around Canggu is by scooter. Rental prices are 50,000–$5 (80 $0 (000 IDR)) per day for a standard automatic scooter (e.g., Honda Vario). A valid international driving permit (IDP) is required by law, though enforcement is inconsistent. Fuel costs about$1 (10 $0 (000 IDR)) per liter.</p>
+<p>For those who prefer not to drive, ride-hailing apps Gojek and Grab are ubiquitous. A short trip within Canggu (e.g., Batu Bolong to Berawa) costs 15,000–$2 (25 $0 (000 IDR)). Longer trips to Seminyak or Kuta cost 40,000–$4 (60 $0 (000 IDR)). A ride to the airport is 150,000–$13 (200 $0 (000 IDR)).</p>
+<p>Taxis are also available but more expensive. Blue Bird taxis are the most reliable. There is no metro or train system in Canggu. Walking is possible in the central areas but can be dusty and hot. Bicycle rental is available (30,000–$3 (50 $0 (000 IDR))/day) but traffic and narrow roads make it challenging.</p>
 
 <h2>Where to Eat</h2>
 <p>Canggu’s food scene is extraordinary, with an emphasis on fresh, organic, and international cuisine. Prices are generally lower than in Europe or Australia.</p>
 
 <h3>Street Food & Local Warungs</h3>
 <ul>
-<li><strong>Warung Bu Mi</strong> – Classic nasi campur (mixed rice) for 25,000–35,000 IDR. Open 7:00 AM – 9:00 PM.</li>
-<li><strong>Mie Ayam Canggu</strong> – Chicken noodle soup for 20,000 IDR. Open 6:00 PM – 11:00 PM.</li>
-<li><strong>Satay Padang</strong> – Grilled skewers with spicy sauce, 30,000–50,000 IDR per portion. Found at night markets.</li>
+<li><strong>Warung Bu Mi</strong> – Classic nasi campur (mixed rice) for 25,000–$2 (35 $0 (000 IDR)). Open 7:00 AM – 9:00 PM.</li>
+<li><strong>Mie Ayam Canggu</strong> – Chicken noodle soup for$1 (20 $0 (000 IDR)). Open 6:00 PM – 11:00 PM.</li>
+<li><strong>Satay Padang</strong> – Grilled skewers with spicy sauce, 30,000–$3 (50 $0 (000 IDR)) per portion. Found at night markets.</li>
 </ul>
 
 <h3>Mid-Range Cafes & Restaurants</h3>
 <ul>
-<li><strong>Shady Shack</strong> – Acai bowls, smoothies, and vegan burgers. Average meal: 80,000–120,000 IDR. Open 7:00 AM – 10:00 PM.</li>
-<li><strong>Monsieur Spoon</strong> – Excellent French pastries and coffee. Croissant: 35,000 IDR. Open 6:30 AM – 6:00 PM.</li>
-<li><strong>Lacalita</strong> – Authentic Mexican food with a lively atmosphere. Tacos: 60,000–80,000 IDR. Open 11:00 AM – 11:00 PM.</li>
-<li><strong>Rustica</strong> – Wood-fired pizza and pasta. Pizza: 90,000–140,000 IDR. Open 12:00 PM – 10:00 PM.</li>
+<li><strong>Shady Shack</strong> – Acai bowls, smoothies, and vegan burgers. Average meal: 80,000–$8 (120 $0 (000 IDR)). Open 7:00 AM – 10:00 PM.</li>
+<li><strong>Monsieur Spoon</strong> – Excellent French pastries and coffee. Croissant:$2 (35 $0 (000 IDR)). Open 6:30 AM – 6:00 PM.</li>
+<li><strong>Lacalita</strong> – Authentic Mexican food with a lively atmosphere. Tacos: 60,000–$5 (80 $0 (000 IDR)). Open 11:00 AM – 11:00 PM.</li>
+<li><strong>Rustica</strong> – Wood-fired pizza and pasta. Pizza: 90,000–$9 (140 $0 (000 IDR)). Open 12:00 PM – 10:00 PM.</li>
 </ul>
 
 <h3>Fine Dining</h3>
 <ul>
-<li><strong>Uma Garden</strong> – Mediterranean-inspired dishes with a garden setting. Mains: 200,000–350,000 IDR. Open 5:00 PM – 11:00 PM.</li>
-<li><strong>Bambu</strong> – High-end Indonesian cuisine with a tasting menu. 5-course menu: 600,000 IDR. Open 6:00 PM – 11:00 PM.</li>
+<li><strong>Uma Garden</strong> – Mediterranean-inspired dishes with a garden setting. Mains: 200,000–$22 (350 $0 (000 IDR)). Open 5:00 PM – 11:00 PM.</li>
+<li><strong>Bambu</strong> – High-end Indonesian cuisine with a tasting menu. 5-course menu:$38 (600 $0 (000 IDR)). Open 6:00 PM – 11:00 PM.</li>
 </ul>
 
 <h2>Best Time to Visit</h2>
@@ -552,7 +576,7 @@
 <p>The best time to visit is May to September for dry, sunny weather and consistent surf. Prices for accommodation and flights are 30–50% higher during this peak season. The shoulder months of April and October offer a good balance of decent weather and lower prices. November to March is the rainy season, with heavy downpours, but also the cheapest time to visit and the most authentic, less crowded experience.</p>
 
 <h2>Visa & Documents</h2>
-<p>Citizens of 169 countries, including the United States, United Kingdom, Australia, Canada, and most European nations, are eligible for a Visa on Arrival (VoA) at Ngurah Rai Airport. The cost is 500,000 IDR (approximately 35 USD) and is valid for 30 days. Payment can be made in cash (IDR, USD, EUR) or by credit card. You must have a passport valid for at least 6 months from the date of arrival and a return or onward ticket. The VoA can be extended once for an additional 30 days at a local immigration office for a fee of 500,000 IDR. For longer stays, consider the B211A Social-Cultural Visa, which allows up to 60 days and can be extended multiple times for up to 6 months, but requires a sponsor and costs around 1,500,000 IDR plus agent fees.</p>
+<p>Citizens of 169 countries, including the United States, United Kingdom, Australia, Canada, and most European nations, are eligible for a Visa on Arrival (VoA) at Ngurah Rai Airport. The cost is$32 (500 $0 (000 IDR)) (approximately 35 USD) and is valid for 30 days. Payment can be made in cash (IDR, USD, EUR) or by credit card. You must have a passport valid for at least 6 months from the date of arrival and a return or onward ticket. The VoA can be extended once for an additional 30 days at a local immigration office for a fee of$32 (500 $0 (000 IDR)). For longer stays, consider the B211A Social-Cultural Visa, which allows up to 60 days and can be extended multiple times for up to 6 months, but requires a sponsor and costs around$95 (1 $32 (500000 IDR)) plus agent fees.</p>
 
 <h2>Weekly Trip Budget</h2>
 <table>
@@ -603,7 +627,7 @@
 </tr>
 </tbody>
 </table>
-<p>These estimates assume single occupancy. Budget travelers staying in hostels and eating street food can survive on 2,000,000–3,000,000 IDR per week. Mid-range travelers in private rooms and cafes spend 4,000,000–8,000,000 IDR. Luxury travelers in villas and fine dining can easily spend 10,000,000 IDR or more<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<p>These estimates assume single occupancy. Budget travelers staying in hostels and eating street food can survive on 2,000,000–$189 (3 $0 (000000 IDR)) per week. Mid-range travelers in private rooms and cafes spend 4,000,000–$505 (8 $0 (000000 IDR)). Luxury travelers in villas and fine dining can easily spend$632 (10 $0 (000000 IDR)) or more<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -709,6 +733,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -737,6 +762,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -754,8 +780,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

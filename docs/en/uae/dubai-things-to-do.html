@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Dubai 2026</title>
     <meta name="description" content="15 Best Things to Do in Dubai 2026 Dubai in 2026 continues to redefine the boundaries of luxury, innovation, and entertainment. With a skyline that pierces t...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Dubai 2026">
     <meta property="og:description" content="15 Best Things to Do in Dubai 2026 Dubai in 2026 continues to redefine the boundaries of luxury, innovation, and entertainment. With a skyline that pierces t...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/dubai-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/dubai.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Dubai 2026</div>
@@ -362,96 +386,94 @@
 <p>Dubai in 2026 continues to redefine the boundaries of luxury, innovation, and entertainment. With a skyline that pierces the clouds, man-made islands that defy geography, and indoor theme parks that rival the outdoors, the city offers an unparalleled array of attractions. Whether you are an adrenaline junkie, a culture enthusiast, or a family seeking world-class fun, Dubai delivers experiences that are both futuristic and deeply rooted in Arabian hospitality. This guide covers the 15 best attractions, optimal itineraries, tours, free activities, and practical tips for your visit.</p>
 
 <h2>15 Best Attractions in Dubai 2026</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Burj Khalifa</h3>
-<p>The Burj Khalifa, standing at 828 meters (2,717 feet), remains the world’s tallest building. In 2026, the observation decks "At the Top" on floors 124 and 125, and "At the Top Sky" on floor 148, offer 360-degree views of the city, desert, and ocean. The building features a new immersive VR experience recounting its construction. Ticket prices start at AED 169 (USD 46) for standard access and AED 400 (USD 109) for the Sky level. Hours are 8:00 AM to midnight (last entry 11:15 PM). Take the Dubai Metro to Dubai Mall station and walk through the mall to the entrance. Tip: Book tickets online at least 48 hours in advance to secure sunset slots and avoid 2-hour queues.</p>
+<p>The Burj Khalifa, standing at 828 meters (2,717 feet), remains the world’s tallest building. In 2026, the observation decks "At the Top" on floors 124 and 125, and "At the Top Sky" on floor 148, offer 360-degree views of the city, desert, and ocean. The building features a new immersive VR experience recounting its construction. Ticket prices start at $46 (169 AED)(USD 46) for standard access and $109 (400 AED)(USD 109) for the Sky level. Hours are 8:00 AM to midnight (last entry 11:15 PM). Take the Dubai Metro to Dubai Mall station and walk through the mall to the entrance. Tip: Book tickets online at least 48 hours in advance to secure sunset slots and avoid 2-hour queues.</p>
 
 <h3>2. The Dubai Mall</h3>
-<p>Spanning over 1.1 million square meters, The Dubai Mall is the largest shopping and entertainment complex globally. Beyond 1,200 retail stores, it houses the Dubai Aquarium & Underwater Zoo (10-million-liter tank), an Olympic-sized ice rink, and a 22-screen cinema. In 2026, the new "AI Fashion District" offers personalized styling robots. Entry is free, but attractions cost extra (Aquarium: AED 130 / USD 35). Hours are 10:00 AM to midnight (weekends until 1:00 AM). Access via Dubai Metro (Burj Khalifa station). Tip: Visit the aquarium at 9:00 AM to avoid crowds; the VR diving experience costs AED 80 extra.</p>
+<p>Spanning over 1.1 million square meters, The Dubai Mall is the largest shopping and entertainment complex globally. Beyond 1,200 retail stores, it houses the Dubai Aquarium & Underwater Zoo (10-million-liter tank), an Olympic-sized ice rink, and a 22-screen cinema. In 2026, the new "AI Fashion District" offers personalized styling robots. Entry is free, but attractions cost extra (Aquarium: $35 (130 AED)/ USD 35). Hours are 10:00 AM to midnight (weekends until 1:00 AM). Access via Dubai Metro (Burj Khalifa station). Tip: Visit the aquarium at 9:00 AM to avoid crowds; the VR diving experience costs $22 (80 AED)extra.</p>
 
 <h3>3. Palm Jumeirah & Atlantis The Palm</h3>
-<p>This artificial archipelago, shaped like a palm tree, is home to luxury hotels and residential villas. Atlantis The Palm features Aquaventure Waterpark (42 slides, 2.3 km of lazy river) and The Lost Chambers Aquarium (65,000 marine animals). In 2026, the new "Palm Sky Bridge" offers zip-lining across the fronds. Aquaventure tickets: AED 299 (USD 81) for adults, AED 229 (USD 62) for children. Hours: 10:00 AM to 6:00 PM daily. Take the Dubai Tram to Palm Jumeirah monorail (AED 15). Tip: Book a "Day Pass" at Atlantis for pool and beach access (AED 400) which includes waterpark entry.</p>
+<p>This artificial archipelago, shaped like a palm tree, is home to luxury hotels and residential villas. Atlantis The Palm features Aquaventure Waterpark (42 slides, 2.3 km of lazy river) and The Lost Chambers Aquarium (65,000 marine animals). In 2026, the new "Palm Sky Bridge" offers zip-lining across the fronds. Aquaventure tickets: $82 (299 AED)(USD 81) for adults, $62 (229 AED)(USD 62) for children. Hours: 10:00 AM to 6:00 PM daily. Take the Dubai Tram to Palm Jumeirah monorail ($4 (15 AED)). Tip: Book a "Day Pass" at Atlantis for pool and beach access ($109 (400 AED)) which includes waterpark entry.</p>
 
 <h3>4. Dubai Frame</h3>
-<p>The Dubai Frame, a 150-meter-tall golden structure shaped like a picture frame, offers views of old and new Dubai. The glass-floored sky deck provides a 360-degree panorama. In 2026, the "Time Tunnel" exhibition uses holograms to show Dubai’s evolution from fishing village to metropolis. Tickets: AED 50 (USD 14) for adults, AED 20 (USD 5) for children. Hours: 9:00 AM to 9:00 PM. Take the Dubai Metro to Al Jafiliya station, then a 10-minute walk. Tip: Visit at sunset for golden-hour photos; the museum on the ground floor is included.</p>
+<p>The Dubai Frame, a 150-meter-tall golden structure shaped like a picture frame, offers views of old and new Dubai. The glass-floored sky deck provides a 360-degree panorama. In 2026, the "Time Tunnel" exhibition uses holograms to show Dubai’s evolution from fishing village to metropolis. Tickets: $14 (50 AED)(USD 14) for adults, $5 (20 AED)(USD 5) for children. Hours: 9:00 AM to 9:00 PM. Take the Dubai Metro to Al Jafiliya station, then a 10-minute walk. Tip: Visit at sunset for golden-hour photos; the museum on the ground floor is included.</p>
 
 <h3>5. Dubai Creek & Abra Ride</h3>
-<p>Dubai Creek, the historic heart of the city, separates Deira and Bur Dubai. A traditional abra (wooden boat) ride costs just AED 2 (USD 0.50) for a 10-minute crossing. The adjacent Al Fahidi Historical Neighbourhood features wind-tower houses and the Dubai Museum (under renovation until late 2026). Hours: 24/7 for abra rides. Access from Bur Dubai Abra Station. Tip: Take the "Water Taxi" (AED 50) for a 45-minute guided tour of the creek with stops at spice and gold souks.</p>
+<p>Dubai Creek, the historic heart of the city, separates Deira and Bur Dubai. A traditional abra (wooden boat) ride costs just $1 (2 AED)(USD 0.50) for a 10-minute crossing. The adjacent Al Fahidi Historical Neighbourhood features wind-tower houses and the Dubai Museum (under renovation until late 2026). Hours: 24/7 for abra rides. Access from Bur Dubai Abra Station. Tip: Take the "Water Taxi" ($14 (50 AED)) for a 45-minute guided tour of the creek with stops at spice and gold souks.</p>
 
 <h3>6. Museum of the Future</h3>
-<p>This torus-shaped building with Arabic calligraphy explores future technologies in health, climate, and space. In 2026, the "Tomorrow Today" exhibit includes AI-generated art and a Mars colony simulation. Tickets: AED 149 (USD 41) for adults, free for children under 3. Hours: 10:00 AM to 6:00 PM (last entry 5:00 PM). Take Dubai Metro to Emirates Towers station. Tip: Book at least 2 weeks in advance; the "Future Heroes" section for kids is included but requires separate timed entry.</p>
+<p>This torus-shaped building with Arabic calligraphy explores future technologies in health, climate, and space. In 2026, the "Tomorrow Today" exhibit includes AI-generated art and a Mars colony simulation. Tickets: $41 (149 AED)(USD 41) for adults, free for children under 3. Hours: 10:00 AM to 6:00 PM (last entry 5:00 PM). Take Dubai Metro to Emirates Towers station. Tip: Book at least 2 weeks in advance; the "Future Heroes" section for kids is included but requires separate timed entry.</p>
 
 <h3>7. Ski Dubai at Mall of the Emirates</h3>
-<p>Ski Dubai, an indoor ski resort with 22,500 square meters of snow, offers five slopes (including a 400-meter black run) and a penguin encounter. In 2026, the "Snow Plunge" slide reaches speeds of 40 km/h. Tickets: AED 220 (USD 60) for 2-hour skiing (includes equipment), AED 130 (USD 35) for penguin encounter. Hours: 10:00 AM to 10:00 PM. Take Dubai Metro to Mall of the Emirates station. Tip: Rent gloves and socks on-site (AED 20); the penguin encounter books out 3 days in advance.</p>
+<p>Ski Dubai, an indoor ski resort with 22,500 square meters of snow, offers five slopes (including a 400-meter black run) and a penguin encounter. In 2026, the "Snow Plunge" slide reaches speeds of 40 km/h. Tickets: $60 (220 AED)(USD 60) for 2-hour skiing (includes equipment), $35 (130 AED)(USD 35) for penguin encounter. Hours: 10:00 AM to 10:00 PM. Take Dubai Metro to Mall of the Emirates station. Tip: Rent gloves and socks on-site ($5 (20 AED)); the penguin encounter books out 3 days in advance.</p>
 
 <h3>8. Dubai Miracle Garden</h3>
-<p>Dubai Miracle Garden, the world’s largest natural flower garden, features over 150 million flowers in sculptures like the Airbus A380 and a Disney-themed area. In 2026, the "Butterfly Garden" (expanded to 20 domes) hosts 15,000 butterflies. Tickets: AED 85 (USD 23) for adults, AED 65 (USD 18) for children. Hours: 9:00 AM to 9:00 PM (open November to May only). Take a taxi (approx. AED 50 from city center). Tip: Visit on weekdays to avoid crowds; the garden closes at 6:00 PM during Ramadan.</p>
+<p>Dubai Miracle Garden, the world’s largest natural flower garden, features over 150 million flowers in sculptures like the Airbus A380 and a Disney-themed area. In 2026, the "Butterfly Garden" (expanded to 20 domes) hosts 15,000 butterflies. Tickets: $23 (85 AED)(USD 23) for adults, $18 (65 AED)(USD 18) for children. Hours: 9:00 AM to 9:00 PM (open November to May only). Take a taxi (approx. $14 (50 AED)from city center). Tip: Visit on weekdays to avoid crowds; the garden closes at 6:00 PM during Ramadan.</p>
 
 <h3>9. Dubai Marina & JBR Walk</h3>
-<p>Dubai Marina, a 3-kilometer-long artificial canal, is lined with skyscrapers and restaurants. The Jumeirah Beach Residence (JBR) Walk offers beachfront dining, the "The Beach" shopping complex, and a 1.5-km promenade. In 2026, the new "Marina Sky Pool" on the 50th floor of a residential tower offers public swimming (AED 100). Free access to JBR Beach. Hours: 24/7 for walkways. Take Dubai Tram to Jumeirah Beach Residence station. Tip: Rent a jet ski (AED 200 per 30 minutes) from the marina; sunset views are best at 6:00 PM.</p>
+<p>Dubai Marina, a 3-kilometer-long artificial canal, is lined with skyscrapers and restaurants. The Jumeirah Beach Residence (JBR) Walk offers beachfront dining, the "The Beach" shopping complex, and a 1.5-km promenade. In 2026, the new "Marina Sky Pool" on the 50th floor of a residential tower offers public swimming ($27 (100 AED)). Free access to JBR Beach. Hours: 24/7 for walkways. Take Dubai Tram to Jumeirah Beach Residence station. Tip: Rent a jet ski ($55 (200 AED)per 30 minutes) from the marina; sunset views are best at 6:00 PM.</p>
 
 <h3>10. La Mer</h3>
-<p>La Mer, a beachfront development, combines a white-sand beach, street art, and 130+ dining outlets. The "Laguna Waterpark" features a 2-meter wave pool and a 120-meter-long slide. In 2026, the "Art Alley" showcases rotating murals by global artists. Beach entry is free; waterpark tickets: AED 150 (USD 41) for adults. Hours: 10:00 AM to 10:00 PM. Take a taxi (AED 40 from Burj Khalifa). Tip: The "Beach Club" (AED 100) includes loungers and towel service; book a table at "Masti" for Indian fusion.</p>
+<p>La Mer, a beachfront development, combines a white-sand beach, street art, and 130+ dining outlets. The "Laguna Waterpark" features a 2-meter wave pool and a 120-meter-long slide. In 2026, the "Art Alley" showcases rotating murals by global artists. Beach entry is free; waterpark tickets: $41 (150 AED)(USD 41) for adults. Hours: 10:00 AM to 10:00 PM. Take a taxi ($11 (40 AED)from Burj Khalifa). Tip: The "Beach Club" ($27 (100 AED)) includes loungers and towel service; book a table at "Masti" for Indian fusion.</p>
 
 <h3>11. Global Village</h3>
-<p>Global Village, a cultural theme park, features pavilions from 90+ countries, carnival rides, and live shows. In 2026, the "Eco Pavilion" uses solar-powered attractions. Entry: AED 25 (USD 7) for adults, free for children under 3. Hours: 4:00 PM to midnight (open October to April). Take a taxi (AED 60 from city center). Tip: Visit on a Tuesday for "Family Night" (50% off rides); try the Turkish ice cream stall in the Asia pavilion.</p>
+<p>Global Village, a cultural theme park, features pavilions from 90+ countries, carnival rides, and live shows. In 2026, the "Eco Pavilion" uses solar-powered attractions. Entry: $7 (25 AED)(USD 7) for adults, free for children under 3. Hours: 4:00 PM to midnight (open October to April). Take a taxi ($16 (60 AED)from city center). Tip: Visit on a Tuesday for "Family Night" (50% off rides); try the Turkish ice cream stall in the Asia pavilion.</p>
 
 <h3>12. IMG Worlds of Adventure</h3>
-<p>This indoor theme park, spanning 1.5 million square feet, features Marvel, Cartoon Network, and dinosaur-themed zones. In 2026, the "Avengers: Quantum Realm" ride uses VR headsets for a 4D experience. Tickets: AED 299 (USD 81) for adults, AED 249 (USD 68) for children. Hours: 11:00 AM to 8:00 PM daily. Take a taxi (AED 70 from Burj Khalifa). Tip: The "Fast Pass" (AED 100) cuts wait times by 50%; the park is fully air-conditioned, ideal for summer.</p>
+<p>This indoor theme park, spanning 1.5 million square feet, features Marvel, Cartoon Network, and dinosaur-themed zones. In 2026, the "Avengers: Quantum Realm" ride uses VR headsets for a 4D experience. Tickets: $82 (299 AED)(USD 81) for adults, $68 (249 AED)(USD 68) for children. Hours: 11:00 AM to 8:00 PM daily. Take a taxi ($19 (70 AED)from Burj Khalifa). Tip: The "Fast Pass" ($27 (100 AED)) cuts wait times by 50%; the park is fully air-conditioned, ideal for summer.</p>
 
 <h3>13. Dubai Opera</h3>
-<p>Dubai Opera, a 2,000-seat performing arts venue shaped like a dhow, hosts ballet, opera, and concerts. In 2026, the "Immersive Sound" system uses 200 speakers for 3D audio. Tickets: AED 200 to AED 1,500 (USD 55 to 410). Hours: box office opens 10:00 AM to 9:00 PM. Take Dubai Metro to Burj Khalifa station. Tip: The "Behind the Scenes" tour (AED 50) runs at 11:00 AM on Saturdays; dress code is smart casual for evening shows.</p>
+<p>Dubai Opera, a 2,000-seat performing arts venue shaped like a dhow, hosts ballet, opera, and concerts. In 2026, the "Immersive Sound" system uses 200 speakers for 3D audio. Tickets: $55 (200 AED)to $409 (1 $136 (500 AED))(USD 55 to 410). Hours: box office opens 10:00 AM to 9:00 PM. Take Dubai Metro to Burj Khalifa station. Tip: The "Behind the Scenes" tour ($14 (50 AED)) runs at 11:00 AM on Saturdays; dress code is smart casual for evening shows.</p>
 
 <h3>14. Dubai Desert Conservation Reserve</h3>
-<p>This 225-square-kilometer protected area offers dune bashing, camel rides, and falconry shows. In 2026, the "Night Sky Observatory" uses telescopes for stargazing. Tours start at AED 250 (USD 68) for 4-hour evening safaris (includes dinner). Hours: tours run from 3:00 PM to 9:00 PM. Pickup from city hotels (included). Tip: Book with Platinum Heritage (AED 350) for a vintage Land Rover tour; bring a scarf for dust.</p>
+<p>This 225-square-kilometer protected area offers dune bashing, camel rides, and falconry shows. In 2026, the "Night Sky Observatory" uses telescopes for stargazing. Tours start at $68 (250 AED)(USD 68) for 4-hour evening safaris (includes dinner). Hours: tours run from 3:00 PM to 9:00 PM. Pickup from city hotels (included). Tip: Book with Platinum Heritage ($95 (350 AED)) for a vintage Land Rover tour; bring a scarf for dust.</p>
 
 <h3>15. AYA Universe</h3>
-<p>AYA Universe, a 40,000-square-foot immersive art experience, features 12 rooms with projection mapping, lasers, and interactive floors. In 2026, the "Infinity Room" uses 1,000 LED panels. Tickets: AED 120 (USD 33) for adults, AED 90 (USD 25) for children. Hours: 10:00 AM to 10:00 PM. Take Dubai Metro to Business Bay station. Tip: Visit on a weekday for fewer crowds; the "Cosmic Slide" is free with entry.</p>
+<p>AYA Universe, a 40,000-square-foot immersive art experience, features 12 rooms with projection mapping, lasers, and interactive floors. In 2026, the "Infinity Room" uses 1,000 LED panels. Tickets: $33 (120 AED)(USD 33) for adults, $25 (90 AED)(USD 25) for children. Hours: 10:00 AM to 10:00 PM. Take Dubai Metro to Business Bay station. Tip: Visit on a weekday for fewer crowds; the "Cosmic Slide" is free with entry.</p>
 
 <h2>1-Day, 2-Day, 3-Day Itineraries</h2>
 <h3>1-Day Itinerary: Iconic Highlights</h3>
-<p>Start at 9:00 AM at the Burj Khalifa (book sunset slot online). Walk through The Dubai Mall to the Dubai Aquarium (11:00 AM). Lunch at the mall food court (AED 50). At 1:00 PM, take a taxi to Dubai Frame (20 minutes). Visit the sky deck (2:00 PM). At 4:00 PM, head to Dubai Creek for an abra ride (AED 2) and explore Al Fahidi. Dinner at a creek-side restaurant (AED 100). End at 7:00 PM with the Dubai Fountain show (free) at the mall. Total cost: approx. AED 400 (USD 109).</p>
+<p>Start at 9:00 AM at the Burj Khalifa (book sunset slot online). Walk through The Dubai Mall to the Dubai Aquarium (11:00 AM). Lunch at the mall food court ($14 (50 AED)). At 1:00 PM, take a taxi to Dubai Frame (20 minutes). Visit the sky deck (2:00 PM). At 4:00 PM, head to Dubai Creek for an abra ride ($1 (2 AED)) and explore Al Fahidi. Dinner at a creek-side restaurant ($27 (100 AED)). End at 7:00 PM with the Dubai Fountain show (free) at the mall. Total cost: approx. $109 (400 AED)(USD 109).</p>
 
 <h3>2-Day Itinerary: Adventure & Culture</h3>
-<p>Day 1: 9:00 AM at Ski Dubai (2-hour session). 12:00 PM lunch at Mall of the Emirates. 2:00 PM at IMG Worlds of Adventure (until 6:00 PM). Dinner at La Mer (AED 120). Day 2: 9:00 AM at Palm Jumeirah (Aquaventure Waterpark). 2:00 PM lunch at Atlantis. 4:00 PM at Dubai Marina (jet ski rental). 7:00 PM at Dubai Opera (evening show). Total cost: approx. AED 1,200 (USD 327).</p>
+<p>Day 1: 9:00 AM at Ski Dubai (2-hour session). 12:00 PM lunch at Mall of the Emirates. 2:00 PM at IMG Worlds of Adventure (until 6:00 PM). Dinner at La Mer ($33 (120 AED)). Day 2: 9:00 AM at Palm Jumeirah (Aquaventure Waterpark). 2:00 PM lunch at Atlantis. 4:00 PM at Dubai Marina (jet ski rental). 7:00 PM at Dubai Opera (evening show). Total cost: approx. $327 (1 $55 (200 AED))(USD 327).</p>
 
 <h3>3-Day Itinerary: Full Experience</h3>
-<p>Day 1: Same as 1-day itinerary. Day 2: 9:00 AM at Museum of the Future. 12:00 PM lunch at Dubai Mall. 2:00 PM at AYA Universe. 5:00 PM at Global Village (until 10:00 PM). Day 3: 8:00 AM at Dubai Desert Conservation Reserve (morning safari). 1:00 PM lunch at desert camp. 3:00 PM at La Mer beach. 7:00 PM at Dubai Marina dinner cruise (AED 200). Total cost: approx. AED 2,000 (USD 545).</p>
+<p>Day 1: Same as 1-day itinerary. Day 2: 9:00 AM at Museum of the Future. 12:00 PM lunch at Dubai Mall. 2:00 PM at AYA Universe. 5:00 PM at Global Village (until 10:00 PM). Day 3: 8:00 AM at Dubai Desert Conservation Reserve (morning safari). 1:00 PM lunch at desert camp. 3:00 PM at La Mer beach. 7:00 PM at Dubai Marina dinner cruise ($55 (200 AED)). Total cost: approx. $545 (2 $0 (000 AED))(USD 545).</p>
 
 <h2>Tours & Excursions</h2>
 <p>For a curated experience, consider these top tours in 2026:</p>
 <ul>
-<li><strong>Big Bus Dubai Hop-On Hop-Off Tour</strong>: 24-hour pass (AED 200 / USD 55) covering 30 stops including Burj Khalifa and Dubai Marina. Includes audio guide. Departs from Dubai Mall at 9:00 AM hourly.</li>
-<li><strong>Evening Desert Safari</strong>: 4-hour tour with dune bashing, camel ride, BBQ dinner, and belly dance show. Price: AED 250 (USD 68) per adult. Pickup from most hotels. Operated by Arabian Adventures.</li>
-<li><strong>Dubai Marina Yacht Tour</strong>: 2-hour cruise on a 50-foot yacht with drinks and snacks. Price: AED 350 (USD 95) per person. Departs from Dubai Marina Yacht Club at 5:00 PM daily.</li>
-<li><strong>Abu Dhabi Day Trip</strong>: 10-hour tour visiting Sheikh Zayed Grand Mosque, Louvre Abu Dhabi, and Ferrari World. Price: AED 400 (USD 109) including transport and guide. Pickup at 7:00 AM from Dubai.</li>
-<li><strong>Helicopter Tour</strong>: 22-minute flight over Palm Jumeirah, Burj Al Arab, and Burj Khalifa. Price: AED 1,200 (USD 327) per person. Departs from Dubai Helipad at 10:00 AM and 2:00 PM.</li>
+<li><strong>Big Bus Dubai Hop-On Hop-Off Tour</strong>: 24-hour pass ($55 (200 AED)/ USD 55) covering 30 stops including Burj Khalifa and Dubai Marina. Includes audio guide. Departs from Dubai Mall at 9:00 AM hourly.</li>
+<li><strong>Evening Desert Safari</strong>: 4-hour tour with dune bashing, camel ride, BBQ dinner, and belly dance show. Price: $68 (250 AED)(USD 68) per adult. Pickup from most hotels. Operated by Arabian Adventures.</li>
+<li><strong>Dubai Marina Yacht Tour</strong>: 2-hour cruise on a 50-foot yacht with drinks and snacks. Price: $95 (350 AED)(USD 95) per person. Departs from Dubai Marina Yacht Club at 5:00 PM daily.</li>
+<li><strong>Abu Dhabi Day Trip</strong>: 10-hour tour visiting Sheikh Zayed Grand Mosque, Louvre Abu Dhabi, and Ferrari World. Price: $109 (400 AED)(USD 109) including transport and guide. Pickup at 7:00 AM from Dubai.</li>
+<li><strong>Helicopter Tour</strong>: 22-minute flight over Palm Jumeirah, Burj Al Arab, and Burj Khalifa. Price: $327 (1 $55 (200 AED))(USD 327) per person. Departs from Dubai Helipad at 10:00 AM and 2:00 PM.</li>
 </ul>
-<p>For family-friendly options, the "Dubai Parks & Resorts Combo" (AED 350 / USD 95) includes Motiongate, Bollywood Parks, and Legoland. <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> via <a href="https://tp.media/click?shmarker=736226&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide" target="_blank" rel="nofollow sponsored" class="partner-link">GetYourGuide</a> or <a href="https://tp.media/click?shmarker=736226&promo_id=3775&source_type=link&type=click&campaign_id=107&trs=viator" target="_blank" rel="nofollow sponsored" class="partner-link">Viator</a> offers 10% discounts in 2026.</p>
+<p>For family-friendly options, the "Dubai Parks & Resorts Combo" ($95 (350 AED)/ USD 95) includes Motiongate, Bollywood Parks, and Legoland. <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> via <a href="https://tp.media/click?shmarker=736226&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide" target="_blank" rel="nofollow sponsored" class="partner-link">GetYourGuide</a> or <a href="https://tp.media/click?shmarker=736226&promo_id=3775&source_type=link&type=click&campaign_id=107&trs=viator" target="_blank" rel="nofollow sponsored" class="partner-link">Viator</a> offers 10% discounts in 2026.</p>
 
 <h2>Free Attractions in Dubai</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <p>Dubai offers several free experiences for budget-conscious travelers:</p>
 <ul>
 <li><strong>The Dubai Fountain</strong>: Located outside The Dubai Mall, this choreographed water show runs from 6:00 PM to 11:00 PM daily (every 30 minutes). Best viewed from the mall's waterfront promenade.</li>
 <li><strong>JBR Beach</strong>: A 1.5-km public beach with free entry, showers, and lifeguards. Open 24/7. Access via Dubai Tram.</li>
 <li><strong>Al Fahidi Historical Neighbourhood</strong>: Wander through wind-tower houses, art galleries, and the Sheikh Mohammed Centre for Cultural Understanding (free guided tours at 10:00 AM).</li>
 <li><strong>Dubai Marina Walk</strong>: A 3-km promenade with free views of yachts and skyscrapers. Best at sunset.</li>
-<li><strong>Ras Al Khor Wildlife Sanctuary</strong>: A 6.2-square-kilometer wetland home to flamingos and 500+ bird species. Free entry, open 9:00 AM to 4:00 PM (closed Fridays). Take a taxi from Deira (AED 30).</li>
-<li><strong>Gold Souk & Spice Souk</strong>: Explore the Deira markets with no entry fee. Haggle for spices and gold jewelry (prices start at AED 50).</li>
+<li><strong>Ras Al Khor Wildlife Sanctuary</strong>: A 6.2-square-kilometer wetland home to flamingos and 500+ bird species. Free entry, open 9:00 AM to 4:00 PM (closed Fridays). Take a taxi from Deira ($8 (30 AED)).</li>
+<li><strong>Gold Souk & Spice Souk</strong>: Explore the Deira markets with no entry fee. Haggle for spices and gold jewelry (prices start at $14 (50 AED)).</li>
 </ul>
 
 <h2>Practical Tips for Dubai 2026</h2>
 <h3>Transportation</h3>
-<p>Dubai’s public transport is efficient and affordable. The <strong>Dubai Metro</strong> (Red and Green lines) runs from 5:00 AM to midnight (weekends until 1:00 AM). A Nol Card (AED 25 / USD 7) covers metro, tram, and bus fares. A 7-day pass costs AED 100 (USD 27). Taxis start at AED 12 (USD 3.30) with AED 1.82 per kilometer. Ride-hailing apps like Careem and Uber are widely available (AED 30 minimum fare). For airport transfers, the Dubai Metro connects directly to Terminal 1 and 3.</p>
+<p>Dubai’s public transport is efficient and affordable. The <strong>Dubai Metro</strong> (Red and Green lines) runs from 5:00 AM to midnight (weekends until 1:00 AM). A Nol Card ($7 (25 AED)/ USD 7) covers metro, tram, and bus fares. A 7-day pass costs $27 (100 AED)(USD 27). Taxis start at $3 (12 AED)(USD 3.30) with $0 (2 AED)per kilometer. Ride-hailing apps like Careem and Uber are widely available ($8 (30 AED)minimum fare). For airport transfers, the Dubai Metro connects directly to Terminal 1 and 3.</p>
 
 <h3>Combo Tickets & Discounts</h3>
 <p>Save money with these passes in 2026:</p>
 <ul>
-<li><strong>Dubai Pass</strong>: Choose 3, 5, or 7 attractions (e.g., Burj Khalifa, Aquarium, Ski Dubai) for AED 499 (USD 136) for 3 attractions, AED 799 (USD 218) for 5. Valid for 30 days. Buy online at visitdubai.com.</li>
-<li><strong>iVenture Card</strong>: Unlimited access to 45+ attractions for 1 day (AED 599 / USD 163) or 3 days (AED 1,199 / USD 327). Includes skip-the-line.</li>
-<li><strong>Dubai Summer Surprises</strong>: From June to August, many attractions offer 50% off (e.g., IMG Worlds for AED 149). Check app for codes.</li>
+<li><strong>Dubai Pass</strong>: Choose 3, 5, or 7 attractions (e.g., Burj Khalifa, Aquarium, Ski Dubai) for $136 (499 AED)(USD 136) for 3 attractions, $218 (799 AED)(USD 218) for 5. Valid for 30 days. Buy online at visitdubai.com.</li>
+<li><strong>iVenture Card</strong>: Unlimited access to 45+ attractions for 1 day ($163 (599 AED)/ USD 163) or 3 days ($327 (1 $54 (199 AED))/ USD 327). Includes skip-the-line.</li>
+<li><strong>Dubai Summer Surprises</strong>: From June to August, many attractions offer 50% off (e.g., IMG Worlds for $41 (149 AED)). Check app for codes.</li>
 </ul>
 
 <h3>Other Tips</h3>
@@ -542,6 +564,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -570,6 +593,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -587,8 +611,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

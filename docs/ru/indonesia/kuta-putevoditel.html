@@ -7,8 +7,8 @@
     <meta name="description" content="Кута: полный путеводитель 2026 Кута — это не просто пляжный курорт на юго-западе Бали, а эпицентр индонезийской туристической индустрии. Расположенный в 10 к...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Кута: полный путеводитель 2026">
     <meta property="og:description" content="Кута: полный путеводитель 2026 Кута — это не просто пляжный курорт на юго-западе Бали, а эпицентр индонезийской туристической индустрии. Расположенный в 10 к...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/kuta-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/kuta.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Кута: полный путеводитель 2026</div>
@@ -362,62 +386,62 @@
 
 <p>Кута — это не просто пляжный курорт на юго-западе Бали, а эпицентр индонезийской туристической индустрии. Расположенный в 10 километрах от аэропорта Нгурах-Рай, этот район привлекает более 3 миллионов иностранных туристов ежегодно. Здесь царит уникальная атмосфера смешения западного гедонизма и традиционной балийской культуры. Узкие улочки с магазинами, сёрф-школами и барами соседствуют с храмами и рисовыми террасами, которые можно увидеть всего в 30 минутах езды.</p>
 
-<p>Почему стоит поехать в Куту в 2026 году? Во-первых, это логистический хаб: из аэропорта DPS до отеля вы доберётесь за 15–20 минут. Во-вторых, здесь лучшая инфраструктура для бюджетного отдыха на Бали: от хостелов за 150 000 IDR до пятизвёздочных курортов. В-третьих, Кута — это столица сёрфинга для новичков. Волны здесь пологие и длинные, идеальные для обучения. Средняя температура воды — 28°C круглый год, а песчаный пляж протянулся на 5 километров.</p>
+<p>Почему стоит поехать в Куту в 2026 году? Во-первых, это логистический хаб: из аэропорта DPS до отеля вы доберётесь за 15–20 минут. Во-вторых, здесь лучшая инфраструктура для бюджетного отдыха на Бали: от хостелов за₽900 (150 ₽0 (000 IDR)) до пятизвёздочных курортов. В-третьих, Кута — это столица сёрфинга для новичков. Волны здесь пологие и длинные, идеальные для обучения. Средняя температура воды — 28°C круглый год, а песчаный пляж протянулся на 5 километров.</p>
 
 <p>Однако Кута — это не только пляжи. В 2026 году город активно модернизируется: открыты новые пешеходные зоны на улице Jalan Legian, запущена система велопроката и улучшена очистка сточных вод. Местные жители, которых здесь проживает около 400 000 человек, приветливы и привыкли к туристам. Главное — не ограничиваться одной Кутой: за 20 минут на такси вы доедете до Семиньяка с его виллами, а за 40 минут — до храма Улувату на скале.</p>
 
 <h2>Как добраться</h2>
 <p>Единственный международный аэропорт Бали — <strong>Нгурах-Рай (DPS)</strong>, расположенный в 2,5 километрах от Куты. Прямые рейсы из России в 2026 году выполняют «Аэрофлот» (SU) и «Россия» (FV) из Москвы (Шереметьево) и Санкт-Петербурга (Пулково). Время в пути — 11–12 часов. Средняя цена билета туда-обратно в эконом-классе: 55 000–80 000 рублей в зависимости от сезона. В низкий сезон (февраль, март, октябрь) можно найти билеты за 42 000 рублей.</p>
-<p>Из аэропорта до Куты: такси (Grab или Gojek) — 50 000–80 000 IDR (около 300–500 рублей), время — 15 минут. Автобусы Trans Sarbagita ходят до терминала Куты за 10 000 IDR, но с пересадкой. Рекомендуем заказать трансфер через отель — это будет стоить 100 000–150 000 IDR.</p>
+<p>Из аэропорта до Куты: такси (Grab или Gojek) — 50 000–₽480 (80 ₽0 (000 IDR)) (около 300–500 рублей), время — 15 минут. Автобусы Trans Sarbagita ходят до терминала Куты за₽60 (10 ₽0 (000 IDR)), но с пересадкой. Рекомендуем заказать трансфер через отель — это будет стоить 100 000–₽900 (150 ₽0 (000 IDR)).</p>
 
 <h2>Где остановиться</h2>
 <p>Кута делится на три основные зоны: центральная часть (Jalan Legian, Jalan Pantai Kuta), северная (ближе к аэропорту) и южная (район Tuban). Выбор жилья огромен — от хостелов до люксовых курортов.</p>
 <ul>
-<li><strong>Бюджетно (до 300 000 IDR за ночь)</strong>: хостелы вроде «Kuta Beach Hostel» (от 120 000 IDR) или гостевые дома на Jalan Poppies. Номер с кондиционером и вентилятором — 200 000–250 000 IDR.</li>
-<li><strong>Средний сегмент (300 000–800 000 IDR)</strong>: отели 3–4 звезды, например, «The Kuta Beach Hotel» (от 450 000 IDR) или «Poppies Bali» (от 600 000 IDR). Включён завтрак, бассейн, Wi-Fi.</li>
-<li><strong>Премиум (от 800 000 IDR)</strong>: пятизвёздочные курорты вроде «Discovery Kartika Plaza» (от 1 200 000 IDR) или «The Stones Hotel» (от 1 500 000 IDR). Спа-центры, частный пляж, несколько ресторанов.</li>
+<li><strong>Бюджетно (до₽1 800 (300 ₽0 (000 IDR)) за ночь)</strong>: хостелы вроде «Kuta Beach Hostel» (от₽720 (120 ₽0 (000 IDR))) или гостевые дома на Jalan Poppies. Номер с кондиционером и вентилятором — 200 000–₽1 500 (250 ₽0 (000 IDR)).</li>
+<li><strong>Средний сегмент (300 000–₽4 800 (800 ₽0 (000 IDR)))</strong>: отели 3–4 звезды, например, «The Kuta Beach Hotel» (от₽2 700 (450 ₽0 (000 IDR))) или «Poppies Bali» (от₽3 600 (600 ₽0 (000 IDR))). Включён завтрак, бассейн, Wi-Fi.</li>
+<li><strong>Премиум (от₽4 800 (800 ₽0 (000 IDR)))</strong>: пятизвёздочные курорты вроде «Discovery Kartika Plaza» (от₽7 200 (1 ₽1 200 (200000 IDR))) или «The Stones Hotel» (от₽9 000 (1 ₽3 000 (500000 IDR))). Спа-центры, частный пляж, несколько ресторанов.</li>
 </ul>
-<p>Лучшие районы: для тусовок — центр Куты, для спокойного отдыха — Tuban (южная часть, ближе к аэропорту). В 2026 году популярны апартаменты с кухней на Airbnb (от 400 000 IDR за студию).</p>
+<p>Лучшие районы: для тусовок — центр Куты, для спокойного отдыха — Tuban (южная часть, ближе к аэропорту). В 2026 году популярны апартаменты с кухней на Airbnb (от₽2 400 (400 ₽0 (000 IDR)) за студию).</p>
 
 <h2>Топ-15 достопримечательностей</h2>
-<p>В Куте и окрестностях — десятки мест, которые стоит посетить. Вот 15 лучших с ценами и часами работы (цены указаны в индонезийских рупиях, IDR; 1 USD ≈ 15 500 IDR).</p>
+<p>В Куте и окрестностях — десятки мест, которые стоит посетить. Вот 15 лучших с ценами и часами работы (цены указаны в индонезийских рупиях, IDR; 1 USD ≈₽93 (15 ₽3 (500 IDR))).</p>
 <table>
 <tr><th>№</th><th>Название</th><th>Описание</th><th>Цена билета</th><th>Часы работы</th></tr>
 <tr><td>1</td><td>Пляж Кута (Kuta Beach)</td><td>Главный пляж длиной 5 км. Идеален для сёрфинга и закатов. Много зонтиков и шезлонгов.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
 <tr><td>2</td><td>Торговый центр Beachwalk</td><td>Крупнейший ТЦ на Бали (100 000 м²). 200 магазинов, кинотеатр, фуд-корт.</td><td>Бесплатно</td><td>10:00–22:00</td></tr>
 <tr><td>3</td><td>Мемориал жертвам теракта 2002 года</td><td>Монумент на месте взрыва в ночном клубе. Символ мира и памяти.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
-<tr><td>4</td><td>Водный парк Waterbom Bali</td><td>Один из лучших аквапарков Азии. 26 горок, 5 зон. Работает с 1993 года.</td><td>540 000 IDR (взрослый), 370 000 IDR (детский)</td><td>09:00–18:00</td></tr>
-<tr><td>5</td><td>Храм Улувату (Pura Luhur Uluwatu)</td><td>Древний храм на скале высотой 70 м. Танцы кечак на закате.</td><td>50 000 IDR (храм), 100 000 IDR (шоу)</td><td>07:00–19:00</td></tr>
+<tr><td>4</td><td>Водный парк Waterbom Bali</td><td>Один из лучших аквапарков Азии. 26 горок, 5 зон. Работает с 1993 года.</td><td>₽3 240 (540 ₽0 (000 IDR)) (взрослый)₽2 220 (370 ₽0 (000 IDR)) (детский)</td><td>09:00–18:00</td></tr>
+<tr><td>5</td><td>Храм Улувату (Pura Luhur Uluwatu)</td><td>Древний храм на скале высотой 70 м. Танцы кечак на закате.</td><td>₽300 (50 ₽0 (000 IDR)) (храм)₽600 (100 ₽0 (000 IDR)) (шоу)</td><td>07:00–19:00</td></tr>
 <tr><td>6</td><td>Пляж Джимбаран (Jimbaran Bay)</td><td>Рыбацкая деревня в 15 минутах от Куты. Ужин на песке с морепродуктами.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
-<tr><td>7</td><td>Музей Бали (Museum Bali)</td><td>Коллекция артефактов: от каменного века до XX века. Здание в стиле дворца.</td><td>50 000 IDR</td><td>08:00–16:00 (пн–пт), 08:00–14:00 (сб)</td></tr>
-<tr><td>8</td><td>Рисовые террасы Тегалаланг (Tegalalang)</td><td>Система ирригации субак (объект ЮНЕСКО). В 40 минутах от Куты.</td><td>Бесплатно (вход на террасы), парковка 5 000 IDR</td><td>Круглосуточно</td></tr>
-<tr><td>9</td><td>Храм Танах-Лот (Tanah Lot)</td><td>Храм на скале посреди океана. Фото на закате — обязательное.</td><td>60 000 IDR</td><td>07:00–19:00</td></tr>
-<tr><td>10</td><td>Парк птиц Бали (Bali Bird Park)</td><td>Более 1 000 птиц из 250 видов. Шоу с орлами и попугаями.</td><td>385 000 IDR (взрослый), 195 000 IDR (детский)</td><td>09:00–17:30</td></tr>
+<tr><td>7</td><td>Музей Бали (Museum Bali)</td><td>Коллекция артефактов: от каменного века до XX века. Здание в стиле дворца.</td><td>₽300 (50 ₽0 (000 IDR))</td><td>08:00–16:00 (пн–пт), 08:00–14:00 (сб)</td></tr>
+<tr><td>8</td><td>Рисовые террасы Тегалаланг (Tegalalang)</td><td>Система ирригации субак (объект ЮНЕСКО). В 40 минутах от Куты.</td><td>Бесплатно (вход на террасы), парковка₽30 (5 ₽0 (000 IDR))</td><td>Круглосуточно</td></tr>
+<tr><td>9</td><td>Храм Танах-Лот (Tanah Lot)</td><td>Храм на скале посреди океана. Фото на закате — обязательное.</td><td>₽360 (60 ₽0 (000 IDR))</td><td>07:00–19:00</td></tr>
+<tr><td>10</td><td>Парк птиц Бали (Bali Bird Park)</td><td>Более 1 000 птиц из 250 видов. Шоу с орлами и попугаями.</td><td>₽2 310 (385 ₽0 (000 IDR)) (взрослый)₽1 170 (195 ₽0 (000 IDR)) (детский)</td><td>09:00–17:30</td></tr>
 <tr><td>11</td><td>Пляж Семиньяк (Seminyak Beach)</td><td>Более спокойный, чем Кута. Люксовые рестораны и бары на берегу.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
 <tr><td>12</td><td>Улица Jalan Legian</td><td>Главная туристическая артерия. Магазины, бары, ночные клубы.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
-<tr><td>13</td><td>Сёрф-школа Rip Curl</td><td>Обучение сёрфингу для новичков. 2-часовой урок с инструктором.</td><td>от 350 000 IDR (урок)</td><td>08:00–17:00</td></tr>
-<tr><td>14</td><td>Ботанический сад Бали (Bali Botanic Garden)</td><td>157 гектаров тропических растений. В 1,5 часах езды от Куты.</td><td>20 000 IDR</td><td>08:00–18:00</td></tr>
-<tr><td>15</td><td>Ночной рынок Куты (Kuta Night Market)</td><td>Уличная еда: сатэ, наси горенг, соки. Цены от 10 000 IDR.</td><td>Бесплатно</td><td>18:00–23:00</td></tr>
+<tr><td>13</td><td>Сёрф-школа Rip Curl</td><td>Обучение сёрфингу для новичков. 2-часовой урок с инструктором.</td><td>от₽2 100 (350 ₽0 (000 IDR)) (урок)</td><td>08:00–17:00</td></tr>
+<tr><td>14</td><td>Ботанический сад Бали (Bali Botanic Garden)</td><td>157 гектаров тропических растений. В 1,5 часах езды от Куты.</td><td>₽120 (20 ₽0 (000 IDR))</td><td>08:00–18:00</td></tr>
+<tr><td>15</td><td>Ночной рынок Куты (Kuta Night Market)</td><td>Уличная еда: сатэ, наси горенг, соки. Цены от₽60 (10 ₽0 (000 IDR)).</td><td>Бесплатно</td><td>18:00–23:00</td></tr>
 </table>
 
 <h2>Транспорт в городе</h2>
 <p>Метро в Куте нет. Основные виды транспорта:</p>
 <ul>
-<li><strong>Такси</strong>: приложения Grab и Gojek — самые дешёвые. Поездка по Куте — 20 000–40 000 IDR. Официальные такси (Blue Bird) — от 50 000 IDR. Стоянки у отелей и ТЦ.</li>
-<li><strong>Мотоциклы</strong>: аренда скутера — 50 000–80 000 IDR в сутки. Нужны международные права (IDP). Бензин — 10 000 IDR за литр.</li>
-<li><strong>Автомобили</strong>: аренда авто — от 250 000 IDR в сутки. Парковка в центре — 5 000–10 000 IDR в час.</li>
-<li><strong>Автобусы</strong>: Trans Sarbagita (маршруты до Денпасара и Нуса-Дуа). Билет — 3 500–10 000 IDR. Ходят нерегулярно.</li>
-<li><strong>Велопрокат</strong>: 30 000–50 000 IDR в день. Велодорожки есть только на набережной.</li>
+<li><strong>Такси</strong>: приложения Grab и Gojek — самые дешёвые. Поездка по Куте — 20 000–₽240 (40 ₽0 (000 IDR)). Официальные такси (Blue Bird) — от₽300 (50 ₽0 (000 IDR)). Стоянки у отелей и ТЦ.</li>
+<li><strong>Мотоциклы</strong>: аренда скутера — 50 000–₽480 (80 ₽0 (000 IDR)) в сутки. Нужны международные права (IDP). Бензин —₽60 (10 ₽0 (000 IDR)) за литр.</li>
+<li><strong>Автомобили</strong>: аренда авто — от₽1 500 (250 ₽0 (000 IDR)) в сутки. Парковка в центре — 5 000–₽60 (10 ₽0 (000 IDR)) в час.</li>
+<li><strong>Автобусы</strong>: Trans Sarbagita (маршруты до Денпасара и Нуса-Дуа). Билет — 3 500–₽60 (10 ₽0 (000 IDR)). Ходят нерегулярно.</li>
+<li><strong>Велопрокат</strong>: 30 000–₽300 (50 ₽0 (000 IDR)) в день. Велодорожки есть только на набережной.</li>
 </ul>
 <p>Совет: для коротких поездок используйте Grab (оплата картой или наличными). Для длительных — арендуйте скутер. В час пик (17:00–19:00) пробки на Jalan Legian и Jalan Pantai Kuta.</p>
 
 <h2>Где поесть</h2>
 <p>Кута — рай для гурманов. Здесь представлена как местная, так и международная кухня. Средний чек:</p>
 <ul>
-<li><strong>Уличная еда</strong>: наси горенг (жареный рис) — 15 000–25 000 IDR, ми горенг (лапша) — 12 000–20 000 IDR. Попробуйте сатэ (шашлычки из курицы) на ночном рынке — 20 000 IDR за 10 штук.</li>
-<li><strong>Кафе и рестораны</strong>: обед в местном варунге (небольшая столовая) — 30 000–50 000 IDR. Ужин в ресторане среднего уровня — 100 000–200 000 IDR. Популярные места: «Made’s Warung» (традиционная кухня), «Bamboo Corner» (дешёво и вкусно).</li>
-<li><strong>Морепродукты</strong>: в Джимбаране — ужин на пляже с рыбой и креветками — от 200 000 IDR на человека. Ресторан «Menega Cafe» — 300 000–500 000 IDR.</li>
-<li><strong>Международная кухня</strong>: пицца, бургеры, суши. Средний чек — 150 000 IDR. Ресторан «Fat Gajah» (итальянская кухня) — от 100 000 IDR.</li>
+<li><strong>Уличная еда</strong>: наси горенг (жареный рис) — 15 000–₽150 (25 ₽0 (000 IDR)), ми горенг (лапша) — 12 000–₽120 (20 ₽0 (000 IDR)). Попробуйте сатэ (шашлычки из курицы) на ночном рынке —₽120 (20 ₽0 (000 IDR)) за 10 штук.</li>
+<li><strong>Кафе и рестораны</strong>: обед в местном варунге (небольшая столовая) — 30 000–₽300 (50 ₽0 (000 IDR)). Ужин в ресторане среднего уровня — 100 000–₽1 200 (200 ₽0 (000 IDR)). Популярные места: «Made’s Warung» (традиционная кухня), «Bamboo Corner» (дешёво и вкусно).</li>
+<li><strong>Морепродукты</strong>: в Джимбаране — ужин на пляже с рыбой и креветками — от₽1 200 (200 ₽0 (000 IDR)) на человека. Ресторан «Menega Cafe» — 300 000–₽3 000 (500 ₽0 (000 IDR)).</li>
+<li><strong>Международная кухня</strong>: пицца, бургеры, суши. Средний чек —₽900 (150 ₽0 (000 IDR)). Ресторан «Fat Gajah» (итальянская кухня) — от₽600 (100 ₽0 (000 IDR)).</li>
 </ul>
 <p>Местные блюда, которые стоит попробовать: бебек бетику (утка в специях), лавар (салат из овощей с кокосом), эс чампур (десерт из фруктов и льда).</p>
 
@@ -430,14 +454,14 @@
 <p>Лучшие месяцы: май (сухо, +28°C), сентябрь (сухо, +29°C), декабрь (влажно, но тепло, +30°C). Избегайте новогодних праздников (конец декабря — начало января) — цены максимальны, пляжи переполнены.</p>
 
 <h2>Виза и документы</h2>
-<p>Для граждан России в 2026 году действует <strong>виза по прибытии (Visa on Arrival, VoA)</strong>. Стоимость — 500 000 IDR (около 3 000 рублей). Оплата картой или наличными в аэропорту. Срок пребывания — 30 дней, продление возможно ещё на 30 дней (оплата 500 000 IDR + сборы). Необходимые документы:</p>
+<p>Для граждан России в 2026 году действует <strong>виза по прибытии (Visa on Arrival, VoA)</strong>. Стоимость —₽3 000 (500 ₽0 (000 IDR)) (около 3 000 рублей). Оплата картой или наличными в аэропорту. Срок пребывания — 30 дней, продление возможно ещё на 30 дней (оплата₽3 000 (500 ₽0 (000 IDR)) + сборы). Необходимые документы:</p>
 <ul>
 <li>Загранпаспорт (срок действия — не менее 6 месяцев с даты въезда).</li>
 <li>Обратный билет.</li>
 <li>Подтверждение брони отеля.</li>
 <li>Заполненная таможенная декларация (электронная или бумажная).</li>
 </ul>
-<p>Важно: безвизовый режим для россиян отменён с 2024 года. Въезд только по VoA. Также возможна электронная виза (e-VoA) за 519 000 IDR — подача за 2 недели до поездки на сайте imigrasi.go.id.</p>
+<p>Важно: безвизовый режим для россиян отменён с 2024 года. Въезд только по VoA. Также возможна электронная виза (e-VoA) за₽3 114 (519 ₽0 (000 IDR)) — подача за 2 недели до поездки на сайте imigrasi.go.id.</p>
 
 <h2>Бюджет поездки на неделю</h2>
 <p>Примерные расходы на одного человека на 7 дней в Куте (в индонезийских рупиях, IDR; курс: 1 USD<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
@@ -546,6 +570,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -574,6 +599,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -591,8 +617,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

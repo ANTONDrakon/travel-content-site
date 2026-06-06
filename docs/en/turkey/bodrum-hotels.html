@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Bodrum 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Bodrum 2026: Budget to Luxury Bodrum, the crown jewel of the Turkish Riviera, continues to evolve as a world-class destination for 2026. The...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/bodrum-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/bodrum-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/bodrum-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/bodrum-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Bodrum 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Bodrum 2026: Budget to Luxury Bodrum, the crown jewel of the Turkish Riviera, continues to evolve as a world-class destination for 2026. The...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/turkey/bodrum-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/bodrum-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://avatars.mds.yandex.net/i?id=01074de7a85624d1ae3164b00d594852_l-5319522-images-thumbs&amp;n=13');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/bodrum.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Bodrum 2026: Budget to Luxury</div>
@@ -360,55 +384,128 @@
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
 <p>Bodrum, the crown jewel of the Turkish Riviera, continues to evolve as a world-class destination for 2026. The city’s hotel infrastructure has seen significant investment over the past three years, with new boutique properties opening in the historic Yalıkavak Marina district and established luxury resorts completing multi-million-dollar renovations. The peninsula’s geography is defined by its stunning bays—Bitez, Gümbet, Torba, and Türkbükü—each offering a distinct atmosphere and price point. Neighborhoods like Bodrum City Center (Merkez) provide immediate access to the castle, nightlife, and bazaars, while quieter areas such as Gümüşlük and Akyarlar appeal to travelers seeking tranquility and sea-view villas.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_84322" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="peninsula’s geography is defined by its stunning bays—Bitez, Gümbet, Torba, and Türkbükü—each offering a distinct atmosphere and price point. Neighborhoods like Bodrum City Center - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="peninsula’s geography is defined by its stunning bays—Bitez, Gümbet, Torba, and Türkbükü—each offering a distinct atmosphere and price point. Neighborhoods like Bodrum City Center - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_84322 .hc-slide');var d=document.querySelectorAll('#hc_84322 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_84322 .hc-slide');var d=document.querySelectorAll('#hc_84322 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">peninsula’s geography is defined by its stunning bays—Bitez, Gümbet, Torba, and Türkbükü—each offering a distinct atmosphere and price point. Neighborhoods like Bodrum City Center &bull; 2 photos</p></div>
 
-<p>Accommodation prices in Bodrum for 2026 reflect a 12% increase over 2025 averages, driven by rising demand from European and Gulf tourists. Budget options under $50 (≈ ₽4 750) per night are increasingly rare but can still be found in guesthouses and hostels during shoulder season (May and October). Mid-range hotels ($50 (≈ ₽4 750)–150) dominate the market, particularly in Bitez and Gümbet, offering solid value with private pools or beach access. Luxury properties ($150 (≈ ₽14 250)+) in Yalıkavak and Türkbükü now command rates exceeding $400 (≈ ₽38 000) per night for premium suites, with many featuring private infinity pools, Michelin-starred chefs, and dedicated butler service. The following curated list covers ten exceptional properties across all budgets, verified for the 2026 season.</p>
+<p>Accommodation prices in Bodrum for 2026 reflect a 12% increase over 2025 averages, driven by rising demand from European and Gulf tourists. Budget options under $50per night are increasingly rare but can still be found in guesthouses and hostels during shoulder season (May and October). Mid-range hotels ($50–150) dominate the market, particularly in Bitez and Gümbet, offering solid value with private pools or beach access. Luxury properties ($150+) in Yalıkavak and Türkbükü now command rates exceeding $400per night for premium suites, with many featuring private infinity pools, Michelin-starred chefs, and dedicated butler service. The following curated list covers ten exceptional properties across all budgets, verified for the 2026 season.</p>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Bodrum Backpackers Hostel</h3>
-<p>Located just 300 meters from Bodrum Castle, this social hostel offers dormitory beds from $18 (≈ ₽1 710) and private double rooms from $45 (≈ ₽4 275) per night. The property features a rooftop terrace with panoramic views of the marina, a shared kitchen, and free Wi-Fi. Pros include its central location and weekly barbecue events that attract solo travelers. Cons: noise from nearby nightclubs can persist until 3 AM, and the shared bathrooms are basic. Average rating on <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>: 8.2/10.</p>
+<div id="hc_249969" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Bodrum Backpackers Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Bodrum Backpackers Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_249969 .hc-slide');var d=document.querySelectorAll('#hc_249969 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_249969 .hc-slide');var d=document.querySelectorAll('#hc_249969 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Bodrum Backpackers Hostel &bull; 2 photos</p></div>
+<p>Located just 300 meters from Bodrum Castle, this social hostel offers dormitory beds from $18and private double rooms from $45per night. The property features a rooftop terrace with panoramic views of the marina, a shared kitchen, and free Wi-Fi. Pros include its central location and weekly barbecue events that attract solo travelers. Cons: noise from nearby nightclubs can persist until 3 AM, and the shared bathrooms are basic. Average rating on <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>: 8.2/10.</p>
 
 <h3>2. Pansiyon Deniz</h3>
-<p>A family-run guesthouse in Gümbet, 15 minutes from the city center by dolmuş. Private double rooms with air conditioning and en-suite bathrooms start at $38 (≈ ₽3 610) per night. Breakfast is included and features fresh simit, olives, and homemade jam. Pros: authentic Turkish hospitality, free parking, and a quiet garden. Cons: no pool and limited English spoken by staff. Recommended for budget-conscious couples.</p>
+<div id="hc_166491" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pansiyon Deniz - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Pansiyon Deniz - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Pansiyon Deniz - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_166491 .hc-slide');var d=document.querySelectorAll('#hc_166491 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_166491 .hc-slide');var d=document.querySelectorAll('#hc_166491 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_166491 .hc-slide');var d=document.querySelectorAll('#hc_166491 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pansiyon Deniz &bull; 3 photos</p></div>
+<p>A family-run guesthouse in Gümbet, 15 minutes from the city center by dolmuş. Private double rooms with air conditioning and en-suite bathrooms start at $38per night. Breakfast is included and features fresh simit, olives, and homemade jam. Pros: authentic Turkish hospitality, free parking, and a quiet garden. Cons: no pool and limited English spoken by staff. Recommended for budget-conscious couples.</p>
 
 <h3>3. Oasis Pension Bitez</h3>
-<p>This small pension in the Bitez area offers studios with kitchenettes from $42 (≈ ₽3 990) per night. The property is a 5-minute walk from Bitez Beach and close to local restaurants. Pros: excellent value for self-catering guests, clean rooms, and friendly owners who provide beach towels. Cons: rooms are compact, and the Wi-Fi signal is weak in ground-floor units. Ideal for travelers on a strict budget who prioritize location.</p>
+<div id="hc_960168" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Oasis Pension Bitez - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Oasis Pension Bitez - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Oasis Pension Bitez - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_960168 .hc-slide');var d=document.querySelectorAll('#hc_960168 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_960168 .hc-slide');var d=document.querySelectorAll('#hc_960168 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_960168 .hc-slide');var d=document.querySelectorAll('#hc_960168 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Oasis Pension Bitez &bull; 3 photos</p></div>
+<p>This small pension in the Bitez area offers studios with kitchenettes from $42per night. The property is a 5-minute walk from Bitez Beach and close to local restaurants. Pros: excellent value for self-catering guests, clean rooms, and friendly owners who provide beach towels. Cons: rooms are compact, and the Wi-Fi signal is weak in ground-floor units. Ideal for travelers on a strict budget who prioritize location.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)–150/night)</h2>
+<h2>Mid-Range Hotels ($50–150/night)</h2>
 
 <h3>1. Kaya Palazzo Resort & Spa (Bitez)</h3>
-<p>A 4-star resort with a private beach club, two outdoor pools, and a full-service spa. Standard double rooms in 2026 start at $98 (≈ ₽9 310) per night during low season and $145 (≈ ₽13 775) in August. Highlights include the all-inclusive meal option ($30 (≈ ₽2 850) extra per person), a kids’ club, and nightly live music. The property is set on 4 acres of landscaped gardens. Average rating: 8.7/10.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_422184" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Kaya Palazzo Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Kaya Palazzo Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Kaya Palazzo Resort & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_422184 .hc-slide');var d=document.querySelectorAll('#hc_422184 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_422184 .hc-slide');var d=document.querySelectorAll('#hc_422184 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_422184 .hc-slide');var d=document.querySelectorAll('#hc_422184 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kaya Palazzo Resort & Spa &bull; 3 photos</p></div>
+<p>A 4-star resort with a private beach club, two outdoor pools, and a full-service spa. Standard double rooms in 2026 start at $98per night during low season and $145in August. Highlights include the all-inclusive meal option ($30extra per person), a kids’ club, and nightly live music. The property is set on 4 acres of landscaped gardens. Average rating: 8.7/10.</p>
 
 <h3>2. Marmara Bodrum (Bodrum City)</h3>
-<p>Perched on a hilltop overlooking the marina, this 5-star hotel offers sea-view rooms from $89 (≈ ₽8 455) to $135 (≈ ₽12 825) per night. The highlight is the infinity pool that appears to merge with the Aegean Sea. Guests enjoy a complimentary shuttle to the hotel’s private beach club in Türkbükü. The on-site restaurant “Mavi” serves meze and grilled fish. Note: the walk to the city center is steep (10 minutes downhill).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_637015" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Marmara Bodrum - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Marmara Bodrum - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Marmara Bodrum - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_637015 .hc-slide');var d=document.querySelectorAll('#hc_637015 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_637015 .hc-slide');var d=document.querySelectorAll('#hc_637015 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_637015 .hc-slide');var d=document.querySelectorAll('#hc_637015 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Marmara Bodrum &bull; 3 photos</p></div>
+<p>Perched on a hilltop overlooking the marina, this 5-star hotel offers sea-view rooms from $89to $135per night. The highlight is the infinity pool that appears to merge with the Aegean Sea. Guests enjoy a complimentary shuttle to the hotel’s private beach club in Türkbükü. The on-site restaurant “Mavi” serves meze and grilled fish. Note: the walk to the city center is steep (10 minutes downhill).</p>
 
 <h3>3. Miamia Beach Hotel (Gümbet)</h3>
-<p>A modern boutique hotel with 42 rooms, located directly on Gümbet Beach. Doubles start at $75 (≈ ₽7 125) per night in May and $120 (≈ ₽11 400) in July. Highlights include a rooftop bar with 360-degree views, free paddleboard rentals, and a breakfast buffet with Turkish and continental options. The hotel is a 5-minute walk from the Halikarnas nightclub area. Average rating: 8.5/10.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_107036" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Miamia Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Miamia Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Miamia Beach Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_107036 .hc-slide');var d=document.querySelectorAll('#hc_107036 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_107036 .hc-slide');var d=document.querySelectorAll('#hc_107036 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_107036 .hc-slide');var d=document.querySelectorAll('#hc_107036 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Miamia Beach Hotel &bull; 3 photos</p></div>
+<p>A modern boutique hotel with 42 rooms, located directly on Gümbet Beach. Doubles start at $75per night in May and $120in July. Highlights include a rooftop bar with 360-degree views, free paddleboard rentals, and a breakfast buffet with Turkish and continental options. The hotel is a 5-minute walk from the Halikarnas nightclub area. Average rating: 8.5/10.</p>
+<div id="hc_590163" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="likarnas nightclub area. Average rating: 8.5/10. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="likarnas nightclub area. Average rating: 8.5/10. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_590163 .hc-slide');var d=document.querySelectorAll('#hc_590163 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_590163 .hc-slide');var d=document.querySelectorAll('#hc_590163 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">likarnas nightclub area. Average rating: 8.5/10. &bull; 2 photos</p></div>
 
 <h3>4. Caresse, a Luxury Collection Resort & Spa (Türkbükü)</h3>
-<p>Despite the “Luxury” name, this resort offers entry-level rooms from $110 (≈ ₽10 450) per night in low season. Highlights include a private stretch of sand, three swimming pools, and a spa with a hammam and Turkish bath. The property is set on a hillside with terraced gardens, providing privacy. The village of Türkbükü with its seafood restaurants is a 15-minute walk along the coast.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Despite the “Luxury” name, this resort offers entry-level rooms from $110per night in low season. Highlights include a private stretch of sand, three swimming pools, and a spa with a hammam and Turkish bath. The property is set on a hillside with terraced gardens, providing privacy. The village of Türkbükü with its seafood restaurants is a 15-minute walk along the coast.</p>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Mandarin Oriental, Bodrum (Yalıkavak)</h3>
-<p>This 5-star resort, opened in 2022, features 109 rooms and suites starting at $450 (≈ ₽42 750) per night in high season. Features include a 1,500-square-meter spa, four restaurants (including “Beyrut” for Lebanese cuisine), and a private beach club with cabanas. The infinity pool overlooks Yalıkavak Bay. Each suite has a private terrace with a plunge pool. The resort provides complimentary shuttle service to the nearby Yalıkavak Marina for shopping and dining.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_814539" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Mandarin Oriental, Bodrum - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Mandarin Oriental, Bodrum - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_814539 .hc-slide');var d=document.querySelectorAll('#hc_814539 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_814539 .hc-slide');var d=document.querySelectorAll('#hc_814539 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Mandarin Oriental, Bodrum &bull; 2 photos</p></div>
+<p>This 5-star resort, opened in 2022, features 109 rooms and suites starting at $450per night in high season. Features include a 1,500-square-meter spa, four restaurants (including “Beyrut” for Lebanese cuisine), and a private beach club with cabanas. The infinity pool overlooks Yalıkavak Bay. Each suite has a private terrace with a plunge pool. The resort provides complimentary shuttle service to the nearby Yalıkavak Marina for shopping and dining.</p>
 
 <h3>2. Six Senses Kocataş Mansions (Bodrum City)</h3>
-<p>A historic property converted from 19th-century stone mansions, offering 26 suites from $380 (≈ ₽36 100) per night. Features include an organic garden, a wine cellar with over 200 labels, and a spa focusing on holistic treatments. Each suite has a private plunge pool and antique furnishings. The property is located on a hillside in the Kocataş neighborhood, a 10-minute drive from the city center. The hotel’s restaurant “Olive Tree” serves farm-to-table Aegean cuisine.</p>
+<div id="hc_949324" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Six Senses Kocataş Mansions - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Six Senses Kocataş Mansions - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_949324 .hc-slide');var d=document.querySelectorAll('#hc_949324 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_949324 .hc-slide');var d=document.querySelectorAll('#hc_949324 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Six Senses Kocataş Mansions &bull; 2 photos</p></div>
+<p>A historic property converted from 19th-century stone mansions, offering 26 suites from $380per night. Features include an organic garden, a wine cellar with over 200 labels, and a spa focusing on holistic treatments. Each suite has a private plunge pool and antique furnishings. The property is located on a hillside in the Kocataş neighborhood, a 10-minute drive from the city center. The hotel’s restaurant “Olive Tree” serves farm-to-table Aegean cuisine.</p>
 
 <h3>3. Maçakızı Yalıkavak (Yalıkavak)</h3>
-<p>A 34-suite boutique resort with rates starting at $280 (≈ ₽26 600) per night. Features include a 30-meter infinity pool, a private dock with water sports, and a wine bar that hosts live jazz on weekends. The property is built into a hillside with Mediterranean gardens. Each suite has a separate living area and a balcony with sea views. The resort’s highlight is the “Alaçatı” restaurant, which serves seafood and meze with a focus on local ingredients. Average rating: 9.3/10.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>A 34-suite boutique resort with rates starting at $280per night. Features include a 30-meter infinity pool, a private dock with water sports, and a wine bar that hosts live jazz on weekends. The property is built into a hillside with Mediterranean gardens. Each suite has a separate living area and a balcony with sea views. The resort’s highlight is the “Alaçatı” restaurant, which serves seafood and meze with a focus on local ingredients. Average rating: 9.3/10.</p>
 
 <h2>How to Choose the Right Area</h2>
 
-<p>For beach lovers, the best areas are Bitez (calm, shallow waters ideal for families) and Türkbükü (upscale beach clubs with sun loungers and waiter service). Bitez has a long, sandy beach with public access, while Türkbükü’s beaches are mostly private to hotels, but day passes are available for $20 (≈ ₽1 900)–40. For sightseeing, Bodrum City Center is unmatched—the Castle of St. Peter (entrance $10 (≈ ₽950)), the Bodrum Museum of Underwater Archaeology, and the Mausoleum at Halicarnassus ruins are all walkable. The marina area offers boat tours to the nearby Greek island of Kos (departures daily, $50 (≈ ₽4 750) round trip).</p>
+<p>For beach lovers, the best areas are Bitez (calm, shallow waters ideal for families) and Türkbükü (upscale beach clubs with sun loungers and waiter service). Bitez has a long, sandy beach with public access, while Türkbükü’s beaches are mostly private to hotels, but day passes are available for $20–40. For sightseeing, Bodrum City Center is unmatched—the Castle of St. Peter (entrance $10), the Bodrum Museum of Underwater Archaeology, and the Mausoleum at Halicarnassus ruins are all walkable. The marina area offers boat tours to the nearby Greek island of Kos (departures daily, $50round trip).</p>
 
 <p>For nightlife, Gümbet is the epicenter, with the legendary Halikarnas nightclub (capacity 5,000 people) and dozens of bars along the seafront. The party scene runs from 11 PM to dawn, with DJs and live music. Alternatively, Yalıkavak offers a more sophisticated evening experience with high-end cocktail bars like “The Gate” and “Billionaire” (dress code enforced). If you prefer a quiet, romantic setting, Gümüşlük is ideal—a fishing village with sunset seafood restaurants and no loud music. The ancient city of Myndos ruins are also nearby, free to explore.</p>
 
@@ -416,8 +513,7 @@
 
 <p>To save money on Bodrum hotels in 2026, book directly through the hotel’s website rather than third-party sites like <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com or Expedia. Many properties offer a 10–15% discount for direct bookings, plus perks like free breakfast or late checkout. The best time to book is 60–90 days in advance for peak season (July–August), as prices rise by 30% within two weeks of arrival. For shoulder season (May, June, September, October), last-minute deals on apps like HotelTonight can yield savings of 40% on unsold rooms.</p>
 
-<p>For the best services, use the following platforms: Booking.com for verified reviews and free cancellation (most properties offer 24-hour cancellation), Expedia for package deals combining flights and hotels (save up to 20%), and Airbnb for private villas with kitchens in Gümüşlük or Yalıkavak (average $80 (≈ ₽7 600)–150 per night for a one-bedroom). Always check for hidden fees: some luxury hotels charge a mandatory resort fee of $15 (≈ ₽1 425)–25 per day for beach access and Wi-Fi. Finally, consider purchasing travel insurance through World Nomads or Allianz, as cancellations due to weather or illness are common in summer. For 2026, the Bodrum airport (BJV) has new direct flights from London, Berlin, and Dubai, reducing transfer times to 35 minutes by taxi (fixed price $40 (≈ ₽3 800)).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>For the best services, use the following platforms: Booking.com for verified reviews and free cancellation (most properties offer 24-hour cancellation), Expedia for package deals combining flights and hotels (save up to 20%), and Airbnb for private villas with kitchens in Gümüşlük or Yalıkavak (average $80–150 per night for a one-bedroom). Always check for hidden fees: some luxury hotels charge a mandatory resort fee of $15–25 per day for beach access and Wi-Fi. Finally, consider purchasing travel insurance through World Nomads or Allianz, as cancellations due to weather or illness are common in summer. For 2026, the Bodrum airport (BJV) has new direct flights from London, Berlin, and Dubai, reducing transfer times to 35 minutes by taxi (fixed price $40).</p>
 
 <p>In summary, Bodrum’s hotel landscape for 2026 offers something for every traveler—from backpacker hostels near the castle to ultra-luxury resorts in Yalıkavak. By choosing the right neighborhood for your interests and booking strategically, you can enjoy this stunning Turkish destination without overspending. Whether you’re sipping cocktails at a beach club in Türkbükü or exploring ancient ruins in the city center, Bodrum promises an unforgettable Mediterranean escape.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -510,6 +606,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -538,6 +635,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -555,8 +653,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

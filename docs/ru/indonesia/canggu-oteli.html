@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Чангу 2026: от бюджета до люкса Чанг — один из самых динамично развивающихся туристических районов Таиланда, расположенный на юго-восточном п...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Чангу 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Чангу 2026: от бюджета до люкса Чанг — один из самых динамично развивающихся туристических районов Таиланда, расположенный на юго-восточном п...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/canggu-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/canggu.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Чангу 2026: от бюджета до люкса</div>
@@ -361,56 +385,130 @@
 
 <p>Чанг — один из самых динамично развивающихся туристических районов Таиланда, расположенный на юго-восточном побережье страны. В 2026 году гостиничная инфраструктура здесь достигла нового уровня: от ультрабюджетных гестхаусов до пятизвездочных курортов с частными пляжами. Основные кластеры отелей сосредоточены вдоль пляжей Чанг Ной, Чанг Яй и в районе маяка Лаем Сонг, где за последние три года открылось более 40 новых объектов размещения. Средняя загрузка отелей в высокий сезон (ноябрь-февраль) составляет 85%, а цены на проживание выросли на 12% по сравнению с 2024 годом.</p>
 
-<p>Ценовой разброс впечатляет: хостелы и гестхаусы стартуют от ₽1 140 (≈ $12) за ночь, а люксовые виллы могут достигать ₽76 000 (≈ $800) за ночь. При этом важно понимать, что Чанг — это не Паттайя и не Пхукет: здесь нет перегруженных туристических зон, но есть отличная транспортная доступность (аэропорт Утапао в 40 минутах езды) и разнообразие вариантов для любого бюджета. В этой статье я собрал 10 лучших отелей 2026 года, разделив их по ценовым категориям, с конкретными цифрами и фактами, которые помогут вам сделать осознанный выбор.</p>
+<p>Ценовой разброс впечатляет: хостелы и гестхаусы стартуют от ₽1 140 ($12)за ночь, а люксовые виллы могут достигать ₽76 000 ($800)за ночь. При этом важно понимать, что Чанг — это не Паттайя и не Пхукет: здесь нет перегруженных туристических зон, но есть отличная транспортная доступность (аэропорт Утапао в 40 минутах езды) и разнообразие вариантов для любого бюджета. В этой статье я собрал 10 лучших отелей 2026 года, разделив их по ценовым категориям, с конкретными цифрами и фактами, которые помогут вам сделать осознанный выбор.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>Baan Suan Resort Chang</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ch" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположенный в 200 метрах от пляжа Чанг Ной, этот семейный отель предлагает 24 номера с кондиционером и бесплатным Wi-Fi. Цена в 2026 году — от ₽2 660 (≈ $28) за стандартный номер. Плюсы: круглосуточная стойка регистрации, бесплатная парковка и близость к рынку морепродуктов (5 минут пешком). Минусы: нет бассейна, завтрак не включен (доплата ₽475 (≈ $5)), и в сезон дождей (май-октябрь) возможны перебои с горячей водой. Средний рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 8.2.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_381834" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Baan Suan Resort Chang - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Baan Suan Resort Chang - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_381834 .hc-slide');var d=document.querySelectorAll('#hc_381834 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_381834 .hc-slide');var d=document.querySelectorAll('#hc_381834 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Baan Suan Resort Chang &bull; 2 photos</p></div>
+<p>Расположенный в 200 метрах от пляжа Чанг Ной, этот семейный отель предлагает 24 номера с кондиционером и бесплатным Wi-Fi. Цена в 2026 году — от ₽2 660 ($28)за стандартный номер. Плюсы: круглосуточная стойка регистрации, бесплатная парковка и близость к рынку морепродуктов (5 минут пешком). Минусы: нет бассейна, завтрак не включен (доплата ₽475 ($5)), и в сезон дождей (май-октябрь) возможны перебои с горячей водой. Средний рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 8.2.</p>
 
 <h3>Chang Beach Hostel & Bungalows</h3>
-<p>Гибрид хостела и бунгало в 50 метрах от пляжа Чанг Яй. Цена: от ₽1 425 (≈ $15) за место в дормитории (8 мест) и от ₽3 325 (≈ $35) за отдельное бунгало с вентилятором. Плюсы: отличное расположение, собственный бар с коктейлями от ₽285 (≈ $3 ) и бесплатный прокат масок для снорклинга. Минусы: шумно по вечерам (бар работает до 23:00), нет кондиционера в бунгало, и Wi-Fi работает только в зоне ресепшн. Рейтинг — 7.8.</p>
+<div id="hc_870554" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Chang Beach Hostel & Bungalows - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Chang Beach Hostel & Bungalows - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_870554 .hc-slide');var d=document.querySelectorAll('#hc_870554 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_870554 .hc-slide');var d=document.querySelectorAll('#hc_870554 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Chang Beach Hostel & Bungalows &bull; 2 photos</p></div>
+<p>Гибрид хостела и бунгало в 50 метрах от пляжа Чанг Яй. Цена: от ₽1 425 ($15)за место в дормитории (8 мест) и от ₽3 325 ($35)за отдельное бунгало с вентилятором. Плюсы: отличное расположение, собственный бар с коктейлями от ₽285 ($3)и бесплатный прокат масок для снорклинга. Минусы: шумно по вечерам (бар работает до 23:00), нет кондиционера в бунгало, и Wi-Fi работает только в зоне ресепшн. Рейтинг — 7.8.</p>
 
 <h3>Sunrise Garden Resort</h3>
-<p>Уютный отель на 18 номеров в тихом районе Чанг Ной, в 10 минутах от пляжа. Цена: от ₽3 990 (≈ $42) за номер с кондиционером и мини-кухней. Плюсы: большая зеленая территория с садом, бесплатный велосипед для гостей, и включенный завтрак (континентальный). Минусы: нет пляжного доступа, бассейн маленький (4х6 метров), и до магазинов нужно идти 15 минут. Рейтинг — 8.5.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_166707" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sunrise Garden Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Sunrise Garden Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_166707 .hc-slide');var d=document.querySelectorAll('#hc_166707 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_166707 .hc-slide');var d=document.querySelectorAll('#hc_166707 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunrise Garden Resort &bull; 2 photos</p></div>
+<p>Уютный отель на 18 номеров в тихом районе Чанг Ной, в 10 минутах от пляжа. Цена: от ₽3 990 ($42)за номер с кондиционером и мини-кухней. Плюсы: большая зеленая территория с садом, бесплатный велосипед для гостей, и включенный завтрак (континентальный). Минусы: нет пляжного доступа, бассейн маленький (4х6 метров), и до магазинов нужно идти 15 минут. Рейтинг — 8.5.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>Chang Cliff Resort</h3>
-<p>Отель на скале с панорамным видом на залив. 56 номеров, все с балконами и видом на море. Цена: от ₽6 460 (≈ $68) за стандартный номер и от ₽9 025 (≈ $95) за номер с джакузи. Фишки: бесконечный бассейн (25 метров), ресторан тайской кухни, и бесплатный шаттл до пляжа (каждые 30 минут). Рейтинг — 8.9.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_464298" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Chang Cliff Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Chang Cliff Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Chang Cliff Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_464298 .hc-slide');var d=document.querySelectorAll('#hc_464298 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_464298 .hc-slide');var d=document.querySelectorAll('#hc_464298 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_464298 .hc-slide');var d=document.querySelectorAll('#hc_464298 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Chang Cliff Resort &bull; 3 photos</p></div>
+<p>Отель на скале с панорамным видом на залив. 56 номеров, все с балконами и видом на море. Цена: от ₽6 460 ($68)за стандартный номер и от ₽9 025 ($95)за номер с джакузи. Фишки: бесконечный бассейн (25 метров), ресторан тайской кухни, и бесплатный шаттл до пляжа (каждые 30 минут). Рейтинг — 8.9.</p>
 
 <h3>Blue Ocean Beach Hotel</h3>
-<p>Первый ряд на пляже Чанг Яй, 40 номеров. Цена: от ₽7 790 (≈ $82) за номер с видом на сад и от ₽10 450 (≈ $110) за номер с видом на море. Фишки: прямой выход на пляж, снэк-бар с коктейлями, и бесплатный снорклинг-снаряжение. Особенность — отель работает только для взрослых (16+), что гарантирует тишину. Рейтинг — 9.1.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_362112" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Blue Ocean Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Blue Ocean Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_362112 .hc-slide');var d=document.querySelectorAll('#hc_362112 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_362112 .hc-slide');var d=document.querySelectorAll('#hc_362112 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Blue Ocean Beach Hotel &bull; 2 photos</p></div>
+<p>Первый ряд на пляже Чанг Яй, 40 номеров. Цена: от ₽7 790 ($82)за номер с видом на сад и от ₽10 450 ($110)за номер с видом на море. Фишки: прямой выход на пляж, снэк-бар с коктейлями, и бесплатный снорклинг-снаряжение. Особенность — отель работает только для взрослых (16+), что гарантирует тишину. Рейтинг — 9.1.</p>
 
 <h3>Sea Breeze Villa</h3>
-<p>Комплекс из 12 вилл с частными бассейнами в 3 км от пляжа. Цена: от ₽11 400 (≈ $120) за виллу на двоих. Фишки: каждая вилла имеет собственную кухню, частный сад и парковку. Идеально для семей или компаний. Минус — нет ресторана на территории, но доставка еды доступна через Grab. Рейтинг — 8.7.</p>
+<div id="hc_525562" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Sea Breeze Villa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sea Breeze Villa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_525562 .hc-slide');var d=document.querySelectorAll('#hc_525562 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_525562 .hc-slide');var d=document.querySelectorAll('#hc_525562 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sea Breeze Villa &bull; 2 photos</p></div>
+<p>Комплекс из 12 вилл с частными бассейнами в 3 км от пляжа. Цена: от ₽11 400 ($120)за виллу на двоих. Фишки: каждая вилла имеет собственную кухню, частный сад и парковку. Идеально для семей или компаний. Минус — нет ресторана на территории, но доставка еды доступна через Grab. Рейтинг — 8.7.</p>
 
 <h3>Chang Bay Resort & Spa</h3>
-<p>Крупный отель на 80 номеров с собственным спа-центром. Цена: от ₽9 025 (≈ $95) за стандартный номер и от ₽12 825 (≈ $135) за номер с прямым доступом к бассейну. Фишки: три бассейна, фитнес-зал, и спа-процедуры (тайский массаж от ₽2 850 (≈ $30)). Ресторан предлагает шведский стол за ₽1 425 (≈ $15) на завтрак. Рейтинг — 9.0.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_36953" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Chang Bay Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Chang Bay Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Chang Bay Resort & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_36953 .hc-slide');var d=document.querySelectorAll('#hc_36953 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_36953 .hc-slide');var d=document.querySelectorAll('#hc_36953 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_36953 .hc-slide');var d=document.querySelectorAll('#hc_36953 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Chang Bay Resort & Spa &bull; 3 photos</p></div>
+<p>Крупный отель на 80 номеров с собственным спа-центром. Цена: от ₽9 025 ($95)за стандартный номер и от ₽12 825 ($135)за номер с прямым доступом к бассейну. Фишки: три бассейна, фитнес-зал, и спа-процедуры (тайский массаж от ₽2 850 ($30)). Ресторан предлагает шведский стол за ₽1 425 ($15)на завтрак. Рейтинг — 9.0.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>Chang Luxury Beach Resort</h3>
-<p>Пятизвездочный курорт на 120 номеров на пляже Чанг Ной. Цена: от ₽20 900 (≈ $220) за делюкс-номер и от ₽42 750 (≈ $450) за президентский люкс. Особенности: частный пляж с шезлонгами, три ресторана (итальянский, тайский, международный), спа-центр на 500 кв. метров, и детский клуб. Завтрак включен. Рейтинг — 9.4.</p>
+<div id="hc_705990" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Chang Luxury Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Chang Luxury Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Chang Luxury Beach Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_705990 .hc-slide');var d=document.querySelectorAll('#hc_705990 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_705990 .hc-slide');var d=document.querySelectorAll('#hc_705990 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_705990 .hc-slide');var d=document.querySelectorAll('#hc_705990 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Chang Luxury Beach Resort &bull; 3 photos</p></div>
+<p>Пятизвездочный курорт на 120 номеров на пляже Чанг Ной. Цена: от ₽20 900 ($220)за делюкс-номер и от ₽42 750 ($450)за президентский люкс. Особенности: частный пляж с шезлонгами, три ресторана (итальянский, тайский, международный), спа-центр на 500 кв. метров, и детский клуб. Завтрак включен. Рейтинг — 9.4.</p>
 
 <h3>Villa Ocean Private Estate</h3>
-<p>Эксклюзивный комплекс из 5 вилл на холме с видом на океан. Цена: от ₽33 250 (≈ $350) за ночь за виллу с 3 спальнями. Особенности: частный бассейн, личный повар (доплата ₽4 750 (≈ $50) за ужин), и услуги консьержа. Минимальный срок бронирования — 3 ночи. Рейтинг — 9.6.</p>
+<div id="hc_687532" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Villa Ocean Private Estate - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Villa Ocean Private Estate - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Villa Ocean Private Estate - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_687532 .hc-slide');var d=document.querySelectorAll('#hc_687532 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_687532 .hc-slide');var d=document.querySelectorAll('#hc_687532 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_687532 .hc-slide');var d=document.querySelectorAll('#hc_687532 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Villa Ocean Private Estate &bull; 3 photos</p></div>
+<p>Эксклюзивный комплекс из 5 вилл на холме с видом на океан. Цена: от ₽33 250 ($350)за ночь за виллу с 3 спальнями. Особенности: частный бассейн, личный повар (доплата ₽4 750 ($50)за ужин), и услуги консьержа. Минимальный срок бронирования — 3 ночи. Рейтинг — 9.6.</p>
 
 <h3>The Ritz-Carlton, Chang</h3>
-<p>Новый отель, открывшийся в декабре 2025 года. 150 номеров, все с видом на море. Цена: от ₽26 600 (≈ $280) за номер и от ₽57 000 (≈ $600) за сьют. Особенности: спа-центр мирового класса, четыре бассейна, ресторан с мишленовским шеф-поваром, и частный пляж. Включен завтрак и доступ в лаунж. Рейтинг — 9.7.</p>
+<div id="hc_354341" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton, Chang - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton, Chang - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton, Chang - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_354341 .hc-slide');var d=document.querySelectorAll('#hc_354341 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_354341 .hc-slide');var d=document.querySelectorAll('#hc_354341 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_354341 .hc-slide');var d=document.querySelectorAll('#hc_354341 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton, Chang &bull; 3 photos</p></div>
+<p>Новый отель, открывшийся в декабре 2025 года. 150 номеров, все с видом на море. Цена: от ₽26 600 ($280)за номер и от ₽57 000 ($600)за сьют. Особенности: спа-центр мирового класса, четыре бассейна, ресторан с мишленовским шеф-поваром, и частный пляж. Включен завтрак и доступ в лаунж. Рейтинг — 9.7.</p>
 
 <h2>Как выбрать район</h2>
 <p>Выбор района в Чангу зависит от целей вашей поездки. Вот основные рекомендации на основе данных 2026 года:</p>
 <ul>
 <li><strong>Для пляжного отдыха:</strong> выбирайте пляж Чанг Ной (спокойное море, мелкий песок) или Чанг Яй (более уединенный, но с хорошей инфраструктурой). Отели здесь дороже в среднем на 15-20%, но доступ к пляжу оправдывает затраты.</li>
 <li><strong>Для экскурсий:</strong> район маяка Лаем Сонг — отсюда удобно добираться до водопадов (15 минут на такси), храмов (20 минут) и национального парка (30 минут). Отели здесь дешевле на 10-15%, но пляжи дальше.</li>
-<li><strong>Для ночной жизни:</strong> центральная часть Чанг Ной с множеством баров, ресторанов и клубов. Бюджетные отели в этом районе стартуют от ₽2 850 (≈ $30 ) но шумно до 2 часов ночи.</li>
+<li><strong>Для ночной жизни:</strong> центральная часть Чанг Ной с множеством баров, ресторанов и клубов. Бюджетные отели в этом районе стартуют от ₽2 850 ($30)но шумно до 2 часов ночи.</li>
 </ul>
 
 <h2>Советы по бронированию</h2>
@@ -511,6 +609,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -539,6 +638,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -556,8 +656,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

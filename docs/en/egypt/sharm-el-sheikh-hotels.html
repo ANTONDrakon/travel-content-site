@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Sharm El Sheikh 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Sharm El Sheikh 2026: Budget to Luxury Sharm El Sheikh, the crown jewel of Egypt’s Red Sea Riviera, continues to evolve its hotel infrastruc...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/sharm-el-sheikh-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/sharm-el-sheikh-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Sharm El Sheikh 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Sharm El Sheikh 2026: Budget to Luxury Sharm El Sheikh, the crown jewel of Egypt’s Red Sea Riviera, continues to evolve its hotel infrastruc...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/sharm-el-sheikh-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Sharm_El_Sheikh_-_panoramio_%2811%29.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/sharm-el-sheikh.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Sharm El Sheikh 2026: Budget to Luxury</div>
@@ -359,61 +383,132 @@
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
-<p>Sharm El Sheikh, the crown jewel of Egypt’s Red Sea Riviera, continues to evolve its hotel infrastructure in 2026, blending world-class diving resorts with expanding desert luxury compounds. The city is divided into distinct neighborhoods: Naama Bay remains the bustling heart with restaurants and nightlife, while Shark’s Bay and Ras Um Sid offer quieter, dive-focused stays. Hadaba and Nabq Bay are emerging as value zones with newer all-inclusive resorts. Prices in 2026 reflect a 10-15% increase from 2023 due to rising energy costs and tourism demand, but competition keeps options affordable. Budget rooms average $35 (≈ ₽3 325)-50 per night, mid-range properties range from $60 (≈ ₽5 700)-130, and luxury suites start at $180  (≈ ₽17 100) with peak winter rates (December-February) adding 20-30%. The Egyptian pound’s fluctuation against the dollar can offer additional savings for international travelers paying in foreign currency.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Sharm El Sheikh, the crown jewel of Egypt’s Red Sea Riviera, continues to evolve its hotel infrastructure in 2026, blending world-class diving resorts with expanding desert luxury compounds. The city is divided into distinct neighborhoods: Naama Bay remains the bustling heart with restaurants and nightlife, while Shark’s Bay and Ras Um Sid offer quieter, dive-focused stays. Hadaba and Nabq Bay are emerging as value zones with newer all-inclusive resorts. Prices in 2026 reflect a 10-15% increase from 2023 due to rising energy costs and tourism demand, but competition keeps options affordable. Budget rooms average $35-50 per night, mid-range properties range from $60-130, and luxury suites start at $180with peak winter rates (December-February) adding 20-30%. The Egyptian pound’s fluctuation against the dollar can offer additional savings for international travelers paying in foreign currency.</p>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Camel Dive Club & Hotel</h3>
-<p>Located in Naama Bay, this iconic budget hotel is a favorite among scuba divers. Rooms are simple but clean, with air conditioning and private bathrooms. The on-site dive center offers PADI courses. Prices start at $38 (≈ ₽3 610) per night for a standard double room (2026 rates).</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_184436" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Camel Dive Club & Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Camel Dive Club & Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Camel Dive Club & Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_184436 .hc-slide');var d=document.querySelectorAll('#hc_184436 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_184436 .hc-slide');var d=document.querySelectorAll('#hc_184436 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_184436 .hc-slide');var d=document.querySelectorAll('#hc_184436 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Camel Dive Club & Hotel &bull; 3 photos</p></div>
+<p>Located in Naama Bay, this iconic budget hotel is a favorite among scuba divers. Rooms are simple but clean, with air conditioning and private bathrooms. The on-site dive center offers PADI courses. Prices start at $38per night for a standard double room (2026 rates).</p>
 <p><strong>Pros:</strong> Direct beach access, best dive shop in town, lively bar. <strong>Cons:</strong> No pool, rooms can be noisy from nightlife, basic breakfast included.</p>
 
 <h3>2. Sharm Cliff Hotel</h3>
-<p>Perched on a hill in Hadaba, this property offers panoramic Red Sea views. Rooms are spacious with tile floors and satellite TV. A small pool and sun terrace are included. Rates begin at $32 (≈ ₽3 040) per night for a twin room.</p>
+<div id="hc_660000" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sharm Cliff Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sharm Cliff Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sharm Cliff Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_660000 .hc-slide');var d=document.querySelectorAll('#hc_660000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_660000 .hc-slide');var d=document.querySelectorAll('#hc_660000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_660000 .hc-slide');var d=document.querySelectorAll('#hc_660000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sharm Cliff Hotel &bull; 3 photos</p></div>
+<p>Perched on a hill in Hadaba, this property offers panoramic Red Sea views. Rooms are spacious with tile floors and satellite TV. A small pool and sun terrace are included. Rates begin at $32per night for a twin room.</p>
 <p><strong>Pros:</strong> Incredible sunset views, quiet location, free parking. <strong>Cons:</strong> Steep walk to beach (10 minutes downhill), limited dining options, Wi-Fi is slow.</p>
 
 <h3>3. Oonas Dive Club</h3>
-<p>In Naama Bay’s quieter southern end, this hotel caters to budget-conscious divers. Rooms are basic but have balconies overlooking the garden. A pool and dive center are on-site. Prices start at $45 (≈ ₽4 275) per night for a double room with breakfast.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_553168" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Oonas Dive Club - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Oonas Dive Club - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Oonas Dive Club - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_553168 .hc-slide');var d=document.querySelectorAll('#hc_553168 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_553168 .hc-slide');var d=document.querySelectorAll('#hc_553168 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_553168 .hc-slide');var d=document.querySelectorAll('#hc_553168 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Oonas Dive Club &bull; 3 photos</p></div>
+<p>In Naama Bay’s quieter southern end, this hotel caters to budget-conscious divers. Rooms are basic but have balconies overlooking the garden. A pool and dive center are on-site. Prices start at $45per night for a double room with breakfast.</p>
 <p><strong>Pros:</strong> Friendly staff, good snorkeling from the jetty, free shuttle to Naama Bay. <strong>Cons:</strong> Rooms are dated, no in-room safe, breakfast is limited to bread and jam.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Reef Oasis Beach Resort</h3>
-<p>Situated in Shark’s Bay, this resort features a private beach with coral reefs. Rooms are modern with minibars and balconies. The property includes three pools, a spa, and a buffet restaurant. Rates range from $85 (≈ ₽8 075)-120 per night for a standard room (2026).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_986023" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Reef Oasis Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Reef Oasis Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Reef Oasis Beach Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_986023 .hc-slide');var d=document.querySelectorAll('#hc_986023 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_986023 .hc-slide');var d=document.querySelectorAll('#hc_986023 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_986023 .hc-slide');var d=document.querySelectorAll('#hc_986023 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Reef Oasis Beach Resort &bull; 3 photos</p></div>
+<p>Situated in Shark’s Bay, this resort features a private beach with coral reefs. Rooms are modern with minibars and balconies. The property includes three pools, a spa, and a buffet restaurant. Rates range from $85-120 per night for a standard room (2026).</p>
+<div id="hc_309917" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="coral reefs. Rooms are modern with minibars and balconies. The property includes three pools, a spa, and a buffet restaurant. Rates range from $85-120 per night for a standard room - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="coral reefs. Rooms are modern with minibars and balconies. The property includes three pools, a spa, and a buffet restaurant. Rates range from $85-120 per night for a standard room - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_309917 .hc-slide');var d=document.querySelectorAll('#hc_309917 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_309917 .hc-slide');var d=document.querySelectorAll('#hc_309917 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">coral reefs. Rooms are modern with minibars and balconies. The property includes three pools, a spa, and a buffet restaurant. Rates range from $85-120 per night for a standard room &bull; 2 photos</p></div>
 <p><strong>Highlights:</strong> House reef with turtles, kids’ club, evening entertainment.</p>
 
 <h3>2. Jaz Belvedere Resort</h3>
-<p>In the quiet Nabq Bay area, this all-inclusive resort offers value for families. Rooms are spacious with sitting areas. Facilities include four pools, a water park, and multiple restaurants. Standard rooms cost $70 (≈ ₽6 650)-100 per night, all-inclusive.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_424321" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Jaz Belvedere Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Jaz Belvedere Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_424321 .hc-slide');var d=document.querySelectorAll('#hc_424321 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_424321 .hc-slide');var d=document.querySelectorAll('#hc_424321 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jaz Belvedere Resort &bull; 2 photos</p></div>
+<p>In the quiet Nabq Bay area, this all-inclusive resort offers value for families. Rooms are spacious with sitting areas. Facilities include four pools, a water park, and multiple restaurants. Standard rooms cost $70-100 per night, all-inclusive.</p>
 <p><strong>Highlights:</strong> Large pool complex, free shuttle to Naama Bay, excellent buffet variety.</p>
 
 <h3>3. Novotel Sharm El Sheikh</h3>
-<p>Located in Naama Bay, this chain hotel provides reliable comfort. Rooms are soundproofed with modern furnishings. The property has a large pool, tennis courts, and a private beach. Rates are $95 (≈ ₽9 025)-130 per night for a double room with breakfast.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_258899" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Novotel Sharm El Sheikh - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Novotel Sharm El Sheikh - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_258899 .hc-slide');var d=document.querySelectorAll('#hc_258899 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_258899 .hc-slide');var d=document.querySelectorAll('#hc_258899 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Novotel Sharm El Sheikh &bull; 2 photos</p></div>
+<p>Located in Naama Bay, this chain hotel provides reliable comfort. Rooms are soundproofed with modern furnishings. The property has a large pool, tennis courts, and a private beach. Rates are $95-130 per night for a double room with breakfast.</p>
 <p><strong>Highlights:</strong> Central location steps from nightlife, good gym, professional staff.</p>
 
 <h3>4. Sol Y Mar Sharm El Sheikh</h3>
-<p>In Hadaba, this resort offers a balance of price and amenities. Rooms are bright with Egyptian cotton linens. Facilities include two pools, a spa, and a dive center. Standard rooms cost $60 (≈ ₽5 700)-80 per night, half-board.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_994273" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sol Y Mar Sharm El Sheikh - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sol Y Mar Sharm El Sheikh - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sol Y Mar Sharm El Sheikh - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_994273 .hc-slide');var d=document.querySelectorAll('#hc_994273 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_994273 .hc-slide');var d=document.querySelectorAll('#hc_994273 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_994273 .hc-slide');var d=document.querySelectorAll('#hc_994273 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sol Y Mar Sharm El Sheikh &bull; 3 photos</p></div>
+<p>In Hadaba, this resort offers a balance of price and amenities. Rooms are bright with Egyptian cotton linens. Facilities include two pools, a spa, and a dive center. Standard rooms cost $60-80 per night, half-board.</p>
 <p><strong>Highlights:</strong> Quiet setting, free yoga classes, excellent snorkeling from the pier.</p>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Four Seasons Resort Sharm El Sheikh</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Sh" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Set on a private peninsula in Shark’s Bay, this resort epitomizes luxury. Rooms are palatial with marble bathrooms and sea views. Features include a world-class spa, six restaurants, and a private beach with coral reef. Suites start at $450 (≈ ₽42 750) per night, with villas exceeding $1 200. (≈ ₽114 000) The resort offers butler service, a diving school, and a kids’ program.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ep" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_77304" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons Resort Sharm El Sheikh - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons Resort Sharm El Sheikh - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons Resort Sharm El Sheikh - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_77304 .hc-slide');var d=document.querySelectorAll('#hc_77304 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_77304 .hc-slide');var d=document.querySelectorAll('#hc_77304 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_77304 .hc-slide');var d=document.querySelectorAll('#hc_77304 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons Resort Sharm El Sheikh &bull; 3 photos</p></div>
+<p>Set on a private peninsula in Shark’s Bay, this resort epitomizes luxury. Rooms are palatial with marble bathrooms and sea views. Features include a world-class spa, six restaurants, and a private beach with coral reef. Suites start at $450per night, with villas exceeding $1 200The resort offers butler service, a diving school, and a kids’ program.</p>
+<div id="hc_691231" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="peninsula in Shark’s Bay, this resort epitomizes luxury. Rooms are palatial with marble bathrooms and sea views. Features include a world-class spa, six restaurants, and a private beach with coral reef. Suites start at $450per night, with villas exceeding $1 200The resort offers butler service, a diving school, and a kids’ program. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="peninsula in Shark’s Bay, this resort epitomizes luxury. Rooms are palatial with marble bathrooms and sea views. Features include a world-class spa, six restaurants, and a private beach with coral reef. Suites start at $450per night, with villas exceeding $1 200The resort offers butler service, a diving school, and a kids’ program. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_691231 .hc-slide');var d=document.querySelectorAll('#hc_691231 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_691231 .hc-slide');var d=document.querySelectorAll('#hc_691231 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">peninsula in Shark’s Bay, this resort epitomizes luxury. Rooms are palatial with marble bathrooms and sea views. Features include a world-class spa, six restaurants, and a private beach with coral reef. Suites start at $450per night, with villas exceeding $1 200The resort offers butler service, a diving school, and a kids’ program. &bull; 2 photos</p></div>
 
 <h3>2. Rixos Sharm El Sheikh</h3>
-<p>In Nabq Bay, this all-inclusive luxury resort targets adults seeking relaxation. Rooms are contemporary with hydro-massage bathtubs. The property boasts a lagoon-style pool, a private beach, and a Turkish hammam. Rates begin at $220 (≈ ₽20 900) per night for a deluxe room. Features include 24-hour room service, a spa, and a dive center.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ta" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>In Nabq Bay, this all-inclusive luxury resort targets adults seeking relaxation. Rooms are contemporary with hydro-massage bathtubs. The property boasts a lagoon-style pool, a private beach, and a Turkish hammam. Rates begin at $220per night for a deluxe room. Features include 24-hour room service, a spa, and a dive center.</p>
 
 <h3>3. Savoy Sharm El Sheikh</h3>
-<p>Located in the SOHO Square area, this resort combines luxury with entertainment. Rooms are elegantly furnished with balconies overlooking gardens. The resort has five pools, a casino, and a shopping arcade. Suites start at $180 (≈ ₽17 100) per night. Highlights include a private beach shuttle, multiple restaurants, and a nightclub.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="co" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Located in the SOHO Square area, this resort combines luxury with entertainment. Rooms are elegantly furnished with balconies overlooking gardens. The resort has five pools, a casino, and a shopping arcade. Suites start at $180per night. Highlights include a private beach shuttle, multiple restaurants, and a nightclub.</p>
 
 <h2>How to Choose the Right Area</h2>
 <p>Selecting the right neighborhood in Sharm El Sheikh depends on your travel purpose. For beach and diving enthusiasts, Shark’s Bay and Ras Um Sid offer the best house reefs and calm waters, with resorts like Reef Oasis and Four Seasons providing direct access. For sightseeing and cultural activities, Naama Bay is the hub—walk to the Old Market, the Al Mustafa Mosque, and the Naama Bay promenade. Hotels like Camel Dive Club and Novotel put you steps from the action. For nightlife and entertainment, SOHO Square in the Hadaba district is the epicenter, with casinos, bars, and live shows; Savoy Sharm El Sheikh is an ideal base. If you prioritize peace and quiet, Nabq Bay’s sprawling resorts (Jaz Belvedere, Rixos) offer seclusion with shuttle access to Naama Bay.</p>
@@ -510,6 +605,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -538,6 +634,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -555,8 +652,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

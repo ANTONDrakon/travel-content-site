@@ -7,8 +7,8 @@
     <meta name="description" content="Убуд: полный путеводитель 2026 Убуд — это духовное сердце Бали, расположенное в окружении террасных рисовых полей и тропических лесов центральной части остро...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Убуд: полный путеводитель 2026">
     <meta property="og:description" content="Убуд: полный путеводитель 2026 Убуд — это духовное сердце Бали, расположенное в окружении террасных рисовых полей и тропических лесов центральной части остро...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/ubud-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ubud.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Убуд: полный путеводитель 2026</div>
@@ -365,16 +389,16 @@
 
 <h2>Как добраться</h2>
 <p>Основные воздушные ворота на Бали — международный аэропорт Нгурах-Рай (DPS), расположенный в 38 километрах к югу от Убуда. В 2026 году аэропорт обслуживает рейсы из 60 городов мира. Из России прямые рейсы выполняют авиакомпании «Аэрофлот» (из Москвы Шереметьево) и «Россия» (из Санкт-Петербурга). Средняя цена билета в эконом-классе в обе стороны составляет 75 000–90 000 рублей в низкий сезон и 120 000–150 000 рублей в пиковые даты (декабрь, январь, август).</p>
-<p>Из аэропорта до Убуда можно добраться на такси (фиксированный тариф от аэропорта — 350 000 IDR, около 1800 рублей) или через сервис Gojek/Grab (250 000–300 000 IDR). Время в пути — 1,5–2 часа в зависимости от трафика. Альтернативный вариант — аренда автомобиля с водителем (от 500 000 IDR в день).</p>
+<p>Из аэропорта до Убуда можно добраться на такси (фиксированный тариф от аэропорта —₽2 100 (350 ₽0 (000 IDR)), около 1800 рублей) или через сервис Gojek/Grab (250 000–₽1 800 (300 ₽0 (000 IDR))). Время в пути — 1,5–2 часа в зависимости от трафика. Альтернативный вариант — аренда автомобиля с водителем (от₽3 000 (500 ₽0 (000 IDR)) в день).</p>
 <p>Для транзитных пассажиров доступны рейсы через Стамбул (Turkish Airlines), Доху (Qatar Airways) и Дубай (Emirates). Среднее время перелета из Москвы — 12–14 часов прямым рейсом и 16–20 часов с пересадкой.</p>
 
 <h2>Где остановиться</h2>
-<h3>Бюджетный сегмент (до 300 000 IDR за ночь)</h3>
-<p>Районы: Пенгосекан (северная часть Убуда), Джалан Ханоуман. Рекомендуемые отели: <strong>Puri Garden Hotel & Hostel</strong> (от 120 000 IDR за койку в дормитории, 280 000 IDR за частный номер), <strong>Alam Shanti Ubud</strong> (от 250 000 IDR). В бюджетных гестхаусах часто включен завтрак и бесплатный чай.</p>
-<h3>Средний сегмент (300 000–1 000 000 IDR за ночь)</h3>
-<p>Районы: центр Убуда (Джалан Монки Форест, Джалан Райя Убуд). Отели: <strong>Komaneka at Bisma</strong> (от 650 000 IDR), <strong>Artotel Hanoman Ubud</strong> (от 500 000 IDR). В эту цену входит бассейн, завтрак «шведский стол» и бесплатный трансфер до центра.</p>
-<h3>Премиум-сегмент (от 1 500 000 IDR за ночь)</h3>
-<p>Районы: Кеджеван (юго-запад), Пайянган. Отели: <strong>Four Seasons Resort Bali at Sayan</strong> (от 5 500 000 IDR), <strong>Viceroy Bali</strong> (от 4 000 000 IDR). Виллы с частными бассейнами, видом на долину реки Аюнг и спа-комплексами.</p>
+<h3>Бюджетный сегмент (до₽1 800 (300 ₽0 (000 IDR)) за ночь)</h3>
+<p>Районы: Пенгосекан (северная часть Убуда), Джалан Ханоуман. Рекомендуемые отели: <strong>Puri Garden Hotel & Hostel</strong> (от₽720 (120 ₽0 (000 IDR)) за койку в дормитории₽1 680 (280 ₽0 (000 IDR)) за частный номер), <strong>Alam Shanti Ubud</strong> (от₽1 500 (250 ₽0 (000 IDR))). В бюджетных гестхаусах часто включен завтрак и бесплатный чай.</p>
+<h3>Средний сегмент (300 000–₽6 000 (1 ₽0 (000000 IDR)) за ночь)</h3>
+<p>Районы: центр Убуда (Джалан Монки Форест, Джалан Райя Убуд). Отели: <strong>Komaneka at Bisma</strong> (от₽3 900 (650 ₽0 (000 IDR))), <strong>Artotel Hanoman Ubud</strong> (от₽3 000 (500 ₽0 (000 IDR))). В эту цену входит бассейн, завтрак «шведский стол» и бесплатный трансфер до центра.</p>
+<h3>Премиум-сегмент (от₽9 000 (1 ₽3 000 (500000 IDR)) за ночь)</h3>
+<p>Районы: Кеджеван (юго-запад), Пайянган. Отели: <strong>Four Seasons Resort Bali at Sayan</strong> (от₽33 000 (5 ₽3 000 (500000 IDR))), <strong>Viceroy Bali</strong> (от₽24 000 (4 ₽0 (000000 IDR))). Виллы с частными бассейнами, видом на долину реки Аюнг и спа-комплексами.</p>
 
 <h2>Топ-15 достопримечательностей</h2>
 <table>
@@ -386,38 +410,38 @@
   </tr>
   <tr>
     <td>Храм Улун Дану Братан</td>
-    <td>Водный храм на озере Братан, построенный в 1633 году. Символ Бали на купюре 50 000 IDR.</td>
-    <td>75 000 IDR</td>
+    <td>Водный храм на озере Братан, построенный в 1633 году. Символ Бали на купюре₽300 (50 ₽0 (000 IDR)).</td>
+    <td>₽450 (75 ₽0 (000 IDR))</td>
     <td>07:00–19:00</td>
   </tr>
   <tr>
     <td>Тегаллаланг (рисовые террасы)</td>
     <td>Знаменитые террасы в 10 км к северу от Убуда. Лучшее время для фото — на рассвете.</td>
-    <td>50 000 IDR (парковка)</td>
+    <td>₽300 (50 ₽0 (000 IDR)) (парковка)</td>
     <td>Круглосуточно</td>
   </tr>
   <tr>
     <td>Лес обезьян (Monkey Forest)</td>
     <td>Священный лес с 700 длиннохвостыми макаками. Занимает 12,5 гектаров.</td>
-    <td>80 000 IDR</td>
+    <td>₽480 (80 ₽0 (000 IDR))</td>
     <td>08:30–18:00</td>
   </tr>
   <tr>
     <td>Храм Гоа Гаджа (Слоновая пещера)</td>
     <td>Археологический комплекс IX века с пещерой, украшенной резьбой.</td>
-    <td>50 000 IDR</td>
+    <td>₽300 (50 ₽0 (000 IDR))</td>
     <td>08:00–17:00</td>
   </tr>
   <tr>
     <td>Дворец Убуд (Puri Saren)</td>
     <td>Резиденция королевской семьи, построенная в 1900 году. Вечером — представления танца.</td>
-    <td>Бесплатно (танец от 100 000 IDR)</td>
+    <td>Бесплатно (танец от₽600 (100 ₽0 (000 IDR)))</td>
     <td>08:00–18:00</td>
   </tr>
   <tr>
     <td>Храм Тирта Эмпул</td>
     <td>Храм святой воды с 2 бассейнами и 30 фонтанами. Ритуал очищения.</td>
-    <td>50 000 IDR</td>
+    <td>₽300 (50 ₽0 (000 IDR))</td>
     <td>07:00–17:00</td>
   </tr>
   <tr>
@@ -429,19 +453,19 @@
   <tr>
     <td>Музей Нек (Neka Art Museum)</td>
     <td>Коллекция современного и традиционного балийского искусства. 6 зданий.</td>
-    <td>100 000 IDR</td>
+    <td>₽600 (100 ₽0 (000 IDR))</td>
     <td>09:00–17:00</td>
   </tr>
   <tr>
     <td>Водопад Тибунгана</td>
     <td>Каскадный водопад высотой 30 метров, популярное место для купания.</td>
-    <td>20 000 IDR</td>
+    <td>₽120 (20 ₽0 (000 IDR))</td>
     <td>08:00–18:00</td>
   </tr>
   <tr>
     <td>Храм Бесаких (материнский храм)</td>
     <td>Крупнейший храмовый комплекс Бали (23 храма), расположенный на склоне вулкана Агунг.</td>
-    <td>60 000 IDR</td>
+    <td>₽360 (60 ₽0 (000 IDR))</td>
     <td>08:00–17:00</td>
   </tr>
   <tr>
@@ -459,19 +483,19 @@
   <tr>
     <td>Студия серебра (Sari Ubud)</td>
     <td>Мастер-класс по созданию украшений из серебра. Длительность 2–3 часа.</td>
-    <td>от 350 000 IDR</td>
+    <td>от₽2 100 (350 ₽0 (000 IDR))</td>
     <td>09:00–17:00</td>
   </tr>
   <tr>
     <td>Вулкан Батур (треккинг)</td>
     <td>Восхождение на вулкан высотой 1717 метров. Старт в 04:00, встреча рассвета.</td>
-    <td>от 350 000 IDR (с гидом)</td>
+    <td>от₽2 100 (350 ₽0 (000 IDR)) (с гидом)</td>
     <td>Старт до рассвета</td>
   </tr>
   <tr>
     <td>Сады Ботанического сада (Kebun Raya Bali)</td>
     <td>Ботанический сад площадью 157 гектаров, расположенный на высоте 1250 метров.</td>
-    <td>25 000 IDR</td>
+    <td>₽150 (25 ₽0 (000 IDR))</td>
     <td>08:00–18:00</td>
   </tr>
 </table>
@@ -479,29 +503,29 @@
 <h2>Транспорт в городе</h2>
 <p>В Убуде нет метро или железнодорожного транспорта. Основной способ передвижения — скутер, такси или пешие прогулки. Центр города компактен, поэтому большинство достопримечательностей доступны пешком.</p>
 <ul>
-  <li><strong>Такси:</strong> Blue Bird (официальный сервис) — посадка 7 000 IDR, далее 5 000 IDR за км. Средняя поездка по центру — 30 000–50 000 IDR.</li>
-  <li><strong>Gojek/Grab:</strong> мотто-такси от 10 000 IDR за поездку по центру. Автомобиль — от 25 000 IDR.</li>
-  <li><strong>Аренда скутера:</strong> от 60 000 IDR в сутки (залог 500 000 IDR). Требуются права международного образца.</li>
-  <li><strong>Аренда велосипеда:</strong> от 30 000 IDR в день. Популярно для поездок по рисовым полям.</li>
-  <li><strong>Шаттл-басы:</strong> Kura-Kura Bus (маршрут до Куты, Санура) — 50 000 IDR за поездку.</li>
+  <li><strong>Такси:</strong> Blue Bird (официальный сервис) — посадка₽42 (7 ₽0 (000 IDR)), далее₽30 (5 ₽0 (000 IDR)) за км. Средняя поездка по центру — 30 000–₽300 (50 ₽0 (000 IDR)).</li>
+  <li><strong>Gojek/Grab:</strong> мотто-такси от₽60 (10 ₽0 (000 IDR)) за поездку по центру. Автомобиль — от₽150 (25 ₽0 (000 IDR)).</li>
+  <li><strong>Аренда скутера:</strong> от₽360 (60 ₽0 (000 IDR)) в сутки (залог₽3 000 (500 ₽0 (000 IDR))). Требуются права международного образца.</li>
+  <li><strong>Аренда велосипеда:</strong> от₽180 (30 ₽0 (000 IDR)) в день. Популярно для поездок по рисовым полям.</li>
+  <li><strong>Шаттл-басы:</strong> Kura-Kura Bus (маршрут до Куты, Санура) —₽300 (50 ₽0 (000 IDR)) за поездку.</li>
 </ul>
 
 <h2>Где поесть</h2>
 <p>Убуд — гастрономическая столица Бали. Здесь представлена как традиционная балийская кухня, так и международные направления с акцентом на органику и веганство.</p>
 <h3>Местная кухня</h3>
 <ul>
-  <li><strong>Nasi Campur</strong> (рис с гарнирами) — от 25 000 IDR в варунгах.</li>
-  <li><strong>Babi Guling</strong> (жареный поросенок) — 50 000 IDR. Лучший — в Ibu Oka (Джалан Райя Убуд).</li>
-  <li><strong>Mie Goreng</strong> (жареная лапша) — 20 000 IDR.</li>
+  <li><strong>Nasi Campur</strong> (рис с гарнирами) — от₽150 (25 ₽0 (000 IDR)) в варунгах.</li>
+  <li><strong>Babi Guling</strong> (жареный поросенок) —₽300 (50 ₽0 (000 IDR)). Лучший — в Ibu Oka (Джалан Райя Убуд).</li>
+  <li><strong>Mie Goreng</strong> (жареная лапша) —₽120 (20 ₽0 (000 IDR)).</li>
 </ul>
 <h3>Рестораны</h3>
 <ul>
-  <li><strong>Locavore</strong> (мишленовский гид) — ужин из 8 блюд от 650 000 IDR. Требуется бронь за 2 недели.</li>
-  <li><strong>Milk & Madu</strong> — завтрак 70 000–120 000 IDR, популярен среди экспатов.</li>
-  <li><strong>Clear Cafe</strong> — веганское меню, смузи-боулы от 55 000 IDR.</li>
-  <li><strong>Warung Sari Organik</strong> — органическая еда, вид на рисовые поля. Салаты от 40 000 IDR.</li>
+  <li><strong>Locavore</strong> (мишленовский гид) — ужин из 8 блюд от₽3 900 (650 ₽0 (000 IDR)). Требуется бронь за 2 недели.</li>
+  <li><strong>Milk & Madu</strong> — завтрак 70 000–₽720 (120 ₽0 (000 IDR)), популярен среди экспатов.</li>
+  <li><strong>Clear Cafe</strong> — веганское меню, смузи-боулы от₽330 (55 ₽0 (000 IDR)).</li>
+  <li><strong>Warung Sari Organik</strong> — органическая еда, вид на рисовые поля. Салаты от₽240 (40 ₽0 (000 IDR)).</li>
 </ul>
-<p>Уличная еда на ночном рынке (Джалан Кеджеван) — сате (15 000 IDR за 5 шпажек), баксо (суп с фрикадельками, 10 000 IDR).</p>
+<p>Уличная еда на ночном рынке (Джалан Кеджеван) — сате (₽90 (15 ₽0 (000 IDR)) за 5 шпажек), баксо (суп с фрикадельками₽60 (10 ₽0 (000 IDR))).</p>
 
 <h2>Лучшее время для поездки</h2>
 <p>Бали имеет два сезона: сухой (апрель–октябрь) и влажный (ноябрь–март). Убуд расположен в горах, поэтому здесь прохладнее, чем на побережье: средняя температура днем +27°C, ночью +20°C.</p>
@@ -528,7 +552,7 @@
 <p>Лучшее время — май–июнь и сентябрь–октябрь. В эти месяцы мало туристов, низкие цены и комфортная погода.</p>
 
 <h2>Виза и документы</h2>
-<p>Гражданам России для въезда на Бали требуется виза по прибытии (Visa on Arrival, VoA). Стоимость — 500 000 IDR (около 2500 рублей). Оплата только наличными в долларах США, евро или индонезийских рупиях. Виза действует 30 дней с возможностью однократного продления еще на<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p>Гражданам России для въезда на Бали требуется виза по прибытии (Visa on Arrival, VoA). Стоимость —₽3 000 (500 ₽0 (000 IDR)) (около 2500 рублей). Оплата только наличными в долларах США, евро или индонезийских рупиях. Виза действует 30 дней с возможностью однократного продления еще на<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -634,6 +658,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -662,6 +687,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -679,8 +705,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Стамбул 2026: от бюджета до люкса Стамбул, раскинувшийся на границе Европы и Азии, остается одним из самых посещаемых городов мира. В 2025 го...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/istanbul-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/istanbul-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/istanbul-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/istanbul-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/istanbul-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/istanbul-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Стамбул 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Стамбул 2026: от бюджета до люкса Стамбул, раскинувшийся на границе Европы и Азии, остается одним из самых посещаемых городов мира. В 2025 го...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/istanbul-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/istanbul-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/istanbul.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Стамбул 2026: от бюджета до люкса</div>
@@ -361,46 +385,125 @@
 
 <p>Стамбул, раскинувшийся на границе Европы и Азии, остается одним из самых посещаемых городов мира. В 2025 году город принял более 18 миллионов иностранных туристов, и эта цифра продолжает расти. Гостиничная инфраструктура мегаполиса впечатляет: от отреставрированных османских особняков до ультрасовременных небоскребов. Основные туристические кластеры сосредоточены в историческом районе Султанахмет (Стамбул-1), деловом центре Шишли и на побережье Босфора в Бешикташе.</p>
 
-<p>Средняя стоимость номера в 2026 году выросла на 12-15% по сравнению с 2024 годом из-за инфляции лиры и роста спроса. Бюджетный номер в хостеле обойдется в ₽2 375 (≈ $25)-40, трехзвездочный отель — ₽4 750 (≈ $50)-90, а пятизвездочный люкс — от ₽19 000 (≈ $200) до ₽76 000 (≈ $800) за ночь. Ключевой совет: бронируйте жилье за 45-60 дней до поездки, чтобы зафиксировать цены в долларах или евро — местная валюта нестабильна.</p>
+<p>Средняя стоимость номера в 2026 году выросла на 12-15% по сравнению с 2024 годом из-за инфляции лиры и роста спроса. Бюджетный номер в хостеле обойдется в ₽2 375 ($25)-40, трехзвездочный отель — ₽4 750 ($50)-90, а пятизвездочный люкс — от ₽19 000 ($200)до ₽76 000 ($800)за ночь. Ключевой совет: бронируйте жилье за 45-60 дней до поездки, чтобы зафиксировать цены в долларах или евро — местная валюта нестабильна.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Cheers Hostel (Султанахмет)</h3>
-<p>Расположение: в 3 минутах от Голубой мечети и Святой Софии. Номер на двоих с общим душем — ₽3 610 (≈ $38 ) частный номер с кондиционером — ₽4 560 (≈ $48.) Включен завтрак (сыр, оливки, чай, хлеб). Плюсы: терраса на крыше с видом на Мраморное море, бесплатный чай и кофе 24/7, ежедневные экскурсии. Минусы: шумно до полуночи, тонкие стены, нет лифта (3-й этаж). Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 8.6.</p>
+<div id="hc_136391" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Cheers Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Cheers Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_136391 .hc-slide');var d=document.querySelectorAll('#hc_136391 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_136391 .hc-slide');var d=document.querySelectorAll('#hc_136391 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Cheers Hostel &bull; 2 photos</p></div>
+<p>Расположение: в 3 минутах от Голубой мечети и Святой Софии. Номер на двоих с общим душем — ₽3 610 ($38)частный номер с кондиционером — ₽4 560 ($48)Включен завтрак (сыр, оливки, чай, хлеб). Плюсы: терраса на крыше с видом на Мраморное море, бесплатный чай и кофе 24/7, ежедневные экскурсии. Минусы: шумно до полуночи, тонкие стены, нет лифта (3-й этаж). Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 8.6.</p>
 
 <h3>2. Hotel Peninsula (Лалели)</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположение: в 10 минутах от Гранд-базара и трамвайной линии T1. Двухместный номер с завтраком — ₽3 990 (≈ $42.) Номера маленькие (12-14 кв. м), но чистые, с новой сантехникой. Плюсы: круглосуточная стойка регистрации, помощь с трансфером, рядом круглосуточный магазин. Минусы: окна выходят на шумную улицу, завтрак однообразный (яйца, джем, чай). Рейтинг — 8.2.</p>
+<div id="hc_689993" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hotel Peninsula - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Hotel Peninsula - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_689993 .hc-slide');var d=document.querySelectorAll('#hc_689993 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_689993 .hc-slide');var d=document.querySelectorAll('#hc_689993 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Peninsula &bull; 2 photos</p></div>
+<p>Расположение: в 10 минутах от Гранд-базара и трамвайной линии T1. Двухместный номер с завтраком — ₽3 990 ($42)Номера маленькие (12-14 кв. м), но чистые, с новой сантехникой. Плюсы: круглосуточная стойка регистрации, помощь с трансфером, рядом круглосуточный магазин. Минусы: окна выходят на шумную улицу, завтрак однообразный (яйца, джем, чай). Рейтинг — 8.2.</p>
 
 <h3>3. World Heritage Center Hotel (Султанахмет)</h3>
-<p>Расположение: прямо у Ипподрома. Семейный номер на четверых — ₽4 655 (≈ $49.) Историческое здание XIX века с оригинальными потолками. Плюсы: уникальный интерьер, персональное обслуживание, бесплатный Wi-Fi. Минусы: старая мебель, слабый напор воды, запах сырости в подвальных номерах. Рейтинг — 8.0.</p>
+<div id="hc_632863" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="World Heritage Center Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="World Heritage Center Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="World Heritage Center Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_632863 .hc-slide');var d=document.querySelectorAll('#hc_632863 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_632863 .hc-slide');var d=document.querySelectorAll('#hc_632863 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_632863 .hc-slide');var d=document.querySelectorAll('#hc_632863 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">World Heritage Center Hotel &bull; 3 photos</p></div>
+<p>Расположение: прямо у Ипподрома. Семейный номер на четверых — ₽4 655 ($49)Историческое здание XIX века с оригинальными потолками. Плюсы: уникальный интерьер, персональное обслуживание, бесплатный Wi-Fi. Минусы: старая мебель, слабый напор воды, запах сырости в подвальных номерах. Рейтинг — 8.0.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Dosso Dossi Hotels & Spa (Лалели)</h3>
-<p>Расположение: в 2 км от Султанахмета, рядом с трамваем. Стандартный двухместный номер — ₽7 125 (≈ $75.) Фишка: собственный спа-центр с хамамом, сауной и джакузи. Номера площадью 22 кв. м с мини-баром и сейфом. Завтрак — шведский стол с 40 позициями (баклава, суджук, свежие фрукты). Минус: район не туристический, много уличных торговцев. Рейтинг — 8.9.</p>
+<div id="hc_950274" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Dosso Dossi Hotels & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Dosso Dossi Hotels & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_950274 .hc-slide');var d=document.querySelectorAll('#hc_950274 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_950274 .hc-slide');var d=document.querySelectorAll('#hc_950274 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Dosso Dossi Hotels & Spa &bull; 2 photos</p></div>
+<p>Расположение: в 2 км от Султанахмета, рядом с трамваем. Стандартный двухместный номер — ₽7 125 ($75)Фишка: собственный спа-центр с хамамом, сауной и джакузи. Номера площадью 22 кв. м с мини-баром и сейфом. Завтрак — шведский стол с 40 позициями (баклава, суджук, свежие фрукты). Минус: район не туристический, много уличных торговцев. Рейтинг — 8.9.</p>
 
 <h3>5. Sura Hagia Sophia Hotel (Султанахмет)</h3>
-<p>Расположение: в 100 метрах от Святой Софии. Двухместный номер — ₽10 450 (≈ $110.) Фишка: бассейн на крыше с панорамным видом на Босфор и исторический полуостров. Номера в османском стиле с коврами ручной работы. В стоимость входит бесплатный трансфер из аэропорта (только при бронировании от 3 ночей). Минус: нет парковки, завтрак заканчивается в 10:00. Рейтинг — 9.1.</p>
+<div id="hc_14797" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sura Hagia Sophia Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sura Hagia Sophia Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_14797 .hc-slide');var d=document.querySelectorAll('#hc_14797 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_14797 .hc-slide');var d=document.querySelectorAll('#hc_14797 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sura Hagia Sophia Hotel &bull; 2 photos</p></div>
+<p>Расположение: в 100 метрах от Святой Софии. Двухместный номер — ₽10 450 ($110)Фишка: бассейн на крыше с панорамным видом на Босфор и исторический полуостров. Номера в османском стиле с коврами ручной работы. В стоимость входит бесплатный трансфер из аэропорта (только при бронировании от 3 ночей). Минус: нет парковки, завтрак заканчивается в 10:00. Рейтинг — 9.1.</p>
 
 <h3>6. CVK Park Bosphorus Hotel (Таксим)</h3>
-<p>Расположение: в 5 минутах от площади Таксим и улицы Истикляль. Стандартный номер — ₽9 025 (≈ $95.) Фишка: номера с видом на Босфор (доплата ₽1 900 (≈ $20)), фитнес-центр с панорамными окнами. Отель популярен у бизнес-туристов — есть конференц-залы на 200 человек. Минус: высокие цены в ресторане (ужин на двоих — ₽5 700 (≈ $60)). Рейтинг — 8.7.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_169537" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="CVK Park Bosphorus Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="CVK Park Bosphorus Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="CVK Park Bosphorus Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_169537 .hc-slide');var d=document.querySelectorAll('#hc_169537 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_169537 .hc-slide');var d=document.querySelectorAll('#hc_169537 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_169537 .hc-slide');var d=document.querySelectorAll('#hc_169537 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">CVK Park Bosphorus Hotel &bull; 3 photos</p></div>
+<p>Расположение: в 5 минутах от площади Таксим и улицы Истикляль. Стандартный номер — ₽9 025 ($95)Фишка: номера с видом на Босфор (доплата ₽1 900 ($20)), фитнес-центр с панорамными окнами. Отель популярен у бизнес-туристов — есть конференц-залы на 200 человек. Минус: высокие цены в ресторане (ужин на двоих — ₽5 700 ($60)). Рейтинг — 8.7.</p>
 
 <h3>7. Tomtom Suites (Бейоглу)</h3>
-<p>Расположение: в тихом переулке рядом с Галатской башней. Сьют на двоих — ₽13 300 (≈ $140.) Фишка: все номера — сьюты с гостиной зоной и кухней. Дизайнерский интерьер, мраморные ванны. Завтрак сервируют в номер. Минус: нет бассейна, сложный подъем для людей с ограниченной подвижностью. Рейтинг — 9.3.</p>
+<div id="hc_583161" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Tomtom Suites - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Tomtom Suites - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Tomtom Suites - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_583161 .hc-slide');var d=document.querySelectorAll('#hc_583161 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_583161 .hc-slide');var d=document.querySelectorAll('#hc_583161 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_583161 .hc-slide');var d=document.querySelectorAll('#hc_583161 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Tomtom Suites &bull; 3 photos</p></div>
+<p>Расположение: в тихом переулке рядом с Галатской башней. Сьют на двоих — ₽13 300 ($140)Фишка: все номера — сьюты с гостиной зоной и кухней. Дизайнерский интерьер, мраморные ванны. Завтрак сервируют в номер. Минус: нет бассейна, сложный подъем для людей с ограниченной подвижностью. Рейтинг — 9.3.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Four Seasons Hotel Istanbul at Sultanahmet (Султанахмет)</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположение: в бывшей тюрьме XIX века, в 2 минутах от Голубой мечети. Стандартный номер — ₽42 750 (≈ $450.) Особенности: внутренний двор с фонтаном, ресторан с турецкой и средиземноморской кухней, частные экскурсии по историческим местам. Номера с высокими потолками (4 м) и антикварной мебелью. Минус: очень дорогой паркинг (₽2 850 (≈ $30)/день). Рейтинг — 9.6.</p>
+<div id="hc_181961" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons Hotel Istanbul at Sultanahmet - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons Hotel Istanbul at Sultanahmet - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons Hotel Istanbul at Sultanahmet - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_181961 .hc-slide');var d=document.querySelectorAll('#hc_181961 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_181961 .hc-slide');var d=document.querySelectorAll('#hc_181961 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_181961 .hc-slide');var d=document.querySelectorAll('#hc_181961 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons Hotel Istanbul at Sultanahmet &bull; 3 photos</p></div>
+<p>Расположение: в бывшей тюрьме XIX века, в 2 минутах от Голубой мечети. Стандартный номер — ₽42 750 ($450)Особенности: внутренний двор с фонтаном, ресторан с турецкой и средиземноморской кухней, частные экскурсии по историческим местам. Номера с высокими потолками (4 м) и антикварной мебелью. Минус: очень дорогой паркинг (₽2 850 ($30)/день). Рейтинг — 9.6.</p>
 
 <h3>9. Çırağan Palace Kempinski (Бешикташ)</h3>
-<p>Расположение: на берегу Босфора, в 10 минутах от района Ортакёй. Номер с видом на пролив — ₽57 000 (≈ $600.) Особенности: бывший османский дворец, частный пляж, спа-центр с турецкой баней и бассейном с подогревом. Ресторан Laledan подает блюда османской кухни. Минус: строгий дресс-код в ресторане (пиджак обязателен). Рейтинг — 9.5.</p>
+<div id="hc_615754" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Kempinski - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Kempinski - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1549638441-b787d2e11f14?w=800&q=80" alt="Kempinski - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_615754 .hc-slide');var d=document.querySelectorAll('#hc_615754 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_615754 .hc-slide');var d=document.querySelectorAll('#hc_615754 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_615754 .hc-slide');var d=document.querySelectorAll('#hc_615754 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kempinski &bull; 3 photos</p></div>
+<p>Расположение: на берегу Босфора, в 10 минутах от района Ортакёй. Номер с видом на пролив — ₽57 000 ($600)Особенности: бывший османский дворец, частный пляж, спа-центр с турецкой баней и бассейном с подогревом. Ресторан Laledan подает блюда османской кухни. Минус: строгий дресс-код в ресторане (пиджак обязателен). Рейтинг — 9.5.</p>
 
 <h3>10. The Ritz-Carlton Istanbul (Шишли)</h3>
-<p>Расположение: в деловом центре, рядом с торговым центром Zorlu. Президентский люкс — ₽76 000 (≈ $800.) Особенности: панорамный бассейн на 5-м этаже, спа-центр с парной, фитнес-зал с тренажерами Technogym. Номера площадью от 45 кв. м с мраморными ваннами и автоматическими шторами. Минус: далеко от исторического центра (20 минут на такси). Рейтинг — 9.4.</p>
+<div id="hc_711920" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The Ritz-Carlton Istanbul - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="The Ritz-Carlton Istanbul - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Ritz-Carlton Istanbul - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_711920 .hc-slide');var d=document.querySelectorAll('#hc_711920 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_711920 .hc-slide');var d=document.querySelectorAll('#hc_711920 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_711920 .hc-slide');var d=document.querySelectorAll('#hc_711920 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Ritz-Carlton Istanbul &bull; 3 photos</p></div>
+<p>Расположение: в деловом центре, рядом с торговым центром Zorlu. Президентский люкс — ₽76 000 ($800)Особенности: панорамный бассейн на 5-м этаже, спа-центр с парной, фитнес-зал с тренажерами Technogym. Номера площадью от 45 кв. м с мраморными ваннами и автоматическими шторами. Минус: далеко от исторического центра (20 минут на такси). Рейтинг — 9.4.</p>
 
 <h2>Как выбрать район</h2>
 <p>Выбор района зависит от цели поездки. Если вы приехали за пляжным отдыхом, выбирайте отели на европейском побережье Мраморного моря — район Флориа или Ешилькёй. Там есть песчаные пляжи и променады, но до центра — 40 минут на метро. Для экскурсий идеален Султанахмет: все главные достопримечательности (Святая София, Голубая мечеть, Цистерна Базилика) в шаговой доступности. Для ночной жизни выбирайте Бейоглу (улица Истикляль) или Кадыкёй на азиатской стороне — там сотни баров, клубов и ресторанов, работающих до 4 утра.</p>
@@ -409,18 +512,17 @@
 
 <h2>Советы по бронированию</h2>
 <p>Чтобы сэкономить, бронируйте отель минимум за месяц до поездки. Пик сезона в Стамбуле — апрель-май и сентябрь-октябрь, когда цены выше на 20-30%. Используйте агрегаторы <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com и <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> для сравнения цен, но проверяйте также сайты отелей напрямую — иногда они дают скидку 10-15% за прямую бронь. Оплачивайте в долларах или евро, чтобы избежать колебаний лиры. Если вы планируете остаться дольше 5 ночей, запросите скидку за длительное проживание — многие отели дают до 20%.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="ми" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Лучшие сервисы для бронирования: Booking.com (широкий выбор, бесплатная отмена), Airbnb (апартаменты с кухней, дешевле для групп), Hotels.com (каждая 10-я ночь бесплатно по программе лояльности). Для люксовых отелей используйте Amex Fine Hotels & Resorts — там часто включены завтрак, кредит на спа и ранний заезд. И последний совет: читайте отзывы на TripAdvisor за последние 3 месяца — отели могут менять качество обслуживания. В 2026 году особенно хвалят отели с сертификацией Green Key (экологичность) — их в Стамбуле уже более 40.</p>
 
 <table>
 <caption>Сравнение районов Стамбула</caption>
 <tr><th>Район</th><th>Цель поездки</th><th>Средняя цена отеля</th><th>Транспорт</th></tr>
-<tr><td>Султанахмет</td><td>Экскурсии</td><td>₽7 600 (≈ $80)-120</td><td>Трамвай T1</td></tr>
-<tr><td>Бейоглу</td><td>Ночная жизнь</td><td>₽6 650 (≈ $70)-150</td><td>Метро M2</td></tr>
-<tr><td>Бешикташ</td><td>Семейный отдых</td><td>₽9 500 (≈ $100)-200</td><td>Паромы, автобусы</td></tr>
-<tr><td>Шишли</td><td>Бизнес</td><td>₽14 250 (≈ $150)-300</td><td>Метро M2, M7</td></tr>
-<tr><td>Кадыкёй</td><td>Ночная жизнь/азиатская сторона</td><td>₽4 750 (≈ $50)-90</td><td>Паром, метро M4</td></tr>
+<tr><td>Султанахмет</td><td>Экскурсии</td><td>₽7 600 ($80)-120</td><td>Трамвай T1</td></tr>
+<tr><td>Бейоглу</td><td>Ночная жизнь</td><td>₽6 650 ($70)-150</td><td>Метро M2</td></tr>
+<tr><td>Бешикташ</td><td>Семейный отдых</td><td>₽9 500 ($100)-200</td><td>Паромы, автобусы</td></tr>
+<tr><td>Шишли</td><td>Бизнес</td><td>₽14 250 ($150)-300</td><td>Метро M2, M7</td></tr>
+<tr><td>Кадыкёй</td><td>Ночная жизнь/азиатская сторона</td><td>₽4 750 ($50)-90</td><td>Паром, метро M4</td></tr>
 </table>
 
 <p>В 2026 году Стамбул продолжает удивлять разнообразием отелей. Бюджетные варианты в Лалели позволяют сэкономить на жилье, но будьте готовы к шуму и толпам. Средний класс в Таксиме или Бейоглу дает баланс цены и комфорта, а люксовые отели в Султанахмете или Бешикташе — это настоящее погружение в историю и роскошь. Главное — бронировать заранее и выбирать район под свой стиль путешествия.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
@@ -514,6 +616,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -542,6 +645,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -559,8 +663,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

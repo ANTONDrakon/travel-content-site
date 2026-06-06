@@ -7,8 +7,8 @@
     <meta name="description" content="Что посмотреть в Рас-эль-Хайма: 15 лучших мест 2026 Рас-эль-Хайма, самый северный эмират Объединенных Арабских Эмиратов, в 2026 году укрепляет свою репутацию...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/ras-al-khaimah-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-dostoprimechatelnosti.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-things-to-do.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-things-to-do.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/ras-al-khaimah-dostoprimechatelnosti.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Что посмотреть в Рас-эль-Хайма: 15 лучших мест 2026">
     <meta property="og:description" content="Что посмотреть в Рас-эль-Хайма: 15 лучших мест 2026 Рас-эль-Хайма, самый северный эмират Объединенных Арабских Эмиратов, в 2026 году укрепляет свою репутацию...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/ras-al-khaimah-dostoprimechatelnosti.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/ras-al-khaimah-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://fs.tonkosti.ru/sized/c800x800/8d/ut/8dutekrq5hwc0kwgw4gs4wooc.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ras-al-khaimah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Что посмотреть в Рас-эль-Хайма: 15 лучших мест 2026</div>
@@ -362,50 +386,49 @@
 <p>Рас-эль-Хайма, самый северный эмират Объединенных Арабских Эмиратов, в 2026 году укрепляет свою репутацию как альтернатива шумному Дубаю. Здесь нет толп туристов, но есть горы Джебель-Джайс высотой 1934 метра, мангровые леса протяженностью 45 км и пустыня, занимающая 60% территории эмирата. За последние три года число международных рейсов в международный аэропорт Рас-эль-Хайма выросло на 40%, а количество отелей увеличилось до 42. Главное преимущество — доступность: средняя стоимость посещения 10 из 15 главных достопримечательностей не превышает 50 дирхамов (около 13,6 USD). В 2025 году эмират посетило 1,8 миллиона туристов, и к 2026 году ожидается рост до 2,1 миллиона. Ниже — 15 мест, которые стоит включить в маршрут.</p>
 
 <h2>15 лучших достопримечательностей</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Джебель-Джайс (Jebel Jais)</h3>
 <p>Самая высокая гора ОАЭ, поднимающаяся на 1934 метра над уровнем моря. В 2026 году здесь работает самая длинная в мире горная трасса для зиплайна — Jais Flight, длиной 2,83 км, скорость спуска достигает 160 км/ч. Также доступен Jais Sky Tour — система из пяти зиплайнов общей протяженностью 5,6 км. Смотровая площадка на высоте 1200 метров предлагает вид на Хаджарские горы и Персидский залив.</p>
 <ul>
-<li><strong>Цена билета:</strong> Jais Flight — 250 AED (68 USD), Jais Sky Tour — 280 AED (76 USD). Вход на смотровую площадку бесплатный.</li>
+<li><strong>Цена билета:</strong> Jais Flight —₽6 475 (250 AED) (68 USD), Jais Sky Tour —₽7 252 (280 AED) (76 USD). Вход на смотровую площадку бесплатный.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 10:00 до 18:00 (время может меняться в зависимости от погоды).</li>
-<li><strong>Как добраться:</strong> На автомобиле по шоссе E18, 45 минут от центра Рас-эль-Хаймы. Автобусы не ходят, такси стоит около 80 AED (22 USD) в одну сторону.</li>
+<li><strong>Как добраться:</strong> На автомобиле по шоссе E18, 45 минут от центра Рас-эль-Хаймы. Автобусы не ходят, такси стоит около₽2 072 (80 AED) (22 USD) в одну сторону.</li>
 <li><strong>Совет:</strong> Приезжайте на закате — температура на вершине на 10 градусов ниже, чем у подножия, и виды наиболее фотогеничны. Берите ветровку.</li>
 </ul>
 
 <h3>2. Старый город Рас-эль-Хаймы (Al Jazirah Al Hamra)</h3>
 <p>Исторический район с сохранившейся архитектурой XIX века, включая мечеть, форт и 20 домов из кораллового камня. Это последняя деревня жемчужных ныряльщиков в ОАЭ, заброшенная в 1960-х годах. В 2026 году здесь проводятся экскурсии с гидом, рассказывающие о традициях добычи жемчуга. Площадь района — 2,5 гектара, часть объектов реставрирована в 2024 году.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно. Экскурсия с гидом — 50 AED (13,6 USD) на человека.</li>
+<li><strong>Цена билета:</strong> Бесплатно. Экскурсия с гидом —₽1 295 (50 AED) (13,6 USD) на человека.</li>
 <li><strong>Часы работы:</strong> Круглосуточно (экскурсии с 9:00 до 17:00).</li>
-<li><strong>Как добраться:</strong> На такси от центра (15 минут, 30 AED). Автобус №1 до остановки Al Hamra.</li>
+<li><strong>Как добраться:</strong> На такси от центра (15 минут₽777 (30 AED)). Автобус №1 до остановки Al Hamra.</li>
 <li><strong>Совет:</strong> Посетите утром, чтобы избежать жары — в полдень температура достигает 42°C.</li>
 </ul>
 
 <h3>3. Национальный музей Рас-эль-Хаймы (Ras Al Khaimah National Museum)</h3>
 <p>Музей расположен в форте XVIII века, который служил резиденцией правящей семьи Аль-Касими. В экспозиции — 5000 артефактов: керамика, оружие, монеты и документы, датируемые 3000 годом до н.э. В 2026 году добавлен интерактивный зал с 3D-реконструкцией древних поселений. Здание музея имеет площадь 1200 кв. м и включает 12 залов.</p>
 <ul>
-<li><strong>Цена билета:</strong> 20 AED (5,4 USD). Дети до 12 лет — бесплатно.</li>
+<li><strong>Цена билета:</strong>₽518 (20 AED) (5,4 USD). Дети до 12 лет — бесплатно.</li>
 <li><strong>Часы работы:</strong> Суббота-четверг с 9:00 до 17:00, пятница с 14:00 до 19:00.</li>
-<li><strong>Как добраться:</strong> Пешком от центра города (10 минут от набережной). Такси — 10 AED.</li>
-<li><strong>Совет:</strong> Возьмите аудиогид на русском языке (15 AED) — он доступен с 2025 года.</li>
+<li><strong>Как добраться:</strong> Пешком от центра города (10 минут от набережной). Такси —₽259 (10 AED).</li>
+<li><strong>Совет:</strong> Возьмите аудиогид на русском языке (₽388 (15 AED)) — он доступен с 2025 года.</li>
 </ul>
 
 <h3>4. Мангровый парк Рас-эль-Хаймы (Mangrove Park)</h3>
 <p>Заповедник площадью 4,5 кв. км, где растут мангровые деревья высотой до 5 метров. Здесь обитают 120 видов птиц, включая фламинго и цапель. В 2026 году проложены деревянные настилы длиной 2,2 км для прогулок, а также открыт центр экологического образования. Парк — часть программы ООН по сохранению мангровых лесов.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно. Каякинг — 80 AED (22 USD) за час.</li>
+<li><strong>Цена билета:</strong> Бесплатно. Каякинг —₽2 072 (80 AED) (22 USD) за час.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 7:00 до 19:00.</li>
-<li><strong>Как добраться:</strong> На такси от центра (20 минут, 40 AED). Автобус №5 до остановки Al Nakheel.</li>
+<li><strong>Как добраться:</strong> На такси от центра (20 минут₽1 036 (40 AED)). Автобус №5 до остановки Al Nakheel.</li>
 <li><strong>Совет:</strong> Лучшее время для наблюдения за птицами — с 6:30 до 8:00 утра.</li>
 </ul>
 
 <h3>5. Форт Дхая (Dhayah Fort)</h3>
 <p>Горный форт XIX века, расположенный на высоте 300 метров. Это единственный форт в ОАЭ, где в 1819 году произошло сражение между местными племенами и британскими войсками. Восстановлен в 2010 году, имеет две башни и 500-метровую стену. С вершины открывается вид на пальмовые рощи и побережье.</p>
 <ul>
-<li><strong>Цена билета:</strong> 20 AED (5,4 USD).</li>
+<li><strong>Цена билета:</strong>₽518 (20 AED) (5,4 USD).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 9:00 до 17:00.</li>
-<li><strong>Как добраться:</strong> На такси от центра (25 минут, 50 AED). Подъем пешком — 15 минут по каменным ступеням.</li>
+<li><strong>Как добраться:</strong> На такси от центра (25 минут₽1 295 (50 AED)). Подъем пешком — 15 минут по каменным ступеням.</li>
 <li><strong>Совет:</strong> Надевайте удобную обувь — ступени крутые и неровные.</li>
 </ul>
 
@@ -414,16 +437,16 @@
 <ul>
 <li><strong>Цена билета:</strong> Бесплатно.</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
-<li><strong>Как добраться:</strong> На автомобиле по шоссе E11 (40 минут). Такси — 100 AED (27 USD) в одну сторону.</li>
+<li><strong>Как добраться:</strong> На автомобиле по шоссе E11 (40 минут). Такси —₽2 590 (100 AED) (27 USD) в одну сторону.</li>
 <li><strong>Совет:</strong> Берите с собой воду и еду — поблизости нет магазинов.</li>
 </ul>
 
 <h3>7. Пустыня Вади-Бих (Wadi Bih)</h3>
 <p>Каньон длиной 12 км, окруженный скалами высотой до 800 метров. Это популярное место для сафари на джипах и хайкинга. В 2026 году проложены три маршрута: легкий (2 км), средний (5 км) и сложный (10 км). В долине растут акации и финиковые пальмы, встречаются дикие козы.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно. Сафари на джипе — 250 AED (68 USD) на человека.</li>
+<li><strong>Цена билета:</strong> Бесплатно. Сафари на джипе —₽6 475 (250 AED) (68 USD) на человека.</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
-<li><strong>Как добраться:</strong> На внедорожнике из города (30 минут). Такси-внедорожник — 150 AED (41 USD).</li>
+<li><strong>Как добраться:</strong> На внедорожнике из города (30 минут). Такси-внедорожник —₽3 885 (150 AED) (41 USD).</li>
 <li><strong>Совет:</strong> Берите GPS-навигатор — мобильная связь работает нестабильно.</li>
 </ul>
 
@@ -439,18 +462,18 @@
 <h3>9. Пляж Аль-Марджан (Al Marjan Beach)</h3>
 <p>Искусственный пляж длиной 1,5 км на острове Аль-Марджан, созданный в 2020 году. Песок белый, вода прозрачная, глубина у берега до 2 метров. В 2026 году установлены 50 зонтиков и 200 шезлонгов, работает станция водных видов спорта. Пляж имеет Голубой флаг за экологичность.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно. Шезлонг — 30 AED (8 USD).</li>
+<li><strong>Цена билета:</strong> Бесплатно. Шезлонг —₽777 (30 AED) (8 USD).</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
-<li><strong>Как добраться:</strong> На такси от центра (15 минут, 25 AED). Автобус №3 до остановки Al Marjan.</li>
+<li><strong>Как добраться:</strong> На такси от центра (15 минут₽647 (25 AED)). Автобус №3 до остановки Al Marjan.</li>
 <li><strong>Совет:</strong> Приходите до 10:00, чтобы занять место — в выходные пляж заполняется на 80%.</li>
 </ul>
 
 <h3>10. Парк дикой природы Рас-эль-Хаймы (RAK Wildlife Park)</h3>
 <p>Зоопарк площадью 10 гектаров, где содержатся 150 видов животных, включая аравийских леопардов (8 особей), страусов и газелей. Открыт в 2024 году, в 2026 году добавлен вольер для пустынных лисиц. Парк участвует в программе разведения редких видов ОАЭ.</p>
 <ul>
-<li><strong>Цена билета:</strong> 40 AED (11 USD). Дети до 5 лет — бесплатно.</li>
+<li><strong>Цена билета:</strong>₽1 036 (40 AED) (11 USD). Дети до 5 лет — бесплатно.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 9:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На такси от центра (20 минут, 35 AED). Автобус №7 до остановки Wildlife Park.</li>
+<li><strong>Как добраться:</strong> На такси от центра (20 минут₽906 (35 AED)). Автобус №7 до остановки Wildlife Park.</li>
 <li><strong>Совет:</strong> Кормление животных — в 11:00 и 15:00, это самое зрелищное время.</li>
 </ul>
 
@@ -466,23 +489,23 @@
 <h3>12. Аквапарк Ice Land (Ice Land Water Park)</h3>
 <p>Крупнейший аквапарк Рас-эль-Хаймы площадью 5 гектаров, открытый в 2015 году. Включает 25 горок, волновой бассейн объемом 5000 куб. м и зону для детей. В 2026 году добавлена горка высотой 30 метров с уклоном 70 градусов. Средняя температура воды — 28°C.</p>
 <ul>
-<li><strong>Цена билета:</strong> 150 AED (41 USD). Дети до 3 лет — бесплатно.</li>
+<li><strong>Цена билета:</strong>₽3 885 (150 AED) (41 USD). Дети до 3 лет — бесплатно.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 10:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На такси от центра (10 минут, 20 AED). Автобус №2 до остановки Ice Land.</li>
+<li><strong>Как добраться:</strong> На такси от центра (10 минут₽518 (20 AED)). Автобус №2 до остановки Ice Land.</li>
 <li><strong>Совет:</strong> Покупайте билеты онлайн за 24 часа — скидка 15%.</li>
 </ul>
 
 <h3>13. Гольф-клуб Tower Links (Tower Links Golf Club)</h3>
 <p>Поле для гольфа на 18 лунок, спроектированное Питером Харадином. Длина поля — 6500 метров, пар 72. Расположено вдоль побережья, с видом на Персидский залив. В 2026 году проведен турнир Ras Al Khaimah Championship с призовым фондом 2 миллиона USD.</p>
 <ul>
-<li><strong>Цена билета:</strong> 350 AED (95 USD) за 18 лунок. Аренда клюшек — 100 AED.</li>
+<li><strong>Цена билета:</strong>₽9 065 (350 AED) (95 USD) за 18 лунок. Аренда клюшек —₽2 590 (100 AED).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 6:30 до 19:00.</li>
-<li><strong>Как добраться:</strong> На такси от центра (15 минут, 25 AED).</li>
+<li><strong>Как добраться:</strong> На такси от центра (15 минут₽647 (25 AED)).</li>
 <li><strong>Совет:</strong> Бронируйте за 3 дня — в сезон (ноябрь-март) места разбирают.</li>
 </ul>
 
 <h3>14. Рынок золота и специй (Gold and Spice Souk)</h3>
-<p>Традиционный рынок с 50 магазинами, где продают золото 18-24 карат, шафран (от 10 AED за грамм) и специи. Работает с 1950-х годов. В 2026 году отремонтированы фасады, добавлены кондиционеры. Цены на золото на 10-15% ниже, чем в Дубае.</p>
+<p>Традиционный рынок с 50 магазинами, где продают золото 18-24 карат, шафран (от₽259 (10 AED) за грамм) и специи. Работает с 1950-х годов. В 2026 году отремонтированы фасады, добавлены кондиционеры. Цены на золото на 10-15% ниже, чем в Дубае.</p>
 <ul>
 <li><strong>Цена билета:</strong> Бесплатно.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 9:00 до 22:00 (перерыв с 13:00 до 16:00).</li>
@@ -577,6 +600,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -605,6 +629,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -622,8 +647,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

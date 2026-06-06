@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Dubai 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Dubai 2026: Budget to Luxury Dubai’s hotel landscape in 2026 is a masterclass in diversity. The city has continued its rapid expansion, with...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Dubai 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Dubai 2026: Budget to Luxury Dubai’s hotel landscape in 2026 is a masterclass in diversity. The city has continued its rapid expansion, with...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/dubai-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/dubai.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Dubai 2026: Budget to Luxury</div>
@@ -359,106 +383,166 @@
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
-<p>Dubai’s hotel landscape in 2026 is a masterclass in diversity. The city has continued its rapid expansion, with new properties opening in emerging districts like Dubai Creek Harbour and Dubai South, while established neighborhoods like Downtown and the Palm Jumeirah have seen significant renovations. Hotel infrastructure now emphasizes sustainability and hyper-personalized experiences, from AI-driven room controls to zero-waste dining options. Prices have adjusted to reflect a post-pandemic travel boom and the UAE’s expanded visa policies, but savvy travelers can still find exceptional value. Generally, a budget-conscious traveler can secure a clean, well-located room for under $50 (≈ ₽4 750) per night, while mid-range options ($50 (≈ ₽4 750)–$150 (≈ ₽14 250)) offer significant comfort and amenities. Luxury, defined as $150 (≈ ₽14 250) and above, now routinely exceeds $1 000 (≈ ₽95 000) per night for top-tier suites, especially during peak season (November to March) or major events like Expo City Dubai’s ongoing programming.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="la" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Dubai’s hotel landscape in 2026 is a masterclass in diversity. The city has continued its rapid expansion, with new properties opening in emerging districts like Dubai Creek Harbour and Dubai South, while established neighborhoods like Downtown and the Palm Jumeirah have seen significant renovations. Hotel infrastructure now emphasizes sustainability and hyper-personalized experiences, from AI-driven room controls to zero-waste dining options. Prices have adjusted to reflect a post-pandemic travel boom and the UAE’s expanded visa policies, but savvy travelers can still find exceptional value. Generally, a budget-conscious traveler can secure a clean, well-located room for under $50per night, while mid-range options ($50–$150) offer significant comfort and amenities. Luxury, defined as $150and above, now routinely exceeds $1 000per night for top-tier suites, especially during peak season (November to March) or major events like Expo City Dubai’s ongoing programming.</p>
 
 <p>Neighborhood choice is critical. Deira and Bur Dubai remain the epicenters of budget accommodation, with older but well-maintained hotels and easy access to traditional souks and the Dubai Creek. The mid-range market is strongest in the ‘New Dubai’ corridor—Barsha Heights, JLT (Jumeirah Lakes Towers), and Business Bay—offering metro connectivity and modern apartments. Luxury is concentrated on the Palm Jumeirah, Jumeirah Beach Road, and Downtown Dubai, where views of the Burj Khalifa or the Arabian Gulf command premium prices. Understanding these zones is the first step to maximizing your dollar in 2026.</p>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Citymax Hotel Bur Dubai</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Bu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_214188" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Citymax Hotel Bur Dubai - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Citymax Hotel Bur Dubai - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Citymax Hotel Bur Dubai - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_214188 .hc-slide');var d=document.querySelectorAll('#hc_214188 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_214188 .hc-slide');var d=document.querySelectorAll('#hc_214188 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_214188 .hc-slide');var d=document.querySelectorAll('#hc_214188 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Citymax Hotel Bur Dubai &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A reliable, no-frills chain property located in the heart of Bur Dubai. Rooms are compact but spotless, with a focus on functionality. The hotel features a small rooftop pool, a gym, and a 24-hour restaurant. It is a 5-minute walk from the Al Fahidi Metro Station and close to the Dubai Museum and textile souk.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Standard double rooms start at $38 (≈ ₽3 610) per night in low season (May–September) and rise to $48 (≈ ₽4 560) during peak winter months. Breakfast is an additional $8. (≈ ₽760)</p>
+<p><strong>Prices:</strong> Standard double rooms start at $38per night in low season (May–September) and rise to $48during peak winter months. Breakfast is an additional $8</p>
 <p><strong>Pros:</strong> Excellent metro access, very clean, reliable Wi-Fi, and a consistent brand standard. The neighborhood is rich in authentic Indian and Pakistani cuisine.</p>
 <p><strong>Cons:</strong> Rooms are small (approx. 180 sq ft), no views, and the surrounding streets can be very busy. The pool is small and often crowded.</p>
 
 <h3>2. Rove City Centre Deira</h3>
+<div id="hc_905370" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Rove City Centre Deira - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Rove City Centre Deira - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Rove City Centre Deira - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_905370 .hc-slide');var d=document.querySelectorAll('#hc_905370 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_905370 .hc-slide');var d=document.querySelectorAll('#hc_905370 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_905370 .hc-slide');var d=document.querySelectorAll('#hc_905370 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rove City Centre Deira &bull; 3 photos</p></div>
 <p><strong>Description:</strong> Part of the trendy ‘Rove’ brand, this hotel is designed for young, social travelers. It offers a vibrant lobby with a co-working space, a games room, and a 24-hour laundromat. Rooms are minimalist with pops of color and include a mini-fridge and safe. It is directly connected to the Deira City Centre shopping mall and metro station.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Rates average $45 (≈ ₽4 275) per night. A standard queen room can be found for $42 (≈ ₽3 990) in summer. Parking is free for guests.</p>
+<p><strong>Prices:</strong> Rates average $45per night. A standard queen room can be found for $42in summer. Parking is free for guests.</p>
 <p><strong>Pros:</strong> Superb location for shopping and metro access. The vibe is modern and fun. The on-site restaurant, ‘The Daily’, serves affordable international food. Great for solo travelers.</p>
 <p><strong>Cons:</strong> The pool is located on a lower floor with limited sun. The area around the hotel is a construction zone in parts of 2026. Noise from the mall can be noticeable on lower floors.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Ibis Styles Dubai Airport Hotel</h3>
+<div id="hc_271265" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ibis Styles Dubai Airport Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ibis Styles Dubai Airport Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ibis Styles Dubai Airport Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_271265 .hc-slide');var d=document.querySelectorAll('#hc_271265 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_271265 .hc-slide');var d=document.querySelectorAll('#hc_271265 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_271265 .hc-slide');var d=document.querySelectorAll('#hc_271265 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ibis Styles Dubai Airport Hotel &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A practical choice for layovers or early departures. Located inside Terminal 3 of Dubai International Airport (DXB), it offers soundproofed rooms with bright, cheerful decor. The hotel has a 24-hour front desk, a gym, and a small business center. It is strictly for airport access only—there is no pool or significant leisure facilities.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Rooms start at $35 (≈ ₽3 325) per night for a standard double. A one-night stay with breakfast is approximately $42. (≈ ₽3 990) No resort fee.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Prices:</strong> Rooms start at $35per night for a standard double. A one-night stay with breakfast is approximately $42No resort fee.</p>
 <p><strong>Pros:</strong> Unbeatable for convenience. You can walk from arrivals to your room in under 10 minutes. Free shuttle to Terminal 1 and 2. Very quiet despite being in the airport.</p>
 <p><strong>Cons:</strong> No pool, no views of the city, and no neighborhood to explore. The airport dining options are expensive. It feels isolated if you are not transiting.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>4. Holiday Inn Express Dubai – Jumeirah</h3>
+<div id="hc_624041" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Express Dubai – Jumeirah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Express Dubai – Jumeirah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_624041 .hc-slide');var d=document.querySelectorAll('#hc_624041 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_624041 .hc-slide');var d=document.querySelectorAll('#hc_624041 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Express Dubai – Jumeirah &bull; 2 photos</p></div>
 <p><strong>Description:</strong> Situated on Jumeirah Beach Road, this hotel offers a fantastic location for beach access and the ‘La Mer’ development. Rooms are modern with a sea-inspired color scheme, and all include a kitchenette. The hotel has a rooftop pool with partial sea views and a free shuttle to the private beach club.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Standard rooms average $85 (≈ ₽8 075) per night. A suite with a separate living area is around $120. (≈ ₽11 400) Breakfast is included in the rate.</p>
+<p><strong>Prices:</strong> Standard rooms average $85per night. A suite with a separate living area is around $120Breakfast is included in the rate.</p>
 <p><strong>Highlights:</strong> Free shuttle to a private beach with sunbeds and towels. Walking distance to La Mer’s restaurants and shops. Metro station (Business Bay) is a 10-minute taxi ride away. The hotel offers a 24-hour market for snacks.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>5. Rove Downtown Dubai</h3>
+<div id="hc_963643" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Rove Downtown Dubai - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Rove Downtown Dubai - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Rove Downtown Dubai - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_963643 .hc-slide');var d=document.querySelectorAll('#hc_963643 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_963643 .hc-slide');var d=document.querySelectorAll('#hc_963643 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_963643 .hc-slide');var d=document.querySelectorAll('#hc_963643 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rove Downtown Dubai &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A flagship property of the Rove brand, located directly in the Downtown district. It is a 10-minute walk from the Dubai Mall and the Burj Khalifa. The hotel has a large outdoor pool, a 24-hour gym, and a self-service laundry. The lobby is a social hub with a cafe and a pool table.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Rates range from $95 (≈ ₽9 025) to $140 (≈ ₽13 300) per night depending on season. A standard double room with a Burj Khalifa view costs about $130. (≈ ₽12 350)</p>
+<p><strong>Prices:</strong> Rates range from $95to $140per night depending on season. A standard double room with a Burj Khalifa view costs about $130</p>
 <p><strong>Highlights:</strong> Unbeatable location for sightseeing. The hotel has a ‘Rove’ app for checking in and ordering room service. The rooftop pool offers a direct view of the Burj Khalifa. The hotel is pet-friendly for a fee.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>6. Canal Central Hotel Business Bay</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Bu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_684793" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Canal Central Hotel Business Bay - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Canal Central Hotel Business Bay - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Canal Central Hotel Business Bay - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_684793 .hc-slide');var d=document.querySelectorAll('#hc_684793 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_684793 .hc-slide');var d=document.querySelectorAll('#hc_684793 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_684793 .hc-slide');var d=document.querySelectorAll('#hc_684793 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Canal Central Hotel Business Bay &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A contemporary hotel overlooking the Dubai Water Canal. Rooms are spacious (over 300 sq ft) with floor-to-ceiling windows. The hotel features two restaurants, a rooftop infinity pool, and a spa. It is a 5-minute drive from the Dubai Mall and a 15-minute walk to the nearest metro station.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="ov" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Standard rooms are $110 (≈ ₽10 450) per night. A canal-view room with a balcony is $145. (≈ ₽13 775) Breakfast is $18. (≈ ₽1 710)</p>
+<p><strong>Prices:</strong> Standard rooms are $110per night. A canal-view room with a balcony is $145Breakfast is $18</p>
 <p><strong>Highlights:</strong> The infinity pool is a highlight, with views of the canal and the city skyline. The hotel offers a free shuttle to the Dubai Mall and Kite Beach. The rooms are among the largest in the mid-range category. The on-site Italian restaurant is highly rated.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>7. Four Points by Sheraton Sheikh Zayed Road</h3>
+<div id="hc_773014" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Four Points by Sheraton Sheikh Zayed Road - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Points by Sheraton Sheikh Zayed Road - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_773014 .hc-slide');var d=document.querySelectorAll('#hc_773014 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_773014 .hc-slide');var d=document.querySelectorAll('#hc_773014 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Points by Sheraton Sheikh Zayed Road &bull; 2 photos</p></div>
 <p><strong>Description:</strong> A business-friendly hotel located on the main artery of Dubai. It is directly connected to the World Trade Centre metro station. Rooms are well-appointed with ergonomic workspaces. The hotel has a gym, a small pool, and a lobby bar.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="lo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Rates average $75 (≈ ₽7 125) per night. A deluxe room with a city view is $95. (≈ ₽9 025) Parking is included.</p>
+<p><strong>Prices:</strong> Rates average $75per night. A deluxe room with a city view is $95Parking is included.</p>
 <p><strong>Highlights:</strong> Excellent for business travelers or those attending events at the Dubai World Trade Centre. The metro is literally steps away. The hotel has a 24-hour business center. The area is central for both old Dubai (Bur Dubai) and new Dubai (Marina).</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>8. Burj Al Arab Jumeirah</h3>
+<div id="hc_312620" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Burj Al Arab Jumeirah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Burj Al Arab Jumeirah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Burj Al Arab Jumeirah - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_312620 .hc-slide');var d=document.querySelectorAll('#hc_312620 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_312620 .hc-slide');var d=document.querySelectorAll('#hc_312620 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_312620 .hc-slide');var d=document.querySelectorAll('#hc_312620 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Burj Al Arab Jumeirah &bull; 3 photos</p></div>
 <p><strong>Description:</strong> The iconic sail-shaped hotel on its own artificial island. It is the epitome of ultra-luxury. All suites are duplex with floor-to-ceiling windows, a private butler, and a 24-karat gold-plated iPad for room controls. The hotel has nine signature restaurants, a private beach, and the Talise Spa.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> All suites are at least 1,800 sq ft. The hotel offers a chauffeur-driven Rolls-Royce fleet. Guests have access to the nearby Jumeirah Beach Hotel’s facilities. The underwater restaurant, Al Mahara, is accessed via a simulated submarine ride. Minimum stay is often two nights.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>9. Atlantis The Royal</h3>
+<div id="hc_532000" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Atlantis The Royal - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Atlantis The Royal - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Atlantis The Royal - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_532000 .hc-slide');var d=document.querySelectorAll('#hc_532000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_532000 .hc-slide');var d=document.querySelectorAll('#hc_532000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_532000 .hc-slide');var d=document.querySelectorAll('#hc_532000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Atlantis The Royal &bull; 3 photos</p></div>
 <p><strong>Description:</strong> Opened in 2023 and already a landmark, this resort on the Palm Jumeirah redefines modern luxury. It features 795 rooms, suites, and signature penthouses, many with private infinity pools. The property boasts 17 world-class restaurants, including those by celebrity chefs like Nobu and Heston Blumenthal.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Features:</strong> The ‘Skyblaze’ infinity pool is suspended 90 meters above the ground. The resort has a private beach, a state-of-the-art fitness center, and the Awaken Spa. Guests have access to the adjacent Aquaventure Waterpark. The lobby is an architectural marvel with a water fountain installation.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>10. The Lana, Dorchester Collection</h3>
 <p><strong>Description:</strong> Located in the Marasi Marina district of Business Bay, this is the first Dorchester Collection property in the Middle East. It opened in 2024 and has quickly become a favorite for design connoisseurs. The hotel has 225 rooms and suites, designed by Gilles & Boissier, with a calm, residential feel. It features a rooftop pool, a spa, and the DIFC’s finest dining.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Features:</strong> The hotel has its own private marina with yacht docking. The rooftop restaurant, ‘The Address’, offers panoramic views. The service is highly personalized with a dedicated ‘Guest Experience Maker’. The hotel is a 5-minute walk from the Dubai Mall and the Burj Khalifa. Rooms start at $400 (≈ ₽38 000) per night, with suites exceeding $2 000. (≈ ₽190 000)</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Features:</strong> The hotel has its own private marina with yacht docking. The rooftop restaurant, ‘The Address’, offers panoramic views. The service is highly personalized with a dedicated ‘Guest Experience Maker’. The hotel is a 5-minute walk from the Dubai Mall and the Burj Khalifa. Rooms start at $400per night, with suites exceeding $2 000</p>
 
 <h2>How to Choose the Right Area</h2>
 
 <p><strong>For Beach Lovers:</strong> Choose Jumeirah Beach Residence (JBR) or The Palm Jumeirah. JBR offers a lively beachfront with cafes, shops, and the ‘The Beach’ mall. The Palm gives you exclusive resort access (Atlantis, Anantara). Budget options are limited here; mid-range hotels exist in JBR, but luxury dominates.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ac" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_155985" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Anantara). Budget options are limited here; mid-range hotels exist in JBR, but luxury dominates. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Anantara). Budget options are limited here; mid-range hotels exist in JBR, but luxury dominates. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Anantara). Budget options are limited here; mid-range hotels exist in JBR, but luxury dominates. - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_155985 .hc-slide');var d=document.querySelectorAll('#hc_155985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_155985 .hc-slide');var d=document.querySelectorAll('#hc_155985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_155985 .hc-slide');var d=document.querySelectorAll('#hc_155985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Anantara). Budget options are limited here; mid-range hotels exist in JBR, but luxury dominates. &bull; 3 photos</p></div>
 <p><strong>For Sightseeing & First-Timers:</strong> Downtown Dubai is the best choice. You will be within walking distance of the Burj Khalifa, Dubai Mall, Dubai Fountain, and the Souk Al Bahar. Mid-range options like Rove Downtown are excellent. Budget travelers can stay in Bur Dubai and take the metro (20 minutes) to Downtown.</p>
 <p><strong>For Nightlife & Entertainment:</strong> Dubai Marina and JBR are the epicenters. The area is packed with bars, clubs, and beachfront lounges. Hotels like the Grosvenor House (luxury) or the Ibis Marina (budget) are good picks. The Dubai Metro connects the Marina to the rest of the city, but taxis are recommended after midnight.</p>
 <p><strong>For Business & Conferences:</strong> Sheikh Zayed Road or Business Bay. You will be near the Dubai World Trade Centre and DIFC. Hotels like Four Points or Canal Central offer easy metro access and business facilities.</p>
 <p><strong>For Traditional Culture:</strong> Deira and Bur Dubai. Stay in a budget hotel like Citymax or a mid-range option like the Arabian Courtyard Hotel & Spa. You will be steps from the Gold Souk, Spice Souk, and the Dubai Creek abra station.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="li" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
 <p><strong>Best Time to Book:</strong> For the lowest prices, book 45–60 days in advance for travel during the summer (May to September). For winter (November to March), book 90 days ahead. Avoid booking during major events like the Dubai Shopping Festival (January) or the Dubai World Cup (March) unless you are attending.</p>
 <p><strong>How to Save Money:</strong> Use a VPN to check prices from different regions. Often, booking from a European or Asian IP can yield lower rates. Consider ‘non-refundable’ rates for the best discounts. Join hotel loyalty programs (IHG One Rewards, Marriott Bonvoy, Accor Live Limitless) for free nights and upgrades. Use cashback websites like TopCashback or Rakuten for an extra 5–10% back.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="lo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Best <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> Services:</strong> For flexibility, use <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> (free cancellation on many properties). For luxury, use Mr. & Mrs. Smith or Virtuoso for added perks like room upgrades, breakfast, and $100 (≈ ₽9 500) credit. For budget, use <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> or Hotels.com (collect 10 nights for 1 free night). Always book directly with the hotel if you have loyalty status—you will get points and often a better rate.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="if" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Additional Tips:</strong> Check if the hotel charges a ‘resort fee’ (common at luxury properties). In 2026, many hotels include free Wi-Fi, but some budget properties charge $5 (≈ ₽475)–10 per day. Always confirm if breakfast is included, as it can cost $15 (≈ ₽1 425)–30 per person separately. For airport hotels, book the ‘layover’ rate if you are staying less than 12 hours. Use a travel credit card with no foreign transaction fees for the best exchange rate.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<p><strong>Best <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> Services:</strong> For flexibility, use <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> (free cancellation on many properties). For luxury, use Mr. & Mrs. Smith or Virtuoso for added perks like room upgrades, breakfast, and $100credit. For budget, use <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> or Hotels.com (collect 10 nights for 1 free night). Always book directly with the hotel if you have loyalty status—you will get points and often a better rate.</p>
+<p><strong>Additional Tips:</strong> Check if the hotel charges a ‘resort fee’ (common at luxury properties). In 2026, many hotels include free Wi-Fi, but some budget properties charge $5–10 per day. Always confirm if breakfast is included, as it can cost $15–30 per person separately. For airport hotels, book the ‘layover’ rate if you are staying less than 12 hours. Use a travel credit card with no foreign transaction fees for the best exchange rate.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -549,6 +633,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -577,6 +662,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -594,8 +680,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

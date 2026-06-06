@@ -6,7 +6,7 @@
     <title>Kuta Travel Guide 2026</title>
     <meta name="description" content="Kuta Travel Guide 2026 Kuta, on the southwestern coast of Bali, Indonesia, pulses with a raw, sun-drenched energy that has drawn travellers for decades. The ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Kuta Travel Guide 2026">
     <meta property="og:description" content="Kuta Travel Guide 2026 Kuta, on the southwestern coast of Bali, Indonesia, pulses with a raw, sun-drenched energy that has drawn travellers for decades. The ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/kuta-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/kuta.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Kuta Travel Guide 2026</div>
@@ -372,34 +396,34 @@
 
 <p>Average round-trip flight prices in 2026 (economy, booked 2-3 months in advance):</p>
 <ul>
-<li>From Singapore: $150 (≈ ₽14 250)–$250 (≈ ₽23 750) USD</li>
-<li>From Sydney, Australia: $400 (≈ ₽38 000)–$600 (≈ ₽57 000) USD</li>
-<li>From Tokyo, Japan: $500 (≈ ₽47 500)–$700 (≈ ₽66 500) USD</li>
-<li>From London, UK: $700 (≈ ₽66 500)–$1 000 (≈ ₽95 000) USD</li>
-<li>From New York, USA: $900 (≈ ₽85 500)–$1 300 (≈ ₽123 500) USD</li>
+<li>From Singapore: $150–$250USD</li>
+<li>From Sydney, Australia: $400–$600USD</li>
+<li>From Tokyo, Japan: $500–$700USD</li>
+<li>From London, UK: $700–$1 000USD</li>
+<li>From New York, USA: $900–$1 300USD</li>
 </ul>
-<p>Upon arrival, take a prepaid taxi (around 150,000–200,000 IDR, or $10 (≈ ₽950)–$13 (≈ ₽1 235) USD) or use ride-hailing apps like Gojek or Grab (often cheaper, around 80,000–120,000 IDR) for the 15-minute drive to central Kuta. A public airport bus (Trans Sarbagita) also runs but is less convenient with luggage.</p>
+<p>Upon arrival, take a prepaid taxi (around 150,000–$13 (200 $0 (000 IDR)), or $10–$13USD) or use ride-hailing apps like Gojek or Grab (often cheaper, around 80,000–$8 (120 $0 (000 IDR))) for the 15-minute drive to central Kuta. A public airport bus (Trans Sarbagita) also runs but is less convenient with luggage.</p>
 
 <h2>Where to Stay</h2>
 
 <p>Kuta offers accommodation for every budget, from backpacker dorms to luxury resorts. The main areas are Kuta Beachfront, Legian (north), and Tuban (south, near the airport).</p>
 
-<h3>Budget (Under $30 (≈ ₽2 850) USD/night)</h3>
+<h3>Budget (Under $30USD/night)</h3>
 <ul>
-<li><strong>Poppies Lane 1 & 2:</strong> The heart of backpacker Kuta. Guesthouses like <em>Poppies Bali Hotel</em> (from $25 (≈ ₽2 375)) offer simple, clean rooms with a pool. Expect noise, but incredible value.</li>
-<li><strong>Kuta Bed & Breakfast:</strong> A friendly, family-run option near the beach. Rooms from $20. (≈ ₽1 900)</li>
+<li><strong>Poppies Lane 1 & 2:</strong> The heart of backpacker Kuta. Guesthouses like <em>Poppies Bali Hotel</em> (from $25) offer simple, clean rooms with a pool. Expect noise, but incredible value.</li>
+<li><strong>Kuta Bed & Breakfast:</strong> A friendly, family-run option near the beach. Rooms from $20</li>
 </ul>
 
-<h3>Mid-Range ($30 (≈ ₽2 850)–$80 (≈ ₽7 600) USD/night)</h3>
+<h3>Mid-Range ($30–$80USD/night)</h3>
 <ul>
-<li><strong>Legian Beach:</strong> Hotels like <em>Puri Raja Hotel</em> (from $50 (≈ ₽4 750)) offer a pool, garden, and easy walk to the nightlife.</li>
-<li><strong>Kuta Paradiso Hotel:</strong> A classic mid-range resort with a large lagoon pool, from $65. (≈ ₽6 175)</li>
+<li><strong>Legian Beach:</strong> Hotels like <em>Puri Raja Hotel</em> (from $50) offer a pool, garden, and easy walk to the nightlife.</li>
+<li><strong>Kuta Paradiso Hotel:</strong> A classic mid-range resort with a large lagoon pool, from $65</li>
 </ul>
 
-<h3>Luxury (Over $80 (≈ ₽7 600) USD/night)</h3>
+<h3>Luxury (Over $80USD/night)</h3>
 <ul>
-<li><strong>The Stones Hotel – Legian:</strong> A contemporary luxury property with a stunning rooftop pool, from $120. (≈ ₽11 400)</li>
-<li><strong>Hard Rock Hotel Bali:</strong> A massive, family-friendly rock-and-roll themed resort with a huge pool and live music, from $150. (≈ ₽14 250)</li>
+<li><strong>The Stones Hotel – Legian:</strong> A contemporary luxury property with a stunning rooftop pool, from $120</li>
+<li><strong>Hard Rock Hotel Bali:</strong> A massive, family-friendly rock-and-roll themed resort with a huge pool and live music, from $150</li>
 </ul>
 
 <h2>Top 15 Attractions</h2>
@@ -488,7 +512,7 @@
 <tr>
 <td>11</td>
 <td>Surfing at Kuta Reef</td>
-<td>The main surf break. Rent a board (from 50,000 IDR/hour) or take a 2-hour lesson (from 300,000 IDR). Best at low tide.</td>
+<td>The main surf break. Rent a board (from$3 (50 $0 (000 IDR))/hour) or take a 2-hour lesson (from$19 (300 $0 (000 IDR))). Best at low tide.</td>
 <td>Board rental: 50,000/hr</td>
 <td>Best 6:00 AM – 10:00 AM</td>
 </tr>
@@ -528,36 +552,36 @@
 <p>Kuta is compact and walkable for short distances, but for longer trips, use these options:</p>
 <ul>
 <li><strong>Walking:</strong> Best for Kuta Beach, Legian, and Poppies Lane. Wear sunscreen and watch for scooters on sidewalks.</li>
-<li><strong>Ride-hailing (Gojek/Grab):</strong> The most convenient. A short trip within Kuta costs 15,000–30,000 IDR ($1 (≈ ₽95)–$2 (≈ ₽190) USD). From Kuta to Seminyak: 40,000–60,000 IDR.</li>
-<li><strong>Taxi (Blue Bird Group):</strong> Reliable metered taxis. Flagfall is 7,000 IDR, then 5,000 IDR per km. A trip to the airport costs around 100,000 IDR.</li>
-<li><strong>Scooter Rental:</strong> Very popular. Rent from 70,000–100,000 IDR per day ($5 (≈ ₽475)–$7 (≈ ₽665) USD). Requires an International Driving Permit (IDP) and helmet. Traffic is chaotic.</li>
-<li><strong>Trans Sarbagita Bus:</strong> A public bus system connecting Kuta to Denpasar, Sanur, and Nusa Dua. Fares are 3,500–10,000 IDR per trip. Not frequent but cheap.</li>
-<li><strong>Bicycle:</strong> Some hotels rent bicycles for 50,000 IDR/day. Flat terrain but heavy traffic.</li>
+<li><strong>Ride-hailing (Gojek/Grab):</strong> The most convenient. A short trip within Kuta costs 15,000–$2 (30 $0 (000 IDR)) ($1–$2USD). From Kuta to Seminyak: 40,000–$4 (60 $0 (000 IDR)).</li>
+<li><strong>Taxi (Blue Bird Group):</strong> Reliable metered taxis. Flagfall is$0 (7 $0 (000 IDR)), then$0 (5 $0 (000 IDR)) per km. A trip to the airport costs around$6 (100 $0 (000 IDR)).</li>
+<li><strong>Scooter Rental:</strong> Very popular. Rent from 70,000–$6 (100 $0 (000 IDR)) per day ($5–$7USD). Requires an International Driving Permit (IDP) and helmet. Traffic is chaotic.</li>
+<li><strong>Trans Sarbagita Bus:</strong> A public bus system connecting Kuta to Denpasar, Sanur, and Nusa Dua. Fares are 3,500–$1 (10 $0 (000 IDR)) per trip. Not frequent but cheap.</li>
+<li><strong>Bicycle:</strong> Some hotels rent bicycles for$3 (50 $0 (000 IDR))/day. Flat terrain but heavy traffic.</li>
 </ul>
 
 <h2>Where to Eat</h2>
 
 <p>Kuta’s food scene ranges from cheap street stalls to high-end dining. Expect a mix of Indonesian and international cuisines.</p>
 
-<h3>Budget (Under 50,000 IDR per meal)</h3>
+<h3>Budget (Under$3 (50 $0 (000 IDR)) per meal)</h3>
 <ul>
-<li><strong>Warung Babi Guling Ibu Oka:</strong> Famous for Balinese suckling pig (babi guling). A plate is 35,000 IDR.</li>
-<li><strong>Kuta Night Market:</strong> Satay sticks (15,000 IDR for 10), nasi goreng (20,000 IDR), and fresh coconut (15,000 IDR).</li>
-<li><strong>Mie Gacoan:</strong> A wildly popular local chain serving spicy noodles (mie setan) for 25,000–40,000 IDR.</li>
+<li><strong>Warung Babi Guling Ibu Oka:</strong> Famous for Balinese suckling pig (babi guling). A plate is$2 (35 $0 (000 IDR)).</li>
+<li><strong>Kuta Night Market:</strong> Satay sticks ($1 (15 $0 (000 IDR)) for 10), nasi goreng ($1 (20 $0 (000 IDR))), and fresh coconut ($1 (15 $0 (000 IDR))).</li>
+<li><strong>Mie Gacoan:</strong> A wildly popular local chain serving spicy noodles (mie setan) for 25,000–$3 (40 $0 (000 IDR)).</li>
 </ul>
 
-<h3>Mid-Range (50,000–150,000 IDR per meal)</h3>
+<h3>Mid-Range (50,000–$9 (150 $0 (000 IDR)) per meal)</h3>
 <ul>
-<li><strong>Bamboo Corner:</strong> A Kuta institution serving affordable Indonesian and Western food. Nasi campur is 45,000 IDR.</li>
-<li><strong>Made's Warung:</strong> A classic Balinese restaurant in Seminyak (10-min walk). Try the bebek betutu (slow-cooked duck) for 90,000 IDR.</li>
-<li><strong>Fat Chow:</strong> Asian fusion with great cocktails. A bowl of laksa is 85,000 IDR.</li>
+<li><strong>Bamboo Corner:</strong> A Kuta institution serving affordable Indonesian and Western food. Nasi campur is$3 (45 $0 (000 IDR)).</li>
+<li><strong>Made's Warung:</strong> A classic Balinese restaurant in Seminyak (10-min walk). Try the bebek betutu (slow-cooked duck) for$6 (90 $0 (000 IDR)).</li>
+<li><strong>Fat Chow:</strong> Asian fusion with great cocktails. A bowl of laksa is$5 (85 $0 (000 IDR)).</li>
 </ul>
 
-<h3>High-End (Over 150,000 IDR per meal)</h3>
+<h3>High-End (Over$9 (150 $0 (000 IDR)) per meal)</h3>
 <ul>
-<li><strong>Merah Putih:</strong> Fine dining Indonesian cuisine in Seminyak. Tasting menu from 350,000 IDR.</li>
-<li><strong>Jimbaran Bay Seafood:</strong> A 20-minute drive south. Grilled fish, prawns, and lobster on the beach. A full meal for two is 500,000–800,000 IDR.</li>
-<li><strong>The Beach House:</strong> Beachfront dining with sunset views. A steak is 250,000 IDR.</li>
+<li><strong>Merah Putih:</strong> Fine dining Indonesian cuisine in Seminyak. Tasting menu from$22 (350 $0 (000 IDR)).</li>
+<li><strong>Jimbaran Bay Seafood:</strong> A 20-minute drive south. Grilled fish, prawns, and lobster on the beach. A full meal for two is 500,000–$51 (800 $0 (000 IDR)).</li>
+<li><strong>The Beach House:</strong> Beachfront dining with sunset views. A steak is$16 (250 $0 (000 IDR)).</li>
 </ul>
 
 <h2>Best Time to Visit</h2>
@@ -575,7 +599,7 @@
 
 <h2>Visa & Documents</h2>
 
-<p>For most nationalities (including USA, UK, Australia, EU, Canada), Indonesia offers a <strong>Visa on Arrival (VoA)</strong> at Ngurah Rai Airport. In 2026, the cost is <strong>500,000 IDR</strong> (approximately $33 (≈ ₽3 135) USD). The visa is valid for 30 days and can be extended once for another 30 days at an immigration office (cost: 500,000 IDR for extension).</p>
+<p>For most nationalities (including USA, UK, Australia, EU, Canada), Indonesia offers a <strong>Visa on Arrival (VoA)</strong> at Ngurah Rai Airport. In 2026, the cost is <strong>$32 (500 $0 (000 IDR))</strong> (approximately $33USD). The visa is valid for 30 days and can be extended once for another 30 days at an immigration office (cost:$32 (500 $0 (000 IDR)) for extension).</p>
 <p>Requirements:</p>
 <ul>
 <li>Passport valid for at least 6 months from date of entry.</li>
@@ -601,39 +625,39 @@
 <tbody>
 <tr>
 <td><strong>Accommodation</strong></td>
-<td>$70 (≈ ₽6 650)–$140 (≈ ₽13 300) ($10 (≈ ₽950)–$20 (≈ ₽1 900)/night)</td>
-<td>$210 (≈ ₽19 950)–$560 (≈ ₽53 200) ($30 (≈ ₽2 850)–$80 (≈ ₽7 600)/night)</td>
-<td>$560 (≈ ₽53 200)–$1 400 (≈ ₽133 000) ($80 (≈ ₽7 600)–$200 (≈ ₽19 000)/night)</td>
+<td>$70–$140($10–$20/night)</td>
+<td>$210–$560($30–$80/night)</td>
+<td>$560–$1 400($80–$200/night)</td>
 </tr>
 <tr>
 <td><strong>Food</strong></td>
-<td>$70 (≈ ₽6 650)–$105 (≈ ₽9 975) ($10 (≈ ₽950)–$15 (≈ ₽1 425)/day)</td>
-<td>$140 (≈ ₽13 300)–$280 (≈ ₽26 600) ($20 (≈ ₽1 900)–$40 (≈ ₽3 800)/day)</td>
-<td>$280 (≈ ₽26 600)–$560 (≈ ₽53 200) ($40 (≈ ₽3 800)–$80 (≈ ₽7 600)/day)</td>
+<td>$70–$105($10–$15/day)</td>
+<td>$140–$280($20–$40/day)</td>
+<td>$280–$560($40–$80/day)</td>
 </tr>
 <tr>
 <td><strong>Transport</strong></td>
-<td>$20 (≈ ₽1 900)–$35 (≈ ₽3 325) (scooter rental + Gojek)</td>
-<td>$35 (≈ ₽3 325)–$70 (≈ ₽6 650) (taxis + occasional car hire)</td>
-<td>$70 (≈ ₽6 650)–$140 (≈ ₽13 300) (private driver, taxis)</td>
+<td>$20–$35(scooter rental + Gojek)</td>
+<td>$35–$70(taxis + occasional car hire)</td>
+<td>$70–$140(private driver, taxis)</td>
 </tr>
 <tr>
 <td><strong>Attractions/Activities</strong></td>
-<td>$30 (≈ ₽2 850)–$60 (≈ ₽5 700) (Waterbom, temple visits)</td>
-<td>$60 (≈ ₽5 700)–$120 (≈ ₽11 400) (surf lessons, spa)</td>
-<td>$120 (≈ ₽11 400)–$300 (≈ ₽28 500) (private tours, fine dining)</td>
+<td>$30–$60(Waterbom, temple visits)</td>
+<td>$60–$120(surf lessons, spa)</td>
+<td>$120–$300(private tours, fine dining)</td>
 </tr>
 <tr>
 <td><strong>Miscellaneous</strong></td>
-<td>$20 (≈ ₽1 900)–$40 (≈ ₽3 800) (souvenirs, drinks)</td>
-<td>$40 (≈ ₽3 800)–$100 (≈ ₽9 500) (shopping, nightlife)</td>
-<td>$100 (≈ ₽9 500)–$300 (≈ ₽28 500) (spa, premium drinks)</td>
+<td>$20–$40(souvenirs, drinks)</td>
+<td>$40–$100(shopping, nightlife)</td>
+<td>$100–$300(spa, premium drinks)</td>
 </tr>
 <tr>
 <td><strong>TOTAL (7 days)</strong></td>
-<td><strong>$210 (≈ ₽19 950)–$380 (≈ ₽36 100) USD</strong></td>
-<td><strong>$485 (≈ ₽46 075)–$1 130 (≈ ₽107 350) USD</strong></td>
-<td><strong>$1 130 (≈ ₽107 350)–$2 700 (≈ ₽256 500) USD</strong></td>
+<td><strong>$210–$380USD</strong></td>
+<td><strong>$485–$1 130USD</strong></td>
+<td><strong>$1 130–$2 700USD</strong></td>
 </tr>
 </tbody>
 </table>
@@ -744,6 +768,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -772,6 +797,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -789,8 +815,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

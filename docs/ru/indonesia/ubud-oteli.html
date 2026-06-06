@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Убуд 2026: от бюджета до люкса Убуд, культурное сердце Бали, предлагает гостиничную инфраструктуру, которая за последние пять лет претерпела ...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Убуд 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Убуд 2026: от бюджета до люкса Убуд, культурное сердце Бали, предлагает гостиничную инфраструктуру, которая за последние пять лет претерпела ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/ubud-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ubud.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Убуд 2026: от бюджета до люкса</div>
@@ -359,55 +383,133 @@
         <div class="article-body">
             <article>
 <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
-<p>Убуд, культурное сердце Бали, предлагает гостиничную инфраструктуру, которая за последние пять лет претерпела значительную трансформацию. К 2026 году здесь насчитывается более 1200 официально зарегистрированных объектов размещения: от семейных гестхаусов до пятизвездочных курортов мирового бренда. Основные кластеры отелей сосредоточены вдоль улиц Джалан Рая Убуд (главная артерия), Джалан Ханоуман (центр с ресторанами) и в районе рисовых террас Кампухан-Тегаллаланг. Цены на проживание варьируются от ₽1 425 (≈ $15) за ночь в хостеле до ₽76 000 (≈ $800) в люксовых виллах с частными бассейнами. В 2026 году средняя стоимость номера в Убуд составляет ₽4 275 (≈ $45) для бюджетного сегмента, ₽10 450 (≈ $110) для среднего класса и ₽20 900 (≈ $220) для люкса. Пик сезона — июль-август и декабрь-январь — повышает цены на 30-50%, тогда как низкий сезон (февраль, март, ноябрь) дает скидки до 40%.</p>
+<p>Убуд, культурное сердце Бали, предлагает гостиничную инфраструктуру, которая за последние пять лет претерпела значительную трансформацию. К 2026 году здесь насчитывается более 1200 официально зарегистрированных объектов размещения: от семейных гестхаусов до пятизвездочных курортов мирового бренда. Основные кластеры отелей сосредоточены вдоль улиц Джалан Рая Убуд (главная артерия), Джалан Ханоуман (центр с ресторанами) и в районе рисовых террас Кампухан-Тегаллаланг. Цены на проживание варьируются от ₽1 425 ($15)за ночь в хостеле до ₽76 000 ($800)в люксовых виллах с частными бассейнами. В 2026 году средняя стоимость номера в Убуд составляет ₽4 275 ($45)для бюджетного сегмента, ₽10 450 ($110)для среднего класса и ₽20 900 ($220)для люкса. Пик сезона — июль-август и декабрь-январь — повышает цены на 30-50%, тогда как низкий сезон (февраль, март, ноябрь) дает скидки до 40%.</p>
 <p>Важно отметить, что Убуд — не пляжный курорт. Он расположен в 45 минутах езды от побережья, среди холмов и джунглей. Поэтому гостиничная инфраструктура здесь ориентирована на wellness, йогу, посещение храмов и культурных мероприятий. Большинство отелей имеют собственные спа-центры, бассейны с видом на тропический лес и предлагают бесплатные шаттлы до центра. В 2026 году тренд на экологичность привел к тому, что 70% отелей Убуд отказались от одноразового пластика, а 30% перешли на солнечную энергию. Ниже представлен топ-10 отелей, разбитых по бюджетным категориям, с реальными цифрами и фактами на 2026 год.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 <p>Для путешественников, которые хотят сэкономить, но не потерять в качестве, Убуд предлагает отличные варианты. Эти отели часто расположены в тихих переулках, имеют базовые удобства и дружелюбную атмосферу. Цены указаны с учетом налогов и сервисного сбора (21% на Бали).</p>
 
 <h3>1. Puri Garden Hotel & Hostel</h3>
-<p>Расположенный в центре, на Джалан Ханоуман, этот отель-хостел занимает здание с традиционной балийской архитектурой. В 2026 году Puri Garden предлагает частные номера от ₽3 325 (≈ $35) за ночь и места в дормиториях от ₽1 425 (≈ $15.) В стоимость включен завтрак «шведский стол» (с 7:00 до 10:00), бесплатный Wi-Fi (скорость до 50 Мбит/с) и ежедневные занятия йогой в 8:00 утра. Плюсы: центральное расположение (5 минут пешком до рынка Убуд), чистый бассейн, вечерняя развлекательная программа (баллийские танцы по средам). Минусы: шумно из-за близости к бару на крыше (до 23:00), в дормиториях нет кондиционеров (только вентиляторы), а частные номера имеют тонкие стены.</p>
+<div id="hc_410485" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Puri Garden Hotel & Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Puri Garden Hotel & Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_410485 .hc-slide');var d=document.querySelectorAll('#hc_410485 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_410485 .hc-slide');var d=document.querySelectorAll('#hc_410485 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Puri Garden Hotel & Hostel &bull; 2 photos</p></div>
+<p>Расположенный в центре, на Джалан Ханоуман, этот отель-хостел занимает здание с традиционной балийской архитектурой. В 2026 году Puri Garden предлагает частные номера от ₽3 325 ($35)за ночь и места в дормиториях от ₽1 425 ($15)В стоимость включен завтрак «шведский стол» (с 7:00 до 10:00), бесплатный Wi-Fi (скорость до 50 Мбит/с) и ежедневные занятия йогой в 8:00 утра. Плюсы: центральное расположение (5 минут пешком до рынка Убуд), чистый бассейн, вечерняя развлекательная программа (баллийские танцы по средам). Минусы: шумно из-за близости к бару на крыше (до 23:00), в дормиториях нет кондиционеров (только вентиляторы), а частные номера имеют тонкие стены.</p>
 
 <h3>2. Swastika Bungalows</h3>
-<p>Этот семейный отель находится в 10 минутах ходьбы от Леса обезьян, на тихой улице Джалан Монки Форест. Цены в 2026 году стартуют от ₽2 375 (≈ $25) за стандартный номер и ₽3 800 (≈ $40) за номер с балконом и видом на сад. Все 24 номера оборудованы кондиционерами (новые модели Daikin, 2025 года установки), горячей водой (бойлеры на 50 литров) и телевизорами с кабельными каналами. Завтрак (континентальный или баллийский) подается в номер или в саду. Плюсы: очень тихое место, идеально для пар, бесплатный велопрокат (4 велосипеда на отель), дружелюбный персонал (оценка 9.2 на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>). Минусы: нет бассейна (есть только небольшой пруд с рыбками), Wi-Fi слабый в номерах на втором этаже (скорость падает до 5 Мбит/с), завтрак однообразный (меню меняется раз в три дня).</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_101464" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Swastika Bungalows - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Swastika Bungalows - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Swastika Bungalows - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_101464 .hc-slide');var d=document.querySelectorAll('#hc_101464 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_101464 .hc-slide');var d=document.querySelectorAll('#hc_101464 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_101464 .hc-slide');var d=document.querySelectorAll('#hc_101464 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Swastika Bungalows &bull; 3 photos</p></div>
+<p>Этот семейный отель находится в 10 минутах ходьбы от Леса обезьян, на тихой улице Джалан Монки Форест. Цены в 2026 году стартуют от ₽2 375 ($25)за стандартный номер и ₽3 800 ($40)за номер с балконом и видом на сад. Все 24 номера оборудованы кондиционерами (новые модели Daikin, 2025 года установки), горячей водой (бойлеры на 50 литров) и телевизорами с кабельными каналами. Завтрак (континентальный или баллийский) подается в номер или в саду. Плюсы: очень тихое место, идеально для пар, бесплатный велопрокат (4 велосипеда на отель), дружелюбный персонал (оценка 9.2 на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>). Минусы: нет бассейна (есть только небольшой пруд с рыбками), Wi-Fi слабый в номерах на втором этаже (скорость падает до 5 Мбит/с), завтрак однообразный (меню меняется раз в три дня).</p>
 
 <h3>3. Tegal Sari Accommodation</h3>
-<p>Один из самых популярных бюджетных отелей Убуд, расположенный на границе рисовых террас Кампухан. В 2026 году цены выросли до ₽4 275 (≈ $45)-50 за ночь из-за растущего спроса. Отель предлагает 16 номеров в бунгало, каждое с собственной террасой и гамаком. В номерах: кровать размера Queen (160×200 см), сейф, чайник и фен. Завтрак (панкейки, фрукты, яйца по-баллийски) включен. Плюсы: потрясающий вид на рисовые поля (это главная причина бронирования), бесплатный трансфер до центра (каждый час с 9:00 до 21:00), экологичные инициативы (компостирование, сбор дождевой воды). Минусы: удаленность от центра (20 минут пешком в гору), нет ресторана на территории (только завтрак), вокруг много комаров (отель предоставляет репелленты, но они слабые).</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_906289" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Tegal Sari Accommodation - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Tegal Sari Accommodation - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Tegal Sari Accommodation - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_906289 .hc-slide');var d=document.querySelectorAll('#hc_906289 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_906289 .hc-slide');var d=document.querySelectorAll('#hc_906289 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_906289 .hc-slide');var d=document.querySelectorAll('#hc_906289 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Tegal Sari Accommodation &bull; 3 photos</p></div>
+<p>Один из самых популярных бюджетных отелей Убуд, расположенный на границе рисовых террас Кампухан. В 2026 году цены выросли до ₽4 275 ($45)-50 за ночь из-за растущего спроса. Отель предлагает 16 номеров в бунгало, каждое с собственной террасой и гамаком. В номерах: кровать размера Queen (160×200 см), сейф, чайник и фен. Завтрак (панкейки, фрукты, яйца по-баллийски) включен. Плюсы: потрясающий вид на рисовые поля (это главная причина бронирования), бесплатный трансфер до центра (каждый час с 9:00 до 21:00), экологичные инициативы (компостирование, сбор дождевой воды). Минусы: удаленность от центра (20 минут пешком в гору), нет ресторана на территории (только завтрак), вокруг много комаров (отель предоставляет репелленты, но они слабые).</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
-<p>Этот сегмент в Убуд самый конкурентный: здесь представлены как бутик-отели, так и сетевые бренды. Гости получают более высокий уровень сервиса, спа-услуги и часто — вид на джунгли. В 2026 году средняя цена в этой категории составляет ₽9 025 (≈ $95) за ночь.</p>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
+<p>Этот сегмент в Убуд самый конкурентный: здесь представлены как бутик-отели, так и сетевые бренды. Гости получают более высокий уровень сервиса, спа-услуги и часто — вид на джунгли. В 2026 году средняя цена в этой категории составляет ₽9 025 ($95)за ночь.</p>
 
 <h3>4. Bisma Eight</h3>
-<p>Бутик-отель в стиле «урбан-шик» на Джалан Бисма, в 10 минутах от дворца Убуд. В 2026 году цены варьируются от ₽11 400 (≈ $120) до ₽14 250 (≈ $150) за ночь в зависимости от сезона. Отель имеет 38 номеров, включая сьюиты с частными джакузи. Все номера оснащены смарт-телевизорами (43 дюйма, Samsung), док-станциями для телефонов и мини-барами с местными закусками. На территории — ресторан «Eight» с панорамной террасой (завтрак включен, обед и ужин — от ₽1 425 (≈ $15) на человека). Фишки: спа-центр с четырьмя массажными комнатами (60-минутный массаж — ₽3 800 (≈ $40)), бассейн с бесконечным краем (длина 25 метров), ежедневный чай с 15:00 до 17:00 (бесплатно). Плюсы: отличный сервис (оценка 9.5 на TripAdvisor), стильный дизайн, близость к галереям. Минусы: нет тренажерного зала, Wi-Fi может тормозить в часы пик (вечером скорость падает до 20 Мбит/с), парковка только на улице (отель не имеет собственной).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_374812" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Bisma Eight - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Bisma Eight - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Bisma Eight - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_374812 .hc-slide');var d=document.querySelectorAll('#hc_374812 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_374812 .hc-slide');var d=document.querySelectorAll('#hc_374812 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_374812 .hc-slide');var d=document.querySelectorAll('#hc_374812 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Bisma Eight &bull; 3 photos</p></div>
+<p>Бутик-отель в стиле «урбан-шик» на Джалан Бисма, в 10 минутах от дворца Убуд. В 2026 году цены варьируются от ₽11 400 ($120)до ₽14 250 ($150)за ночь в зависимости от сезона. Отель имеет 38 номеров, включая сьюиты с частными джакузи. Все номера оснащены смарт-телевизорами (43 дюйма, Samsung), док-станциями для телефонов и мини-барами с местными закусками. На территории — ресторан «Eight» с панорамной террасой (завтрак включен, обед и ужин — от ₽1 425 ($15)на человека). Фишки: спа-центр с четырьмя массажными комнатами (60-минутный массаж — ₽3 800 ($40)), бассейн с бесконечным краем (длина 25 метров), ежедневный чай с 15:00 до 17:00 (бесплатно). Плюсы: отличный сервис (оценка 9.5 на TripAdvisor), стильный дизайн, близость к галереям. Минусы: нет тренажерного зала, Wi-Fi может тормозить в часы пик (вечером скорость падает до 20 Мбит/с), парковка только на улице (отель не имеет собственной).</p>
 
 <h3>5. Komaneka at Bisma</h3>
-<p>Сетевой отель балийской сети Komaneka, расположенный в долине реки Бисма. В 2026 году цены стартуют от ₽9 025 (≈ $95) за ночь для стандартного номера и ₽12 350 (≈ $130) для номера с видом на реку. Отель имеет 50 номеров, каждый с балконом или террасой, кондиционером, сейфом и телевизором. Ванные комнаты — с ваннами (отдельностоящие, из местного камня). Завтрак — по меню (американский, континентальный или баллийский). Фишки: большой бассейн (20×10 метров) с зоной для детей, библиотека с книгами на английском и русском, бесплатные занятия по баллийскому языку по вторникам и четвергам. Плюсы: тихое расположение (в 15 минутах от центра), отличный завтрак (оценка 9.3), приветственный напиток и фрукты. Минусы: дорогой спа (60-минутный массаж — ₽5 225 (≈ $55)), нет лифта (номера на трех этажах), заселение строго после 14:00 (ранний заезд — ₽2 850 (≈ $30) дополнительно).</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="ба" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_431362" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Komaneka at Bisma - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Komaneka at Bisma - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Komaneka at Bisma - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_431362 .hc-slide');var d=document.querySelectorAll('#hc_431362 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_431362 .hc-slide');var d=document.querySelectorAll('#hc_431362 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_431362 .hc-slide');var d=document.querySelectorAll('#hc_431362 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Komaneka at Bisma &bull; 3 photos</p></div>
+<p>Сетевой отель балийской сети Komaneka, расположенный в долине реки Бисма. В 2026 году цены стартуют от ₽9 025 ($95)за ночь для стандартного номера и ₽12 350 ($130)для номера с видом на реку. Отель имеет 50 номеров, каждый с балконом или террасой, кондиционером, сейфом и телевизором. Ванные комнаты — с ваннами (отдельностоящие, из местного камня). Завтрак — по меню (американский, континентальный или баллийский). Фишки: большой бассейн (20×10 метров) с зоной для детей, библиотека с книгами на английском и русском, бесплатные занятия по баллийскому языку по вторникам и четвергам. Плюсы: тихое расположение (в 15 минутах от центра), отличный завтрак (оценка 9.3), приветственный напиток и фрукты. Минусы: дорогой спа (60-минутный массаж — ₽5 225 ($55)), нет лифта (номера на трех этажах), заселение строго после 14:00 (ранний заезд — ₽2 850 ($30)дополнительно).</p>
 
 <h3>6. The Udaya Resorts & Spa</h3>
-<p>Отель в стиле традиционного балийского дворца, расположенный в 2 км к северу от центра Убуд. Цены в 2026 году — от ₽7 600 (≈ $80) до ₽10 450 (≈ $110) за ночь. Номера (всего 42) оформлены в темных тонах с резной мебелью и балдахинами. В каждом номере: кондиционер, мини-бар, телевизор, сейф и ванная с дождевым душем. Завтрак включен (шведский стол с 6:30 до 10:30). Фишки: спа-центр с хаммамом и сауной (бесплатно для гостей с 7:00 до 11:00), бассейн с водопадом, ресторан «Kampung» с живой музыкой по вечерам. Плюсы: отличное соотношение цена-качество, бесплатный трансфер до центра (каждые 30 минут), просторные номера (от 35 кв. м). Минусы: удаленность от ресторанов (пешком 25 минут), Wi-Fi нестабилен в номерах на первом этаже (скорость до 10 Мбит/с), завтрак однообразный (меню меняется раз в неделю).</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_396985" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="The Udaya Resorts & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="The Udaya Resorts & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Udaya Resorts & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_396985 .hc-slide');var d=document.querySelectorAll('#hc_396985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_396985 .hc-slide');var d=document.querySelectorAll('#hc_396985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_396985 .hc-slide');var d=document.querySelectorAll('#hc_396985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Udaya Resorts & Spa &bull; 3 photos</p></div>
+<p>Отель в стиле традиционного балийского дворца, расположенный в 2 км к северу от центра Убуд. Цены в 2026 году — от ₽7 600 ($80)до ₽10 450 ($110)за ночь. Номера (всего 42) оформлены в темных тонах с резной мебелью и балдахинами. В каждом номере: кондиционер, мини-бар, телевизор, сейф и ванная с дождевым душем. Завтрак включен (шведский стол с 6:30 до 10:30). Фишки: спа-центр с хаммамом и сауной (бесплатно для гостей с 7:00 до 11:00), бассейн с водопадом, ресторан «Kampung» с живой музыкой по вечерам. Плюсы: отличное соотношение цена-качество, бесплатный трансфер до центра (каждые 30 минут), просторные номера (от 35 кв. м). Минусы: удаленность от ресторанов (пешком 25 минут), Wi-Fi нестабилен в номерах на первом этаже (скорость до 10 Мбит/с), завтрак однообразный (меню меняется раз в неделю).</p>
 
 <h3>7. Alam Shanti Ubud</h3>
-<p>Бутик-отель, расположенный среди рисовых террас в деревне Ньухкунинг, в 15 минутах езды от центра. В 2026 году цены составляют ₽6 650 (≈ $70)-90 за ночь. Отель имеет 20 номеров в отдельных бунгало, каждое с собственной верандой и видом на сад или рисовые поля. Номера оснащены кондиционерами, москитными сетками, чайниками и фенами. Завтрак (баллийский или континентальный) подается в номер или в ресторане у бассейна. Фишки: бесплатные занятия йогой по утрам (в 7:00), велосипеды напрокат (бесплатно, 6 штук), экскурсии по рисовым террасам с гидом (бесплатно, по запросу). Плюсы: аутентичная атмосфера, тишина (идеально для отдыха), дружелюбный персонал (оценка 9.1). Минусы: удаленность от центра (без транспорта сложно), нет телевизора в номерах (по задумке отеля), Wi-Fi только в зоне ресепшн (в номерах сигнал слабый).</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="им" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_954034" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Alam Shanti Ubud - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Alam Shanti Ubud - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Alam Shanti Ubud - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_954034 .hc-slide');var d=document.querySelectorAll('#hc_954034 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_954034 .hc-slide');var d=document.querySelectorAll('#hc_954034 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_954034 .hc-slide');var d=document.querySelectorAll('#hc_954034 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Alam Shanti Ubud &bull; 3 photos</p></div>
+<p>Бутик-отель, расположенный среди рисовых террас в деревне Ньухкунинг, в 15 минутах езды от центра. В 2026 году цены составляют ₽6 650 ($70)-90 за ночь. Отель имеет 20 номеров в отдельных бунгало, каждое с собственной верандой и видом на сад или рисовые поля. Номера оснащены кондиционерами, москитными сетками, чайниками и фенами. Завтрак (баллийский или континентальный) подается в номер или в ресторане у бассейна. Фишки: бесплатные занятия йогой по утрам (в 7:00), велосипеды напрокат (бесплатно, 6 штук), экскурсии по рисовым террасам с гидом (бесплатно, по запросу). Плюсы: аутентичная атмосфера, тишина (идеально для отдыха), дружелюбный персонал (оценка 9.1). Минусы: удаленность от центра (без транспорта сложно), нет телевизора в номерах (по задумке отеля), Wi-Fi только в зоне ресепшн (в номерах сигнал слабый).</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
-<p>Люксовый сегмент Убуд в 2026 году представлен в основном виллами с частными бассейнами и курортами мировых брендов. Средняя цена здесь — ₽23 750 (≈ $250) за ночь, но в пик сезона может доходить до ₽57 000 (≈ $600.) Эти отели предлагают высокий уровень приватности, спа-процедуры и гастрономический опыт.</p>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
+<p>Люксовый сегмент Убуд в 2026 году представлен в основном виллами с частными бассейнами и курортами мировых брендов. Средняя цена здесь — ₽23 750 ($250)за ночь, но в пик сезона может доходить до ₽57 000 ($600)Эти отели предлагают высокий уровень приватности, спа-процедуры и гастрономический опыт.</p>
 
 <h3>8. Viceroy Bali</h3>
-<p>Пятизвездочный курорт, расположенный на склоне долины реки Петеану, в 5 км от центра Убуд. В 2026 году цены стартуют от ₽33 250 (≈ $350) за ночь для виллы с видом на джунгли и до ₽76 000 (≈ $800) за президентскую виллу. Все 40 вилл имеют частные бассейны (от 15 до 50 кв. м), открытые террасы, кондиционеры, смарт-телевизоры и мини-бары. Ванные комнаты — с мраморными ваннами и дождевыми душами. Особенности: спа-центр «Lembah Spa» с восемью процедурными комнатами (60-минутный массаж — ₽7 600 (≈ $80)), ресторан «Cascades» с мишленовским шеф-поваром (средний чек — ₽4 750 (≈ $50) на человека), бесплатный трансфер до центра (по требованию). Плюсы: невероятный вид на джунгли (с каждого номера), отличный сервис (оценка 9.7 на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com), частный бассейн с подогревом (опция за ₽2 850 (≈ $30)). Минусы: очень дорогой ресторан (завтрак не включен в стандартный тариф), удаленность от магазинов (только на такси), строгие правила тишины после 22:00.</p>
+<div id="hc_461640" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Viceroy Bali - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Viceroy Bali - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Viceroy Bali - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_461640 .hc-slide');var d=document.querySelectorAll('#hc_461640 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_461640 .hc-slide');var d=document.querySelectorAll('#hc_461640 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_461640 .hc-slide');var d=document.querySelectorAll('#hc_461640 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Viceroy Bali &bull; 3 photos</p></div>
+<p>Пятизвездочный курорт, расположенный на склоне долины реки Петеану, в 5 км от центра Убуд. В 2026 году цены стартуют от ₽33 250 ($350)за ночь для виллы с видом на джунгли и до ₽76 000 ($800)за президентскую виллу. Все 40 вилл имеют частные бассейны (от 15 до 50 кв. м), открытые террасы, кондиционеры, смарт-телевизоры и мини-бары. Ванные комнаты — с мраморными ваннами и дождевыми душами. Особенности: спа-центр «Lembah Spa» с восемью процедурными комнатами (60-минутный массаж — ₽7 600 ($80)), ресторан «Cascades» с мишленовским шеф-поваром (средний чек — ₽4 750 ($50)на человека), бесплатный трансфер до центра (по требованию). Плюсы: невероятный вид на джунгли (с каждого номера), отличный сервис (оценка 9.7 на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com), частный бассейн с подогревом (опция за ₽2 850 ($30)). Минусы: очень дорогой ресторан (завтрак не включен в стандартный тариф), удаленность от магазинов (только на такси), строгие правила тишины после 22:00.</p>
 
 <h3>9. Capella Ubud, Bali</h3>
-<p>Уникальный курорт, состоящий из 22 шатров в стиле «сафари» посреди джунглей. Расположен в деревне Кедонг, в 25 минутах езды от центра Убуд. В 2026 году цены — от ₽47 500 (≈ $500) до ₽66 500 (≈ $700) за ночь. Каждый шатер (площадью от 60 до 120 кв. м) имеет частный бассейн, кондиционер, камин (для атмосферы) и ванную с медной ванной. Интерьер — в колониальном стиле с элементами балийского искусства. Особенности: спа-центр «Auriga» с хаммамом и сауной (60-минутный массаж — ₽9 500 (≈ $100)), ресторан «The Camp» с меню от шеф-повара (средний чек — ₽6 650 (≈ $70) на человека), бесплатные занятия по стрельбе из лука и соколиной охоте (по расписанию). Плюсы: эксклюзивность (всего 22 шатра), полное погружение в природу, отличный сервис (отель входит в список «Leading Hotels of the World»). Минусы: очень высокая цена, удаленность от города (без машины не обойтись), нет телевизора (по задумке отеля, чтобы гости отдыхали от технологий).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="вх" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_345786" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Capella Ubud, Bali - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Capella Ubud, Bali - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_345786 .hc-slide');var d=document.querySelectorAll('#hc_345786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_345786 .hc-slide');var d=document.querySelectorAll('#hc_345786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Capella Ubud, Bali &bull; 2 photos</p></div>
+<p>Уникальный курорт, состоящий из 22 шатров в стиле «сафари» посреди джунглей. Расположен в деревне Кедонг, в 25 минутах езды от центра Убуд. В 2026 году цены — от ₽47 500 ($500)до ₽66 500 ($700)за ночь. Каждый шатер (площадью от 60 до 120 кв. м) имеет частный бассейн, кондиционер, камин (для атмосферы) и ванную с медной ванной. Интерьер — в колониальном стиле с элементами балийского искусства. Особенности: спа-центр «Auriga» с хаммамом и сауной (60-минутный массаж — ₽9 500 ($100)), ресторан «The Camp» с меню от шеф-повара (средний чек — ₽6 650 ($70)на человека), бесплатные занятия по стрельбе из лука и соколиной охоте (по расписанию). Плюсы: эксклюзивность (всего 22 шатра), полное погружение в природу, отличный сервис (отель входит в список «Leading Hotels of the World»). Минусы: очень высокая цена, удаленность от города (без машины не обойтись), нет телевизора (по задумке отеля, чтобы гости отдыхали от технологий).</p>
 
 <h3>10. Four Seasons Resort Bali at Sayan</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Знаменитый курорт в долине реки Аюнг, в 10 минутах от центра Убуд. В 2026 году цены — от ₽38 000 (≈ $400) за ночь для номера в главном здании и до ₽57 000 (≈ $600) для виллы с видом на реку. Все 60 номеров и вилл имеют кондиционеры, смарт-телевизоры, мини-бары и ванные с мраморными раковинами. Особенности: спа-центр с тремя бассейнами (включая бесконечный бассейн с видом на джунгли), ресторан «Ayung Terrace» с панорамным видом (завтрак включен, обед и ужин — от ₽3 800 (≈ $40) на человека), бесплатные занятия по йоге, медитации и баллийскому массажу (по расписанию). Плюсы: легендарный сервис Four Seasons, потрясающий вид на реку и джунгли, отличная инфраструктура (тренажерный зал, библиотека, детский клуб). Минусы: очень дорогой спа (60-минутный массаж — ₽8 550 (≈ $90)), ресторан дорогой (средний чек — ₽5 700 (≈ $60)), шум от реки может мешать ночью (особенно в сезон дождей).</p>
+<div id="hc_622421" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons Resort Bali at Sayan - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons Resort Bali at Sayan - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons Resort Bali at Sayan - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_622421 .hc-slide');var d=document.querySelectorAll('#hc_622421 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_622421 .hc-slide');var d=document.querySelectorAll('#hc_622421 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_622421 .hc-slide');var d=document.querySelectorAll('#hc_622421 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons Resort Bali at Sayan &bull; 3 photos</p></div>
+<p>Знаменитый курорт в долине реки Аюнг, в 10 минутах от центра Убуд. В 2026 году цены — от ₽38 000 ($400)за ночь для номера в главном здании и до ₽57 000 ($600)для виллы с видом на реку. Все 60 номеров и вилл имеют кондиционеры, смарт-телевизоры, мини-бары и ванные с мраморными раковинами. Особенности: спа-центр с тремя бассейнами (включая бесконечный бассейн с видом на джунгли), ресторан «Ayung Terrace» с панорамным видом (завтрак включен, обед и ужин — от ₽3 800 ($40)на человека), бесплатные занятия по йоге, медитации и баллийскому массажу (по расписанию). Плюсы: легендарный сервис Four Seasons, потрясающий вид на реку и джунгли, отличная инфраструктура (тренажерный зал, библиотека, детский клуб). Минусы: очень дорогой спа (60-минутный массаж — ₽8 550 ($90)), ресторан дорогой (средний чек — ₽5 700 ($60)), шум от реки может мешать ночью (особенно в сезон дождей).</p>
 
 <h2>Как выбрать район</h2>
 <p>Выбор района в Убуд напрямую зависит от целей вашей поездки. Если вы приехали за пляжным отдыхом, Убуд — не лучшее место: до ближайшего пляжа (Санур) 45 минут на машине, до Куты — 1.5 часа. Для экскурсий и культурной программы идеально подходит центр (<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
@@ -501,6 +603,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -529,6 +632,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -546,8 +650,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

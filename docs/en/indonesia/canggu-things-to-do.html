@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Canggu 2026</title>
     <meta name="description" content="15 Best Things to Do in Canggu 2026 Once a quiet fishing village, Canggu has transformed into Bali&#39;s most dynamic coastal hub, blending surf culture with ric...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Canggu 2026">
     <meta property="og:description" content="15 Best Things to Do in Canggu 2026 Once a quiet fishing village, Canggu has transformed into Bali&#39;s most dynamic coastal hub, blending surf culture with ric...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/canggu-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/canggu.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Canggu 2026</div>
@@ -362,25 +386,24 @@
 <p>Once a quiet fishing village, Canggu has transformed into Bali's most dynamic coastal hub, blending surf culture with rice terraces and a thriving digital nomad scene. In 2026, the area offers an eclectic mix of attractions: world-class waves, bohemian beach clubs, ancient temples, and lush agricultural landscapes. Unlike the crowded chaos of Kuta or the high-end polish of Seminyak, Canggu retains a raw, earthy charm. Visitors come for the sunsets that paint the Indian Ocean in shades of amber, the black sand beaches, and the effortless fusion of tradition and trend. Whether you are a seasoned surfer, a yoga enthusiast, or a foodie, Canggu delivers an authentic slice of Bali that feels both timeless and cutting-edge.</p>
 
 <h2>15 Best Attractions in Canggu</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Batu Bolong Beach</h3>
-<p>Batu Bolong is the epicenter of Canggu's beach culture, famous for its consistent surf breaks and laid-back vibe. The black sand is dotted with rustic warungs and chic cafés, making it ideal for both surfers and sunbathers. In 2026, the beach remains free to access, though parking fees have risen to IDR 5,000 for scooters. Open 24 hours daily. To get there, take Jalan Pantai Batu Bolong from the main road; it is walkable from most central accommodations. Tip: arrive by 7 AM to secure a good spot and watch beginner surfers catch their first waves.</p>
+<p>Batu Bolong is the epicenter of Canggu's beach culture, famous for its consistent surf breaks and laid-back vibe. The black sand is dotted with rustic warungs and chic cafés, making it ideal for both surfers and sunbathers. In 2026, the beach remains free to access, though parking fees have risen to $0 (5 $0 (000 IDR))for scooters. Open 24 hours daily. To get there, take Jalan Pantai Batu Bolong from the main road; it is walkable from most central accommodations. Tip: arrive by 7 AM to secure a good spot and watch beginner surfers catch their first waves.</p>
 
 <h3>2. Tanah Lot Temple</h3>
-<p>Perched on a rocky outcrop just 15 minutes north of Canggu, Tanah Lot is one of Bali's most iconic sea temples. Built in the 16th century, it is a sacred site surrounded by crashing waves and dramatic sunsets. Ticket prices for foreign adults in 2026 are IDR 75,000, with children at IDR 40,000. Open from 6 AM to 7 PM daily. Accessible by scooter or taxi via Jalan Tanah Lot; expect heavy traffic at sunset. Tip: visit during low tide to walk to the base of the temple, but avoid the peak crowds by going early morning.</p>
+<p>Perched on a rocky outcrop just 15 minutes north of Canggu, Tanah Lot is one of Bali's most iconic sea temples. Built in the 16th century, it is a sacred site surrounded by crashing waves and dramatic sunsets. Ticket prices for foreign adults in 2026 are $5 (75 $0 (000 IDR))with children at $3 (40 $0 (000 IDR))Open from 6 AM to 7 PM daily. Accessible by scooter or taxi via Jalan Tanah Lot; expect heavy traffic at sunset. Tip: visit during low tide to walk to the base of the temple, but avoid the peak crowds by going early morning.</p>
 
 <h3>3. Echo Beach</h3>
-<p>Echo Beach is a favorite among intermediate surfers for its powerful right-hand reef break. The beach is flanked by stylish seafood restaurants and the famous The Lawn beach club. Entry is free, but parking costs IDR 10,000 for cars. Open 24 hours, though lifeguards are on duty from 7 AM to 6 PM. Located at the end of Jalan Pura Batu Mejan, it is a 10-minute drive from central Canggu. Tip: book a table at The Lawn for sunset dinner, but reserve a week in advance during high season.</p>
+<p>Echo Beach is a favorite among intermediate surfers for its powerful right-hand reef break. The beach is flanked by stylish seafood restaurants and the famous The Lawn beach club. Entry is free, but parking costs $1 (10 $0 (000 IDR))for cars. Open 24 hours, though lifeguards are on duty from 7 AM to 6 PM. Located at the end of Jalan Pura Batu Mejan, it is a 10-minute drive from central Canggu. Tip: book a table at The Lawn for sunset dinner, but reserve a week in advance during high season.</p>
 
 <h3>4. Berawa Beach</h3>
-<p>Berawa Beach is a long stretch of dark sand popular for its sunset views and family-friendly atmosphere. It houses Finns Recreation Club and several beach bars. No entrance fee; parking is IDR 5,000. Open all day. Reach it via Jalan Pantai Berawa. Tip: bring a blanket and snacks for a picnic; the beach is less crowded than Batu Bolong on weekdays.</p>
+<p>Berawa Beach is a long stretch of dark sand popular for its sunset views and family-friendly atmosphere. It houses Finns Recreation Club and several beach bars. No entrance fee; parking is $0 (5 $0 (000 IDR))Open all day. Reach it via Jalan Pantai Berawa. Tip: bring a blanket and snacks for a picnic; the beach is less crowded than Batu Bolong on weekdays.</p>
 
 <h3>5. Canggu Rice Fields</h3>
 <p>Hidden behind the bustling streets, Canggu's rice paddies offer a serene escape into Bali's agricultural heart. The terraced fields near Pererenan and Seseh are particularly photogenic. Free to explore. Best visited at sunrise or late afternoon. Access via small paths off Jalan Raya Canggu. Tip: rent a bicycle and follow the irrigation canals; you will find hidden temples and local farmers at work.</p>
 
 <h3>6. Finns Recreation Club</h3>
-<p>Finns is a massive recreational complex with a water park, gym, tennis courts, and a world-class beach club. Day passes for adults cost IDR 350,000 in 2026, including pool access and a towel. Open daily from 8 AM to 10 PM. Located on Jalan Pantai Berawa. Tip: book the "Finns VIP" package for IDR 750,000, which includes a sunbed and drink credit.</p>
+<p>Finns is a massive recreational complex with a water park, gym, tennis courts, and a world-class beach club. Day passes for adults cost $22 (350 $0 (000 IDR))in 2026, including pool access and a towel. Open daily from 8 AM to 10 PM. Located on Jalan Pantai Berawa. Tip: book the "Finns VIP" package for $47 (750 $0 (000 IDR))which includes a sunbed and drink credit.</p>
 
 <h3>7. Seseh Beach</h3>
 <p>Seseh is a quieter alternative to the main beaches, known for its black sand and traditional fishing boats. It is perfect for long walks and solitude. Free entry. Open 24 hours. Drive north from Canggu along Jalan Raya Seseh. Tip: visit during the full moon to see local ceremonies at the nearby Pura Seseh temple.</p>
@@ -389,16 +412,16 @@
 <p>This small but significant Hindu temple sits atop a cliff overlooking Echo Beach. It is less crowded than Tanah Lot but equally spiritual. Free to enter, though donations are appreciated. Open during daylight hours. Located at the southern end of Echo Beach. Tip: dress respectfully with a sarong and sash; you can borrow them at the entrance.</p>
 
 <h3>9. The Lawn Canggu</h3>
-<p>The Lawn is a premium beachfront venue offering sun loungers, a pool, and live DJ sets. It is a prime spot for sunset cocktails. Entry is free, but sunbed rentals start at IDR 200,000 per person. Open 8 AM to 11 PM. On Echo Beach. Tip: order the "Lawn Sunset Platter" for IDR 350,000, which serves two.</p>
+<p>The Lawn is a premium beachfront venue offering sun loungers, a pool, and live DJ sets. It is a prime spot for sunset cocktails. Entry is free, but sunbed rentals start at $13 (200 $0 (000 IDR))per person. Open 8 AM to 11 PM. On Echo Beach. Tip: order the "Lawn Sunset Platter" for $22 (350 $0 (000 IDR))which serves two.</p>
 
 <h3>10. Canggu Market</h3>
-<p>This weekend market (Saturdays and Sundays) features local artisans, organic produce, and street food. It is a great place to buy handmade crafts and batik. Free entry; items range from IDR 50,000 to IDR 500,000. Hours: 8 AM to 2 PM. Located at Jalan Pantai Batu Bolong. Tip: haggle politely; vendors expect a 10-15% discount.</p>
+<p>This weekend market (Saturdays and Sundays) features local artisans, organic produce, and street food. It is a great place to buy handmade crafts and batik. Free entry; items range from $3 (50 $0 (000 IDR))to $32 (500 $0 (000 IDR))Hours: 8 AM to 2 PM. Located at Jalan Pantai Batu Bolong. Tip: haggle politely; vendors expect a 10-15% discount.</p>
 
 <h3>11. Bali Equestrian Centre</h3>
-<p>Horseback riding through rice fields and along the beach is a unique Canggu experience. One-hour rides cost IDR 450,000 per person in 2026. Open 7 AM to 5 PM. Located on Jalan Raya Seseh. Tip: book sunset rides for stunning views; beginners are welcome with gentle horses.</p>
+<p>Horseback riding through rice fields and along the beach is a unique Canggu experience. One-hour rides cost $28 (450 $0 (000 IDR))per person in 2026. Open 7 AM to 5 PM. Located on Jalan Raya Seseh. Tip: book sunset rides for stunning views; beginners are welcome with gentle horses.</p>
 
 <h3>12. Canggu Yoga Studios</h3>
-<p>Numerous studios like The Practice and Serenity Yoga offer daily classes in Vinyasa, Hatha, and meditation. Drop-in classes cost IDR 150,000. Open from 6 AM to 8 PM. Spread across Canggu. Tip: try a "sunrise session" at Serenity Yoga for IDR 120,000; it includes a herbal tea.</p>
+<p>Numerous studios like The Practice and Serenity Yoga offer daily classes in Vinyasa, Hatha, and meditation. Drop-in classes cost $9 (150 $0 (000 IDR))Open from 6 AM to 8 PM. Spread across Canggu. Tip: try a "sunrise session" at Serenity Yoga for $8 (120 $0 (000 IDR)); it includes a herbal tea.</p>
 
 <h3>13. Pererenan Beach</h3>
 <p>Pererenan is a developing area with a laid-back surf vibe and fewer tourists. It has a long, uncrowded beach and a river estuary. Free entry. Open 24 hours. Drive 10 minutes north of central Canggu. Tip: explore the nearby Pererenan Temple for a cultural bonus.</p>
@@ -407,29 +430,28 @@
 <p>A free, community-built skatepark under the Jalan Raya Canggu bridge. It features ramps and rails for skaters and BMX riders. Free. Open 24 hours. Located near the Canggu traffic circle. Tip: bring your own board; rental is not available on-site.</p>
 
 <h3>15. Canggu Night Market</h3>
-<p>Every evening, food stalls line Jalan Pantai Batu Bolong offering local dishes like nasi goreng, satay, and fresh juices. Most dishes cost IDR 15,000-30,000. Open 5 PM to midnight. Tip: try the "pisang goreng" (fried banana) for IDR 10,000; it is a local favorite.</p>
+<p>Every evening, food stalls line Jalan Pantai Batu Bolong offering local dishes like nasi goreng, satay, and fresh juices. Most dishes cost $1 (15 $0 (000 IDR))-30,000. Open 5 PM to midnight. Tip: try the "pisang goreng" (fried banana) for $1 (10 $0 (000 IDR)); it is a local favorite.</p>
 
 <h2>Optimal Itineraries for Canggu</h2>
 
 <h3>1-Day Itinerary</h3>
-<p>Start at 6 AM with sunrise at Batu Bolong Beach (free). Walk to Canggu Rice Fields for a 45-minute photo walk. Breakfast at a local warung (IDR 40,000). By 9 AM, head to Tanah Lot Temple (IDR 75,000) for a cultural visit. Lunch at a beachfront café (IDR 100,000). Afternoon: surf or relax at Echo Beach (free). Sunset at The Lawn (free entry, sunbed optional). Dinner at Canggu Night Market (IDR 50,000). Total cost: approximately IDR 265,000 per person.</p>
+<p>Start at 6 AM with sunrise at Batu Bolong Beach (free). Walk to Canggu Rice Fields for a 45-minute photo walk. Breakfast at a local warung ($3 (40 $0 (000 IDR))). By 9 AM, head to Tanah Lot Temple ($5 (75 $0 (000 IDR))) for a cultural visit. Lunch at a beachfront café ($6 (100 $0 (000 IDR))). Afternoon: surf or relax at Echo Beach (free). Sunset at The Lawn (free entry, sunbed optional). Dinner at Canggu Night Market ($3 (50 $0 (000 IDR))). Total cost: approximately $17 (265 $0 (000 IDR))per person.</p>
 
 <h3>2-Day Itinerary</h3>
-<p>Day 1: Follow the 1-day plan. Day 2: Morning at Finns Recreation Club (IDR 350,000) from 8 AM to noon. Lunch at Finns restaurant (IDR 150,000). Afternoon: visit Pura Batu Mejan (free) and Seseh Beach (free) for a quiet walk. Evening: horseback ride at Bali Equestrian Centre (IDR 450,000) at 4 PM. Dinner at a seafood grill (IDR 200,000). Total: IDR 1,150,000.</p>
+<p>Day 1: Follow the 1-day plan. Day 2: Morning at Finns Recreation Club ($22 (350 $0 (000 IDR))) from 8 AM to noon. Lunch at Finns restaurant ($9 (150 $0 (000 IDR))). Afternoon: visit Pura Batu Mejan (free) and Seseh Beach (free) for a quiet walk. Evening: horseback ride at Bali Equestrian Centre ($28 (450 $0 (000 IDR))) at 4 PM. Dinner at a seafood grill ($13 (200 $0 (000 IDR))). Total: $73 (1 $9 (150000 IDR))</p>
 
 <h3>3-Day Itinerary</h3>
-<p>Days 1 and 2 as above. Day 3: Morning yoga class (IDR 150,000). Brunch at Canggu Market on Saturday/Sunday (IDR 100,000). Afternoon: explore Pererenan Beach (free) and skate at Canggu Skatepark (free). Late afternoon: sunset at Berawa Beach with a picnic (free). Farewell dinner at The Lawn (IDR 350,000). Total: IDR 1,750,000.</p>
+<p>Days 1 and 2 as above. Day 3: Morning yoga class ($9 (150 $0 (000 IDR))). Brunch at Canggu Market on Saturday/Sunday ($6 (100 $0 (000 IDR))). Afternoon: explore Pererenan Beach (free) and skate at Canggu Skatepark (free). Late afternoon: sunset at Berawa Beach with a picnic (free). Farewell dinner at The Lawn ($22 (350 $0 (000 IDR))). Total: $111 (1 $47 (750000 IDR))</p>
 
 <h2>Tours & Excursions</h2>
-<p>Several organized tours enhance your Canggu experience. The "Canggu Surf & Temple Tour" costs IDR 600,000 per person (including surfboard rental and Tanah Lot entry). The "Rice Field Cycling Tour" is IDR 450,000 (bike, guide, and lunch). For a full-day "North Bali Excursion" to Ubud and Bedugul, expect to pay IDR 1,200,000 per person (transport, guide, and lunch). Book via local operators like Bali Adventure Tours or online platforms. In 2026, private tours are popular for flexibility; a 6-hour private car with driver costs IDR 500,000.</p>
+<p>Several organized tours enhance your Canggu experience. The "Canggu Surf & Temple Tour" costs $38 (600 $0 (000 IDR))per person (including surfboard rental and Tanah Lot entry). The "Rice Field Cycling Tour" is $28 (450 $0 (000 IDR))(bike, guide, and lunch). For a full-day "North Bali Excursion" to Ubud and Bedugul, expect to pay $76 (1 $13 (200000 IDR))per person (transport, guide, and lunch). Book via local operators like Bali Adventure Tours or online platforms. In 2026, private tours are popular for flexibility; a 6-hour private car with driver costs $32 (500 $0 (000 IDR))</p>
 <a href="https://tp.media/click?shmarker=736226&promo_id=3774&source_type=link&type=click&campaign_id=103&trs=search_tours_canggu" target="_blank" rel="nofollow sponsored" class="affiliate-link">🏝 Book a tour to Canggu</a>
 
 <h2>Free Attractions in Canggu</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <p>Many of Canggu's best experiences cost nothing. All beaches—Batu Bolong, Echo, Berawa, Seseh, and Pererenan—are free to enter. The Canggu Rice Fields and Pura Batu Mejan temple are accessible without tickets. Canggu Skatepark is free for skaters. The Canggu Market has free entry, though you might spend on goods. Sunset views from any beach are complimentary, as are walks along the irrigation canals. Additionally, the "Canggu Art Walk" (self-guided) along Jalan Pantai Batu Bolong showcases street murals at no cost.</p>
 
 <h2>Practical Tips for Visiting Canggu</h2>
-<p><strong>Transportation:</strong> Scooter rental is the best way to navigate Canggu, costing IDR 70,000-100,000 per day in 2026. Ride-hailing apps like Gojek and Grab are available but may be restricted in certain areas due to local regulations. For longer trips, hire a private driver for IDR 500,000 per day. <strong>Combo Tickets:</strong> Some attractions offer combos; for example, Finns Recreation Club and The Lawn have a joint pass for IDR 500,000 (pool access and drink credit). Tanah Lot Temple and nearby Taman Ayun Temple have a combined ticket for IDR 100,000. <strong>Best Time to Visit:</strong> April to October is dry season; avoid November to March for heavy rains. <strong>Safety:</strong> Be cautious of strong currents at beaches; swim only where lifeguards are present. <strong>Currency:</strong> Indonesian Rupiah (IDR); ATMs are common, but carry cash for markets and warungs.</p>
+<p><strong>Transportation:</strong> Scooter rental is the best way to navigate Canggu, costing $4 (70 $0 (000 IDR))-100,000 per day in 2026. Ride-hailing apps like Gojek and Grab are available but may be restricted in certain areas due to local regulations. For longer trips, hire a private driver for $32 (500 $0 (000 IDR))per day. <strong>Combo Tickets:</strong> Some attractions offer combos; for example, Finns Recreation Club and The Lawn have a joint pass for $32 (500 $0 (000 IDR))(pool access and drink credit). Tanah Lot Temple and nearby Taman Ayun Temple have a combined ticket for $6 (100 $0 (000 IDR))<strong>Best Time to Visit:</strong> April to October is dry season; avoid November to March for heavy rains. <strong>Safety:</strong> Be cautious of strong currents at beaches; swim only where lifeguards are present. <strong>Currency:</strong> Indonesian Rupiah (IDR); ATMs are common, but carry cash for markets and warungs.</p>
 <a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_canggu" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Find hotels in Canggu on Hotellook</a><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
@@ -516,6 +538,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -544,6 +567,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -561,8 +585,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

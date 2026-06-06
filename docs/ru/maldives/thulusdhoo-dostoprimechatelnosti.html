@@ -7,8 +7,8 @@
     <meta name="description" content="Что посмотреть в Тулусду: 15 лучших мест 2026 Друзья, если вы ищете город, который сочетает в себе средневековое очарование, бурную ночную жизнь и невероятну...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-dostoprimechatelnosti.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-things-to-do.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-things-to-do.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-dostoprimechatelnosti.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Что посмотреть в Тулусду: 15 лучших мест 2026">
     <meta property="og:description" content="Что посмотреть в Тулусду: 15 лучших мест 2026 Друзья, если вы ищете город, который сочетает в себе средневековое очарование, бурную ночную жизнь и невероятну...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-dostoprimechatelnosti.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/thulusdhoo-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://www.hotels-maldives.net/data/Photos/OriginalPhoto/7901/790145/790145394.JPEG');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/thulusdhoo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Что посмотреть в Тулусду: 15 лучших мест 2026</div>
@@ -363,12 +387,11 @@
 <p>Друзья, если вы ищете город, который сочетает в себе средневековое очарование, бурную ночную жизнь и невероятную атмосферу южной Франции — Тулусду (или просто Тулуза, как называют её местные) — это именно то место. Я, Валентина, объездила полмира, но именно этот город на берегах Гаронны заставил моё сердце биться чаще. Здесь каждый камень дышит историей, а воздух пропитан ароматом фиалок и кассуле. В 2026 году Тулусду становится ещё более привлекательным: открываются обновлённые музеи, запускаются новые экскурсионные маршруты, а цены остаются вполне демократичными (по крайней мере, по сравнению с Парижем). Я подготовила для вас гид по 15 лучшим местам, которые обязательно стоит увидеть. Поехали!</p>
 
 <h2>15 лучших достопримечательностей</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Базилика Сен-Сернен (Basilique Saint-Sernin)</h3>
 <p>Это не просто церковь, а настоящий шедевр романской архитектуры, который входит в список Всемирного наследия ЮНЕСКО. Когда я впервые вошла внутрь, меня поразила эта суровая красота: массивные каменные своды, древние фрески и удивительная акустика. Здесь покоятся мощи святого Сатурнина, и каждый уголок пропитан духом паломников, которые веками шли по пути Святого Иакова.</p>
 <ul>
-<li><strong>Цена билета:</strong> ₽875 (≈ €8.50) (взрослый), дети до 12 лет — бесплатно. Аудиогид — €5.00.</li>
+<li><strong>Цена билета:</strong> ₽875 (€8)(взрослый), дети до 12 лет — бесплатно. Аудиогид — €5.00.</li>
 <li><strong>Часы работы:</strong> Ежедневно 08:00–18:30 (с мая по сентябрь до 19:30).</li>
 <li><strong>Как добраться:</strong> Метро линия B, станция "Saint-Sernin". Или пешком 10 минут от Капитолия.</li>
 <li><strong>Совет:</strong> Приходите к 10 утра, чтобы застать утреннюю мессу и услышать орган — это бесплатно и невероятно атмосферно!</li>
@@ -386,16 +409,16 @@
 <h3>3. Музей Augustins (Musée des Augustins)</h3>
 <p>Этот музей — настоящая жемчужина для любителей искусства. Расположенный в бывшем монастыре, он хранит коллекцию скульптур и картин от Средневековья до 19 века. Меня лично больше всего впечатлил клуатр (внутренний дворик) — тихий, зелёный, с ароматом лаванды. Идеальное место, чтобы спрятаться от полуденной жары.</p>
 <ul>
-<li><strong>Цена билета:</strong> ₽1 030 (≈ €10.00) (взрослый), студенты — €7.00. Первое воскресенье месяца — бесплатно.</li>
+<li><strong>Цена билета:</strong> ₽1 030 (€10)(взрослый), студенты — €7.00. Первое воскресенье месяца — бесплатно.</li>
 <li><strong>Часы работы:</strong> 10:00–18:00, выходной — вторник.</li>
 <li><strong>Как добраться:</strong> Пешком 5 минут от Капитолия, улица Rue de Metz.</li>
-<li><strong>Совет:</strong> Возьмите аудиогид (₽412 (≈ €4.00)) — он рассказывает удивительные истории о каждой картине. Я узнала, что одна из скульптур "улыбается" только в определённое время дня!</li>
+<li><strong>Совет:</strong> Возьмите аудиогид (₽412 (€4)) — он рассказывает удивительные истории о каждой картине. Я узнала, что одна из скульптур "улыбается" только в определённое время дня!</li>
 </ul>
 
 <h3>4. Церковь Якобинцев (Couvent des Jacobins)</h3>
 <p>Это место — настоящий архитектурный восторг! Церковь 13 века с "пальмовым деревом" из колонн, поддерживающих свод. А ещё здесь хранятся мощи Фомы Аквинского. Я помню, как зашла внутрь и замерла: свет проникал через витражи, создавая радужные блики на каменном полу. Тишина и величие.</p>
 <ul>
-<li><strong>Цена билета:</strong> ₽772 (≈ €7.50) (взрослый). Комбинированный билет с музеем Augustins — €15.00.</li>
+<li><strong>Цена билета:</strong> ₽772 (€8)(взрослый). Комбинированный билет с музеем Augustins — €15.00.</li>
 <li><strong>Часы работы:</strong> 09:00–18:30 (зимой до 17:30).</li>
 <li><strong>Как добраться:</strong> Пешком от Капитолия 10 минут, улица Rue Lakanal.</li>
 <li><strong>Совет:</strong> Загляните в сад при монастыре — там растут фиалки, символ Тулусду. Можно купить букетик у входа за €2.00.</li>
@@ -404,7 +427,7 @@
 <h3>5. Музей современного искусства Les Abattoirs</h3>
 <p>Если классика надоела, отправляйтесь сюда. Музей расположен в бывшей скотобойне (отсюда и название) и посвящён современному искусству — от Пикассо до Миро. Честно скажу, некоторые экспонаты меня шокировали, но это и есть суть современного искусства: заставлять думать. А ещё здесь отличная терраса с видом на Гаронну.</p>
 <ul>
-<li><strong>Цена билета:</strong> ₽1 133 (≈ €11.00) (взрослый), студенты — €7.00.</li>
+<li><strong>Цена билета:</strong> ₽1 133 (€11)(взрослый), студенты — €7.00.</li>
 <li><strong>Часы работы:</strong> 11:00–19:00, выходной — понедельник.</li>
 <li><strong>Как добраться:</strong> Метро линия A, станция "Saint-Cyprien République", затем пешком 5 минут.</li>
 <li><strong>Совет:</strong> По четвергам вход бесплатный с 17:00 до 19:00 — идеально для экономных путешественников!</li>
@@ -422,7 +445,7 @@
 <h3>7. Космический город (Cité de l'Espace)</h3>
 <p>Тулусду — столица авиации и космоса, поэтому этот парк обязателен к посещению! Здесь вы увидите настоящие ракеты (в том числе "Ариан-5"), спускаемые аппараты и симуляторы невесомости. Я испытала центрифугу — ощущения незабываемые! Дети будут в восторге от планетария и зоны с марсоходами.</p>
 <ul>
-<li><strong>Цена билета:</strong> ₽2 781 (≈ €27.00) (взрослый), дети 5–15 лет — €20.00. Семейный билет (2+2) — €85.00.</li>
+<li><strong>Цена билета:</strong> ₽2 781 (€27)(взрослый), дети 5–15 лет — €20.00. Семейный билет (2+2) — €85.00.</li>
 <li><strong>Часы работы:</strong> 09:30–18:00 (летом до 19:00). Касса закрывается за 1 час до закрытия.</li>
 <li><strong>Как добраться:</strong> Автобус №37 от метро "Jolimont" (15 минут). Есть бесплатная парковка.</li>
 <li><strong>Совет:</strong> Купите билет онлайн за 2 дня — скидка 10%. И обязательно посетите шоу "Марс: путешествие" — оно идёт только на французском, но визуал говорит сам за себя.</li>
@@ -431,7 +454,7 @@
 <h3>8. Музей истории Тулусду (Musée d'Histoire de Toulouse)</h3>
 <p>Малоизвестный, но очень уютный музей, который рассказывает историю города от галлов до наших дней. Мне особенно понравился зал с макетами средневековых домов — можно представить, как жили люди 500 лет назад. Билеты дешёвые, а экспозиция — душевная.</p>
 <ul>
-<li><strong>Цена билета:</strong> ₽515 (≈ €5.00) (взрослый).</li>
+<li><strong>Цена билета:</strong> ₽515 (€5)(взрослый).</li>
 <li><strong>Часы работы:</strong> 10:00–17:00, выходной — воскресенье.</li>
 <li><strong>Как добраться:</strong> Рядом с Капитолием, улица Rue du Taur.</li>
 <li><strong>Совет:</strong> Совместите с посещением базилики Сен-Сернен — они в 5 минутах друг от друга.</li>
@@ -449,19 +472,19 @@
 <h3>10. Рынок Виктора Гюго (Marché Victor Hugo)</h3>
 <p>Гастрономический рай! Здесь продают всё: от устриц и фуа-гра до трюфелей и сыров. Я провела здесь 2 часа, пробуя кассуле (знаменитое бобовое рагу с уткой) и запивая его местным сидром. Атмосфера невероятная: продавцы улыбаются, дают пробовать, рассказывают рецепты.</p>
 <ul>
-<li><strong>Цена билета:</strong> Вход бесплатный. Бюджет на еду — от ₽1 545 (≈ €15.00) за обед.</li>
+<li><strong>Цена билета:</strong> Вход бесплатный. Бюджет на еду — от ₽1 545 (€15)за обед.</li>
 <li><strong>Часы работы:</strong> Вторник–воскресенье 07:00–13:30. Понедельник — выходной.</li>
 <li><strong>Как добраться:</strong> Метро линия A, станция "Capitole", затем 5 минут пешком.</li>
-<li><strong>Совет:</strong> Идите голодными! И обязательно купите банку фиалкового варенья (₽824 (≈ €8.00)) — лучший сувенир.</li>
+<li><strong>Совет:</strong> Идите голодными! И обязательно купите банку фиалкового варенья (₽824 (€8)) — лучший сувенир.</li>
 </ul>
 
 <h3>11. Фонд Бемберга (Fondation Bemberg)</h3>
 <p>Скрытая жемчужина в старом особняке. Коллекция включает работы от старых мастеров до импрессионистов — Моне, Ренуар, Боннар. Я была поражена, как тихо и малолюдно здесь даже в пик сезона. Интерьеры самого особняка (с лепниной и каминами) уже стоят билета.</p>
 <ul>
-<li><strong>Цена билета:</strong> ₽1 236 (≈ €12.00) (взрослый), студенты — €8.00.</li>
+<li><strong>Цена билета:</strong> ₽1 236 (€12)(взрослый), студенты — €8.00.</li>
 <li><strong>Часы работы:</strong> 10:00–18:00, выходной — понедельник.</li>
 <li><strong>Как добраться:</strong> Площадь Капитолия, улица Rue de la Bourse.</li>
-<li><strong>Совет:</strong> Во второй вторник месяца — вход "плати сколько хочешь" (minimum ₽206 (≈ €2.00)).</li>
+<li><strong>Совет:</strong> Во второй вторник месяца — вход "плати сколько хочешь" (minimum ₽206 (€2)).</li>
 </ul>
 
 <h3>12. Сад Жарден де л'Отель де Виль (Jardin du Grand Rond)</h3>
@@ -476,7 +499,7 @@
 <h3>13. Музей авиации Aeroscopia</h3>
 <p>Для тех, кто без ума от самолётов. Музей расположен рядом с аэропортом и заводом Airbus. Вы увидите Concorde (да, тот самый!), A380 и десятки других моделей. Я была внутри Concorde — салон узкий, но ощущение прикосновения к истории невероятное.</p>
 <ul>
-<li><strong>Цена билета:</strong> ₽1 545 (≈ €15.00) (взрослый), дети 6–17 лет — €10.00. Комбо с экскурсией на завод Airbus — €35.00.</li>
+<li><strong>Цена билета:</strong> ₽1 545 (€15)(взрослый), дети 6–17 лет — €10.00. Комбо с экскурсией на завод Airbus — €35.00.</li>
 <li><strong>Часы работы:</strong> 09:30–18:00 (касса до 17:00).</li>
 <li><strong>Как добраться:</strong> Автобус №25 от метро "Compans-Caffarelli" (20 минут).</li>
 <li><strong>Совет:</strong> Бронируйте экскурсию на завод Airbus за 2 недели — места разлетаются быстро. И не забудьте паспорт!</li>
@@ -485,7 +508,7 @@
 <h3>14. Канал дю Миди (Canal du Midi)</h3>
 <p>Этот канал 17 века — объект ЮНЕСКО. Он тянется на 240 км, но в Тулусду есть прекрасный участок для прогулок. Я арендовала велосипед и проехала 10 км вдоль воды — платаны, шлюзы, уютные кафе. Романтика чистой воды. А ещё можно взять лодку на прокат.</p>
 <ul>
-<li><strong>Цена билета:</strong> Прогулка бесплатно. Аренда велосипеда — от ₽1 854 (≈ €18.00)/день. Лодка — от ₽5 150 (≈ €50.00)/час.</li>
+<li><strong>Цена билета:</strong> Прогулка бесплатно. Аренда велосипеда — от ₽1 854 (€18)/день. Лодка — от ₽5 150 (€50)/час.</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
 <li><strong>Как добраться:</strong> Метро линия B, станция "Saint-Sernin", затем 10 минут пешком к<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
@@ -573,6 +596,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -601,6 +625,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -618,8 +643,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="description" content="Фуджейра: полный путеводитель 2026 Фуджейра — это самый восточный и единственный эмират Объединенных Арабских Эмиратов, омываемый водами Индийского океана, а...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/fujairah-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/fujairah-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/fujairah-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/fujairah-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/fujairah-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/fujairah-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Фуджейра: полный путеводитель 2026">
     <meta property="og:description" content="Фуджейра: полный путеводитель 2026 Фуджейра — это самый восточный и единственный эмират Объединенных Арабских Эмиратов, омываемый водами Индийского океана, а...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/fujairah-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/fujairah-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://fs.tonkosti.ru/tonkosti/table_img/g142/9d9d/266410251.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/fujairah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Фуджейра: полный путеводитель 2026</div>
@@ -370,7 +394,7 @@
 
 <p>Международный аэропорт Фуджейры (FJR) — небольшой, но современный хаб, принимающий рейсы из нескольких стран. В 2026 году аэропорт расширил взлетно-посадочную полосу, что позволило принимать широкофюзеляжные самолеты. Прямые рейсы из России выполняются авиакомпаниями «Уральские авиалинии» и «Аэрофлот» из Москвы (Шереметьево и Домодедово) и Санкт-Петербурга. В летний сезон (июнь–сентябрь) частота рейсов увеличивается до 4–5 раз в неделю. Средняя цена билета туда-обратно из Москвы в 2026 году составляет 52 000–68 000 рублей в эконом-классе, в зависимости от сезона. Из регионов (Екатеринбург, Казань, Новосибирск) доступны стыковочные рейсы через Дубай или Москву с общей стоимостью от 75 000 рублей.</p>
 
-<p>Альтернативный вариант — прилететь в аэропорт Дубая (DXB) и доехать до Фуджейры на такси или автобусе. Расстояние от Дубая до Фуджейры составляет 120 километров, дорога по трассе E88 (Sheikh Khalifa Highway) занимает около 1 часа 30 минут. Такси из аэропорта Дубая стоит 250–350 дирхамов (AED) (6 500–9 100 рублей). Автобусы компании «Emirates Bus» отправляются от автовокзала Al Ghubaiba каждые 2 часа, цена билета — 30 AED (780 рублей), время в пути — 2 часа 15 минут. Также можно долететь до аэропорта Шарджи (SHJ) — оттуда до Фуджейры 110 километров, такси обойдется в 200–280 AED (5 200–7 280 рублей).</p>
+<p>Альтернативный вариант — прилететь в аэропорт Дубая (DXB) и доехать до Фуджейры на такси или автобусе. Расстояние от Дубая до Фуджейры составляет 120 километров, дорога по трассе E88 (Sheikh Khalifa Highway) занимает около 1 часа 30 минут. Такси из аэропорта Дубая стоит 250–350 дирхамов (AED) (6 500–9 100 рублей). Автобусы компании «Emirates Bus» отправляются от автовокзала Al Ghubaiba каждые 2 часа, цена билета —₽777 (30 AED) (780 рублей), время в пути — 2 часа 15 минут. Также можно долететь до аэропорта Шарджи (SHJ) — оттуда до Фуджейры 110 километров, такси обойдется в 200–₽7 252 (280 AED) (5 200–7 280 рублей).</p>
 
 <h2>Где остановиться</h2>
 
@@ -386,7 +410,7 @@
 <tr><td>Горы</td><td>Глэмпинг (шатер)</td><td>200–400</td><td>5 200–10 400</td></tr>
 </table>
 
-<p>Рекомендуемые отели: «Novotel Fujairah» (4*, центр, от 450 AED/ночь) — отличное соотношение цены и качества; «Fairmont Fujairah Beach Resort» (5*, побережье, от 1 100 AED/ночь) — премиальный отдых с собственным пляжем и спа; «Al Fattan Plaza Hotel» (3*, центр, от 280 AED/ночь) — бюджетный вариант с чистым номером и завтраком. Для экономных путешественников подойдут апартаменты на Airbnb — студия в центре стоит от 150 AED (3 900 рублей) за ночь.</p>
+<p>Рекомендуемые отели: «Novotel Fujairah» (4*, центр, от₽11 655 (450 AED)/ночь) — отличное соотношение цены и качества; «Fairmont Fujairah Beach Resort» (5*, побережье, от₽28 490 (1 ₽2 590 (100 AED))/ночь) — премиальный отдых с собственным пляжем и спа; «Al Fattan Plaza Hotel» (3*, центр, от₽7 252 (280 AED)/ночь) — бюджетный вариант с чистым номером и завтраком. Для экономных путешественников подойдут апартаменты на Airbnb — студия в центре стоит от₽3 885 (150 AED) (3 900 рублей) за ночь.</p>
 
 <h2>Топ-15 достопримечательностей</h2>
 
@@ -394,38 +418,38 @@
 <li><strong>Форт Фуджейра (Fujairah Fort)</strong> — старейшая крепость эмирата, построенная в 1670 году. Расположена в центре города на скалистом холме. Внутри — небольшой музей с артефактами. Цена: бесплатно. Часы работы: ежедневно с 8:00 до 18:00.</li>
 <li><strong>Мечеть Аль-Бидия (Al Bidya Mosque)</strong> — самая старая мечеть ОАЭ (1446 год). Уникальное глинобитное сооружение с четырьмя куполами. Вход свободный. Часы работы: с 9:00 до 17:00, кроме пятницы.</li>
 <li><strong>Грязевые вулканы (Ain Al Waal)</strong> — природное явление в 30 км к северу от города. Небольшие грязевые кратеры, действующие круглый год. Вход: бесплатно. Доступны круглосуточно.</li>
-<li><strong>Вади-Вурайя (Wadi Wurayah)</strong> — национальный парк и биосферный заповедник ЮНЕСКО. Треккинг среди гор, водопадов и бассейнов с пресной водой. Цена: 30 AED (780 рублей). Часы работы: с 7:00 до 18:00.</li>
+<li><strong>Вади-Вурайя (Wadi Wurayah)</strong> — национальный парк и биосферный заповедник ЮНЕСКО. Треккинг среди гор, водопадов и бассейнов с пресной водой. Цена:₽777 (30 AED) (780 рублей). Часы работы: с 7:00 до 18:00.</li>
 <li><strong>Пляж Аль-Ака (Al Aqah Beach)</strong> — главный пляжный курорт с белым песком и пальмами. Бесплатные общественные зоны и платные участки отелей. Работает круглосуточно.</li>
 <li><strong>Рынок рыбы и овощей (Fujairah Fish Market)</strong> — колоритный крытый рынок, где продают свежевыловленную рыбу (тунец, сибас, креветки). Вход свободный. Часы: с 6:00 до 12:00 и с 16:00 до 20:00.</li>
-<li><strong>Музей Фуджейры (Fujairah Museum)</strong> — археологическая и этнографическая коллекция. Экспонаты возрастом до 3000 лет. Цена: 10 AED (260 рублей). Часы: с 8:00 до 18:00, пятница — выходной.</li>
+<li><strong>Музей Фуджейры (Fujairah Museum)</strong> — археологическая и этнографическая коллекция. Экспонаты возрастом до 3000 лет. Цена:₽259 (10 AED) (260 рублей). Часы: с 8:00 до 18:00, пятница — выходной.</li>
 <li><strong>Гора Хадф (Jebel Hafeet)</strong> — высочайшая гора эмирата (1 249 м). Панорамный вид на океан и горы. Вход: бесплатно. Дорога на вершину открыта круглосуточно.</li>
 <li><strong>Коралловый остров Снуппи (Snoopy Island)</strong> — скалистый остров в 300 метрах от берега, популярное место для снорклинга. Добраться вплавь или на каяке. Бесплатно. Доступен круглосуточно.</li>
-<li><strong>Парк развлечений Fun City</strong> — крытый центр с аттракционами для детей (батуты, горки, игровые автоматы). Цена: 50 AED (1 300 рублей). Часы: с 10:00 до 22:00.</li>
+<li><strong>Парк развлечений Fun City</strong> — крытый центр с аттракционами для детей (батуты, горки, игровые автоматы). Цена:₽1 295 (50 AED) (1 300 рублей). Часы: с 10:00 до 22:00.</li>
 <li><strong>Крепость Аль-Хейль (Al Hayl Fort)</strong> — историческая крепость XVIII века в 15 км от города, окруженная пальмовой рощей. Вход: бесплатно. Часы: с 8:00 до 16:00.</li>
 <li><strong>Вади-Шам (Wadi Sham)</strong> — живописное ущелье с природными бассейнами и руинами древних поселений. Бесплатно. Лучше посещать с гидом.</li>
-<li><strong>Пляжный клуб Le Meridien</strong> — частный пляж с шезлонгами, зонтами и баром. Вход для не гостей отеля: 100 AED (2 600 рублей). Часы: с 8:00 до 19:00.</li>
+<li><strong>Пляжный клуб Le Meridien</strong> — частный пляж с шезлонгами, зонтами и баром. Вход для не гостей отеля:₽2 590 (100 AED) (2 600 рублей). Часы: с 8:00 до 19:00.</li>
 <li><strong>Рынок золота (Gold Souk)</strong> — десятки ювелирных лавок с золотом и драгоценностями. Цены на 15–20% ниже, чем в Дубае. Часы: с 9:00 до 13:00 и с 16:00 до 22:00.</li>
 <li><strong>Форт Бахла (Bahlah Fort)</strong> — руины древнего форта в 40 км от города, внесенные в список наследия ЮНЕСКО. Вход: бесплатно. Доступен круглосуточно.</li>
 </ol>
 
 <h2>Транспорт в городе</h2>
 
-<p>Метро в Фуджейре отсутствует — это небольшой город, где основным видом транспорта является автомобиль. Общественный транспорт представлен автобусами компании «Fujairah Transport»: 6 маршрутов, соединяющих центр с пляжами, рынком и промышленными зонами. Стоимость проезда — 5 AED (130 рублей) за поездку, интервал движения — 30–60 минут. Автобусы ходят с 6:00 до 21:00.</p>
+<p>Метро в Фуджейре отсутствует — это небольшой город, где основным видом транспорта является автомобиль. Общественный транспорт представлен автобусами компании «Fujairah Transport»: 6 маршрутов, соединяющих центр с пляжами, рынком и промышленными зонами. Стоимость проезда —₽129 (5 AED) (130 рублей) за поездку, интервал движения — 30–60 минут. Автобусы ходят с 6:00 до 21:00.</p>
 
-<p>Такси — самый удобный способ передвижения. В городе работают как официальные такси (зеленые машины с шашечками), так и агрегаторы Uber и Careem. Посадка — 5 AED (130 рублей), далее 1,5 AED (39 рублей) за километр. Поездка через весь город (5 км) стоит около 15–20 AED (390–520 рублей). Из аэропорта до центра — 30–40 AED (780–1 040 рублей).</p>
+<p>Такси — самый удобный способ передвижения. В городе работают как официальные такси (зеленые машины с шашечками), так и агрегаторы Uber и Careem. Посадка —₽129 (5 AED) (130 рублей), далее₽388 (15 AED) (39 рублей) за километр. Поездка через весь город (5 км) стоит около 15–₽518 (20 AED) (390–520 рублей). Из аэропорта до центра — 30–₽1 036 (40 AED) (780–1 040 рублей).</p>
 
-<p>Аренда автомобиля — отличный вариант для изучения окрестностей. Прокат в аэропорту или в городе: от 120 AED (3 120 рублей) в сутки за компактный седан (например, Toyota Yaris). Бензин стоит 2,8 AED (73 рубля) за литр. Дороги отличные, но будьте внимательны — в горах много крутых поворотов. Для аренды нужны международные права и кредитная карта. Велосипеды можно арендовать в отелях или специализированных магазинах — 50 AED (1 300 рублей) в день.</p>
+<p>Аренда автомобиля — отличный вариант для изучения окрестностей. Прокат в аэропорту или в городе: от₽3 108 (120 AED) (3 120 рублей) в сутки за компактный седан (например, Toyota Yaris). Бензин стоит₽725 (28 AED) (73 рубля) за литр. Дороги отличные, но будьте внимательны — в горах много крутых поворотов. Для аренды нужны международные права и кредитная карта. Велосипеды можно арендовать в отелях или специализированных магазинах —₽1 295 (50 AED) (1 300 рублей) в день.</p>
 
 <h2>Где поесть</h2>
 
-<p>Кухня Фуджейры — это смесь арабских, индийских и африканских традиций с акцентом на морепродукты. Главные местные блюда: махби (рис с мясом и специями), хаммур (рыба-групер на гриле) и регаг (тонкие лепешки с начинкой). Средний чек в бюджетном кафе — 25–40 AED (650–1 040 рублей), в ресторане среднего уровня — 80–120 AED (2 080–3 120 рублей), в премиум-заведении — от 200 AED (5 200 рублей).</p>
+<p>Кухня Фуджейры — это смесь арабских, индийских и африканских традиций с акцентом на морепродукты. Главные местные блюда: махби (рис с мясом и специями), хаммур (рыба-групер на гриле) и регаг (тонкие лепешки с начинкой). Средний чек в бюджетном кафе — 25–₽1 036 (40 AED) (650–1 040 рублей), в ресторане среднего уровня — 80–₽3 108 (120 AED) (2 080–3 120 рублей), в премиум-заведении — от₽5 180 (200 AED) (5 200 рублей).</p>
 
 <ul>
-<li><strong>Al Meshwar Restaurant</strong> — популярное место в центре с ливанской кухней. Шаурма, хумус, мясо на гриле. Средний чек: 60 AED (1 560 рублей). Адрес: Al Mariam Street.</li>
-<li><strong>Sadaf Restaurant</strong> — ресторан морепродуктов на пляже Аль-Ака. Свежий улов, вид на океан. Средний чек: 150 AED (3 900 рублей). Заказывайте сет «Mix Seafood Grill» за 95 AED (2 470 рублей).</li>
-<li><strong>Bait Al Kabsa</strong> — уютное кафе с домашней арабской едой. Порция кабсы (рис с курицей) — 35 AED (910 рублей). Адрес: Hamad Bin Abdulla Road.</li>
-<li><strong>Street Food Market</strong> — вечерний фуд-корт у рыбного рынка. Шаурма с курицей — 10 AED (260 рублей), сок сахарного тростника — 5 AED (130 рублей). Работает с 18:00 до 23:00.</li>
-<li><strong>Al Tannoor Restaurant</strong> — ресторан индийской кухни в районе Аль-Факкан. Бирьяни с бараниной — 28 AED (728 рублей). Открыт с 11:00 до 23:00.</li>
+<li><strong>Al Meshwar Restaurant</strong> — популярное место в центре с ливанской кухней. Шаурма, хумус, мясо на гриле. Средний чек:₽1 554 (60 AED) (1 560 рублей). Адрес: Al Mariam Street.</li>
+<li><strong>Sadaf Restaurant</strong> — ресторан морепродуктов на пляже Аль-Ака. Свежий улов, вид на океан. Средний чек:₽3 885 (150 AED) (3 900 рублей). Заказывайте сет «Mix Seafood Grill» за₽2 460 (95 AED) (2 470 рублей).</li>
+<li><strong>Bait Al Kabsa</strong> — уютное кафе с домашней арабской едой. Порция кабсы (рис с курицей) —₽906 (35 AED) (910 рублей). Адрес: Hamad Bin Abdulla Road.</li>
+<li><strong>Street Food Market</strong> — вечерний фуд-корт у рыбного рынка. Шаурма с курицей —₽259 (10 AED) (260 рублей), сок сахарного тростника —₽129 (5 AED) (130 рублей). Работает с 18:00 до 23:00.</li>
+<li><strong>Al Tannoor Restaurant</strong> — ресторан индийской кухни в районе Аль-Факкан. Бирьяни с бараниной —₽725 (28 AED) (728 рублей). Открыт с 11:00 до 23:00.</li>
 </ul>
 
 <h2>Лучшее время для поездки</h2>
@@ -541,6 +565,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -569,6 +594,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -586,8 +612,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Nusa Dua Travel Guide 2026</title>
     <meta name="description" content="Nusa Dua Travel Guide 2026 Nusa Dua, located on the southern tip of Bali, Indonesia, is a meticulously planned resort enclave known for its pristine white-sa...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Nusa Dua Travel Guide 2026">
     <meta property="og:description" content="Nusa Dua Travel Guide 2026 Nusa Dua, located on the southern tip of Bali, Indonesia, is a meticulously planned resort enclave known for its pristine white-sa...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/nusa-dua-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/nusa-dua.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Nusa Dua Travel Guide 2026</div>
@@ -374,58 +398,58 @@
 
 <table>
 <tr><th>Departure City</th><th>Average Price (USD)</th><th>Flight Time</th></tr>
-<tr><td>Singapore</td><td>$150 (≈ ₽14 250) - $250 (≈ ₽23 750)</td><td>2.5 hours</td></tr>
-<tr><td>Kuala Lumpur</td><td>$180 (≈ ₽17 100) - $300 (≈ ₽28 500)</td><td>3 hours</td></tr>
-<tr><td>Sydney</td><td>$400 (≈ ₽38 000) - $600 (≈ ₽57 000)</td><td>6 hours</td></tr>
-<tr><td>Tokyo (Narita)</td><td>$500 (≈ ₽47 500) - $700 (≈ ₽66 500)</td><td>7 hours</td></tr>
-<tr><td>London (via Doha)</td><td>$700 (≈ ₽66 500) - $1 000 (≈ ₽95 000)</td><td>17 hours</td></tr>
-<tr><td>Los Angeles (via Narita)</td><td>$800 (≈ ₽76 000) - $1 200 (≈ ₽114 000)</td><td>18 hours</td></tr>
+<tr><td>Singapore</td><td>$150- $250</td><td>2.5 hours</td></tr>
+<tr><td>Kuala Lumpur</td><td>$180- $300</td><td>3 hours</td></tr>
+<tr><td>Sydney</td><td>$400- $600</td><td>6 hours</td></tr>
+<tr><td>Tokyo (Narita)</td><td>$500- $700</td><td>7 hours</td></tr>
+<tr><td>London (via Doha)</td><td>$700- $1 000</td><td>17 hours</td></tr>
+<tr><td>Los Angeles (via Narita)</td><td>$800- $1 200</td><td>18 hours</td></tr>
 </table>
 
-<p>From the airport, you can take a pre-paid taxi (approximately 150,000 IDR or $10 (≈ ₽950) USD) or arrange a private transfer through your hotel (often $15 (≈ ₽1 425)-$25 (≈ ₽2 375) USD). Ride-hailing apps like Grab and Gojek are allowed at the airport but may have designated pick-up points. For a premium experience, many hotels offer complimentary shuttle services.</p>
+<p>From the airport, you can take a pre-paid taxi (approximately$9 (150 $0 (000 IDR)) or $10USD) or arrange a private transfer through your hotel (often $15-$25USD). Ride-hailing apps like Grab and Gojek are allowed at the airport but may have designated pick-up points. For a premium experience, many hotels offer complimentary shuttle services.</p>
 
 <h2>Where to Stay</h2>
 
 <p>Nusa Dua is synonymous with luxury, but there are options for mid-range budgets, particularly in the nearby areas of Benoa and Tanjung Benoa. The main resort area is divided into two zones: the Nusa Dua Resort Enclave (ITDC area) and the surrounding neighborhoods.</p>
 
-<h3>Luxury (Over $300 (≈ ₽28 500) per night)</h3>
+<h3>Luxury (Over $300per night)</h3>
 <ul>
-<li><strong>The St. Regis Bali Resort</strong>: 5-star beachfront property with private villas, a 12,000-square-foot lagoon pool, and the famous Remède Spa. Rates start at $450 (≈ ₽42 750) USD per night.</li>
-<li><strong>Muliat Resort Nusa Dua</strong>: A sprawling resort with 526 rooms, a 2.5-kilometer private beach, and 11 dining venues. Rates from $350 (≈ ₽33 250) USD per night.</li>
-<li><strong>Ritz-Carlton Bali</strong>: Perched on a cliff with ocean views, offering suites and villas with butler service. Rates from $400 (≈ ₽38 000) USD per night.</li>
+<li><strong>The St. Regis Bali Resort</strong>: 5-star beachfront property with private villas, a 12,000-square-foot lagoon pool, and the famous Remède Spa. Rates start at $450USD per night.</li>
+<li><strong>Muliat Resort Nusa Dua</strong>: A sprawling resort with 526 rooms, a 2.5-kilometer private beach, and 11 dining venues. Rates from $350USD per night.</li>
+<li><strong>Ritz-Carlton Bali</strong>: Perched on a cliff with ocean views, offering suites and villas with butler service. Rates from $400USD per night.</li>
 </ul>
 
-<h3>Mid-Range ($100 (≈ ₽9 500) - $300 (≈ ₽28 500) per night)</h3>
+<h3>Mid-Range ($100- $300per night)</h3>
 <ul>
-<li><strong>Novotel Bali Nusa Dua</strong>: A 4-star hotel with a large pool, kids' club, and direct beach access. Rates from $120 (≈ ₽11 400) USD per night.</li>
-<li><strong>Grand Whiz Hotel Nusa Dua</strong>: Affordable 4-star option with modern rooms and a rooftop pool. Rates from $80 (≈ ₽7 600) USD per night.</li>
-<li><strong>Bali Tropic Resort & Spa</strong>: A 4-star property set in tropical gardens, with Balinese-style bungalows. Rates from $90 (≈ ₽8 550) USD per night.</li>
+<li><strong>Novotel Bali Nusa Dua</strong>: A 4-star hotel with a large pool, kids' club, and direct beach access. Rates from $120USD per night.</li>
+<li><strong>Grand Whiz Hotel Nusa Dua</strong>: Affordable 4-star option with modern rooms and a rooftop pool. Rates from $80USD per night.</li>
+<li><strong>Bali Tropic Resort & Spa</strong>: A 4-star property set in tropical gardens, with Balinese-style bungalows. Rates from $90USD per night.</li>
 </ul>
 
-<h3>Budget (Under $100 (≈ ₽9 500) per night)</h3>
+<h3>Budget (Under $100per night)</h3>
 <ul>
-<li><strong>Hotel Santika Nusa Dua</strong>: A 3-star hotel with clean rooms, a pool, and a restaurant. Rates from $50 (≈ ₽4 750) USD per night.</li>
-<li><strong>Kubu Manggala Homestay</strong>: A family-run guesthouse with basic amenities, located 10 minutes from the beach. Rates from $30 (≈ ₽2 850) USD per night.</li>
-<li><strong>Nusa Dua Beach Inn</strong>: Simple rooms with air conditioning and Wi-Fi, close to local warungs. Rates from $25 (≈ ₽2 375) USD per night.</li>
+<li><strong>Hotel Santika Nusa Dua</strong>: A 3-star hotel with clean rooms, a pool, and a restaurant. Rates from $50USD per night.</li>
+<li><strong>Kubu Manggala Homestay</strong>: A family-run guesthouse with basic amenities, located 10 minutes from the beach. Rates from $30USD per night.</li>
+<li><strong>Nusa Dua Beach Inn</strong>: Simple rooms with air conditioning and Wi-Fi, close to local warungs. Rates from $25USD per night.</li>
 </ul>
 
 <h2>Top 15 Attractions</h2>
 
 <ol>
 <li><h3>1. Nusa Dua Beach (Geger Beach)</h3>
-<p>The main public beach in the enclave, known for its powdery white sand and calm, clear water. It is free to enter, with sunbeds and umbrellas for rent (50,000 IDR). Open 24 hours, but best visited from 6 AM to 6 PM.</p></li>
+<p>The main public beach in the enclave, known for its powdery white sand and calm, clear water. It is free to enter, with sunbeds and umbrellas for rent ($3 (50 $0 (000 IDR))). Open 24 hours, but best visited from 6 AM to 6 PM.</p></li>
 
 <li><h3>2. Water Blow</h3>
 <p>A natural rock formation where waves crash into a narrow crevice, shooting water up to 20 meters into the air. Free entry. Open daily from 7 AM to 7 PM.</p></li>
 
 <li><h3>3. Museum Pasifika</h3>
-<p>A museum showcasing over 600 works of art from 200 artists across 25 countries, focusing on Pacific and Asian art. Ticket: 100,000 IDR. Open 10 AM to 6 PM daily.</p></li>
+<p>A museum showcasing over 600 works of art from 200 artists across 25 countries, focusing on Pacific and Asian art. Ticket:$6 (100 $0 (000 IDR)). Open 10 AM to 6 PM daily.</p></li>
 
 <li><h3>4. Bali Collection Shopping Centre</h3>
 <p>A large open-air mall with international brand stores, restaurants, and a supermarket. Free entry. Open 10 AM to 10 PM daily.</p></li>
 
 <li><h3>5. Turtle Conservation and Education Centre (TCEC)</h3>
-<p>A conservation facility where you can see baby turtles and learn about efforts to protect sea turtles. Entry by donation (suggested 50,000 IDR). Open 9 AM to 5 PM daily.</p></li>
+<p>A conservation facility where you can see baby turtles and learn about efforts to protect sea turtles. Entry by donation (suggested$3 (50 $0 (000 IDR))). Open 9 AM to 5 PM daily.</p></li>
 
 <li><h3>6. Geger Temple (Pura Geger)</h3>
 <p>A small Hindu temple located on a cliff overlooking the ocean. Free entry, but a sarong is required. Open sunrise to sunset.</p></li>
@@ -434,7 +458,7 @@
 <p>A 2.5-kilometer paved pathway along the beach, perfect for jogging, cycling, or strolling. Free. Open 24 hours.</p></li>
 
 <li><h3>8. Bali National Golf Club</h3>
-<p>An 18-hole championship golf course with ocean views. Green fees: $100 (≈ ₽9 500)-$150 (≈ ₽14 250) USD. Open 6 AM to 6 PM.</p></li>
+<p>An 18-hole championship golf course with ocean views. Green fees: $100-$150USD. Open 6 AM to 6 PM.</p></li>
 
 <li><h3>9. Benoa Harbour</h3>
 <p>The main marina for water sports and boat trips to nearby islands like Nusa Lembongan. Free to enter. Open 7 AM to 5 PM.</p></li>
@@ -455,7 +479,7 @@
 <p>A seasonal cultural festival held in the Bali Collection area (usually July-August), featuring traditional dance, music, and food stalls. Free entry. Check local schedules.</p></li>
 
 <li><h3>15. Tanjung Benoa Beach</h3>
-<p>A long, narrow beach just north of Nusa Dua, known for water sports like parasailing, jet skiing, and banana boat rides. Free entry. Water sports prices vary (200,000 - 500,000 IDR per activity).</p></li>
+<p>A long, narrow beach just north of Nusa Dua, known for water sports like parasailing, jet skiing, and banana boat rides. Free entry. Water sports prices vary (200,000 -$32 (500 $0 (000 IDR)) per activity).</p></li>
 </ol>
 
 <h2>Getting Around</h2>
@@ -464,36 +488,36 @@
 
 <ul>
 <li><strong>Hotel Shuttle Buses</strong>: Most large resorts operate free shuttles to Bali Collection and the beach. Check with your hotel.</li>
-<li><strong>Taxis</strong>: Blue Bird taxis are reliable and metered. A trip within Nusa Dua costs 50,000 - 100,000 IDR. A trip to Kuta costs 150,000 IDR.</li>
-<li><strong>Ride-Hailing Apps</strong>: Grab and Gojek are widely available. A ride within the enclave costs 30,000 - 60,000 IDR. Note that some hotel entrances may restrict pick-ups.</li>
-<li><strong>Rental Scooters</strong>: Available from local shops for 70,000 - 100,000 IDR per day. A valid international driving permit is required. Be cautious of traffic on the main roads.</li>
-<li><strong>Bicycle Rental</strong>: Many hotels offer free bikes. Rental shops charge 50,000 IDR per day. The Beachwalk is ideal for cycling.</li>
-<li><strong>Private Car with Driver</strong>: For day trips, hire a driver for 500,000 - 800,000 IDR for 8 hours. This is the most comfortable option for exploring beyond Nusa Dua.</li>
+<li><strong>Taxis</strong>: Blue Bird taxis are reliable and metered. A trip within Nusa Dua costs 50,000 -$6 (100 $0 (000 IDR)). A trip to Kuta costs$9 (150 $0 (000 IDR)).</li>
+<li><strong>Ride-Hailing Apps</strong>: Grab and Gojek are widely available. A ride within the enclave costs 30,000 -$4 (60 $0 (000 IDR)). Note that some hotel entrances may restrict pick-ups.</li>
+<li><strong>Rental Scooters</strong>: Available from local shops for 70,000 -$6 (100 $0 (000 IDR)) per day. A valid international driving permit is required. Be cautious of traffic on the main roads.</li>
+<li><strong>Bicycle Rental</strong>: Many hotels offer free bikes. Rental shops charge$3 (50 $0 (000 IDR)) per day. The Beachwalk is ideal for cycling.</li>
+<li><strong>Private Car with Driver</strong>: For day trips, hire a driver for 500,000 -$51 (800 $0 (000 IDR)) for 8 hours. This is the most comfortable option for exploring beyond Nusa Dua.</li>
 </ul>
 
 <h2>Where to Eat</h2>
 
 <p>Nusa Dua offers a mix of high-end resort dining, international cuisine, and local warungs (small family-owned restaurants). Prices are higher than in other parts of Bali, but quality is consistent.</p>
 
-<h3>Fine Dining (Over 500,000 IDR per person)</h3>
+<h3>Fine Dining (Over$32 (500 $0 (000 IDR)) per person)</h3>
 <ul>
 <li><strong>Kayuputi (St. Regis)</strong>: Asian-inspired fine dining with ocean views. Signature dishes include wagyu beef and lobster. Open 6 PM - 10 PM.</li>
-<li><strong>Kisik Bar & Grill (Ayana Resort)</strong>: Seafood grill on the beach. A three-course meal costs 800,000 IDR. Open 6 PM - 11 PM.</li>
+<li><strong>Kisik Bar & Grill (Ayana Resort)</strong>: Seafood grill on the beach. A three-course meal costs$51 (800 $0 (000 IDR)). Open 6 PM - 11 PM.</li>
 <li><strong>Purnama Hati (Muliat Resort)</strong>: Japanese-Peruvian fusion with a tasting menu. Open 6 PM - 10 PM.</li>
 </ul>
 
-<h3>Mid-Range (100,000 - 500,000 IDR per person)</h3>
+<h3>Mid-Range (100,000 -$32 (500 $0 (000 IDR)) per person)</h3>
 <ul>
-<li><strong>Bumbu Bali</strong>: Authentic Balinese cuisine like babi guling and bebek betutu. A full meal costs 150,000 IDR. Open 11 AM - 10 PM.</li>
-<li><strong>Warung Babi Guling Chandra</strong>: A local favorite for crispy roasted pork. A portion costs 50,000 IDR. Open 10 AM - 4 PM.</li>
-<li><strong>Bali Collection Food Court</strong>: Multiple stalls offering Indonesian, Japanese, and Western dishes. A meal costs 80,000 - 150,000 IDR. Open 10 AM - 10 PM.</li>
+<li><strong>Bumbu Bali</strong>: Authentic Balinese cuisine like babi guling and bebek betutu. A full meal costs$9 (150 $0 (000 IDR)). Open 11 AM - 10 PM.</li>
+<li><strong>Warung Babi Guling Chandra</strong>: A local favorite for crispy roasted pork. A portion costs$3 (50 $0 (000 IDR)). Open 10 AM - 4 PM.</li>
+<li><strong>Bali Collection Food Court</strong>: Multiple stalls offering Indonesian, Japanese, and Western dishes. A meal costs 80,000 -$9 (150 $0 (000 IDR)). Open 10 AM - 10 PM.</li>
 </ul>
 
-<h3>Budget (Under 100,000 IDR per person)</h3>
+<h3>Budget (Under$6 (100 $0 (000 IDR)) per person)</h3>
 <ul>
-<li><strong>Warung Makan Bu Rus</strong>: Simple Indonesian dishes like nasi campur and soto ayam. A meal costs 30,000 IDR. Open 7 AM - 9 PM.</li>
-<li><strong>Nusa Dua Market (Pasar Nusa Dua)</strong>: Fresh fruit, satay, and local snacks. A meal costs 20,000 - 50,000 IDR. Open 6 AM - 2 PM.</li>
-<li><strong>Street Food Stalls (Alun-Alun Nusa Dua)</strong>: Evening stalls selling martabak, pisang goreng, and sate. Prices from 10,000 IDR. Open 5 PM - 10 PM.</li>
+<li><strong>Warung Makan Bu Rus</strong>: Simple Indonesian dishes like nasi campur and soto ayam. A meal costs$2 (30 $0 (000 IDR)). Open 7 AM - 9 PM.</li>
+<li><strong>Nusa Dua Market (Pasar Nusa Dua)</strong>: Fresh fruit, satay, and local snacks. A meal costs 20,000 -$3 (50 $0 (000 IDR)). Open 6 AM - 2 PM.</li>
+<li><strong>Street Food Stalls (Alun-Alun Nusa Dua)</strong>: Evening stalls selling martabak, pisang goreng, and sate. Prices from$1 (10 $0 (000 IDR)). Open 5 PM - 10 PM.</li>
 </ul>
 
 <h2>Best Time to Visit</h2>
@@ -520,13 +544,13 @@
 
 <h2>Visa & Documents</h2>
 
-<p>For most nationalities, including the United States, United Kingdom, Australia, and European Union countries, a Visa on Arrival (VoA) is available at Ngurah Rai Airport. As of 2026, the cost is 500,000 Indonesian Rupiah (approximately $33 (≈ ₽3 135) USD). The visa allows a stay of up to 30 days and can be extended once for an additional 30 days (fee: 500,000 IDR).</p>
+<p>For most nationalities, including the United States, United Kingdom, Australia, and European Union countries, a Visa on Arrival (VoA) is available at Ngurah Rai Airport. As of 2026, the cost is 500,000 Indonesian Rupiah (approximately $33USD). The visa allows a stay of up to 30 days and can be extended once for an additional 30 days (fee:$32 (500 $0 (000 IDR))).</p>
 
 <p>Requirements for VoA:</p>
 <ul>
 <li>A passport valid for at least 6 months from the date of arrival.</li>
 <li>A return or onward ticket.</li>
-<li>Sufficient funds (usually $1 000 (≈ ₽95 000) USD equivalent).</li>
+<li>Sufficient funds (usually $1 000USD equivalent).</li>
 <li>Completed electronic customs declaration (e-CD) before arrival.</li>
 </ul>
 
@@ -538,8 +562,8 @@
 
 <table>
 <tr><th>Category</th><th>Budget (USD)</th><th>Mid-Range (USD)</th><th>Luxury (USD)</th></tr>
-<tr><td>Accommodation (7 nights)</td><td>$210 (≈ ₽19 950) ($30 (≈ ₽2 850)/night)</td><td>$840 (≈ ₽79 800) ($120 (≈ ₽11 400)/night)</td><td>$3 150 (≈ ₽299 250) ($450 (≈ ₽42 750)/night)</td></tr>
-<tr><td>Food (3 meals/day)</td><td>$105 (≈ ₽9 975) ($15 (≈ ₽1 425)/day)</td><td>$280 (≈ ₽26 600) ($40 (≈ ₽3 800)/day)</td><td<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<tr><td>Accommodation (7 nights)</td><td>$210($30/night)</td><td>$840($120/night)</td><td>$3 150($450/night)</td></tr>
+<tr><td>Food (3 meals/day)</td><td>$105($15/day)</td><td>$280($40/day)</td><td<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -645,6 +669,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -673,6 +698,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -690,8 +716,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

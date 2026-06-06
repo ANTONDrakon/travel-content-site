@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Marsa Alam 2026</title>
     <meta name="description" content="15 Best Things to Do in Marsa Alam 2026 Marsa Alam, a rapidly emerging gem on Egypt’s Red Sea coast, offers a unique blend of pristine marine life, untouched...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Marsa Alam 2026">
     <meta property="og:description" content="15 Best Things to Do in Marsa Alam 2026 Marsa Alam, a rapidly emerging gem on Egypt’s Red Sea coast, offers a unique blend of pristine marine life, untouched...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/marsa-alam-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/marsa-alam.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Marsa Alam 2026</div>
@@ -362,34 +386,33 @@
 <p>Marsa Alam, a rapidly emerging gem on Egypt’s Red Sea coast, offers a unique blend of pristine marine life, untouched desert landscapes, and ancient history. Unlike the crowded resorts of Hurghada or Sharm el-Sheikh, Marsa Alam provides a quieter, more authentic experience, with world-class diving, serene beaches, and proximity to the Eastern Desert’s treasures. In 2026, the destination continues to attract eco-conscious travelers and adventure seekers, with new infrastructure making access easier. Whether you’re a snorkeler, a history buff, or simply seeking tranquility, Marsa Alam’s attractions deliver unforgettable encounters with nature and culture.</p>
 
 <h2>15 Best Attractions</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Abu Dabbab Beach</h3>
-<p>Abu Dabbab is a crescent-shaped bay famous for its resident green sea turtles and dugongs. The shallow, crystal-clear waters allow snorkelers to swim alongside these gentle giants just meters from shore. Entry is free, but sunbeds and umbrellas cost around 50 EGP ($1.60 (≈ ₽152)) per person. Open daily from sunrise to sunset. Located 30 km north of Marsa Alam city, accessible by taxi (200-300 EGP one-way) or rental car. Tip: Arrive before 9 AM to avoid crowds and maximize turtle sightings.</p>
+<p>Abu Dabbab is a crescent-shaped bay famous for its resident green sea turtles and dugongs. The shallow, crystal-clear waters allow snorkelers to swim alongside these gentle giants just meters from shore. Entry is free, but sunbeds and umbrellas cost around$1 (50 EGP) ($2) per person. Open daily from sunrise to sunset. Located 30 km north of Marsa Alam city, accessible by taxi (200-$6 (300 EGP) one-way) or rental car. Tip: Arrive before 9 AM to avoid crowds and maximize turtle sightings.</p>
 
 <h3>2. Marsa Mubarak (Dolphin House)</h3>
-<p>This sheltered lagoon is a natural dolphin sanctuary where spinner and bottlenose dolphins frequently appear. Snorkelers can observe them in their habitat, often swimming within arm’s reach. No entry fee, but boat tours from Port Ghalib cost 400-600 EGP per person (including snorkeling gear). Open 24/7, but best visited between 8 AM and noon. Reachable by boat (20 minutes from Port Ghalib) or by 4×4 via a desert track. Tip: Book a morning tour for calmer waters and higher dolphin activity.</p>
+<p>This sheltered lagoon is a natural dolphin sanctuary where spinner and bottlenose dolphins frequently appear. Snorkelers can observe them in their habitat, often swimming within arm’s reach. No entry fee, but boat tours from Port Ghalib cost 400-$12 (600 EGP) per person (including snorkeling gear). Open 24/7, but best visited between 8 AM and noon. Reachable by boat (20 minutes from Port Ghalib) or by 4×4 via a desert track. Tip: Book a morning tour for calmer waters and higher dolphin activity.</p>
 
 <h3>3. Elphinstone Reef</h3>
-<p>Elphinstone is a world-renowned dive site, featuring a steep drop-off and vibrant coral walls. It’s a drift dive, with strong currents attracting pelagic species like grey reef sharks, hammerheads, and barracudas. Diving trips cost 800-1,200 EGP per person (two dives, including equipment). Open year-round, but best visibility (30-40 meters) from April to October. Accessible by boat from Marsa Alam Marina (45-minute ride). Tip: Certified divers only—currents are challenging; hire a local guide for safety.</p>
+<p>Elphinstone is a world-renowned dive site, featuring a steep drop-off and vibrant coral walls. It’s a drift dive, with strong currents attracting pelagic species like grey reef sharks, hammerheads, and barracudas. Diving trips cost 800-$24 (1 $4 (200 EGP)) per person (two dives, including equipment). Open year-round, but best visibility (30-40 meters) from April to October. Accessible by boat from Marsa Alam Marina (45-minute ride). Tip: Certified divers only—currents are challenging; hire a local guide for safety.</p>
 
 <h3>4. Wadi el-Gemal National Park</h3>
-<p>This protected area covers 4,770 square kilometers of desert, mountains, and coastline. Visitors can explore Bedouin villages, ancient Roman emerald mines, and mangrove forests. A 4×4 safari tour costs 500-800 EGP per person (half-day). Open daily 8 AM to 4 PM. Located 45 km south of Marsa Alam; guided tours include transport. Tip: Bring plenty of water and sunscreen; the desert heat can exceed 40°C in summer.</p>
+<p>This protected area covers 4,770 square kilometers of desert, mountains, and coastline. Visitors can explore Bedouin villages, ancient Roman emerald mines, and mangrove forests. A 4×4 safari tour costs 500-$16 (800 EGP) per person (half-day). Open daily 8 AM to 4 PM. Located 45 km south of Marsa Alam; guided tours include transport. Tip: Bring plenty of water and sunscreen; the desert heat can exceed 40°C in summer.</p>
 
 <h3>5. Sharm el-Luli Beach</h3>
-<p>Sharm el-Luli is a remote, white-sand beach with turquoise waters, often called the “Maldives of Egypt.” It’s ideal for swimming, sunbathing, and snorkeling among pristine coral reefs. Entry is free, but parking costs 20 EGP. Open 24/7. Situated 50 km south of Marsa Alam; drive via the coastal road (4×2 vehicle is fine) or join a tour (200 EGP per person). Tip: Bring your own food and water; there are no facilities on site.</p>
+<p>Sharm el-Luli is a remote, white-sand beach with turquoise waters, often called the “Maldives of Egypt.” It’s ideal for swimming, sunbathing, and snorkeling among pristine coral reefs. Entry is free, but parking costs$0 (20 EGP). Open 24/7. Situated 50 km south of Marsa Alam; drive via the coastal road (4×2 vehicle is fine) or join a tour ($4 (200 EGP) per person). Tip: Bring your own food and water; there are no facilities on site.</p>
 
 <h3>6. Port Ghalib Marina</h3>
-<p>This modern marina is a hub for luxury yachts, restaurants, and shops. It offers a relaxed atmosphere for evening strolls, with views of the Red Sea and mountains. Free entry. Open 24/7. Located 20 km north of Marsa Alam city; taxis cost 150 EGP. Tip: Visit at sunset for stunning photo opportunities; dine at “The Fish Market” for fresh seafood (200-400 EGP per meal).</p>
+<p>This modern marina is a hub for luxury yachts, restaurants, and shops. It offers a relaxed atmosphere for evening strolls, with views of the Red Sea and mountains. Free entry. Open 24/7. Located 20 km north of Marsa Alam city; taxis cost$3 (150 EGP). Tip: Visit at sunset for stunning photo opportunities; dine at “The Fish Market” for fresh seafood (200-$8 (400 EGP) per meal).</p>
 
 <h3>7. Marsa Alam Museum</h3>
-<p>This small museum showcases artifacts from the region’s ancient history, including Ptolemaic coins, Roman pottery, and Bedouin crafts. Entry costs 50 EGP ($1.60 (≈ ₽152)) for adults, 25 EGP for students. Open Saturday to Thursday, 9 AM to 4 PM. Located on the main road in Marsa Alam city, walking distance from most hotels. Tip: Combine with a visit to the nearby Marsa Alam Souq for local handicrafts.</p>
+<p>This small museum showcases artifacts from the region’s ancient history, including Ptolemaic coins, Roman pottery, and Bedouin crafts. Entry costs$1 (50 EGP) ($2) for adults$0 (25 EGP) for students. Open Saturday to Thursday, 9 AM to 4 PM. Located on the main road in Marsa Alam city, walking distance from most hotels. Tip: Combine with a visit to the nearby Marsa Alam Souq for local handicrafts.</p>
 
 <h3>8. Hamata Islands</h3>
-<p>A chain of 15 islands off the southern coast, known for untouched coral gardens and sea turtle nesting sites. Snorkeling and diving trips cost 600-900 EGP per person (full-day, includes lunch). Open year-round, but best from March to November. Accessible by boat from Hamata village (1 hour drive from Marsa Alam). Tip: Choose a small-group tour for a more intimate experience; book through a reputable operator like “Red Sea Diving Safari.”</p>
+<p>A chain of 15 islands off the southern coast, known for untouched coral gardens and sea turtle nesting sites. Snorkeling and diving trips cost 600-$18 (900 EGP) per person (full-day, includes lunch). Open year-round, but best from March to November. Accessible by boat from Hamata village (1 hour drive from Marsa Alam). Tip: Choose a small-group tour for a more intimate experience; book through a reputable operator like “Red Sea Diving Safari.”</p>
 
 <h3>9. Marsa Alam Souq</h3>
-<p>This traditional market offers spices, textiles, and souvenirs. It’s a vibrant spot to experience local culture, with friendly vendors and bargaining expected. Free entry. Open daily 10 AM to 10 PM. Located in the city center. Tip: Haggle prices down by 30-50%; try fresh sugarcane juice (10 EGP) from street vendors.</p>
+<p>This traditional market offers spices, textiles, and souvenirs. It’s a vibrant spot to experience local culture, with friendly vendors and bargaining expected. Free entry. Open daily 10 AM to 10 PM. Located in the city center. Tip: Haggle prices down by 30-50%; try fresh sugarcane juice ($0 (10 EGP)) from street vendors.</p>
 
 <h3>10. Qulaan Arch (Abu Dabbab Arch)</h3>
 <p>A natural rock formation on Abu Dabbab Beach, forming a dramatic arch over the water. It’s a popular photo spot and snorkeling site, with shallow reefs nearby. Free access. Open 24/7. Reachable by walking 200 meters from Abu Dabbab Beach entrance. Tip: Visit during low tide to see the arch fully exposed.</p>
@@ -398,37 +421,37 @@
 <p>A dedicated conservation area where dolphins are protected. Visitors can watch them from a distance (no swimming allowed) to minimize disturbance. Free entry. Open daily 8 AM to 5 PM. Located near Marsa Mubarak, accessible by boat or 4×4. Tip: Bring binoculars for better viewing; respect the 50-meter no-go zone.</p>
 
 <h3>12. El Quseir Fort</h3>
-<p>This 16th-century Ottoman fort overlooks the Red Sea in the nearby town of El Quseir (80 km north). It offers panoramic views and a small museum. Entry costs 30 EGP ($0.96 (≈ ₽91)). Open daily 9 AM to 4 PM. Reachable by bus (50 EGP from Marsa Alam) or taxi (400 EGP). Tip: Combine with a visit to El Quseir’s old town for a historical half-day trip.</p>
+<p>This 16th-century Ottoman fort overlooks the Red Sea in the nearby town of El Quseir (80 km north). It offers panoramic views and a small museum. Entry costs$1 (30 EGP) ($1). Open daily 9 AM to 4 PM. Reachable by bus ($1 (50 EGP) from Marsa Alam) or taxi ($8 (400 EGP)). Tip: Combine with a visit to El Quseir’s old town for a historical half-day trip.</p>
 
 <h3>13. Marsa Alam Coral Reef</h3>
-<p>House reefs at resorts like “The Three Corners” or “Jaz” offer easy shore snorkeling. Expect colorful coral, clownfish, and moray eels. Free for hotel guests; non-guests may pay 100-200 EGP for day access. Open 24/7. Tip: Use reef-safe sunscreen to protect the ecosystem; avoid touching coral.</p>
+<p>House reefs at resorts like “The Three Corners” or “Jaz” offer easy shore snorkeling. Expect colorful coral, clownfish, and moray eels. Free for hotel guests; non-guests may pay 100-$4 (200 EGP) for day access. Open 24/7. Tip: Use reef-safe sunscreen to protect the ecosystem; avoid touching coral.</p>
 
 <h3>14. Wadi el-Gemal Mangrove Forest</h3>
-<p>A unique ecosystem of mangroves and birdlife, accessible via a short boardwalk. Entry is free, but a guided walk costs 100 EGP per person. Open daily 8 AM to 4 PM. Located within Wadi el-Gemal National Park. Tip: Visit early morning for birdwatching; flamingos and herons are common.</p>
+<p>A unique ecosystem of mangroves and birdlife, accessible via a short boardwalk. Entry is free, but a guided walk costs$2 (100 EGP) per person. Open daily 8 AM to 4 PM. Located within Wadi el-Gemal National Park. Tip: Visit early morning for birdwatching; flamingos and herons are common.</p>
 
 <h3>15. Marsa Alam Desert Safari</h3>
-<p>A guided 4×4 tour through the Eastern Desert, visiting Bedouin camps and star-gazing spots. Tours cost 400-700 EGP per person (half-day, includes dinner). Open year-round, best from October to April. Departures from Marsa Alam city. Tip: Choose a sunset tour for cooler temperatures and dramatic desert colors.</p>
+<p>A guided 4×4 tour through the Eastern Desert, visiting Bedouin camps and star-gazing spots. Tours cost 400-$14 (700 EGP) per person (half-day, includes dinner). Open year-round, best from October to April. Departures from Marsa Alam city. Tip: Choose a sunset tour for cooler temperatures and dramatic desert colors.</p>
 
 <h2>1-Day, 2-Day, 3-Day Itineraries</h2>
 
 <h3>1-Day Itinerary: Best of Marsa Alam in 24 Hours</h3>
 <ul>
   <li><strong>Morning (6 AM - 12 PM):</strong> Start at Abu Dabbab Beach for turtle snorkeling (free). Then drive to Sharm el-Luli for sunbathing and swimming (1 hour).</li>
-  <li><strong>Lunch (12 PM - 1 PM):</strong> Pack a picnic or eat at “El Masry” restaurant in Marsa Alam city (50-100 EGP).</li>
+  <li><strong>Lunch (12 PM - 1 PM):</strong> Pack a picnic or eat at “El Masry” restaurant in Marsa Alam city (50-$2 (100 EGP)).</li>
   <li><strong>Afternoon (1 PM - 5 PM):</strong> Visit Port Ghalib Marina for a stroll and coffee (free). Then explore Marsa Alam Souq for souvenirs.</li>
-  <li><strong>Evening (5 PM - 8 PM):</strong> Sunset desert safari (400 EGP) with Bedouin tea and stargazing.</li>
+  <li><strong>Evening (5 PM - 8 PM):</strong> Sunset desert safari ($8 (400 EGP)) with Bedouin tea and stargazing.</li>
 </ul>
 
 <h3>2-Day Itinerary: Nature and Culture</h3>
 <ul>
-  <li><strong>Day 1 Morning:</strong> Marsa Mubarak dolphin snorkeling (boat tour, 500 EGP). Afternoon: El Quseir Fort and old town (30 EGP entry, 80 km drive). Evening: Dinner at Port Ghalib.</li>
-  <li><strong>Day 2 Morning:</strong> Wadi el-Gemal National Park safari (500 EGP). Afternoon: Hamata Islands snorkeling (700 EGP). Evening: Relax at hotel beach.</li>
+  <li><strong>Day 1 Morning:</strong> Marsa Mubarak dolphin snorkeling (boat tour$10 (500 EGP)). Afternoon: El Quseir Fort and old town ($1 (30 EGP) entry, 80 km drive). Evening: Dinner at Port Ghalib.</li>
+  <li><strong>Day 2 Morning:</strong> Wadi el-Gemal National Park safari ($10 (500 EGP)). Afternoon: Hamata Islands snorkeling ($14 (700 EGP)). Evening: Relax at hotel beach.</li>
 </ul>
 
 <h3>3-Day Itinerary: Adventure and Relaxation</h3>
 <ul>
   <li><strong>Day 1:</strong> Abu Dabbab Beach (morning), Marsa Alam Museum (afternoon), desert safari (evening).</li>
-  <li><strong>Day 2:</strong> Elphinstone Reef diving (1,000 EGP), Port Ghalib lunch, Sharm el-Luli sunset.</li>
+  <li><strong>Day 2:</strong> Elphinstone Reef diving ($20 (1 $0 (000 EGP))), Port Ghalib lunch, Sharm el-Luli sunset.</li>
   <li><strong>Day 3:</strong> Wadi el-Gemal mangroves (morning), Hamata Islands (afternoon), Souq shopping (evening).</li>
 </ul>
 
@@ -442,10 +465,9 @@
   <tr><td>Hamata Islands Cruise</td><td>Full-day snorkeling and beach time</td><td>700-1,000</td><td>8 hours</td></tr>
   <tr><td>Sunset Desert Safari</td><td>Evening 4×4 tour with dinner and stargazing</td><td>400-600</td><td>4 hours</td></tr>
 </table>
-<p>Book through local operators like “Red Sea Diving Safari” or “Marsa Alam Tours” (online or at hotel desks). Prices include transport from Marsa Alam city; tip drivers 50-100 EGP.</p>
+<p>Book through local operators like “Red Sea Diving Safari” or “Marsa Alam Tours” (online or at hotel desks). Prices include transport from Marsa Alam city; tip drivers 50-$2 (100 EGP).</p>
 
 <h2>Free Attractions</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <ul>
   <li><strong>Abu Dabbab Beach:</strong> Free entry; snorkel with turtles at no cost.</li>
   <li><strong>Sharm el-Luli Beach:</strong> Pristine sands and coral reefs, no entry fee.</li>
@@ -457,18 +479,18 @@
 
 <h2>Practical Tips</h2>
 <h3>Transportation</h3>
-<p>Marsa Alam International Airport (RMF) receives flights from Cairo (1.5 hours) and European cities (3-5 hours). Taxis from airport to Marsa Alam city cost 200-300 EGP. Public buses (Go Bus) run to El Quseir (50 EGP) and Hurghada (100 EGP). Rent a 4×4 for desert trips (800-1,200 EGP per day from local agencies). For water activities, book boat tours (400-1,000 EGP) that include hotel pick-up.</p>
+<p>Marsa Alam International Airport (RMF) receives flights from Cairo (1.5 hours) and European cities (3-5 hours). Taxis from airport to Marsa Alam city cost 200-$6 (300 EGP). Public buses (Go Bus) run to El Quseir ($1 (50 EGP)) and Hurghada ($2 (100 EGP)). Rent a 4×4 for desert trips (800-$24 (1 $4 (200 EGP)) per day from local agencies). For water activities, book boat tours (400-$20 (1 $0 (000 EGP))) that include hotel pick-up.</p>
 
 <h3>Combo Tickets</h3>
-<p>No official combo ticket exists for Marsa Alam’s attractions, but tour operators offer packages. For example, “Dolphin & Desert Combo” (1,200 EGP) includes Marsa Mubarak snorkeling and a Wadi el-Gemal safari. Book at hotel tour desks for 10-15% discounts. Alternatively, combine free attractions (Abu Dabbab, Sharm el-Luli) with paid tours (Elphinstone, Hamata) to save costs.</p>
+<p>No official combo ticket exists for Marsa Alam’s attractions, but tour operators offer packages. For example, “Dolphin & Desert Combo” ($24 (1 $4 (200 EGP))) includes Marsa Mubarak snorkeling and a Wadi el-Gemal safari. Book at hotel tour desks for 10-15% discounts. Alternatively, combine free attractions (Abu Dabbab, Sharm el-Luli) with paid tours (Elphinstone, Hamata) to save costs.</p>
 
 <h3>Hotels</h3>
-<p>Recommended accommodations include “The Three Corners Rihana Resort” (4-star, from $80 (≈ ₽7 600)/night) in Port Ghalib, “Jaz Marsa Alam” (5-star, from $120 (≈ ₽11 400)/night) with private beach, and “Marsa Shagra Village” (eco-lodge, from $60 (≈ ₽5 700)/night) for divers. Book in advance for 2026 as demand grows. For budget options, “Albatros Hotel” (3-star, from $40 (≈ ₽3 800)/night) offers basic rooms near the city center.</p>
+<p>Recommended accommodations include “The Three Corners Rihana Resort” (4-star, from $80/night) in Port Ghalib, “Jaz Marsa Alam” (5-star, from $120/night) with private beach, and “Marsa Shagra Village” (eco-lodge, from $60/night) for divers. Book in advance for 2026 as demand grows. For budget options, “Albatros Hotel” (3-star, from $40/night) offers basic rooms near the city center.</p>
 
 <h3>General Tips</h3>
 <ul>
   <li><strong>Best Time to Visit:</strong> October to April (25-30°C, low humidity). Summer (May-September) is hot (35-45°C) but good for diving visibility.</li>
-  <li><strong>Currency:</strong> Egyptian Pound (EGP). 1 USD ≈ 31 EGP (2026 rate). Cash is preferred for small purchases.</li>
+  <li><strong>Currency:</strong> Egyptian Pound (EGP). 1 USD ≈$1 (31 EGP) (2026 rate). Cash is preferred for small purchases.</li>
   <li><strong>Safety:</strong> Marsa Alam is safe for tourists; avoid deserted beaches after dark. Use reputable tour operators.</li>
   <li><strong>Packing:</strong> Reef-safe sunscreen, hat, sunglasses, and a reusable water bottle. For desert safaris, bring a light jacket for evenings.</li>
   <li><strong>Environmental Respect:</strong> Do not touch coral or marine life; follow park rules in Wadi el-Gemal.</li>
@@ -558,6 +580,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -586,6 +609,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -603,8 +627,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

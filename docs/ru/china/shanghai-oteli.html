@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Шанхай 2026: от бюджета до люкса Шанхай — это город, который никогда не спит, и его гостиничная инфраструктура поражает воображение. Я объезд...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/shanghai-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/shanghai-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Шанхай 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Шанхай 2026: от бюджета до люкса Шанхай — это город, который никогда не спит, и его гостиничная инфраструктура поражает воображение. Я объезд...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/china/shanghai-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/shanghai-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/shanghai.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Шанхай 2026: от бюджета до люкса</div>
@@ -359,109 +383,186 @@
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
-<p>Шанхай — это город, который никогда не спит, и его гостиничная инфраструктура поражает воображение. Я объездила полмира, но именно здесь, среди небоскребов Пудуна и уютных хутунов Старого города, я чувствую пульс современного Китая. Отели в Шанхае — это не просто место для ночлега, а часть путешествия: от капсульных номеров за ₽2 850 (≈ $30) до пентхаусов с видом на реку Хуанпу за ₽95 000 (≈ $1000.) В 2026 году рынок продолжает радовать разнообразием: здесь и международные сети, и локальные бутик-проекты, и даже отели с искусственным интеллектом в лобби.</p>
+<p>Шанхай — это город, который никогда не спит, и его гостиничная инфраструктура поражает воображение. Я объездила полмира, но именно здесь, среди небоскребов Пудуна и уютных хутунов Старого города, я чувствую пульс современного Китая. Отели в Шанхае — это не просто место для ночлега, а часть путешествия: от капсульных номеров за ₽2 850 ($30)до пентхаусов с видом на реку Хуанпу за ₽95 000 ($1 000)В 2026 году рынок продолжает радовать разнообразием: здесь и международные сети, и локальные бутик-проекты, и даже отели с искусственным интеллектом в лобби.</p>
 
-<p>Цены, конечно, кусаются, особенно в пик сезона (майские праздники и китайский Новый год). Но я всегда советую: бронируйте заранее, минимум за 2-3 месяца, иначе рискуете переплатить 30-40%. Средняя стоимость номера в бюджетном сегменте — ₽4 275 (≈ $45)-50 за ночь, в среднем — ₽7 600 (≈ $80)-120, а люкс стартует от ₽16 150 (≈ $170.) Но поверьте, каждый доллар здесь оправдан: от безупречного сервиса до футуристического дизайна. Давайте разберем лучшие варианты для любого кошелька.</p>
+<p>Цены, конечно, кусаются, особенно в пик сезона (майские праздники и китайский Новый год). Но я всегда советую: бронируйте заранее, минимум за 2-3 месяца, иначе рискуете переплатить 30-40%. Средняя стоимость номера в бюджетном сегменте — ₽4 275 ($45)-50 за ночь, в среднем — ₽7 600 ($80)-120, а люкс стартует от ₽16 150 ($170)Но поверьте, каждый доллар здесь оправдан: от безупречного сервиса до футуристического дизайна. Давайте разберем лучшие варианты для любого кошелька.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Shanghai Lucky Hotel (район Цзинъань)</h3>
+<div id="hc_258383" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Shanghai Lucky Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Shanghai Lucky Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Shanghai Lucky Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_258383 .hc-slide');var d=document.querySelectorAll('#hc_258383 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_258383 .hc-slide');var d=document.querySelectorAll('#hc_258383 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_258383 .hc-slide');var d=document.querySelectorAll('#hc_258383 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Shanghai Lucky Hotel &bull; 3 photos</p></div>
 <p>Маленький, но уютный отельчик в самом сердце Цзинъаня. Номера простые, но чистые, с кондиционером и Wi-Fi. Завтрак — скромный, но сытный: рисовая каша и булочки. Идеально для тех, кто планирует целыми днями гулять и возвращаться только спать.</p>
 <ul>
-<li><strong>Цена:</strong> от ₽3 610 (≈ $38) за ночь (реальная ₽3 135 (≈ $33 ) я добавляю 15%)</li>
+<li><strong>Цена:</strong> от ₽3 610 ($38)за ночь (реальная ₽3 135 ($33)я добавляю 15%)</li>
 <li><strong>Плюсы:</strong> близко к метро (5 минут пешком), рядом парк и храм Цзинъань</li>
 <li><strong>Минусы:</strong> шумно по вечерам (улица оживленная), нет лифта</li>
 </ul>
 <p>Я рекомендую этот отель для одиночных путешественников или пар, которые хотят сэкономить на ночлеге, но не на впечатлениях. Один минус — стены тонкие, так что берите беруши.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="дл" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Home Inn (Nanjing Road Branch)</h3>
+<div id="hc_768619" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Home Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Home Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Home Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_768619 .hc-slide');var d=document.querySelectorAll('#hc_768619 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_768619 .hc-slide');var d=document.querySelectorAll('#hc_768619 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_768619 .hc-slide');var d=document.querySelectorAll('#hc_768619 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Home Inn &bull; 3 photos</p></div>
 <p>Сеть Home Inn — это китайский стандарт бюджетного комфорта. Филиал на Нанкин-роуд — просто находка: до знаменитой пешеходной улицы 10 минут ходьбы. Номера компактные, с базовой мебелью, но есть чайник и телевизор. Персонал говорит только по-китайски, но улыбчивый и готов помочь через переводчик.</p>
 <ul>
-<li><strong>Цена:</strong> от ₽4 275 (≈ $45) за ночь (реальная ₽3 705 (≈ $39 ) я добавляю 15%)</li>
+<li><strong>Цена:</strong> от ₽4 275 ($45)за ночь (реальная ₽3 705 ($39)я добавляю 15%)</li>
 <li><strong>Плюсы:</strong> отличное расположение, чистота, круглосуточная стойка регистрации</li>
-<li><strong>Минусы:</strong> завтрак платный (₽475 (≈ $5)), окна выходят на стену соседнего дома</li>
+<li><strong>Минусы:</strong> завтрак платный (₽475 ($5)), окна выходят на стену соседнего дома</li>
 </ul>
 <p>Если вы не привередливы и хотите быть в гуще событий — берите не думая. Я сама останавливалась здесь в свою первую поездку в Шанхай, и это было идеально для бюджетного старта.</p>
 
 <h3>3. Pod Inn (The Bund Branch)</h3>
+<div id="hc_538004" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Pod Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Pod Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Pod Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_538004 .hc-slide');var d=document.querySelectorAll('#hc_538004 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_538004 .hc-slide');var d=document.querySelectorAll('#hc_538004 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_538004 .hc-slide');var d=document.querySelectorAll('#hc_538004 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pod Inn &bull; 3 photos</p></div>
 <p>Капсульный отель прямо у набережной Вайтань — звучит безумно, но это реально круто! Каждая капсула — как маленький космический корабль: с подсветкой, розетками и вентиляцией. Общие душевые и туалеты безупречно чистые. Есть лаунж-зона с чаем и печеньками.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Цена:</strong> от ₽2 660 (≈ $28) за ночь (реальная ₽2 280 (≈ $24 ) я добавляю 17%)</li>
+<li><strong>Цена:</strong> от ₽2 660 ($28)за ночь (реальная ₽2 280 ($24)я добавляю 17%)</li>
 <li><strong>Плюсы:</strong> уникальный опыт, вид на небоскребы, очень дешево</li>
 <li><strong>Минусы:</strong> шумно (соседи храпят), мало личного пространства</li>
 </ul>
 <p>Это для смелых и молодых духом! Я обожаю такие места за атмосферу приключения. Но предупреждаю: если вы клаустрофоб или цените тишину — проходите мимо.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Holiday Inn Express Shanghai Zhabei</h3>
+<div id="hc_996545" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Express Shanghai Zhabei - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Express Shanghai Zhabei - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_996545 .hc-slide');var d=document.querySelectorAll('#hc_996545 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_996545 .hc-slide');var d=document.querySelectorAll('#hc_996545 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Express Shanghai Zhabei &bull; 2 photos</p></div>
 <p>Надежный, как швейцарские часы. Этот отель от международной сети дает гарантию качества: кондиционер работает, вода горячая, постель белоснежная. Номера просторные (для Китая это редкость), с большими окнами. Завтрак — континентальный, с блинчиками и йогуртом.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="от" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Цена:</strong> от ₽7 125 (≈ $75) за ночь (реальная ₽6 175 (≈ $65 ) я добавляю 15%)</li>
+<li><strong>Цена:</strong> от ₽7 125 ($75)за ночь (реальная ₽6 175 ($65)я добавляю 15%)</li>
 <li><strong>Плюсы:</strong> бесплатный трансфер до аэропорта, фитнес-зал, бизнес-центр</li>
 <li><strong>Минусы:</strong> район не самый центр (20 минут на метро до Бунда)</li>
 </ul>
 <p>Я рекомендую этот вариант для деловых поездок или семей с детьми — здесь спокойно и предсказуемо. А еще рядом есть классный парк для утренних пробежек.</p>
 
 <h3>5. The Eton Hotel Shanghai (район Пудун)</h3>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sh" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_920078" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Eton Hotel Shanghai - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Eton Hotel Shanghai - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Eton Hotel Shanghai - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_920078 .hc-slide');var d=document.querySelectorAll('#hc_920078 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_920078 .hc-slide');var d=document.querySelectorAll('#hc_920078 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_920078 .hc-slide');var d=document.querySelectorAll('#hc_920078 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Eton Hotel Shanghai &bull; 3 photos</p></div>
 <p>Бутик-отель с душой! Внутри — смесь китайского традиционного декора и современного минимализма. Номера украшены каллиграфией и бамбуковыми элементами. Есть бесплатный велнес-центр с сауной. Ресторан подает отличные дим-самы.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Цена:</strong> от ₽9 310 (≈ $98) за ночь (реальная ₽8 075 (≈ $85 ) я добавляю 15%)</li>
+<li><strong>Цена:</strong> от ₽9 310 ($98)за ночь (реальная ₽8 075 ($85)я добавляю 15%)</li>
 <li><strong>Плюсы:</strong> аутентичная атмосфера, тихий район, приветливый персонал</li>
 <li><strong>Минусы:</strong> далеко от метро (15 минут пешком), нет бассейна</li>
 </ul>
 <p>Это мой личный фаворит в среднем сегменте. Я останавливалась здесь с подругой, и мы чувствовали себя как в китайской сказке. Идеально для тех, кто хочет погрузиться в культуру.</p>
 
 <h3>6. Jin Jiang Tower (район Хуанпу)</h3>
+<div id="hc_456626" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Jin Jiang Tower - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Jin Jiang Tower - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Jin Jiang Tower - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_456626 .hc-slide');var d=document.querySelectorAll('#hc_456626 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_456626 .hc-slide');var d=document.querySelectorAll('#hc_456626 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_456626 .hc-slide');var d=document.querySelectorAll('#hc_456626 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jin Jiang Tower &bull; 3 photos</p></div>
 <p>Легендарный отель 1980-х годов, который недавно обновили. Высокая башня с панорамными видами на город. Номера большие, с ваннами и халатами. Ресторан на 30-м этаже — место для романтического ужина. Метро — в 3 минутах.</p>
 <ul>
-<li><strong>Цена:</strong> от ₽10 925 (≈ $115) за ночь (реальная ₽9 500 (≈ $100 ) я добавляю 15%)</li>
+<li><strong>Цена:</strong> от ₽10 925 ($115)за ночь (реальная ₽9 500 ($100)я добавляю 15%)</li>
 <li><strong>Плюсы:</strong> исторический шарм, отличный сервис, близко к магазинам</li>
 <li><strong>Минусы:</strong> староватая мебель в некоторых номерах, лифты медленные</li>
 </ul>
 <p>Если вы любите ретро-роскошь — это ваш вариант. Я советую брать номер с видом на реку — это стоит каждой копейки. Отель часто проводят выставки местных художников в лобби.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="ча" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>7. Atour Hotel (Jing'an Temple Branch)</h3>
+<div id="hc_138542" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Atour Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Atour Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Atour Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_138542 .hc-slide');var d=document.querySelectorAll('#hc_138542 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_138542 .hc-slide');var d=document.querySelectorAll('#hc_138542 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_138542 .hc-slide');var d=document.querySelectorAll('#hc_138542 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Atour Hotel &bull; 3 photos</p></div>
 <p>Современная китайская сеть, которая делает акцент на комфорте сна. Матрасы — просто облако, подушки с эффектом памяти, а в номерах — аромадиффузоры с лавандой. Есть прачечная самообслуживания и мини-библиотека. Завтрак — шведский стол с местными деликатесами.</p>
 <ul>
-<li><strong>Цена:</strong> от ₽8 360 (≈ $88) за ночь (реальная ₽7 220 (≈ $76 ) я добавляю 16%)</li>
+<li><strong>Цена:</strong> от ₽8 360 ($88)за ночь (реальная ₽7 220 ($76)я добавляю 16%)</li>
 <li><strong>Плюсы:</strong> тишина, качественный сон, стильный интерьер</li>
 <li><strong>Минусы:</strong> маленькие номера, нет спортзала</li>
 </ul>
 <p>Я рекомендую Atour для тех, кто устал от шума мегаполиса. Здесь вы выспитесь как младенец. Плюс рядом храм Цзинъань — обязательно зайдите.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. The Peninsula Shanghai (набережная Вайтань)</h3>
+<div id="hc_262459" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="The Peninsula Shanghai - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The Peninsula Shanghai - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_262459 .hc-slide');var d=document.querySelectorAll('#hc_262459 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_262459 .hc-slide');var d=document.querySelectorAll('#hc_262459 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Peninsula Shanghai &bull; 2 photos</p></div>
 <p>Это не просто отель — это икона стиля. Расположен в историческом здании 1920-х годов с видом на реку. Номера — как апартаменты миллионера: мраморные ванны, антикварная мебель, персональный дворецкий. Ресторан Sir Elly's — с двумя звездами Мишлен. Спа-центр с бассейном из белого мрамора.</p>
 <ul>
-<li><strong>Цена:</strong> от ₽42 750 (≈ $450) за ночь (реальная ₽37 050 (≈ $390 ) я добавляю 15%)</li>
+<li><strong>Цена:</strong> от ₽42 750 ($450)за ночь (реальная ₽37 050 ($390)я добавляю 15%)</li>
 <li><strong>Особенности:</strong> частный лимузин-сервис, чайная церемония в номер, уроки тай-чи</li>
 </ul>
 <p>Это для особого случая: юбилей, медовый месяц или просто желание почувствовать себя королем. Я была здесь на чаепитии — атмосфера невероятная. Но готовьтесь, что цена кусается, и бронировать нужно за полгода.</p>
 
 <h3>9. The Ritz-Carlton Shanghai, Pudong</h3>
+<div id="hc_42237" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton Shanghai, Pudong - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton Shanghai, Pudong - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton Shanghai, Pudong - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_42237 .hc-slide');var d=document.querySelectorAll('#hc_42237 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_42237 .hc-slide');var d=document.querySelectorAll('#hc_42237 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_42237 .hc-slide');var d=document.querySelectorAll('#hc_42237 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton Shanghai, Pudong &bull; 3 photos</p></div>
 <p>Небоскреб на 58-м этаже с видом на весь Шанхай. Номера от 45 кв. м, с панорамными окнами от пола до потолка. Есть спа с хаммамом и инфракрасной сауной. Ресторан Flair — на 58-м этаже, с коктейлями и видом на телебашню "Восточная жемчужина".</p>
 <ul>
-<li><strong>Цена:</strong> от ₽49 400 (≈ $520) за ночь (реальная ₽42 750 (≈ $450 ) я добавляю 16%)</li>
+<li><strong>Цена:</strong> от ₽49 400 ($520)за ночь (реальная ₽42 750 ($450)я добавляю 16%)</li>
 <li><strong>Особенности:</strong> бесплатный доступ в бизнес-лаунж, бассейн с подогревом, консьерж 24/7</li>
 </ul>
 <p>Если вы хотите жить в облаках — это место. Я рекомендую брать номер с видом на Бунд — это незабываемо. Минус: лифты иногда загружены, и нужно ждать.</p>
 
 <h3>10. W Shanghai – The Bund</h3>
 <p>Самый модный отель Шанхая. Дизайн в стиле ар-деко с элементами китайской эстетики. Номера с неоновой подсветкой и смарт-панелями. Бассейн на крыше — с видом на реку и подсветкой ночью. Ресторан с живой музыкой и DJ-сетами.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ша" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Цена:</strong> от ₽36 100 (≈ $380) за ночь (реальная ₽31 350 (≈ $330 ) я добавляю 15%)</li>
+<li><strong>Цена:</strong> от ₽36 100 ($380)за ночь (реальная ₽31 350 ($330)я добавляю 15%)</li>
 <li><strong>Особенности:</strong> вечеринки в лобби, бесплатный велопрокат, блюда фьюжн</li>
 </ul>
 <p>Это для молодых и энергичных. Здесь шумно, весело и очень стильно. Я советую бронировать номер с балконом — там можно пить шампанское и смотреть на огни города. Но если вы ищете тишину — лучше выберите Peninsula.</p>
+<div id="hc_786096" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Peninsula. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Peninsula. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_786096 .hc-slide');var d=document.querySelectorAll('#hc_786096 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_786096 .hc-slide');var d=document.querySelectorAll('#hc_786096 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Peninsula. &bull; 2 photos</p></div>
 
 <h2>Как выбрать район</h2>
 
@@ -474,7 +575,6 @@
 </ul>
 
 <p>Мой личный совет: если вы впервые в Шанхае — берите отель в Хуанпу. Это сердце города, и вы не потратите время на дорогу. А если вы уже были — попробуйте Пудун, там футуристическая атмосфера.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Советы по бронированию</h2>
 
@@ -483,8 +583,8 @@
 <ul>
 <li><strong>Бронируйте за 2-3 месяца.</strong> В пик сезона (апрель-май, октябрь, китайский Новый год) цены взлетают на 50%. Я всегда советую клиентам ставить напоминание в календаре.</li>
 <li><strong>Используйте агрегаторы.</strong> <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> и <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> — мои фавориты. Но проверяйте и локальные сайты, например, Ctrip — там часто дешевле на 10-15%. Сравнивайте цены, не ленитесь.</li>
-<li><strong>Ищите кэшбэк и промокоды.</strong> На сайтах вроде CouponFollow или через приложения банков. Я однажды сэкономила ₽4 750 (≈ $50) на номере в Holiday Inn через кэшбэк от Tinkoff.</li>
-<li><strong>Выбирайте гибкие тарифы.</strong> Если есть возможность — берите с бесплатной отменой. Это дороже на ₽475 (≈ $5)-10, но спасает, если планы меняются. Я сама так делаю всегда.</li>
+<li><strong>Ищите кэшбэк и промокоды.</strong> На сайтах вроде CouponFollow или через приложения банков. Я однажды сэкономила ₽4 750 ($50)на номере в Holiday Inn через кэшбэк от Tinkoff.</li>
+<li><strong>Выбирайте гибкие тарифы.</strong> Если есть возможность — берите с бесплатной отменой. Это дороже на ₽475 ($5)-10, но спасает, если планы меняются. Я сама так делаю всегда.</li>
 <li><strong>Проверяйте отзывы на русском.</strong> На Otzovik или IRecommend — там реальные люди пишут о шуме, чистоте и персонале. Английские отзывы часто приукрашены.</li>
 </ul>
 
@@ -579,6 +679,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -607,6 +708,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -624,8 +726,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

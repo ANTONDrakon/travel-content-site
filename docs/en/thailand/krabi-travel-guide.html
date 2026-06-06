@@ -6,7 +6,7 @@
     <title>Krabi Travel Guide 2026</title>
     <meta name="description" content="Krabi Travel Guide 2026 Krabi, a province on Thailand’s Andaman coast, is a land of dramatic limestone karsts, emerald-green waters, and pristine beaches tha...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/krabi-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/krabi-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/krabi-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/krabi-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Krabi Travel Guide 2026">
     <meta property="og:description" content="Krabi Travel Guide 2026 Krabi, a province on Thailand’s Andaman coast, is a land of dramatic limestone karsts, emerald-green waters, and pristine beaches tha...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/thailand/krabi-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/krabi-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/krabi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Krabi Travel Guide 2026</div>
@@ -369,55 +393,55 @@
 
 <p>Krabi International Airport (KBV) is the primary gateway, located about 15 kilometers from Krabi Town and 30 kilometers from Ao Nang. The airport is well-connected to major cities across Asia and the Middle East.</p>
 
-<p>Direct flights operate from Bangkok (BKK and DMK) with airlines like Thai Airways, Bangkok Airways, and Air Asia, with average one-way fares between $30 (≈ ₽2 850) and $80. (≈ ₽7 600) From Singapore, flights on Scoot and Jetstar Asia range from $80 (≈ ₽7 600) to $150. (≈ ₽14 250) Kuala Lumpur is served by Air Asia and Malindo Air, with fares around $50 (≈ ₽4 750) to $100. (≈ ₽9 500) European travelers typically connect via Bangkok or Dubai, with round-trip fares from London or Frankfurt averaging $600 (≈ ₽57 000) to $900. (≈ ₽85 500) Seasonal charter flights from Russia and Scandinavia also operate from November to March.</p>
+<p>Direct flights operate from Bangkok (BKK and DMK) with airlines like Thai Airways, Bangkok Airways, and Air Asia, with average one-way fares between $30and $80From Singapore, flights on Scoot and Jetstar Asia range from $80to $150Kuala Lumpur is served by Air Asia and Malindo Air, with fares around $50to $100European travelers typically connect via Bangkok or Dubai, with round-trip fares from London or Frankfurt averaging $600to $900Seasonal charter flights from Russia and Scandinavia also operate from November to March.</p>
 
-<p>Alternatively, you can reach Krabi by bus from Bangkok’s Southern Bus Terminal (Sai Tai Mai). The journey takes 10-12 hours and costs $10 (≈ ₽950)-$15. (≈ ₽1 425) Train travel to Surat Thani, followed by a bus to Krabi, is another budget-friendly option.</p>
+<p>Alternatively, you can reach Krabi by bus from Bangkok’s Southern Bus Terminal (Sai Tai Mai). The journey takes 10-12 hours and costs $10-$15Train travel to Surat Thani, followed by a bus to Krabi, is another budget-friendly option.</p>
 
 <h2>Where to Stay</h2>
 
 <p>Accommodation in Krabi spans every budget, from backpacker hostels to luxury beachfront resorts. The main areas to consider are Krabi Town, Ao Nang, Railay Beach, and the islands.</p>
 
-<p><strong>Krabi Town</strong> is the most affordable and authentic base. It offers easy access to markets, local restaurants, and transport hubs. Budget hostels like Pak-Up Hostel cost $8 (≈ ₽760)-$15 (≈ ₽1 425) per night, while mid-range hotels like Krabi River Hotel run $25 (≈ ₽2 375)-$45. (≈ ₽4 275) Luxury options are limited here.</p>
+<p><strong>Krabi Town</strong> is the most affordable and authentic base. It offers easy access to markets, local restaurants, and transport hubs. Budget hostels like Pak-Up Hostel cost $8-$15per night, while mid-range hotels like Krabi River Hotel run $25-$45Luxury options are limited here.</p>
 
-<p><strong>Ao Nang</strong> is the main tourist hub, with a beach, nightlife, and hundreds of hotels. Budget stays like Baan Khao Thong Guesthouse start at $15 (≈ ₽1 425)-$25. (≈ ₽2 375) Mid-range hotels, such as Aonang Cliff Beach Resort, range from $40 (≈ ₽3 800)-$80. (≈ ₽7 600) High-end resorts like the Centara Grand Beach Resort & Villas cost $150 (≈ ₽14 250)-$300 (≈ ₽28 500) per night.</p>
+<p><strong>Ao Nang</strong> is the main tourist hub, with a beach, nightlife, and hundreds of hotels. Budget stays like Baan Khao Thong Guesthouse start at $15-$25Mid-range hotels, such as Aonang Cliff Beach Resort, range from $40-$80High-end resorts like the Centara Grand Beach Resort & Villas cost $150-$300per night.</p>
 
-<p><strong>Railay Beach</strong> is only accessible by boat and offers a secluded, upscale experience. Mid-range options like Railay Bay Resort & Spa are $60 (≈ ₽5 700)-$120  (≈ ₽11 400) while luxury properties like Rayavadee start at $400 (≈ ₽38 000) per night. Budget bungalows are scarce but available from $30. (≈ ₽2 850)</p>
+<p><strong>Railay Beach</strong> is only accessible by boat and offers a secluded, upscale experience. Mid-range options like Railay Bay Resort & Spa are $60-$120while luxury properties like Rayavadee start at $400per night. Budget bungalows are scarce but available from $30</p>
 
-<p><strong>Koh Phi Phi and Koh Lanta</strong> offer island living. Phi Phi has budget dorms from $10 (≈ ₽950) and luxury resorts like Phi Phi Island Village Beach Resort from $200. (≈ ₽19 000) Koh Lanta is quieter, with bungalows from $15 (≈ ₽1 425) and resorts from $50. (≈ ₽4 750)</p>
+<p><strong>Koh Phi Phi and Koh Lanta</strong> offer island living. Phi Phi has budget dorms from $10and luxury resorts like Phi Phi Island Village Beach Resort from $200Koh Lanta is quieter, with bungalows from $15and resorts from $50</p>
 
 <h2>Top 15 Attractions</h2>
 
 <ol>
-<li><strong>Railay Beach</strong> – A stunning peninsula accessible only by longtail boat from Ao Nang. Famous for its white sand, clear water, and world-class rock climbing. Free entry; climbing gear rental $10 (≈ ₽950)-$15. (≈ ₽1 425) Open 24 hours.</li>
-<li><strong>Phi Phi Islands</strong> – An archipelago of six islands, including Maya Bay, made famous by the film "The Beach." Day trips cost $30 (≈ ₽2 850)-$50 (≈ ₽4 750) per person. Maya Bay is open 8 AM to 4 PM with limited visitors (pre-booking required).</li>
-<li><strong>Emerald Pool (Sa Morakot)</strong> – A natural spring-fed pool in Thung Teao Forest Natural Park with vibrant green water. Entry $5. (≈ ₽475) Open 8 AM to 5 PM.</li>
+<li><strong>Railay Beach</strong> – A stunning peninsula accessible only by longtail boat from Ao Nang. Famous for its white sand, clear water, and world-class rock climbing. Free entry; climbing gear rental $10-$15Open 24 hours.</li>
+<li><strong>Phi Phi Islands</strong> – An archipelago of six islands, including Maya Bay, made famous by the film "The Beach." Day trips cost $30-$50per person. Maya Bay is open 8 AM to 4 PM with limited visitors (pre-booking required).</li>
+<li><strong>Emerald Pool (Sa Morakot)</strong> – A natural spring-fed pool in Thung Teao Forest Natural Park with vibrant green water. Entry $5Open 8 AM to 5 PM.</li>
 <li><strong>Blue Pool (Sa Nam Thip)</strong> – A deep, crystal-clear pool nearby, with a striking blue hue. Entry included with Emerald Pool ticket. Open 8 AM to 4 PM (closed during rainy season).</li>
-<li><strong>Hong Islands</strong> – A group of islands with a spectacular lagoon, perfect for snorkeling and kayaking. Day trips $35 (≈ ₽3 325)-$55. (≈ ₽5 225) Open 8 AM to 5 PM.</li>
+<li><strong>Hong Islands</strong> – A group of islands with a spectacular lagoon, perfect for snorkeling and kayaking. Day trips $35-$55Open 8 AM to 5 PM.</li>
 <li><strong>Tiger Cave Temple (Wat Tham Suea)</strong> – A Buddhist temple atop a 1,237-step climb, offering panoramic views of Krabi. Free entry. Open 6 AM to 6 PM.</li>
-<li><strong>Khao Khanab Nam Caves</strong> – Two dramatic limestone mountains with caves at the mouth of the Krabi River. Boat tours $10 (≈ ₽950)-$15 (≈ ₽1 425) per person. Open 8 AM to 5 PM.</li>
-<li><strong>Thung Teao Forest Natural Park</strong> – A lush rainforest with a boardwalk trail, home to the Emerald Pool and Blue Pool. Entry $5. (≈ ₽475) Open 8 AM to 5 PM.</li>
+<li><strong>Khao Khanab Nam Caves</strong> – Two dramatic limestone mountains with caves at the mouth of the Krabi River. Boat tours $10-$15per person. Open 8 AM to 5 PM.</li>
+<li><strong>Thung Teao Forest Natural Park</strong> – A lush rainforest with a boardwalk trail, home to the Emerald Pool and Blue Pool. Entry $5Open 8 AM to 5 PM.</li>
 <li><strong>Dragon Crest Mountain (Khao Ngon Nak)</strong> – A challenging 4-kilometer hike to a viewpoint with a dragon-shaped ridge. Free entry. Open 6 AM to 4 PM.</li>
-<li><strong>Shell Cemetery (Suea Khao)</strong> – A unique geological formation of fossilized shells estimated to be 40 million years old. Entry $3. (≈ ₽285) Open 8 AM to 5 PM.</li>
+<li><strong>Shell Cemetery (Suea Khao)</strong> – A unique geological formation of fossilized shells estimated to be 40 million years old. Entry $3Open 8 AM to 5 PM.</li>
 <li><strong>Krabi Town Night Market</strong> – A vibrant market along the river, offering local food, crafts, and live music. Free entry. Open Friday to Sunday, 5 PM to 10 PM.</li>
 <li><strong>Wat Kaew Korawaram</strong> – A stunning white temple in Krabi Town with intricate architecture. Free entry. Open 6 AM to 6 PM.</li>
-<li><strong>Diamond Cave (Tham Phra Nang)</strong> – A cave on Railay Beach with impressive stalactites and stalagmites. Entry $2. (≈ ₽190) Open 8 AM to 5 PM.</li>
-<li><strong>Koh Poda</strong> – A small island near Railay with a beautiful beach and snorkeling spots. Day trips from Ao Nang $15 (≈ ₽1 425)-$25. (≈ ₽2 375) Open 8 AM to 5 PM.</li>
-<li><strong>Four Islands Tour</strong> – A popular day trip covering Koh Poda, Koh Chicken, Koh Tup, and Koh Mor. Includes snorkeling, lunch, and beach time. Cost $20 (≈ ₽1 900)-$35 (≈ ₽3 325) per person.</li>
+<li><strong>Diamond Cave (Tham Phra Nang)</strong> – A cave on Railay Beach with impressive stalactites and stalagmites. Entry $2Open 8 AM to 5 PM.</li>
+<li><strong>Koh Poda</strong> – A small island near Railay with a beautiful beach and snorkeling spots. Day trips from Ao Nang $15-$25Open 8 AM to 5 PM.</li>
+<li><strong>Four Islands Tour</strong> – A popular day trip covering Koh Poda, Koh Chicken, Koh Tup, and Koh Mor. Includes snorkeling, lunch, and beach time. Cost $20-$35per person.</li>
 </ol>
 
 <h2>Getting Around</h2>
 
 <p>Krabi does not have a metro or extensive public bus system, but several affordable options exist.</p>
 
-<p><strong>Tuk-tuks (songthaews)</strong> are the most common mode of transport. These shared pickup trucks run fixed routes between Krabi Town, Ao Nang, and the airport. Fares range from $1 (≈ ₽95) to $3 (≈ ₽285) per person for short trips. Private tuk-tuks cost $5 (≈ ₽475)-$10 (≈ ₽950) for longer distances.</p>
+<p><strong>Tuk-tuks (songthaews)</strong> are the most common mode of transport. These shared pickup trucks run fixed routes between Krabi Town, Ao Nang, and the airport. Fares range from $1to $3per person for short trips. Private tuk-tuks cost $5-$10for longer distances.</p>
 
-<p><strong>Longtail boats</strong> are essential for island hopping and reaching Railay Beach. Fares from Ao Nang to Railay are $3 (≈ ₽285)-$5 (≈ ₽475) per person. Private charters for a full day cost $50 (≈ ₽4 750)-$100. (≈ ₽9 500)</p>
+<p><strong>Longtail boats</strong> are essential for island hopping and reaching Railay Beach. Fares from Ao Nang to Railay are $3-$5per person. Private charters for a full day cost $50-$100</p>
 
-<p><strong>Rental scooters</strong> are popular for independent exploration. Daily rental rates are $6 (≈ ₽570)-$10  (≈ ₽950) with weekly discounts. You need a valid international driving permit and a helmet (provided). Gasoline costs about $1 (≈ ₽95) per liter.</p>
+<p><strong>Rental scooters</strong> are popular for independent exploration. Daily rental rates are $6-$10with weekly discounts. You need a valid international driving permit and a helmet (provided). Gasoline costs about $1per liter.</p>
 
-<p><strong>Car rentals</strong> are available from $25 (≈ ₽2 375)-$40 (≈ ₽3 800) per day. Companies like Hertz and Budget have desks at the airport. Driving is on the left side of the road.</p>
+<p><strong>Car rentals</strong> are available from $25-$40per day. Companies like Hertz and Budget have desks at the airport. Driving is on the left side of the road.</p>
 
-<p><strong>Taxi services</strong> from the airport to Ao Nang cost $15 (≈ ₽1 425)-$20  (≈ ₽1 900) and to Krabi Town $10 (≈ ₽950)-$15. (≈ ₽1 425) Uber and Grab operate in the area, with similar pricing.</p>
+<p><strong>Taxi services</strong> from the airport to Ao Nang cost $15-$20and to Krabi Town $10-$15Uber and Grab operate in the area, with similar pricing.</p>
 
 <h2>Where to Eat</h2>
 
@@ -425,13 +449,13 @@
 
 <p><strong>Local dishes to try:</strong> Tom Yum Goong (spicy shrimp soup), Pad Thai, Green Curry, Massaman Curry, and fresh seafood like grilled prawns and steamed fish. For dessert, try mango sticky rice.</p>
 
-<p><strong>Budget eats ($2 (≈ ₽190)-$5 (≈ ₽475)):</strong> Street food stalls in Krabi Town Night Market and Ao Nang’s Soi 8 serve pad thai, satay skewers, and som tam (papaya salad). Local restaurants like May & Mark’s House in Ao Nang offer curries and stir-fries for $3 (≈ ₽285)-$5. (≈ ₽475)</p>
+<p><strong>Budget eats ($2-$5):</strong> Street food stalls in Krabi Town Night Market and Ao Nang’s Soi 8 serve pad thai, satay skewers, and som tam (papaya salad). Local restaurants like May & Mark’s House in Ao Nang offer curries and stir-fries for $3-$5</p>
 
-<p><strong>Mid-range restaurants ($8 (≈ ₽760)-$15 (≈ ₽1 425)):</strong> Gecko Cabaret Restaurant in Ao Nang serves Thai and Western dishes with a view. The Hilltop, also in Ao Nang, offers panoramic views and seafood platters for $10 (≈ ₽950)-$15. (≈ ₽1 425)</p>
+<p><strong>Mid-range restaurants ($8-$15):</strong> Gecko Cabaret Restaurant in Ao Nang serves Thai and Western dishes with a view. The Hilltop, also in Ao Nang, offers panoramic views and seafood platters for $10-$15</p>
 
-<p><strong>High-end dining ($20 (≈ ₽1 900)-$40 (≈ ₽3 800)):</strong> The Grotto at Rayavadee Resort on Railay Beach is a cave restaurant serving fine Thai cuisine. Krua Thara in Krabi Town is famous for its seafood, with main courses from $15 (≈ ₽1 425)-$30. (≈ ₽2 850)</p>
+<p><strong>High-end dining ($20-$40):</strong> The Grotto at Rayavadee Resort on Railay Beach is a cave restaurant serving fine Thai cuisine. Krua Thara in Krabi Town is famous for its seafood, with main courses from $15-$30</p>
 
-<p><strong>Vegetarian and vegan options:</strong> Many restaurants offer vegetarian versions of Thai classics. The Vegan Table in Ao Nang specializes in plant-based dishes for $5 (≈ ₽475)-$10. (≈ ₽950)</p>
+<p><strong>Vegetarian and vegan options:</strong> Many restaurants offer vegetarian versions of Thai classics. The Vegan Table in Ao Nang specializes in plant-based dishes for $5-$10</p>
 
 <h2>Best Time to Visit</h2>
 
@@ -449,7 +473,7 @@
 
 <p>Krabi is in Thailand, and visa policies are national. Citizens of 64 countries, including the United States, United Kingdom, Australia, Canada, and most European nations, enjoy visa-free entry for up to 30 days when arriving by air. For land border crossings, the visa-free period is 15 days.</p>
 
-<p>Travelers from other countries must apply for a tourist visa (single-entry, 60 days) at a Thai embassy or consulate before travel. The fee is approximately $40. (≈ ₽3 800) Extensions of stay (30 days) can be obtained at the Krabi Immigration Office in Krabi Town for $50. (≈ ₽4 750)</p>
+<p>Travelers from other countries must apply for a tourist visa (single-entry, 60 days) at a Thai embassy or consulate before travel. The fee is approximately $40Extensions of stay (30 days) can be obtained at the Krabi Immigration Office in Krabi Town for $50</p>
 
 <p>Your passport must be valid for at least six months beyond your date of entry. Proof of onward travel (flight ticket out of Thailand) may be requested. No vaccination is required for entry, but hepatitis A and typhoid vaccines are recommended.</p>
 
@@ -469,44 +493,44 @@
 <tbody>
 <tr>
 <td>Accommodation</td>
-<td>$70 (≈ ₽6 650)-$140 (≈ ₽13 300)</td>
-<td>$280 (≈ ₽26 600)-$560 (≈ ₽53 200)</td>
-<td>$1 050 (≈ ₽99 750)-$2 100 (≈ ₽199 500)</td>
+<td>$70-$140</td>
+<td>$280-$560</td>
+<td>$1 050-$2 100</td>
 </tr>
 <tr>
 <td>Food</td>
-<td>$70 (≈ ₽6 650)-$105 (≈ ₽9 975)</td>
-<td>$140 (≈ ₽13 300)-$210 (≈ ₽19 950)</td>
-<td>$280 (≈ ₽26 600)-$420 (≈ ₽39 900)</td>
+<td>$70-$105</td>
+<td>$140-$210</td>
+<td>$280-$420</td>
 </tr>
 <tr>
 <td>Transport</td>
-<td>$30 (≈ ₽2 850)-$50 (≈ ₽4 750)</td>
-<td>$60 (≈ ₽5 700)-$100 (≈ ₽9 500)</td>
-<td>$150 (≈ ₽14 250)-$250 (≈ ₽23 750)</td>
+<td>$30-$50</td>
+<td>$60-$100</td>
+<td>$150-$250</td>
 </tr>
 <tr>
 <td>Attractions & Tours</td>
-<td>$50 (≈ ₽4 750)-$100 (≈ ₽9 500)</td>
-<td>$100 (≈ ₽9 500)-$200 (≈ ₽19 000)</td>
-<td>$200 (≈ ₽19 000)-$400 (≈ ₽38 000)</td>
+<td>$50-$100</td>
+<td>$100-$200</td>
+<td>$200-$400</td>
 </tr>
 <tr>
 <td>Miscellaneous</td>
-<td>$20 (≈ ₽1 900)-$40 (≈ ₽3 800)</td>
-<td>$50 (≈ ₽4 750)-$80 (≈ ₽7 600)</td>
-<td>$100 (≈ ₽9 500)-$200 (≈ ₽19 000)</td>
+<td>$20-$40</td>
+<td>$50-$80</td>
+<td>$100-$200</td>
 </tr>
 <tr>
 <td><strong>Total per week</strong></td>
-<td><strong>$240 (≈ ₽22 800)-$435 (≈ ₽41 325)</strong></td>
-<td><strong>$630 (≈ ₽59 850)-$1 150 (≈ ₽109 250)</strong></td>
-<td><strong>$1 780 (≈ ₽169 100)-$3 370 (≈ ₽320 150)</strong></td>
+<td><strong>$240-$435</strong></td>
+<td><strong>$630-$1 150</strong></td>
+<td><strong>$1 780-$3 370</strong></td>
 </tr>
 </tbody>
 </table>
 
-<p>Note: Budget travelers staying in hostels and eating street food can manage on $30 (≈ ₽2 850)-$40 (≈ ₽3 800) per day. Mid-range travelers in 3-star hotels and restaurant meals spend $90 (≈ ₽8 550)-$160 (≈ ₽15 200) daily. Luxury travelers in 5-star resorts with private tours spend $250 (≈ ₽23 750)-$480 (≈ ₽45 600) per day.</p>
+<p>Note: Budget travelers staying in hostels and eating street food can manage on $30-$40per day. Mid-range travelers in 3-star hotels and restaurant meals spend $90-$160daily. Luxury travelers in 5-star resorts with private tours spend $250-$480per day.</p>
 
 <h2>10 Travel Tips</h2>
 
@@ -516,7 +540,7 @@
 <li><strong>Protect yourself from the sun</strong> with reef-safe sunscreen, a hat, and sunglasses. The tropical sun is intense even on cloudy days.</li>
 <li><strong>Learn basic Thai phrases</strong> like "hello" (sawasdee), "thank you" (khob khun), and "how much?" (tao rai). Locals appreciate the effort.</li>
 <li><strong>Respect local customs</strong> by covering your shoulders and knees when visiting temples like Tiger Cave Temple. Remove shoes before entering temple buildings.</li>
-<li><strong>Stay hydrated</strong> but avoid tap water. Drink bottled or filtered water, which costs $0.50 (≈ ₽47)-$1 (≈ ₽95) per liter.</li>
+<li><strong>Stay hydrated</strong> but avoid tap water. Drink bottled or filtered water, which costs $0-$1per liter.</li>
 <li><strong>Negotiate prices</strong> for tuk-tuk rides and boat tours, as initial quotes are often inflated. Agree on a price before the journey begins.</li>
 <li><strong>Check weather conditions</strong> before booking boat trips during the wet season (May-October). Some tours may be canceled due to rough seas.</li>
 <li><strong>Pack light and breathable clothing</strong> made of cotton or linen. Quick-dry swimwear and a reusable water bottle are essential.</li>
@@ -627,6 +651,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -655,6 +680,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -672,8 +698,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

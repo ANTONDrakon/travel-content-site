@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Cairo 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Cairo 2026: Budget to Luxury Cairo’s hotel scene in 2026 is a dynamic blend of historic palaces, modern high-rises, and boutique guesthouses...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Cairo 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Cairo 2026: Budget to Luxury Cairo’s hotel scene in 2026 is a dynamic blend of historic palaces, modern high-rises, and boutique guesthouses...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/cairo-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/cairo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Cairo 2026: Budget to Luxury</div>
@@ -359,63 +383,125 @@
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
-<p>Cairo’s hotel scene in 2026 is a dynamic blend of historic palaces, modern high-rises, and boutique guesthouses, reflecting the city’s dual identity as a sprawling metropolis and a gateway to ancient wonders. The infrastructure has seen significant upgrades, particularly around the Grand Egyptian Museum (GEM) in Giza, which opened fully in 2023, and the new Cairo Monorail line connecting 6th of October City to central Cairo. Hotels now offer faster Wi-Fi, electric vehicle charging stations, and enhanced security, with many properties investing in solar energy to offset Egypt’s occasional power fluctuations. Prices have risen about 15% since 2024 due to inflation and increased tourism demand, but savvy travelers can still find excellent value, especially in neighborhoods like Downtown Cairo, Zamalek, and the quieter parts of Giza. Budget travelers should expect to pay $30 (≈ ₽2 850)–$50 (≈ ₽4 750) per night for a clean room with breakfast, while mid-range options in the $60 (≈ ₽5 700)–$140 (≈ ₽13 300) range provide air conditioning, pools, and central locations. Luxury properties start at $180 (≈ ₽17 100) and can exceed $800 (≈ ₽76 000) for Nile-view suites in top-tier chains like the Four Seasons or Kempinski.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Cairo’s hotel scene in 2026 is a dynamic blend of historic palaces, modern high-rises, and boutique guesthouses, reflecting the city’s dual identity as a sprawling metropolis and a gateway to ancient wonders. The infrastructure has seen significant upgrades, particularly around the Grand Egyptian Museum (GEM) in Giza, which opened fully in 2023, and the new Cairo Monorail line connecting 6th of October City to central Cairo. Hotels now offer faster Wi-Fi, electric vehicle charging stations, and enhanced security, with many properties investing in solar energy to offset Egypt’s occasional power fluctuations. Prices have risen about 15% since 2024 due to inflation and increased tourism demand, but savvy travelers can still find excellent value, especially in neighborhoods like Downtown Cairo, Zamalek, and the quieter parts of Giza. Budget travelers should expect to pay $30–$50per night for a clean room with breakfast, while mid-range options in the $60–$140range provide air conditioning, pools, and central locations. Luxury properties start at $180and can exceed $800for Nile-view suites in top-tier chains like the Four Seasons or Kempinski.</p>
+<div id="hc_227833" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons or Kempinski. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons or Kempinski. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons or Kempinski. - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_227833 .hc-slide');var d=document.querySelectorAll('#hc_227833 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_227833 .hc-slide');var d=document.querySelectorAll('#hc_227833 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_227833 .hc-slide');var d=document.querySelectorAll('#hc_227833 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons or Kempinski. &bull; 3 photos</p></div>
 
 <p>Neighborhood choice is critical for your Cairo experience. Downtown Cairo offers historic charm and proximity to the Egyptian Museum and Tahrir Square, but noise and traffic can be intense. Zamalek, on Gezira Island, provides a leafy, upscale retreat with art galleries and fine dining, ideal for couples and solo travelers. Giza is essential for pyramid views but can feel isolated from nightlife; the area around the GEM is rapidly developing with new hotels. For beach access, you’ll need to travel to Ain Sokhna (1.5 hours east) or the North Coast (3 hours north), though many Cairo hotels offer day-trip packages. Nightlife seekers should base themselves in Zamalek or the new administrative capital (NAC), 45 minutes east, where rooftop bars and clubs have popped up. Below, I’ve curated ten hotels across three price tiers, each chosen for reliability, location, and value in 2026.</p>
+<div id="hc_679530" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="w hotels. For beach access, you’ll need to travel to Ain Sokhna - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="w hotels. For beach access, you’ll need to travel to Ain Sokhna - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_679530 .hc-slide');var d=document.querySelectorAll('#hc_679530 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_679530 .hc-slide');var d=document.querySelectorAll('#hc_679530 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">w hotels. For beach access, you’ll need to travel to Ain Sokhna &bull; 2 photos</p></div>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Cairo City Hostel & Hotel (Downtown)</h3>
-<p>A perennial favorite for backpackers, this property offers private rooms from $28 (≈ ₽2 660)/night and dorm beds from $12. (≈ ₽1 140) Located on 26th of July Street, it’s a 10-minute walk from the Egyptian Museum and Tahrir Metro station. Rooms are basic but spotless, with air conditioning, free Wi-Fi, and shared bathrooms. The rooftop terrace provides panoramic city views and a free breakfast of ful medames and pita. Pros: Unbeatable price, social atmosphere, 24-hour reception. Cons: Street noise until midnight, no elevator, and occasional hot water shortages.</p>
+<div id="hc_25139" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Cairo City Hostel & Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Cairo City Hostel & Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_25139 .hc-slide');var d=document.querySelectorAll('#hc_25139 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_25139 .hc-slide');var d=document.querySelectorAll('#hc_25139 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Cairo City Hostel & Hotel &bull; 2 photos</p></div>
+<p>A perennial favorite for backpackers, this property offers private rooms from $28/night and dorm beds from $12Located on 26th of July Street, it’s a 10-minute walk from the Egyptian Museum and Tahrir Metro station. Rooms are basic but spotless, with air conditioning, free Wi-Fi, and shared bathrooms. The rooftop terrace provides panoramic city views and a free breakfast of ful medames and pita. Pros: Unbeatable price, social atmosphere, 24-hour reception. Cons: Street noise until midnight, no elevator, and occasional hot water shortages.</p>
 
 <h3>2. Pyramids Eye Hotel (Giza)</h3>
-<p>For $35 (≈ ₽3 325)/night, this small hotel on the edge of the Nazlet el-Samman district offers direct views of the Great Pyramid from its rooftop. Rooms are simple with tiled floors, en-suite bathrooms, and reliable AC. The staff arranges discounted camel rides and tickets to the Giza Plateau. Pros: Pyramid views for a fraction of luxury prices, friendly staff, free airport shuttle for stays over 3 nights. Cons: Distance from central Cairo (45 minutes by Uber), persistent touts outside, and basic breakfast (bread, jam, tea).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_835295" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80" alt="Pyramids Eye Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80" alt="Pyramids Eye Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_835295 .hc-slide');var d=document.querySelectorAll('#hc_835295 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_835295 .hc-slide');var d=document.querySelectorAll('#hc_835295 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pyramids Eye Hotel &bull; 2 photos</p></div>
+<p>For $35/night, this small hotel on the edge of the Nazlet el-Samman district offers direct views of the Great Pyramid from its rooftop. Rooms are simple with tiled floors, en-suite bathrooms, and reliable AC. The staff arranges discounted camel rides and tickets to the Giza Plateau. Pros: Pyramid views for a fraction of luxury prices, friendly staff, free airport shuttle for stays over 3 nights. Cons: Distance from central Cairo (45 minutes by Uber), persistent touts outside, and basic breakfast (bread, jam, tea).</p>
 
 <h3>3. Oasis Hotel Zamalek</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Za" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>A hidden gem in the quiet streets of Zamalek, this 12-room guesthouse charges $45 (≈ ₽4 275)/night for a double with a balcony. It’s a 15-minute walk from the Cairo Opera House and the Nile Corniche. The hotel features a small garden, a library, and home-cooked Egyptian dinners for $8 (≈ ₽760) extra. Pros: Peaceful neighborhood, excellent security, authentic local feel. Cons: No pool, limited English spoken by some staff, and stairs only (no lift).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_969160" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Oasis Hotel Zamalek - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Oasis Hotel Zamalek - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Oasis Hotel Zamalek - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_969160 .hc-slide');var d=document.querySelectorAll('#hc_969160 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_969160 .hc-slide');var d=document.querySelectorAll('#hc_969160 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_969160 .hc-slide');var d=document.querySelectorAll('#hc_969160 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Oasis Hotel Zamalek &bull; 3 photos</p></div>
+<p>A hidden gem in the quiet streets of Zamalek, this 12-room guesthouse charges $45/night for a double with a balcony. It’s a 15-minute walk from the Cairo Opera House and the Nile Corniche. The hotel features a small garden, a library, and home-cooked Egyptian dinners for $8extra. Pros: Peaceful neighborhood, excellent security, authentic local feel. Cons: No pool, limited English spoken by some staff, and stairs only (no lift).</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>4. Steigenberger Hotel El Tahrir (Downtown)</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="El" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Priced at $95 (≈ ₽9 025)–$130 (≈ ₽12 350)/night, this 4-star hotel sits directly opposite the Egyptian Museum. It underwent a full renovation in 2024, adding a rooftop pool and a fitness center. Rooms are modern with dark wood furniture, smart TVs, and blackout curtains. The on-site restaurant, “The Blue,” serves excellent koshari and grilled meats. Highlights: Prime location for sightseeing, soundproofed windows, and a business center. The only drawback is the lack of parking, but the Tahrir Metro station is 200 meters away.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="si" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_119636" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Steigenberger Hotel El Tahrir - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Steigenberger Hotel El Tahrir - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_119636 .hc-slide');var d=document.querySelectorAll('#hc_119636 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_119636 .hc-slide');var d=document.querySelectorAll('#hc_119636 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Steigenberger Hotel El Tahrir &bull; 2 photos</p></div>
+<p>Priced at $95–$130/night, this 4-star hotel sits directly opposite the Egyptian Museum. It underwent a full renovation in 2024, adding a rooftop pool and a fitness center. Rooms are modern with dark wood furniture, smart TVs, and blackout curtains. The on-site restaurant, “The Blue,” serves excellent koshari and grilled meats. Highlights: Prime location for sightseeing, soundproofed windows, and a business center. The only drawback is the lack of parking, but the Tahrir Metro station is 200 meters away.</p>
 
 <h3>5. Villa Belle Epoque (Zamalek)</h3>
-<p>A boutique hotel housed in a 1920s villa, with rates from $80 (≈ ₽7 600)–$110 (≈ ₽10 450)/night. Each of the 15 rooms is uniquely decorated with antique furniture, high ceilings, and original mosaic floors. The garden terrace is perfect for afternoon tea, and the hotel offers free yoga classes on weekends. Highlights: Historic charm, personalized service, and a 5-minute walk to the Zamalek souk. The neighborhood is exceptionally safe for solo female travelers.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="ho" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_875854" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Villa Belle Epoque - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Villa Belle Epoque - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Villa Belle Epoque - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_875854 .hc-slide');var d=document.querySelectorAll('#hc_875854 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_875854 .hc-slide');var d=document.querySelectorAll('#hc_875854 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_875854 .hc-slide');var d=document.querySelectorAll('#hc_875854 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Villa Belle Epoque &bull; 3 photos</p></div>
+<p>A boutique hotel housed in a 1920s villa, with rates from $80–$110/night. Each of the 15 rooms is uniquely decorated with antique furniture, high ceilings, and original mosaic floors. The garden terrace is perfect for afternoon tea, and the hotel offers free yoga classes on weekends. Highlights: Historic charm, personalized service, and a 5-minute walk to the Zamalek souk. The neighborhood is exceptionally safe for solo female travelers.</p>
 
 <h3>6. Holiday Inn Cairo Maadi (Maadi)</h3>
-<p>For $70 (≈ ₽6 650)–$90 (≈ ₽8 550)/night, this reliable chain hotel in the leafy Maadi district offers a pool, tennis courts, and a kids’ club. Rooms are spacious with mini-fridges and work desks. The Metro station is a 10-minute walk, making downtown Cairo accessible in 20 minutes. Highlights: Family-friendly, quiet neighborhood, and a large buffet breakfast included. The downside is that Maadi is far from pyramids (1-hour drive), so plan accordingly.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_87861" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Cairo Maadi - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Cairo Maadi - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_87861 .hc-slide');var d=document.querySelectorAll('#hc_87861 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_87861 .hc-slide');var d=document.querySelectorAll('#hc_87861 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Cairo Maadi &bull; 2 photos</p></div>
+<p>For $70–$90/night, this reliable chain hotel in the leafy Maadi district offers a pool, tennis courts, and a kids’ club. Rooms are spacious with mini-fridges and work desks. The Metro station is a 10-minute walk, making downtown Cairo accessible in 20 minutes. Highlights: Family-friendly, quiet neighborhood, and a large buffet breakfast included. The downside is that Maadi is far from pyramids (1-hour drive), so plan accordingly.</p>
+<div id="hc_444894" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80" alt="pyramids - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80" alt="pyramids - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_444894 .hc-slide');var d=document.querySelectorAll('#hc_444894 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_444894 .hc-slide');var d=document.querySelectorAll('#hc_444894 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">pyramids &bull; 2 photos</p></div>
 
 <h3>7. Cairo Marriott Hotel & Omar Khayyam Casino (Zamalek)</h3>
-<p>Occupying a former palace, this 5-star property often has mid-range rates of $120 (≈ ₽11 400)–$150 (≈ ₽14 250)/night if booked in advance. Rooms are opulent with marble bathrooms and Nile or garden views. The hotel boasts 7 restaurants, a spa, and a casino. Highlights: Stunning architecture, multiple dining options, and direct access to the Zamalek nightlife strip. The pool is heated year-round. Note: The casino can be noisy on weekends, and valet parking is expensive ($15 (≈ ₽1 425)/day).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="bo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_664642" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Cairo Marriott Hotel & Omar Khayyam Casino - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Cairo Marriott Hotel & Omar Khayyam Casino - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_664642 .hc-slide');var d=document.querySelectorAll('#hc_664642 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_664642 .hc-slide');var d=document.querySelectorAll('#hc_664642 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Cairo Marriott Hotel & Omar Khayyam Casino &bull; 2 photos</p></div>
+<p>Occupying a former palace, this 5-star property often has mid-range rates of $120–$150/night if booked in advance. Rooms are opulent with marble bathrooms and Nile or garden views. The hotel boasts 7 restaurants, a spa, and a casino. Highlights: Stunning architecture, multiple dining options, and direct access to the Zamalek nightlife strip. The pool is heated year-round. Note: The casino can be noisy on weekends, and valet parking is expensive ($15/day).</p>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>8. Four Seasons Hotel Cairo at Nile Plaza (Garden City)</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Rates start at $280 (≈ ₽26 600)/night for a city-view room and exceed $600 (≈ ₽57 000) for a Nile suite. This 31-story tower offers a world-class spa, a 24-hour fitness center, and three pools (including an infinity pool overlooking the river). Rooms feature Egyptian cotton linens, Nespresso machines, and floor-to-ceiling windows. The hotel’s “Zitouni” restaurant serves exceptional Lebanese cuisine. Features: Private boat transfers to Zamalek, personal butler service, and a dedicated children’s program. The concierge can arrange private tours to the GEM or a felucca sunset cruise. The only complaint from guests is the slow elevator during peak hours.</p>
+<p>Rates start at $280/night for a city-view room and exceed $600for a Nile suite. This 31-story tower offers a world-class spa, a 24-hour fitness center, and three pools (including an infinity pool overlooking the river). Rooms feature Egyptian cotton linens, Nespresso machines, and floor-to-ceiling windows. The hotel’s “Zitouni” restaurant serves exceptional Lebanese cuisine. Features: Private boat transfers to Zamalek, personal butler service, and a dedicated children’s program. The concierge can arrange private tours to the GEM or a felucca sunset cruise. The only complaint from guests is the slow elevator during peak hours.</p>
 
 <h3>9. Kempinski Nile Hotel Cairo (Downtown)</h3>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>With rates from $220 (≈ ₽20 900)/night, this sleek hotel on the Corniche el Nil offers contemporary luxury with a rooftop infinity pool and a cigar lounge. Rooms are minimalist with neutral tones, walk-in showers, and automated curtains. The “Osmanly” restaurant serves Ottoman-inspired cuisine, and the bar offers live jazz nightly. Features: 24-hour room service, a state-of-the-art gym, and a luxury spa with hammam treatments. The location is ideal for business travelers, as it’s 10 minutes from the stock exchange and the Cairo International Conference Center.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>With rates from $220/night, this sleek hotel on the Corniche el Nil offers contemporary luxury with a rooftop infinity pool and a cigar lounge. Rooms are minimalist with neutral tones, walk-in showers, and automated curtains. The “Osmanly” restaurant serves Ottoman-inspired cuisine, and the bar offers live jazz nightly. Features: 24-hour room service, a state-of-the-art gym, and a luxury spa with hammam treatments. The location is ideal for business travelers, as it’s 10 minutes from the stock exchange and the Cairo International Conference Center.</p>
 
 <h3>10. Marriott Mena House, Cairo (Giza)</h3>
-<p>This iconic hotel, set in a 19th-century hunting lodge, commands $350 (≈ ₽33 250)–$800 (≈ ₽76 000)/night for rooms with direct pyramid views. The property features 11 acres of gardens, a heated outdoor pool, and a historic bar where Winston Churchill once drank. Rooms have a colonial aesthetic with four-poster beds and private balconies. Features: A 9-hole golf course, a spa with Egyptian treatments, and a private entrance to the Giza Plateau. The “139 Pavilion” restaurant offers fine dining with a view of the illuminated pyramids. The only downside is that the hotel is 30 minutes from central Cairo, but the experience of waking up to the pyramids is worth the commute.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>This iconic hotel, set in a 19th-century hunting lodge, commands $350–$800/night for rooms with direct pyramid views. The property features 11 acres of gardens, a heated outdoor pool, and a historic bar where Winston Churchill once drank. Rooms have a colonial aesthetic with four-poster beds and private balconies. Features: A 9-hole golf course, a spa with Egyptian treatments, and a private entrance to the Giza Plateau. The “139 Pavilion” restaurant offers fine dining with a view of the illuminated pyramids. The only downside is that the hotel is 30 minutes from central Cairo, but the experience of waking up to the pyramids is worth the commute.</p>
 
 <h2>How to Choose the Right Area</h2>
 
-<p>Your choice of neighborhood in Cairo should align with your travel purpose. For beach access, you’ll need to stay outside the city proper. The best option is to book a hotel in Ain Sokhna (e.g., the Stella Di Mare Beach Resort, from $120 (≈ ₽11 400)/night) and take day trips to Cairo (1.5 hours by taxi). Alternatively, the North Coast near El Alamein offers luxury resorts like the Rixos Alamein ($250 (≈ ₽23 750)+/night), but the drive is 3 hours. For sightseeing, base yourself in Giza near the pyramids or in Downtown Cairo near the Egyptian Museum and Khan el-Khalili bazaar. Zamalek is ideal for a mix of culture and relaxation, with easy access to the Cairo Tower and the Nile. For nightlife, Zamalek and the New Administrative Capital (NAC) are the best bets. Zamalek has rooftop bars like “The Roof” at the Marriott, while NAC has modern clubs like “Sky Bar” at the Almasa Hotel. Avoid Downtown for nightlife unless you enjoy crowded street cafes and shisha bars.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Your choice of neighborhood in Cairo should align with your travel purpose. For beach access, you’ll need to stay outside the city proper. The best option is to book a hotel in Ain Sokhna (e.g., the Stella Di Mare Beach Resort, from $120/night) and take day trips to Cairo (1.5 hours by taxi). Alternatively, the North Coast near El Alamein offers luxury resorts like the Rixos Alamein ($250+/night), but the drive is 3 hours. For sightseeing, base yourself in Giza near the pyramids or in Downtown Cairo near the Egyptian Museum and Khan el-Khalili bazaar. Zamalek is ideal for a mix of culture and relaxation, with easy access to the Cairo Tower and the Nile. For nightlife, Zamalek and the New Administrative Capital (NAC) are the best bets. Zamalek has rooftop bars like “The Roof” at the Marriott, while NAC has modern clubs like “Sky Bar” at the Almasa Hotel. Avoid Downtown for nightlife unless you enjoy crowded street cafes and shisha bars.</p>
 
 <h2>Booking Tips</h2>
 
@@ -510,6 +596,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -538,6 +625,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -555,8 +643,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Abu Dhabi Travel Guide 2026</title>
     <meta name="description" content="Abu Dhabi Travel Guide 2026 Abu Dhabi, the capital of the United Arab Emirates, is a city of striking contrasts where ultramodern architecture meets ancient ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Abu Dhabi Travel Guide 2026">
     <meta property="og:description" content="Abu Dhabi Travel Guide 2026 Abu Dhabi, the capital of the United Arab Emirates, is a city of striking contrasts where ultramodern architecture meets ancient ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/abu-dhabi-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://ic.pics.livejournal.com/pantv/14908973/12182338/12182338_original.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/abu-dhabi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Abu Dhabi Travel Guide 2026</div>
@@ -375,7 +399,7 @@
 <li><strong>From New York (JFK):</strong> Average round-trip economy price: 600–900 USD. Flight time: 12 hours 30 minutes.</li>
 <li><strong>From Mumbai (BOM):</strong> Average round-trip economy price: 300–450 USD. Flight time: 3 hours 30 minutes.</li>
 <li><strong>From Sydney (SYD):</strong> Average round-trip economy price: 800–1,200 USD. Flight time: 14 hours.</li>
-<li><strong>From Dubai (DXB):</strong> Shuttle buses and taxis connect the two emirates. Bus cost: 25 AED (7 USD). Travel time: 1.5 hours.</li>
+<li><strong>From Dubai (DXB):</strong> Shuttle buses and taxis connect the two emirates. Bus cost:$7 (25 AED) (7 USD). Travel time: 1.5 hours.</li>
 </ul>
 
 <h2>Where to Stay</h2>
@@ -450,28 +474,28 @@
 <p>One of the largest mosques in the world, this architectural masterpiece features 82 white marble domes, the world's largest hand-knotted carpet, and Swarovski crystal chandeliers. Open daily 9:00 AM–10:00 PM (closed to tourists Friday mornings). Free entry. Modest dress required.</p>
 </li>
 <li><h3>Louvre Abu Dhabi</h3>
-<p>A stunning "museum city" designed by Jean Nouvel, with a floating dome that creates a "rain of light." Houses art from prehistory to the contemporary era, including works by da Vinci, Van Gogh, and Mondrian. Tickets: 63 AED (17 USD). Open Tue–Sun 10:00 AM–8:00 PM, Fri until 10:00 PM.</p>
+<p>A stunning "museum city" designed by Jean Nouvel, with a floating dome that creates a "rain of light." Houses art from prehistory to the contemporary era, including works by da Vinci, Van Gogh, and Mondrian. Tickets:$17 (63 AED) (17 USD). Open Tue–Sun 10:00 AM–8:00 PM, Fri until 10:00 PM.</p>
 </li>
 <li><h3>Ferrari World Abu Dhabi</h3>
-<p>An indoor theme park on Yas Island featuring the world's fastest roller coaster, Formula Rossa (0–240 km/h in 4.9 seconds). Also has family rides and a Ferrari factory tour. Tickets: 295 AED (80 USD) for adults. Open daily 11:00 AM–8:00 PM.</p>
+<p>An indoor theme park on Yas Island featuring the world's fastest roller coaster, Formula Rossa (0–240 km/h in 4.9 seconds). Also has family rides and a Ferrari factory tour. Tickets:$80 (295 AED) (80 USD) for adults. Open daily 11:00 AM–8:00 PM.</p>
 </li>
 <li><h3>Yas Marina Circuit</h3>
-<p>Home of the Formula 1 Abu Dhabi Grand Prix. You can take a guided tour, drive a race car, or cycle on the track. Tours: 75 AED (20 USD). Open daily 9:00 AM–5:00 PM.</p>
+<p>Home of the Formula 1 Abu Dhabi Grand Prix. You can take a guided tour, drive a race car, or cycle on the track. Tours:$20 (75 AED) (20 USD). Open daily 9:00 AM–5:00 PM.</p>
 </li>
 <li><h3>Qasr Al Watan (Presidential Palace)</h3>
-<p>The working presidential palace, open to the public. Explore the Great Hall, the library, and the stunning architecture. Evening light and sound show included. Tickets: 65 AED (18 USD). Open daily 10:00 AM–7:00 PM.</p>
+<p>The working presidential palace, open to the public. Explore the Great Hall, the library, and the stunning architecture. Evening light and sound show included. Tickets:$18 (65 AED) (18 USD). Open daily 10:00 AM–7:00 PM.</p>
 </li>
 <li><h3>Corniche Beach</h3>
-<p>A 2-kilometer public beach with pristine white sand, lifeguards, and rental facilities. Divided into sections for families, singles, and groups. Entry: 10 AED (3 USD). Open daily 8:00 AM–sunset.</p>
+<p>A 2-kilometer public beach with pristine white sand, lifeguards, and rental facilities. Divided into sections for families, singles, and groups. Entry:$3 (10 AED) (3 USD). Open daily 8:00 AM–sunset.</p>
 </li>
 <li><h3>Mangrove National Park</h3>
-<p>A protected area of mangroves, creeks, and wildlife. Kayak through the channels spotting flamingos, herons, and turtles. Guided kayak tours from 150 AED (40 USD). Open daily 7:00 AM–6:00 PM.</p>
+<p>A protected area of mangroves, creeks, and wildlife. Kayak through the channels spotting flamingos, herons, and turtles. Guided kayak tours from$41 (150 AED) (40 USD). Open daily 7:00 AM–6:00 PM.</p>
 </li>
 <li><h3>Heritage Village</h3>
 <p>A reconstructed desert village showcasing traditional Emirati life, including a souk, a mosque, and workshops for pottery and weaving. Free entry. Open Sat–Thu 9:00 AM–4:00 PM, Fri 3:30 PM–9:00 PM.</p>
 </li>
 <li><h3>Yas Waterworld</h3>
-<p>A water park with over 40 rides, slides, and attractions. Features the world's first hydromagnetic-powered tornado slide. Tickets: 265 AED (72 USD). Open daily 10:00 AM–7:00 PM.</p>
+<p>A water park with over 40 rides, slides, and attractions. Features the world's first hydromagnetic-powered tornado slide. Tickets:$72 (265 AED) (72 USD). Open daily 10:00 AM–7:00 PM.</p>
 </li>
 <li><h3>Al Ain Oasis</h3>
 <p>A UNESCO World Heritage site, this 1,200-hectare oasis has a traditional falaj irrigation system. Walk through the shaded paths among 147,000 date palms. Free entry. Open daily 9:00 AM–5:00 PM.</p>
@@ -480,16 +504,16 @@
 <p>The highest peak in the UAE (1,249 meters), just outside Al Ain. Drive to the summit for panoramic views. Free entry. Accessible 24/7.</p>
 </li>
 <li><h3>Observation Deck at 300</h3>
-<p>Located on the 74th floor of the Conrad Abu Dhabi Etihad Towers, offering 360-degree views of the city and the Gulf. Tickets: 95 AED (26 USD). Open daily 10:00 AM–10:00 PM.</p>
+<p>Located on the 74th floor of the Conrad Abu Dhabi Etihad Towers, offering 360-degree views of the city and the Gulf. Tickets:$26 (95 AED) (26 USD). Open daily 10:00 AM–10:00 PM.</p>
 </li>
 <li><h3>Al Jahili Fort</h3>
 <p>A 19th-century fort in Al Ain, restored to house a museum about explorer Wilfred Thesiger. Free entry. Open daily 9:00 AM–5:00 PM.</p>
 </li>
 <li><h3>Abu Dhabi Falcon Hospital</h3>
-<p>Visit the world's largest falcon hospital, with guided tours showing falconry, treatment, and training. Tours: 170 AED (46 USD). Open Sat–Thu 9:00 AM–4:00 PM.</p>
+<p>Visit the world's largest falcon hospital, with guided tours showing falconry, treatment, and training. Tours:$46 (170 AED) (46 USD). Open Sat–Thu 9:00 AM–4:00 PM.</p>
 </li>
 <li><h3>Saadiyat Beach</h3>
-<p>A pristine natural beach on Saadiyat Island, part of a turtle nesting sanctuary. White sand and clear water. Entry: 100 AED (27 USD) for non-hotel guests. Open daily 8:00 AM–sunset.</p>
+<p>A pristine natural beach on Saadiyat Island, part of a turtle nesting sanctuary. White sand and clear water. Entry:$27 (100 AED) (27 USD) for non-hotel guests. Open daily 8:00 AM–sunset.</p>
 </li>
 </ol>
 
@@ -499,10 +523,10 @@
 
 <ul>
 <li><strong>Metro:</strong> Abu Dhabi does not have a metro system as of 2026, but a light rail is under construction. Buses are the primary public transport.</li>
-<li><strong>Buses:</strong> Operated by Abu Dhabi Department of Transport. Routes cover the city, Yas Island, and the airport. Single fare: 2 AED (0.55 USD). A prepaid Hafilat card is required (costs 10 AED for the card, plus top-up).</li>
-<li><strong>Taxis:</strong> Widely available and metered. Starting fare: 5 AED (1.35 USD). Airport to city center: 70–90 AED (19–24 USD). Ride-hailing apps like Uber and Careem also operate.</li>
-<li><strong>Car Rental:</strong> From 100 AED (27 USD) per day for a small car. Requires an international driver’s license. Fuel is cheap: about 3 AED (0.80 USD) per liter.</li>
-<li><strong>Bicycle:</strong> Public bike-sharing scheme (Abu Dhabi Bike) with stations along the Corniche. First 30 minutes free, then 2 AED per hour.</li>
+<li><strong>Buses:</strong> Operated by Abu Dhabi Department of Transport. Routes cover the city, Yas Island, and the airport. Single fare:$1 (2 AED) (0.55 USD). A prepaid Hafilat card is required (costs$3 (10 AED) for the card, plus top-up).</li>
+<li><strong>Taxis:</strong> Widely available and metered. Starting fare:$1 (5 AED) (1.35 USD). Airport to city center: 70–$25 (90 AED) (19–24 USD). Ride-hailing apps like Uber and Careem also operate.</li>
+<li><strong>Car Rental:</strong> From$27 (100 AED) (27 USD) per day for a small car. Requires an international driver’s license. Fuel is cheap: about$1 (3 AED) (0.80 USD) per liter.</li>
+<li><strong>Bicycle:</strong> Public bike-sharing scheme (Abu Dhabi Bike) with stations along the Corniche. First 30 minutes free, then$1 (2 AED) per hour.</li>
 </ul>
 
 <h2>Where to Eat</h2>
@@ -510,12 +534,12 @@
 <p>Abu Dhabi’s culinary scene ranges from street-side shawarma to Michelin-starred restaurants. Local cuisine features grilled meats, rice, and spices like saffron and cardamom.</p>
 
 <ul>
-<li><strong>Al Fanar Restaurant & Cafe (Al Bateen):</strong> Traditional Emirati dishes like machboos (spiced rice with meat) and luqaimat (sweet dumplings). Average meal: 80–120 AED (22–33 USD).</li>
-<li><strong>Bait Al Kandora (Corniche):</strong> Authentic Emirati food in a heritage setting. Try the harees (wheat and meat porridge). Average meal: 60–100 AED (16–27 USD).</li>
-<li><strong>Eat & Drink (Al Zahiyah):</strong> Street food hub with shawarma, falafel, and fresh juices. A full meal: 20–40 AED (5–11 USD).</li>
-<li><strong>Hakkasan (Emirates Palace):</strong> Michelin-starred Cantonese cuisine. Tasting menu: 400–600 AED (109–163 USD).</li>
-<li><strong>Meylas (Al Ain):</strong> Emirati home-style cooking, including thareed (bread stew). Average meal: 50–80 AED (14–22 USD).</li>
-<li><strong>Yas Island Food Court:</strong> A range of fast food and casual dining at Yas Mall. Meal: 30–60 AED (8–16 USD).</li>
+<li><strong>Al Fanar Restaurant & Cafe (Al Bateen):</strong> Traditional Emirati dishes like machboos (spiced rice with meat) and luqaimat (sweet dumplings). Average meal: 80–$33 (120 AED) (22–33 USD).</li>
+<li><strong>Bait Al Kandora (Corniche):</strong> Authentic Emirati food in a heritage setting. Try the harees (wheat and meat porridge). Average meal: 60–$27 (100 AED) (16–27 USD).</li>
+<li><strong>Eat & Drink (Al Zahiyah):</strong> Street food hub with shawarma, falafel, and fresh juices. A full meal: 20–$11 (40 AED) (5–11 USD).</li>
+<li><strong>Hakkasan (Emirates Palace):</strong> Michelin-starred Cantonese cuisine. Tasting menu: 400–$164 (600 AED) (109–163 USD).</li>
+<li><strong>Meylas (Al Ain):</strong> Emirati home-style cooking, including thareed (bread stew). Average meal: 50–$22 (80 AED) (14–22 USD).</li>
+<li><strong>Yas Island Food Court:</strong> A range of fast food and casual dining at Yas Mall. Meal: 30–$16 (60 AED) (8–16 USD).</li>
 </ul>
 
 <h2>Best Time to Visit</h2>
@@ -757,6 +781,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -785,6 +810,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -802,8 +828,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

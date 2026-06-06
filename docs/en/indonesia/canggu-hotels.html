@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Canggu 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Canggu 2026: Budget to Luxury Canggu, Bali, has transformed from a sleepy surf village into one of Southeast Asia’s most sought-after destin...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/canggu-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Canggu 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Canggu 2026: Budget to Luxury Canggu, Bali, has transformed from a sleepy surf village into one of Southeast Asia’s most sought-after destin...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/canggu-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/canggu-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/canggu.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Canggu 2026: Budget to Luxury</div>
@@ -358,77 +382,152 @@
 
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
-<p>Canggu, Bali, has transformed from a sleepy surf village into one of Southeast Asia’s most sought-after destinations. By 2026, the area’s hotel infrastructure has matured significantly, with new eco-resorts, boutique villas, and luxury chains opening along the coastline from Berawa to Pererenan. The neighborhoods are distinct: Berawa is the bustling epicenter of cafes and co-working spaces, Batu Bolong offers the classic surf-and-sunset vibe with a bohemian edge, while Pererenan remains quieter, attracting digital nomads and families seeking space. Prices have risen steadily—budget rooms now average $35 (≈ ₽3 325)–$50 (≈ ₽4 750) per night, mid-range options cost $70 (≈ ₽6 650)–$150  (≈ ₽14 250) and luxury suites start at $180 (≈ ₽17 100) and climb to $800. (≈ ₽76 000) The key to a great stay is matching your hotel’s location to your lifestyle, whether you want to walk to the beach, dine at world-class restaurants, or work remotely with reliable fiber internet.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Canggu, Bali, has transformed from a sleepy surf village into one of Southeast Asia’s most sought-after destinations. By 2026, the area’s hotel infrastructure has matured significantly, with new eco-resorts, boutique villas, and luxury chains opening along the coastline from Berawa to Pererenan. The neighborhoods are distinct: Berawa is the bustling epicenter of cafes and co-working spaces, Batu Bolong offers the classic surf-and-sunset vibe with a bohemian edge, while Pererenan remains quieter, attracting digital nomads and families seeking space. Prices have risen steadily—budget rooms now average $35–$50per night, mid-range options cost $70–$150and luxury suites start at $180and climb to $800The key to a great stay is matching your hotel’s location to your lifestyle, whether you want to walk to the beach, dine at world-class restaurants, or work remotely with reliable fiber internet.</p>
 <p>In 2026, Canggu’s hotel scene is defined by sustainability and design. Many properties have eliminated single-use plastics, installed solar panels, and use locally sourced materials. The best hotels offer more than a bed—they provide curated experiences like surf lessons, yoga sessions, and cooking classes. Below, I’ve handpicked ten hotels across three price tiers, each vetted for value, location, and guest feedback. Use the table and tips at the end to book smartly.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 <h3>1. The Farm Hostel Canggu</h3>
+<div id="hc_449240" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="The Farm Hostel Canggu - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="The Farm Hostel Canggu - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_449240 .hc-slide');var d=document.querySelectorAll('#hc_449240 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_449240 .hc-slide');var d=document.querySelectorAll('#hc_449240 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Farm Hostel Canggu &bull; 2 photos</p></div>
 <p><strong>Description:</strong> A stylish hostel with private rooms and dorms set amid rice paddies in Berawa. It features a large pool, co-working space, and a café serving organic breakfasts. The vibe is social but not rowdy, attracting solo travelers and young couples.</p>
-<p><strong>Prices:</strong> Dorm beds from $12 (≈ ₽1 140)/night; private rooms from $38 (≈ ₽3 610)/night (2026 rates).</p>
+<p><strong>Prices:</strong> Dorm beds from $12/night; private rooms from $38/night (2026 rates).</p>
 <p><strong>Pros:</strong> Incredible value, free Wi-Fi (100 Mbps), 10-minute walk to Berawa Beach, weekly community dinners.</p>
 <p><strong>Cons:</strong> Thin walls in private rooms, no air conditioning in dorms (only fans), can be noisy during peak season.</p>
 
 <h3>2. Pondok Nyoman Guesthouse</h3>
+<div id="hc_13620" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Pondok Nyoman Guesthouse - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Pondok Nyoman Guesthouse - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_13620 .hc-slide');var d=document.querySelectorAll('#hc_13620 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_13620 .hc-slide');var d=document.querySelectorAll('#hc_13620 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pondok Nyoman Guesthouse &bull; 2 photos</p></div>
 <p><strong>Description:</strong> A family-run guesthouse in Batu Bolong with six clean, basic rooms. Each has a private bathroom, air conditioning, and a small balcony overlooking a tropical garden. The owners provide free coffee and tea all day.</p>
-<p><strong>Prices:</strong> $28 (≈ ₽2 660)–$45 (≈ ₽4 275)/night depending on season.</p>
+<p><strong>Prices:</strong> $28–$45/night depending on season.</p>
 <p><strong>Pros:</strong> Authentic Balinese hospitality, quiet location, 5-minute walk to Batu Bolong Beach, free scooter parking.</p>
-<p><strong>Cons:</strong> No pool, limited English spoken, no in-room safe, breakfast is extra ($4 (≈ ₽380)).</p>
+<p><strong>Cons:</strong> No pool, limited English spoken, no in-room safe, breakfast is extra ($4).</p>
 
 <h3>3. Kos One Hostel & Suites</h3>
+<div id="hc_181999" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Kos One Hostel & Suites - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Kos One Hostel & Suites - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_181999 .hc-slide');var d=document.querySelectorAll('#hc_181999 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_181999 .hc-slide');var d=document.querySelectorAll('#hc_181999 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kos One Hostel & Suites &bull; 2 photos</p></div>
 <p><strong>Description:</strong> Located in Pererenan, this modern hostel offers capsule-style dorms and compact private suites. It has a rooftop terrace with sunset views, a shared kitchen, and a small gym. Popular with digital nomads on a strict budget.</p>
-<p><strong>Prices:</strong> Dorm beds from $15 (≈ ₽1 425)/night; private suites from $42 (≈ ₽3 990)/night.</p>
+<p><strong>Prices:</strong> Dorm beds from $15/night; private suites from $42/night.</p>
 <p><strong>Pros:</strong> High-speed fiber internet (200 Mbps), 24/7 reception, lockers in dorms, close to Echo Beach surf break.</p>
 <p><strong>Cons:</strong> No pool, limited social events, suites are very small (12 sq m), far from Berawa nightlife.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 <h3>4. Ametis Villa Canggu</h3>
+<div id="hc_139092" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ametis Villa Canggu - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ametis Villa Canggu - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ametis Villa Canggu - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_139092 .hc-slide');var d=document.querySelectorAll('#hc_139092 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_139092 .hc-slide');var d=document.querySelectorAll('#hc_139092 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_139092 .hc-slide');var d=document.querySelectorAll('#hc_139092 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ametis Villa Canggu &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A boutique villa complex in Berawa with 15 one-bedroom villas, each with a private plunge pool and garden. The design blends modern minimalism with Balinese wood accents. It offers a daily afternoon tea and a complimentary shuttle to the beach.</p>
-<p><strong>Prices:</strong> $95 (≈ ₽9 025)–$130 (≈ ₽12 350)/night (2026 standard rate).</p>
+<p><strong>Prices:</strong> $95–$130/night (2026 standard rate).</p>
 <p><strong>Highlights:</strong> Private pool in every villa, excellent breakfast (included), free yoga classes twice a week, 5-minute drive to Finns Recreation Club.</p>
 
 <h3>5. The Slow Canggu</h3>
+<div id="hc_104662" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Slow Canggu - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Slow Canggu - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Slow Canggu - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_104662 .hc-slide');var d=document.querySelectorAll('#hc_104662 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_104662 .hc-slide');var d=document.querySelectorAll('#hc_104662 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_104662 .hc-slide');var d=document.querySelectorAll('#hc_104662 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Slow Canggu &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A design-forward hotel in Batu Bolong with 24 rooms, a ground-floor café, and a rooftop bar. Rooms feature concrete walls, terrazzo floors, and floor-to-ceiling windows. It’s known for its art gallery and rotating exhibitions.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> $80 (≈ ₽7 600)–$120 (≈ ₽11 400)/night.</p>
+<p><strong>Prices:</strong> $80–$120/night.</p>
 <p><strong>Highlights:</strong> Rooftop infinity pool with ocean views, in-room Nespresso machines, free bike rental, walking distance to Old Man’s bar and the beach.</p>
 
 <h3>6. Desa Visesa Ubud (Canggu Outpost)</h3>
+<div id="hc_884182" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Desa Visesa Ubud - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Desa Visesa Ubud - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Desa Visesa Ubud - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_884182 .hc-slide');var d=document.querySelectorAll('#hc_884182 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_884182 .hc-slide');var d=document.querySelectorAll('#hc_884182 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_884182 .hc-slide');var d=document.querySelectorAll('#hc_884182 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Desa Visesa Ubud &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A new 2025 opening in Pererenan, this eco-resort has 30 suites built around a central rice terrace. Each suite has a private terrace or balcony. The property uses solar power and rainwater harvesting.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> $70 (≈ ₽6 650)–$110 (≈ ₽10 450)/night.</p>
+<p><strong>Prices:</strong> $70–$110/night.</p>
 <p><strong>Highlights:</strong> Farm-to-table restaurant, free shuttle to Echo Beach, large saltwater pool, compost program, family-friendly with kids’ club.</p>
 
 <h3>7. COMO Uma Canggu</h3>
+<div id="hc_215677" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="COMO Uma Canggu - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="COMO Uma Canggu - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="COMO Uma Canggu - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_215677 .hc-slide');var d=document.querySelectorAll('#hc_215677 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_215677 .hc-slide');var d=document.querySelectorAll('#hc_215677 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_215677 .hc-slide');var d=document.querySelectorAll('#hc_215677 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">COMO Uma Canggu &bull; 3 photos</p></div>
 <p><strong>Description:</strong> Part of the COMO brand, this hotel in Berawa offers 46 rooms and suites with a wellness focus. It has a COMO Shambhala spa, a fitness center, and a beach club. Rooms are minimalist with organic cotton linens.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> $120 (≈ ₽11 400)–$150 (≈ ₽14 250)/night.</p>
+<div id="hc_836173" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="COMO brand, this hotel in Berawa offers 46 rooms and suites with a wellness focus. It has a COMO Shambhala spa, a fitness center, and a beach club. Rooms are minimalist with organic cotton linens. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="COMO brand, this hotel in Berawa offers 46 rooms and suites with a wellness focus. It has a COMO Shambhala spa, a fitness center, and a beach club. Rooms are minimalist with organic cotton linens. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="COMO brand, this hotel in Berawa offers 46 rooms and suites with a wellness focus. It has a COMO Shambhala spa, a fitness center, and a beach club. Rooms are minimalist with organic cotton linens. - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_836173 .hc-slide');var d=document.querySelectorAll('#hc_836173 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_836173 .hc-slide');var d=document.querySelectorAll('#hc_836173 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_836173 .hc-slide');var d=document.querySelectorAll('#hc_836173 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">COMO brand, this hotel in Berawa offers 46 rooms and suites with a wellness focus. It has a COMO Shambhala spa, a fitness center, and a beach club. Rooms are minimalist with organic cotton linens. &bull; 3 photos</p></div>
+<p><strong>Prices:</strong> $120–$150/night.</p>
 <p><strong>Highlights:</strong> Daily yoga and meditation classes, healthy breakfast buffet, direct beach access via a private path, 20-meter lap pool, free use of surfboards.</p>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 <h3>8. The Legian Seminyak (Canggu Wing)</h3>
+<div id="hc_933300" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Legian Seminyak - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Legian Seminyak - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Legian Seminyak - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_933300 .hc-slide');var d=document.querySelectorAll('#hc_933300 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_933300 .hc-slide');var d=document.querySelectorAll('#hc_933300 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_933300 .hc-slide');var d=document.querySelectorAll('#hc_933300 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Legian Seminyak &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A new luxury wing of the iconic Legian resort, located on the border of Berawa and Seminyak. It has 40 oceanfront suites and penthouses with butler service. The design uses local stone and teak wood.</p>
-<p><strong>Prices:</strong> $250 (≈ ₽23 750)–$500 (≈ ₽47 500)/night.</p>
+<p><strong>Prices:</strong> $250–$500/night.</p>
 <p><strong>Features:</strong> Two infinity pools, private beach cabanas, a Michelin-starred restaurant (Splash), 24-hour butler, in-room spa treatments, helicopter transfers available.</p>
 
 <h3>9. Hotel Tugu Bali</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Tu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_84935" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Tugu Bali - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Tugu Bali - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Tugu Bali - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_84935 .hc-slide');var d=document.querySelectorAll('#hc_84935 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_84935 .hc-slide');var d=document.querySelectorAll('#hc_84935 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_84935 .hc-slide');var d=document.querySelectorAll('#hc_84935 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Tugu Bali &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A heritage-style hotel in Batu Bolong with 21 suites and villas, each filled with antiques and art from across Indonesia. It has a museum-like atmosphere with a private temple on site.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> $180 (≈ ₽17 100)–$350 (≈ ₽33 250)/night.</p>
+<p><strong>Prices:</strong> $180–$350/night.</p>
 <p><strong>Features:</strong> Beachfront restaurant, open-air spa with traditional treatments, free cultural tours, cooking classes, private yoga pavilion, sunset boat trips.</p>
 
 <h3>10. Soori Bali</h3>
 <p><strong>Description:</strong> A secluded luxury resort in Pererenan, set on a black sand beach with 48 villas. Each villa has a private pool, outdoor shower, and a garden. The architecture is inspired by Japanese ryokans and Balinese compounds.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> $400 (≈ ₽38 000)–$800 (≈ ₽76 000)/night.</p>
+<p><strong>Prices:</strong> $400–$800/night.</p>
 <p><strong>Features:</strong> Two restaurants (one with a sake bar), a 50-meter infinity pool, a spa with hydrotherapy circuit, private butler, free bike and scooter rental, organic farm on property.</p>
 
 <h2>How to Choose the Right Area</h2>
 <h3>For Beach Lovers</h3>
 <p>Stay in Batu Bolong. The beach here is wide, with consistent waves for beginner and intermediate surfers. The sand is dark but clean, and the sunsets are iconic. Hotels like The Slow or Hotel Tugu put you steps from the shore. Avoid Berawa if you want quiet beach time—it’s crowded with clubs and sunbed rentals.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Tu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <h3>For Sightseeing and Culture</h3>
 <p>Choose Pererenan. It’s close to Tanah Lot temple (15 minutes by scooter) and the rice terraces of Tabanan. You’ll also find local warungs and art galleries. Desa Visesa and Soori Bali offer easy access to these attractions while maintaining a serene base. Berawa is too traffic-heavy for morning temple visits.</p>
 <h3>For Nightlife and Socializing</h3>
@@ -444,17 +543,16 @@
 <tr><th>Hotel</th><th>Tier</th><th>Price Range</th><th>Best For</th></tr>
 </thead>
 <tbody>
-<tr><td>The Farm Hostel</td><td>Budget</td><td>$12 (≈ ₽1 140)–$38 (≈ ₽3 610)</td><td>Solo travelers, socializing</td></tr>
-<tr><td>Pondok Nyoman</td><td>Budget</td><td>$28 (≈ ₽2 660)–$45 (≈ ₽4 275)</td><td>Quiet, local experience</td></tr>
-<tr><td>Kos One</td><td>Budget</td><td>$15 (≈ ₽1 425)–$42 (≈ ₽3 990)</td><td>Digital nomads, surfers</td></tr>
-<tr><td>Ametis Villa</td><td>Mid-range</td><td>$95 (≈ ₽9 025)–$130 (≈ ₽12 350)</td><td>Couples, privacy</td></tr>
-<tr><td>The Slow</td><td>Mid-range</td><td>$80 (≈ ₽7 600)–$120 (≈ ₽11 400)</td><td>Design lovers, beach access</td></tr>
-<tr><td>Desa Visesa</td><td>Mid-range</td><td>$70 (≈ ₽6 650)–$110 (≈ ₽10 450)</td><td>Families, eco-conscious</td></tr>
-<tr><td>COMO Uma</td><td>Mid-range</td><td>$120 (≈ ₽11 400)–$150 (≈ ₽14 250)</td><td>Wellness, fitness</td></tr>
-<tr><td>The Legian Wing</td><td>Luxury</td><td>$250 (≈ ₽23 750)–$500 (≈ ₽47 500)</td><td>Ultimate luxury, beachfront</td></tr>
-<tr><td>Hotel Tugu</td><td>Luxury</td><td>$180 (≈ ₽17 100)–$350 (≈ ₽33 250)</td><td>Culture, heritage</td></tr>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Tu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<tr><td>Soori Bali</td><td>Luxury</td><td>$400 (≈ ₽38 000)–$800 (≈ ₽76 000)</td><td>Seclusion, romance</td></tr>
+<tr><td>The Farm Hostel</td><td>Budget</td><td>$12–$38</td><td>Solo travelers, socializing</td></tr>
+<tr><td>Pondok Nyoman</td><td>Budget</td><td>$28–$45</td><td>Quiet, local experience</td></tr>
+<tr><td>Kos One</td><td>Budget</td><td>$15–$42</td><td>Digital nomads, surfers</td></tr>
+<tr><td>Ametis Villa</td><td>Mid-range</td><td>$95–$130</td><td>Couples, privacy</td></tr>
+<tr><td>The Slow</td><td>Mid-range</td><td>$80–$120</td><td>Design lovers, beach access</td></tr>
+<tr><td>Desa Visesa</td><td>Mid-range</td><td>$70–$110</td><td>Families, eco-conscious</td></tr>
+<tr><td>COMO Uma</td><td>Mid-range</td><td>$120–$150</td><td>Wellness, fitness</td></tr>
+<tr><td>The Legian Wing</td><td>Luxury</td><td>$250–$500</td><td>Ultimate luxury, beachfront</td></tr>
+<tr><td>Hotel Tugu</td><td>Luxury</td><td>$180–$350</td><td>Culture, heritage</td></tr>
+<tr><td>Soori Bali</td><td>Luxury</td><td>$400–$800</td><td>Seclusion, romance</td></tr>
 </tbody>
 </table><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -547,6 +645,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -575,6 +674,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -592,8 +692,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

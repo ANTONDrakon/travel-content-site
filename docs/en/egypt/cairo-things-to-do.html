@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Cairo 2026</title>
     <meta name="description" content="15 Best Things to Do in Cairo 2026 Cairo, the sprawling capital of Egypt, is a city where ancient history and modern chaos collide in the most exhilarating w...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Cairo 2026">
     <meta property="og:description" content="15 Best Things to Do in Cairo 2026 Cairo, the sprawling capital of Egypt, is a city where ancient history and modern chaos collide in the most exhilarating w...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/cairo-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/cairo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Cairo 2026</div>
@@ -362,30 +386,29 @@
 <p>Cairo, the sprawling capital of Egypt, is a city where ancient history and modern chaos collide in the most exhilarating way. With over 20 million residents, it’s a metropolis that never sleeps, offering unparalleled access to the relics of Pharaonic civilization, Islamic architecture, and vibrant local culture. In 2026, new museum openings and enhanced visitor experiences make Cairo an even more compelling destination. Whether you’re a history buff, a foodie, or an adventurer, this guide covers the 15 best things to do, complete with prices, hours, and insider tips.</p>
 
 <h2>15 Best Attractions in Cairo</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. The Pyramids of Giza and the Sphinx</h3>
 <p>No trip to Cairo is complete without witnessing the last surviving Wonder of the Ancient World. The Great Pyramid of Khufu, standing at 138 meters tall, was the world’s tallest man-made structure for over 3,800 years. The adjacent Sphinx, carved from a single limestone ridge, guards the necropolis. In 2026, the site remains open with improved visitor pathways.</p>
 <ul>
-<li><strong>Ticket price:</strong> 240 EGP (approx. $8 (≈ ₽760) USD) for general entry; 540 EGP ($18 (≈ ₽1 710) USD) for entry into the Great Pyramid interior.</li>
+<li><strong>Ticket price:</strong>$5 (240 EGP) (approx. $8USD) for general entry;$11 (540 EGP) ($18USD) for entry into the Great Pyramid interior.</li>
 <li><strong>Hours:</strong> Daily 8:00 AM – 5:00 PM (last entry 4:00 PM).</li>
-<li><strong>How to get there:</strong> Take Uber or a taxi from central Cairo (30 minutes, 150-200 EGP). Public bus 355 from Tahrir Square also stops near the site.</li>
-<li><strong>Tip:</strong> Arrive by 7:30 AM to beat crowds and the midday heat. Avoid camel rides from touts; negotiate to 50-100 EGP per 15 minutes if you must.</li>
+<li><strong>How to get there:</strong> Take Uber or a taxi from central Cairo (30 minutes, 150-$4 (200 EGP)). Public bus 355 from Tahrir Square also stops near the site.</li>
+<li><strong>Tip:</strong> Arrive by 7:30 AM to beat crowds and the midday heat. Avoid camel rides from touts; negotiate to 50-$2 (100 EGP) per 15 minutes if you must.</li>
 </ul>
 
 <h3>2. The Grand Egyptian Museum (GEM)</h3>
 <p>Partially opened in 2023 and fully operational by 2026, the GEM near the Pyramids is the world’s largest archaeological museum. It houses over 100,000 artifacts, including the complete Tutankhamun collection in a dedicated hall. The building’s transparent facade offers stunning views of the pyramids.</p>
 <ul>
-<li><strong>Ticket price:</strong> 600 EGP ($20 (≈ ₽1 900) USD) for adults; 300 EGP for students.</li>
+<li><strong>Ticket price:</strong>$12 (600 EGP) ($20USD) for adults;$6 (300 EGP) for students.</li>
 <li><strong>Hours:</strong> Daily 9:00 AM – 7:00 PM (closed Tuesdays).</li>
-<li><strong>How to get there:</strong> Located on the Cairo-Alexandria Desert Road; take a taxi from Giza (50 EGP) or use the GEM shuttle bus from the Pyramids parking lot (free).</li>
+<li><strong>How to get there:</strong> Located on the Cairo-Alexandria Desert Road; take a taxi from Giza ($1 (50 EGP)) or use the GEM shuttle bus from the Pyramids parking lot (free).</li>
 <li><strong>Tip:</strong> Book tickets online in advance at the official GEM website to avoid long queues. Allocate at least 3-4 hours.</li>
 </ul>
 
 <h3>3. The Egyptian Museum in Tahrir</h3>
 <p>While the GEM takes the spotlight, the historic Egyptian Museum in Tahrir Square remains a must-visit for its intimate setting and vast collection of Pharaonic treasures. Highlights include the golden mask of Tutankhamun and the Royal Mummy Room. It’s less crowded in 2026 as many artifacts relocate to GEM.</p>
 <ul>
-<li><strong>Ticket price:</strong> 200 EGP ($6.50 (≈ ₽617) USD); Royal Mummy Room additional 180 EGP.</li>
+<li><strong>Ticket price:</strong>$4 (200 EGP) ($6USD); Royal Mummy Room additional$4 (180 EGP).</li>
 <li><strong>Hours:</strong> Daily 9:00 AM – 5:00 PM.</li>
 <li><strong>How to get there:</strong> Metro Sadat Station (Line 1 or 2) exit directly at the square.</li>
 <li><strong>Tip:</strong> Visit on a weekday afternoon for a quieter experience. Photography without flash is allowed in most halls.</li>
@@ -403,16 +426,16 @@
 <h3>5. The Citadel of Saladin</h3>
 <p>This medieval Islamic fortification, built between 1176 and 1183, offers panoramic views of Cairo. The Muhammad Ali Mosque (Alabaster Mosque) inside is a stunning example of Ottoman architecture. The site also includes the National Military Museum.</p>
 <ul>
-<li><strong>Ticket price:</strong> 200 EGP ($6.50 (≈ ₽617) USD).</li>
+<li><strong>Ticket price:</strong>$4 (200 EGP) ($6USD).</li>
 <li><strong>Hours:</strong> Daily 8:00 AM – 5:00 PM.</li>
-<li><strong>How to get there:</strong> Taxi from downtown (40 EGP) or bus from Tahrir.</li>
+<li><strong>How to get there:</strong> Taxi from downtown ($1 (40 EGP)) or bus from Tahrir.</li>
 <li><strong>Tip:</strong> Visit in late afternoon for golden hour photos of the mosque. Wear modest clothing covering shoulders and knees.</li>
 </ul>
 
 <h3>6. Old Cairo (Coptic Cairo)</h3>
 <p>This historic area houses some of the oldest Christian churches in Egypt, including the Hanging Church (built in the 3rd century AD) and the Church of St. Sergius and Bacchus. The Coptic Museum has a rich collection of artifacts. The area is a peaceful escape from the city’s noise.</p>
 <ul>
-<li><strong>Ticket price:</strong> Free for churches; Coptic Museum 100 EGP ($3.30 (≈ ₽313) USD).</li>
+<li><strong>Ticket price:</strong> Free for churches; Coptic Museum$2 (100 EGP) ($3USD).</li>
 <li><strong>Hours:</strong> Churches open 9:00 AM – 4:00 PM; museum 9:00 AM – 5:00 PM.</li>
 <li><strong>How to get there:</strong> Metro to Mar Girgis Station (Line 1).</li>
 <li><strong>Tip:</strong> Combine with a walk through the nearby Babylon Fortress ruins.</li>
@@ -421,7 +444,7 @@
 <h3>7. The Nile Corniche</h3>
 <p>A 15-kilometer waterfront promenade stretching from downtown to Maadi, perfect for a relaxing stroll or felucca ride. The Corniche offers views of feluccas, luxury hotels, and the Cairo Tower. It’s a popular spot for locals at sunset.</p>
 <ul>
-<li><strong>Ticket price:</strong> Free to walk; felucca rides 100-200 EGP per hour.</li>
+<li><strong>Ticket price:</strong> Free to walk; felucca rides 100-$4 (200 EGP) per hour.</li>
 <li><strong>Hours:</strong> 24/7, but best at sunset (around 5:30 PM in winter).</li>
 <li><strong>How to get there:</strong> Access from Tahrir Square or the Four Seasons Hotel.</li>
 <li><strong>Tip:</strong> Negotiate felucca prices before boarding—avoid middlemen.</li>
@@ -430,16 +453,16 @@
 <h3>8. Al-Azhar Park</h3>
 <p>A 30-hectare green oasis in the heart of Islamic Cairo, opened in 2005 on a former rubbish dump. It features lush gardens, a lake, and the restored Ayyubid Wall. The park’s restaurant, Citadel View, offers incredible views of the Muhammad Ali Mosque.</p>
 <ul>
-<li><strong>Ticket price:</strong> 30 EGP ($1 (≈ ₽95) USD).</li>
+<li><strong>Ticket price:</strong>$1 (30 EGP) ($1USD).</li>
 <li><strong>Hours:</strong> Daily 9:00 AM – 11:00 PM.</li>
-<li><strong>How to get there:</strong> Taxi from downtown (30 EGP) or walk from Khan el-Khalili (15 minutes).</li>
+<li><strong>How to get there:</strong> Taxi from downtown ($1 (30 EGP)) or walk from Khan el-Khalili (15 minutes).</li>
 <li><strong>Tip:</strong> Visit on a Friday morning for a quieter experience. Bring a picnic.</li>
 </ul>
 
 <h3>9. The Museum of Islamic Art</h3>
 <p>Housing over 100,000 artifacts spanning from the 7th to 19th centuries, this museum is a masterpiece of Islamic craftsmanship. Exhibits include intricate woodwork, ceramics, and textiles. It reopened after a major renovation in 2017 and remains a top cultural site.</p>
 <ul>
-<li><strong>Ticket price:</strong> 140 EGP ($4.60 (≈ ₽436) USD).</li>
+<li><strong>Ticket price:</strong>$3 (140 EGP) ($5USD).</li>
 <li><strong>Hours:</strong> Daily 9:00 AM – 5:00 PM (closed Friday).</li>
 <li><strong>How to get there:</strong> Metro to Bab El Shaaria Station, then a 5-minute walk.</li>
 <li><strong>Tip:</strong> The museum’s café has excellent Turkish coffee.</li>
@@ -448,7 +471,7 @@
 <h3>10. The Cairo Tower</h3>
 <p>Standing 187 meters tall, this iconic tower on Gezira Island offers a 360-degree view of the city. Built in 1961, it’s a symbol of modern Egypt. The revolving restaurant at the top serves Egyptian cuisine.</p>
 <ul>
-<li><strong>Ticket price:</strong> 200 EGP ($6.50 (≈ ₽617) USD) for observation deck.</li>
+<li><strong>Ticket price:</strong>$4 (200 EGP) ($6USD) for observation deck.</li>
 <li><strong>Hours:</strong> Daily 9:00 AM – 12:00 AM.</li>
 <li><strong>How to get there:</strong> Metro to Opera Station, then a 10-minute walk.</li>
 <li><strong>Tip:</strong> Go just before sunset for daylight and city lights views.</li>
@@ -457,25 +480,25 @@
 <h3>11. The Step Pyramid of Djoser at Saqqara</h3>
 <p>Located 30 kilometers south of Cairo, this is the world’s oldest large-scale stone structure, built in the 27th century BC. The step pyramid, part of a vast necropolis, is a UNESCO World Heritage Site. In 2026, new visitor paths and an on-site museum are open.</p>
 <ul>
-<li><strong>Ticket price:</strong> 200 EGP ($6.50 (≈ ₽617) USD).</li>
+<li><strong>Ticket price:</strong>$4 (200 EGP) ($6USD).</li>
 <li><strong>Hours:</strong> Daily 8:00 AM – 5:00 PM.</li>
-<li><strong>How to get there:</strong> Taxi from Giza (200 EGP) or join a tour from Cairo.</li>
-<li><strong>Tip:</strong> Combine with a visit to the nearby Serapeum (additional 100 EGP).</li>
+<li><strong>How to get there:</strong> Taxi from Giza ($4 (200 EGP)) or join a tour from Cairo.</li>
+<li><strong>Tip:</strong> Combine with a visit to the nearby Serapeum (additional$2 (100 EGP)).</li>
 </ul>
 
 <h3>12. The Pharaonic Village</h3>
 <p>An interactive living history museum on Jacob Island, where actors in period costume demonstrate ancient Egyptian life—papyrus making, mummification, and farming. It’s educational and fun for families.</p>
 <ul>
-<li><strong>Ticket price:</strong> 300 EGP ($10 (≈ ₽950) USD) for adults; includes boat tour.</li>
+<li><strong>Ticket price:</strong>$6 (300 EGP) ($10USD) for adults; includes boat tour.</li>
 <li><strong>Hours:</strong> Daily 9:00 AM – 5:00 PM.</li>
-<li><strong>How to get there:</strong> Taxi from downtown (50 EGP) or bus from Giza.</li>
+<li><strong>How to get there:</strong> Taxi from downtown ($1 (50 EGP)) or bus from Giza.</li>
 <li><strong>Tip:</strong> Allow 2-3 hours. The on-site restaurant serves decent Egyptian food.</li>
 </ul>
 
 <h3>13. The Manial Palace Museum</h3>
 <p>Built by Prince Muhammad Ali in the early 20th century, this palace on Rhoda Island blends Ottoman, Moorish, and Persian architecture. The gardens are stunning, and the museum houses royal artifacts, including a rare collection of carpets.</p>
 <ul>
-<li><strong>Ticket price:</strong> 100 EGP ($3.30 (≈ ₽313) USD).</li>
+<li><strong>Ticket price:</strong>$2 (100 EGP) ($3USD).</li>
 <li><strong>Hours:</strong> Daily 9:00 AM – 4:00 PM.</li>
 <li><strong>How to get there:</strong> Metro to Sayyida Zeinab Station, then a 15-minute walk.</li>
 <li><strong>Tip:</strong> Visit on a weekday for fewer crowds. Photography is allowed in gardens.</li>
@@ -484,7 +507,7 @@
 <h3>14. The Sultan Hassan Mosque</h3>
 <p>Considered one of the finest examples of Mamluk architecture, this mosque-madrasa complex was built in 1356. Its massive entrance and towering minarets are awe-inspiring. The interior features intricate marble and stucco work.</p>
 <ul>
-<li><strong>Ticket price:</strong> 80 EGP ($2.60 (≈ ₽247) USD).</li>
+<li><strong>Ticket price:</strong>$2 (80 EGP) ($3USD).</li>
 <li><strong>Hours:</strong> Daily 8:00 AM – 5:00 PM.</li>
 <li><strong>How to get there:</strong> Walk from the Citadel (10 minutes) or take a taxi.</li>
 <li><strong>Tip:</strong> Combine with the adjacent Al-Rifai Mosque.</li>
@@ -495,7 +518,7 @@
 <ul>
 <li><strong>Ticket price:</strong> Free.</li>
 <li><strong>Hours:</strong> Church open daily 8:00 AM – 6:00 PM.</li>
-<li><strong>How to get there:</strong> Taxi from downtown (80 EGP) or join a guided tour (safer).</li>
+<li><strong>How to get there:</strong> Taxi from downtown ($2 (80 EGP)) or join a guided tour (safer).</li>
 <li><strong>Tip:</strong> Go with a guide to understand the community’s recycling system. Dress modestly.</li>
 </ul>
 
@@ -505,10 +528,10 @@
 <ul>
 <li><strong>7:00 AM – 11:00 AM:</strong> Pyramids of Giza and Sphinx (arrive early).</li>
 <li><strong>11:30 AM – 1:30 PM:</strong> Grand Egyptian Museum (book tickets online).</li>
-<li><strong>2:00 PM – 3:00 PM:</strong> Lunch at a local koshari spot (e.g., Koshari Abou Tarek, 30 EGP).</li>
+<li><strong>2:00 PM – 3:00 PM:</strong> Lunch at a local koshari spot (e.g., Koshari Abou Tarek$1 (30 EGP)).</li>
 <li><strong>3:30 PM – 5:30 PM:</strong> Egyptian Museum in Tahrir.</li>
 <li><strong>6:00 PM – 8:00 PM:</strong> Khan el-Khalili and El Fishawy café.</li>
-<li><strong>8:30 PM:</strong> Dinner on a Nile felucca (200 EGP for a 1-hour ride with food).</li>
+<li><strong>8:30 PM:</strong> Dinner on a Nile felucca ($4 (200 EGP) for a 1-hour ride with food).</li>
 </ul>
 
 <h3>2-Day Cairo Itinerary (History & Culture)</h3>
@@ -545,18 +568,17 @@
 <p>For a stress-free experience, consider guided tours. Here are the best options in 2026:</p>
 <table>
 <tr><th>Tour Name</th><th>Duration</th><th>Price (per person)</th><th>Includes</th></tr>
-<tr><td>Pyramids & GEM Full-Day Tour</td><td>8 hours</td><td>$50 (≈ ₽4 750) USD</td><td>Transport, guide, entry fees, lunch</td></tr>
-<tr><td>Islamic Cairo Walking Tour</td><td>4 hours</td><td>$30 (≈ ₽2 850) USD</td><td>Guide, entry to Citadel and mosques</td></tr>
-<tr><td>Nile Dinner Cruise with Show</td><td>3 hours</td><td>$40 (≈ ₽3 800) USD</td><td>Buffet dinner, belly dancing, transport</td></tr>
-<tr><td>Saqqara & Memphis Half-Day Tour</td><td>5 hours</td><td>$35 (≈ ₽3 325) USD</td><td>Transport, guide, entry fees</td></tr>
-<tr><td>Coptic Cairo & Khan el-Khalili Tour</td><td>4 hours</td><td>$25 (≈ ₽2 375) USD</td><td>Guide, entry to museum, shopping time</td></tr>
+<tr><td>Pyramids & GEM Full-Day Tour</td><td>8 hours</td><td>$50USD</td><td>Transport, guide, entry fees, lunch</td></tr>
+<tr><td>Islamic Cairo Walking Tour</td><td>4 hours</td><td>$30USD</td><td>Guide, entry to Citadel and mosques</td></tr>
+<tr><td>Nile Dinner Cruise with Show</td><td>3 hours</td><td>$40USD</td><td>Buffet dinner, belly dancing, transport</td></tr>
+<tr><td>Saqqara & Memphis Half-Day Tour</td><td>5 hours</td><td>$35USD</td><td>Transport, guide, entry fees</td></tr>
+<tr><td>Coptic Cairo & Khan el-Khalili Tour</td><td>4 hours</td><td>$25USD</td><td>Guide, entry to museum, shopping time</td></tr>
 </table>
 <p>Book through reputable agencies like Memphis Tours or Emo Tours. Prices are for 2026 and include hotel pickup/drop-off in Cairo.</p>
 
 <h2>Free Attractions in Cairo</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <ul>
-<li><strong>Al-Azhar Park (entry fee 30 EGP, but free for children under 6).</strong></li>
+<li><strong>Al-Azhar Park (entry fee$1 (30 EGP), but free for children under 6).</strong></li>
 <li><strong><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
@@ -643,6 +665,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -671,6 +694,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -688,8 +712,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

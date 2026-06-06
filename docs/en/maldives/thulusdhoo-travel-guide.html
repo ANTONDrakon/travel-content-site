@@ -6,7 +6,7 @@
     <title>Thulusdhoo Travel Guide 2026</title>
     <meta name="description" content="Thulusdhoo Travel Guide 2026 Oh, Thulusdhoo! Just saying the name makes me smile. This tiny island in the North Malé Atoll of the Maldives is everything you ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Thulusdhoo Travel Guide 2026">
     <meta property="og:description" content="Thulusdhoo Travel Guide 2026 Oh, Thulusdhoo! Just saying the name makes me smile. This tiny island in the North Malé Atoll of the Maldives is everything you ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/thulusdhoo-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://www.hotels-maldives.net/data/Photos/OriginalPhoto/7901/790145/790145394.JPEG');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/thulusdhoo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Thulusdhoo Travel Guide 2026</div>
@@ -367,8 +391,8 @@
 <p>Getting to Thulusdhoo is easier than you might think, and it's part of the adventure! Your gateway is Velana International Airport (MLE) in Malé, which is well-connected to major cities around the world. From there, the magic truly begins.</p>
 
 <ul>
-  <li><strong>Flights to MLE:</strong> Direct flights are available from hubs like Dubai, Doha, Istanbul, London, and increasingly from Moscow (with seasonal charters). From Southeast Asia, you'll likely connect through Colombo or Singapore. Average round-trip economy fares from Europe range from <strong>$850 (≈ ₽80 750) to $1 400 (≈ ₽133 000)</strong> (I recommend booking 3-4 months ahead for the best deals).</li>
-  <li><strong>From MLE to Thulusdhoo:</strong> You have two wonderful options. The first is a <strong>speedboat transfer</strong>, which takes just 30–40 minutes. It's exhilarating, with the wind in your hair and the ocean spray on your face. A shared speedboat costs around <strong>$55 (≈ ₽5 225) per person one-way</strong>, while a private charter will set you back <strong>$250 (≈ ₽23 750)–$350 (≈ ₽33 250)</strong>. The second option is the <strong>local ferry</strong> (a public "dhoni"), which is a slower, more authentic experience at <strong>$3 (≈ ₽285)–$5 (≈ ₽475) per person</strong>, but it only runs a few times a week, so plan accordingly. I always recommend the speedboat for first-timers—it's worth the splurge for the sheer joy of arrival.</li>
+  <li><strong>Flights to MLE:</strong> Direct flights are available from hubs like Dubai, Doha, Istanbul, London, and increasingly from Moscow (with seasonal charters). From Southeast Asia, you'll likely connect through Colombo or Singapore. Average round-trip economy fares from Europe range from <strong>$850to $1 400</strong> (I recommend booking 3-4 months ahead for the best deals).</li>
+  <li><strong>From MLE to Thulusdhoo:</strong> You have two wonderful options. The first is a <strong>speedboat transfer</strong>, which takes just 30–40 minutes. It's exhilarating, with the wind in your hair and the ocean spray on your face. A shared speedboat costs around <strong>$55per person one-way</strong>, while a private charter will set you back <strong>$250–$350</strong>. The second option is the <strong>local ferry</strong> (a public "dhoni"), which is a slower, more authentic experience at <strong>$3–$5per person</strong>, but it only runs a few times a week, so plan accordingly. I always recommend the speedboat for first-timers—it's worth the splurge for the sheer joy of arrival.</li>
 </ul>
 
 <h2>Where to Stay</h2>
@@ -385,25 +409,25 @@
     <td>Budget ($)</td>
     <td>Central Island (near harbor)</td>
     <td>Sunrise Beach Guesthouse</td>
-    <td>$65 (≈ ₽6 175)–$85 (≈ ₽8 075)</td>
+    <td>$65–$85</td>
   </tr>
   <tr>
     <td>Mid-Range ($$)</td>
     <td>North Beach (surf area)</td>
     <td>Thulusdhoo Surf Retreat</td>
-    <td>$120 (≈ ₽11 400)–$160 (≈ ₽15 200)</td>
+    <td>$120–$160</td>
   </tr>
   <tr>
     <td>Mid-Range ($$)</td>
     <td>East Coast (quiet side)</td>
     <td>Lagoon View Inn</td>
-    <td>$100 (≈ ₽9 500)–$140 (≈ ₽13 300)</td>
+    <td>$100–$140</td>
   </tr>
   <tr>
     <td>Luxury ($$$)</td>
     <td>Private beachfront villas</td>
     <td>The Pearl of Thulusdhoo</td>
-    <td>$280 (≈ ₽26 600)–$400 (≈ ₽38 000)</td>
+    <td>$280–$400</td>
   </tr>
 </table>
 
@@ -418,15 +442,15 @@
   <li><strong>Local Island Walk</strong> – Stroll through the village to see colorful houses, the local mosque, and friendly faces. <em>Free. Anytime, but best in the late afternoon.</em></li>
   <li><strong>Kuda Huraa Surf Break</strong> – A slightly more mellow wave than Chickens, great for longboarders and beginners. <em>Free. Open 24/7.</em></li>
   <li><strong>Thulusdhoo Jetty</strong> – Perfect for sunset photos. Watch the local fishing boats come in and the sky turn pink. <em>Free. Best from 5:30 PM.</em></li>
-  <li><strong>Sandbank Picnic Trip</strong> – Take a short boat ride to a deserted sandbank for a private picnic. <em>$45 (≈ ₽4 275)–$70 (≈ ₽6 650) per person (includes boat, lunch, and snorkeling gear). Book through your guesthouse.</em></li>
-  <li><strong>Manta Point Snorkeling</strong> – A nearby cleaning station where you can snorkel with majestic manta rays (seasonal: Nov–Apr). <em>$50 (≈ ₽4 750)–$80 (≈ ₽7 600) per person for a guided trip.</em></li>
-  <li><strong>Local Bicycle Rental</strong> – The best way to explore the entire island. <em>$5 (≈ ₽475)–$10 (≈ ₽950) per day from guesthouses.</em></li>
+  <li><strong>Sandbank Picnic Trip</strong> – Take a short boat ride to a deserted sandbank for a private picnic. <em>$45–$70per person (includes boat, lunch, and snorkeling gear). Book through your guesthouse.</em></li>
+  <li><strong>Manta Point Snorkeling</strong> – A nearby cleaning station where you can snorkel with majestic manta rays (seasonal: Nov–Apr). <em>$50–$80per person for a guided trip.</em></li>
+  <li><strong>Local Bicycle Rental</strong> – The best way to explore the entire island. <em>$5–$10per day from guesthouses.</em></li>
   <li><strong>Thulusdhoo Coral Nursery</strong> – Visit the community-run coral restoration project. Learn about reef conservation. <em>Free (donations welcome). Open by appointment.</em></li>
-  <li><strong>Fishing with Locals</strong> – Join a traditional Maldivian night fishing trip. Catch your own dinner! <em>$35 (≈ ₽3 325)–$55 (≈ ₽5 225) per person (includes gear and bait).</em></li>
-  <li><strong>Dolphin Watching Cruise</strong> – Spot spinner dolphins at sunset. A magical experience. <em>$40 (≈ ₽3 800)–$60 (≈ ₽5 700) per person.</em></li>
+  <li><strong>Fishing with Locals</strong> – Join a traditional Maldivian night fishing trip. Catch your own dinner! <em>$35–$55per person (includes gear and bait).</em></li>
+  <li><strong>Dolphin Watching Cruise</strong> – Spot spinner dolphins at sunset. A magical experience. <em>$40–$60per person.</em></li>
   <li><strong>Thulusdhoo Harbor</strong> – A bustling spot where you can see local life, buy fresh fish, and watch speedboats come and go. <em>Free. Best in the morning.</em></li>
   <li><strong>Picnic at the Eastern Beach</strong> – A quieter, more secluded beach area perfect for a peaceful afternoon. <em>Free. Open anytime.</em></li>
-  <li><strong>Local Cooking Class</strong> – Learn to make mas huni (tuna and coconut) and other Maldivian dishes. <em>$25 (≈ ₽2 375)–$40 (≈ ₽3 800) per person. Book at your guesthouse.</em></li>
+  <li><strong>Local Cooking Class</strong> – Learn to make mas huni (tuna and coconut) and other Maldivian dishes. <em>$25–$40per person. Book at your guesthouse.</em></li>
   <li><strong>Night Sky Gazing</strong> – With minimal light pollution, the stars are breathtaking. <em>Free. Best after 10 PM.</em></li>
 </ol>
 
@@ -435,8 +459,8 @@
 
 <ul>
   <li><strong>Walking:</strong> The primary mode of transport. Everything is within a 15-minute walk. <em>Free.</em></li>
-  <li><strong>Bicycle:</strong> My personal recommendation. Rent from your guesthouse or a local shop. <em>$5 (≈ ₽475)–$10 (≈ ₽950) per day.</em></li>
-  <li><strong>Boat Taxi (Dhoni):</strong> For trips to nearby sandbanks or other islands. <em>$10 (≈ ₽950)–$20 (≈ ₽1 900) per short trip.</em></li>
+  <li><strong>Bicycle:</strong> My personal recommendation. Rent from your guesthouse or a local shop. <em>$5–$10per day.</em></li>
+  <li><strong>Boat Taxi (Dhoni):</strong> For trips to nearby sandbanks or other islands. <em>$10–$20per short trip.</em></li>
   <li><strong>No Cars or Scooters:</strong> There are no cars or scooters for rent on Thulusdhoo—it's part of the charm! You'll see a few local pickup trucks, but that's it.</li>
 </ul>
 
@@ -453,25 +477,25 @@
   <tr>
     <td>Sea Breeze Café</td>
     <td>Maldivian & International</td>
-    <td>$8 (≈ ₽760)–$15 (≈ ₽1 425)</td>
+    <td>$8–$15</td>
     <td>Mas Huni with fresh roti</td>
   </tr>
   <tr>
     <td>Surf Shack</td>
     <td>Western & Pizza</td>
-    <td>$12 (≈ ₽1 140)–$20 (≈ ₽1 900)</td>
+    <td>$12–$20</td>
     <td>Grilled tuna steak</td>
   </tr>
   <tr>
     <td>Lagoon View Restaurant</td>
     <td>Seafood & Asian</td>
-    <td>$15 (≈ ₽1 425)–$25 (≈ ₽2 375)</td>
+    <td>$15–$25</td>
     <td>Garlic butter lobster</td>
   </tr>
   <tr>
     <td>Local Street Food Stalls</td>
     <td>Maldivian snacks</td>
-    <td>$2 (≈ ₽190)–$5 (≈ ₽475)</td>
+    <td>$2–$5</td>
     <td>Bajiya (samosas) and Hedhikaa (short eats)</td>
   </tr>
 </table>
@@ -496,7 +520,7 @@
   <li>A passport valid for at least 6 months from your arrival date.</li>
   <li>A confirmed return ticket.</li>
   <li>Proof of accommodation (hotel booking).</li>
-  <li>Sufficient funds for your stay (around $100 (≈ ₽9 500) per day is recommended).</li>
+  <li>Sufficient funds for your stay (around $100per day is recommended).</li>
 </ul>
 
 <p>That's it! The process at MLE airport is smooth and takes about 15 minutes. I recommend having a printed copy of your hotel booking and return flight just in case.</p>
@@ -511,31 +535,31 @@
   </tr>
   <tr>
     <td>Accommodation (7 nights, mid-range)</td>
-    <td>$840 (≈ ₽79 800)–$1 120 (≈ ₽106 400)</td>
+    <td>$840–$1 120</td>
   </tr>
   <tr>
     <td>Food (3 meals + snacks)</td>
-    <td>$280 (≈ ₽26 600)–$420 (≈ ₽39 900)</td>
+    <td>$280–$420</td>
   </tr>
   <tr>
     <td>Transport (speedboat round-trip + bike rental)</td>
-    <td>$120 (≈ ₽11 400)–$150 (≈ ₽14 250)</td>
+    <td>$120–$150</td>
   </tr>
   <tr>
     <td>Activities (surf, snorkeling, fishing, sandbank)</td>
-    <td>$200 (≈ ₽19 000)–$350 (≈ ₽33 250)</td>
+    <td>$200–$350</td>
   </tr>
   <tr>
     <td>Miscellaneous (souvenirs, tips, drinks)</td>
-    <td>$100 (≈ ₽9 500)–$200 (≈ ₽19 000)</td>
+    <td>$100–$200</td>
   </tr>
   <tr>
     <td><strong>Total (per person)</strong></td>
-    <td><strong>$1 540 (≈ ₽146 300)–$2 240 (≈ ₽212 800)</strong></td>
+    <td><strong>$1 540–$2 240</strong></td>
   </tr>
 </table>
 
-<p>If you're on a budget, you can cut costs by staying in a guesthouse, eating local food, and using the public ferry. A budget week can be as low as <strong>$800 (≈ ₽76 000)–$1 000 (≈ ₽95 000)</strong> per person.</p>
+<p>If you're on a budget, you can cut costs by staying in a guesthouse, eating local food, and using the public ferry. A budget week can be as low as <strong>$800–$1 000</strong> per person.</p>
 
 <h2>10 Travel Tips</h2>
 <p>Before you go, here are my insider tips to make your Thulusdhoo trip unforgettable.</p>
@@ -659,6 +683,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -687,6 +712,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -704,8 +730,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

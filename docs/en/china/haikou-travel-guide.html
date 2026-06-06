@@ -6,7 +6,7 @@
     <title>Haikou (Hainan) Travel Guide 2026</title>
     <meta name="description" content="Haikou (Hainan) Travel Guide 2026 Imagine stepping off a plane into warm, tropical air that smells of salt and frangipani. That’s Haikou for you — the laid-b...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/haikou-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/haikou-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/haikou-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/haikou-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Haikou (Hainan) Travel Guide 2026">
     <meta property="og:description" content="Haikou (Hainan) Travel Guide 2026 Imagine stepping off a plane into warm, tropical air that smells of salt and frangipani. That’s Haikou for you — the laid-b...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/china/haikou-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -300,7 +324,7 @@
 
     
     <script type="application/ld+json">
-    [{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "Travel Guide Hub"}, "dateModified": "2026-06-01", "datePublished": "2026-01-15", "description": "Haikou (Hainan) Travel Guide 2026 Imagine stepping off a plane into warm, tropical air that smells of salt and frangipani. That\u2019s Haikou for you \u2014 the laid-b...", "headline": "Haikou (Hainan) Travel Guide 2026", "mainEntityOfPage": {"@id": "/en/china/haikou-travel-guide.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "Travel Guide Hub"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "For a full experience of Haikou (Hainan), we recommend 4-7 days."}, "name": "How many days do I need in Haikou (Hainan)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Average weekly budget: from $500 per person excluding flights."}, "name": "What\u0027s the budget for a trip to Haikou (Hainan)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Visa requirements depend on your nationality \u2014 check with the local embassy."}, "name": "Do I need a visa for Haikou (Hainan)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Best time depends on the season \u2014 check our seasons guide."}, "name": "When is the best time to visit Haikou (Hainan)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Haikou (Hainan) is a popular tourist destination, safe with standard precautions."}, "name": "Is Haikou (Hainan) safe?"}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "/en/index.html", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "/en/china/index.html", "name": "China", "position": 2}, {"@type": "ListItem", "item": "/en/china/haikou-travel-guide.html", "name": "Haikou (Hainan)", "position": 3}]}]
+    [{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "Travel Guide Hub"}, "dateModified": "2026-06-01", "datePublished": "2026-01-15", "description": "Haikou (Hainan) Travel Guide 2026 Imagine stepping off a plane into warm, tropical air that smells of salt and frangipani. That\u2019s Haikou for you \u2014 the laid-b...", "headline": "Haikou (Hainan) Travel Guide 2026", "mainEntityOfPage": {"@id": "/en/china/haikou-travel-guide.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "Travel Guide Hub"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "For a full experience of Haikou, we recommend 4-7 days."}, "name": "How many days do I need in Haikou?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Average weekly budget: from $500 per person excluding flights."}, "name": "What\u0027s the budget for a trip to Haikou?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Visa requirements depend on your nationality \u2014 check with the local embassy."}, "name": "Do I need a visa for Haikou?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Best time depends on the season \u2014 check our seasons guide."}, "name": "When is the best time to visit Haikou?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Haikou is a popular tourist destination, safe with standard precautions."}, "name": "Is Haikou safe?"}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "/en/index.html", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "/en/china/index.html", "name": "China", "position": 2}, {"@type": "ListItem", "item": "/en/china/haikou-travel-guide.html", "name": "Haikou", "position": 3}]}]
     </script>
     
 </head>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/haikou-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -330,7 +354,7 @@
         
     
         
-            <span>Haikou (Hainan)</span>
+            <span>Haikou</span>
         
     
 </div>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://russian.cgtn.com/news/2025-09-30/1972981899919007745/b0142e6b-dec8-41a1-b227-e290b3f07083.png');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/haikou.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Haikou (Hainan) Travel Guide 2026</div>
@@ -366,14 +390,14 @@
 <p>In 2026, Haikou is also positioning itself as a hub for duty-free shopping and eco-tourism. The newly expanded Haikou Duty-Free Complex is a paradise for luxury lovers, while the volcanic geoparks and mangrove reserves offer genuine nature escapes. The city’s average temperature hovers around 24°C (75°F) year-round, making it a perfect winter sun destination. So pack light, bring your appetite, and get ready for a city that’s equal parts chill and charming.</p>
 
 <h2>How to Get There</h2>
-<p>Haikou Meilan International Airport (HAK) is your gateway. It’s well-connected to major Chinese cities and a handful of international hubs. From Beijing, direct flights take about 3.5 hours and cost around ¥1,200–¥1,800 (round trip). From Shanghai, expect 2.5 hours and ¥1,000–¥1,500. From Guangzhou, it’s a quick 1-hour hop for ¥400–¥700. International routes from Bangkok, Singapore, and Kuala Lumpur are also available, with prices starting at ¥1,500–¥2,500 round trip. I recommend booking in advance for 2026 — summer and Chinese New Year see price spikes of 20-30%.</p>
+<p>Haikou Meilan International Airport (HAK) is your gateway. It’s well-connected to major Chinese cities and a handful of international hubs. From Beijing, direct flights take about 3.5 hours and cost around $168 (1 200 ¥)–$252 (1 800 ¥)(round trip). From Shanghai, expect 2.5 hours and $140 (1 000 ¥)–$210 (1 500 ¥)From Guangzhou, it’s a quick 1-hour hop for $56 (400 ¥)–$98 (700 ¥)International routes from Bangkok, Singapore, and Kuala Lumpur are also available, with prices starting at $210 (1 500 ¥)–$350 (2 500 ¥)round trip. I recommend booking in advance for 2026 — summer and Chinese New Year see price spikes of 20-30%.</p>
 
 <h2>Where to Stay</h2>
 <p>Haikou’s neighborhoods each have their own flavor. For first-timers, I suggest staying near the city center (Guoxing Avenue) or the Holiday Beach area. Here’s my breakdown:</p>
 <ul>
-  <li><strong>Budget (¥150–¥350/night):</strong> Haikou Backpackers Hostel (clean dorms, social vibe, near Qilou) or 7 Days Inn (reliable chain, basic but comfy).</li>
-  <li><strong>Mid-Range (¥400–¥800/night):</strong> Hainan International Hotel (great location, pool, breakfast included) or Grand Soluxe Hotel (modern rooms, close to shopping).</li>
-  <li><strong>Luxury (¥900–¥1,800/night):</strong> The Ritz-Carlton Haikou (stunning ocean views, world-class spa) or Haikou Marriott Hotel (beachfront, huge pool, kid-friendly).</li>
+  <li><strong>Budget ($21 (150 ¥)–$49 (350 ¥)/night):</strong> Haikou Backpackers Hostel (clean dorms, social vibe, near Qilou) or 7 Days Inn (reliable chain, basic but comfy).</li>
+  <li><strong>Mid-Range ($56 (400 ¥)–$112 (800 ¥)/night):</strong> Hainan International Hotel (great location, pool, breakfast included) or Grand Soluxe Hotel (modern rooms, close to shopping).</li>
+  <li><strong>Luxury ($126 (900 ¥)–$252 (1 800 ¥)/night):</strong> The Ritz-Carlton Haikou (stunning ocean views, world-class spa) or Haikou Marriott Hotel (beachfront, huge pool, kid-friendly).</li>
 </ul>
 <p>Pro tip: Book early for Chinese holidays (May Day, National Day) when prices double.</p>
 
@@ -382,39 +406,39 @@
 <ol>
   <li><strong>Qilou Old Street (骑楼老街)</strong> — A living museum of 1920s arcaded buildings, blending European and Chinese styles. Wander the alleys, sip coffee, and snap photos. Free entry. Open 24/7.</li>
   <li><strong>Holiday Beach (假日海滩)</strong> — Haikou’s main beach with soft sand, calm waters, and beachside bars. Perfect for sunset strolls. Free. Open 24/7.</li>
-  <li><strong>Volcanic Cluster Global Geopark (火山口地质公园)</strong> — Hike up an extinct volcano, explore lava tunnels, and see crater views. Ticket: ¥85 (adults). Open 8:00–18:00.</li>
-  <li><strong>Hainan Tropical Wildlife Park (海南热带野生动植物园)</strong> — A safari-style zoo with lions, giraffes, and tropical birds. Kids love it. Ticket: ¥120. Open 8:30–17:30.</li>
-  <li><strong>Wugong Temple (五公祠)</strong> — A historic temple complex honoring five Tang and Song dynasty officials. Beautiful gardens and ancient architecture. Ticket: ¥25. Open 8:00–17:30.</li>
+  <li><strong>Volcanic Cluster Global Geopark (火山口地质公园)</strong> — Hike up an extinct volcano, explore lava tunnels, and see crater views. Ticket: $12 (85 ¥)(adults). Open 8:00–18:00.</li>
+  <li><strong>Hainan Tropical Wildlife Park (海南热带野生动植物园)</strong> — A safari-style zoo with lions, giraffes, and tropical birds. Kids love it. Ticket: $17 (120 ¥)Open 8:30–17:30.</li>
+  <li><strong>Wugong Temple (五公祠)</strong> — A historic temple complex honoring five Tang and Song dynasty officials. Beautiful gardens and ancient architecture. Ticket: $4 (25 ¥)Open 8:00–17:30.</li>
   <li><strong>Haikou Clock Tower (海口钟楼)</strong> — Iconic red-brick tower on the river, built in 1929. Great photo op. Free. Open 24/7.</li>
   <li><strong>Evergreen Park (万绿园)</strong> — A massive urban park with tropical plants, jogging paths, and a lake. Locals fly kites here on weekends. Free. Open 24/7.</li>
   <li><strong>Hainan Museum (海南省博物馆)</strong> — Learn about Hainan’s history, from ancient Li culture to maritime trade. Free entry (ID required). Open 9:00–17:00 (closed Mondays).</li>
-  <li><strong>Dongzhai Harbor Mangrove Reserve (东寨港红树林)</strong> — Take a boat tour through lush mangrove forests, spotting birds and crabs. Ticket: ¥50 (boat ride). Open 8:00–17:30.</li>
+  <li><strong>Dongzhai Harbor Mangrove Reserve (东寨港红树林)</strong> — Take a boat tour through lush mangrove forests, spotting birds and crabs. Ticket: $7 (50 ¥)(boat ride). Open 8:00–17:30.</li>
   <li><strong>Haikou Duty-Free Complex (海口免税城)</strong> — A shopper’s paradise with luxury brands, cosmetics, and electronics. Duty-free savings of 10-30%. Free entry. Open 10:00–22:00.</li>
   <li><strong>Binhai Avenue Waterfront (滨海大道)</strong> — A scenic coastal road with palm trees, modern sculptures, and ocean views. Great for cycling. Free. Open 24/7.</li>
   <li><strong>Fenghuang Island (凤凰岛)</strong> — A man-made island with a lighthouse, luxury hotels, and a promenade. Best at sunset. Free. Open 24/7.</li>
   <li><strong>Haikou People’s Park (海口人民公园)</strong> — A central green space with a lake, pavilions, and morning tai chi groups. Free. Open 6:00–22:00.</li>
-  <li><strong>Lingshui Li Village (陵水黎族村)</strong> — A cultural village showcasing Li ethnic minority traditions, weaving, and dance. Ticket: ¥60. Open 8:30–17:00.</li>
+  <li><strong>Lingshui Li Village (陵水黎族村)</strong> — A cultural village showcasing Li ethnic minority traditions, weaving, and dance. Ticket: $8 (60 ¥)Open 8:30–17:00.</li>
   <li><strong>Meilan Airport Viewing Platform (美兰机场观景台)</strong> — Watch planes take off and land from a rooftop deck. Free. Open 8:00–20:00.</li>
 </ol>
 
 <h2>Getting Around</h2>
 <p>Haikou’s public transport is efficient and cheap. Here’s how to navigate:</p>
 <ul>
-  <li><strong>Metro:</strong> Two lines (Line 1 and Line 2) cover the city center and airport. Fares: ¥2–¥8 per ride. Runs 6:00–23:00.</li>
-  <li><strong>Buses:</strong> Extensive network with over 100 routes. Fares: ¥1–¥5. Pay with cash or transportation card. I recommend downloading the “Haikou Bus” app.</li>
-  <li><strong>Taxis:</strong> Flagfall starts at ¥10, then ¥2 per km. A ride from the airport to city center costs about ¥60–¥80. Use Didi (China’s Uber) for convenience.</li>
-  <li><strong>Rental:</strong> E-bike rentals are popular — ¥30–¥50 per day. For cars, expect ¥150–¥300/day. International driving permits are not recognized; you’ll need a Chinese license.</li>
+  <li><strong>Metro:</strong> Two lines (Line 1 and Line 2) cover the city center and airport. Fares: $0 (2 ¥)–$1 (8 ¥)per ride. Runs 6:00–23:00.</li>
+  <li><strong>Buses:</strong> Extensive network with over 100 routes. Fares: $0 (1 ¥)–$1 (5 ¥)Pay with cash or transportation card. I recommend downloading the “Haikou Bus” app.</li>
+  <li><strong>Taxis:</strong> Flagfall starts at $1 (10 ¥)then $0 (2 ¥)per km. A ride from the airport to city center costs about $8 (60 ¥)–$11 (80 ¥)Use Didi (China’s Uber) for convenience.</li>
+  <li><strong>Rental:</strong> E-bike rentals are popular — $4 (30 ¥)–$7 (50 ¥)per day. For cars, expect $21 (150 ¥)–$42 (300 ¥)/day. International driving permits are not recognized; you’ll need a Chinese license.</li>
 </ul>
 
 <h2>Where to Eat</h2>
 <p>Haikou’s food scene is a treasure trove. I’ve eaten my way through the city, and these are the highlights:</p>
 <ul>
-  <li><strong>Street Food:</strong> Try <em>Wenchang chicken</em> (poached, tender), <em>Hainan noodles</em> (rice noodles in broth), and <em>coconut rice</em>. Prices: ¥10–¥30 per dish.</li>
-  <li><strong>Restaurants:</strong> <em>Yipin Seafood Restaurant</em> (fresh catch, near Holiday Beach) — ¥80–¥150 per person. <em>Old Dad’s Tea House</em> (traditional dim sum) — ¥40–¥70 per person.</li>
+  <li><strong>Street Food:</strong> Try <em>Wenchang chicken</em> (poached, tender), <em>Hainan noodles</em> (rice noodles in broth), and <em>coconut rice</em>. Prices: $1 (10 ¥)–$4 (30 ¥)per dish.</li>
+  <li><strong>Restaurants:</strong> <em>Yipin Seafood Restaurant</em> (fresh catch, near Holiday Beach) — $11 (80 ¥)–$21 (150 ¥)per person. <em>Old Dad’s Tea House</em> (traditional dim sum) — $6 (40 ¥)–$10 (70 ¥)per person.</li>
   <li><strong>Local Cuisine:</strong> Don’t miss <em>Hainan chicken rice</em> (a must-try) and <em>coconut chicken hotpot</em>. For dessert, <em>mango sticky rice</em> and <em>coconut pudding</em>.</li>
   <li><strong>Markets:</strong> <em>Dongmen Market</em> for fresh fruit and snacks. <em>Haikou Night Market</em> on Binhai Road — open 18:00–24:00, with skewers, seafood, and cold beer.</li>
 </ul>
-<p>Price ranges: Street food ¥10–¥40, casual restaurants ¥50–¥120, fine dining ¥150–¥300 per person.</p>
+<p>Price ranges: Street food $1 (10 ¥)–$6 (40 ¥)casual restaurants $7 (50 ¥)–$17 (120 ¥)fine dining $21 (150 ¥)–$42 (300 ¥)per person.</p>
 
 <h2>Best Time to Visit</h2>
 <p>Haikou has a tropical monsoon climate. Here’s the monthly breakdown:</p>
@@ -443,7 +467,7 @@
   <tr><td>Transport (metro, bus, taxis)</td><td>200–400</td><td>400–700</td><td>700–1,400</td></tr>
   <tr><td>Attractions (entry fees)</td><td>300–600</td><td>600–1,000</td><td>1,000–1,500</td></tr>
   <tr><td>Shopping & extras</td><td>500–1,000</td><td>1,000–2,000</td><td>2,000–4,000</td></tr>
-  <tr><td><strong>Total (approx.)</strong></td><td><strong>¥2,750–¥5,850</strong></td><td><strong>¥6,200–¥12,100</strong></td><td><strong>¥12,800–¥23,700</strong></td></tr>
+  <tr><td><strong>Total (approx.)</strong></td><td><strong>$385 (2 750 ¥)–$819 (5 850 ¥)</strong></td><td><strong>$868 (6 200 ¥)–$1 694 (12 100 ¥)</strong></td><td><strong>$1 792 (12 800 ¥)–$3 318 (23 700 ¥)</strong></td></tr>
 </table>
 <p>Note: Prices are marked up 12-15% above market rates to account for booking fees and seasonal fluctuations. I always tell my clients to budget an extra 10% for unexpected treats.</p>
 
@@ -451,13 +475,13 @@
 <ol>
   <li><strong>Learn basic Mandarin:</strong> “Nǐ hǎo” (hello), “Xièxiè” (thank you), and “Duōshao qián?” (how much?) will get you far. English is limited outside tourist spots.</li>
   <li><strong>Download WeChat and Alipay:</strong> China is cashless. You’ll need these apps for paying, booking, and the health QR code. Set them up before arrival.</li>
-  <li><strong>Stay hydrated:</strong> The tropics are humid. Carry a reusable water bottle — tap water is not safe, but hotels and shops sell cheap bottled water (¥2–¥5).</li>
+  <li><strong>Stay hydrated:</strong> The tropics are humid. Carry a reusable water bottle — tap water is not safe, but hotels and shops sell cheap bottled water ($0 (2 ¥)–$1 (5 ¥)).</li>
   <li><strong>Bargain at markets:</strong> At Dongmen Market or night markets, start at 50% of the asking price and negotiate politely. It’s expected.</li>
   <li><strong>Use sunscreen and mosquito repellent:</strong> The sun is strong year-round, and mosquitoes are active at dusk. SPF 50 and DEET-free repellent are your friends.</li>
   <li><strong>Respect local customs:</strong> Remove shoes before entering homes, don’t point with your finger, and avoid discussing politics. The locals are warm and welcoming.</li>
   <li><strong>Try the local coffee:</strong> Haikou has a growing coffee culture. Visit a “tea house” (actually coffee shops) for strong, sweet Hainan coffee — a remnant of colonial times.</li>
   <li><strong>Plan for typhoon season:</strong> If visiting July–October, check the weather daily. Typhoons can disrupt flights and outdoor plans. Have a backup indoor itinerary.</li>
-  <li><strong>Get a local SIM card:</strong> China Mobile or China Unicom offer tourist SIMs with data (¥50–¥100 for 7 days). You’ll need a Chinese number for Didi and food delivery apps.</li>
+  <li><strong>Get a local SIM card:</strong> China Mobile or China Unicom offer tourist SIMs with data ($7 (50 ¥)–$14 (100 ¥)for 7 days). You’ll need a Chinese number for Didi and food delivery apps.</li>
   <li><strong>Book through a trusted tour operator:</strong> I can’t stress this enough. For visa-free entry, you need a registered agency. Plus, I’ll hook you up with insider deals and 24/7 support. Just email me — I’ll make your trip seamless.</li>
 </ol><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -469,28 +493,28 @@
             </h2>
             
             <details>
-                <summary>How many days do I need in Haikou (Hainan)?</summary>
-                <p>For a full experience of Haikou (Hainan), we recommend 4-7 days.</p>
+                <summary>How many days do I need in Haikou?</summary>
+                <p>For a full experience of Haikou, we recommend 4-7 days.</p>
             </details>
             
             <details>
-                <summary>What&#39;s the budget for a trip to Haikou (Hainan)?</summary>
+                <summary>What&#39;s the budget for a trip to Haikou?</summary>
                 <p>Average weekly budget: from $500 per person excluding flights.</p>
             </details>
             
             <details>
-                <summary>Do I need a visa for Haikou (Hainan)?</summary>
+                <summary>Do I need a visa for Haikou?</summary>
                 <p>Visa requirements depend on your nationality — check with the local embassy.</p>
             </details>
             
             <details>
-                <summary>When is the best time to visit Haikou (Hainan)?</summary>
+                <summary>When is the best time to visit Haikou?</summary>
                 <p>Best time depends on the season — check our seasons guide.</p>
             </details>
             
             <details>
-                <summary>Is Haikou (Hainan) safe?</summary>
-                <p>Haikou (Hainan) is a popular tourist destination, safe with standard precautions.</p>
+                <summary>Is Haikou safe?</summary>
+                <p>Haikou is a popular tourist destination, safe with standard precautions.</p>
             </details>
             
         </div>
@@ -505,22 +529,22 @@
                 
                 <a href="/en/china/haikou-hotels.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Hotels</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Haikou (Hainan)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Haikou</p>
                 </a>
                 
                 <a href="/en/china/haikou-cheap-flights.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Flights</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Haikou (Hainan)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Haikou</p>
                 </a>
                 
                 <a href="/en/china/haikou-things-to-do.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Attractions</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Haikou (Hainan)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Haikou</p>
                 </a>
                 
                 <a href="/en/china/haikou-best-time-to-visit.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Seasons &amp; Weather</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Haikou (Hainan)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Haikou</p>
                 </a>
                 
             </div>
@@ -565,6 +589,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -593,6 +618,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -610,8 +636,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

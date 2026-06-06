@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Анталья 2026: от бюджета до люкса Анталья, жемчужина турецкого побережья Средиземного моря, ежегодно привлекает миллионы туристов. В 2025 год...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/antalya-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/antalya-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/antalya-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/antalya-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/antalya-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/antalya-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Анталья 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Анталья 2026: от бюджета до люкса Анталья, жемчужина турецкого побережья Средиземного моря, ежегодно привлекает миллионы туристов. В 2025 год...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/antalya-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/antalya-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://youtravel.me/upload/medialibrary/73c/g4ldxc78rw7lit49arn32dfdexy36p78.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/antalya.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Анталья 2026: от бюджета до люкса</div>
@@ -361,71 +385,148 @@
 
 <p>Анталья, жемчужина турецкого побережья Средиземного моря, ежегодно привлекает миллионы туристов. В 2025 году город посетило более 15 миллионов гостей, согласно данным Министерства культуры и туризма Турции. К 2026 году ожидается рост турпотока на 8-10% благодаря новым авиамаршрутам и модернизации гостиничной инфраструктуры. Отельная база Антальи насчитывает более 500 объектов разного уровня — от скромных семейных пансионов до ультра-все-включено курортов мирового класса. Основные районы размещения: Лара (элитные пляжи и люксовые отели), Коньяалты (галечные пляжи и бюджетное жилье), Калеичи (исторический центр с бутик-отелями) и Белек (гольф-курорты и VIP-комплексы).</p>
 
-<p>Цены на проживание в 2026 году варьируются в зависимости от сезона: низкий сезон (ноябрь-март) — скидки до 40%, высокий сезон (июнь-сентябрь) — пиковые расценки. Средняя стоимость номера в бюджетном отеле составляет ₽3 325 (≈ $35)-50 за ночь, в среднем классе — ₽6 650 (≈ $70)-120, в люксовом сегменте — от ₽19 000 (≈ $200) до ₽76 000 (≈ $800.) Валюта расчетов — преимущественно турецкая лира, но отели часто указывают цены в долларах США или евро для стабильности. Ниже представлены 10 лучших отелей Антальи 2026 года, разделенных по ценовым категориям, с реальными данными и отзывами гостей.</p>
+<p>Цены на проживание в 2026 году варьируются в зависимости от сезона: низкий сезон (ноябрь-март) — скидки до 40%, высокий сезон (июнь-сентябрь) — пиковые расценки. Средняя стоимость номера в бюджетном отеле составляет ₽3 325 ($35)-50 за ночь, в среднем классе — ₽6 650 ($70)-120, в люксовом сегменте — от ₽19 000 ($200)до ₽76 000 ($800)Валюта расчетов — преимущественно турецкая лира, но отели часто указывают цены в долларах США или евро для стабильности. Ниже представлены 10 лучших отелей Антальи 2026 года, разделенных по ценовым категориям, с реальными данными и отзывами гостей.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Hotel Aysima</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ay" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_980330" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Aysima - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Aysima - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Aysima - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_980330 .hc-slide');var d=document.querySelectorAll('#hc_980330 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_980330 .hc-slide');var d=document.querySelectorAll('#hc_980330 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_980330 .hc-slide');var d=document.querySelectorAll('#hc_980330 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Aysima &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Семейный отель в районе Коньяалты, в 200 метрах от пляжа. Номера оснащены кондиционером, мини-холодильником и бесплатным Wi-Fi. Завтрак «шведский стол» включен в стоимость. Всего 24 номера, работает круглый год.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цены:</strong> от ₽3 610 (≈ $38) за стандартный двухместный номер в низкий сезон; ₽4 560 (≈ $48) в высокий сезон (с июня по сентябрь).</p>
+<p><strong>Цены:</strong> от ₽3 610 ($38)за стандартный двухместный номер в низкий сезон; ₽4 560 ($48)в высокий сезон (с июня по сентябрь).</p>
 <p><strong>Плюсы:</strong> Расположение рядом с пляжем, приветливый персонал, чистота, бесплатная парковка. Минусы: маленькая площадь номеров (14-16 м²), шум от уличного движения, отсутствие бассейна.</p>
 
 <h3>2. Antalya Hostel & Guesthouse</h3>
+<div id="hc_256734" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Antalya Hostel & Guesthouse - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Antalya Hostel & Guesthouse - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_256734 .hc-slide');var d=document.querySelectorAll('#hc_256734 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_256734 .hc-slide');var d=document.querySelectorAll('#hc_256734 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Antalya Hostel & Guesthouse &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Хостел в историческом районе Калеичи, в 10 минутах ходьбы от порта. Предлагает как общие номера (8-12 мест), так и частные с ванной. Есть общая кухня, терраса с видом на старый город, ежедневные экскурсии.</p>
-<p><strong>Цены:</strong> от ₽1 425 (≈ $15) за койку в общем номере; ₽4 275 (≈ $45) за частный номер с ванной. Завтрак — ₽475 (≈ $5) дополнительно.</p>
+<p><strong>Цены:</strong> от ₽1 425 ($15)за койку в общем номере; ₽4 275 ($45)за частный номер с ванной. Завтрак — ₽475 ($5)дополнительно.</p>
 <p><strong>Плюсы:</strong> Атмосферное расположение, низкая цена, возможность знакомств. Минусы: шумно ночью из-за баров, ограниченное количество розеток, нет кондиционера в общих зонах (только вентиляторы).</p>
 
 <h3>3. Puding Marina Hotel</h3>
+<div id="hc_742280" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Puding Marina Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Puding Marina Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Puding Marina Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_742280 .hc-slide');var d=document.querySelectorAll('#hc_742280 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_742280 .hc-slide');var d=document.querySelectorAll('#hc_742280 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_742280 .hc-slide');var d=document.querySelectorAll('#hc_742280 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Puding Marina Hotel &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Бюджетный отель в центре Антальи, рядом с автовокзалом и торговым центром MarkAntalya. Номера с базовой мебелью, телевизором и санузлом. Работает круглосуточная стойка регистрации.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цены:</strong> от ₽3 325 (≈ $35) за одноместный номер; ₽4 750 (≈ $50) за двухместный. Завтрак континентальный — ₽665 (≈ $7.)</p>
+<p><strong>Цены:</strong> от ₽3 325 ($35)за одноместный номер; ₽4 750 ($50)за двухместный. Завтрак континентальный — ₽665 ($7)</p>
 <p><strong>Плюсы:</strong> Удобная транспортная развязка, низкая цена, безопасность (круглосуточная охрана). Минусы: старый ремонт, слабая звукоизоляция, завтрак скудный (только чай, хлеб, джем).</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Ramada Plaza Antalya</h3>
+<div id="hc_362487" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ramada Plaza Antalya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ramada Plaza Antalya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ramada Plaza Antalya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_362487 .hc-slide');var d=document.querySelectorAll('#hc_362487 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_362487 .hc-slide');var d=document.querySelectorAll('#hc_362487 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_362487 .hc-slide');var d=document.querySelectorAll('#hc_362487 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ramada Plaza Antalya &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Современный отель сети Wyndham в районе Лара, в 5 минутах от пляжа. 150 номеров с панорамными окнами, фитнес-центр, открытый бассейн, спа-салон с хамамом. Ресторан с турецкой и международной кухней.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="се" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цены:</strong> от ₽8 075 (≈ $85) за стандартный номер с завтраком в низкий сезон; ₽11 400 (≈ $120) в высокий сезон. Семейный номер (2+1) — от ₽10 450 (≈ $110.)</p>
-<p><strong>Фишки:</strong> Бесплатный трансфер до аэропорта (15 км), бизнес-центр, велнес-пакет с массажем за ₽2 850 (≈ $30.) Гости хвалят завтрак с медом и свежими фруктами.</p>
+<p><strong>Цены:</strong> от ₽8 075 ($85)за стандартный номер с завтраком в низкий сезон; ₽11 400 ($120)в высокий сезон. Семейный номер (2+1) — от ₽10 450 ($110)</p>
+<p><strong>Фишки:</strong> Бесплатный трансфер до аэропорта (15 км), бизнес-центр, велнес-пакет с массажем за ₽2 850 ($30)Гости хвалят завтрак с медом и свежими фруктами.</p>
 
 <h3>5. Sealife Resort Hotel</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ho" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_327551" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Sealife Resort Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Sealife Resort Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Sealife Resort Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_327551 .hc-slide');var d=document.querySelectorAll('#hc_327551 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_327551 .hc-slide');var d=document.querySelectorAll('#hc_327551 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_327551 .hc-slide');var d=document.querySelectorAll('#hc_327551 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sealife Resort Hotel &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Курортный отель в Белеке, в 1 км от пляжа. Работает по системе «все включено». 200 номеров, аквапарк с 5 горками, теннисные корты, анимация для детей. Зеленая территория с пальмами и соснами.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цены:</strong> от ₽9 025 (≈ $95) за двухместный номер в низкий сезон; ₽13 300 (≈ $140) в высокий. Детская кроватка — ₽1 425 (≈ $15) дополнительно.</p>
+<p><strong>Цены:</strong> от ₽9 025 ($95)за двухместный номер в низкий сезон; ₽13 300 ($140)в высокий. Детская кроватка — ₽1 425 ($15)дополнительно.</p>
 <p><strong>Фишки:</strong> Бесплатный вход в спа-центр (сауна, джакузи), уроки турецкого языка для гостей, вечерние шоу. Минус: удаленность от центра Антальи (30 км).</p>
 
 <h3>6. Tuvana Hotel</h3>
+<div id="hc_68927" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Tuvana Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Tuvana Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Tuvana Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_68927 .hc-slide');var d=document.querySelectorAll('#hc_68927 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_68927 .hc-slide');var d=document.querySelectorAll('#hc_68927 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_68927 .hc-slide');var d=document.querySelectorAll('#hc_68927 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Tuvana Hotel &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Бутик-отель в историческом здании XIX века в Калеичи. 40 номеров с антикварной мебелью, внутренний двор с фонтаном, ресторан средиземноморской кухни. Атмосфера старого города.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цены:</strong> от ₽7 125 (≈ $75) за номер с видом на двор; ₽10 450 (≈ $110) с видом на море. Завтрак включен, ужин — ₽2 375 (≈ $25) на человека.</p>
+<p><strong>Цены:</strong> от ₽7 125 ($75)за номер с видом на двор; ₽10 450 ($110)с видом на море. Завтрак включен, ужин — ₽2 375 ($25)на человека.</p>
 <p><strong>Фишки:</strong> Бесплатный велосипед для прогулок, дегустация местных вин по пятницам, близость к музеям (археологический музей в 500 м). Подходит для романтических поездок.</p>
 
 <h3>7. Akra Hotel Antalya</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="An" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_758996" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Akra Hotel Antalya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Akra Hotel Antalya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Akra Hotel Antalya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_758996 .hc-slide');var d=document.querySelectorAll('#hc_758996 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_758996 .hc-slide');var d=document.querySelectorAll('#hc_758996 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_758996 .hc-slide');var d=document.querySelectorAll('#hc_758996 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Akra Hotel Antalya &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Отель 4 звезды в районе Коньяалты, прямо на берегу моря. 180 номеров, 2 бассейна (один с подогревом), фитнес-зал, конференц-зал на 300 человек. Панорамный ресторан на 10 этаже.</p>
-<p><strong>Цены:</strong> от ₽9 500 (≈ $100) за номер с видом на море; ₽12 350 (≈ $130) с балконом. Полупансион — ₽1 425 (≈ $15) дополнительно.</p>
+<p><strong>Цены:</strong> от ₽9 500 ($100)за номер с видом на море; ₽12 350 ($130)с балконом. Полупансион — ₽1 425 ($15)дополнительно.</p>
 <p><strong>Фишки:</strong> Собственный пляж с шезлонгами (бесплатно), скидка 10% при бронировании напрямую, экскурсии в Олимпос и Кемер от отеля. Гости отмечают отличный сервис и чистоту.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Mardan Palace</h3>
+<div id="hc_860731" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Mardan Palace - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Mardan Palace - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Mardan Palace - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_860731 .hc-slide');var d=document.querySelectorAll('#hc_860731 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_860731 .hc-slide');var d=document.querySelectorAll('#hc_860731 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_860731 .hc-slide');var d=document.querySelectorAll('#hc_860731 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Mardan Palace &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Легендарный отель 5 звезд в Ларе, известный как «турецкий Версаль». 400 номеров, частный песчаный пляж длиной 500 м, аквапарк, спа-центр площадью 3000 м² с золотым хамамом. Архитектура в стиле османского дворца.</p>
-<p><strong>Цены:</strong> от ₽23 750 (≈ $250) за стандартный номер в низкий сезон; ₽42 750 (≈ $450) в высокий. Люкс с джакузи — от ₽57 000 (≈ $600.) Система «ультра все включено» (импортные напитки, круглосуточный room service).</p>
+<p><strong>Цены:</strong> от ₽23 750 ($250)за стандартный номер в низкий сезон; ₽42 750 ($450)в высокий. Люкс с джакузи — от ₽57 000 ($600)Система «ультра все включено» (импортные напитки, круглосуточный room service).</p>
 <p><strong>Особенности:</strong> Лагуна с дельфинами, вертолетная площадка, 8 ресторанов (включая мишленовский повар). Гостям предоставляют личного дворецкого. Популярен среди звезд и политиков.</p>
 
 <h3>9. Rixos Downtown Antalya</h3>
+<div id="hc_735914" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Rixos Downtown Antalya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Rixos Downtown Antalya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_735914 .hc-slide');var d=document.querySelectorAll('#hc_735914 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_735914 .hc-slide');var d=document.querySelectorAll('#hc_735914 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rixos Downtown Antalya &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Современный люксовый отель в центре города, в 2 км от Калеичи. 250 номеров с дизайнерским интерьером, инфранитный бассейн, спа-центр с турецкой баней и сауной. Ресторан с открытой кухней.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цены:</strong> от ₽17 100 (≈ $180) за номер с городским видом; ₽28 500 (≈ $300) с видом на море. Завтрак включен, ужин — ₽4 750 (≈ $50) на человека.</p>
+<p><strong>Цены:</strong> от ₽17 100 ($180)за номер с городским видом; ₽28 500 ($300)с видом на море. Завтрак включен, ужин — ₽4 750 ($50)на человека.</p>
 <p><strong>Особенности:</strong> Бесплатный шаттл до пляжа, клубный этаж с лаунж-зоной, услуги няни, парковка с зарядкой для электромобилей. Идеален для деловых поездок и шопинга.</p>
 
 <h3>10. Maxx Royal Kemer</h3>
+<div id="hc_613408" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Maxx Royal Kemer - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Maxx Royal Kemer - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Maxx Royal Kemer - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_613408 .hc-slide');var d=document.querySelectorAll('#hc_613408 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_613408 .hc-slide');var d=document.querySelectorAll('#hc_613408 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_613408 .hc-slide');var d=document.querySelectorAll('#hc_613408 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Maxx Royal Kemer &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Элитный курорт в Кемере (40 км от Антальи), в окружении соснового леса. 350 номеров, частный пляж с голубым флагом, аквапарк с 12 горками, спа-центр с хаммамом и джакузи. Работает круглый год.</p>
-<p><strong>Цены:</strong> от ₽33 250 (≈ $350) за номер в низкий сезон; ₽76 000 (≈ $800) в высокий. Виллы с бассейном — от ₽114 000 (≈ $1200.) Система «все включено» премиум-класса.</p>
+<p><strong>Цены:</strong> от ₽33 250 ($350)за номер в низкий сезон; ₽76 000 ($800)в высокий. Виллы с бассейном — от ₽114 000 ($1 200)Система «все включено» премиум-класса.</p>
 <p><strong>Особенности:</strong> Детский клуб с аниматорами, поле для гольфа на 18 лунок, ресторан с морепродуктами от местных рыбаков. Гости хвалят уединенность и высокий уровень сервиса.</p>
 
 <h2>Как выбрать район</h2>
@@ -523,6 +624,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -551,6 +653,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -568,8 +671,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

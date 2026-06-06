@@ -7,8 +7,8 @@
     <meta name="description" content="Когда лучше ехать в Пекин: сезоны, погода и цены 2026 Пекин — это город, который бьёт ключом энергии, смешивая древние традиции с футуристическими небоскрёба...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/beijing-kogda-luchshe-ekhat.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-kogda-luchshe-ekhat.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-kogda-luchshe-ekhat.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-best-time-to-visit.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-best-time-to-visit.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/beijing-kogda-luchshe-ekhat.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Когда лучше ехать в Пекин: сезоны, погода и цены 2026">
     <meta property="og:description" content="Когда лучше ехать в Пекин: сезоны, погода и цены 2026 Пекин — это город, который бьёт ключом энергии, смешивая древние традиции с футуристическими небоскрёба...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/china/beijing-kogda-luchshe-ekhat.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/beijing-best-time-to-visit.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/beijing.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Когда лучше ехать в Пекин: сезоны, погода и цены 2026</div>
@@ -469,24 +493,24 @@
 <h2>Высокий сезон</h2>
 <p>Высокий сезон в Пекине — это два ярких периода: весна (апрель-май) и осень (сентябрь-октябрь). Именно в это время город показывает себя с лучшей стороны: цветут сады, воздух чистый, а небо — голубое, без смога. Я рекомендую планировать поездку на конец сентября или начало октября: это золотая середина, когда температура держится на уровне 20-25°C, а туристов ещё не так много, как на майские праздники.</p>
 
-<p><strong>Почему цены взлетают?</strong> В Китае есть «Золотая неделя» в начале октября (Национальный день КНР) и майские праздники. В эти даты отели, билеты и экскурсии дорожают на 30-50%. Я видела, как номера в трёхзвёздочных гостиницах подскакивали с ₽4 750 (≈ $50) до ₽11 400 (≈ $120) за ночь. Если вы хотите избежать толп и переплат, но всё же попасть в высокий сезон, выбирайте вторую половину сентября или середину апреля.</p>
+<p><strong>Почему цены взлетают?</strong> В Китае есть «Золотая неделя» в начале октября (Национальный день КНР) и майские праздники. В эти даты отели, билеты и экскурсии дорожают на 30-50%. Я видела, как номера в трёхзвёздочных гостиницах подскакивали с ₽4 750 ($50)до ₽11 400 ($120)за ночь. Если вы хотите избежать толп и переплат, но всё же попасть в высокий сезон, выбирайте вторую половину сентября или середину апреля.</p>
 
 <p><a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_beijing" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Найти отели в Beijing на Hotellook</a></p>
 
 <ul>
-    <li><strong>Средняя цена отеля 3*:</strong> ₽8 075 (≈ $85)-120 за ночь (в пиковые даты до ₽17 100 (≈ $180)).</li>
-    <li><strong>Средняя цена отеля 4*:</strong> ₽14 250 (≈ $150)-220 за ночь.</li>
-    <li><strong>Средняя цена отеля 5*:</strong> ₽26 600 (≈ $280)-400 за ночь.</li>
+    <li><strong>Средняя цена отеля 3*:</strong> ₽8 075 ($85)-120 за ночь (в пиковые даты до ₽17 100 ($180)).</li>
+    <li><strong>Средняя цена отеля 4*:</strong> ₽14 250 ($150)-220 за ночь.</li>
+    <li><strong>Средняя цена отеля 5*:</strong> ₽26 600 ($280)-400 за ночь.</li>
 </ul>
 
-<p><strong>Мой совет:</strong> бронируйте жильё за 2-3 месяца, особенно если едете на «Золотую неделю». Иначе рискуете остаться в хостеле за ₽3 800 (≈ $40) с общим душем.</p>
+<p><strong>Мой совет:</strong> бронируйте жильё за 2-3 месяца, особенно если едете на «Золотую неделю». Иначе рискуете остаться в хостеле за ₽3 800 ($40)с общим душем.</p>
 
 <h2>Низкий сезон</h2>
 <p>Низкий сезон — это зима (декабрь-февраль) и середина лета (июль-август). Зимой в Пекине холодно: температура может опускаться до -15°C, а ветер продувает насквозь. Но есть и плюсы: туристов почти нет, цены на отели падают на 40-60%, а Великая стена в снегу — это зрелище, от которого у меня захватывало дух. Я рекомендую зиму для тех, кто не боится мороза и хочет увидеть Пекин без толчеи.</p>
 
 <p><strong>Плюсы низкого сезона:</strong></p>
 <ul>
-    <li>Экономия: отели 4* можно снять за ₽6 650 (≈ $70)-90.</li>
+    <li>Экономия: отели 4* можно снять за ₽6 650 ($70)-90.</li>
     <li>Очереди в музеи — 5-10 минут вместо часа.</li>
     <li>Атмосфера: ледяные фонтаны в парке Бэйхай и горячий чай с имбирём.</li>
 </ul>
@@ -503,7 +527,7 @@
 <h2>Лучшее время для пляжного отдыха</h2>
 <p>Пекин — не пляжный курорт, но если вы мечтаете искупаться, то лучшее время — с середины июня до конца августа. Температура воды в открытых бассейнах и озёрах достигает 24-27°C. Однако я должна предупредить: купание в естественных водоёмах в черте города небезопасно из-за загрязнения. Рекомендую выбирать отели с собственными бассейнами (например, в районе Чаоян).</p>
 
-<p>Для настоящего пляжного отдыха лучше поехать в Циндао или Санья, но если вы ограничены во времени, то в Пекине есть несколько аквапарков, например, «Happy Valley Water Park». Они работают с июня по август. Входной билет стоит около ₽2 375 (≈ $25)-35 (с наценкой).</p>
+<p>Для настоящего пляжного отдыха лучше поехать в Циндао или Санья, но если вы ограничены во времени, то в Пекине есть несколько аквапарков, например, «Happy Valley Water Park». Они работают с июня по август. Входной билет стоит около ₽2 375 ($25)-35 (с наценкой).</p>
 
 <h2>Лучшее время для экскурсий</h2>
 <p>Экскурсии — это сердце поездки в Пекин. Запретный город, Великая стена, Храм Неба, парк Ихэюань — всё это требует ходьбы и хорошей погоды. Я настоятельно рекомендую планировать экскурсии на <strong>сентябрь и октябрь</strong>. Температура 18-25°C, низкая влажность, ясное небо — идеальные условия для прогулок.</p>
@@ -536,7 +560,7 @@
 
 <p>Для бюджетных путешественников отличный вариант — <strong>апрель</strong>. Да, возможны пыльные бури, но отели стоят в 2 раза дешевле, а цветущие сады компенсируют неудобства. Зима — для любителей экстрима и снежных пейзажей. Лето — только если вы готовы к духоте и дождям.</p>
 
-<p>И не забудьте про перелёт: билеты из Москвы в Пекин в высокий сезон (сентябрь-октябрь) стоят около ₽57 000 (≈ $600)-800 (с наценкой 12-15%), а в низкий (январь-февраль) — ₽38 000 (≈ $400)-550. Я всегда советую бронировать за 2-3 месяца, чтобы поймать лучшие цены.</p>
+<p>И не забудьте про перелёт: билеты из Москвы в Пекин в высокий сезон (сентябрь-октябрь) стоят около ₽57 000 ($600)-800 (с наценкой 12-15%), а в низкий (январь-февраль) — ₽38 000 ($400)-550. Я всегда советую бронировать за 2-3 месяца, чтобы поймать лучшие цены.</p>
 
 <p><a href="https://tp.media/click?shmarker=736226&promo_id=3770&source_type=link&type=click&campaign_id=100&trs=search_flights_MOW_BEI" target="_blank" rel="nofollow sponsored" class="affiliate-link">✈️ Найти дешёвые билеты в Beijing на Aviasales</a></p>
 
@@ -626,6 +650,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -654,6 +679,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -671,8 +697,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

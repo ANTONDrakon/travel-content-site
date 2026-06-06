@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Kuta 2026</title>
     <meta name="description" content="15 Best Things to Do in Kuta 2026 Kuta, on the southwestern coast of Bali, Indonesia, is the island’s most iconic beach resort town. While often dismissed as...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Kuta 2026">
     <meta property="og:description" content="15 Best Things to Do in Kuta 2026 Kuta, on the southwestern coast of Bali, Indonesia, is the island’s most iconic beach resort town. While often dismissed as...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/kuta-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/kuta.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Kuta 2026</div>
@@ -363,24 +387,23 @@
 <p>Kuta, on the southwestern coast of Bali, Indonesia, is the island’s most iconic beach resort town. While often dismissed as a party hub, Kuta offers a surprising depth of attractions that go beyond its famous sunset bars and surf breaks. From cultural landmarks like the ancient Hindu temples to adrenaline-pumping water sports and vibrant art markets, Kuta serves as a dynamic base for exploring Bali’s rich tapestry. In 2026, the area has seen significant upgrades to its beachfront promenades and improved safety measures, making it more family-friendly than ever. This guide covers the 15 best things to do, complete with practical details, itineraries, and insider tips to help you maximize your visit.</p>
 
 <h2>15 Best Attractions in Kuta</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Kuta Beach</h3>
 <p>Kuta Beach is the legendary stretch of golden sand that put Bali on the global map. Known for its consistent waves, it remains a top spot for beginner and intermediate surfers, with dozens of surf schools operating along the shore. The beach is also famous for its spectacular sunsets, drawing crowds every evening to watch the sky turn orange and purple over the Indian Ocean. In 2026, the beach has cleaner facilities, new sun lounger rentals, and improved pedestrian walkways.</p>
 <p><strong>Ticket Price:</strong> Free (public beach access).<br>
 <strong>Hours:</strong> 24 hours, but best visited between 6:00 AM and 7:00 PM for safety.<br>
-<strong>How to Get There:</strong> Located at the end of Jalan Pantai Kuta. From Ngurah Rai Airport (DPS), it is a 15-minute taxi ride (about IDR 50,000-80,000).<br>
+<strong>How to Get There:</strong> Located at the end of Jalan Pantai Kuta. From Ngurah Rai Airport (DPS), it is a 15-minute taxi ride (about $3 (50 $0 (000 IDR))-80,000).<br>
 <strong>Tip:</strong> Arrive by 5:30 PM to secure a good spot for sunset. Avoid swimming during the monsoon season (November-March) when rip currents are strong.</p>
 
 <h3>2. Waterbom Bali</h3>
 <p>Waterbom Bali is consistently ranked as one of the top water parks in Asia, featuring over 26 slides and attractions spread across 3.8 hectares of tropical gardens. The highlight is the "Climax" slide, a 70-degree drop that reaches speeds of 70 km/h, offering an adrenaline rush for thrill-seekers. The park also includes a lazy river, children’s play areas, and several restaurants serving international and local cuisine. In 2026, Waterbom introduced a new virtual reality water coaster experience.</p>
-<p><strong>Ticket Price:</strong> Adults IDR 540,000 (about USD 36), Children (2-11 years) IDR 370,000. Online discounts available.<br>
+<p><strong>Ticket Price:</strong> Adults $34 (540 $0 (000 IDR))(about USD 36), Children (2-11 years) $23 (370 $0 (000 IDR))Online discounts available.<br>
 <strong>Hours:</strong> 9:00 AM to 6:00 PM daily.<br>
-<strong>How to Get There:</strong> Located on Jalan Kartika Plaza, a 10-minute walk from Kuta Beach. Taxi from central Kuta costs IDR 30,000-50,000.<br>
+<strong>How to Get There:</strong> Located on Jalan Kartika Plaza, a 10-minute walk from Kuta Beach. Taxi from central Kuta costs $2 (30 $0 (000 IDR))-50,000.<br>
 <strong>Tip:</strong> Book tickets online at least 24 hours in advance to save 15-20%. Bring reef-safe sunscreen and a waterproof phone pouch.</p>
 
 <h3>3. Kuta Art Market</h3>
-<p>This bustling market, also known as Pasar Seni Kuta, offers a vibrant array of Balinese handicrafts, including batik clothing, wood carvings, silver jewelry, and hand-painted sarongs. It is a perfect place to bargain for souvenirs, with prices typically starting at IDR 50,000 for small items. The market is housed in a two-story building near the beach, with vendors selling everything from woven bags to traditional masks. Be prepared to haggle—offering 30-50% of the initial price is standard.</p>
+<p>This bustling market, also known as Pasar Seni Kuta, offers a vibrant array of Balinese handicrafts, including batik clothing, wood carvings, silver jewelry, and hand-painted sarongs. It is a perfect place to bargain for souvenirs, with prices typically starting at $3 (50 $0 (000 IDR))for small items. The market is housed in a two-story building near the beach, with vendors selling everything from woven bags to traditional masks. Be prepared to haggle—offering 30-50% of the initial price is standard.</p>
 <p><strong>Ticket Price:</strong> Free entry.<br>
 <strong>Hours:</strong> 8:00 AM to 10:00 PM daily.<br>
 <strong>How to Get There:</strong> On Jalan Pantai Kuta, directly opposite Kuta Beach. Walking distance from most central hotels.<br>
@@ -388,10 +411,10 @@
 
 <h3>4. Hard Rock Cafe Bali</h3>
 <p>This iconic venue is more than just a restaurant—it houses the world’s largest collection of rock memorabilia outside the Hard Rock Cafe headquarters in Florida. The Kuta branch features a massive guitar-shaped facade, a swimming pool, and a live music stage that hosts local and international bands nightly. The menu offers classic American fare like burgers and ribs, with a Balinese twist on some dishes. The attached Rock Shop sells exclusive merchandise.</p>
-<p><strong>Ticket Price:</strong> Free entry to the cafe and shop. Food prices: mains from IDR 150,000-300,000.<br>
+<p><strong>Ticket Price:</strong> Free entry to the cafe and shop. Food prices: mains from $9 (150 $0 (000 IDR))-300,000.<br>
 <strong>Hours:</strong> 11:00 AM to 1:00 AM daily (kitchen closes at 11:00 PM).<br>
-<strong>How to Get There:</strong> On Jalan Pantai Banjar Pande Mas, a 5-minute walk from Kuta Beach. Taxi from airport: IDR 60,000.<br>
-<strong>Tip:</strong> Make a reservation for dinner if you want a table near the stage. The Sunday brunch (IDR 250,000 per person) is excellent value.</p>
+<strong>How to Get There:</strong> On Jalan Pantai Banjar Pande Mas, a 5-minute walk from Kuta Beach. Taxi from airport: $4 (60 $0 (000 IDR))<br>
+<strong>Tip:</strong> Make a reservation for dinner if you want a table near the stage. The Sunday brunch ($16 (250 $0 (000 IDR))per person) is excellent value.</p>
 
 <h3>5. Discovery Shopping Mall</h3>
 <p>This large, modern shopping mall is a welcome escape from Kuta’s heat, offering air-conditioned comfort, a cinema, and a wide range of international and local brands. The mall features a food court with affordable Indonesian dishes, a large supermarket (Hypermart), and a department store (Matahari). The highlight is the outdoor terrace overlooking the beach, perfect for sunset drinks. In 2026, the mall added a new rooftop bar and a virtual reality gaming zone.</p>
@@ -402,16 +425,16 @@
 
 <h3>6. Jalan Legian</h3>
 <p>Jalan Legian is the main artery of Kuta, a long, bustling street lined with bars, restaurants, clubs, and shops. It is the epicenter of Kuta’s nightlife, with venues like Sky Garden and Bounty Pub attracting crowds until dawn. During the day, it transforms into a shopping strip, selling surf gear, clothing, and local crafts. The street is pedestrian-friendly but can be chaotic with scooters, so stay alert.</p>
-<p><strong>Ticket Price:</strong> Free to walk. Drink prices vary; cocktails typically IDR 80,000-150,000.<br>
+<p><strong>Ticket Price:</strong> Free to walk. Drink prices vary; cocktails typically $5 (80 $0 (000 IDR))-150,000.<br>
 <strong>Hours:</strong> Most shops open 9:00 AM to 11:00 PM; bars stay open until 3:00 AM.<br>
 <strong>How to Get There:</strong> Runs parallel to Kuta Beach, accessible from any point along the beachfront.<br>
 <strong>Tip:</strong> For a quieter experience, visit during the late afternoon (4:00-6:00 PM) for happy hour deals (buy-one-get-one-free on beers).</p>
 
 <h3>7. Kuta Theatre (Devdan Show)</h3>
 <p>The Devdan Show is a spectacular 90-minute performance that takes audiences on a journey through Indonesia’s diverse cultures, from the dances of Bali to the traditions of Sumatra and Papua. The show combines acrobatics, traditional music, and stunning costumes in a purpose-built theater with state-of-the-art lighting and sound. It is an excellent introduction to Indonesian culture for families and couples. In 2026, the show updated its choreography to include more contemporary elements.</p>
-<p><strong>Ticket Price:</strong> Adults IDR 350,000 (standard), IDR 500,000 (VIP). Children (3-12 years) IDR 200,000.<br>
+<p><strong>Ticket Price:</strong> Adults $22 (350 $0 (000 IDR))(standard), $32 (500 $0 (000 IDR))(VIP). Children (3-12 years) $13 (200 $0 (000 IDR))<br>
 <strong>Hours:</strong> Showtimes at 7:30 PM (Tuesday-Saturday).<br>
-<strong>How to Get There:</strong> Inside the Bali Nusa Dua Convention Center, about 45 minutes from Kuta. Taxi costs IDR 150,000-200,000.<br>
+<strong>How to Get There:</strong> Inside the Bali Nusa Dua Convention Center, about 45 minutes from Kuta. Taxi costs $9 (150 $0 (000 IDR))-200,000.<br>
 <strong>Tip:</strong> Book tickets online for a 10% discount. Arrive 30 minutes early to explore the lobby’s cultural exhibits.</p>
 
 <h3>8. Beachwalk Shopping Center</h3>
@@ -419,14 +442,14 @@
 <p><strong>Ticket Price:</strong> Free entry.<br>
 <strong>Hours:</strong> 10:00 AM to 10:00 PM daily.<br>
 <strong>How to Get There:</strong> On Jalan Pantai Kuta, adjacent to Kuta Beach. Directly accessible from the beach via a pedestrian bridge.<br>
-<strong>Tip:</strong> Use the free Wi-Fi inside the mall. The basement parking is affordable (IDR 5,000 per hour).</p>
+<strong>Tip:</strong> Use the free Wi-Fi inside the mall. The basement parking is affordable ($0 (5 $0 (000 IDR))per hour).</p>
 
 <h3>9. Kuta Night Market (Pasar Senggol)</h3>
-<p>This lively night market, located near the Kuta Beach parking area, is a sensory explosion of street food, grilled seafood, and local snacks. Vendors sell sate lilit (minced fish satay), nasi goreng (fried rice), and fresh fruit juices at very affordable prices (mains from IDR 20,000-50,000). The market is popular with locals and tourists alike, offering a genuine taste of Balinese street culture. It operates from early evening until midnight.</p>
-<p><strong>Ticket Price:</strong> Free entry. Food costs IDR 15,000-50,000 per item.<br>
+<p>This lively night market, located near the Kuta Beach parking area, is a sensory explosion of street food, grilled seafood, and local snacks. Vendors sell sate lilit (minced fish satay), nasi goreng (fried rice), and fresh fruit juices at very affordable prices (mains from $1 (20 $0 (000 IDR))-50,000). The market is popular with locals and tourists alike, offering a genuine taste of Balinese street culture. It operates from early evening until midnight.</p>
+<p><strong>Ticket Price:</strong> Free entry. Food costs $1 (15 $0 (000 IDR))-50,000 per item.<br>
 <strong>Hours:</strong> 6:00 PM to 12:00 AM daily.<br>
 <strong>How to Get There:</strong> On Jalan Pantai Kuta, near the Kuta Beach parking lot. Walking distance from central Kuta.<br>
-<strong>Tip:</strong> Try the grilled corn (IDR 10,000) and the fresh coconut water (IDR 15,000). Bring hand sanitizer and cash only.</p>
+<strong>Tip:</strong> Try the grilled corn ($1 (10 $0 (000 IDR))) and the fresh coconut water ($1 (15 $0 (000 IDR))). Bring hand sanitizer and cash only.</p>
 
 <h3>10. Bali Bombing Memorial</h3>
 <p>This solemn memorial in the heart of Kuta commemorates the 202 victims of the 2002 Bali bombings, which occurred at the nearby Paddy’s Pub and Sari Club. The memorial consists of a large stone monument with the names of the victims, surrounded by flags and flowers. It serves as a poignant reminder of the tragedy and a symbol of resilience. The site is maintained by the local community and is a place of quiet reflection.</p>
@@ -436,15 +459,15 @@
 <strong>Tip:</strong> Visit early in the morning to avoid crowds and show respect. Photography is allowed, but be mindful of the atmosphere.</p>
 
 <h3>11. Surfing at Kuta Beach</h3>
-<p>Kuta Beach is one of the best places in Bali for beginner surfers, with gentle, rolling waves that are ideal for learning. Dozens of surf schools offer 2-hour lessons for around IDR 300,000-500,000, including board rental and instruction. The beach has several breaks, with the main break near the lifeguard station offering consistent waves year-round. In 2026, the local government installed new surfboard racks and changing rooms.</p>
-<p><strong>Ticket Price:</strong> Free to surf. Board rental: IDR 50,000-100,000 per hour. Lesson: IDR 300,000-500,000 for 2 hours.<br>
+<p>Kuta Beach is one of the best places in Bali for beginner surfers, with gentle, rolling waves that are ideal for learning. Dozens of surf schools offer 2-hour lessons for around $19 (300 $0 (000 IDR))-500,000, including board rental and instruction. The beach has several breaks, with the main break near the lifeguard station offering consistent waves year-round. In 2026, the local government installed new surfboard racks and changing rooms.</p>
+<p><strong>Ticket Price:</strong> Free to surf. Board rental: $3 (50 $0 (000 IDR))-100,000 per hour. Lesson: $19 (300 $0 (000 IDR))-500,000 for 2 hours.<br>
 <strong>Hours:</strong> Best conditions between 7:00 AM and 11:00 AM (low tide).<br>
 <strong>How to Get There:</strong> Directly in front of Kuta Beach. Surf schools are lined up along the shore.<br>
 <strong>Tip:</strong> Book a lesson with a school that provides rash guards and reef shoes. Avoid surfing near the rip currents near the southern end.</p>
 
 <h3>12. Bali Sea Turtle Society (BSTS) Hatchery</h3>
 <p>Located near Kuta Beach, this volunteer-run hatchery works to protect Bali’s endangered sea turtles. Visitors can learn about the conservation efforts, see hatchlings in tanks, and, during the release season (May-October), participate in releasing baby turtles into the sea. The hatchery is small but educational, with informative displays and dedicated staff. It is a perfect activity for families with children.</p>
-<p><strong>Ticket Price:</strong> Free entry, but donations are encouraged (IDR 50,000-100,000).<br>
+<p><strong>Ticket Price:</strong> Free entry, but donations are encouraged ($3 (50 $0 (000 IDR))-100,000).<br>
 <strong>Hours:</strong> 9:00 AM to 5:00 PM daily (release events typically at 4:00 PM).<br>
 <strong>How to Get There:</strong> At the southern end of Kuta Beach, near the Kuta Beachwalk. A 15-minute walk from the main beach area.<br>
 <strong>Tip:</strong> Check their Facebook page for scheduled turtle releases. Bring cash for donations and souvenirs.</p>
@@ -457,18 +480,18 @@
 <strong>Tip:</strong> Visit at sunrise (6:00-7:00 AM) for a peaceful experience. The park has free public restrooms.</p>
 
 <h3>14. Krisna Oleh-Oleh Khas Bali</h3>
-<p>This massive souvenir supermarket is a one-stop shop for Balinese gifts, snacks, and handicrafts at fixed, reasonable prices (no haggling needed). It sells everything from batik shirts and wooden statues to coffee, spices, and traditional cakes. The store is extremely popular with tourists for last-minute shopping, with a huge selection of items under IDR 50,000. It also offers shipping services for bulky items.</p>
-<p><strong>Ticket Price:</strong> Free entry. Souvenirs start from IDR 10,000.<br>
+<p>This massive souvenir supermarket is a one-stop shop for Balinese gifts, snacks, and handicrafts at fixed, reasonable prices (no haggling needed). It sells everything from batik shirts and wooden statues to coffee, spices, and traditional cakes. The store is extremely popular with tourists for last-minute shopping, with a huge selection of items under $3 (50 $0 (000 IDR))It also offers shipping services for bulky items.</p>
+<p><strong>Ticket Price:</strong> Free entry. Souvenirs start from $1 (10 $0 (000 IDR))<br>
 <strong>Hours:</strong> 8:00 AM to 10:00 PM daily.<br>
-<strong>How to Get There:</strong> On Jalan Sunset Road, about a 20-minute walk from Kuta Beach. Taxi costs IDR 30,000-50,000.<br>
+<strong>How to Get There:</strong> On Jalan Sunset Road, about a 20-minute walk from Kuta Beach. Taxi costs $2 (30 $0 (000 IDR))-50,000.<br>
 <strong>Tip:</strong> Buy Balinese coffee (Kopi Bali) and peanut brittle (kacang gula) here—they are cheaper than in airport shops.</p>
 
 <h3>15. Trans Studio Mall Kuta</h3>
 <p>This indoor theme park and mall complex offers a range of rides and attractions, including a roller coaster, a 4D cinema, and a large indoor play area for children. The mall also has a bowling alley, a karaoke center, and dozens of restaurants. It is a great option for a rainy day or for families seeking indoor entertainment. In 2026, the park introduced a new virtual reality roller coaster.</p>
-<p><strong>Ticket Price:</strong> Park entry: Adults IDR 250,000, Children IDR 200,000 (online discounts available). Mall entry is free.<br>
+<p><strong>Ticket Price:</strong> Park entry: Adults $16 (250 $0 (000 IDR))Children $13 (200 $0 (000 IDR))(online discounts available). Mall entry is free.<br>
 <strong>Hours:</strong> 10:00 AM to 10:00 PM daily.<br>
-<strong>How to Get There:</strong> On Jalan Gatot Subroto, about 15 minutes from Kuta Beach by taxi (IDR 50,000-70,000).<br>
-<strong>Tip:</strong> Book the "Super Pass" online for IDR 350,000, which includes all rides and a meal voucher.</p>
+<strong>How to Get There:</strong> On Jalan Gatot Subroto, about 15 minutes from Kuta Beach by taxi ($3 (50 $0 (000 IDR))-70,000).<br>
+<strong>Tip:</strong> Book the "Super Pass" online for $22 (350 $0 (000 IDR))which includes all rides and a meal voucher.</p>
 
 <h2>Optimal Itineraries for Kuta</h2>
 
@@ -565,6 +588,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -593,6 +617,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -610,8 +635,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

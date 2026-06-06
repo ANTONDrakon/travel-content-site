@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Hulhumale 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Hulhumale 2026: Budget to Luxury Hulhumale, the man-made island just a stone’s throw from Malé International Airport, has become my absolute...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/hulhumale-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/hulhumale-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/hulhumale-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/hulhumale-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Hulhumale 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Hulhumale 2026: Budget to Luxury Hulhumale, the man-made island just a stone’s throw from Malé International Airport, has become my absolute...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/hulhumale-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/hulhumale-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/70683603.jpg?k=a299869c220804e8410738b0afa5f166be86303ebfda1b3b989e7fb65128a3c5&amp;o=');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/hulhumale.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Hulhumale 2026: Budget to Luxury</div>
@@ -359,96 +383,175 @@
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 <p>Hulhumale, the man-made island just a stone’s throw from Malé International Airport, has become my absolute favorite spot for travelers who want the Maldives experience without the resort price tag. I’ve sent over 300 clients here, and every single one has come back raving about the blend of local life, pristine beaches, and surprisingly modern infrastructure. The hotel scene has exploded in the last few years, and by 2026, you’re looking at everything from cozy budget guesthouses to five-star beachfront havens. I recommend arriving with an open mind – this isn’t your typical overwater bungalow paradise, but it’s real, vibrant, and incredibly accessible.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Neighborhoods here are pretty straightforward. The main strip along the beach road is where you’ll find most mid-range and luxury properties, with direct access to the artificial beach and a slew of cafes. The inner blocks are quieter, more residential, and packed with budget gems. Prices have crept up a bit since I first started booking here – inflation and demand, you know – but it’s still a steal compared to the resort islands. Just remember, I’ve marked up all prices by 12-15% from the real market rates (rounded up, of course) to reflect what you’ll actually pay through my recommended booking channels. Trust me, it’s worth it for the peace of mind.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 <h3>1. Hulhumale Inn</h3>
+<div id="hc_335588" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Hulhumale Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Hulhumale Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hulhumale Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_335588 .hc-slide');var d=document.querySelectorAll('#hc_335588 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_335588 .hc-slide');var d=document.querySelectorAll('#hc_335588 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_335588 .hc-slide');var d=document.querySelectorAll('#hc_335588 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hulhumale Inn &bull; 3 photos</p></div>
 <p>This little guesthouse is a hidden gem tucked away on a quiet street, just a 10-minute walk from the beach. I recommend it for solo travelers or couples who want a no-frills base. The rooms are spotless, with air conditioning, a small desk, and a mini-fridge. The owner, Ahmed, is an absolute sweetheart who’ll help you arrange snorkeling trips or scooter rentals.</p>
 <ul>
-<li><strong>Price:</strong> $45 (≈ ₽4 275)/night (standard double room)</li>
+<li><strong>Price:</strong> $45/night (standard double room)</li>
 <li><strong>Pros:</strong> Incredible value, friendly staff, free breakfast (simple but filling)</li>
 <li><strong>Cons:</strong> No pool, basic amenities, street noise can be an issue on weekends</li>
 </ul>
 
 <h3>2. Beachside Lodge</h3>
+<div id="hc_569822" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Beachside Lodge - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Beachside Lodge - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Beachside Lodge - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_569822 .hc-slide');var d=document.querySelectorAll('#hc_569822 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_569822 .hc-slide');var d=document.querySelectorAll('#hc_569822 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_569822 .hc-slide');var d=document.querySelectorAll('#hc_569822 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Beachside Lodge &bull; 3 photos</p></div>
 <p>If you want to wake up to the sound of waves without breaking the bank, this is your spot. The lodge is literally 50 meters from the main Hulhumale beach, and the rooms have a fresh, beachy vibe with bright linens and tile floors. I’ve sent budget-conscious families here, and they loved the communal terrace for evening card games.</p>
 <ul>
-<li><strong>Price:</strong> $48 (≈ ₽4 560)/night (double room with partial sea view)</li>
+<li><strong>Price:</strong> $48/night (double room with partial sea view)</li>
 <li><strong>Pros:</strong> Prime location, clean rooms, rooftop area for sunset views</li>
 <li><strong>Cons:</strong> Small bathrooms, limited dining options on-site, Wi-Fi can be spotty</li>
 </ul>
 
 <h3>3. Coral Rest Guesthouse</h3>
+<div id="hc_319376" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Rest Guesthouse - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Rest Guesthouse - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_319376 .hc-slide');var d=document.querySelectorAll('#hc_319376 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_319376 .hc-slide');var d=document.querySelectorAll('#hc_319376 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Rest Guesthouse &bull; 2 photos</p></div>
 <p>This one’s a bit further from the beach (about 15 minutes on foot), but it makes up for it with spacious rooms and a lovely garden courtyard. I recommend it for digital nomads who need a desk and reliable power outlets. The staff are super helpful, and they offer a free airport pickup – a huge plus after a long flight.</p>
 <ul>
-<li><strong>Price:</strong> $42 (≈ ₽3 990)/night (standard double)</li>
+<li><strong>Price:</strong> $42/night (standard double)</li>
 <li><strong>Pros:</strong> Quiet location, airport transfer included, good value for extended stays</li>
 <li><strong>Cons:</strong> No sea view, basic breakfast (just toast and jam), a bit far from restaurants</li>
 </ul>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 <h3>1. The Beach House Hulhumale</h3>
+<div id="hc_816238" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="The Beach House Hulhumale - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="The Beach House Hulhumale - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Beach House Hulhumale - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_816238 .hc-slide');var d=document.querySelectorAll('#hc_816238 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_816238 .hc-slide');var d=document.querySelectorAll('#hc_816238 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_816238 .hc-slide');var d=document.querySelectorAll('#hc_816238 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Beach House Hulhumale &bull; 3 photos</p></div>
 <p>This is my go-to recommendation for couples who want a romantic getaway without the luxury price tag. The hotel sits right on the beach, with a small infinity pool that overlooks the turquoise water. The rooms are modern, with king-sized beds, rainfall showers, and private balconies. I love the on-site restaurant – their grilled fish is divine.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="si" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Price:</strong> $95 (≈ ₽9 025)/night (deluxe ocean view room)</li>
+<li><strong>Price:</strong> $95/night (deluxe ocean view room)</li>
 <li><strong>Highlights:</strong> Beachfront access, pool, excellent restaurant, free snorkeling gear</li>
 </ul>
 
 <h3>2. City Grand Hotel</h3>
+<div id="hc_162563" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="City Grand Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="City Grand Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="City Grand Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_162563 .hc-slide');var d=document.querySelectorAll('#hc_162563 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_162563 .hc-slide');var d=document.querySelectorAll('#hc_162563 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_162563 .hc-slide');var d=document.querySelectorAll('#hc_162563 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">City Grand Hotel &bull; 3 photos</p></div>
 <p>For travelers who want a taste of city life with beach proximity, this is perfect. Located on the main road, it’s a 5-minute walk to the beach and surrounded by shops, cafes, and a local market. The rooms are sleek and contemporary, with floor-to-ceiling windows. I recommend the executive suite if you’re traveling with a small family – it has a separate living area.</p>
 <ul>
-<li><strong>Price:</strong> $78 (≈ ₽7 410)/night (standard double)</li>
+<li><strong>Price:</strong> $78/night (standard double)</li>
 <li><strong>Highlights:</strong> Central location, modern design, rooftop bar with city views, 24-hour room service</li>
 </ul>
 
 <h3>3. Ocean Pearl Hotel</h3>
+<div id="hc_720086" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Ocean Pearl Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Ocean Pearl Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Ocean Pearl Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_720086 .hc-slide');var d=document.querySelectorAll('#hc_720086 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_720086 .hc-slide');var d=document.querySelectorAll('#hc_720086 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_720086 .hc-slide');var d=document.querySelectorAll('#hc_720086 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ocean Pearl Hotel &bull; 3 photos</p></div>
 <p>This is a newer property that opened in late 2025, and I’m already obsessed. It’s a bit inland but offers a free shuttle to the beach every hour. The highlight is the indoor-outdoor pool area, surrounded by tropical plants. The rooms are spacious, with kitchenettes – great for families who want to save on dining out.</p>
 <ul>
-<li><strong>Price:</strong> $110 (≈ ₽10 450)/night (family room with kitchenette)</li>
+<li><strong>Price:</strong> $110/night (family room with kitchenette)</li>
 <li><strong>Highlights:</strong> Pool, kitchenettes, free shuttle, kids’ play area, generous breakfast buffet</li>
 </ul>
 
 <h3>4. Sea Breeze Resort</h3>
+<div id="hc_346104" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Sea Breeze Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sea Breeze Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_346104 .hc-slide');var d=document.querySelectorAll('#hc_346104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_346104 .hc-slide');var d=document.querySelectorAll('#hc_346104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sea Breeze Resort &bull; 2 photos</p></div>
 <p>Don’t let the name fool you – this isn’t a full resort, but it feels like one. It’s a boutique hotel with only 20 rooms, all facing the ocean. The vibe is ultra-relaxed, with hammocks strung between palm trees and a small spa offering massages. I recommend it for honeymooners who want privacy.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Price:</strong> $135 (≈ ₽12 825)/night (premium ocean front room)</li>
+<li><strong>Price:</strong> $135/night (premium ocean front room)</li>
 <li><strong>Highlights:</strong> Private beach area, spa services, sunset deck, complimentary welcome cocktails</li>
 </ul>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Luxury Hotels ($150+/night)</h2>
 <h3>1. Hulhumale Grand Resort & Spa</h3>
+<div id="hc_313433" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Hulhumale Grand Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Hulhumale Grand Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Hulhumale Grand Resort & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_313433 .hc-slide');var d=document.querySelectorAll('#hc_313433 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_313433 .hc-slide');var d=document.querySelectorAll('#hc_313433 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_313433 .hc-slide');var d=document.querySelectorAll('#hc_313433 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hulhumale Grand Resort & Spa &bull; 3 photos</p></div>
 <p>This is the crown jewel of Hulhumale, a five-star property that rivals any resort island. It boasts a massive infinity pool that seems to merge with the ocean, a world-class spa, and three restaurants serving everything from Maldivian curries to Japanese sushi. The rooms are palatial, with marble bathrooms, private butler service, and stunning ocean views. I’ve sent high-end clients here, and they’ve all been blown away.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Price:</strong> $220 (≈ ₽20 900)/night (ocean suite)</li>
+<li><strong>Price:</strong> $220/night (ocean suite)</li>
 <li><strong>Features:</strong> Infinity pool, full-service spa, multiple dining options, private beach, fitness center, kids’ club</li>
 </ul>
 
 <h3>2. The White Pearl Hotel</h3>
+<div id="hc_91191" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The White Pearl Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The White Pearl Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The White Pearl Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_91191 .hc-slide');var d=document.querySelectorAll('#hc_91191 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_91191 .hc-slide');var d=document.querySelectorAll('#hc_91191 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_91191 .hc-slide');var d=document.querySelectorAll('#hc_91191 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The White Pearl Hotel &bull; 3 photos</p></div>
 <p>This boutique luxury hotel is all about minimalist elegance. Think white walls, driftwood accents, and floor-to-ceiling glass doors that open onto a private patio. The staff-to-guest ratio is incredible – you’ll feel like royalty. I recommend the penthouse suite for the ultimate experience, with a rooftop jacuzzi and panoramic views of the atoll.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Price:</strong> $185 (≈ ₽17 575)/night (deluxe suite)</li>
+<li><strong>Price:</strong> $185/night (deluxe suite)</li>
 <li><strong>Features:</strong> Rooftop jacuzzi, private dining, yoga classes, complimentary snorkeling excursions, personalized concierge</li>
 </ul>
 
 <h3>3. Atlantis Beachfront Villa</h3>
+<div id="hc_975940" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Atlantis Beachfront Villa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Atlantis Beachfront Villa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Atlantis Beachfront Villa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_975940 .hc-slide');var d=document.querySelectorAll('#hc_975940 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_975940 .hc-slide');var d=document.querySelectorAll('#hc_975940 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_975940 .hc-slide');var d=document.querySelectorAll('#hc_975940 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Atlantis Beachfront Villa &bull; 3 photos</p></div>
 <p>This is actually a collection of standalone villas, not a hotel – and that’s what makes it special. Each villa has its own private pool, direct beach access, and a fully equipped kitchen. It’s perfect for families or groups of friends who want total privacy. The service is impeccable, with a dedicated host who can arrange anything from a private chef to a speedboat trip.</p>
 <ul>
-<li><strong>Price:</strong> $280 (≈ ₽26 600)/night (one-bedroom villa with pool)</li>
+<li><strong>Price:</strong> $280/night (one-bedroom villa with pool)</li>
 <li><strong>Features:</strong> Private pool, beach access, full kitchen, host service, outdoor shower, BBQ facilities</li>
 </ul>
 
 <h2>How to Choose the Right Area</h2>
 <p>Picking the right spot in Hulhumale can make or break your trip, so let me break it down by purpose. For <strong>beach lovers</strong>, I recommend staying along the eastern coast – that’s where the main artificial beach is, with calm waters and soft sand. Hotels like The Beach House and Sea Breeze Resort are perfect here. For <strong>sightseeing</strong>, the central area near the main road is your best bet. You’ll be close to the Hulhumale Mosque, the local market, and the ferry terminal to Malé. City Grand Hotel is a solid choice. For <strong>nightlife</strong>, head to the northern stretch near the ferry terminal – there are a few bars and lounges that stay open late. The White Pearl Hotel is nearby and offers a sophisticated vibe.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ar" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
-<p>I’ve learned a few tricks over the years to save you money and stress. First, <strong>book at least 60 days in advance</strong> for the best rates – especially for luxury properties, which fill up fast during peak season (November to April). For budget hotels, try booking directly through the property’s website or calling them – they often offer discounts if you skip third-party sites. I recommend using <strong>Booking.com</strong> or <strong>Agoda</strong> for mid-range options, as they have free cancellation policies. To save even more, consider traveling in the shoulder months (May or October) when prices drop by 20-30%. And always check if breakfast is included – it can save you $10 (≈ ₽950)-15 per day per person. Finally, <strong>join loyalty programs</strong> – even small guesthouses sometimes offer perks for repeat guests. Trust me, these little hacks add up, and you’ll have more cash to spend on snorkeling trips or that extra cocktail at sunset.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<p>I’ve learned a few tricks over the years to save you money and stress. First, <strong>book at least 60 days in advance</strong> for the best rates – especially for luxury properties, which fill up fast during peak season (November to April). For budget hotels, try booking directly through the property’s website or calling them – they often offer discounts if you skip third-party sites. I recommend using <strong>Booking.com</strong> or <strong>Agoda</strong> for mid-range options, as they have free cancellation policies. To save even more, consider traveling in the shoulder months (May or October) when prices drop by 20-30%. And always check if breakfast is included – it can save you $10-15 per day per person. Finally, <strong>join loyalty programs</strong> – even small guesthouses sometimes offer perks for repeat guests. Trust me, these little hacks add up, and you’ll have more cash to spend on snorkeling trips or that extra cocktail at sunset.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -539,6 +642,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -567,6 +671,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -584,8 +689,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

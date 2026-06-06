@@ -7,8 +7,8 @@
     <meta name="description" content="Что посмотреть в Убуд: 15 лучших мест 2026 Убуд, расположенный в центральной части Бали, является культурным и духовным сердцем острова. В отличие от шумных ...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-dostoprimechatelnosti.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-things-to-do.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-things-to-do.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-dostoprimechatelnosti.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Что посмотреть в Убуд: 15 лучших мест 2026">
     <meta property="og:description" content="Что посмотреть в Убуд: 15 лучших мест 2026 Убуд, расположенный в центральной части Бали, является культурным и духовным сердцем острова. В отличие от шумных ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-dostoprimechatelnosti.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/ubud-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ubud.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Что посмотреть в Убуд: 15 лучших мест 2026</div>
@@ -362,30 +386,29 @@
 <p>Убуд, расположенный в центральной части Бали, является культурным и духовным сердцем острова. В отличие от шумных пляжных курортов, Убуд предлагает путешественникам погружение в традиционную балийскую жизнь, окружённую террасными рисовыми полями, тропическими лесами и древними храмами. В 2026 году этот город продолжает привлекать миллионы туристов благодаря уникальному сочетанию природы, искусства и архитектуры. Здесь каждый найдёт что-то для себя: от медитации в храмах до треккинга к водопадам. В этой статье мы собрали 15 лучших достопримечательностей, которые обязательно стоит включить в свой маршрут.</p>
 
 <h2>15 лучших достопримечательностей</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Священный Лес Обезьян (Monkey Forest Ubud)</h3>
 <p>Этот заповедник площадью 12,5 гектаров является домом для более чем 700 длиннохвостых макак. Лес считается священным местом, где расположены три древних храма, построенных в XIV веке. Прогуливаясь по тенистым аллеям, вы увидите каменные статуи, покрытые мхом, и услышите звуки тропических птиц. Обезьяны здесь привыкли к людям, но не стоит кормить их с рук без разрешения смотрителей.</p>
 <ul>
-<li><strong>Цена билета:</strong> 80 000 IDR (взрослый), 60 000 IDR (детский).</li>
+<li><strong>Цена билета:</strong>₽480 (80 ₽0 (000 IDR)) (взрослый)₽360 (60 ₽0 (000 IDR)) (детский).</li>
 <li><strong>Часы работы:</strong> 08:30–18:00 ежедневно.</li>
-<li><strong>Как добраться:</strong> Пешком из центра Убуда (15 минут). На такси от рынка Убуд — 20 000 IDR.</li>
+<li><strong>Как добраться:</strong> Пешком из центра Убуда (15 минут). На такси от рынка Убуд —₽120 (20 ₽0 (000 IDR)).</li>
 <li><strong>Совет:</strong> Приходите рано утром, чтобы избежать толп и увидеть кормление обезьян в 09:00.</li>
 </ul>
 
 <h3>2. Рисовые террасы Тегаллаланг (Tegalalang Rice Terrace)</h3>
 <p>Одни из самых живописных рисовых террас на Бали, расположенные в 20 минутах езды от Убуда. Система ирригации субак, используемая здесь с IX века, признана объектом Всемирного наследия ЮНЕСКО. Зелёные каскады спускаются по склонам холмов, создавая идеальные условия для фотографий. В 2026 году здесь установлены новые смотровые площадки с бамбуковыми качелями.</p>
 <ul>
-<li><strong>Цена билета:</strong> 50 000 IDR (вход на террасы), качели — 150 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽300 (50 ₽0 (000 IDR)) (вход на террасы), качели —₽900 (150 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 06:00–18:00.</li>
-<li><strong>Как добраться:</strong> На арендованном скутере (30 минут) или такси (от 100 000 IDR).</li>
+<li><strong>Как добраться:</strong> На арендованном скутере (30 минут) или такси (от₽600 (100 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Посетите террасы на закате, когда освещение наиболее мягкое.</li>
 </ul>
 
 <h3>3. Храм Гунунг Кави (Gunung Kawi Temple)</h3>
 <p>Древний храмовый комплекс, высеченный в скале в XI веке в честь короля Анака Вунгсу. Вдоль реки Пачеран расположены 10 метровых ниш с рельефами, напоминающими могильные стелы. Чтобы попасть к храму, нужно спуститься по 300 ступеням через рисовые поля. Археологи до сих пор спорят о точном назначении этого места, но оно остаётся важным центром поклонения.</p>
 <ul>
-<li><strong>Цена билета:</strong> 50 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽300 (50 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 07:00–17:00.</li>
 <li><strong>Как добраться:</strong> 15 минут на скутере из центра Убуда.</li>
 <li><strong>Совет:</strong> Возьмите с собой воду — спуск и подъём по лестнице требуют физической подготовки.</li>
@@ -394,7 +417,7 @@
 <h3>4. Королевский дворец Убуд (Puri Saren Agung)</h3>
 <p>Историческая резиденция королевской семьи Убуда, построенная в XIX веке. Дворец сочетает традиционную балийскую архитектуру с изысканной резьбой по камню. Внутренний двор украшен статуями и прудами с лотосами. Каждый вечер здесь проходят представления традиционного танца легонг, которые длятся около 1,5 часов.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно (вход во дворец), танцевальное шоу — 100 000 IDR.</li>
+<li><strong>Цена билета:</strong> Бесплатно (вход во дворец), танцевальное шоу —₽600 (100 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 08:00–19:00 (дворец), шоу — 19:30–21:00.</li>
 <li><strong>Как добраться:</strong> В центре Убуда, напротив рынка.</li>
 <li><strong>Совет:</strong> Приходите на шоу за 30 минут, чтобы занять места в первом ряду.</li>
@@ -403,16 +426,16 @@
 <h3>5. Храм Таман Аюн (Pura Taman Ayun)</h3>
 <p>Королевский храм династии Менгви, построенный в 1634 году. Комплекс окружён рвом с водой, что символизирует мифический океан. Внутри находятся 33 святилища, посвящённых разным божествам. В 2026 году храм был отреставрирован, и теперь туристы могут подниматься на центральную платформу для панорамных видов.</p>
 <ul>
-<li><strong>Цена билета:</strong> 30 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽180 (30 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 08:00–18:00.</li>
-<li><strong>Как добраться:</strong> 30 минут на такси из Убуда (около 150 000 IDR).</li>
+<li><strong>Как добраться:</strong> 30 минут на такси из Убуда (около₽900 (150 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Сочетайте посещение с поездкой к водопаду Гит-Гит (20 минут езды).</li>
 </ul>
 
 <h3>6. Водопад Тегенунган (Tegenungan Waterfall)</h3>
 <p>Один из самых доступных водопадов на Бали, высотой 15 метров. Он расположен в джунглях, и чтобы добраться до него, нужно спуститься по лестнице из 200 ступеней. Внизу есть естественная купальня, где можно освежиться. В 2026 году установлены новые мостики и зоны отдыха с кафе.</p>
 <ul>
-<li><strong>Цена билета:</strong> 20 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽120 (20 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 06:30–18:00.</li>
 <li><strong>Как добраться:</strong> 25 минут на скутере из Убуда (через деревню Кесари).</li>
 <li><strong>Совет:</strong> Берите сменную одежду — вода прохладная (около 22°C).</li>
@@ -421,18 +444,18 @@
 <h3>7. Искусство в Убуд (Museum Puri Lukisan)</h3>
 <p>Первый музей искусства на Бали, основанный в 1954 году. В коллекции представлены работы балийских художников XX века, включая картины, скульптуры и батик. Музей расположен в трёх павильонах среди сада с орхидеями. В 2026 году открыта новая выставка, посвящённая современному балийскому искусству.</p>
 <ul>
-<li><strong>Цена билета:</strong> 75 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽450 (75 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 09:00–17:00 (выходной — воскресенье).</li>
 <li><strong>Как добраться:</strong> Пешком от центра (10 минут).</li>
-<li><strong>Совет:</strong> Купите комбо-билет за 120 000 IDR, включающий вход в музей Некка.</li>
+<li><strong>Совет:</strong> Купите комбо-билет за₽720 (120 ₽0 (000 IDR)), включающий вход в музей Некка.</li>
 </ul>
 
 <h3>8. Слоновья пещера (Goa Gajah)</h3>
 <p>Археологический комплекс, датируемый IX веком, с пещерой, вход в которую украшен резьбой в виде демонических лиц. Внутри находятся лингам и йони — символы Шивы и Парвати. Рядом расположены купальни с фонтанами в виде женских фигур. В 2026 году проведены раскопки, открывшие новые подземные ходы.</p>
 <ul>
-<li><strong>Цена билета:</strong> 50 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽300 (50 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 08:00–17:00.</li>
-<li><strong>Как добраться:</strong> 10 минут на такси от Убуда (50 000 IDR).</li>
+<li><strong>Как добраться:</strong> 10 минут на такси от Убуда (₽300 (50 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Носите длинные брюки и закрытую обувь для посещения храмов.</li>
 </ul>
 
@@ -448,16 +471,16 @@
 <h3>10. Храм Бесаких (Pura Besakih)</h3>
 <p>Самый большой и священный храм на Бали, расположенный на склоне вулкана Агунг на высоте 1000 метров. Комплекс состоит из 23 отдельных храмов, построенных в X–XV веках. В 2026 году проведена реставрация главной пагоды, и теперь туристы могут подниматься на второй уровень. Храм считается "материнским" для всех балийских храмов.</p>
 <ul>
-<li><strong>Цена билета:</strong> 60 000 IDR (вход), 100 000 IDR (парковка).</li>
+<li><strong>Цена билета:</strong>₽360 (60 ₽0 (000 IDR)) (вход)₽600 (100 ₽0 (000 IDR)) (парковка).</li>
 <li><strong>Часы работы:</strong> 08:00–17:00.</li>
-<li><strong>Как добраться:</strong> 1,5 часа на такси из Убуда (около 300 000 IDR).</li>
-<li><strong>Совет:</strong> Нанимайте местного гида (50 000 IDR) для объяснения символики храмов.</li>
+<li><strong>Как добраться:</strong> 1,5 часа на такси из Убуда (около₽1 800 (300 ₽0 (000 IDR))).</li>
+<li><strong>Совет:</strong> Нанимайте местного гида (₽300 (50 ₽0 (000 IDR))) для объяснения символики храмов.</li>
 </ul>
 
 <h3>11. Водопад Кандинг (Kanto Lampo Waterfall)</h3>
 <p>Небольшой, но живописный водопад высотой 10 метров, расположенный в 30 минутах от Убуда. Вода падает по каменным уступам, создавая естественные бассейны. В 2026 году установлены перила для безопасности и зона для переодевания. Водопад окружён густым лесом, где можно встретить обезьян.</p>
 <ul>
-<li><strong>Цена билета:</strong> 15 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽90 (15 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 07:00–18:00.</li>
 <li><strong>Как добраться:</strong> 30 минут на скутере (через деревню Бангли).</li>
 <li><strong>Совет:</strong> Приходите в будни, чтобы избежать очередей.</li>
@@ -475,28 +498,28 @@
 <h3>13. Музей Некка (Neka Art Museum)</h3>
 <p>Музей, основанный в 1982 году коллекционером Сутеджи Некка, содержит более 3000 экспонатов балийского и индонезийского искусства. Экспозиция разделена на 6 павильонов, включая работы художников из Западной и Восточной Индонезии. В 2026 году открыт новый зал с фотографиями Бали 1930-х годов.</p>
 <ul>
-<li><strong>Цена билета:</strong> 75 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽450 (75 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 09:00–17:00 (выходной — понедельник).</li>
-<li><strong>Как добраться:</strong> 10 минут на такси из центра (30 000 IDR).</li>
+<li><strong>Как добраться:</strong> 10 минут на такси из центра (₽180 (30 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Возьмите аудиогид (бесплатно) для глубокого понимания экспонатов.</li>
 </ul>
 
 <h3>14. Храм Улун Дану Братан (Ulun Danu Beratan Temple)</h3>
 <p>Храм на берегу озера Братан, построенный в 1663 году в честь богини воды Деви Дану. Здание частично стоит на сваях, что создаёт иллюзию плавания по воде. В 2026 году храм подсвечивается по вечерам, создавая романтическую атмосферу. Это одно из самых фотографируемых мест на Бали.</p>
 <ul>
-<li><strong>Цена билета:</strong> 50 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽300 (50 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 07:00–19:00.</li>
-<li><strong>Как добраться:</strong> 1,5 часа на такси из Убуда (около 250 000 IDR).</li>
+<li><strong>Как добраться:</strong> 1,5 часа на такси из Убуда (около₽1 500 (250 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Приезжайте до 09:00, чтобы застать храм без толп.</li>
 </ul>
 
 <h3>15. Террасы риса Джатилувих (Jatiluwih Rice Terrace)</h3>
 <p>Рисовые террасы, признанные ЮНЕСКО, занимают площадь 600 гектаров. В отличие от Тегаллаланга, здесь меньше туристов и более дикая природа. Система субак поддерживается местными фермерами с X века. В 2026 году проложен новый велосипедный маршрут длиной 10 км.</p>
 <ul>
-<li><strong>Цена билета:</strong> 40 000 IDR.</li>
+<li><strong>Цена билета:</strong>₽240 (40 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> 07:00–18:00.</li>
-<li><strong>Как добраться:</strong> 1 час на такси из Убуда (около 200 000 IDR).</li>
-<li><strong>Совет:</strong> Арендуйте велосипед (50 000 IDR) для полного погружения.</li>
+<li><strong>Как добраться:</strong> 1 час на такси из Убуда (около₽1 200 (200 ₽0 (000 IDR))).</li>
+<li><strong>Совет:</strong> Арендуйте велосипед (₽300 (50 ₽0 (000 IDR))) для полного погружения.</li>
 </ul>
 
 <h2>Маршруты на 1, 2 и 3 дня</h2>
@@ -587,6 +610,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -615,6 +639,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -632,8 +657,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

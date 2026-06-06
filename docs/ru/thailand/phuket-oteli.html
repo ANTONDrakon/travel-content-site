@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Пхукет 2026: от бюджета до люкса Пхукет, крупнейший остров Таиланда, ежегодно привлекает более 10 миллионов туристов. Его гостиничная инфраст...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/phuket-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/phuket-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Пхукет 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Пхукет 2026: от бюджета до люкса Пхукет, крупнейший остров Таиланда, ежегодно привлекает более 10 миллионов туристов. Его гостиничная инфраст...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/phuket-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/phuket-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/phuket.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Пхукет 2026: от бюджета до люкса</div>
@@ -358,55 +382,132 @@
 
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
-<p>Пхукет, крупнейший остров Таиланда, ежегодно привлекает более 10 миллионов туристов. Его гостиничная инфраструктура — одна из самых развитых в Юго-Восточной Азии: здесь насчитывается свыше 5 000 отелей, гостевых домов и вилл. Районы острова кардинально различаются по атмосфере: от шумного Патонга с его ночной жизнью до спокойного Каты с семейными пляжами. Цены на проживание в 2026 году варьируются от ₽1 900 (≈ $20) за ночь в бюджетном гестхаусе до ₽190 (≈ $2) 000 в пятизвездочном резорте.</p>
+<p>Пхукет, крупнейший остров Таиланда, ежегодно привлекает более 10 миллионов туристов. Его гостиничная инфраструктура — одна из самых развитых в Юго-Восточной Азии: здесь насчитывается свыше 5 000 отелей, гостевых домов и вилл. Районы острова кардинально различаются по атмосфере: от шумного Патонга с его ночной жизнью до спокойного Каты с семейными пляжами. Цены на проживание в 2026 году варьируются от ₽1 900 ($20)за ночь в бюджетном гестхаусе до ₽190 000 ($2 000)в пятизвездочном резорте.</p>
 <p>Средняя стоимость номера в высокий сезон (ноябрь–апрель) выросла на 8% по сравнению с 2023 годом, но Пхукет остается доступнее Мальдив или Сейшел. В этой статье вы найдете 10 проверенных отелей на любой кошелек, а также практические советы по выбору района и бронированию. Все цены указаны в долларах США за ночь в стандартном номере (двухместное размещение) на январь 2026 года.</p>
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 <h3>1. Baan Laimai Beach Resort (Патонг)</h3>
-<p>Расположенный прямо на пляже Патонг, этот отель предлагает номера от ₽4 275 (≈ $45) за ночь. Комнаты простые, но чистые, с кондиционером и мини-баром. Главный плюс — выход к морю и близость к Bangla Road (3 минуты пешком). Минус — шум от уличных баров слышен до 2 часов ночи. Бассейн небольшой, но есть зона для загара. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>: 7.8.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Цены: стандартный номер — ₽4 275 (≈ $45 ) семейный номер — ₽6 175 (≈ $65.) Завтрак включен только при бронировании напрямую. Идеально для тех, кто хочет быть в центре тусовок, но не планирует проводить много времени в номере.</p>
+<div id="hc_647948" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Baan Laimai Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Baan Laimai Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_647948 .hc-slide');var d=document.querySelectorAll('#hc_647948 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_647948 .hc-slide');var d=document.querySelectorAll('#hc_647948 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Baan Laimai Beach Resort &bull; 2 photos</p></div>
+<p>Расположенный прямо на пляже Патонг, этот отель предлагает номера от ₽4 275 ($45)за ночь. Комнаты простые, но чистые, с кондиционером и мини-баром. Главный плюс — выход к морю и близость к Bangla Road (3 минуты пешком). Минус — шум от уличных баров слышен до 2 часов ночи. Бассейн небольшой, но есть зона для загара. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>: 7.8.</p>
+<p>Цены: стандартный номер — ₽4 275 ($45)семейный номер — ₽6 175 ($65)Завтрак включен только при бронировании напрямую. Идеально для тех, кто хочет быть в центре тусовок, но не планирует проводить много времени в номере.</p>
 <h3>2. The Sixteenth Naiyang Beach Hotel (Най Янг)</h3>
-<p>Уютный бутик-отель в 10 минутах от аэропорта. Номера от ₽3 325 (≈ $35) за ночь. Отель окружен тропическим садом, есть открытый бассейн и бесплатный трансфер до пляжа Най Янг (1 км). Плюсы: тишина, близость к аэропорту, отличный завтрак (омлет, фрукты, тосты). Минусы: пляж не подходит для купания из-за отливов, рядом нет крупных магазинов. Рейтинг: 8.5.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Цены: стандартный номер — ₽3 325 (≈ $35 ) номер с балконом — ₽3 990 (≈ $42.) Подходит для транзитных туристов или тех, кто ищет уединение.</p>
+<div id="hc_241859" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="The Sixteenth Naiyang Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="The Sixteenth Naiyang Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Sixteenth Naiyang Beach Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_241859 .hc-slide');var d=document.querySelectorAll('#hc_241859 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_241859 .hc-slide');var d=document.querySelectorAll('#hc_241859 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_241859 .hc-slide');var d=document.querySelectorAll('#hc_241859 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Sixteenth Naiyang Beach Hotel &bull; 3 photos</p></div>
+<p>Уютный бутик-отель в 10 минутах от аэропорта. Номера от ₽3 325 ($35)за ночь. Отель окружен тропическим садом, есть открытый бассейн и бесплатный трансфер до пляжа Най Янг (1 км). Плюсы: тишина, близость к аэропорту, отличный завтрак (омлет, фрукты, тосты). Минусы: пляж не подходит для купания из-за отливов, рядом нет крупных магазинов. Рейтинг: 8.5.</p>
+<p>Цены: стандартный номер — ₽3 325 ($35)номер с балконом — ₽3 990 ($42)Подходит для транзитных туристов или тех, кто ищет уединение.</p>
 <h3>3. The Bliss Hotel (Карон)</h3>
-<p>Небольшой отель в 200 метрах от пляжа Карон. Номера от ₽2 850 (≈ $30) за ночь. В каждом номере — холодильник, сейф, телевизор. Плюсы: дружелюбный персонал, бесплатные велосипеды, близость к рынку Карон (5 минут). Минусы: нет бассейна, мебель устаревшая, Wi-Fi слабый в дальних номерах. Рейтинг: 7.2.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Цены: стандартный номер — ₽2 850 (≈ $30 ) улучшенный — ₽3 800 (≈ $40.) Лучший вариант для экономных путешественников, которые ценят расположение.</p>
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<div id="hc_879425" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Bliss Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Bliss Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Bliss Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_879425 .hc-slide');var d=document.querySelectorAll('#hc_879425 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_879425 .hc-slide');var d=document.querySelectorAll('#hc_879425 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_879425 .hc-slide');var d=document.querySelectorAll('#hc_879425 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Bliss Hotel &bull; 3 photos</p></div>
+<p>Небольшой отель в 200 метрах от пляжа Карон. Номера от ₽2 850 ($30)за ночь. В каждом номере — холодильник, сейф, телевизор. Плюсы: дружелюбный персонал, бесплатные велосипеды, близость к рынку Карон (5 минут). Минусы: нет бассейна, мебель устаревшая, Wi-Fi слабый в дальних номерах. Рейтинг: 7.2.</p>
+<p>Цены: стандартный номер — ₽2 850 ($30)улучшенный — ₽3 800 ($40)Лучший вариант для экономных путешественников, которые ценят расположение.</p>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 <h3>4. Kata Beach Resort & Spa (Ката)</h3>
-<p>Четырехзвездочный курорт на берегу залива Ката. Номера от ₽8 550 (≈ $90) за ночь. Отель занимает 5 гектаров тропического сада, имеет три бассейна, спа-центр и ресторан тайской кухни. Фишка: прямой выход на пляж через частную дорожку. Номера просторные (от 35 м²), с деревянной мебелью и ванной. Рейтинг: 8.7.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="за" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Цены: стандартный номер — ₽8 550 (≈ $90 ) номер с видом на море — ₽11 400 (≈ $120.) Завтрак «шведский стол» включен. Подходит для пар и семей с детьми.</p>
+<div id="hc_483927" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Kata Beach Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Kata Beach Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Kata Beach Resort & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_483927 .hc-slide');var d=document.querySelectorAll('#hc_483927 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_483927 .hc-slide');var d=document.querySelectorAll('#hc_483927 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_483927 .hc-slide');var d=document.querySelectorAll('#hc_483927 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kata Beach Resort & Spa &bull; 3 photos</p></div>
+<p>Четырехзвездочный курорт на берегу залива Ката. Номера от ₽8 550 ($90)за ночь. Отель занимает 5 гектаров тропического сада, имеет три бассейна, спа-центр и ресторан тайской кухни. Фишка: прямой выход на пляж через частную дорожку. Номера просторные (от 35 м²), с деревянной мебелью и ванной. Рейтинг: 8.7.</p>
+<p>Цены: стандартный номер — ₽8 550 ($90)номер с видом на море — ₽11 400 ($120)Завтрак «шведский стол» включен. Подходит для пар и семей с детьми.</p>
 <h3>5. The Mangrove Hotel (Пхукет-таун)</h3>
-<p>Дизайнерский отель в старом городе. Номера от ₽6 175 (≈ $65) за ночь. Интерьер сочетает китайские и португальские мотивы: кованые кровати, изразцы, деревянные ставни. Фишка: бесплатный велосипед для каждого гостя и экскурсия по историческому кварталу по субботам. Рейтинг: 8.9.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Цены: стандартный номер — ₽6 175 (≈ $65 ) люкс — ₽9 025 (≈ $95.) Ресторан отеля подает блюда фьюжн (средний чек ₽1 425 (≈ $15)). Идеально для любителей культуры и архитектуры.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_220083" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Mangrove Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Mangrove Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Mangrove Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_220083 .hc-slide');var d=document.querySelectorAll('#hc_220083 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_220083 .hc-slide');var d=document.querySelectorAll('#hc_220083 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_220083 .hc-slide');var d=document.querySelectorAll('#hc_220083 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Mangrove Hotel &bull; 3 photos</p></div>
+<p>Дизайнерский отель в старом городе. Номера от ₽6 175 ($65)за ночь. Интерьер сочетает китайские и португальские мотивы: кованые кровати, изразцы, деревянные ставни. Фишка: бесплатный велосипед для каждого гостя и экскурсия по историческому кварталу по субботам. Рейтинг: 8.9.</p>
+<p>Цены: стандартный номер — ₽6 175 ($65)люкс — ₽9 025 ($95)Ресторан отеля подает блюда фьюжн (средний чек ₽1 425 ($15)). Идеально для любителей культуры и архитектуры.</p>
 <h3>6. Amari Phuket (Патонг)</h3>
-<p>Крупный курорт на скалистом мысе в южной части Патонга. Номера от ₽10 450 (≈ $110) за ночь. Отель имеет частный пляж, четыре бассейна, спа и несколько ресторанов. Фишка: панорамный вид на Андаманское море из лобби и номеров. Рейтинг: 8.6.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="им" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Цены: стандартный номер — ₽10 450 (≈ $110 ) номер с джакузи — ₽13 775 (≈ $145.) До Bangla Road — 15 минут пешком по пляжу. Подходит для тех, кто хочет быть рядом с тусовкой, но спать в тишине.</p>
+<div id="hc_893267" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Amari Phuket - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Amari Phuket - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_893267 .hc-slide');var d=document.querySelectorAll('#hc_893267 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_893267 .hc-slide');var d=document.querySelectorAll('#hc_893267 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amari Phuket &bull; 2 photos</p></div>
+<p>Крупный курорт на скалистом мысе в южной части Патонга. Номера от ₽10 450 ($110)за ночь. Отель имеет частный пляж, четыре бассейна, спа и несколько ресторанов. Фишка: панорамный вид на Андаманское море из лобби и номеров. Рейтинг: 8.6.</p>
+<p>Цены: стандартный номер — ₽10 450 ($110)номер с джакузи — ₽13 775 ($145)До Bangla Road — 15 минут пешком по пляжу. Подходит для тех, кто хочет быть рядом с тусовкой, но спать в тишине.</p>
 <h3>7. The Shore at Katathani (Ката Ной)</h3>
-<p>Резорт для взрослых (только от 16 лет) на уединенном пляже Ката Ной. Номера от ₽12 350 (≈ $130) за ночь. Все номера — виллы с частными бассейнами. Фишка: шезлонги на пляже с обслуживанием, бесплатный йога-класс по утрам. Рейтинг: 9.1.</p>
-<p>Цены: вилла с бассейном — ₽12 350 (≈ $130 ) президентская вилла — ₽19 000 (≈ $200.) Завтрак включен. Идеально для пар без детей.</p>
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<div id="hc_198091" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Shore at Katathani - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Shore at Katathani - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Shore at Katathani - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_198091 .hc-slide');var d=document.querySelectorAll('#hc_198091 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_198091 .hc-slide');var d=document.querySelectorAll('#hc_198091 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_198091 .hc-slide');var d=document.querySelectorAll('#hc_198091 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Shore at Katathani &bull; 3 photos</p></div>
+<p>Резорт для взрослых (только от 16 лет) на уединенном пляже Ката Ной. Номера от ₽12 350 ($130)за ночь. Все номера — виллы с частными бассейнами. Фишка: шезлонги на пляже с обслуживанием, бесплатный йога-класс по утрам. Рейтинг: 9.1.</p>
+<p>Цены: вилла с бассейном — ₽12 350 ($130)президентская вилла — ₽19 000 ($200)Завтрак включен. Идеально для пар без детей.</p>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 <h3>8. Trisara (Банг Тао)</h3>
-<p>Пятизвездочный курорт, входящий в список Leading Hotels of the World. Номера от ₽33 250 (≈ $350) за ночь. Расположен на 40 акрах тропического леса, имеет частный пляж, спа с хаммамом и ресторан с мишленовским шефом. Особенность: каждая вилла имеет собственный бассейн длиной 15 метров. Рейтинг: 9.4.</p>
-<p>Цены: вилла с бассейном — ₽33 250 (≈ $350 ) двухкомнатная вилла — ₽57 000 (≈ $600.) Услуги: персональный консьерж, трансфер на Mercedes, бесплатный мини-бар. Подходит для миллионеров и медового месяца.</p>
+<div id="hc_99775" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Trisara - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Trisara - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Trisara - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_99775 .hc-slide');var d=document.querySelectorAll('#hc_99775 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_99775 .hc-slide');var d=document.querySelectorAll('#hc_99775 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_99775 .hc-slide');var d=document.querySelectorAll('#hc_99775 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Trisara &bull; 3 photos</p></div>
+<p>Пятизвездочный курорт, входящий в список Leading Hotels of the World. Номера от ₽33 250 ($350)за ночь. Расположен на 40 акрах тропического леса, имеет частный пляж, спа с хаммамом и ресторан с мишленовским шефом. Особенность: каждая вилла имеет собственный бассейн длиной 15 метров. Рейтинг: 9.4.</p>
+<p>Цены: вилла с бассейном — ₽33 250 ($350)двухкомнатная вилла — ₽57 000 ($600)Услуги: персональный консьерж, трансфер на Mercedes, бесплатный мини-бар. Подходит для миллионеров и медового месяца.</p>
 <h3>9. Amanpuri (Панора)</h3>
-<p>Легендарный отель сети Aman, открытый в 1988 году. Номера от ₽76 000 (≈ $800) за ночь. Расположен на мысе Панора, в окружении кокосовых пальм. Особенность: архитектура в стиле тайского храма, частный пляж с белым песком, спа с аюрведическими программами. Рейтинг: 9.7.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="се" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Цены: павильон — ₽76 000 (≈ $800 ) вилла с тремя спальнями — ₽190 (≈ $2) 500. Услуги: частный шеф, яхта для экскурсий, библиотека фильмов. Отель принимает не более 40 гостей одновременно.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_642721" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Amanpuri - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Amanpuri - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Amanpuri - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_642721 .hc-slide');var d=document.querySelectorAll('#hc_642721 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_642721 .hc-slide');var d=document.querySelectorAll('#hc_642721 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_642721 .hc-slide');var d=document.querySelectorAll('#hc_642721 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amanpuri &bull; 3 photos</p></div>
+<p>Легендарный отель сети Aman, открытый в 1988 году. Номера от ₽76 000 ($800)за ночь. Расположен на мысе Панора, в окружении кокосовых пальм. Особенность: архитектура в стиле тайского храма, частный пляж с белым песком, спа с аюрведическими программами. Рейтинг: 9.7.</p>
+<div id="hc_486226" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Aman, открытый в 1988 году. Номера от ₽76 000 - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Aman, открытый в 1988 году. Номера от ₽76 000 - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Aman, открытый в 1988 году. Номера от ₽76 000 - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_486226 .hc-slide');var d=document.querySelectorAll('#hc_486226 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_486226 .hc-slide');var d=document.querySelectorAll('#hc_486226 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_486226 .hc-slide');var d=document.querySelectorAll('#hc_486226 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Aman, открытый в 1988 году. Номера от ₽76 000 &bull; 3 photos</p></div>
+<p>Цены: павильон — ₽76 000 ($800)вилла с тремя спальнями — ₽237 500 ($2 500)Услуги: частный шеф, яхта для экскурсий, библиотека фильмов. Отель принимает не более 40 гостей одновременно.</p>
 <h3>10. Banyan Tree Phuket (Банг Тао)</h3>
-<p>Курорт, известный своими спа-программами и виллами с бассейнами. Номера от ₽23 750 (≈ $250) за ночь. Расположен на лагуне, в 5 минутах от пляжа. Особенность: самый большой спа-центр на Пхукете (10 процедурных кабинетов), ресторан с тайской кухней и видом на закат. Рейтинг: 9.0.</p>
-<p>Цены: вилла с бассейном — ₽23 750 (≈ $250 ) королевская вилла — ₽38 000 (≈ $400.) Включен завтрак и доступ в фитнес-центр. Подходит для пар и корпоративных мероприятий.</p>
+<p>Курорт, известный своими спа-программами и виллами с бассейнами. Номера от ₽23 750 ($250)за ночь. Расположен на лагуне, в 5 минутах от пляжа. Особенность: самый большой спа-центр на Пхукете (10 процедурных кабинетов), ресторан с тайской кухней и видом на закат. Рейтинг: 9.0.</p>
+<p>Цены: вилла с бассейном — ₽23 750 ($250)королевская вилла — ₽38 000 ($400)Включен завтрак и доступ в фитнес-центр. Подходит для пар и корпоративных мероприятий.</p>
 <h2>Как выбрать район</h2>
 <p>Выбор района на Пхукете зависит от цели поездки. Вот три основных сценария:</p>
 <ul>
 <li><strong>Для пляжного отдыха:</strong> выбирайте Кату, Карон или Най Харн. Эти районы славятся чистой водой, мелким песком и спокойным морем. Ката подходит для семей с детьми (мелководье), Карон — для пар (длинная береговая линия), Най Харн — для серферов (волны с мая по октябрь).</li>
-<li><strong>Для экскурсий:</strong> остановитесь в Пхукет-тауне или на восточном побережье (например, в районе Панва). Отсюда удобно добираться до храмов (Ват Чалонг), смотровых площадок (Карон Вьюпоинт) и островов (Корал, Райя). Пхукет-таун предлагает бюджетные гостевые дома от ₽1 900 (≈ $20.)</li>
+<li><strong>Для экскурсий:</strong> остановитесь в Пхукет-тауне или на восточном побережье (например, в районе Панва). Отсюда удобно добираться до храмов (Ват Чалонг), смотровых площадок (Карон Вьюпоинт) и островов (Корал, Райя). Пхукет-таун предлагает бюджетные гостевые дома от ₽1 900 ($20)</li>
 <li><strong>Для ночной жизни:</strong> Патонг — безальтернативный вариант. Здесь сосредоточены бары, клубы и дискотеки. Bangla Road работает до 4 утра. Если хотите тишины, но близости к тусовке, выбирайте отели на севере Патонга (например, Amari Phuket).</li>
 </ul>
 <h2>Советы по бронированию</h2>
@@ -414,9 +515,8 @@
 <ul>
 <li><strong>Когда бронировать:</strong> лучшее время — за 2-3 месяца до поездки. В высокий сезон (декабрь-март) цены взлетают на 30-50%. Если вы путешествуете в низкий сезон (май-октябрь), бронируйте за 2 недели — отели часто снижают цены на 20%.</li>
 <li><strong>Как сэкономить:</strong> используйте агрегаторы (<a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com, <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a>, Expedia) и сравнивайте цены. Некоторые отели предлагают скидки 10-15% при бронировании напрямую через их сайт. Также ищите промокоды на форумах (например, на TripAdvisor).</li>
-<li><strong>Лучшие сервисы:</strong> для бюджетных отелей — Agoda (часто дешевле на ₽475 (≈ $5)-10), для люкса — Booking.com (гибкая отмена). Airbnb подходит для вилл и апартаментов (от ₽3 800 (≈ $40) за ночь).</li>
-<li><strong>Дополнительные советы:</strong> проверяйте отзывы на Google Maps и TripAdvisor. Обращайте внимание на дату последнего отзыва — если отель не обновлялся год, возможны проблемы. Также уточняйте включен ли завтрак: на Пхукете он стоит ₽475 (≈ $5)-10 на человека, но в отелях среднего класса часто бесплатный.</li>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="не" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<li><strong>Лучшие сервисы:</strong> для бюджетных отелей — Agoda (часто дешевле на ₽475 ($5)-10), для люкса — Booking.com (гибкая отмена). Airbnb подходит для вилл и апартаментов (от ₽3 800 ($40)за ночь).</li>
+<li><strong>Дополнительные советы:</strong> проверяйте отзывы на Google Maps и TripAdvisor. Обращайте внимание на дату последнего отзыва — если отель не обновлялся год, возможны проблемы. Также уточняйте включен ли завтрак: на Пхукете он стоит ₽475 ($5)-10 на человека, но в отелях среднего класса часто бесплатный.</li>
 </ul>
 <p>Пхукет — остров, который подходит любому бюджету. От бюджетного блаженства на Кароне до роскоши в Amanpuri — вы всегда найдете вариант, который сделает ваш отпуск незабываемым. Главное — планируйте заранее, и тогда 2026 год станет лучшим временем для путешествия.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
@@ -509,6 +609,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -537,6 +638,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -554,8 +656,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

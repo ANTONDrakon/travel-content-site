@@ -7,6 +7,9 @@
 
 {% block en_alt %}{{ country.slug }}/index.html{% endblock %}
 {% block ru_alt %}{{ country.slug }}/index.html{% endblock %}
+{% set ru_alternate_url = country.slug + "/index.html" %}
+{% set en_alternate_url = country.slug + "/index.html" %}
+{% set canonical = "/" + lang + "/" + country.slug + "/index.html" %}
 
 {% block content %}
 

@@ -7,8 +7,8 @@
     <meta name="description" content="Абу-Даби: полный путеводитель 2026 Абу-Даби — это не просто столица Объединённых Арабских Эмиратов, а город, где традиции бедуинской культуры органично переп...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Абу-Даби: полный путеводитель 2026">
     <meta property="og:description" content="Абу-Даби: полный путеводитель 2026 Абу-Даби — это не просто столица Объединённых Арабских Эмиратов, а город, где традиции бедуинской культуры органично переп...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/abu-dhabi-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://ic.pics.livejournal.com/pantv/14908973/12182338/12182338_original.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/abu-dhabi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Абу-Даби: полный путеводитель 2026</div>
@@ -403,28 +427,28 @@
     <td>2</td>
     <td>Лувр Абу-Даби</td>
     <td>Первый универсальный музей в арабском мире. Знаменит своей «плавающей» крышей диаметром 180 метров. Коллекция включает работы от древности до современности, включая полотна Да Винчи, Моне и Ван Гога.</td>
-    <td>63 AED (взрослый)</td>
+    <td>₽1 631 (63 AED) (взрослый)</td>
     <td>Вт–Вс 10:00–20:00, Пн — выходной</td>
   </tr>
   <tr>
     <td>3</td>
     <td>Ferrari World Abu Dhabi</td>
     <td>Крупнейший в мире крытый тематический парк площадью 86 000 м². Здесь находится самая быстрая в мире горка Formula Rossa (разгон до 240 км/ч за 4.9 секунды).</td>
-    <td>От 295 AED</td>
+    <td>От₽7 640 (295 AED)</td>
     <td>Ежедневно 11:00–20:00</td>
   </tr>
   <tr>
     <td>4</td>
     <td>Warner Bros. World Abu Dhabi</td>
     <td>Огромный крытый парк с персонажами Looney Tunes, DC Comics и Hanna-Barbera. Полностью кондиционируемый, разделён на 6 тематических зон.</td>
-    <td>От 295 AED</td>
+    <td>От₽7 640 (295 AED)</td>
     <td>Ежедневно 10:00–19:00</td>
   </tr>
   <tr>
     <td>5</td>
     <td>Qasr Al Watan (Президентский дворец)</td>
     <td>Величественный дворец, открытый для публики. Внутри можно увидеть зал для приёмов, библиотеку с 50 000 книг и интерактивные выставки об управлении ОАЭ.</td>
-    <td>65 AED</td>
+    <td>₽1 683 (65 AED)</td>
     <td>Ежедневно 10:00–19:00</td>
   </tr>
   <tr>
@@ -438,7 +462,7 @@
     <td>7</td>
     <td>Национальный аквариум Абу-Даби</td>
     <td>Крупнейший аквариум на Ближнем Востоке с 46 000 морских животных. Есть туннель с акулами и возможность покормить скатов.</td>
-    <td>От 105 AED</td>
+    <td>От₽2 719 (105 AED)</td>
     <td>Ежедневно 10:00–20:00</td>
   </tr>
   <tr>
@@ -452,7 +476,7 @@
     <td>9</td>
     <td>Etihad Towers (смотровая площадка)</td>
     <td>Комплекс из 5 небоскрёбов. Смотровая площадка на 74-м этаже Observation Deck at 300 предлагает панорамный вид на город и Персидский залив.</td>
-    <td>От 75 AED</td>
+    <td>От₽1 942 (75 AED)</td>
     <td>Ежедневно 10:00–22:00</td>
   </tr>
   <tr>
@@ -473,7 +497,7 @@
     <td>12</td>
     <td>Yas Waterworld</td>
     <td>Аквапарк площадью 15 гектаров с 45 горками и аттракционами. Есть уникальная горка "Bandit Bomber", где вы соревнуетесь с друзьями.</td>
-    <td>От 260 AED</td>
+    <td>От₽6 734 (260 AED)</td>
     <td>Ежедневно 10:00–19:00</td>
   </tr>
   <tr>
@@ -494,7 +518,7 @@
     <td>15</td>
     <td>Пустыня Лива (Liwa Oasis)</td>
     <td>Огромный песчаный массив в 2.5 часах от города. Здесь находятся самые высокие дюны в мире (до 300 метров). Популярны сафари на джипах и ночёвки в бедуинском лагере.</td>
-    <td>Экскурсия от 250 AED</td>
+    <td>Экскурсия от₽6 475 (250 AED)</td>
     <td>Экскурсии обычно стартуют в 15:00</td>
   </tr>
 </table>
@@ -503,21 +527,21 @@
 
 <p>Система общественного транспорта в Абу-Даби активно развивается. В 2026 году метро пока не работает в полную силу (строительство продолжается, открытие отдельных станций ожидается в 2027-2028 годах), поэтому основными видами транспорта остаются автобусы, такси и аренда автомобилей.</p>
 
-<p><strong>Автобусы:</strong> Сеть автобусов (Abu Dhabi Bus) охватывает весь город. Проезд стоит 2 AED (около 50 рублей) за поездку в пределах города. Билеты можно купить в автоматах на остановках или через приложение Darb. Автобусы ходят с 06:00 до 23:00, интервал движения 10-20 минут. Для туристов удобен маршрут A1, который соединяет аэропорт с центром города (30 минут, 2 AED).</p>
+<p><strong>Автобусы:</strong> Сеть автобусов (Abu Dhabi Bus) охватывает весь город. Проезд стоит₽51 (2 AED) (около 50 рублей) за поездку в пределах города. Билеты можно купить в автоматах на остановках или через приложение Darb. Автобусы ходят с 06:00 до 23:00, интервал движения 10-20 минут. Для туристов удобен маршрут A1, который соединяет аэропорт с центром города (30 минут₽51 (2 AED)).</p>
 
-<p><strong>Такси:</strong> Самый популярный транспорт. Посадка стоит 5 AED (12 AED из аэропорта), далее 1.82 AED за километр. Средняя поездка по городу обходится в 20-40 AED (500-1000 рублей). Работают приложения Uber и Careem, но местные такси (Abu Dhabi Taxi) часто дешевле. Водители вежливы, почти все говорят на английском.</p>
+<p><strong>Такси:</strong> Самый популярный транспорт. Посадка стоит₽129 (5 AED) (₽310 (12 AED) из аэропорта), далее₽47 (2 AED) за километр. Средняя поездка по городу обходится в 20-₽1 036 (40 AED) (500-1000 рублей). Работают приложения Uber и Careem, но местные такси (Abu Dhabi Taxi) часто дешевле. Водители вежливы, почти все говорят на английском.</p>
 
-<p><strong>Аренда автомобиля:</strong> Отличный вариант для путешествия по эмирату. Аренда компактного авто (например, Toyota Yaris) стоит от 120 AED (3000 рублей) в сутки. Требуются международные права и кредитная карта. Бензин дешёвый — около 2.90 AED за литр (72 рубля). Парковка в центре платная (2-4 AED в час), но на острове Yas и в торговых центрах — бесплатная.</p>
+<p><strong>Аренда автомобиля:</strong> Отличный вариант для путешествия по эмирату. Аренда компактного авто (например, Toyota Yaris) стоит от₽3 108 (120 AED) (3000 рублей) в сутки. Требуются международные права и кредитная карта. Бензин дешёвый — около₽75 (3 AED) за литр (72 рубля). Парковка в центре платная (2-₽103 (4 AED) в час), но на острове Yas и в торговых центрах — бесплатная.</p>
 
-<p><strong>Водный транспорт:</strong> Между островами курсируют паромы и водные такси (Abra). Билет на традиционную лодку (абра) стоит 1-2 AED (25-50 рублей). Это отличный способ увидеть город с воды.</p>
+<p><strong>Водный транспорт:</strong> Между островами курсируют паромы и водные такси (Abra). Билет на традиционную лодку (абра) стоит 1-₽51 (2 AED) (25-50 рублей). Это отличный способ увидеть город с воды.</p>
 
 <h2>Где поесть</h2>
 
 <p>Кухня Абу-Даби — это смесь арабских, индийских, персидских и филиппинских традиций. Местная еда сытная и пряная. Главное блюдо — мачбус (рис с мясом или рыбой, приправленный шафраном и лимоном). Обязательно попробуйте хумус, фалафель, шаурму (здесь она одна из лучших в мире) и сладости с финиками.</p>
 
-<p><strong>Уличная еда и бюджетные заведения (до 50 AED на человека):</strong> Зайдите в Al Farooj Fresh (сеть ресторанов быстрого питания) — порция куриной шаурмы стоит 15 AED (375 рублей). В кафе Automatic Restaurant (несколько филиалов) подают отличный хумус и фалафель (около 20 AED). На рынке Al Ain Market можно попробовать свежие соки (гранатовый, манго) за 10-15 AED.</p>
+<p><strong>Уличная еда и бюджетные заведения (до₽1 295 (50 AED) на человека):</strong> Зайдите в Al Farooj Fresh (сеть ресторанов быстрого питания) — порция куриной шаурмы стоит₽388 (15 AED) (375 рублей). В кафе Automatic Restaurant (несколько филиалов) подают отличный хумус и фалафель (около₽518 (20 AED)). На рынке Al Ain Market можно попробовать свежие соки (гранатовый, манго) за 10-₽388 (15 AED).</p>
 
-<p><strong>Рестораны среднего сегмента (50-150 AED на человека):</strong> Ресторан Al Fanar (атмосфера старого Дубая) предлагает<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p><strong>Рестораны среднего сегмента (50-₽3 885 (150 AED) на человека):</strong> Ресторан Al Fanar (атмосфера старого Дубая) предлагает<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -623,6 +647,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -651,6 +676,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -668,8 +694,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

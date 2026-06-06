@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Sharjah 2026</title>
     <meta name="description" content="15 Best Things to Do in Sharjah 2026 Sharjah, the cultural capital of the United Arab Emirates, offers a rich tapestry of Islamic art, history, and family-fr...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/sharjah-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/sharjah-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Sharjah 2026">
     <meta property="og:description" content="15 Best Things to Do in Sharjah 2026 Sharjah, the cultural capital of the United Arab Emirates, offers a rich tapestry of Islamic art, history, and family-fr...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/sharjah-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://i.pinimg.com/originals/b9/a2/23/b9a223075cf4d19a0c15c66dfaedac01.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/sharjah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Sharjah 2026</div>
@@ -363,20 +387,19 @@
 <p>Sharjah, the cultural capital of the United Arab Emirates, offers a rich tapestry of Islamic art, history, and family-friendly attractions that rival its glitzy neighbor Dubai. With a focus on heritage, education, and nature, Sharjah provides a more affordable and authentic Emirati experience. In 2026, the emirate continues to expand its museum district and waterfront developments, making it a top destination for travelers seeking culture without the crowds. From world-class museums to pristine beaches, here are the 15 best things to do in Sharjah this year.</p>
 
 <h2>15 Best Attractions in Sharjah</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <p>Each attraction includes a detailed description, ticket price, hours, directions, and a practical tip.</p>
 
 <h3>1. Sharjah Museum of Islamic Civilization</h3>
 <p>Housed in a restored 19th-century souk, this museum showcases over 5,000 artifacts spanning Islamic art, science, and culture. Highlights include a stunning dome decorated with 24-carat gold mosaic and a collection of rare Qur’ans. The museum’s seven galleries cover astronomy, calligraphy, and ceramics. It is a must-see for understanding the region’s intellectual heritage.</p>
-<p><strong>Ticket Price:</strong> AED 20 (adults), AED 10 (children under 12). Free for children under 5.</p>
+<p><strong>Ticket Price:</strong> $5 (20 AED)(adults), $3 (10 AED)(children under 12). Free for children under 5.</p>
 <p><strong>Hours:</strong> Saturday to Thursday: 8:00 AM – 8:00 PM; Friday: 4:00 PM – 8:00 PM.</p>
-<p><strong>How to Get There:</strong> Located on Corniche Street in Al Majaz. Take bus route 14 or 99 from Al Jubail Bus Station. Taxi from Sharjah city center costs AED 15–25.</p>
+<p><strong>How to Get There:</strong> Located on Corniche Street in Al Majaz. Take bus route 14 or 99 from Al Jubail Bus Station. Taxi from Sharjah city center costs $4 (15 AED)–25.</p>
 <p><strong>Tip:</strong> Visit during the late afternoon to enjoy the sunset views from the museum’s waterfront terrace.</p>
 
 <h3>2. Al Noor Island</h3>
 <p>This 47,000-square-meter island offers a butterfly house with over 500 butterflies, a literary pavilion, and illuminated art installations. The island’s design blends nature with modern architecture, featuring a canopy of 50,000 LED lights at night. It is a serene escape from the city bustle. Children love the interactive butterfly enclosure.</p>
-<p><strong>Ticket Price:</strong> AED 40 (adults), AED 20 (children 3–12). Includes butterfly house access.</p>
+<p><strong>Ticket Price:</strong> $11 (40 AED)(adults), $5 (20 AED)(children 3–12). Includes butterfly house access.</p>
 <p><strong>Hours:</strong> Daily: 9:00 AM – 11:00 PM (butterfly house closes at 6:00 PM).</p>
 <p><strong>How to Get There:</strong> Access via a pedestrian bridge from Al Majaz Waterfront. Parking available at Al Majaz Park. Bus route 14 stops nearby.</p>
 <p><strong>Tip:</strong> Book tickets online in advance to avoid queues, especially on weekends.</p>
@@ -397,79 +420,79 @@
 
 <h3>5. Sharjah Aquarium</h3>
 <p>Home to over 150 marine species, including sharks, rays, and seahorses, in 20 tanks that replicate local ecosystems. The aquarium features a 7-meter-long underwater tunnel and interactive touch pools. It educates visitors about the Arabian Gulf’s biodiversity. A family favorite for its hands-on exhibits.</p>
-<p><strong>Ticket Price:</strong> AED 25 (adults), AED 15 (children 2–12). Free for children under 2.</p>
+<p><strong>Ticket Price:</strong> $7 (25 AED)(adults), $4 (15 AED)(children 2–12). Free for children under 2.</p>
 <p><strong>Hours:</strong> Saturday to Thursday: 8:00 AM – 8:00 PM; Friday: 4:00 PM – 8:00 PM.</p>
-<p><strong>How to Get There:</strong> Located on Al Meena Street near the Sharjah Fishing Port. Bus route 99 from Al Jubail. Taxi costs AED 20–30.</p>
+<p><strong>How to Get There:</strong> Located on Al Meena Street near the Sharjah Fishing Port. Bus route 99 from Al Jubail. Taxi costs $5 (20 AED)–30.</p>
 <p><strong>Tip:</strong> Visit on a weekday morning to avoid school groups.</p>
 
 <h3>6. Sharjah Desert Park</h3>
 <p>A sprawling 1-square-kilometer complex that includes the Arabian Wildlife Centre, Botanical Museum, and a Children’s Farm. The wildlife centre houses over 100 species of desert animals, including Arabian oryx and sand cats. It is an educational hub for conservation. The park also has picnic areas and walking trails.</p>
-<p><strong>Ticket Price:</strong> AED 15 (adults), AED 10 (children 3–12). Free for children under 3.</p>
+<p><strong>Ticket Price:</strong> $4 (15 AED)(adults), $3 (10 AED)(children 3–12). Free for children under 3.</p>
 <p><strong>Hours:</strong> Saturday to Thursday: 9:00 AM – 5:30 PM; Friday: 2:00 PM – 5:30 PM.</p>
-<p><strong>How to Get There:</strong> Located on the Sharjah-Al Dhaid Road (E88), 25 km east of city center. Best reached by car or taxi (AED 60–80). No direct bus.</p>
+<p><strong>How to Get There:</strong> Located on the Sharjah-Al Dhaid Road (E88), 25 km east of city center. Best reached by car or taxi ($16 (60 AED)–80). No direct bus.</p>
 <p><strong>Tip:</strong> Bring water and sunscreen, as the park is mostly outdoors.</p>
 
 <h3>7. Heart of Sharjah</h3>
 <p>A restored historical district that recreates 19th-century life with traditional wind-tower houses, souks, and mosques. It includes the Al Hisn Fort (Sharjah Fort), the Bait Al Naboodah house, and the Souk Al Arsah. Walking through the narrow alleys feels like stepping back in time. Restoration is ongoing, with new museums opening in 2026.</p>
-<p><strong>Ticket Price:</strong> Free to enter the district; Sharjah Fort entry: AED 10 (adults), AED 5 (children).</p>
+<p><strong>Ticket Price:</strong> Free to enter the district; Sharjah Fort entry: $3 (10 AED)(adults), $1 (5 AED)(children).</p>
 <p><strong>Hours:</strong> District open 24/7; fort open Saturday to Thursday: 8:00 AM – 8:00 PM, Friday: 4:00 PM – 8:00 PM.</p>
 <p><strong>How to Get There:</strong> Located on Al Hisn Street in the city center. Walk from Rolla Square or take bus route 14.</p>
-<p><strong>Tip:</strong> Hire a local guide at the visitor center for AED 50 for a 1-hour tour.</p>
+<p><strong>Tip:</strong> Hire a local guide at the visitor center for $14 (50 AED)for a 1-hour tour.</p>
 
 <h3>8. Al Qasba</h3>
 <p>A canal-side entertainment district with a 50-meter-high Ferris wheel (Al Qasba Wheel), a musical fountain, and over 20 dining outlets. The area also hosts the Maraya Art Centre and a kids’ play zone. It is more modern than Al Majaz but equally vibrant. Evening visits are best for the illuminated canal.</p>
-<p><strong>Ticket Price:</strong> Free entry; Ferris wheel: AED 20 (adults), AED 15 (children).</p>
+<p><strong>Ticket Price:</strong> Free entry; Ferris wheel: $5 (20 AED)(adults), $4 (15 AED)(children).</p>
 <p><strong>Hours:</strong> District open daily: 10:00 AM – 12:00 AM; Ferris wheel operates 4:00 PM – 11:00 PM.</p>
-<p><strong>How to Get There:</strong> Located on Al Taawun Street. Bus route 14 stops at Al Qasba. Taxi from city center costs AED 15–20.</p>
+<p><strong>How to Get There:</strong> Located on Al Taawun Street. Bus route 14 stops at Al Qasba. Taxi from city center costs $4 (15 AED)–20.</p>
 <p><strong>Tip:</strong> Ride the Ferris wheel at sunset for panoramic views of the canal and skyline.</p>
 
 <h3>9. Sharjah Heritage Museum</h3>
 <p>This museum in a restored pearl merchant’s house displays traditional Emirati clothing, jewelry, and household items. It has 16 rooms covering topics like pearl diving, falconry, and wedding ceremonies. Interactive exhibits include a simulated desert camp. It offers deep insight into local customs.</p>
-<p><strong>Ticket Price:</strong> AED 10 (adults), AED 5 (children).</p>
+<p><strong>Ticket Price:</strong> $3 (10 AED)(adults), $1 (5 AED)(children).</p>
 <p><strong>Hours:</strong> Saturday to Thursday: 8:00 AM – 8:00 PM; Friday: 4:00 PM – 8:00 PM.</p>
 <p><strong>How to Get There:</strong> Located on Al Hisn Street in Heart of Sharjah. Walk from Sharjah Art Museum.</p>
 <p><strong>Tip:</strong> Combine with a visit to the nearby Souk Al Arsah for a complete heritage experience.</p>
 
 <h3>10. Al Montazah Parks</h3>
 <p>A 200,000-square-meter amusement park divided into three zones: Island of Legends (water park), Happy Land (rides), and a lush garden area. The water park features 20 slides and a wave pool. It is ideal for families with children aged 4–14. New attractions in 2026 include a virtual reality roller coaster.</p>
-<p><strong>Ticket Price:</strong> AED 50 (adults), AED 35 (children) for water park; AED 30 (all ages) for amusement rides.</p>
+<p><strong>Ticket Price:</strong> $14 (50 AED)(adults), $10 (35 AED)(children) for water park; $8 (30 AED)(all ages) for amusement rides.</p>
 <p><strong>Hours:</strong> Daily: 10:00 AM – 10:00 PM (water park closes at 6:00 PM in winter).</p>
-<p><strong>How to Get There:</strong> Located on Al Montazah Street. Bus route 14 from city center. Taxi costs AED 25–35.</p>
-<p><strong>Tip:</strong> Buy a combo ticket for both parks for AED 70 to save AED 15.</p>
+<p><strong>How to Get There:</strong> Located on Al Montazah Street. Bus route 14 from city center. Taxi costs $7 (25 AED)–35.</p>
+<p><strong>Tip:</strong> Buy a combo ticket for both parks for $19 (70 AED)to save $4 (15 AED)</p>
 
 <h3>11. Sharjah National Park</h3>
 <p>One of the largest parks in the UAE, covering 630,000 square meters with lakes, picnic areas, and a mini-zoo. It has over 5,000 trees and a children’s train. The park is a green oasis in the city. It is popular for weekend barbecues and cycling.</p>
-<p><strong>Ticket Price:</strong> AED 5 (adults), AED 3 (children). Free for children under 5.</p>
+<p><strong>Ticket Price:</strong> $1 (5 AED)(adults), $1 (3 AED)(children). Free for children under 5.</p>
 <p><strong>Hours:</strong> Daily: 8:00 AM – 11:00 PM.</p>
-<p><strong>How to Get There:</strong> Located on Al Dhaid Road (E88). Bus route 99 from Al Jubail. Taxi costs AED 30–40.</p>
-<p><strong>Tip:</strong> Rent a bicycle at the park for AED 10 per hour to explore the expansive grounds.</p>
+<p><strong>How to Get There:</strong> Located on Al Dhaid Road (E88). Bus route 99 from Al Jubail. Taxi costs $8 (30 AED)–40.</p>
+<p><strong>Tip:</strong> Rent a bicycle at the park for $3 (10 AED)per hour to explore the expansive grounds.</p>
 
 <h3>12. Mleiha Archaeological Centre</h3>
 <p>This UNESCO-recognized site features fossils, Bronze Age tombs, and a reconstructed fort. The center offers guided tours of the Mleiha desert, including dune bashing and stargazing. It reveals 130,000 years of human history. In 2026, new excavations have uncovered a Roman-era settlement.</p>
-<p><strong>Ticket Price:</strong> AED 25 (adults) for the centre; desert tours start at AED 150 per person.</p>
+<p><strong>Ticket Price:</strong> $7 (25 AED)(adults) for the centre; desert tours start at $41 (150 AED)per person.</p>
 <p><strong>Hours:</strong> Saturday to Thursday: 9:00 AM – 7:00 PM; Friday: 2:00 PM – 7:00 PM.</p>
-<p><strong>How to Get There:</strong> Located 50 km east of Sharjah on the Maliha Road (E55). Car or taxi required (AED 80–100).</p>
-<p><strong>Tip:</strong> Book the sunset tour (AED 200) for a magical desert experience with dinner included.</p>
+<p><strong>How to Get There:</strong> Located 50 km east of Sharjah on the Maliha Road (E55). Car or taxi required ($22 (80 AED)–100).</p>
+<p><strong>Tip:</strong> Book the sunset tour ($55 (200 AED)) for a magical desert experience with dinner included.</p>
 
 <h3>13. Sharjah Science Museum</h3>
 <p>An interactive museum with over 100 hands-on exhibits covering physics, biology, and technology. Highlights include a planetarium and a 3D cinema. The museum aims to inspire young scientists. It is less crowded than Dubai’s equivalent.</p>
-<p><strong>Ticket Price:</strong> AED 15 (adults), AED 10 (children 3–12). Planetarium shows: AED 10 extra.</p>
+<p><strong>Ticket Price:</strong> $4 (15 AED)(adults), $3 (10 AED)(children 3–12). Planetarium shows: $3 (10 AED)extra.</p>
 <p><strong>Hours:</strong> Saturday to Thursday: 8:00 AM – 8:00 PM; Friday: 4:00 PM – 8:00 PM.</p>
-<p><strong>How to Get There:</strong> Located on Al Nahda Street near University City. Bus route 14 from city center. Taxi costs AED 20–30.</p>
+<p><strong>How to Get There:</strong> Located on Al Nahda Street near University City. Bus route 14 from city center. Taxi costs $5 (20 AED)–30.</p>
 <p><strong>Tip:</strong> Visit during the week to avoid school trips; the planetarium shows are in English and Arabic.</p>
 
 <h3>14. Khor Fakkan Beach</h3>
 <p>A pristine beach on the east coast, 90 minutes from Sharjah city, with turquoise waters and a 1.5-kilometer promenade. The beach is part of a development that includes a waterfall and a souk. It is a favorite for snorkeling and swimming. In 2026, new lifeguard stations and rental facilities have been added.</p>
 <p><strong>Ticket Price:</strong> Free.</p>
 <p><strong>Hours:</strong> 24/7 (lifeguards on duty 8:00 AM – 6:00 PM).</p>
-<p><strong>How to Get There:</strong> Drive via the E99 highway (90 km). Bus from Sharjah’s Al Jubail station to Khor Fakkan costs AED 25 (route 101).</p>
+<p><strong>How to Get There:</strong> Drive via the E99 highway (90 km). Bus from Sharjah’s Al Jubail station to Khor Fakkan costs $7 (25 AED)(route 101).</p>
 <p><strong>Tip:</strong> Bring your own snorkel gear; rentals are limited.</p>
 
 <h3>15. Buhais Geology Park</h3>
 <p>A 3-million-square-meter geological park in the desert featuring fossilized marine life from 70 million years ago. The park has a museum, hiking trails, and a campsite. It is one of the UAE’s most significant paleontological sites. The landscape is otherworldly, with red sandstone formations.</p>
-<p><strong>Ticket Price:</strong> AED 10 (adults), free for children under 12.</p>
+<p><strong>Ticket Price:</strong> $3 (10 AED)(adults), free for children under 12.</p>
 <p><strong>Hours:</strong> Saturday to Thursday: 9:00 AM – 5:00 PM; Friday: 2:00 PM – 5:00 PM.</p>
-<p><strong>How to Get There:</strong> Located 45 km east of Sharjah on the E55 road. Car or taxi required (AED 70–90).</p>
+<p><strong>How to Get There:</strong> Located 45 km east of Sharjah on the E55 road. Car or taxi required ($19 (70 AED)–90).</p>
 <p><strong>Tip:</strong> Visit in the early morning to avoid heat; bring sturdy shoes for hiking.</p>
 
 <h2>Optimal Sharjah Itineraries</h2>
@@ -478,7 +501,7 @@
 <ul>
 <li><strong>9:00 AM – 11:00 AM:</strong> Start at Sharjah Museum of Islamic Civilization. Spend 2 hours exploring the galleries.</li>
 <li><strong>11:30 AM – 1:00 PM:</strong> Walk to Heart of Sharjah. Visit Sharjah Fort and Souk Al Arsah.</li>
-<li><strong>1:00 PM – 2:00 PM:</strong> Lunch at a traditional restaurant in the souk (e.g., Al Shabab, AED 40 per meal).</li>
+<li><strong>1:00 PM – 2:00 PM:</strong> Lunch at a traditional restaurant in the souk (e.g., Al Shabab, $11 (40 AED)per meal).</li>
 <li><strong>2:30 PM – 4:30 PM:</strong> Visit Sharjah Art Museum and Heritage Museum.</li>
 <li><strong>5:00 PM – 7:00 PM:</strong> Relax at Al Noor Island. See the butterfly house.</li>
 <li><strong>8:00 PM:</strong> Dinner at Al Majaz Waterfront, followed by the musical fountain show.</li>
@@ -498,7 +521,7 @@
 </ul>
 
 <h2>Tours & Excursions</h2>
-<p>Several guided tours enhance the Sharjah experience. The <strong>Sharjah City Tour</strong> (4 hours, AED 150 per person) covers the Museum of Islamic Civilization, Heart of Sharjah, and Al Majaz. The <strong>Mleiha Desert Safari</strong> (6 hours, AED 250 per person) includes dune bashing, camel riding, and a barbecue dinner. For a cultural deep dive, the <strong>Heritage Walking Tour</strong> (2 hours, AED 80 per person) explores the Arts Area and souks. Private tours from Dubai to Sharjah cost AED 400–600 per group. Book through providers<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<p>Several guided tours enhance the Sharjah experience. The <strong>Sharjah City Tour</strong> (4 hours, $41 (150 AED)per person) covers the Museum of Islamic Civilization, Heart of Sharjah, and Al Majaz. The <strong>Mleiha Desert Safari</strong> (6 hours, $68 (250 AED)per person) includes dune bashing, camel riding, and a barbecue dinner. For a cultural deep dive, the <strong>Heritage Walking Tour</strong> (2 hours, $22 (80 AED)per person) explores the Arts Area and souks. Private tours from Dubai to Sharjah cost $109 (400 AED)–600 per group. Book through providers<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -584,6 +607,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -612,6 +636,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -629,8 +654,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

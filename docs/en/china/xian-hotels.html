@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Xi&#39;an 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Xi&#39;an 2026: Budget to Luxury Oh, Xi&#39;an! Just saying the name gives me goosebumps. This city isn&#39;t just a stop on the Silk Road—it&#39;s a living...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/xian-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/xian-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/xian-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/xian-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Xi&#39;an 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Xi&#39;an 2026: Budget to Luxury Oh, Xi&#39;an! Just saying the name gives me goosebumps. This city isn&#39;t just a stop on the Silk Road—it&#39;s a living...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/china/xian-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/xian-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/xian.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Xi&#39;an 2026: Budget to Luxury</div>
@@ -360,42 +384,52 @@
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
 <p>Oh, Xi'an! Just saying the name gives me goosebumps. This city isn't just a stop on the Silk Road—it's a living museum where every cobblestone whispers stories of emperors and warriors. I've sent over 300 travelers here, and I still get a little thrill when I see their photos from the Terracotta Army. But here's the thing: where you stay can make or break your trip. Xi'an's hotel scene has exploded in 2026, blending ancient charm with modern comfort. Whether you're a backpacker on a shoestring or a luxury seeker wanting to sleep like a Tang dynasty emperor, I've got you covered.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Let me walk you through the neighborhoods first. For first-timers, I always recommend the <strong>City Wall Area</strong> (inside the ancient walls)—it's compact, walkable, and packed with history. The <strong>Muslim Quarter</strong> is a sensory overload of street food and night markets, perfect for foodies. If you want quieter vibes with modern malls, <strong>Qujiang New District</strong> near the Giant Wild Goose Pagoda is your spot. And for budget travelers, the <strong>Railway Station Area</strong> offers cheap digs but can be a bit chaotic. Prices in 2026 have crept up slightly—expect to pay 12-15% more than last year—but I've found gems at every price point. Ready? Let's dive in.</p>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <p>I love budget travel—it forces you to get creative. These three hotels prove you don't need to spend a fortune to sleep well in Xi'an. All prices include a small markup I've added for booking convenience (trust me, it's worth it for the perks).</p>
 
 <ul>
-<li><strong>Xi'an Hantang Inn (Muslim Quarter)</strong>: Tucked into a narrow alley off Beiyuanmen Street, this family-run guesthouse feels like staying at a friend's place. Rooms are small but spotless, with traditional wooden furniture and heated floors (a lifesaver in winter). The rooftop terrace offers stunning views of the Drum Tower at sunset. <em>Price: $45 (≈ ₽4 275)/night</em>. Pros: Unbeatable location for street food (Yangrou Paomo is steps away), friendly owner who gives free map tips. Cons: Thin walls—you'll hear the call to prayer at 5 AM.</li>
-<li><strong>Xi'an Backpacker Hostel (City Wall Area)</strong>: Don't let the name fool you—this isn't a grungy dorm. Private rooms with ensuite bathrooms are available, and the common area is buzzing with travelers swapping stories over board games. They organize free walking tours to the City Wall. <em>Price: $38 (≈ ₽3 610)/night</em>. Pros: Social vibe, free breakfast (simple but filling), lockers for valuables. Cons: No elevator (third-floor walkup), shared bathrooms can get busy at peak times.</li>
-<li><strong>Yue Hotel (Railway Station Area)</strong>: A no-frills chain hotel that's clean and reliable. Perfect for late arrivals or early departures—it's a 5-minute walk from Xi'an Station. Rooms are basic but have AC, TV, and strong Wi-Fi. <em>Price: $32 (≈ ₽3 040)/night</em>. Pros: 24-hour front desk, luggage storage, cheap noodle shop next door. Cons: Area feels a bit rough at night, no character—just a place to sleep.</li>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="th" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<li><strong>Xi'an Hantang Inn (Muslim Quarter)</strong>: Tucked into a narrow alley off Beiyuanmen Street, this family-run guesthouse feels like staying at a friend's place. Rooms are small but spotless, with traditional wooden furniture and heated floors (a lifesaver in winter). The rooftop terrace offers stunning views of the Drum Tower at sunset. <em>Price: $45/night</em>. Pros: Unbeatable location for street food (Yangrou Paomo is steps away), friendly owner who gives free map tips. Cons: Thin walls—you'll hear the call to prayer at 5 AM.</li>
+<li><strong>Xi'an Backpacker Hostel (City Wall Area)</strong>: Don't let the name fool you—this isn't a grungy dorm. Private rooms with ensuite bathrooms are available, and the common area is buzzing with travelers swapping stories over board games. They organize free walking tours to the City Wall. <em>Price: $38/night</em>. Pros: Social vibe, free breakfast (simple but filling), lockers for valuables. Cons: No elevator (third-floor walkup), shared bathrooms can get busy at peak times.</li>
+<li><strong>Yue Hotel (Railway Station Area)</strong>: A no-frills chain hotel that's clean and reliable. Perfect for late arrivals or early departures—it's a 5-minute walk from Xi'an Station. Rooms are basic but have AC, TV, and strong Wi-Fi. <em>Price: $32/night</em>. Pros: 24-hour front desk, luggage storage, cheap noodle shop next door. Cons: Area feels a bit rough at night, no character—just a place to sleep.</li>
 </ul>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <p>This is my sweet spot. You get comfort, location, and a touch of local flavor without breaking the bank. Here are four hotels I've personally vetted for my clients.</p>
 
 <ul>
-<li><strong>Jinjiang Inn (Bell Tower Branch)</strong>: A reliable mid-range chain with a prime spot near the Bell Tower. Rooms are modern with crisp white linens and blackout curtains—great for jet-lagged travelers. The breakfast buffet includes both Chinese congee and Western toast. <em>Price: $68 (≈ ₽6 460)/night</em>. Highlights: Rooftop terrace with Bell Tower views, free bike rentals, 24-hour laundry service.</li>
-<li><strong>Xi'an Huaqing Palace Hotel (Qujiang New District)</strong>: This hotel blends Tang dynasty architecture with modern amenities. The lobby has a miniature replica of the Giant Wild Goose Pagoda, and the rooms feature silk bed runners. It's a 10-minute walk to the pagoda and the Tang Paradise theme park. <em>Price: $95 (≈ ₽9 025)/night</em>. Highlights: Indoor pool, traditional tea ceremony every afternoon, free shuttle to Terracotta Army (book ahead).</li>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="bl" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<li><strong>Hanting Hotel (Muslim Quarter)</strong>: Don't be fooled by the chain name—this branch is special. It's housed in a renovated courtyard house, with exposed brick walls and a small garden where you can sip tea. Rooms are compact but cozy, with heated toilet seats (a luxury I never knew I needed). <em>Price: $78 (≈ ₽7 410)/night</em>. Highlights: Free guided walk through the Muslim Quarter at 6 PM, complimentary snacks in the lobby, rooftop washing line for clothes.</li>
-<li><strong>Xi'an City Wall Boutique Hotel (South Gate Area)</strong>: A hidden gem just inside the South Gate. Each room is uniquely decorated with local art—my favorite has a mural of the Terracotta Warriors. The staff are incredibly helpful; they booked me a last-minute ticket to the Shaanxi History Museum when it was sold out online. <em>Price: $112 (≈ ₽10 640)/night</em>. Highlights: Free bicycle rentals to cycle the City Wall, rooftop bar with craft beers, complimentary airport pickup (for stays of 3+ nights).</li>
+<li><strong>Jinjiang Inn (Bell Tower Branch)</strong>: A reliable mid-range chain with a prime spot near the Bell Tower. Rooms are modern with crisp white linens and blackout curtains—great for jet-lagged travelers. The breakfast buffet includes both Chinese congee and Western toast. <em>Price: $68/night</em>. Highlights: Rooftop terrace with Bell Tower views, free bike rentals, 24-hour laundry service.</li>
+<div id="hc_200468" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Jinjiang Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Jinjiang Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_200468 .hc-slide');var d=document.querySelectorAll('#hc_200468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_200468 .hc-slide');var d=document.querySelectorAll('#hc_200468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jinjiang Inn &bull; 2 photos</p></div>
+<li><strong>Xi'an Huaqing Palace Hotel (Qujiang New District)</strong>: This hotel blends Tang dynasty architecture with modern amenities. The lobby has a miniature replica of the Giant Wild Goose Pagoda, and the rooms feature silk bed runners. It's a 10-minute walk to the pagoda and the Tang Paradise theme park. <em>Price: $95/night</em>. Highlights: Indoor pool, traditional tea ceremony every afternoon, free shuttle to Terracotta Army (book ahead).</li>
+<li><strong>Hanting Hotel (Muslim Quarter)</strong>: Don't be fooled by the chain name—this branch is special. It's housed in a renovated courtyard house, with exposed brick walls and a small garden where you can sip tea. Rooms are compact but cozy, with heated toilet seats (a luxury I never knew I needed). <em>Price: $78/night</em>. Highlights: Free guided walk through the Muslim Quarter at 6 PM, complimentary snacks in the lobby, rooftop washing line for clothes.</li>
+<li><strong>Xi'an City Wall Boutique Hotel (South Gate Area)</strong>: A hidden gem just inside the South Gate. Each room is uniquely decorated with local art—my favorite has a mural of the Terracotta Warriors. The staff are incredibly helpful; they booked me a last-minute ticket to the Shaanxi History Museum when it was sold out online. <em>Price: $112/night</em>. Highlights: Free bicycle rentals to cycle the City Wall, rooftop bar with craft beers, complimentary airport pickup (for stays of 3+ nights).</li>
 </ul>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <p>If you're celebrating something special or just want to be pampered, Xi'an's luxury hotels are world-class. I've stayed at all three, and each offers a unique experience.</p>
 
 <ul>
-<li><strong>The Westin Xi'an (Qujiang New District)</strong>: This is where I send clients who want "wow" factor. The lobby has a massive chandelier inspired by the Silk Road, and the rooms have floor-to-ceiling windows overlooking the pagoda. The Heavenly Bed is no joke—I slept 10 hours straight. <em>Price: $195 (≈ ₽18 525)/night</em>. Features: Full-service spa with traditional Chinese treatments, indoor heated pool, three restaurants including a Michelin-starred Cantonese spot, free shuttle to major attractions.</li>
-<li><strong>Sofitel Xi'an on Renmin Square (City Wall Area)</strong>: A French-Chinese fusion that works beautifully. The building is a restored 1950s Soviet-era structure, but the interiors are sleek and modern. The breakfast buffet is legendary—I'm still dreaming of the handmade noodles station. <em>Price: $225 (≈ ₽21 375)/night</em>. Features: Rooftop bar with live jazz, fitness center with personal trainers, butler service for suites, complimentary champagne at check-in.</li>
-<li><strong>Xi'an Jinding Hotel (Bell Tower Area)</strong>: This is the ultimate splurge for history buffs. The hotel is built on the site of a Tang dynasty palace, and the design incorporates artifacts from the era. My room had a replica Tang dynasty mirror and a calligraphy set. The concierge arranged a private after-hours tour of the Terracotta Army—worth every penny. <em>Price: $280 (≈ ₽26 600)/night</em>. Features: Private museum on-site, traditional Chinese garden, cooking class for biangbiang noodles, limousine airport transfer, personal shopper for local crafts.</li>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<li><strong>The Westin Xi'an (Qujiang New District)</strong>: This is where I send clients who want "wow" factor. The lobby has a massive chandelier inspired by the Silk Road, and the rooms have floor-to-ceiling windows overlooking the pagoda. The Heavenly Bed is no joke—I slept 10 hours straight. <em>Price: $195/night</em>. Features: Full-service spa with traditional Chinese treatments, indoor heated pool, three restaurants including a Michelin-starred Cantonese spot, free shuttle to major attractions.</li>
+<li><strong>Sofitel Xi'an on Renmin Square (City Wall Area)</strong>: A French-Chinese fusion that works beautifully. The building is a restored 1950s Soviet-era structure, but the interiors are sleek and modern. The breakfast buffet is legendary—I'm still dreaming of the handmade noodles station. <em>Price: $225/night</em>. Features: Rooftop bar with live jazz, fitness center with personal trainers, butler service for suites, complimentary champagne at check-in.</li>
+<div id="hc_377464" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Sofitel Xi'an on Renmin Square - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sofitel Xi'an on Renmin Square - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_377464 .hc-slide');var d=document.querySelectorAll('#hc_377464 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_377464 .hc-slide');var d=document.querySelectorAll('#hc_377464 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sofitel Xi'an on Renmin Square &bull; 2 photos</p></div>
+<li><strong>Xi'an Jinding Hotel (Bell Tower Area)</strong>: This is the ultimate splurge for history buffs. The hotel is built on the site of a Tang dynasty palace, and the design incorporates artifacts from the era. My room had a replica Tang dynasty mirror and a calligraphy set. The concierge arranged a private after-hours tour of the Terracotta Army—worth every penny. <em>Price: $280/night</em>. Features: Private museum on-site, traditional Chinese garden, cooking class for biangbiang noodles, limousine airport transfer, personal shopper for local crafts.</li>
 </ul>
 
 <h2>How to Choose the Right Area</h2>
@@ -416,14 +450,20 @@
 <ul>
 <li><strong>Book Early for Peak Seasons</strong>: Xi'an is busiest during Chinese New Year (January/February), National Day (October 1-7), and summer holidays (July-August). Hotels can double in price. I recommend booking at least 2-3 months ahead. Use <strong>Booking.com</strong> or <strong>Agoda</strong> for free cancellation—prices on these sites include a 12-15% markup for convenience, but it's worth it for flexibility.</li>
 <li><strong>Check for Package Deals</strong>: Many mid-range hotels offer "Stay 3, Pay 2" deals or include breakfast and airport transfers. The <strong>City Wall Boutique Hotel</strong> often has a package with Terracotta Army tickets. Call the hotel directly after booking online—they sometimes offer better rates if you mention my name (just say a friend recommended them).</li>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="di" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <li><strong>Use Local <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> Sites</strong>: For budget hotels, try <strong>CTrip (<a href="https://tp.media/click?shmarker=736226&promo_id=3802&source_type=link&type=click&campaign_id=119&trs=tripcom" target="_blank" rel="nofollow sponsored" class="partner-link">Trip.com</a>)</strong> or <strong>Meituan</strong>. They have exclusive deals that Western sites don't. Just make sure the property has English-speaking staff—I've had clients get stuck with no one to help at check-in.</li>
 <li><strong>Join Loyalty Programs</strong>: If you're staying at chains like Jinjiang Inn or Hanting, sign up for their free loyalty programs. You'll earn points for free nights, and they often upgrade you to a better room. I've gotten a free breakfast just by showing my card.</li>
-<li><strong>Book the Terracotta Army Tour with Your Hotel</strong>: Many luxury and mid-range hotels offer private tours that skip the lines. It costs more (around $50 (≈ ₽4 750)-80 extra), but you'll avoid the 2-hour queue in summer heat. The <strong>Xi'an Jinding Hotel</strong> even includes a guide who speaks perfect English—worth every cent.</li>
+<li><strong>Book the Terracotta Army Tour with Your Hotel</strong>: Many luxury and mid-range hotels offer private tours that skip the lines. It costs more (around $50-80 extra), but you'll avoid the 2-hour queue in summer heat. The <strong>Xi'an Jinding Hotel</strong> even includes a guide who speaks perfect English—worth every cent.</li>
 <li><strong>Consider a Travel Agent</strong>: Okay, I'm biased, but using a travel agent (like me!) can save you time and money. I know which hotels are renovating (avoid the <strong>Sofitel</strong> in March 2026—they're redoing the pool), and I can negotiate rates you won't find online. Plus, I'll handle the mess if something goes wrong.</li>
 </ul>
 
 <p>There you have it—my top 10 hotels in Xi'an for 2026, from budget to luxury. Remember, the best hotel is the one that fits your style and budget. Whether you're cycling the City Wall at dawn or slurping noodles in the Muslim Quarter at midnight, Xi'an will steal your heart. Safe travels, and don't forget to send me a postcard!</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<div id="hc_949785" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="surance! - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="surance! - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_949785 .hc-slide');var d=document.querySelectorAll('#hc_949785 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_949785 .hc-slide');var d=document.querySelectorAll('#hc_949785 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">surance! &bull; 2 photos</p></div>
         </div>
 
         
@@ -514,6 +554,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -542,6 +583,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -559,8 +601,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

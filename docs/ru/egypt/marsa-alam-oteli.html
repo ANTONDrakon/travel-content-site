@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Марса-Алам 2026: от бюджета до люкса Марса-Алам, расположенный на юго-восточном побережье Египта, в 270 километрах к югу от Хургады, за после...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Марса-Алам 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Марса-Алам 2026: от бюджета до люкса Марса-Алам, расположенный на юго-восточном побережье Египта, в 270 километрах к югу от Хургады, за после...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/marsa-alam-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/marsa-alam.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Марса-Алам 2026: от бюджета до люкса</div>
@@ -364,19 +388,32 @@
 
 <p>Цены на проживание в Марса-Алам в 2026 году варьируются от 25 долларов за ночь в скромном гестхаусе до 500 долларов и выше в пятизвездочных курортах с частными пляжами и спа-центрами. Сезонность играет ключевую роль: пик приходится на октябрь-апрель, когда температура воздуха держится на уровне 25-30°C, а вода прогрета до 24-27°C. В летние месяцы (июнь-август) цены падают на 30-40%, но жара достигает 40-45°C, что делает экскурсии и длительное пребывание на пляже малокомфортными. Средняя стоимость номера в трехзвездочном отеле в высокий сезон составляет 40-60 долларов, в четырехзвездочном — 80-120 долларов, в пятизвездочном — от 150 до 300 долларов.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Red Sea Diving Safari – Marsa Shagra Village</h3>
 <p>Расположенный в 30 километрах к северу от Марса-Алам, этот эко-курорт представляет собой комплекс из 120 бунгало из пальмовых листьев и палаток сафари-стиля. Стоимость размещения начинается от 35 долларов за ночь в палатке с общими удобствами и достигает 50 долларов за отдельное бунгало с душем и туалетом. Основной контингент — дайверы со всего мира, приезжающие ради доступа к 25 рифам, включая знаменитый Эльфинстоун (15 километров от берега). Питание включено в стоимость (шведский стол), алкоголь не подается. Плюсы: идеальное место для снорклинга прямо с берега, экологичный подход, возможность аренды снаряжения (15 долларов за комплект в день). Минусы: отсутствие кондиционеров (работают только вентиляторы), слабый Wi-Fi только в лобби, удаленность от города (ближайший магазин в 15 минутах езды).</p>
 
 <h3>2. Shams Alam Resort</h3>
+<div id="hc_658307" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Shams Alam Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Shams Alam Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Shams Alam Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_658307 .hc-slide');var d=document.querySelectorAll('#hc_658307 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_658307 .hc-slide');var d=document.querySelectorAll('#hc_658307 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_658307 .hc-slide');var d=document.querySelectorAll('#hc_658307 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Shams Alam Resort &bull; 3 photos</p></div>
 <p>Отель на 80 номеров, расположенный в 12 километрах к югу от аэропорта Марса-Алам. Цены в 2026 году стартуют от 40 долларов за стандартный номер с завтраком. Номера просторные (28-30 квадратных метров), с кондиционером, телевизором и мини-баром. Территория ухоженная, с двумя бассейнами и собственным пляжем с песчаным входом в море. Плюсы: хорошее соотношение цены и качества, тихий отдых без анимации, возможность аренды велосипедов (5 долларов в час). Минусы: удаленность от любых развлечений (до Порт-Галиба 25 километров), ограниченный выбор блюд в ресторане (меню меняется раз в три дня), уборка номеров проводится только по запросу.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Coral Beach Hotel Marsa Alam</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ma" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_194247" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Beach Hotel Marsa Alam - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Beach Hotel Marsa Alam - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_194247 .hc-slide');var d=document.querySelectorAll('#hc_194247 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_194247 .hc-slide');var d=document.querySelectorAll('#hc_194247 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Beach Hotel Marsa Alam &bull; 2 photos</p></div>
 <p>Небольшой семейный отель в центре города Марса-Алам, в 500 метрах от автовокзала и 1 километре от рынка. Цена — 25-30 долларов за ночь с завтраком. Номера скромные (18 квадратных метров), с кондиционером и ванной, но без телевизора. Отель работает с 2018 года и имеет рейтинг 7.2 на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>. Плюсы: близость к инфраструктуре (аптеки, магазины, кафе), самая низкая цена в регионе, возможность заказать трансфер в аэропорт за 10 долларов. Минусы: шумно из-за расположения на главной улице, пляж отсутствует (ближайший общественный в 2 километрах), Wi-Fi только на ресепшене.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <table>
 <thead>
@@ -390,40 +427,81 @@
 <tbody>
 <tr>
 <td>Red Sea Diving Safari – Marsa Shagra Village</td>
-<td>₽3 325 (≈ $35)-50</td>
+<td>₽3 325 ($35)-50</td>
 <td>45 км</td>
 <td>8.5</td>
 </tr>
 <tr>
 <td>Shams Alam Resort</td>
-<td>₽3 800 (≈ $40)-50</td>
+<td>₽3 800 ($40)-50</td>
 <td>12 км</td>
 <td>7.8</td>
 </tr>
 <tr>
 <td>Coral Beach Hotel Marsa Alam</td>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ma" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<td>₽2 375 (≈ $25)-30</td>
+<div id="hc_194247" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Beach Hotel Marsa Alam - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Beach Hotel Marsa Alam - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_194247 .hc-slide');var d=document.querySelectorAll('#hc_194247 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_194247 .hc-slide');var d=document.querySelectorAll('#hc_194247 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Beach Hotel Marsa Alam &bull; 2 photos</p></div>
+<td>₽2 375 ($25)-30</td>
 <td>60 км</td>
 <td>7.2</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Jaz Amara Resort</h3>
+<div id="hc_842519" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Jaz Amara Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Jaz Amara Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_842519 .hc-slide');var d=document.querySelectorAll('#hc_842519 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_842519 .hc-slide');var d=document.querySelectorAll('#hc_842519 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jaz Amara Resort &bull; 2 photos</p></div>
 <p>Четырехзвездочный курорт сети Jaz, открытый в 2022 году, расположен в 8 километрах к северу от аэропорта. Комплекс на 250 номеров занимает территорию в 15 гектаров с собственной лагуной и 400-метровым песчаным пляжем. Цены в 2026 году — от 80 долларов за стандартный номер с завтраком и от 110 долларов с системой «все включено». Фишки: три бассейна (включая детский с горками), спа-центр с хаммамом (30 долларов за сеанс), дайв-центр на территории (сертификационный курс PADI Open Water — 400 долларов). Рестораны: основной буфет на 300 мест, итальянский à la carte (паста от 15 долларов) и азиатский (суши-сет от 25 долларов). Рейтинг на TripAdvisor — 4.3 из 5.</p>
+<div id="hc_441787" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Jaz, открытый в 2022 году, расположен в 8 километрах к северу от аэропорта. Комплекс на 250 номеров занимает территорию в 15 гектаров с собственной лагуной и 400-метровым песчаным пляжем. Цены в 2026 году — от 80 долларов за стандартный номер с завтраком и от 110 долларов с системой «все включено». Фишки: три бассейна - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Jaz, открытый в 2022 году, расположен в 8 километрах к северу от аэропорта. Комплекс на 250 номеров занимает территорию в 15 гектаров с собственной лагуной и 400-метровым песчаным пляжем. Цены в 2026 году — от 80 долларов за стандартный номер с завтраком и от 110 долларов с системой «все включено». Фишки: три бассейна - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_441787 .hc-slide');var d=document.querySelectorAll('#hc_441787 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_441787 .hc-slide');var d=document.querySelectorAll('#hc_441787 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jaz, открытый в 2022 году, расположен в 8 километрах к северу от аэропорта. Комплекс на 250 номеров занимает территорию в 15 гектаров с собственной лагуной и 400-метровым песчаным пляжем. Цены в 2026 году — от 80 долларов за стандартный номер с завтраком и от 110 долларов с системой «все включено». Фишки: три бассейна &bull; 2 photos</p></div>
 
 <h3>5. Pickalbatros Palace Resort Marsa Alam</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ma" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_480873" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Pickalbatros Palace Resort Marsa Alam - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Pickalbatros Palace Resort Marsa Alam - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_480873 .hc-slide');var d=document.querySelectorAll('#hc_480873 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_480873 .hc-slide');var d=document.querySelectorAll('#hc_480873 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pickalbatros Palace Resort Marsa Alam &bull; 2 photos</p></div>
 <p>Один из самых популярных четырехзвездочных отелей региона, работающий с 2019 года. Расположен в 5 километрах от Порт-Галиба, на первой линии. 320 номеров, средняя цена — 95 долларов за ночь с «все включено». Фишки: аквапарк с 8 горками, ночное шоу с лазерной проекцией (ежедневно в 21:00), детский клуб с аниматорами (работает с 10:00 до 18:00). Пляж широкий, с пологим входом, что удобно для детей. Минусы: шумно вечером из-за дискотеки до 23:00, загруженность пляжа в высокий сезон (на 1 лежак приходится 2.5 человека в среднем). Рекомендуется бронировать номера в корпусе D (дальше от бассейна).</p>
 
 <h3>6. Deep South Diving Lodge</h3>
+<div id="hc_45733" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Deep South Diving Lodge - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Deep South Diving Lodge - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Deep South Diving Lodge - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_45733 .hc-slide');var d=document.querySelectorAll('#hc_45733 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_45733 .hc-slide');var d=document.querySelectorAll('#hc_45733 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_45733 .hc-slide');var d=document.querySelectorAll('#hc_45733 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Deep South Diving Lodge &bull; 3 photos</p></div>
 <p>Бутик-отель для дайверов, расположенный в 35 километрах к югу от Марса-Алам, в районе Абу-Дабаб. Всего 30 номеров, каждый с террасой с видом на море. Цена — 65-85 долларов за ночь с завтраком и обедом. Фишки: собственный пирс для захода в воду, компрессорная станция для заправки баллонов (5 долларов за баллон), ежедневные выезды на рифы Долфин-Хаус и Шааб-Самадай (трансфер включен в стоимость). Номера оформлены в морском стиле, с деревянной мебелью и москитными сетками. Минусы: нет бассейна, алкоголь не подается, электричество отключается с 23:00 до 06:00 (генератор работает только на ресепшен).</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="дл" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>7. Solymar Marsa Alam Beach Resort</h3>
+<div id="hc_404316" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Solymar Marsa Alam Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Solymar Marsa Alam Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_404316 .hc-slide');var d=document.querySelectorAll('#hc_404316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_404316 .hc-slide');var d=document.querySelectorAll('#hc_404316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Solymar Marsa Alam Beach Resort &bull; 2 photos</p></div>
 <p>Трехзвездочный отель (по факту тянет на 4 звезды), расположенный в 3 километрах от Порт-Галиба. 180 номеров, цены от 55 долларов за ночь с завтраком и от 70 долларов с «все включено». Фишки: большой бассейн с морской водой (25x15 метров), вечерняя программа с живой музыкой (арабская и западная поп-музыка по вторникам и пятницам), бесплатный трансфер до пляжа Порт-Галиб (каждые 30 минут). Номера площадью 24 квадратных метра, с балконом и кондиционером. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com — 8.1. Минусы: пляж отсутствует (до моря 1.5 километра пешком), Wi-Fi платный (5 долларов в день), мебель в некоторых номерах изношена.</p>
 
 <table>
@@ -438,32 +516,46 @@
 <tbody>
 <tr>
 <td>Jaz Amara Resort</td>
-<td>₽7 600 (≈ $80)-110</td>
+<td>₽7 600 ($80)-110</td>
 <td>BB/All inclusive</td>
 <td>Лагуна, спа</td>
 </tr>
 <tr>
 <td>Pickalbatros Palace Resort</td>
-<td>₽9 025 (≈ $95)</td>
+<div id="hc_684576" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Pickalbatros Palace Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Pickalbatros Palace Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_684576 .hc-slide');var d=document.querySelectorAll('#hc_684576 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_684576 .hc-slide');var d=document.querySelectorAll('#hc_684576 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pickalbatros Palace Resort &bull; 2 photos</p></div>
+<td>₽9 025 ($95)</td>
 <td>All inclusive</td>
 <td>Аквапарк</td>
 </tr>
 <tr>
 <td>Deep South Diving Lodge</td>
-<td>₽6 175 (≈ $65)-85</td>
+<td>₽6 175 ($65)-85</td>
 <td>BB+обед</td>
 <td>Пирс для дайвинга</td>
 </tr>
 <tr>
 <td>Solymar Marsa Alam Beach Resort</td>
-<td>₽5 225 (≈ $55)-70</td>
+<div id="hc_404316" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Solymar Marsa Alam Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Solymar Marsa Alam Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_404316 .hc-slide');var d=document.querySelectorAll('#hc_404316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_404316 .hc-slide');var d=document.querySelectorAll('#hc_404316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Solymar Marsa Alam Beach Resort &bull; 2 photos</p></div>
+<td>₽5 225 ($55)-70</td>
 <td>BB/All inclusive</td>
 <td>Трансфер до пляжа</td>
 </tr>
 </tbody>
 </table>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. The Oberoi Beach Resort, Sahl Hasheesh</h3>
 <p>Пятизвездочный курорт сети Oberoi, расположенный в 45 километрах к северу от Марса-Алам, в бухте Сахль-Хашиш. 120 номеров и 40 вилл, цены от 250 долларов за ночь в стандартном номере и до 800 долларов за виллу с частным бассейном. Особенности: архитектура в стиле мавританского дворца, 800-метровый частный пляж с белым песком, три ресторана (индийский, средиземноморский, морепродукты), спа-центр с аюрведическими процедурами (90 долларов за 60 минут). Каждый номер имеет мраморную ванну с видом на море и персонального дворецкого. Минусы: удаленность от Марса-Алам (45 минут на машине), высокие цены на дополнительные услуги (коктейль у бассейна — 20 долларов), строгий дресс-код в ресторанах (закрытая обувь и длинные брюки для мужчин).</p>
@@ -486,19 +578,19 @@
 <tbody>
 <tr>
 <td>The Oberoi Beach Resort</td>
-<td>₽23 750 (≈ $250)-800</td>
+<td>₽23 750 ($250)-800</td>
 <td>120 номеров + 40 вилл</td>
 <td>Мавританский стиль</td>
 </tr>
 <tr>
 <td>Wadi Lahami Village Resort</td>
-<td>₽33 250 (≈ $350)</td>
+<td>₽33 250 ($350)</td>
 <td>25 вилл</td>
 <td>Эко-курорт в скалах</td>
 </tr>
 <tr>
 <td>Marsa Shagra Eco-Lodge (Luxury Tents)</td>
-<td>₽17 100 (≈ $180)-220</td>
+<td>₽17 100 ($180)-220</td>
 <td>4 шатра</td>
 <td>Душ под открытым небом</td>
 </tr>
@@ -602,6 +694,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -630,6 +723,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -647,8 +741,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

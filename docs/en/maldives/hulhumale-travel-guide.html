@@ -6,7 +6,7 @@
     <title>Hulhumale Travel Guide 2026</title>
     <meta name="description" content="Hulhumale Travel Guide 2026 Oh, Hulhumale! If you think the Maldives is only about overwater bungalows and honeymoon resorts, let me stop you right there. Th...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/hulhumale-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/hulhumale-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/hulhumale-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/hulhumale-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Hulhumale Travel Guide 2026">
     <meta property="og:description" content="Hulhumale Travel Guide 2026 Oh, Hulhumale! If you think the Maldives is only about overwater bungalows and honeymoon resorts, let me stop you right there. Th...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/hulhumale-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/hulhumale-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/70683603.jpg?k=a299869c220804e8410738b0afa5f166be86303ebfda1b3b989e7fb65128a3c5&amp;o=');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/hulhumale.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Hulhumale Travel Guide 2026</div>
@@ -366,15 +390,15 @@
 <p>I’ve sent dozens of travelers here, and every single one comes back raving about the sunsets from the Hulhumale Beach. There’s something magical about watching the sky turn pink and orange while local kids play football on the sand. It’s raw, it’s real, and it’s wonderful. Trust me, you’ll fall in love with this place the moment you step off the bridge.</p>
 
 <h2>How to Get There</h2>
-<p>Your journey starts at Velana International Airport (MLE), which is literally a 10-minute drive from Hulhumale. Flights from major cities are plentiful. From Moscow, expect direct flights with Aeroflot or flydubai (via Dubai) ranging from <strong>$550 (≈ ₽52 250) to $850 (≈ ₽80 750)</strong> round trip in economy. From London, British Airways or Emirates will cost you <strong>$650 (≈ ₽61 750) to $950 (≈ ₽90 250)</strong>. From New York, it’s a bit pricier—around <strong>$900 (≈ ₽85 500) to $1 300 (≈ ₽123 500)</strong> with a layover in Doha or Dubai. I recommend booking at least 3 months ahead for the best deals. Once you land, just hop in a taxi (around <strong>$12 (≈ ₽1 140)-$15 (≈ ₽1 425)</strong>) or take the public bus (only <strong>$1.50 (≈ ₽142)</strong>) straight to your hotel.</p>
+<p>Your journey starts at Velana International Airport (MLE), which is literally a 10-minute drive from Hulhumale. Flights from major cities are plentiful. From Moscow, expect direct flights with Aeroflot or flydubai (via Dubai) ranging from <strong>$550to $850</strong> round trip in economy. From London, British Airways or Emirates will cost you <strong>$650to $950</strong>. From New York, it’s a bit pricier—around <strong>$900to $1 300</strong> with a layover in Doha or Dubai. I recommend booking at least 3 months ahead for the best deals. Once you land, just hop in a taxi (around <strong>$12-$15</strong>) or take the public bus (only <strong>$2</strong>) straight to your hotel.</p>
 
 <h2>Where to Stay</h2>
 <p>Hulhumale is small but has neighborhoods that suit every traveler. The main area near the beach is perfect for sun-seekers, while the central district is closer to shops and restaurants.</p>
 <ul>
-    <li><strong>Budget (under $60 (≈ ₽5 700)/night):</strong> I love <em>Hulhumale Inn</em>—clean rooms, friendly staff, and breakfast included. Doubles from <strong>$55 (≈ ₽5 225)/night</strong>.</li>
-    <li><strong>Mid-range ($60 (≈ ₽5 700)-$120 (≈ ₽11 400)/night):</strong> <em>Beach Palace Hotel</em> is my top pick. It’s a 2-minute walk to the beach, has a rooftop terrace, and rooms start at <strong>$85 (≈ ₽8 075)/night</strong>.</li>
-    <li><strong>Luxury ($120 (≈ ₽11 400)+/night):</strong> <em>JEN Maldives by Shangri-La</em> is stunning. Modern design, infinity pool, and sea views. Rooms from <strong>$190 (≈ ₽18 050)/night</strong>.</li>
-    <li><strong>Hostel option:</strong> <em>Banyan Tree Hostel</em>—dorm beds from <strong>$20 (≈ ₽1 900)/night</strong>, great for solo travelers.</li>
+    <li><strong>Budget (under $60/night):</strong> I love <em>Hulhumale Inn</em>—clean rooms, friendly staff, and breakfast included. Doubles from <strong>$55/night</strong>.</li>
+    <li><strong>Mid-range ($60-$120/night):</strong> <em>Beach Palace Hotel</em> is my top pick. It’s a 2-minute walk to the beach, has a rooftop terrace, and rooms start at <strong>$85/night</strong>.</li>
+    <li><strong>Luxury ($120+/night):</strong> <em>JEN Maldives by Shangri-La</em> is stunning. Modern design, infinity pool, and sea views. Rooms from <strong>$190/night</strong>.</li>
+    <li><strong>Hostel option:</strong> <em>Banyan Tree Hostel</em>—dorm beds from <strong>$20/night</strong>, great for solo travelers.</li>
 </ul>
 
 <h2>Top 15 Attractions</h2>
@@ -383,7 +407,7 @@
     <li><strong>Hulhumale Beach</strong> – The main public beach with powdery white sand and calm turquoise waters. Perfect for swimming and sunset photography. <em>Free entry. Open 24 hours.</em></li>
     <li><strong>Hulhumale Central Park</strong> – A lush green space with jogging tracks, a lake, and kids' play areas. Great for a picnic. <em>Free. Open 6 AM – 10 PM.</em></li>
     <li><strong>Masjid Al-Salaam</strong> – The largest mosque on the island, with stunning Islamic architecture. Non-Muslims can visit outside prayer times. <em>Free. Open 9 AM – 12 PM, 2 PM – 5 PM.</em></li>
-    <li><strong>Hulhumale Lagoon</strong> – A shallow, crystal-clear lagoon ideal for kayaking and paddleboarding. Rentals available. <em>Free to enter; kayak rental $15 (≈ ₽1 425)/hour.</em></li>
+    <li><strong>Hulhumale Lagoon</strong> – A shallow, crystal-clear lagoon ideal for kayaking and paddleboarding. Rentals available. <em>Free to enter; kayak rental $15/hour.</em></li>
     <li><strong>The Maldives Islamic Centre</strong> – A cultural hub with exhibitions on Maldivian history and art. <em>Free. Open 10 AM – 6 PM (closed Friday).</em></li>
     <li><strong>Hulhumale Ferry Terminal</strong> – Not just transport, but a lively spot with local food stalls and views of Male. <em>Free. Open 24 hours.</em></li>
     <li><strong>Beach Park</strong> – A smaller, quieter beach with shaded areas and benches. <em>Free. Open 6 AM – 8 PM.</em></li>
@@ -394,27 +418,27 @@
     <li><strong>Artificial Beach (South Side)</strong> – A man-made swimming area with lifeguards. Great for families. <em>Free. Open 6 AM – 7 PM.</em></li>
     <li><strong>Hulhumale Library</strong> – A quiet spot with a small collection of books and local newspapers. <em>Free. Open 9 AM – 5 PM (closed Friday).</em></li>
     <li><strong>Maldives Police Museum</strong> – A quirky museum showcasing police history and artifacts. <em>Free. Open 10 AM – 4 PM (weekdays only).</em></li>
-    <li><strong>Hulhumale Golf Course</strong> – A 9-hole course with sea views. Perfect for a relaxed game. <em>Green fee $30. (≈ ₽2 850) Open 7 AM – 6 PM.</em></li>
+    <li><strong>Hulhumale Golf Course</strong> – A 9-hole course with sea views. Perfect for a relaxed game. <em>Green fee $30Open 7 AM – 6 PM.</em></li>
 </ol>
 
 <h2>Getting Around</h2>
 <p>Hulhumale is tiny—you can walk from one end to the other in 40 minutes. But if you’re lazy like me sometimes, here’s how to get around:</p>
 <ul>
-    <li><strong>Public Buses:</strong> Cheap and frequent. Routes cover the whole island. <strong>$0.50 (≈ ₽47) per ride.</strong></li>
-    <li><strong>Taxis:</strong> Easy to flag down. Short trips cost <strong>$2 (≈ ₽190)-$4 (≈ ₽380)</strong>. Always negotiate the price before getting in.</li>
-    <li><strong>Bicycle Rental:</strong> My favorite way to explore. Rent from shops near the beach for <strong>$8 (≈ ₽760)/day</strong>.</li>
-    <li><strong>Scooter Rental:</strong> For adventurous souls. <strong>$20 (≈ ₽1 900)/day</strong> (valid international license required).</li>
-    <li><strong>Ferry to Male:</strong> The public ferry runs every 30 minutes. <strong>$1.50 (≈ ₽142)</strong> per trip.</li>
+    <li><strong>Public Buses:</strong> Cheap and frequent. Routes cover the whole island. <strong>$0per ride.</strong></li>
+    <li><strong>Taxis:</strong> Easy to flag down. Short trips cost <strong>$2-$4</strong>. Always negotiate the price before getting in.</li>
+    <li><strong>Bicycle Rental:</strong> My favorite way to explore. Rent from shops near the beach for <strong>$8/day</strong>.</li>
+    <li><strong>Scooter Rental:</strong> For adventurous souls. <strong>$20/day</strong> (valid international license required).</li>
+    <li><strong>Ferry to Male:</strong> The public ferry runs every 30 minutes. <strong>$2</strong> per trip.</li>
 </ul>
 
 <h2>Where to Eat</h2>
 <p>Maldivian food is a delightful mix of Indian, Sri Lankan, and Arabic influences. I’ve eaten my way through Hulhumale, and here are my top picks:</p>
 <ul>
-    <li><strong>Sea View Restaurant</strong> – Fresh grilled fish, curries, and rice. A meal costs <strong>$8 (≈ ₽760)-$12 (≈ ₽1 140)</strong>. Try the mas huni (tuna with coconut) for breakfast.</li>
-    <li><strong>Bistro 9</strong> – Modern cafe with burgers, pasta, and salads. Great for lunch. <strong>$6 (≈ ₽570)-$10 (≈ ₽950)</strong> per dish.</li>
-    <li><strong>Local Street Food Stalls</strong> – Near the market, grab samosas, fried fish balls, and short eats (local snacks). <strong>$1 (≈ ₽95)-$3 (≈ ₽285)</strong> per portion.</li>
-    <li><strong>Riyal Restaurant</strong> – Authentic Maldivian thali (set meal) with rice, curries, and desserts. <strong>$7 (≈ ₽665)</strong> for a full meal.</li>
-    <li><strong>Cloud Cafe</strong> – Coffee and pastries in a cozy setting. <strong>$3 (≈ ₽285)-$5 (≈ ₽475)</strong> for a drink and snack.</li>
+    <li><strong>Sea View Restaurant</strong> – Fresh grilled fish, curries, and rice. A meal costs <strong>$8-$12</strong>. Try the mas huni (tuna with coconut) for breakfast.</li>
+    <li><strong>Bistro 9</strong> – Modern cafe with burgers, pasta, and salads. Great for lunch. <strong>$6-$10</strong> per dish.</li>
+    <li><strong>Local Street Food Stalls</strong> – Near the market, grab samosas, fried fish balls, and short eats (local snacks). <strong>$1-$3</strong> per portion.</li>
+    <li><strong>Riyal Restaurant</strong> – Authentic Maldivian thali (set meal) with rice, curries, and desserts. <strong>$7</strong> for a full meal.</li>
+    <li><strong>Cloud Cafe</strong> – Coffee and pastries in a cozy setting. <strong>$3-$5</strong> for a drink and snack.</li>
 </ul>
 <p><em>Pro tip: Always ask for the "local price" at street stalls—tourists sometimes get charged double!</em></p>
 
@@ -465,9 +489,9 @@
     </tr>
     <tr style="font-weight: bold;">
         <td>Total (approx)</td>
-        <td>$640 (≈ ₽60 800)</td>
-        <td>$995 (≈ ₽94 525)</td>
-        <td>$2 020 (≈ ₽191 900)</td>
+        <td>$640</td>
+        <td>$995</td>
+        <td>$2 020</td>
     </tr>
 </table>
 <p><em>Note: Prices include my 12-15% markup for realism. Actual costs may vary slightly.</em></p>
@@ -477,7 +501,7 @@
 <ol>
     <li><strong>Pack for modesty:</strong> It’s a Muslim country. Cover shoulders and knees when not on the beach. I learned this the hard way!</li>
     <li><strong>Bring cash:</strong> Many small shops and taxis don’t accept cards. ATMs are limited.</li>
-    <li><strong>Drink bottled water:</strong> Tap water is not safe. A 1.5L bottle costs about <strong>$0.50 (≈ ₽47)</strong>.</li>
+    <li><strong>Drink bottled water:</strong> Tap water is not safe. A 1.5L bottle costs about <strong>$0</strong>.</li>
     <li><strong>Sun protection is non-negotiable:</strong> The sun is brutal. SPF 50, a hat, and sunglasses are essential.</li>
     <li><strong>Learn a few Dhivehi words:</strong> "Shukuriyaa" (thank you) goes a long way. Locals will smile.</li>
     <li><strong>Bargain respectfully:</strong> At markets, negotiate prices but keep it friendly. It’s part of the culture.</li>
@@ -591,6 +615,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -619,6 +644,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -636,8 +662,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

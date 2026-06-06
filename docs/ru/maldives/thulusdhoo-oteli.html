@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Тулусду 2026: от бюджета до люкса Вы знаете это чувство, когда наконец-то планируешь долгожданный отпуск, и кажется, что всё складывается иде...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Тулусду 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Тулусду 2026: от бюджета до люкса Вы знаете это чувство, когда наконец-то планируешь долгожданный отпуск, и кажется, что всё складывается иде...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/thulusdhoo-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://www.hotels-maldives.net/data/Photos/OriginalPhoto/7901/790145/790145394.JPEG');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/thulusdhoo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Тулусду 2026: от бюджета до люкса</div>
@@ -363,92 +387,171 @@
 
 <p>Гостиничная инфраструктура в Тулусду развита прекрасно. Здесь есть всё: от скромных гестхаусов, где пахнет домашней выпечкой, до роскошных резортов с собственными спа-центрами. Основные районы для проживания — это пляжная линия Орла-Негра (самая тусовочная и живая), спокойный Прайя-ду-Джаккаре (идеален для семей) и центр города, где сосредоточены бюджетные варианты. Цены, как вы понимаете, скачут в зависимости от сезона. В высокий сезон (декабрь-февраль) номера дорожают на 30-40%, а вот в мае-июне можно найти настоящие жемчужины по смешным ценам. Я рекомендую бронировать жильё минимум за 2-3 месяца, если едете в пик, иначе рискуете остаться у разбитого корыта. И да, все цены, которые я приведу ниже, уже с учётом моей любимой наценки в 12-15% — так что вы сразу видите реальную картину с учётом комиссий и сборов.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <p>Для тех, кто хочет сэкономить, но не потерять в качестве, у меня есть три проверенных варианта. Поверьте, я сама останавливалась в каждом из них, и это было здорово!</p>
 
 <h3>1. Pousada Sol Nascente</h3>
-<p>Этот маленький гестхаус находится в двух шагах от пляжа Орла-Негра. Представьте: уютный дворик с гамаками, где по утрам подают свежевыжатый сок из маракуйи, и номера, хоть и простые, но чистые до скрипа. Хозяйка, донья Мария, лично встречает каждого гостя и подскажет, где купить самые дешёвые кокосы. Цена за ночь: <strong>₽4 275 (≈ $45)</strong> (с завтраком).</p>
+<div id="hc_549507" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pousada Sol Nascente - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Pousada Sol Nascente - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Pousada Sol Nascente - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_549507 .hc-slide');var d=document.querySelectorAll('#hc_549507 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_549507 .hc-slide');var d=document.querySelectorAll('#hc_549507 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_549507 .hc-slide');var d=document.querySelectorAll('#hc_549507 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pousada Sol Nascente &bull; 3 photos</p></div>
+<p>Этот маленький гестхаус находится в двух шагах от пляжа Орла-Негра. Представьте: уютный дворик с гамаками, где по утрам подают свежевыжатый сок из маракуйи, и номера, хоть и простые, но чистые до скрипа. Хозяйка, донья Мария, лично встречает каждого гостя и подскажет, где купить самые дешёвые кокосы. Цена за ночь: <strong>₽4 275 ($45)</strong> (с завтраком).</p>
 <ul>
     <li><strong>Плюсы:</strong> Очень близко к пляжу, домашняя атмосфера, вкусный завтрак, бесплатный Wi-Fi (правда, ловит только во дворе).</li>
     <li><strong>Минусы:</strong> Нет кондиционера (только вентилятор), шумно по вечерам из-за соседних баров, минимальный набор удобств.</li>
 </ul>
 
 <h3>2. Hotel Praia Bela</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Если вам нужно что-то более центральное, обратите внимание на этот вариант. Он расположен в центре Тулусду, прямо на главной улице. Номера небольшие, но есть всё необходимое: холодильник, телевизор и душ с горячей водой (что в Бразилии бывает не всегда). Цена за ночь: <strong>₽3 610 (≈ $38)</strong> (без завтрака).</p>
+<div id="hc_697610" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Praia Bela - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Praia Bela - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Praia Bela - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_697610 .hc-slide');var d=document.querySelectorAll('#hc_697610 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_697610 .hc-slide');var d=document.querySelectorAll('#hc_697610 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_697610 .hc-slide');var d=document.querySelectorAll('#hc_697610 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Praia Bela &bull; 3 photos</p></div>
+<p>Если вам нужно что-то более центральное, обратите внимание на этот вариант. Он расположен в центре Тулусду, прямо на главной улице. Номера небольшие, но есть всё необходимое: холодильник, телевизор и душ с горячей водой (что в Бразилии бывает не всегда). Цена за ночь: <strong>₽3 610 ($38)</strong> (без завтрака).</p>
 <ul>
     <li><strong>Плюсы:</strong> Очень бюджетно, рядом автобусная остановка, круглосуточная стойка регистрации, можно заселиться в любое время.</li>
-    <li><strong>Минусы:</strong> Утром шум от машин, завтрак платный (₽760 (≈ $8)), нет парковки, старая мебель.</li>
+    <li><strong>Минусы:</strong> Утром шум от машин, завтрак платный (₽760 ($8)), нет парковки, старая мебель.</li>
 </ul>
 
 <h3>3. Hostel Caminho do Mar</h3>
-<p>Для настоящих искателей приключений! Это хостел с общими номерами, но есть и пара частных комнат. Атмосфера здесь невероятная: каждый вечер на террасе собираются путешественники со всего мира, играют на гитаре и делятся историями. Цена за ночь: <strong>₽2 185 (≈ $23)</strong> (общий номер) или <strong>₽4 465 (≈ $47)</strong> (частный).</p>
+<div id="hc_573945" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Hostel Caminho do Mar - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Hostel Caminho do Mar - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_573945 .hc-slide');var d=document.querySelectorAll('#hc_573945 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_573945 .hc-slide');var d=document.querySelectorAll('#hc_573945 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hostel Caminho do Mar &bull; 2 photos</p></div>
+<p>Для настоящих искателей приключений! Это хостел с общими номерами, но есть и пара частных комнат. Атмосфера здесь невероятная: каждый вечер на террасе собираются путешественники со всего мира, играют на гитаре и делятся историями. Цена за ночь: <strong>₽2 185 ($23)</strong> (общий номер) или <strong>₽4 465 ($47)</strong> (частный).</p>
 <ul>
     <li><strong>Плюсы:</strong> Очень дёшево, отличное место для знакомств, есть общая кухня, проводят экскурсии.</li>
     <li><strong>Минусы:</strong> Шумно до поздна, нет кондиционера, общий душ и туалет, не подойдёт для пар, ищущих романтики.</li>
 </ul>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <p>Это моя любимая категория. Здесь вы получаете лучшее соотношение цены и качества. Я рекомендую эти отели всем своим друзьям, и они всегда возвращаются довольными.</p>
 
 <h3>1. Pousada Recanto do Sol</h3>
-<p>Очаровательная гостиница в районе Прайя-ду-Джаккаре. Представьте: бассейн с бирюзовой водой, окружённый пальмами, и номера с балконами, откуда видно море. Завтраки здесь — отдельный вид искусства: свежие фрукты, пирожные, горячие булочки. Цена за ночь: <strong>₽8 455 (≈ $89)</strong> (с завтраком).</p>
+<div id="hc_219747" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pousada Recanto do Sol - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Pousada Recanto do Sol - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Pousada Recanto do Sol - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_219747 .hc-slide');var d=document.querySelectorAll('#hc_219747 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_219747 .hc-slide');var d=document.querySelectorAll('#hc_219747 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_219747 .hc-slide');var d=document.querySelectorAll('#hc_219747 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pousada Recanto do Sol &bull; 3 photos</p></div>
+<p>Очаровательная гостиница в районе Прайя-ду-Джаккаре. Представьте: бассейн с бирюзовой водой, окружённый пальмами, и номера с балконами, откуда видно море. Завтраки здесь — отдельный вид искусства: свежие фрукты, пирожные, горячие булочки. Цена за ночь: <strong>₽8 455 ($89)</strong> (с завтраком).</p>
 <ul>
     <li><strong>Фишки:</strong> Бесплатный трансфер до пляжа, вечерняя йога на террасе, очень тихий район — идеально для пар.</li>
     <li><strong>Что я люблю:</strong> Персонал знает всех гостей по имени, и каждый вечер оставляют шоколадку на подушке.</li>
 </ul>
 
 <h3>2. Hotel Mar Azul</h3>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ma" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Прямо на первой линии пляжа Орла-Негра. Это не просто отель, а целый комплекс с рестораном, баром у бассейна и даже небольшим спа. Номера просторные, с кондиционерами и мини-барами. Цена за ночь: <strong>₽10 925 (≈ $115)</strong> (с завтраком).</p>
+<div id="hc_169744" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Mar Azul - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Mar Azul - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Mar Azul - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_169744 .hc-slide');var d=document.querySelectorAll('#hc_169744 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_169744 .hc-slide');var d=document.querySelectorAll('#hc_169744 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_169744 .hc-slide');var d=document.querySelectorAll('#hc_169744 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Mar Azul &bull; 3 photos</p></div>
+<p>Прямо на первой линии пляжа Орла-Негра. Это не просто отель, а целый комплекс с рестораном, баром у бассейна и даже небольшим спа. Номера просторные, с кондиционерами и мини-барами. Цена за ночь: <strong>₽10 925 ($115)</strong> (с завтраком).</p>
 <ul>
     <li><strong>Фишки:</strong> Собственный выход на пляж, шезлонги и зонтики бесплатно, живая музыка по пятницам.</li>
-    <li><strong>Мой совет:</strong> Берите номер с видом на море — это стоит доплаты в ₽1 900 (≈ $20 ) но рассветы там просто волшебные.</li>
+    <li><strong>Мой совет:</strong> Берите номер с видом на море — это стоит доплаты в ₽1 900 ($20)но рассветы там просто волшебные.</li>
 </ul>
 
 <h3>3. Pousada Vila Verde</h3>
-<p>Семейный отель в тихом переулке, в 10 минутах ходьбы от центра. Здесь царит атмосфера уюта и спокойствия. Номера оформлены в зелёных тонах, есть небольшой сад с качелями. Цена за ночь: <strong>₽6 840 (≈ $72)</strong> (с завтраком).</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_517506" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pousada Vila Verde - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Pousada Vila Verde - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Pousada Vila Verde - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_517506 .hc-slide');var d=document.querySelectorAll('#hc_517506 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_517506 .hc-slide');var d=document.querySelectorAll('#hc_517506 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_517506 .hc-slide');var d=document.querySelectorAll('#hc_517506 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pousada Vila Verde &bull; 3 photos</p></div>
+<p>Семейный отель в тихом переулке, в 10 минутах ходьбы от центра. Здесь царит атмосфера уюта и спокойствия. Номера оформлены в зелёных тонах, есть небольшой сад с качелями. Цена за ночь: <strong>₽6 840 ($72)</strong> (с завтраком).</p>
 <ul>
     <li><strong>Фишки:</strong> Бесплатный велопрокат, можно попросить организовать пикник на пляже, очень дружелюбные хозяева.</li>
     <li><strong>Почему я его люблю:</strong> Здесь тихо даже в высокий сезон, идеально, если вы устали от шума и хотите восстановить силы.</li>
 </ul>
 
 <h3>4. Hotel Brisa do Mar</h3>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Br" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Современный отель с отличным расположением — на границе между центром и пляжной зоной. Номера светлые, с панорамными окнами, а на крыше — лаунж-зона с видом на океан. Цена за ночь: <strong>₽9 310 (≈ $98)</strong> (с завтраком).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_395594" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Brisa do Mar - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Brisa do Mar - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Brisa do Mar - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_395594 .hc-slide');var d=document.querySelectorAll('#hc_395594 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_395594 .hc-slide');var d=document.querySelectorAll('#hc_395594 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_395594 .hc-slide');var d=document.querySelectorAll('#hc_395594 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Brisa do Mar &bull; 3 photos</p></div>
+<p>Современный отель с отличным расположением — на границе между центром и пляжной зоной. Номера светлые, с панорамными окнами, а на крыше — лаунж-зона с видом на океан. Цена за ночь: <strong>₽9 310 ($98)</strong> (с завтраком).</p>
 <ul>
     <li><strong>Фишки:</strong> Крытый бассейн, тренажёрный зал, коворкинг (если нужно работать), бар на крыше с коктейлями.</li>
     <li><strong>Идеально для:</strong> Молодых пар и фрилансеров, которые хотят совместить отдых и работу.</li>
 </ul>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <p>Когда хочется настоящей роскоши и чтобы каждая минута была пропитана заботой, я отправляю своих клиентов в эти места. Это уровень «вау».</p>
 
 <h3>1. Resort Praia Dourada</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Пятизвёздочный курорт, раскинувшийся на целых 10 гектарах тропического сада. Здесь есть всё: от частного пляжа с белым песком до трёх бассейнов, спа-центра с хаммамом и пяти ресторанов. Номера — это отдельные виллы с собственными бассейнами. Цена за ночь: <strong>₽30 400 (≈ $320)</strong> (всё включено).</p>
+<div id="hc_732759" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Resort Praia Dourada - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Resort Praia Dourada - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Resort Praia Dourada - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_732759 .hc-slide');var d=document.querySelectorAll('#hc_732759 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_732759 .hc-slide');var d=document.querySelectorAll('#hc_732759 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_732759 .hc-slide');var d=document.querySelectorAll('#hc_732759 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Resort Praia Dourada &bull; 3 photos</p></div>
+<p>Пятизвёздочный курорт, раскинувшийся на целых 10 гектарах тропического сада. Здесь есть всё: от частного пляжа с белым песком до трёх бассейнов, спа-центра с хаммамом и пяти ресторанов. Номера — это отдельные виллы с собственными бассейнами. Цена за ночь: <strong>₽30 400 ($320)</strong> (всё включено).</p>
 <ul>
     <li><strong>Особенности:</strong> Персональный консьерж, экскурсии на катерах, кулинарные мастер-классы, детский клуб.</li>
     <li><strong>Мои эмоции:</strong> Когда я впервые вошла в лобби, у меня перехватило дыхание — мрамор, живые орхидеи и запах моря. Это стоит каждой копейки.</li>
 </ul>
 
 <h3>2. Hotel Villa Tulum</h3>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Vi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Бутик-отель в стиле «бохо-шик», который находится прямо на утёсе с видом на океан. Здесь всего 12 номеров, и каждый уникален. В номерах — кровати с балдахинами, ванны под открытым небом и личные террасы. Цена за ночь: <strong>₽23 275 (≈ $245)</strong> (с завтраком).</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_842635" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Villa Tulum - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Villa Tulum - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Villa Tulum - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_842635 .hc-slide');var d=document.querySelectorAll('#hc_842635 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_842635 .hc-slide');var d=document.querySelectorAll('#hc_842635 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_842635 .hc-slide');var d=document.querySelectorAll('#hc_842635 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Villa Tulum &bull; 3 photos</p></div>
+<p>Бутик-отель в стиле «бохо-шик», который находится прямо на утёсе с видом на океан. Здесь всего 12 номеров, и каждый уникален. В номерах — кровати с балдахинами, ванны под открытым небом и личные террасы. Цена за ночь: <strong>₽23 275 ($245)</strong> (с завтраком).</p>
 <ul>
     <li><strong>Особенности:</strong> Бесплатный спа-ритуал при заселении, ужин при свечах на утёсе, винный погреб с дегустациями.</li>
     <li><strong>Для кого:</strong> Для пар в медовом месяце или тех, кто ищет уединения и романтики.</li>
 </ul>
 
 <h3>3. Grand Horizon Resort</h3>
-<p>Самый новый отель в Тулусду, открывшийся в 2025 году. Это ультрасовременный комплекс с дизайнерскими номерами, бесконечным бассейном, который сливается с горизонтом, и собственной лагуной с морскими черепахами. Цена за ночь: <strong>₽38 950 (≈ $410)</strong> (полупансион).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_910645" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Grand Horizon Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Grand Horizon Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Grand Horizon Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_910645 .hc-slide');var d=document.querySelectorAll('#hc_910645 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_910645 .hc-slide');var d=document.querySelectorAll('#hc_910645 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_910645 .hc-slide');var d=document.querySelectorAll('#hc_910645 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grand Horizon Resort &bull; 3 photos</p></div>
+<p>Самый новый отель в Тулусду, открывшийся в 2025 году. Это ультрасовременный комплекс с дизайнерскими номерами, бесконечным бассейном, который сливается с горизонтом, и собственной лагуной с морскими черепахами. Цена за ночь: <strong>₽38 950 ($410)</strong> (полупансион).</p>
 <ul>
     <li><strong>Особенности:</strong> Подводный ресторан, вертолётная площадка, частный яхт-клуб, услуги дворецкого.</li>
     <li><strong>Впечатления:</strong> Это не просто отель, это целая вселенная. Я рекомендую его тем, кто хочет почувствовать себя звездой.</li>
@@ -466,7 +569,6 @@
 
 <h3>Для ночной жизни</h3>
 <p>Орла-Негра — это эпицентр вечеринок. Здесь каждый вечер что-то происходит: от живых концертов до дискотек на пляже. Если вы любите танцевать до утра, берите отель прямо на первой линии — так вы не пропустите ни одного события. Но предупреждаю: шумно будет до 3-4 утра.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Советы по бронированию</h2>
 
@@ -493,7 +595,6 @@
 </ul>
 
 <p>И последнее: всегда читайте свежие отзывы на Google Maps и TripAdvisor. Один негативный комментарий может сэкономить вам нервы и деньги. Я всегда проверяю отель по трём источникам, прежде чем рекомендовать. Доверяйте, но проверяйте — это моё золотое правило.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Надеюсь, эта статья поможет вам выбрать идеальное место в Тулусду. Если остались вопросы — пишите, я всегда рада помочь. Счастливого пути и ярких эмоций!</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
@@ -586,6 +687,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -614,6 +716,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -631,8 +734,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

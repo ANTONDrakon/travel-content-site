@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Нуса-Дуа 2026: от бюджета до люкса Нуса-Дуа, расположенная на юге Бали, представляет собой образец тропического рая с безупречной инфраструкт...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Нуса-Дуа 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Нуса-Дуа 2026: от бюджета до люкса Нуса-Дуа, расположенная на юге Бали, представляет собой образец тропического рая с безупречной инфраструкт...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/nusa-dua-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/nusa-dua.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Нуса-Дуа 2026: от бюджета до люкса</div>
@@ -361,53 +385,121 @@
 
 <p>Нуса-Дуа, расположенная на юге Бали, представляет собой образец тропического рая с безупречной инфраструктурой. В отличие от шумного Куты или Семиньяка, этот район известен своими охраняемыми пляжами, гольф-полями мирового класса и концентрацией пятизвездочных курортов. Гостиничная инфраструктура здесь развита настолько, что многие отели имеют собственные спа-центры, теннисные корты и частные выходы к океану. Однако Нуса-Дуа — это не только люкс: за последние три года здесь открылось несколько бюджетных гестхаусов и отелей среднего класса, что сделало район доступным для путешественников с разным бюджетом.</p>
 
-<p>Цены на проживание в Нуса-Дуа в 2026 году варьируются от ₽3 325 (≈ $35) за ночь в хостеле до ₽142 500 (≈ $1500) в президентских сьютах отелей уровня St. Regis. Сезонность играет ключевую роль: высокий сезон (июль-август, декабрь-январь) поднимает стоимость на 30-40%, тогда как в межсезонье (февраль-март, октябрь-ноябрь) можно найти скидки до 50%. Все цены в статье указаны для стандартных двухместных номеров с завтраком, если не указано иное.</p>
+<p>Цены на проживание в Нуса-Дуа в 2026 году варьируются от ₽3 325 ($35)за ночь в хостеле до ₽142 500 ($1 500)в президентских сьютах отелей уровня St. Regis. Сезонность играет ключевую роль: высокий сезон (июль-август, декабрь-январь) поднимает стоимость на 30-40%, тогда как в межсезонье (февраль-март, октябрь-ноябрь) можно найти скидки до 50%. Все цены в статье указаны для стандартных двухместных номеров с завтраком, если не указано иное.</p>
+<div id="hc_400423" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="St. Regis. Сезонность играет ключевую роль: высокий сезон - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="St. Regis. Сезонность играет ключевую роль: высокий сезон - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_400423 .hc-slide');var d=document.querySelectorAll('#hc_400423 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_400423 .hc-slide');var d=document.querySelectorAll('#hc_400423 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">St. Regis. Сезонность играет ключевую роль: высокий сезон &bull; 2 photos</p></div>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. OYO 91177 Nusa Dua Inn</h3>
-<p>Этот отель, расположенный в 15 минутах ходьбы от пляжа Гагар, предлагает базовые, но чистые номера с кондиционером и бесплатным Wi-Fi. Средняя цена — ₽3 610 (≈ $38) за ночь. Плюсы: тихий район, круглосуточная стойка регистрации, рядом местные варунги с едой от ₽285 (≈ $3.) Минусы: отсутствие бассейна, завтрак не включен, шум от дороги в номерах с окнами на улицу.</p>
+<p>Этот отель, расположенный в 15 минутах ходьбы от пляжа Гагар, предлагает базовые, но чистые номера с кондиционером и бесплатным Wi-Fi. Средняя цена — ₽3 610 ($38)за ночь. Плюсы: тихий район, круглосуточная стойка регистрации, рядом местные варунги с едой от ₽285 ($3)Минусы: отсутствие бассейна, завтрак не включен, шум от дороги в номерах с окнами на улицу.</p>
 
 <h3>2. RedDoorz Plus near Bali Collection</h3>
-<p>Находится в 500 метрах от торгового центра Bali Collection. Номера оснащены мини-холодильником и телевизором. Цена: ₽4 275 (≈ $45) за ночь. Плюсы: близость к ресторанам и магазинам, бесплатная парковка, персонал говорит по-английски. Минусы: маленькая площадь номера (14 кв. м.), отсутствие лифта, за朝трак только по запросу за ₽475 (≈ $5.)</p>
+<div id="hc_220537" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="RedDoorz Plus near Bali Collection - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="RedDoorz Plus near Bali Collection - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_220537 .hc-slide');var d=document.querySelectorAll('#hc_220537 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_220537 .hc-slide');var d=document.querySelectorAll('#hc_220537 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">RedDoorz Plus near Bali Collection &bull; 2 photos</p></div>
+<p>Находится в 500 метрах от торгового центра Bali Collection. Номера оснащены мини-холодильником и телевизором. Цена: ₽4 275 ($45)за ночь. Плюсы: близость к ресторанам и магазинам, бесплатная парковка, персонал говорит по-английски. Минусы: маленькая площадь номера (14 кв. м.), отсутствие лифта, за朝трак только по запросу за ₽475 ($5)</p>
 
 <h3>3. The Tanis Guesthouse Nusa Dua</h3>
-<p>Семейный гестхаус с тремя номерами, окруженный садом. Цена: ₽3 325 (≈ $35) за ночь. Плюсы: бесплатный трансфер до пляжа (5 минут на машине), домашняя атмосфера, завтрак включен (блинчики и фрукты). Минусы: нет бассейна, удаленность от центра (3 км до Bali Collection), бронирование только через WhatsApp.</p>
+<div id="hc_117834" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="The Tanis Guesthouse Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="The Tanis Guesthouse Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_117834 .hc-slide');var d=document.querySelectorAll('#hc_117834 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_117834 .hc-slide');var d=document.querySelectorAll('#hc_117834 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Tanis Guesthouse Nusa Dua &bull; 2 photos</p></div>
+<p>Семейный гестхаус с тремя номерами, окруженный садом. Цена: ₽3 325 ($35)за ночь. Плюсы: бесплатный трансфер до пляжа (5 минут на машине), домашняя атмосфера, завтрак включен (блинчики и фрукты). Минусы: нет бассейна, удаленность от центра (3 км до Bali Collection), бронирование только через WhatsApp.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Grand Inna Nusa Dua</h3>
-<p>Один из старейших отелей района, прошедший реновацию в 2024 году. Расположен прямо на пляже Мутиара. Цена: ₽9 025 (≈ $95) за ночь. Фишки: большой лагунообразный бассейн с горками, три ресторана, включая японский, и бесплатный фитнес-центр. Номера площадью 28 кв. м. с балконами.</p>
+<div id="hc_573889" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Grand Inna Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Grand Inna Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_573889 .hc-slide');var d=document.querySelectorAll('#hc_573889 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_573889 .hc-slide');var d=document.querySelectorAll('#hc_573889 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grand Inna Nusa Dua &bull; 2 photos</p></div>
+<p>Один из старейших отелей района, прошедший реновацию в 2024 году. Расположен прямо на пляже Мутиара. Цена: ₽9 025 ($95)за ночь. Фишки: большой лагунообразный бассейн с горками, три ресторана, включая японский, и бесплатный фитнес-центр. Номера площадью 28 кв. м. с балконами.</p>
 
 <h3>5. Novotel Bali Nusa Dua</h3>
-<p>Сетевой отель с отличным соотношением цена-качество. Цена: ₽10 450 (≈ $110) за ночь. Фишки: детский клуб, два бассейна (для взрослых и детей), спа-центр с традиционными балийскими массажами от ₽3 325 (≈ $35.) Расположен в 10 минутах от пляжа, но курсирует бесплатный шаттл.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_573081" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Novotel Bali Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Novotel Bali Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_573081 .hc-slide');var d=document.querySelectorAll('#hc_573081 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_573081 .hc-slide');var d=document.querySelectorAll('#hc_573081 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Novotel Bali Nusa Dua &bull; 2 photos</p></div>
+<p>Сетевой отель с отличным соотношением цена-качество. Цена: ₽10 450 ($110)за ночь. Фишки: детский клуб, два бассейна (для взрослых и детей), спа-центр с традиционными балийскими массажами от ₽3 325 ($35)Расположен в 10 минутах от пляжа, но курсирует бесплатный шаттл.</p>
 
 <h3>6. Amnaya Resort Nusa Dua</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Nu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Бутик-отель на 40 номеров в стиле современной балийской архитектуры. Цена: ₽12 350 (≈ $130) за ночь. Фишки: открытый бассейн с видом на рисовые террасы, бесплатный йога-класс по утрам, ресторан с органическими продуктами. Номера с деревянными панелями и дождевыми душами.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_642750" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Amnaya Resort Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Amnaya Resort Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_642750 .hc-slide');var d=document.querySelectorAll('#hc_642750 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_642750 .hc-slide');var d=document.querySelectorAll('#hc_642750 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amnaya Resort Nusa Dua &bull; 2 photos</p></div>
+<p>Бутик-отель на 40 номеров в стиле современной балийской архитектуры. Цена: ₽12 350 ($130)за ночь. Фишки: открытый бассейн с видом на рисовые террасы, бесплатный йога-класс по утрам, ресторан с органическими продуктами. Номера с деревянными панелями и дождевыми душами.</p>
 
 <h3>7. Hilton Garden Inn Bali Nusa Dua</h3>
-<p>Бизнес-отель с акцентом на комфорт. Цена: ₽8 075 (≈ $85) за ночь. Фишки: круглосуточный бизнес-центр, тренажерный зал, ресторан с международной кухней. Расположен в 1 км от пляжа, но предоставляет велосипеды бесплатно. Идеален для тех, кто работает удаленно.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_22159" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hilton Garden Inn Bali Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hilton Garden Inn Bali Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hilton Garden Inn Bali Nusa Dua - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_22159 .hc-slide');var d=document.querySelectorAll('#hc_22159 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_22159 .hc-slide');var d=document.querySelectorAll('#hc_22159 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_22159 .hc-slide');var d=document.querySelectorAll('#hc_22159 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hilton Garden Inn Bali Nusa Dua &bull; 3 photos</p></div>
+<p>Бизнес-отель с акцентом на комфорт. Цена: ₽8 075 ($85)за ночь. Фишки: круглосуточный бизнес-центр, тренажерный зал, ресторан с международной кухней. Расположен в 1 км от пляжа, но предоставляет велосипеды бесплатно. Идеален для тех, кто работает удаленно.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. The St. Regis Bali Resort</h3>
-<p>Флагманский курорт с частным пляжем и виллами с собственными бассейнами. Цена: от ₽61 750 (≈ $650) за ночь. Особенности: спа-центр с процедурами на основе балийских трав, ресторан Kayuputi (средиземноморская кухня с мишленовским шеф-поваром), услуги дворецкого для каждого гостя. Территория занимает 9 гектаров тропического сада.</p>
+<div id="hc_681085" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="The St. Regis Bali Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The St. Regis Bali Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_681085 .hc-slide');var d=document.querySelectorAll('#hc_681085 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_681085 .hc-slide');var d=document.querySelectorAll('#hc_681085 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The St. Regis Bali Resort &bull; 2 photos</p></div>
+<p>Флагманский курорт с частным пляжем и виллами с собственными бассейнами. Цена: от ₽61 750 ($650)за ночь. Особенности: спа-центр с процедурами на основе балийских трав, ресторан Kayuputi (средиземноморская кухня с мишленовским шеф-поваром), услуги дворецкого для каждого гостя. Территория занимает 9 гектаров тропического сада.</p>
 
 <h3>9. Mulia Resort & Villas</h3>
-<p>Огромный комплекс с тремя бассейнами, включая океанический бесконечный бассейн. Цена: от ₽23 750 (≈ $250) за ночь. Особенности: 10 ресторанов и баров, включая знаменитый Soleil на пляже, спа-центр площадью 3000 кв. м. с хаммамом и сауной. Номера от 40 кв. м. с мраморными ванными и панорамными окнами.</p>
+<div id="hc_883319" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Mulia Resort & Villas - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Mulia Resort & Villas - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_883319 .hc-slide');var d=document.querySelectorAll('#hc_883319 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_883319 .hc-slide');var d=document.querySelectorAll('#hc_883319 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Mulia Resort & Villas &bull; 2 photos</p></div>
+<p>Огромный комплекс с тремя бассейнами, включая океанический бесконечный бассейн. Цена: от ₽23 750 ($250)за ночь. Особенности: 10 ресторанов и баров, включая знаменитый Soleil на пляже, спа-центр площадью 3000 кв. м. с хаммамом и сауной. Номера от 40 кв. м. с мраморными ванными и панорамными окнами.</p>
 
 <h3>10. The Laguna, A Luxury Collection Resort & Spa</h3>
-<p>Курорт в стиле балийской деревни с семью бассейнами. Цена: от ₽20 900 (≈ $220) за ночь. Особенности: частная лагуна с мангровыми зарослями, где можно плавать на каяках, спа-центр с ритуалами на основе кокоса, винный клуб с дегустациями. Отдельного внимания заслуживает завтрак с шампанским.</p>
+<p>Курорт в стиле балийской деревни с семью бассейнами. Цена: от ₽20 900 ($220)за ночь. Особенности: частная лагуна с мангровыми зарослями, где можно плавать на каяках, спа-центр с ритуалами на основе кокоса, винный клуб с дегустациями. Отдельного внимания заслуживает завтрак с шампанским.</p>
 
 <h2>Как выбрать район</h2>
-<p>Выбор района в Нуса-Дуа зависит от цели вашей поездки. Если вы приехали ради пляжного отдыха, выбирайте отели на первой линии побережья — например, в районе пляжа Гагар или Мутиара. Здесь мягкий песок, спокойное море и шезлонги с зонтиками. Для любителей экскурсий лучше остановиться ближе к центру Нуса-Дуа, откуда легко добраться до храма Улувату (20 минут на такси, ₽950 (≈ $10)) или водопада Кришна (40 минут, ₽1 425 (≈ $15)). Если вас интересует ночная жизнь, учтите, что в Нуса-Дуа она практически отсутствует — максимум лаунж-бары в отелях. Для вечеринок лучше поехать в Куту или Семиньяк (30-40 минут на такси, ₽1 425 (≈ $15)-20).</p>
+<p>Выбор района в Нуса-Дуа зависит от цели вашей поездки. Если вы приехали ради пляжного отдыха, выбирайте отели на первой линии побережья — например, в районе пляжа Гагар или Мутиара. Здесь мягкий песок, спокойное море и шезлонги с зонтиками. Для любителей экскурсий лучше остановиться ближе к центру Нуса-Дуа, откуда легко добраться до храма Улувату (20 минут на такси, ₽950 ($10)) или водопада Кришна (40 минут, ₽1 425 ($15)). Если вас интересует ночная жизнь, учтите, что в Нуса-Дуа она практически отсутствует — максимум лаунж-бары в отелях. Для вечеринок лучше поехать в Куту или Семиньяк (30-40 минут на такси, ₽1 425 ($15)-20).</p>
 
 <h2>Советы по бронированию</h2>
 <p>Чтобы сэкономить на проживании в Нуса-Дуа, бронируйте отели за 60-90 дней до поездки — это дает скидку до 25% на раннее бронирование. Лучшие сервисы для поиска — <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> и <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a>, причем Agoda часто предлагает эксклюзивные цены для азиатского региона. Используйте прямые контакты отелей: многие люксовые курорты, такие как The St. Regis, предоставляют скидку 10% при бронировании через официальный сайт. Избегайте бронирования в последнюю минуту в высокий сезон — цены могут вырасти на 50%. Для бюджетных отелей проверяйте отзывы на Google Maps и OYO, так как на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com их может быть меньше. И не забывайте про кэшбэк-сервисы, такие как TopCashback или eBates, которые возвращают до 5% от стоимости бронирования.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<div id="hc_838739" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия &bull; 2 photos</p></div>
         </div>
 
         
@@ -498,6 +590,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -526,6 +619,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -543,8 +637,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

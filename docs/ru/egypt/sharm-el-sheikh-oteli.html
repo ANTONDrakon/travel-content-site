@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Шарм-эль-Шейх 2026: от бюджета до люкса Шарм-эль-Шейх остается одним из самых привлекательных курортов Красного моря, ежегодно принимая более...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/sharm-el-sheikh-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/sharm-el-sheikh-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Шарм-эль-Шейх 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Шарм-эль-Шейх 2026: от бюджета до люкса Шарм-эль-Шейх остается одним из самых привлекательных курортов Красного моря, ежегодно принимая более...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/sharm-el-sheikh-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/sharm-el-sheikh-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Sharm_El_Sheikh_-_panoramio_%2811%29.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/sharm-el-sheikh.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Шарм-эль-Шейх 2026: от бюджета до люкса</div>
@@ -361,59 +385,133 @@
 
 <p>Шарм-эль-Шейх остается одним из самых привлекательных курортов Красного моря, ежегодно принимая более 5 миллионов туристов. К 2026 году гостиничная инфраструктура города значительно обновилась: после пандемийного спада здесь открылись десятки реновированных комплексов, а средняя заполняемость отелей достигла 85% в высокий сезон. Географически курорт делится на три ключевые зоны: Наама-Бей — эпицентр ночной жизни и шопинга с самой высокой плотностью отелей, Хургада-роуд (вдоль побережья) с семейными курортами, и более тихие районы Шаркс-Бей, Рас-Ум-Сид и Тигран, где расположены премиальные комплексы.</p>
 
-<p>Ценовой разброс впечатляет: бюджетный номер в хостеле обойдется в ₽1 900 (≈ $20)-30 за ночь, стандартный номер в отеле 3-4 звезды — ₽3 800 (≈ $40)-70, а люксовые варианты в пятизвездочных комплексах стартуют от ₽14 250 (≈ $150) и достигают ₽57 000 (≈ $600) за ночь в пик сезона (ноябрь-март). Важно учитывать, что в 2026 году Египет ввел единый налог на туризм (12.5% от стоимости проживания), который часто не включен в базовую цену. Ниже — детальный разбор десяти лучших отелей, проверенных путешественниками и экспертами.</p>
+<p>Ценовой разброс впечатляет: бюджетный номер в хостеле обойдется в ₽1 900 ($20)-30 за ночь, стандартный номер в отеле 3-4 звезды — ₽3 800 ($40)-70, а люксовые варианты в пятизвездочных комплексах стартуют от ₽14 250 ($150)и достигают ₽57 000 ($600)за ночь в пик сезона (ноябрь-март). Важно учитывать, что в 2026 году Египет ввел единый налог на туризм (12.5% от стоимости проживания), который часто не включен в базовую цену. Ниже — детальный разбор десяти лучших отелей, проверенных путешественниками и экспертами.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Hotel Casa Del Mar Beach (2 звезды, Наама-Бей)</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположенный в 200 метрах от пляжа Наама-Бей, этот отель предлагает 48 номеров с базовым набором: кондиционер, телевизор, холодильник. Цена: ₽2 660 (≈ $28)-45 за ночь в зависимости от сезона. Завтрак «шведский стол» включен. Плюсы: бесплатный Wi-Fi (скорость до 10 Мбит/с), круглосуточная стойка регистрации, близость к главной променадной улице. Минусы: старая мебель (ремонт 2019 года), шум от уличных кафе до полуночи, бассейн маленький (8×4 метра). Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 7.1 из 10.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_104424" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Hotel Casa Del Mar Beach - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Hotel Casa Del Mar Beach - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Hotel Casa Del Mar Beach - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_104424 .hc-slide');var d=document.querySelectorAll('#hc_104424 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_104424 .hc-slide');var d=document.querySelectorAll('#hc_104424 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_104424 .hc-slide');var d=document.querySelectorAll('#hc_104424 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Casa Del Mar Beach &bull; 3 photos</p></div>
+<p>Расположенный в 200 метрах от пляжа Наама-Бей, этот отель предлагает 48 номеров с базовым набором: кондиционер, телевизор, холодильник. Цена: ₽2 660 ($28)-45 за ночь в зависимости от сезона. Завтрак «шведский стол» включен. Плюсы: бесплатный Wi-Fi (скорость до 10 Мбит/с), круглосуточная стойка регистрации, близость к главной променадной улице. Минусы: старая мебель (ремонт 2019 года), шум от уличных кафе до полуночи, бассейн маленький (8×4 метра). Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 7.1 из 10.</p>
 
 <h3>2. Sharm El Sheikh Hostel & Hotel (2 звезды, район Старого города)</h3>
-<p>Гибрид хостела и отеля с номерами на 2-4 человек. Цена: ₽1 425 (≈ $15)-35 за ночь. Общие зоны: кухня, терраса с видом на залив. Плюсы: самый дешевый вариант в городе, дружелюбный персонал, бесплатный трансфер до пляжа (10 минут пешком). Минусы: отсутствие кондиционера в некоторых номерах (доплата ₽475 (≈ $5)), общие душевые, удаленность от центра (3 км до Наама-Бей). Рейтинг — 6.8.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_855783" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Sharm El Sheikh Hostel & Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Sharm El Sheikh Hostel & Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_855783 .hc-slide');var d=document.querySelectorAll('#hc_855783 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_855783 .hc-slide');var d=document.querySelectorAll('#hc_855783 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sharm El Sheikh Hostel & Hotel &bull; 2 photos</p></div>
+<p>Гибрид хостела и отеля с номерами на 2-4 человек. Цена: ₽1 425 ($15)-35 за ночь. Общие зоны: кухня, терраса с видом на залив. Плюсы: самый дешевый вариант в городе, дружелюбный персонал, бесплатный трансфер до пляжа (10 минут пешком). Минусы: отсутствие кондиционера в некоторых номерах (доплата ₽475 ($5)), общие душевые, удаленность от центра (3 км до Наама-Бей). Рейтинг — 6.8.</p>
 
 <h3>3. Coral Beach Hotel (3 звезды, Хургада-роуд)</h3>
-<p>Небольшой отель на 60 номеров с собственным участком пляжа (50 метров). Цена: ₽3 800 (≈ $40)-50 за ночь. Включены завтрак и ужин. Плюсы: тихий район, хороший снорклинг прямо у берега (коралловый риф в 30 метрах), бассейн с морской водой. Минусы: Wi-Fi только в лобби, нет анимации, питание однообразное. Рейтинг — 7.5.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_224427" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_224427 .hc-slide');var d=document.querySelectorAll('#hc_224427 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_224427 .hc-slide');var d=document.querySelectorAll('#hc_224427 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Beach Hotel &bull; 2 photos</p></div>
+<p>Небольшой отель на 60 номеров с собственным участком пляжа (50 метров). Цена: ₽3 800 ($40)-50 за ночь. Включены завтрак и ужин. Плюсы: тихий район, хороший снорклинг прямо у берега (коралловый риф в 30 метрах), бассейн с морской водой. Минусы: Wi-Fi только в лобби, нет анимации, питание однообразное. Рейтинг — 7.5.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Jaz Belvedere (4 звезды, Наама-Бей)</h3>
-<p>Курортный комплекс на 250 номеров с тремя бассейнами, спа-центром и частным пляжем. Цена: ₽6 175 (≈ $65)-90 за ночь. Фишки: бесплатный доступ в аквапарк (5 горок), вечерние шоу (факиры, танцы), четыре ресторана (египетская, итальянская, азиатская кухня). Рейтинг — 8.3. Отзывы хвалят чистоту и анимацию для детей.</p>
+<div id="hc_936571" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Jaz Belvedere - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Jaz Belvedere - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_936571 .hc-slide');var d=document.querySelectorAll('#hc_936571 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_936571 .hc-slide');var d=document.querySelectorAll('#hc_936571 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jaz Belvedere &bull; 2 photos</p></div>
+<p>Курортный комплекс на 250 номеров с тремя бассейнами, спа-центром и частным пляжем. Цена: ₽6 175 ($65)-90 за ночь. Фишки: бесплатный доступ в аквапарк (5 горок), вечерние шоу (факиры, танцы), четыре ресторана (египетская, итальянская, азиатская кухня). Рейтинг — 8.3. Отзывы хвалят чистоту и анимацию для детей.</p>
 
 <h3>5. Sharm Dreams Resort (4 звезды, Шаркс-Бей)</h3>
-<p>Отель в 15 минутах от аэропорта с 320 номерами. Цена: ₽6 650 (≈ $70)-110 за ночь. Особенность: огромная территория (12 гектаров) с лагуной, тремя бассейнами и собственным дайв-центром (PADI). Фишки: бесплатные занятия йогой по утрам, два теннисных корта, ночной клуб на территории. Рейтинг — 8.1. Минус: удаленность от центра (10 км до Наама-Бей, такси ₽475 (≈ $5)).</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_821368" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Sharm Dreams Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Sharm Dreams Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Sharm Dreams Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_821368 .hc-slide');var d=document.querySelectorAll('#hc_821368 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_821368 .hc-slide');var d=document.querySelectorAll('#hc_821368 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_821368 .hc-slide');var d=document.querySelectorAll('#hc_821368 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sharm Dreams Resort &bull; 3 photos</p></div>
+<p>Отель в 15 минутах от аэропорта с 320 номерами. Цена: ₽6 650 ($70)-110 за ночь. Особенность: огромная территория (12 гектаров) с лагуной, тремя бассейнами и собственным дайв-центром (PADI). Фишки: бесплатные занятия йогой по утрам, два теннисных корта, ночной клуб на территории. Рейтинг — 8.1. Минус: удаленность от центра (10 км до Наама-Бей, такси ₽475 ($5)).</p>
 
 <h3>6. Grand Rotana Resort & Spa (5 звезд, Рас-Ум-Сид)</h3>
-<p>Пятизвездочный отель по цене среднего класса. Цена: ₽7 600 (≈ $80)-130 за ночь. 450 номеров, два пляжа (песчаный и коралловый), семь ресторанов. Фишки: бесплатный снорклинг-гид, спа-центр с хаммамом, детский клуб (4-12 лет). Рейтинг — 8.7. Отлично подходит для пар и семей.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_763889" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Grand Rotana Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Grand Rotana Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Grand Rotana Resort & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_763889 .hc-slide');var d=document.querySelectorAll('#hc_763889 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_763889 .hc-slide');var d=document.querySelectorAll('#hc_763889 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_763889 .hc-slide');var d=document.querySelectorAll('#hc_763889 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grand Rotana Resort & Spa &bull; 3 photos</p></div>
+<p>Пятизвездочный отель по цене среднего класса. Цена: ₽7 600 ($80)-130 за ночь. 450 номеров, два пляжа (песчаный и коралловый), семь ресторанов. Фишки: бесплатный снорклинг-гид, спа-центр с хаммамом, детский клуб (4-12 лет). Рейтинг — 8.7. Отлично подходит для пар и семей.</p>
 
 <h3>7. Reef Oasis Beach Resort (4 звезды, Тигран)</h3>
-<p>Отель с акцентом на дайвинг. Цена: ₽5 700 (≈ $60)-100 за ночь. 200 номеров, прямой выход к рифу Тигран (один из лучших в регионе). Фишки: бесплатный трансфер до аэропорта, школа дайвинга (сертификация ₽28 500 (≈ $300)), вечерние лекции о морской биологии. Рейтинг — 8.5. Минус: нет ночной жизни.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_986023" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Reef Oasis Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Reef Oasis Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Reef Oasis Beach Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_986023 .hc-slide');var d=document.querySelectorAll('#hc_986023 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_986023 .hc-slide');var d=document.querySelectorAll('#hc_986023 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_986023 .hc-slide');var d=document.querySelectorAll('#hc_986023 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Reef Oasis Beach Resort &bull; 3 photos</p></div>
+<p>Отель с акцентом на дайвинг. Цена: ₽5 700 ($60)-100 за ночь. 200 номеров, прямой выход к рифу Тигран (один из лучших в регионе). Фишки: бесплатный трансфер до аэропорта, школа дайвинга (сертификация ₽28 500 ($300)), вечерние лекции о морской биологии. Рейтинг — 8.5. Минус: нет ночной жизни.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Four Seasons Resort Sharm El Sheikh (5 звезд, Шаркс-Бей)</h3>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Sh" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Флагманский отель сети с 330 номерами и виллами. Цена: ₽23 750 (≈ $250)-500 за ночь. Особенности: частный пляж длиной 800 метров, шесть ресторанов (включая мишленовского шеф-повара), спа-центр площадью 2000 кв. м, три бассейна с подогревом. Рейтинг — 9.2. Идеален для медового месяца: услуги консьержа, приватные ужины на пляже.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="се" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_77304" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons Resort Sharm El Sheikh - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons Resort Sharm El Sheikh - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons Resort Sharm El Sheikh - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_77304 .hc-slide');var d=document.querySelectorAll('#hc_77304 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_77304 .hc-slide');var d=document.querySelectorAll('#hc_77304 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_77304 .hc-slide');var d=document.querySelectorAll('#hc_77304 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons Resort Sharm El Sheikh &bull; 3 photos</p></div>
+<p>Флагманский отель сети с 330 номерами и виллами. Цена: ₽23 750 ($250)-500 за ночь. Особенности: частный пляж длиной 800 метров, шесть ресторанов (включая мишленовского шеф-повара), спа-центр площадью 2000 кв. м, три бассейна с подогревом. Рейтинг — 9.2. Идеален для медового месяца: услуги консьержа, приватные ужины на пляже.</p>
 
 <h3>9. Ritz-Carlton Sharm El Sheikh (5 звезд, Наама-Бей)</h3>
-<p>Исторический отель (открыт в 2001 году, реновация 2023) с 420 номерами. Цена: ₽19 000 (≈ $200)-400 за ночь. Особенности: собственный аквапарк (12 горок), 24-часовой room service, эксклюзивный доступ в клубный лаунж. Рейтинг — 9.0. Плюс: расположение в центре, рядом с магазинами и ресторанами.</p>
+<div id="hc_580767" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton Sharm El Sheikh - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton Sharm El Sheikh - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton Sharm El Sheikh - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_580767 .hc-slide');var d=document.querySelectorAll('#hc_580767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_580767 .hc-slide');var d=document.querySelectorAll('#hc_580767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_580767 .hc-slide');var d=document.querySelectorAll('#hc_580767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton Sharm El Sheikh &bull; 3 photos</p></div>
+<p>Исторический отель (открыт в 2001 году, реновация 2023) с 420 номерами. Цена: ₽19 000 ($200)-400 за ночь. Особенности: собственный аквапарк (12 горок), 24-часовой room service, эксклюзивный доступ в клубный лаунж. Рейтинг — 9.0. Плюс: расположение в центре, рядом с магазинами и ресторанами.</p>
 
 <h3>10. Savoy Sharm El Sheikh (5 звезд, Рас-Ум-Сид)</h3>
-<p>Бутик-отель на 180 номеров с дизайнерскими интерьерами. Цена: ₽14 250 (≈ $150)-300 за ночь. Особенности: инфраструктура с акцентом на здоровье — спа-центр с термальными зонами, органическая кухня, тренировки с персональным тренером. Рейтинг — 8.9. Рекомендуется для тех, кто ищет уединение и релакс.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_340123" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Savoy Sharm El Sheikh - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Savoy Sharm El Sheikh - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Savoy Sharm El Sheikh - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_340123 .hc-slide');var d=document.querySelectorAll('#hc_340123 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_340123 .hc-slide');var d=document.querySelectorAll('#hc_340123 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_340123 .hc-slide');var d=document.querySelectorAll('#hc_340123 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Savoy Sharm El Sheikh &bull; 3 photos</p></div>
+<p>Бутик-отель на 180 номеров с дизайнерскими интерьерами. Цена: ₽14 250 ($150)-300 за ночь. Особенности: инфраструктура с акцентом на здоровье — спа-центр с термальными зонами, органическая кухня, тренировки с персональным тренером. Рейтинг — 8.9. Рекомендуется для тех, кто ищет уединение и релакс.</p>
 
 <h2>Как выбрать район</h2>
 <p>Выбор района определяет впечатления от поездки. Если ваша цель — пляжный отдых и снорклинг, выбирайте Шаркс-Бей или Тигран. Здесь лучшие коралловые рифы (например, риф Тигран входит в топ-10 мира для снорклинга), отели имеют прямой выход к воде, а пляжи менее многолюдны. Для экскурсий (монастырь Святой Екатерины, национальный парк Рас-Мохаммед) удобнее район Наама-Бей — отсюда отправляются большинство туров, есть автобусные остановки. Ночная жизнь сосредоточена в Наама-Бей и Старом городе: десятки клубов (например, «Pacha» и «Hard Rock Cafe»), баров и кальянных работают до 4 утра. Семьям с детьми советуют Хургада-роуд — здесь спокойнее, больше зелени, а отели предлагают детские клубы и мелководные бассейны.</p>
 
 <h2>Советы по бронированию</h2>
-<p>Чтобы сэкономить до 30%, бронируйте отель за 2-3 месяца до поездки и выбирайте даты с воскресенья по четверг (пятница-суббота — пик цен). Лучшие сервисы: <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com (широкий выбор, отзывы), <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (скидки для азиатских туристов), Expedia (пакеты «отель+перелет»). Используйте кэшбэк-сервисы (например, «Letyshops» до 5% возврата). Важно: читайте мелкий шрифт — многие отели в 2026 году взимают депозит (₽4 750 (≈ $50)-100) за ключ и мини-бар, возвращаемый при выезде. Для люксовых отелей бронируйте напрямую через сайт отеля — часто доступны эксклюзивные пакеты (например, завтрак и ужин включены). Избегайте бронирования через агентов на улице — мошенничество встречается в 15% случаев. Наконец, проверяйте визовые требования: для россиян и граждан СНГ виза в Египет оформляется по прибытии за ₽2 375 (≈ $25 ) но с 2025 года возможны изменения.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p>Чтобы сэкономить до 30%, бронируйте отель за 2-3 месяца до поездки и выбирайте даты с воскресенья по четверг (пятница-суббота — пик цен). Лучшие сервисы: <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com (широкий выбор, отзывы), <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (скидки для азиатских туристов), Expedia (пакеты «отель+перелет»). Используйте кэшбэк-сервисы (например, «Letyshops» до 5% возврата). Важно: читайте мелкий шрифт — многие отели в 2026 году взимают депозит (₽4 750 ($50)-100) за ключ и мини-бар, возвращаемый при выезде. Для люксовых отелей бронируйте напрямую через сайт отеля — часто доступны эксклюзивные пакеты (например, завтрак и ужин включены). Избегайте бронирования через агентов на улице — мошенничество встречается в 15% случаев. Наконец, проверяйте визовые требования: для россиян и граждан СНГ виза в Египет оформляется по прибытии за ₽2 375 ($25)но с 2025 года возможны изменения.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -504,6 +602,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -532,6 +631,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -549,8 +649,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

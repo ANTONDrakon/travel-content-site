@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Фуджейра 2026: от бюджета до люкса Фуджейра, единственный эмират ОАЭ, полностью расположенный на восточном побережье, у Индийского океана, за...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/fujairah-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/fujairah-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/fujairah-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/fujairah-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/fujairah-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/fujairah-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Фуджейра 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Фуджейра 2026: от бюджета до люкса Фуджейра, единственный эмират ОАЭ, полностью расположенный на восточном побережье, у Индийского океана, за...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/fujairah-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/fujairah-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://fs.tonkosti.ru/tonkosti/table_img/g142/9d9d/266410251.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/fujairah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Фуджейра 2026: от бюджета до люкса</div>
@@ -361,95 +385,166 @@
 
 <p>Фуджейра, единственный эмират ОАЭ, полностью расположенный на восточном побережье, у Индийского океана, за последние пять лет превратился в самостоятельное туристическое направление. Если в 2021 году здесь насчитывалось около 40 отелей, то к началу 2026 года их число превысило 70, а общий номерной фонд достиг 12 000 единиц. Инфраструктура активно развивается: открыты новые торговые центры (City Centre Fujairah, расширенный в 2024 году), рестораны и зоны отдыха. Главное преимущество — пляжи с вулканическим песком и потрясающие коралловые рифы, доступные для снорклинга прямо у берега.</p>
 
-<p>Цены на проживание в Фуджейре традиционно ниже, чем в Дубае или Абу-Даби, но в 2026 году наблюдается небольшой рост — в среднем на 8-12% из-за повышенного спроса. Ночь в бюджетном отеле обойдется в ₽3 325 (≈ $35)-50, в отеле среднего класса — ₽5 700 (≈ $60)-140, а в люксовом сегменте — от ₽15 200 (≈ $160) до ₽57 000 (≈ $600.) Выгоднее всего бронировать номера в период с мая по сентябрь (низкий сезон), когда температура воздуха достигает 40°C, а стоимость проживания падает на 30-40%. Зимой (декабрь-февраль) цены максимальны, особенно в период новогодних праздников.</p>
+<p>Цены на проживание в Фуджейре традиционно ниже, чем в Дубае или Абу-Даби, но в 2026 году наблюдается небольшой рост — в среднем на 8-12% из-за повышенного спроса. Ночь в бюджетном отеле обойдется в ₽3 325 ($35)-50, в отеле среднего класса — ₽5 700 ($60)-140, а в люксовом сегменте — от ₽15 200 ($160)до ₽57 000 ($600)Выгоднее всего бронировать номера в период с мая по сентябрь (низкий сезон), когда температура воздуха достигает 40°C, а стоимость проживания падает на 30-40%. Зимой (декабрь-февраль) цены максимальны, особенно в период новогодних праздников.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. City Tower Hotel Fujairah</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Fu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Расположен в центре города, в 5 минутах ходьбы от старого рынка и автовокзала. Отель предлагает 45 стандартных номеров с базовой мебелью, кондиционером и спутниковым телевидением. Завтрак — континентальный, включен в стоимость. Цена: от ₽3 610 (≈ $38) за ночь (двухместный номер).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_6722" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="City Tower Hotel Fujairah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="City Tower Hotel Fujairah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="City Tower Hotel Fujairah - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_6722 .hc-slide');var d=document.querySelectorAll('#hc_6722 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_6722 .hc-slide');var d=document.querySelectorAll('#hc_6722 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_6722 .hc-slide');var d=document.querySelectorAll('#hc_6722 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">City Tower Hotel Fujairah &bull; 3 photos</p></div>
+<p>Расположен в центре города, в 5 минутах ходьбы от старого рынка и автовокзала. Отель предлагает 45 стандартных номеров с базовой мебелью, кондиционером и спутниковым телевидением. Завтрак — континентальный, включен в стоимость. Цена: от ₽3 610 ($38)за ночь (двухместный номер).</p>
 <ul>
-<li><strong>Плюсы:</strong> Рядом остановка общественного транспорта (автобус до пляжа Al Aqah за ₽190 (≈ $2)); круглосуточная стойка регистрации; бесплатный Wi-Fi.</li>
+<li><strong>Плюсы:</strong> Рядом остановка общественного транспорта (автобус до пляжа Al Aqah за ₽190 ($2)); круглосуточная стойка регистрации; бесплатный Wi-Fi.</li>
 <li><strong>Минусы:</strong> Нет собственного пляжа; окна выходят на шумную улицу; завтрак однообразный.</li>
 </ul>
 
 <h3>2. Fujairah Youth Hostel</h3>
-<p>Несмотря на название, это полноценный отель эконом-класса, расположенный в районе Al Faseel. Вместимость — 30 номеров, включая семейные и общие спальни (dormitory). Идеальный вариант для бюджетных путешественников и бэкпекеров. Цена: от ₽2 375 (≈ $25) за место в общем номере, от ₽4 275 (≈ $45) за отдельный двухместный номер.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="эк" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_489676" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Fujairah Youth Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Fujairah Youth Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_489676 .hc-slide');var d=document.querySelectorAll('#hc_489676 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_489676 .hc-slide');var d=document.querySelectorAll('#hc_489676 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Fujairah Youth Hostel &bull; 2 photos</p></div>
+<p>Несмотря на название, это полноценный отель эконом-класса, расположенный в районе Al Faseel. Вместимость — 30 номеров, включая семейные и общие спальни (dormitory). Идеальный вариант для бюджетных путешественников и бэкпекеров. Цена: от ₽2 375 ($25)за место в общем номере, от ₽4 275 ($45)за отдельный двухместный номер.</p>
 <ul>
 <li><strong>Плюсы:</strong> Самая низкая цена в городе; общая кухня и зона для стирки; дружелюбный персонал.</li>
 <li><strong>Минусы:</strong> Удаленность от пляжа (10 км, нужен транспорт); минимальный набор удобств; шумно по вечерам.</li>
 </ul>
 
 <h3>3. Nasaq Al Jawhar Hotel Apartment</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ap" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Апарт-отель с 20 студиями и однокомнатными квартирами, оборудованными мини-кухней. Находится в районе Al Muraijah, рядом с супермаркетом Carrefour. Отличный вариант для самостоятельного приготовления еды. Цена: от ₽4 560 (≈ $48) за студию.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_872414" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Nasaq Al Jawhar Hotel Apartment - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Nasaq Al Jawhar Hotel Apartment - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Nasaq Al Jawhar Hotel Apartment - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_872414 .hc-slide');var d=document.querySelectorAll('#hc_872414 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_872414 .hc-slide');var d=document.querySelectorAll('#hc_872414 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_872414 .hc-slide');var d=document.querySelectorAll('#hc_872414 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Nasaq Al Jawhar Hotel Apartment &bull; 3 photos</p></div>
+<p>Апарт-отель с 20 студиями и однокомнатными квартирами, оборудованными мини-кухней. Находится в районе Al Muraijah, рядом с супермаркетом Carrefour. Отличный вариант для самостоятельного приготовления еды. Цена: от ₽4 560 ($48)за студию.</p>
 <ul>
 <li><strong>Плюсы:</strong> Полноценная кухня (плита, холодильник, микроволновка); просторные номера с гостиной зоной; подземная парковка.</li>
 <li><strong>Минусы:</strong> Нет ресторана на территории; уборка раз в 3 дня; до пляжа 15 минут на машине.</li>
 </ul>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Iberotel Miramar Al Aqah Beach</h3>
-<p>Четырехзвездочный курортный отель прямо на пляже Al Aqah — одном из лучших в Фуджейре. 198 номеров с видом на океан или горы. Главная фишка — собственный аквапарк с тремя горками и бассейном с подогревом. Цена: от ₽9 025 (≈ $95) за ночь (стандартный номер с завтраком).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_672873" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Iberotel Miramar Al Aqah Beach - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Iberotel Miramar Al Aqah Beach - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Iberotel Miramar Al Aqah Beach - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_672873 .hc-slide');var d=document.querySelectorAll('#hc_672873 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_672873 .hc-slide');var d=document.querySelectorAll('#hc_672873 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_672873 .hc-slide');var d=document.querySelectorAll('#hc_672873 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Iberotel Miramar Al Aqah Beach &bull; 3 photos</p></div>
+<p>Четырехзвездочный курортный отель прямо на пляже Al Aqah — одном из лучших в Фуджейре. 198 номеров с видом на океан или горы. Главная фишка — собственный аквапарк с тремя горками и бассейном с подогревом. Цена: от ₽9 025 ($95)за ночь (стандартный номер с завтраком).</p>
 <ul>
 <li><strong>Фишки:</strong> Аквапарк для детей и взрослых; два ресторана (международная и арабская кухня); спа-центр с хаммамом.</li>
 <li><strong>Особенность:</strong> В 2025 году проведен реновация номеров — новая мебель и сантехника.</li>
 </ul>
 
 <h3>5. Holiday Inn Resort Fujairah</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Fu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Сетевой отель от IHG, расположенный в районе Dibba Al Fujairah. 150 номеров, включая люксы с отдельной гостиной. Известен своим частным пляжем длиной 300 метров с мелким песком. Цена: от ₽7 600 (≈ $80) за ночь.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="от" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_829213" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Resort Fujairah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Resort Fujairah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_829213 .hc-slide');var d=document.querySelectorAll('#hc_829213 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_829213 .hc-slide');var d=document.querySelectorAll('#hc_829213 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Resort Fujairah &bull; 2 photos</p></div>
+<p>Сетевой отель от IHG, расположенный в районе Dibba Al Fujairah. 150 номеров, включая люксы с отдельной гостиной. Известен своим частным пляжем длиной 300 метров с мелким песком. Цена: от ₽7 600 ($80)за ночь.</p>
 <ul>
 <li><strong>Фишки:</strong> Бесплатный трансфер до города (4 раза в день); большой открытый бассейн с детской зоной; ресторан морепродуктов "Al Marsa".</li>
 <li><strong>Особенность:</strong> В отеле работает дайвинг-центр PADI — обучение и погружения к рифу Snoopy Island.</li>
 </ul>
 
 <h3>6. Royal M Hotel & Resort Fujairah</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Fu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Современный отель (открыт в 2023 году) на первой линии в районе Al Aqah. 220 номеров с панорамными окнами. Стильный интерьер в бело-голубых тонах. Цена: от ₽10 450 (≈ $110) за ночь.</p>
+<div id="hc_296434" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Royal M Hotel & Resort Fujairah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Royal M Hotel & Resort Fujairah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Royal M Hotel & Resort Fujairah - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_296434 .hc-slide');var d=document.querySelectorAll('#hc_296434 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_296434 .hc-slide');var d=document.querySelectorAll('#hc_296434 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_296434 .hc-slide');var d=document.querySelectorAll('#hc_296434 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Royal M Hotel & Resort Fujairah &bull; 3 photos</p></div>
+<p>Современный отель (открыт в 2023 году) на первой линии в районе Al Aqah. 220 номеров с панорамными окнами. Стильный интерьер в бело-голубых тонах. Цена: от ₽10 450 ($110)за ночь.</p>
 <ul>
 <li><strong>Фишки:</strong> Крытый и открытый бассейны; фитнес-центр с тренажерами Technogym; лаунж-бар на крыше с видом на залив.</li>
 <li><strong>Особенность:</strong> В стоимость включен завтрак "шведский стол" с 15 видами сыров и свежей выпечкой.</li>
 </ul>
 
 <h3>7. Fujairah Rotana Resort & Spa</h3>
-<p>Один из самых популярных отелей среднего класса, расположенный в 10 км от города. 250 номеров, окруженных садами. Известен своим спа-центром площадью 1500 кв. м. Цена: от ₽12 350 (≈ $130) за ночь.</p>
+<div id="hc_825074" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Fujairah Rotana Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Fujairah Rotana Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Fujairah Rotana Resort & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_825074 .hc-slide');var d=document.querySelectorAll('#hc_825074 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_825074 .hc-slide');var d=document.querySelectorAll('#hc_825074 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_825074 .hc-slide');var d=document.querySelectorAll('#hc_825074 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Fujairah Rotana Resort & Spa &bull; 3 photos</p></div>
+<p>Один из самых популярных отелей среднего класса, расположенный в 10 км от города. 250 номеров, окруженных садами. Известен своим спа-центром площадью 1500 кв. м. Цена: от ₽12 350 ($130)за ночь.</p>
 <ul>
 <li><strong>Фишки:</strong> Четыре ресторана (итальянский, азиатский, арабский и гриль); детский клуб с аниматорами; прокат снаряжения для водных видов спорта.</li>
 <li><strong>Особенность:</strong> Регулярно проводятся вечеринки с живой музыкой по пятницам.</li>
 </ul>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. InterContinental Fujairah Resort</h3>
-<p>Пятизвездочный курорт на мысе Al Aqah, предлагающий 190 номеров и 32 виллы с собственными бассейнами. Все номера имеют вид на океан. Открыт в 2022 году. Цена: от ₽26 600 (≈ $280) за ночь (стандартный номер), от ₽57 000 (≈ $600) за виллу.</p>
+<div id="hc_681656" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="InterContinental Fujairah Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="InterContinental Fujairah Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_681656 .hc-slide');var d=document.querySelectorAll('#hc_681656 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_681656 .hc-slide');var d=document.querySelectorAll('#hc_681656 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">InterContinental Fujairah Resort &bull; 2 photos</p></div>
+<p>Пятизвездочный курорт на мысе Al Aqah, предлагающий 190 номеров и 32 виллы с собственными бассейнами. Все номера имеют вид на океан. Открыт в 2022 году. Цена: от ₽26 600 ($280)за ночь (стандартный номер), от ₽57 000 ($600)за виллу.</p>
 <ul>
 <li><strong>Особенности:</strong> Частный пляж длиной 1,2 км; спа-центр с 10 кабинетами; три бассейна с морской водой; ресторан "Saffron" с мишленовским шеф-поваром.</li>
 <li><strong>Уникально:</strong> Виллы оборудованы солнечными панелями — отель сертифицирован как "зеленый".</li>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="се" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 </ul>
 
 <h3>9. Al Bahar Hotel & Resort</h3>
-<p>Бутик-отель в традиционном арабском стиле, расположенный в районе Dibba. Всего 40 номеров, что обеспечивает приватность. Интерьеры украшены резьбой по дереву и ручными коврами. Цена: от ₽19 000 (≈ $200) за ночь.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_978627" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Al Bahar Hotel & Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Al Bahar Hotel & Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Al Bahar Hotel & Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_978627 .hc-slide');var d=document.querySelectorAll('#hc_978627 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_978627 .hc-slide');var d=document.querySelectorAll('#hc_978627 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_978627 .hc-slide');var d=document.querySelectorAll('#hc_978627 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Al Bahar Hotel & Resort &bull; 3 photos</p></div>
+<p>Бутик-отель в традиционном арабском стиле, расположенный в районе Dibba. Всего 40 номеров, что обеспечивает приватность. Интерьеры украшены резьбой по дереву и ручными коврами. Цена: от ₽19 000 ($200)за ночь.</p>
 <ul>
 <li><strong>Особенности:</strong> Частный пляж с белым песком; экскурсии на лодке с стеклянным дном; ресторан местной кухни с видом на горы Хаджар.</li>
 <li><strong>Уникально:</strong> В отеле есть собственный музей с артефактами из раскопок в Фуджейре.</li>
 </ul>
 
 <h3>10. The Ritz-Carlton, Fujairah</h3>
-<p>Самый дорогой отель эмирата, открытый в 2025 году. Расположен в уединенной бухте в 20 км к югу от города. 150 номеров и 50 вилл с частными террасами и джакузи. Цена: от ₽42 750 (≈ $450) за ночь.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="эм" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_240188" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton, Fujairah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton, Fujairah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton, Fujairah - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_240188 .hc-slide');var d=document.querySelectorAll('#hc_240188 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_240188 .hc-slide');var d=document.querySelectorAll('#hc_240188 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_240188 .hc-slide');var d=document.querySelectorAll('#hc_240188 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton, Fujairah &bull; 3 photos</p></div>
+<p>Самый дорогой отель эмирата, открытый в 2025 году. Расположен в уединенной бухте в 20 км к югу от города. 150 номеров и 50 вилл с частными террасами и джакузи. Цена: от ₽42 750 ($450)за ночь.</p>
 <ul>
 <li><strong>Особенности:</strong> Инфинити-бассейн с подогревом; спа-центр с программами на основе морских водорослей; пять ресторанов, включая японский и французский.</li>
 <li><strong>Уникально:</strong> Гости могут арендовать яхту для круиза вдоль побережья; отель имеет вертолетную площадку.</li>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="им" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 </ul>
 
 <h2>Как выбрать район</h2>
@@ -560,6 +655,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -588,6 +684,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -605,8 +702,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

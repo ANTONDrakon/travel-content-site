@@ -6,7 +6,7 @@
     <title>How to Find Cheap Flights to Abu Dhabi 2026</title>
     <meta name="description" content="How to Find Cheap Flights to Abu Dhabi 2026 Abu Dhabi, the capital of the United Arab Emirates, is a destination of modern architecture, cultural landmarks l...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-cheap-flights.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-aviabilety.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-cheap-flights.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-cheap-flights.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="How to Find Cheap Flights to Abu Dhabi 2026">
     <meta property="og:description" content="How to Find Cheap Flights to Abu Dhabi 2026 Abu Dhabi, the capital of the United Arab Emirates, is a destination of modern architecture, cultural landmarks l...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-cheap-flights.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/abu-dhabi-cheap-flights.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://ic.pics.livejournal.com/pantv/14908973/12182338/12182338_original.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/abu-dhabi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">How to Find Cheap Flights to Abu Dhabi 2026</div>
@@ -379,61 +403,61 @@
     <tr>
       <td>Etihad Airways</td>
       <td>New York (JFK)</td>
-      <td>$650 (≈ ₽61 750) – $1 200 (≈ ₽114 000)</td>
+      <td>$650– $1 200</td>
       <td>12 hours 30 min</td>
     </tr>
     <tr>
       <td>Etihad Airways</td>
       <td>London (LHR)</td>
-      <td>$450 (≈ ₽42 750) – $850 (≈ ₽80 750)</td>
+      <td>$450– $850</td>
       <td>7 hours 10 min</td>
     </tr>
     <tr>
       <td>Etihad Airways</td>
       <td>Mumbai (BOM)</td>
-      <td>$250 (≈ ₽23 750) – $500 (≈ ₽47 500)</td>
+      <td>$250– $500</td>
       <td>3 hours 20 min</td>
     </tr>
     <tr>
       <td>Etihad Airways</td>
       <td>Sydney (SYD)</td>
-      <td>$900 (≈ ₽85 500) – $1 600 (≈ ₽152 000)</td>
+      <td>$900– $1 600</td>
       <td>14 hours 0 min</td>
     </tr>
     <tr>
       <td>Wizz Air Abu Dhabi</td>
       <td>Rome (FCO)</td>
-      <td>$120 (≈ ₽11 400) – $300 (≈ ₽28 500)</td>
+      <td>$120– $300</td>
       <td>5 hours 30 min</td>
     </tr>
     <tr>
       <td>Wizz Air Abu Dhabi</td>
       <td>Vienna (VIE)</td>
-      <td>$130 (≈ ₽12 350) – $280 (≈ ₽26 600)</td>
+      <td>$130– $280</td>
       <td>5 hours 15 min</td>
     </tr>
     <tr>
       <td>Air Arabia</td>
       <td>Sharjah (SHJ) – note: nearby, not AUH</td>
-      <td>$80 (≈ ₽7 600) – $200 (≈ ₽19 000) (regional)</td>
+      <td>$80– $200(regional)</td>
       <td>1 hour 30 min</td>
     </tr>
     <tr>
       <td>Turkish Airlines</td>
       <td>Istanbul (IST)</td>
-      <td>$350 (≈ ₽33 250) – $700 (≈ ₽66 500)</td>
+      <td>$350– $700</td>
       <td>4 hours 45 min</td>
     </tr>
     <tr>
       <td>Qatar Airways</td>
       <td>Doha (DOH)</td>
-      <td>$200 (≈ ₽19 000) – $450 (≈ ₽42 750)</td>
+      <td>$200– $450</td>
       <td>1 hour 15 min</td>
     </tr>
   </tbody>
 </table>
 
-<p>Etihad Airways remains the dominant carrier, offering the most extensive direct network from North America, Europe, Asia, and Australia. Wizz Air Abu Dhabi, a low-cost subsidiary, has expanded routes from Europe, with fares as low as $120 (≈ ₽11 400) one-way from cities like Rome, Vienna, and Budapest. For travelers in the Middle East, Air Arabia and flydubai provide budget-friendly direct options, though some land at Dubai (DXB) or Sharjah (SHJ), requiring a 90-minute drive to Abu Dhabi. Always check AUH as your arrival airport to avoid extra transfer costs.</p>
+<p>Etihad Airways remains the dominant carrier, offering the most extensive direct network from North America, Europe, Asia, and Australia. Wizz Air Abu Dhabi, a low-cost subsidiary, has expanded routes from Europe, with fares as low as $120one-way from cities like Rome, Vienna, and Budapest. For travelers in the Middle East, Air Arabia and flydubai provide budget-friendly direct options, though some land at Dubai (DXB) or Sharjah (SHJ), requiring a 90-minute drive to Abu Dhabi. Always check AUH as your arrival airport to avoid extra transfer costs.</p>
 
 <h2>Connecting Flights</h2>
 
@@ -454,48 +478,48 @@
       <td>New York (JFK)</td>
       <td>Istanbul (IST) or Doha (DOH)</td>
       <td>Turkish Airlines, Qatar Airways</td>
-      <td>$450 (≈ ₽42 750) – $800 (≈ ₽76 000)</td>
+      <td>$450– $800</td>
       <td>16 – 20 hours</td>
     </tr>
     <tr>
       <td>London (LHR)</td>
       <td>Amsterdam (AMS) or Paris (CDG)</td>
       <td>KLM, Air France</td>
-      <td>$350 (≈ ₽33 250) – $650 (≈ ₽61 750)</td>
+      <td>$350– $650</td>
       <td>10 – 14 hours</td>
     </tr>
     <tr>
       <td>Mumbai (BOM)</td>
       <td>Muscat (MCT) or Kuwait (KWI)</td>
       <td>Oman Air, Jazeera Airways</td>
-      <td>$180 (≈ ₽17 100) – $350 (≈ ₽33 250)</td>
+      <td>$180– $350</td>
       <td>5 – 8 hours</td>
     </tr>
     <tr>
       <td>Los Angeles (LAX)</td>
       <td>Seoul (ICN) or Dubai (DXB)</td>
       <td>Korean Air, Emirates</td>
-      <td>$600 (≈ ₽57 000) – $1 100 (≈ ₽104 500)</td>
+      <td>$600– $1 100</td>
       <td>20 – 24 hours</td>
     </tr>
     <tr>
       <td>Toronto (YYZ)</td>
       <td>London (LHR) or Frankfurt (FRA)</td>
       <td>British Airways, Lufthansa</td>
-      <td>$550 (≈ ₽52 250) – $950 (≈ ₽90 250)</td>
+      <td>$550– $950</td>
       <td>15 – 18 hours</td>
     </tr>
     <tr>
       <td>Sydney (SYD)</td>
       <td>Kuala Lumpur (KUL) or Singapore (SIN)</td>
       <td>AirAsia X, Singapore Airlines</td>
-      <td>$500 (≈ ₽47 500) – $900 (≈ ₽85 500)</td>
+      <td>$500– $900</td>
       <td>18 – 22 hours</td>
     </tr>
   </tbody>
 </table>
 
-<p>Connecting flights via Istanbul with Turkish Airlines are a popular choice for North American travelers, often undercutting Etihad’s direct prices by $200 (≈ ₽19 000)-$400. (≈ ₽38 000) From Asia, AirAsia X via Kuala Lumpur offers some of the lowest fares, starting at $380 (≈ ₽36 100) round-trip from Sydney, though layovers can exceed six hours. Always factor in visa requirements for layover countries; for example, transit through Doha or Istanbul requires no visa for most nationalities under 24 hours. Use flight search engines like Skyscanner or Google Flights to filter by "longest layover" if you want to explore the connecting city for free.</p>
+<p>Connecting flights via Istanbul with Turkish Airlines are a popular choice for North American travelers, often undercutting Etihad’s direct prices by $200-$400From Asia, AirAsia X via Kuala Lumpur offers some of the lowest fares, starting at $380round-trip from Sydney, though layovers can exceed six hours. Always factor in visa requirements for layover countries; for example, transit through Doha or Istanbul requires no visa for most nationalities under 24 hours. Use flight search engines like Skyscanner or Google Flights to filter by "longest layover" if you want to explore the connecting city for free.</p>
 
 <h2>Prices by Month in 2026</h2>
 
@@ -514,126 +538,126 @@
   <tbody>
     <tr>
       <td>January</td>
-      <td>$350 (≈ ₽33 250) – $500 (≈ ₽47 500)</td>
-      <td>$600 (≈ ₽57 000) – $900 (≈ ₽85 500)</td>
-      <td>$250 (≈ ₽23 750) – $400 (≈ ₽38 000)</td>
+      <td>$350– $500</td>
+      <td>$600– $900</td>
+      <td>$250– $400</td>
       <td>Post-holiday lull; moderate demand</td>
     </tr>
     <tr>
       <td>February</td>
-      <td>$320 (≈ ₽30 400) – $480 (≈ ₽45 600)</td>
-      <td>$550 (≈ ₽52 250) – $850 (≈ ₽80 750)</td>
-      <td>$220 (≈ ₽20 900) – $380 (≈ ₽36 100)</td>
+      <td>$320– $480</td>
+      <td>$550– $850</td>
+      <td>$220– $380</td>
       <td>Low season; good deals</td>
     </tr>
     <tr>
       <td>March</td>
-      <td>$400 (≈ ₽38 000) – $600 (≈ ₽57 000)</td>
-      <td>$700 (≈ ₽66 500) – $1 100 (≈ ₽104 500)</td>
-      <td>$300 (≈ ₽28 500) – $500 (≈ ₽47 500)</td>
+      <td>$400– $600</td>
+      <td>$700– $1 100</td>
+      <td>$300– $500</td>
       <td>Formula 1 Grand Prix (first week); prices spike</td>
     </tr>
     <tr>
       <td>April</td>
-      <td>$380 (≈ ₽36 100) – $550 (≈ ₽52 250)</td>
-      <td>$650 (≈ ₽61 750) – $950 (≈ ₽90 250)</td>
-      <td>$280 (≈ ₽26 600) – $450 (≈ ₽42 750)</td>
+      <td>$380– $550</td>
+      <td>$650– $950</td>
+      <td>$280– $450</td>
       <td>Spring break; moderate demand</td>
     </tr>
     <tr>
       <td>May</td>
-      <td>$350 (≈ ₽33 250) – $500 (≈ ₽47 500)</td>
-      <td>$600 (≈ ₽57 000) – $900 (≈ ₽85 500)</td>
-      <td>$250 (≈ ₽23 750) – $400 (≈ ₽38 000)</td>
+      <td>$350– $500</td>
+      <td>$600– $900</td>
+      <td>$250– $400</td>
       <td>Shoulder season; good value</td>
     </tr>
     <tr>
       <td>June</td>
-      <td>$400 (≈ ₽38 000) – $600 (≈ ₽57 000)</td>
-      <td>$700 (≈ ₽66 500) – $1 000 (≈ ₽95 000)</td>
-      <td>$300 (≈ ₽28 500) – $500 (≈ ₽47 500)</td>
+      <td>$400– $600</td>
+      <td>$700– $1 000</td>
+      <td>$300– $500</td>
       <td>Summer start; heat deters some tourists</td>
     </tr>
     <tr>
       <td>July</td>
-      <td>$450 (≈ ₽42 750) – $650 (≈ ₽61 750)</td>
-      <td>$800 (≈ ₽76 000) – $1 200 (≈ ₽114 000)</td>
-      <td>$350 (≈ ₽33 250) – $550 (≈ ₽52 250)</td>
+      <td>$450– $650</td>
+      <td>$800– $1 200</td>
+      <td>$350– $550</td>
       <td>Peak summer; high demand from GCC families</td>
     </tr>
     <tr>
       <td>August</td>
-      <td>$500 (≈ ₽47 500) – $700 (≈ ₽66 500)</td>
-      <td>$850 (≈ ₽80 750) – $1 300 (≈ ₽123 500)</td>
-      <td>$400 (≈ ₽38 000) – $600 (≈ ₽57 000)</td>
+      <td>$500– $700</td>
+      <td>$850– $1 300</td>
+      <td>$400– $600</td>
       <td>Hottest month; still busy due to holidays</td>
     </tr>
     <tr>
       <td>September</td>
-      <td>$380 (≈ ₽36 100) – $550 (≈ ₽52 250)</td>
-      <td>$650 (≈ ₽61 750) – $950 (≈ ₽90 250)</td>
-      <td>$280 (≈ ₽26 600) – $450 (≈ ₽42 750)</td>
+      <td>$380– $550</td>
+      <td>$650– $950</td>
+      <td>$280– $450</td>
       <td>Post-summer lull; prices drop</td>
     </tr>
     <tr>
       <td>October</td>
-      <td>$350 (≈ ₽33 250) – $500 (≈ ₽47 500)</td>
-      <td>$600 (≈ ₽57 000) – $900 (≈ ₽85 500)</td>
-      <td>$250 (≈ ₽23 750) – $400 (≈ ₽38 000)</td>
+      <td>$350– $500</td>
+      <td>$600– $900</td>
+      <td>$250– $400</td>
       <td>Ideal weather; moderate demand</td>
     </tr>
     <tr>
       <td>November</td>
-      <td>$400 (≈ ₽38 000) – $600 (≈ ₽57 000)</td>
-      <td>$700 (≈ ₽66 500) – $1 100 (≈ ₽104 500)</td>
-      <td>$300 (≈ ₽28 500) – $500 (≈ ₽47 500)</td>
+      <td>$400– $600</td>
+      <td>$700– $1 100</td>
+      <td>$300– $500</td>
       <td>Pre-holiday; Abu Dhabi Art in November</td>
     </tr>
     <tr>
       <td>December</td>
-      <td>$550 (≈ ₽52 250) – $800 (≈ ₽76 000)</td>
-      <td>$900 (≈ ₽85 500) – $1 500 (≈ ₽142 500)</td>
-      <td>$450 (≈ ₽42 750) – $700 (≈ ₽66 500)</td>
+      <td>$550– $800</td>
+      <td>$900– $1 500</td>
+      <td>$450– $700</td>
       <td>Peak season: Grand Prix (early Dec.), Christmas, New Year</td>
     </tr>
   </tbody>
 </table>
 
-<p>The cheapest months to fly to Abu Dhabi are February, May, and October, where fares from Europe can drop to $320 (≈ ₽30 400) round-trip with Wizz Air, and from Asia to $220 (≈ ₽20 900) with Air Arabia. Avoid December and July-August if possible, as prices can double. For the 2026 Abu Dhabi Grand Prix (scheduled for December 6), book flights by September to lock in rates before the surge.</p>
+<p>The cheapest months to fly to Abu Dhabi are February, May, and October, where fares from Europe can drop to $320round-trip with Wizz Air, and from Asia to $220with Air Arabia. Avoid December and July-August if possible, as prices can double. For the 2026 Abu Dhabi Grand Prix (scheduled for December 6), book flights by September to lock in rates before the surge.</p>
 
 <h2>10 Hacks for Cheap Flights to Abu Dhabi</h2>
 
 <p>Finding the lowest fare requires more than just searching on a single website. These ten hacks leverage specific tools, timing, and strategies proven to save money in 2026.</p>
 
 <h3>1. Use Price Alerts on Google Flights and Skyscanner</h3>
-<p>Set up price alerts for AUH on Google Flights and Skyscanner. Google Flights tracks price history and sends email notifications when fares drop by 10% or more. Skyscanner’s "Get Price Alerts" feature monitors routes like LHR-AUH and can predict whether to buy now or wait. In 2026, alerts have been shown to save an average of $120 (≈ ₽11 400) per ticket on transatlantic routes.</p>
+<p>Set up price alerts for AUH on Google Flights and Skyscanner. Google Flights tracks price history and sends email notifications when fares drop by 10% or more. Skyscanner’s "Get Price Alerts" feature monitors routes like LHR-AUH and can predict whether to buy now or wait. In 2026, alerts have been shown to save an average of $120per ticket on transatlantic routes.</p>
 
 <h3>2. Fly on Tuesdays, Wednesdays, and Saturdays</h3>
 <p>Data from the Airlines Reporting Corporation (ARC) shows that Tuesday and Wednesday departures are 15-20% cheaper than Friday or Sunday flights. For Abu Dhabi, Saturday is also a low-demand day, especially on Wizz Air routes from Europe. Use the "flexible dates" option on Kayak to compare prices across a week.</p>
 
 <h3>3. Book Connecting Flights with Long Layovers (Stopover Programs)</h3>
-<p>Etihad Airways offers a "Stopover Abu Dhabi" program where you can book a connecting flight with a free hotel stay for 1-2 nights. For example, flying from Sydney to London via AUH with a 24-hour layover can cost as little as $550 (≈ ₽52 250) round-trip, including a complimentary hotel. Similarly, Turkish Airlines’ "Stopover in Istanbul" can reduce fares by bundling a layover. Always check airline stopover pages before booking.</p>
+<p>Etihad Airways offers a "Stopover Abu Dhabi" program where you can book a connecting flight with a free hotel stay for 1-2 nights. For example, flying from Sydney to London via AUH with a 24-hour layover can cost as little as $550round-trip, including a complimentary hotel. Similarly, Turkish Airlines’ "Stopover in Istanbul" can reduce fares by bundling a layover. Always check airline stopover pages before booking.</p>
 
 <h3>4. Use Incognito Mode or VPN for Regional Pricing</h3>
 <p>Airlines and booking sites often show higher prices if they detect repeated searches from the same IP. Open an incognito window in Chrome or use a VPN set to a country like India or the UAE. For example, searching from a UAE IP (via VPN) for flights from Mumbai to AUH can show fares 15-30% lower than from a US IP. Clear your cookies before each search.</p>
 
 <h3>5. Book One-Way Tickets on Different Airlines</h3>
-<p>Sometimes two one-way tickets are cheaper than a round-trip. For instance, fly from New York to AUH on Turkish Airlines (connecting in Istanbul) for $400 (≈ ₽38 000) one-way, then return on Wizz Air via Rome for $150 (≈ ₽14 250) one-way, totaling $550 (≈ ₽52 250) instead of $800. (≈ ₽76 000) Use Momondo to mix and match airlines on separate searches.</p>
+<p>Sometimes two one-way tickets are cheaper than a round-trip. For instance, fly from New York to AUH on Turkish Airlines (connecting in Istanbul) for $400one-way, then return on Wizz Air via Rome for $150one-way, totaling $550instead of $800Use Momondo to mix and match airlines on separate searches.</p>
 
 <h3>6. Leverage Credit Card Points and Transfer Partners</h3>
-<p>Sign up for a travel rewards card like the Chase Sapphire Preferred or Capital One Venture X. Transfer points to Etihad Guest (1:1 ratio) or Qatar Airways Privilege Club. In 2026, a round-trip business class award from New York to AUH costs 60,000 Etihad Guest miles plus $150 (≈ ₽14 250) in taxes, compared to $3 000 (≈ ₽285 000) cash. For economy, 25,000 miles can cover a $700 (≈ ₽66 500) ticket.</p>
+<p>Sign up for a travel rewards card like the Chase Sapphire Preferred or Capital One Venture X. Transfer points to Etihad Guest (1:1 ratio) or Qatar Airways Privilege Club. In 2026, a round-trip business class award from New York to AUH costs 60,000 Etihad Guest miles plus $150in taxes, compared to $3 000cash. For economy, 25,000 miles can cover a $700ticket.</p>
 
 <h3>7. Check Budget Airlines from Secondary Airports</h3>
-<p>Wizz Air Abu Dhabi operates from smaller European airports like Milan Bergamo (BGY) instead of Malpensa (MXP), and Budapest (BUD). Fares from BGY to AUH start at $99 (≈ ₽9 405) one-way. Air Arabia flies from Ras Al Khaimah (RKT) to AUH for $80 (≈ ₽7 600) one-way. Search for "Abu Dhabi" on Wizz Air’s route map to find hidden cheap departures.</p>
+<p>Wizz Air Abu Dhabi operates from smaller European airports like Milan Bergamo (BGY) instead of Malpensa (MXP), and Budapest (BUD). Fares from BGY to AUH start at $99one-way. Air Arabia flies from Ras Al Khaimah (RKT) to AUH for $80one-way. Search for "Abu Dhabi" on Wizz Air’s route map to find hidden cheap departures.</p>
 
 <h3>8. Book 60-90 Days in Advance for Peak Season</h3>
 <p>For December 2026 (Grand Prix and holidays), book by September 30 to lock in prices 30% below last-minute rates. For low-season months like February, booking 45-60 days ahead is sufficient. Use Hopper’s "Buy or Wait" analysis, which in 2026 predicts that prices for AUH rise by 15% per week within 30 days of departure.</p>
 
 <h3>9. Use Error Fares and Mistake Sales</h3>
-<p>Subscribe to websites like Secret Flying and The Flight Deal for error fares. In early 2026, a mistake fare from London to AUH on Etihad was available for $280 (≈ ₽26 600) round-trip (including taxes) for 24 hours. Set up notifications for "Abu Dhabi" or "AUH" on these sites, and book immediately—airlines rarely cancel such fares.</p>
+<p>Subscribe to websites like Secret Flying and The Flight Deal for error fares. In early 2026, a mistake fare from London to AUH on Etihad was available for $280round-trip (including taxes) for 24 hours. Set up notifications for "Abu Dhabi" or "AUH" on these sites, and book immediately—airlines rarely cancel such fares.</p>
 
 <h3>10. Combine with a Regional Hub Flight</h3>
-<p>If you live in a smaller city, fly to a major hub like Dubai (DXB) or Doha (DOH) on a low-cost carrier, then take a short flight to AUH. For example, from Chicago, fly to DXB on Emirates for $700  (≈ ₽66 500) then take a 1-hour flight on flydubai to AUH for $50. (≈ ₽4 750) This can be $200 (≈ ₽19 000) cheaper than a direct flight to AUH. Use <a href="https://tp.media/click?shmarker=736226&promo_id=3799&source_type=link&type=click&campaign_id=114&trs=kiwicom" target="_blank" rel="nofollow sponsored" class="partner-link">Kiwi.com</a> to combine separate tickets with a "self-transfer" filter.</p>
+<p>If you live in a smaller city, fly to a major hub like Dubai (DXB) or Doha (DOH) on a low-cost carrier, then take a short flight to AUH. For example, from Chicago, fly to DXB on Emirates for $700then take a 1-hour flight on flydubai to AUH for $50This can be $200cheaper than a direct flight to AUH. Use <a href="https://tp.media/click?shmarker=736226&promo_id=3799&source_type=link&type=click&campaign_id=114&trs=kiwicom" target="_blank" rel="nofollow sponsored" class="partner-link">Kiwi.com</a> to combine separate tickets with a "self-transfer" filter.</p>
 
 <h2>When to Book</h2>
 
@@ -729,6 +753,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -757,6 +782,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -774,8 +800,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

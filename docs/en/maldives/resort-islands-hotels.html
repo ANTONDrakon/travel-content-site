@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Resort Islands 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Resort Islands 2026: Budget to Luxury Девочки и мальчики, если вы мечтаете о райском отдыхе на островах в 2026 году — вы попали по адресу! Я...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/resort-islands-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/resort-islands-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/resort-islands-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/resort-islands-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Resort Islands 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Resort Islands 2026: Budget to Luxury Девочки и мальчики, если вы мечтаете о райском отдыхе на островах в 2026 году — вы попали по адресу! Я...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/resort-islands-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/resort-islands-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/resort-islands.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Resort Islands 2026: Budget to Luxury</div>
@@ -357,61 +381,141 @@
         </div>
 
         <div class="article-body">
-            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+            <p>Девочки и мальчики, если вы мечтаете о райском отдыхе на островах в 2026 году — вы попали по адресу! Я, Валентина Туркова, объездила полмира и помогла 300+ клиентам найти идеальное жилье. Сегодня делюсь проверенными вариантами — от бюджетных гестхаусов до вип-вилл. Цены, конечно, подросли (инфляция, сами понимаете), но я честно скажу, сколько реально платить. Все цифры — с моей наценкой 12-15%, потому что я не люблю сюрпризов. Поехали!</p>
 
-<p>Девочки и мальчики, если вы мечтаете о райском отдыхе на островах в 2026 году — вы попали по адресу! Я, Валентина Туркова, объездила полмира и помогла 300+ клиентам найти идеальное жилье. Сегодня делюсь проверенными вариантами — от бюджетных гестхаусов до вип-вилл. Цены, конечно, подросли (инфляция, сами понимаете), но я честно скажу, сколько реально платить. Все цифры — с моей наценкой 12-15%, потому что я не люблю сюрпризов. Поехали!</p>
+<p>Отельная инфраструктура на островах в 2026 году — это космос. Почти везде есть бассейны с морской водой, спа-центры с местными массажами и рестораны с видом на океан. Районы делятся на три типа: туристические (шумно, но весело), спокойные (для пар и семей) и дикие (для искателей приключений). Цены стартуют от $40за ночь в гестхаусе и доходят до $500+ в люксе. Я рекомендую всегда смотреть на отзывы свежие — за 2025-2026 год, потому что отели быстро меняются.</p>
 
-<p>Отельная инфраструктура на островах в 2026 году — это космос. Почти везде есть бассейны с морской водой, спа-центры с местными массажами и рестораны с видом на океан. Районы делятся на три типа: туристические (шумно, но весело), спокойные (для пар и семей) и дикие (для искателей приключений). Цены стартуют от $40 (≈ ₽3 800) за ночь в гестхаусе и доходят до $500 (≈ ₽47 500)+ в люксе. Я рекомендую всегда смотреть на отзывы свежие — за 2025-2026 год, потому что отели быстро меняются.</p>
-
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Sunny Bungalows (Таиланд, остров Самуи)</h3>
-<p>Милейшие деревянные домики прямо у пляжа. Мои туристы обычно в восторге от завтраков — свежие манго и кокосовое молоко. Номера простые, но чистые, с кондиционером и москитной сеткой. <strong>Цена: $48 (≈ ₽4 560) за ночь</strong> (с моей наценкой).</p>
+<div id="hc_879566" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sunny Bungalows - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sunny Bungalows - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sunny Bungalows - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_879566 .hc-slide');var d=document.querySelectorAll('#hc_879566 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_879566 .hc-slide');var d=document.querySelectorAll('#hc_879566 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_879566 .hc-slide');var d=document.querySelectorAll('#hc_879566 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunny Bungalows &bull; 3 photos</p></div>
+<p>Милейшие деревянные домики прямо у пляжа. Мои туристы обычно в восторге от завтраков — свежие манго и кокосовое молоко. Номера простые, но чистые, с кондиционером и москитной сеткой. <strong>Цена: $48за ночь</strong> (с моей наценкой).</p>
 <p><strong>Плюсы:</strong> бесплатный Wi-Fi, 2 минуты до моря, приветливый персонал.<br>
 <strong>Минусы:</strong> нет бассейна, шумно от дороги (но беруши спасают). Проверено на себе — идеально для бюджетных путешественников.</p>
 
 <h3>2. Palm Garden Inn (Мальдивы, местный остров Маафуши)</h3>
-<p>Уютный гестхаус с пальмами во дворе. Номера скромные, но есть горячая вода и вентилятор. До пляжа — 5 минут пешком. <strong>Цена: $44 (≈ ₽4 180) за ночь</strong>.</p>
+<div id="hc_993705" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Palm Garden Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Palm Garden Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Palm Garden Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_993705 .hc-slide');var d=document.querySelectorAll('#hc_993705 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_993705 .hc-slide');var d=document.querySelectorAll('#hc_993705 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_993705 .hc-slide');var d=document.querySelectorAll('#hc_993705 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Palm Garden Inn &bull; 3 photos</p></div>
+<p>Уютный гестхаус с пальмами во дворе. Номера скромные, но есть горячая вода и вентилятор. До пляжа — 5 минут пешком. <strong>Цена: $44за ночь</strong>.</p>
 <p><strong>Плюсы:</strong> дешевые экскурсии на рифы, тихо ночью, есть кухня для самостоятельного приготовления.<br>
 <strong>Минусы:</strong> без завтрака, мебель старенькая. Для тех, кто готов экономить — лучший вариант.</p>
 
 <h3>3. Blue Wave Hostel (Филиппины, остров Боракай)</h3>
-<p>Молодежный хостел с общими номерами и парой приватных комнат. Атмосфера — огонь! Каждый вечер барбекю и знакомства с туристами. <strong>Цена: $36 (≈ ₽3 420) за ночь</strong> за приватную комнату.</p>
+<div id="hc_932632" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Blue Wave Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Blue Wave Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_932632 .hc-slide');var d=document.querySelectorAll('#hc_932632 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_932632 .hc-slide');var d=document.querySelectorAll('#hc_932632 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Blue Wave Hostel &bull; 2 photos</p></div>
+<p>Молодежный хостел с общими номерами и парой приватных комнат. Атмосфера — огонь! Каждый вечер барбекю и знакомства с туристами. <strong>Цена: $36за ночь</strong> за приватную комнату.</p>
 <p><strong>Плюсы:</strong> центр тусовок, бесплатный кофе, помощь с арендой байков.<br>
 <strong>Минусы:</strong> шумно до 2 ночи, общая душевая. Подойдет для соло-путешественников.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>4. Coral Bay Resort (Мальдивы, остров Расду)</h3>
-<p>Шикарный вариант для пар. Белые виллы с частными верандами, бассейн с подогревом и ресторан с морепродуктами. Я ищу билеты через <a href="https://tp.media/click?shmarker=736226&promo_id=3770&source_type=link&type=click&campaign_id=100&trs=aviasales" target="_blank" rel="nofollow sponsored" class="partner-link">Aviasales</a>, а отели бронирую на <a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=hotellook" target="_blank" rel="nofollow sponsored" class="partner-link">Hotellook</a> — там часто выходят скидки. <strong>Цена: $129 (≈ ₽12 255) за ночь</strong>.</p>
+<div id="hc_909726" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Bay Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Bay Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_909726 .hc-slide');var d=document.querySelectorAll('#hc_909726 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_909726 .hc-slide');var d=document.querySelectorAll('#hc_909726 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Bay Resort &bull; 2 photos</p></div>
+<p>Шикарный вариант для пар. Белые виллы с частными верандами, бассейн с подогревом и ресторан с морепродуктами. Я ищу билеты через <a href="https://tp.media/click?shmarker=736226&promo_id=3770&source_type=link&type=click&campaign_id=100&trs=aviasales" target="_blank" rel="nofollow sponsored" class="partner-link">Aviasales</a>, а отели бронирую на <a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=hotellook" target="_blank" rel="nofollow sponsored" class="partner-link">Hotellook</a> — там часто выходят скидки. <strong>Цена: $129за ночь</strong>.</p>
 <p><strong>Хайлайты:</strong> снорклинг прямо у берега, спа-процедуры с кокосовым маслом, завтрак включен. Мои клиенты говорят, что это лучшее соотношение цены и качества.</p>
 
 <h3>5. Sunset Villa (Индонезия, остров Бали, район Семиньяк)</h3>
-<p>Вилла с 3 спальнями и личным бассейном. Идеально для компании друзей или семьи. Интерьер в стиле бохо, есть кухня и зона барбекю. <strong>Цена: $112 (≈ ₽10 640) за ночь</strong>.</p>
+<div id="hc_611602" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sunset Villa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sunset Villa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sunset Villa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_611602 .hc-slide');var d=document.querySelectorAll('#hc_611602 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_611602 .hc-slide');var d=document.querySelectorAll('#hc_611602 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_611602 .hc-slide');var d=document.querySelectorAll('#hc_611602 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunset Villa &bull; 3 photos</p></div>
+<p>Вилла с 3 спальнями и личным бассейном. Идеально для компании друзей или семьи. Интерьер в стиле бохо, есть кухня и зона барбекю. <strong>Цена: $112за ночь</strong>.</p>
 <p><strong>Хайлайты:</strong> 10 минут до пляжа, рядом кафе и магазины, тихий переулок. Проверено на себе — отлично для релакса.</p>
 
 <h3>6. Ocean View Hotel (Греция, остров Санторини, город Фира)</h3>
-<p>Отель с легендарным видом на кальдеру. Номера с балконами и джакузи, завтрак подают в номер. <strong>Цена: $145 (≈ ₽13 775) за ночь</strong>.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_756491" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Ocean View Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ocean View Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_756491 .hc-slide');var d=document.querySelectorAll('#hc_756491 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_756491 .hc-slide');var d=document.querySelectorAll('#hc_756491 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ocean View Hotel &bull; 2 photos</p></div>
+<p>Отель с легендарным видом на кальдеру. Номера с балконами и джакузи, завтрак подают в номер. <strong>Цена: $145за ночь</strong>.</p>
 <p><strong>Хайлайты:</strong> бесконечный бассейн, романтические ужины при свечах, близко к ночной жизни. Для влюбленных — маст-хэв.</p>
 
 <h3>7. Green Palm Lodge (Шри-Ланка, остров Бентота)</h3>
-<p>Эко-отель среди пальм и рисовых полей. Номера из бамбука, органическая еда, йога по утрам. <strong>Цена: $98 (≈ ₽9 310) за ночь</strong>.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ср" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_473232" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Green Palm Lodge - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Green Palm Lodge - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Green Palm Lodge - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_473232 .hc-slide');var d=document.querySelectorAll('#hc_473232 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_473232 .hc-slide');var d=document.querySelectorAll('#hc_473232 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_473232 .hc-slide');var d=document.querySelectorAll('#hc_473232 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Green Palm Lodge &bull; 3 photos</p></div>
+<p>Эко-отель среди пальм и рисовых полей. Номера из бамбука, органическая еда, йога по утрам. <strong>Цена: $98за ночь</strong>.</p>
 <p><strong>Хайлайты:</strong> бесплатные уроки серфинга, велосипеды в аренду, веганское меню. Экскурсии удобно брать на <a href="https://tp.media/click?shmarker=736226&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide" target="_blank" rel="nofollow sponsored" class="partner-link">GetYourGuide</a> — я всегда там заказываю туры на черепашьи пляжи.</p>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>8. Royal Paradise Resort (Мальдивы, частный остров Руа)</h3>
-<p>Виллы на воде с стеклянным полом, частные бассейны и личный дворецкий. Рестораны мишленовского уровня. <strong>Цена: $389 (≈ ₽36 955) за ночь</strong>.</p>
+<div id="hc_591006" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Royal Paradise Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Royal Paradise Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Royal Paradise Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_591006 .hc-slide');var d=document.querySelectorAll('#hc_591006 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_591006 .hc-slide');var d=document.querySelectorAll('#hc_591006 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_591006 .hc-slide');var d=document.querySelectorAll('#hc_591006 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Royal Paradise Resort &bull; 3 photos</p></div>
+<p>Виллы на воде с стеклянным полом, частные бассейны и личный дворецкий. Рестораны мишленовского уровня. <strong>Цена: $389за ночь</strong>.</p>
 <p><strong>Фишки:</strong> вертолетный трансфер, спа с видом на океан, дайвинг с черепахами. Для трансфера пользуюсь <a href="https://tp.media/click?shmarker=736226&promo_id=3782&source_type=link&type=click&campaign_id=112&trs=kiwitaxi" target="_blank" rel="nofollow sponsored" class="partner-link">Kiwitaxi</a> — надежно и с детскими креслами.</p>
 
 <h3>9. White Sands Beach Club (Таиланд, остров Пхукет, Ката)</h3>
-<p>Пятизвездочный курорт с собственным пляжем, 5 бассейнами и ночным клубом. Номера с мраморными ваннами. <strong>Цена: $267 (≈ ₽25 365) за ночь</strong>.</p>
+<div id="hc_851726" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="White Sands Beach Club - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="White Sands Beach Club - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="White Sands Beach Club - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_851726 .hc-slide');var d=document.querySelectorAll('#hc_851726 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_851726 .hc-slide');var d=document.querySelectorAll('#hc_851726 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_851726 .hc-slide');var d=document.querySelectorAll('#hc_851726 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">White Sands Beach Club &bull; 3 photos</p></div>
+<p>Пятизвездочный курорт с собственным пляжем, 5 бассейнами и ночным клубом. Номера с мраморными ваннами. <strong>Цена: $267за ночь</strong>.</p>
 <p><strong>Фишки:</strong> аквапарк для детей, винные дегустации, яхтенные туры. eSIM покупаю на <a href="https://tp.media/click?shmarker=736226&promo_id=3803&source_type=link&type=click&campaign_id=118&trs=airalo" target="_blank" rel="nofollow sponsored" class="partner-link">Airalo</a>, чтобы оставаться на связи — местные симки дороже.</p>
 
 <h3>10. Blue Horizon Villa (Французская Полинезия, остров Бора-Бора)</h3>
-<p>Ультра-люкс вилла с частным пирсом и видом на гору Отеману. Интерьер от дизайнера, есть кинотеатр и спа. <strong>Цена: $512 (≈ ₽48 640) за ночь</strong>.</p>
+<div id="hc_490588" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Blue Horizon Villa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Blue Horizon Villa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Blue Horizon Villa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_490588 .hc-slide');var d=document.querySelectorAll('#hc_490588 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_490588 .hc-slide');var d=document.querySelectorAll('#hc_490588 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_490588 .hc-slide');var d=document.querySelectorAll('#hc_490588 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Blue Horizon Villa &bull; 3 photos</p></div>
+<p>Ультра-люкс вилла с частным пирсом и видом на гору Отеману. Интерьер от дизайнера, есть кинотеатр и спа. <strong>Цена: $512за ночь</strong>.</p>
 <p><strong>Фишки:</strong> шеф-повар в номере, гидросамолет, экскурсии на акул. Страховку оформляю через проверенные сервисы — обязательно берите с покрытием дайвинга.</p>
 
 <h2>How to Choose the Right Area</h2>
@@ -513,6 +617,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -541,6 +646,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -558,8 +664,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

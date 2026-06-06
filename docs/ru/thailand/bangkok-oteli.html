@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Бангкок 2026: от бюджета до люкса Бангкок — один из самых посещаемых городов мира, и его гостиничная инфраструктура поражает воображение. В 2...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/bangkok-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/bangkok-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/bangkok-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/bangkok-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/bangkok-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/bangkok-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Бангкок 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Бангкок 2026: от бюджета до люкса Бангкок — один из самых посещаемых городов мира, и его гостиничная инфраструктура поражает воображение. В 2...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/bangkok-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/bangkok-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/bangkok.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Бангкок 2026: от бюджета до люкса</div>
@@ -359,58 +383,123 @@
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
-<p>Бангкок — один из самых посещаемых городов мира, и его гостиничная инфраструктура поражает воображение. В 2026 году здесь насчитывается более 4500 отелей, хостелов и апартаментов, способных принять до 40 миллионов туристов в год. От скромных гестхаусов за 800 бат (₽2 090 (≈ $22)) до пентхаусов за 120 000 бат (₽313 500 (≈ $3300)) за ночь — город предлагает размещение на любой вкус и кошелек. Основные туристические зоны включают Силом, Сукхумвит, Каосан Роуд, Риверсайд и старый город Раттанакосин, каждая из которых имеет свою атмосферу и ценовой диапазон.</p>
+<p>Бангкок — один из самых посещаемых городов мира, и его гостиничная инфраструктура поражает воображение. В 2026 году здесь насчитывается более 4500 отелей, хостелов и апартаментов, способных принять до 40 миллионов туристов в год. От скромных гестхаусов за 800 бат (₽2 090 ($22)) до пентхаусов за 120 000 бат (₽313 500 ($3 300)) за ночь — город предлагает размещение на любой вкус и кошелек. Основные туристические зоны включают Силом, Сукхумвит, Каосан Роуд, Риверсайд и старый город Раттанакосин, каждая из которых имеет свою атмосферу и ценовой диапазон.</p>
 
-<p>Средняя стоимость номера в Бангкоке в 2026 году выросла на 8% по сравнению с 2025 годом из-за роста спроса и инфляции, но все еще остается одной из самых низких среди крупных азиатских столиц. Бюджетный сегмент (₽1 900 (≈ $20)-50 за ночь) занимает около 40% рынка, средний класс (₽4 750 (≈ $50)-150) — 35%, а люксовый (от ₽14 250 (≈ $150)) — 25%. При этом уровень сервиса в тайских отелях традиционно высок: даже в недорогих гостиницах вы получите чистое белье, кондиционер и приветливый персонал. Далее мы разберем 10 лучших отелей 2026 года, разделенных по ценовым категориям, с конкретными названиями, ценами и особенностями.</p>
+<p>Средняя стоимость номера в Бангкоке в 2026 году выросла на 8% по сравнению с 2025 годом из-за роста спроса и инфляции, но все еще остается одной из самых низких среди крупных азиатских столиц. Бюджетный сегмент (₽1 900 ($20)-50 за ночь) занимает около 40% рынка, средний класс (₽4 750 ($50)-150) — 35%, а люксовый (от ₽14 250 ($150)) — 25%. При этом уровень сервиса в тайских отелях традиционно высок: даже в недорогих гостиницах вы получите чистое белье, кондиционер и приветливый персонал. Далее мы разберем 10 лучших отелей 2026 года, разделенных по ценовым категориям, с конкретными названиями, ценами и особенностями.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Lub d Bangkok Silom</h3>
-<p>Расположенный в деловом районе Силом, этот хостел-отель занимает здание, реконструированное в 2023 году. Номера: от 2-местных с общим душем (900 бат, ₽2 375 (≈ $25)) до частных студий с собственной ванной (1600 бат, ₽4 180 (≈ $44)). В 2026 году добавлен коворкинг-зона с бесплатным кофе и скоростным Wi-Fi (до 200 Мбит/с). Плюсы: близость к станции BTS Сала-Денг (5 минут пешком), круглосуточная стойка регистрации, бассейн на крыше. Минусы: шумно по ночам из-за баров на соседней улице, нет завтрака включенного в стоимость. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>: 8.7.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="за" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_766325" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Lub d Bangkok Silom - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Lub d Bangkok Silom - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_766325 .hc-slide');var d=document.querySelectorAll('#hc_766325 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_766325 .hc-slide');var d=document.querySelectorAll('#hc_766325 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Lub d Bangkok Silom &bull; 2 photos</p></div>
+<p>Расположенный в деловом районе Силом, этот хостел-отель занимает здание, реконструированное в 2023 году. Номера: от 2-местных с общим душем (900 бат, ₽2 375 ($25)) до частных студий с собственной ванной (1600 бат, ₽4 180 ($44)). В 2026 году добавлен коворкинг-зона с бесплатным кофе и скоростным Wi-Fi (до 200 Мбит/с). Плюсы: близость к станции BTS Сала-Денг (5 минут пешком), круглосуточная стойка регистрации, бассейн на крыше. Минусы: шумно по ночам из-за баров на соседней улице, нет завтрака включенного в стоимость. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>: 8.7.</p>
 
 <h3>2. Niras Bankok Culture Hostel</h3>
-<p>Этот хостел в старом городе, в 10 минутах от Храма Изумрудного Будды, предлагает койки в дортуарах (600 бат, ₽1 615 (≈ $17)) и частные номера с кондиционером (1200 бат, ₽3 135 (≈ $33)). Открыт в 2024 году, дизайн в стиле лофт с элементами тайской архитектуры. Плюсы: бесплатный чай и фрукты весь день, экскурсии от хостела (например, тур по каналам за 300 бат), очень тихо ночью. Минусы: удален от ночной жизни (до Каосан Роуд 20 минут пешком), нет лифта. Рейтинг: 9.1.</p>
+<div id="hc_456665" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Niras Bankok Culture Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Niras Bankok Culture Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_456665 .hc-slide');var d=document.querySelectorAll('#hc_456665 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_456665 .hc-slide');var d=document.querySelectorAll('#hc_456665 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Niras Bankok Culture Hostel &bull; 2 photos</p></div>
+<p>Этот хостел в старом городе, в 10 минутах от Храма Изумрудного Будды, предлагает койки в дортуарах (600 бат, ₽1 615 ($17)) и частные номера с кондиционером (1200 бат, ₽3 135 ($33)). Открыт в 2024 году, дизайн в стиле лофт с элементами тайской архитектуры. Плюсы: бесплатный чай и фрукты весь день, экскурсии от хостела (например, тур по каналам за 300 бат), очень тихо ночью. Минусы: удален от ночной жизни (до Каосан Роуд 20 минут пешком), нет лифта. Рейтинг: 9.1.</p>
 
 <h3>3. Baan Thai Hostel & Cafe</h3>
-<p>Семейный отель в районе Дусыт, в 15 минутах от парка Чатучак. Частные номера с общим душем: 1000 бат (₽2 660 (≈ $28)), с собственной ванной: 1500 бат (₽3 990 (≈ $42)). В 2025 году проведен ремонт, добавлена кофейня с крафтовым кофе (30-60 бат). Плюсы: очень дружелюбный персонал, бесплатный трансфер до рынка выходного дня, садик с гамаками. Минусы: нет бассейна, до метро 15 минут пешком. Рейтинг: 8.9.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_711543" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Baan Thai Hostel & Cafe - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Baan Thai Hostel & Cafe - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_711543 .hc-slide');var d=document.querySelectorAll('#hc_711543 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_711543 .hc-slide');var d=document.querySelectorAll('#hc_711543 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Baan Thai Hostel & Cafe &bull; 2 photos</p></div>
+<p>Семейный отель в районе Дусыт, в 15 минутах от парка Чатучак. Частные номера с общим душем: 1000 бат (₽2 660 ($28)), с собственной ванной: 1500 бат (₽3 990 ($42)). В 2025 году проведен ремонт, добавлена кофейня с крафтовым кофе (30-60 бат). Плюсы: очень дружелюбный персонал, бесплатный трансфер до рынка выходного дня, садик с гамаками. Минусы: нет бассейна, до метро 15 минут пешком. Рейтинг: 8.9.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Holiday Inn Express Bangkok Sathorn</h3>
-<p>Сеть отелей на улице Саторн, в 2 минутах от станции BTS Чонг Нонси. Стандартный номер: 2500 бат (₽6 555 (≈ $69)) с завтраком. В 2026 году обновлены номера: кровати Hypnos, 43-дюймовые Smart TV, дождевые души. Фишки: бесплатный континентальный завтрак (с 6:30 до 10:00), фитнес-центр с панорамным видом, бизнес-центр. Рейтинг: 8.5.</p>
+<div id="hc_530172" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Express Bangkok Sathorn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Express Bangkok Sathorn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_530172 .hc-slide');var d=document.querySelectorAll('#hc_530172 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_530172 .hc-slide');var d=document.querySelectorAll('#hc_530172 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Express Bangkok Sathorn &bull; 2 photos</p></div>
+<p>Сеть отелей на улице Саторн, в 2 минутах от станции BTS Чонг Нонси. Стандартный номер: 2500 бат (₽6 555 ($69)) с завтраком. В 2026 году обновлены номера: кровати Hypnos, 43-дюймовые Smart TV, дождевые души. Фишки: бесплатный континентальный завтрак (с 6:30 до 10:00), фитнес-центр с панорамным видом, бизнес-центр. Рейтинг: 8.5.</p>
 
 <h3>5. Novotel Bangkok Platinum Pratunam</h3>
-<p>Прямо над торговым центром Platinum Fashion Mall, в районе Пратунам. Номер Deluxe: 3500 бат (₽9 215 (≈ $97)) без завтрака, 4200 бат (₽11 020 (≈ $116)) с завтраком. Открыт в 2022 году, 18 этажей, 380 номеров. Фишки: бассейн на 8-м этаже с шезлонгами, ресторан Elements с интернациональной кухней, прямой доступ в торговый центр. Минусы: шумно в дневное время из-за рынка, нет парковки. Рейтинг: 8.6.</p>
+<div id="hc_269729" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Novotel Bangkok Platinum Pratunam - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Novotel Bangkok Platinum Pratunam - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_269729 .hc-slide');var d=document.querySelectorAll('#hc_269729 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_269729 .hc-slide');var d=document.querySelectorAll('#hc_269729 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Novotel Bangkok Platinum Pratunam &bull; 2 photos</p></div>
+<p>Прямо над торговым центром Platinum Fashion Mall, в районе Пратунам. Номер Deluxe: 3500 бат (₽9 215 ($97)) без завтрака, 4200 бат (₽11 020 ($116)) с завтраком. Открыт в 2022 году, 18 этажей, 380 номеров. Фишки: бассейн на 8-м этаже с шезлонгами, ресторан Elements с интернациональной кухней, прямой доступ в торговый центр. Минусы: шумно в дневное время из-за рынка, нет парковки. Рейтинг: 8.6.</p>
 
 <h3>6. Amari Bangkok</h3>
-<p>Классический отель на улице Пхлоенчит, рядом с посольством США. Номер Superior: 4000 бат (₽10 450 (≈ $110)) с завтраком. Реновация 2024 года: обновлены ванные комнаты, добавлены USB-порты. Фишки: спа-центр Breeze Spa (тайский массаж 1200 бат за 60 минут), три ресторана (включая итальянский Amaya), бассейн с подогревом. Рейтинг: 8.8.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_341417" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Amari Bangkok - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Amari Bangkok - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_341417 .hc-slide');var d=document.querySelectorAll('#hc_341417 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_341417 .hc-slide');var d=document.querySelectorAll('#hc_341417 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amari Bangkok &bull; 2 photos</p></div>
+<p>Классический отель на улице Пхлоенчит, рядом с посольством США. Номер Superior: 4000 бат (₽10 450 ($110)) с завтраком. Реновация 2024 года: обновлены ванные комнаты, добавлены USB-порты. Фишки: спа-центр Breeze Spa (тайский массаж 1200 бат за 60 минут), три ресторана (включая итальянский Amaya), бассейн с подогревом. Рейтинг: 8.8.</p>
 
 <h3>7. Centre Point Hotel Silom</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Si" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Апарт-отель в районе Силом, идеален для семей. Студия: 3200 бат (₽8 455 (≈ $89)), двухкомнатный люкс: 5500 бат (₽14 440 (≈ $152)). В 2025 году открыт новый детский клуб (игровая комната, няня за доплату). Фишки: кухня в каждом номере (плита, микроволновка, холодильник), бассейн с детской зоной, сауна. Рейтинг: 8.9.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_261297" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Centre Point Hotel Silom - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Centre Point Hotel Silom - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_261297 .hc-slide');var d=document.querySelectorAll('#hc_261297 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_261297 .hc-slide');var d=document.querySelectorAll('#hc_261297 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Centre Point Hotel Silom &bull; 2 photos</p></div>
+<p>Апарт-отель в районе Силом, идеален для семей. Студия: 3200 бат (₽8 455 ($89)), двухкомнатный люкс: 5500 бат (₽14 440 ($152)). В 2025 году открыт новый детский клуб (игровая комната, няня за доплату). Фишки: кухня в каждом номере (плита, микроволновка, холодильник), бассейн с детской зоной, сауна. Рейтинг: 8.9.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Mandarin Oriental Bangkok</h3>
-<p>Легендарный отель на берегу реки Чаупхрая, основанный в 1876 году. Номер Deluxe: 18 000 бат (₽47 500 (≈ $500)) с завтраком. В 2026 году проведена реставрация крыла Authors' Wing: добавлены номера с видом на реку и частные террасы. Особенности: ресторан Le Normandie (два мишленовских звезды), спа-центр с хаммамом, частный причал для лодок. Минимальный срок бронирования — 2 ночи в высокий сезон. Рейтинг: 9.5.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_730126" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Mandarin Oriental Bangkok - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Mandarin Oriental Bangkok - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_730126 .hc-slide');var d=document.querySelectorAll('#hc_730126 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_730126 .hc-slide');var d=document.querySelectorAll('#hc_730126 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Mandarin Oriental Bangkok &bull; 2 photos</p></div>
+<p>Легендарный отель на берегу реки Чаупхрая, основанный в 1876 году. Номер Deluxe: 18 000 бат (₽47 500 ($500)) с завтраком. В 2026 году проведена реставрация крыла Authors' Wing: добавлены номера с видом на реку и частные террасы. Особенности: ресторан Le Normandie (два мишленовских звезды), спа-центр с хаммамом, частный причал для лодок. Минимальный срок бронирования — 2 ночи в высокий сезон. Рейтинг: 9.5.</p>
 
 <h3>9. The Siam Hotel</h3>
-<p>Бутик-отель на реке, в районе Дусыт, с 39 номерами. Сьют: 25 000 бат (₽65 930 (≈ $694)) с завтраком и трансфером на лодке. Архитектура в стиле ар-деко с тайскими элементами, открыт в 2012 году. Особенности: частный кинотеатр, библиотека с редкими книгами, кулинарные классы (тайская кухня, 3000 бат за урок). Рейтинг: 9.7.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_950354" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Siam Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Siam Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Siam Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_950354 .hc-slide');var d=document.querySelectorAll('#hc_950354 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_950354 .hc-slide');var d=document.querySelectorAll('#hc_950354 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_950354 .hc-slide');var d=document.querySelectorAll('#hc_950354 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Siam Hotel &bull; 3 photos</p></div>
+<p>Бутик-отель на реке, в районе Дусыт, с 39 номерами. Сьют: 25 000 бат (₽65 930 ($694)) с завтраком и трансфером на лодке. Архитектура в стиле ар-деко с тайскими элементами, открыт в 2012 году. Особенности: частный кинотеатр, библиотека с редкими книгами, кулинарные классы (тайская кухня, 3000 бат за урок). Рейтинг: 9.7.</p>
 
 <h3>10. Capella Bangkok</h3>
-<p>Новый отель (открыт в 2020 году) на реке, в 10 минутах от центра. Номер River View: 30 000 бат (₽79 135 (≈ $833)) с завтраком. В 2025 году добавлены виллы с частными бассейнами (от 60 000 бат, ₽158 365 (≈ $1667)). Особенности: ресторан Côte by Mauro Colagreco (мишленовская звезда), спа с программами детокса, прогулки на лодке по каналам. Рейтинг: 9.8.</p>
+<div id="hc_819672" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Capella Bangkok - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Capella Bangkok - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_819672 .hc-slide');var d=document.querySelectorAll('#hc_819672 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_819672 .hc-slide');var d=document.querySelectorAll('#hc_819672 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Capella Bangkok &bull; 2 photos</p></div>
+<p>Новый отель (открыт в 2020 году) на реке, в 10 минутах от центра. Номер River View: 30 000 бат (₽79 135 ($833)) с завтраком. В 2025 году добавлены виллы с частными бассейнами (от 60 000 бат, ₽158 365 ($1 667)). Особенности: ресторан Côte by Mauro Colagreco (мишленовская звезда), спа с программами детокса, прогулки на лодке по каналам. Рейтинг: 9.8.</p>
 
 <h2>Как выбрать район</h2>
 <p>Выбор района в Бангкоке критичен для комфорта. Если ваша цель — пляжный отдых, выбирайте отели рядом с рекой Чаупхрая (например, Mandarin Oriental или The Siam), откуда можно за 30 минут добраться до пляжей Паттайи на скоростном катере (1500 бат). Для экскурсий идеален старый город (Раттанакосин): здесь находятся Храм Изумрудного Будды, Ват По, Королевский дворец — все в пешей доступности. Районы Пратунам и Силом подходят для шопинга (Platinum Mall, CentralWorld). Для ночной жизни выбирайте Сукхумвит (Soi 11, Soi Cowboy) или Каосан Роуд: здесь бары, клубы и уличная еда работают до 3-4 утра. Семьям с детьми рекомендую Дусыт или Саторн — тихие, с парками и школами.</p>
 
 <h2>Советы по бронированию</h2>
-<p>Чтобы сэкономить, бронируйте отели за 30-45 дней до поездки: средняя скидка составляет 15-20% по сравнению с бронированием за 7 дней. Избегайте высокого сезона (ноябрь-февраль, когда цены на 30-40% выше). Лучшие сервисы: <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com (самый широкий выбор, бесплатная отмена), <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (специализируется на Азии, часто есть скрытые скидки), Airbnb (для апартаментов на срок от 7 дней). Используйте программы лояльности: например, IHG Rewards или Marriott Bonvoy дают до 10% кэшбэка. Для бюджетных отелей проверяйте Hostelworld (дортуары) и Google Hotels (сравнение цен). Также обратите внимание на локальные сервисы: Traveloka и Tiket.com предлагают тайские отели на 5-10% дешевле международных платформ. Всегда читайте отзывы на TripAdvisor за последние 3 месяца — в 2026 году многие отели обновили номера, и старые отзывы могут быть неактуальны. И последнее: бронируйте с завтраком, если он стоит менее ₽950 (≈ $10) — в Бангкоке завтрак в отеле часто выгоднее, чем покупка еды отдельно.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p>Чтобы сэкономить, бронируйте отели за 30-45 дней до поездки: средняя скидка составляет 15-20% по сравнению с бронированием за 7 дней. Избегайте высокого сезона (ноябрь-февраль, когда цены на 30-40% выше). Лучшие сервисы: <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com (самый широкий выбор, бесплатная отмена), <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (специализируется на Азии, часто есть скрытые скидки), Airbnb (для апартаментов на срок от 7 дней). Используйте программы лояльности: например, IHG Rewards или Marriott Bonvoy дают до 10% кэшбэка. Для бюджетных отелей проверяйте Hostelworld (дортуары) и Google Hotels (сравнение цен). Также обратите внимание на локальные сервисы: Traveloka и Tiket.com предлагают тайские отели на 5-10% дешевле международных платформ. Всегда читайте отзывы на TripAdvisor за последние 3 месяца — в 2026 году многие отели обновили номера, и старые отзывы могут быть неактуальны. И последнее: бронируйте с завтраком, если он стоит менее ₽950 ($10)— в Бангкоке завтрак в отеле часто выгоднее, чем покупка еды отдельно.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -501,6 +590,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -529,6 +619,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -546,8 +637,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

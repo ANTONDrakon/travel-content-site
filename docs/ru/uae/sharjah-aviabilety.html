@@ -7,8 +7,8 @@
     <meta name="description" content="Как дёшево добраться до Шарджа в 2026 Шарджа — третий по величине эмират ОАЭ, который часто остаётся в тени Дубая, но привлекает путешественников более низки...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/sharjah-aviabilety.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-aviabilety.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-aviabilety.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-cheap-flights.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/sharjah-cheap-flights.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/sharjah-aviabilety.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Как дёшево добраться до Шарджа в 2026">
     <meta property="og:description" content="Как дёшево добраться до Шарджа в 2026 Шарджа — третий по величине эмират ОАЭ, который часто остаётся в тени Дубая, но привлекает путешественников более низки...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/sharjah-aviabilety.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/sharjah-cheap-flights.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://i.pinimg.com/originals/b9/a2/23/b9a223075cf4d19a0c15c66dfaedac01.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/sharjah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Как дёшево добраться до Шарджа в 2026</div>
@@ -385,7 +409,7 @@
 <li><strong>Wizz Air</strong> (W6): Пересадка в Абу-Даби (AUH) или Дубае (DXB). Цены от 14 000 рублей. Время в пути — 10-18 часов. В 2026 году Wizz Air запустил рейсы из Москвы и Санкт-Петербурга с низкими тарифами, но без бесплатного багажа.</li>
 </ul>
 
-<p>Популярные города для пересадок: Стамбул, Дубай, Абу-Даби, Доха. Длительность стыковок варьируется от 2 до 12 часов. Совет: выбирайте стыковки в Дубае — оттуда до Шарджи можно доехать на такси за 30-40 минут (около 50 AED) или на автобусе E303 (15 AED).</p>
+<p>Популярные города для пересадок: Стамбул, Дубай, Абу-Даби, Доха. Длительность стыковок варьируется от 2 до 12 часов. Совет: выбирайте стыковки в Дубае — оттуда до Шарджи можно доехать на такси за 30-40 минут (около₽1 295 (50 AED)) или на автобусе E303 (₽388 (15 AED)).</p>
 
 <h2>Цены по месяцам</h2>
 <p>Стоимость билетов в Шарджу сильно зависит от сезона. Пик цен приходится на декабрь-январь (зимние праздники) и июль-август (школьные каникулы). Самые низкие цены — в мае, сентябре и октябре. Ниже таблица средних цен на прямые рейсы из Москвы (туда-обратно, эконом-класс, включая налоги) в 2026 году.</p>
@@ -419,7 +443,7 @@
 <li><strong>Выбирайте ночные рейсы</strong> — вылеты после 23:00 часто стоят на 10-15% меньше. Air Arabia и «Победа» предлагают такие тарифы.</li>
 <li><strong>Ищите билеты на китайских агрегаторах</strong> — например, <a href="https://tp.media/click?shmarker=736226&promo_id=3802&source_type=link&type=click&campaign_id=119&trs=tripcom" target="_blank" rel="nofollow sponsored" class="partner-link">Trip.com</a>. Они часто дают скидки на рейсы через Азию, хотя для Шарджи это менее актуально, чем для Юго-Восточной Азии.</li>
 <li><strong>Используйте кэшбэк-сервисы</strong> — Letyshops или ePN Cashback возвращают до 5% от стоимости билета при покупке через Aviasales или Skyscanner.</li>
-<li><strong>Покупайте билеты с пересадкой в Дубае</strong> — часто такие рейсы дешевле прямых. Например, Flydubai из Москвы в Дубай стоит от 12 000 рублей, а оттуда до Шарджи — 50 AED на автобусе.</li>
+<li><strong>Покупайте билеты с пересадкой в Дубае</strong> — часто такие рейсы дешевле прямых. Например, Flydubai из Москвы в Дубай стоит от 12 000 рублей, а оттуда до Шарджи —₽1 295 (50 AED) на автобусе.</li>
 <li><strong>Следите за акциями</strong> — Air Arabia проводит распродажи каждые 2-3 месяца. Подпишитесь на их рассылку, чтобы получать уведомления о скидках до 30%.</li>
 <li><strong>Покупайте билеты в «чёрную пятницу»</strong> — в конце ноября 2026 года ожидаются скидки до 50% на рейсы в ОАЭ. Проверяйте Aviasales и Skyscanner в этот период.</li>
 </ol>
@@ -523,6 +547,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -551,6 +576,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -568,8 +594,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Бодрум 2026: от бюджета до люкса Бодрум, жемчужина турецкого побережья Эгейского моря, продолжает привлекать путешественников со всего мира. ...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/bodrum-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/bodrum-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/bodrum-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/bodrum-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/bodrum-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/bodrum-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Бодрум 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Бодрум 2026: от бюджета до люкса Бодрум, жемчужина турецкого побережья Эгейского моря, продолжает привлекать путешественников со всего мира. ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/bodrum-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/bodrum-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://avatars.mds.yandex.net/i?id=01074de7a85624d1ae3164b00d594852_l-5319522-images-thumbs&amp;n=13');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/bodrum.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Бодрум 2026: от бюджета до люкса</div>
@@ -361,59 +385,137 @@
 
 <p>Бодрум, жемчужина турецкого побережья Эгейского моря, продолжает привлекать путешественников со всего мира. В 2026 году город предлагает более 1200 объектов размещения — от скромных пансионов до ультра-премиальных вилл. Инфраструктура курорта активно развивается: в 2025 году завершилась реконструкция марины Милта, открылся новый терминал аэропорта Милас-Бодрум, который теперь обслуживает до 12 миллионов пассажиров в год. Основные районы концентрации отелей — центр города (Бодрум-центр), полуостров Ялыкавак, пляжи Гюмбет и Битез, а также престижный Торба.</p>
 
-<p>Цены в 2026 году варьируются в зависимости от сезона. Высокий сезон (июнь — август) поднимает стоимость проживания на 40–60% по сравнению с низким (ноябрь — март). Средняя цена стандартного номера в июле — ₽11 400 (≈ $120)–150, в январе — ₽4 275 (≈ $45)–60. Завтрак «шведский стол» входит в стоимость 85% отелей, ужин — только в half-board и full-board системах. Валюта расчетов — турецкая лира, но многие отели указывают цены в евро или долларах. Совет: бронируйте на сайтах с локальными ценами (например, турецкий Etstur), чтобы избежать наценки в 15–20% за международный трафик.</p>
+<p>Цены в 2026 году варьируются в зависимости от сезона. Высокий сезон (июнь — август) поднимает стоимость проживания на 40–60% по сравнению с низким (ноябрь — март). Средняя цена стандартного номера в июле — ₽11 400 ($120)–150, в январе — ₽4 275 ($45)–60. Завтрак «шведский стол» входит в стоимость 85% отелей, ужин — только в half-board и full-board системах. Валюта расчетов — турецкая лира, но многие отели указывают цены в евро или долларах. Совет: бронируйте на сайтах с локальными ценами (например, турецкий Etstur), чтобы избежать наценки в 15–20% за международный трафик.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Oya Butik Hotel (центр Бодрума)</h3>
-<p>Расположен в 200 метрах от набережной и замка Святого Петра. Отель на 18 номеров, открыт после реновации в 2024 году. Цена: ₽2 850 (≈ $30)–45 за двухместный номер с завтраком (июнь 2026). Плюсы: бесплатный Wi-Fi 100 Мбит/с, терраса с видом на марину, дружелюбный персонал, говорящий на русском и английском. Минусы: нет бассейна, маленькие ванные комнаты (2,5 кв. м), шумно с улицы до 23:00 из-за баров.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_780394" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Oya Butik Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Oya Butik Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Oya Butik Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_780394 .hc-slide');var d=document.querySelectorAll('#hc_780394 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_780394 .hc-slide');var d=document.querySelectorAll('#hc_780394 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_780394 .hc-slide');var d=document.querySelectorAll('#hc_780394 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Oya Butik Hotel &bull; 3 photos</p></div>
+<p>Расположен в 200 метрах от набережной и замка Святого Петра. Отель на 18 номеров, открыт после реновации в 2024 году. Цена: ₽2 850 ($30)–45 за двухместный номер с завтраком (июнь 2026). Плюсы: бесплатный Wi-Fi 100 Мбит/с, терраса с видом на марину, дружелюбный персонал, говорящий на русском и английском. Минусы: нет бассейна, маленькие ванные комнаты (2,5 кв. м), шумно с улицы до 23:00 из-за баров.</p>
 
 <h3>2. Gumbet Beach Hotel (район Гюмбет)</h3>
-<p>Прямо на песчаном пляже Гюмбет — одного из лучших для семей с детьми из-за пологого входа. Отель на 40 номеров, работает по системе «только завтрак». Цена: ₽3 325 (≈ $35)–50 за номер (июль 2026). Плюсы: собственный шезлонг на пляже (бесплатно), анимация для детей 3–10 лет, бар с коктейлями от ₽475 (≈ $5.) Минусы: устаревшая мебель (1990-е), нет кондиционера в холлах, за朝трак однообразный (сыр, оливки, хлеб, яйца).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_559161" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Gumbet Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Gumbet Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Gumbet Beach Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_559161 .hc-slide');var d=document.querySelectorAll('#hc_559161 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_559161 .hc-slide');var d=document.querySelectorAll('#hc_559161 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_559161 .hc-slide');var d=document.querySelectorAll('#hc_559161 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Gumbet Beach Hotel &bull; 3 photos</p></div>
+<p>Прямо на песчаном пляже Гюмбет — одного из лучших для семей с детьми из-за пологого входа. Отель на 40 номеров, работает по системе «только завтрак». Цена: ₽3 325 ($35)–50 за номер (июль 2026). Плюсы: собственный шезлонг на пляже (бесплатно), анимация для детей 3–10 лет, бар с коктейлями от ₽475 ($5)Минусы: устаревшая мебель (1990-е), нет кондиционера в холлах, за朝трак однообразный (сыр, оливки, хлеб, яйца).</p>
 
 <h3>3. Bitez Garden Hotel (Битез)</h3>
-<p>Тихий район Битез, в 10 минутах от центра. Небольшой отель с садом и апельсиновыми деревьями. Цена: ₽3 800 (≈ $40)–48 за номер (сентябрь 2026). Плюсы: бесплатная парковка, кухня для самостоятельного приготовления (общая), близость к пляжу (500 м). Минусы: нет лифта (только лестница), за朝трак только с 8:00 до 9:30, слабый Wi-Fi в номерах на втором этаже.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_683731" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Bitez Garden Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Bitez Garden Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Bitez Garden Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_683731 .hc-slide');var d=document.querySelectorAll('#hc_683731 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_683731 .hc-slide');var d=document.querySelectorAll('#hc_683731 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_683731 .hc-slide');var d=document.querySelectorAll('#hc_683731 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Bitez Garden Hotel &bull; 3 photos</p></div>
+<p>Тихий район Битез, в 10 минутах от центра. Небольшой отель с садом и апельсиновыми деревьями. Цена: ₽3 800 ($40)–48 за номер (сентябрь 2026). Плюсы: бесплатная парковка, кухня для самостоятельного приготовления (общая), близость к пляжу (500 м). Минусы: нет лифта (только лестница), за朝трак только с 8:00 до 9:30, слабый Wi-Fi в номерах на втором этаже.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)–150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)–150/ночь)</h2>
 
 <h3>4. Marina Vista Hotel (центр Бодрума)</h3>
-<p>Современный отель с видом на марину Милта. 65 номеров, все с балконами. Цена: ₽7 600 (≈ $80)–120 за номер (июнь 2026). Фишки: панорамный ресторан на 7-м этаже с блюдами средиземноморской кухни, скидка 10% на экскурсии от партнерского агентства, спа-центр с хамамом (₽2 850 (≈ $30) за сеанс). Подходит для пар и деловых путешественников.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_570886" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Marina Vista Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Marina Vista Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Marina Vista Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_570886 .hc-slide');var d=document.querySelectorAll('#hc_570886 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_570886 .hc-slide');var d=document.querySelectorAll('#hc_570886 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_570886 .hc-slide');var d=document.querySelectorAll('#hc_570886 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Marina Vista Hotel &bull; 3 photos</p></div>
+<p>Современный отель с видом на марину Милта. 65 номеров, все с балконами. Цена: ₽7 600 ($80)–120 за номер (июнь 2026). Фишки: панорамный ресторан на 7-м этаже с блюдами средиземноморской кухни, скидка 10% на экскурсии от партнерского агентства, спа-центр с хамамом (₽2 850 ($30)за сеанс). Подходит для пар и деловых путешественников.</p>
 
 <h3>5. Yalikavak Palace Hotel (Ялыкавак)</h3>
-<p>В 2 км от знаменитой марины Ялыкавак. Отель 4 звезды, 120 номеров. Цена: ₽8 550 (≈ $90)–140 за номер (август 2026). Фишки: два бассейна (один с подогревом), теннисный корт, бесплатный трансфер до пляжа (каждые 30 минут). Ресторан предлагает турецкую и интернациональную кухню — ужин «шведский стол» ₽2 375 (≈ $25) на человека. Минус: удаленность от ночной жизни (до центра 15 минут на такси за ₽760 (≈ $8)).</p>
+<div id="hc_797393" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Yalikavak Palace Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Yalikavak Palace Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_797393 .hc-slide');var d=document.querySelectorAll('#hc_797393 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_797393 .hc-slide');var d=document.querySelectorAll('#hc_797393 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Yalikavak Palace Hotel &bull; 2 photos</p></div>
+<p>В 2 км от знаменитой марины Ялыкавак. Отель 4 звезды, 120 номеров. Цена: ₽8 550 ($90)–140 за номер (август 2026). Фишки: два бассейна (один с подогревом), теннисный корт, бесплатный трансфер до пляжа (каждые 30 минут). Ресторан предлагает турецкую и интернациональную кухню — ужин «шведский стол» ₽2 375 ($25)на человека. Минус: удаленность от ночной жизни (до центра 15 минут на такси за ₽760 ($8)).</p>
 
 <h3>6. Ortakent Beach Resort (Ортакент)</h3>
-<p>Семейный курорт с собственным пляжем. 200 номеров, работает по системе all-inclusive (безалкогольные напитки включены). Цена: ₽9 500 (≈ $100)–150 за номер (июль 2026). Фишки: детский клуб с 9:00 до 18:00, водные горки, вечернее шоу (фаер-шоу по вторникам). Пляж галечный — рекомендую тапочки для купания. Заезд с 14:00, выезд до 12:00.</p>
+<div id="hc_553816" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ortakent Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Ortakent Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Ortakent Beach Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_553816 .hc-slide');var d=document.querySelectorAll('#hc_553816 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_553816 .hc-slide');var d=document.querySelectorAll('#hc_553816 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_553816 .hc-slide');var d=document.querySelectorAll('#hc_553816 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ortakent Beach Resort &bull; 3 photos</p></div>
+<p>Семейный курорт с собственным пляжем. 200 номеров, работает по системе all-inclusive (безалкогольные напитки включены). Цена: ₽9 500 ($100)–150 за номер (июль 2026). Фишки: детский клуб с 9:00 до 18:00, водные горки, вечернее шоу (фаер-шоу по вторникам). Пляж галечный — рекомендую тапочки для купания. Заезд с 14:00, выезд до 12:00.</p>
 
 <h3>7. Torba Garden Boutique Hotel (Торба)</h3>
-<p>Бутик-отель на 25 номеров в элитном районе Торба. Цена: ₽6 650 (≈ $70)–110 за номер (май 2026). Фишки: органический завтрак (домашний сыр, мед, оливки), винный бар с местными винами от ₽760 (≈ $8) за бокал, прогулки на яхте за дополнительную плату (₽4 750 (≈ $50) на человека). Идеален для романтического отдыха — тишина, сосновый лес, вид на залив.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_336433" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Torba Garden Boutique Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Torba Garden Boutique Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Torba Garden Boutique Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_336433 .hc-slide');var d=document.querySelectorAll('#hc_336433 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_336433 .hc-slide');var d=document.querySelectorAll('#hc_336433 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_336433 .hc-slide');var d=document.querySelectorAll('#hc_336433 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Torba Garden Boutique Hotel &bull; 3 photos</p></div>
+<p>Бутик-отель на 25 номеров в элитном районе Торба. Цена: ₽6 650 ($70)–110 за номер (май 2026). Фишки: органический завтрак (домашний сыр, мед, оливки), винный бар с местными винами от ₽760 ($8)за бокал, прогулки на яхте за дополнительную плату (₽4 750 ($50)на человека). Идеален для романтического отдыха — тишина, сосновый лес, вид на залив.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. The Bodrum EDITION (центр Бодрума)</h3>
-<p>Отель сети Marriott, 5 звезд, 108 номеров и люксов. Цена: ₽33 250 (≈ $350)–800 за номер (июнь 2026). Особенности: дизайнерские интерьеры от студии Rockwell Group, три ресторана (включая звезду Мишлен — шеф-повар Ахмет Джевдет), спа-центр 1500 кв. м с турецкой баней и сауной. Пляж частный, с белым песком (завозной). Персонал говорит на 12 языках. Минус: завтрак не включен в базовый тариф (₽4 275 (≈ $45) на человека).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="се" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_789058" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Bodrum EDITION - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Bodrum EDITION - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Bodrum EDITION - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_789058 .hc-slide');var d=document.querySelectorAll('#hc_789058 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_789058 .hc-slide');var d=document.querySelectorAll('#hc_789058 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_789058 .hc-slide');var d=document.querySelectorAll('#hc_789058 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Bodrum EDITION &bull; 3 photos</p></div>
+<p>Отель сети Marriott, 5 звезд, 108 номеров и люксов. Цена: ₽33 250 ($350)–800 за номер (июнь 2026). Особенности: дизайнерские интерьеры от студии Rockwell Group, три ресторана (включая звезду Мишлен — шеф-повар Ахмет Джевдет), спа-центр 1500 кв. м с турецкой баней и сауной. Пляж частный, с белым песком (завозной). Персонал говорит на 12 языках. Минус: завтрак не включен в базовый тариф (₽4 275 ($45)на человека).</p>
+<div id="hc_823767" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Marriott, 5 звезд, 108 номеров и люксов. Цена: ₽33 250 - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Marriott, 5 звезд, 108 номеров и люксов. Цена: ₽33 250 - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_823767 .hc-slide');var d=document.querySelectorAll('#hc_823767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_823767 .hc-slide');var d=document.querySelectorAll('#hc_823767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Marriott, 5 звезд, 108 номеров и люксов. Цена: ₽33 250 &bull; 2 photos</p></div>
 
 <h3>9. Six Senses Kaplankaya (Капланкая)</h3>
-<p>Эко-курорт на полуострове Капланкая, в 25 км от центра. 141 вилла и номер, минимальная цена ₽47 500 (≈ $500) за ночь (август 2026). Особенности: программа детокса и йоги, органическая ферма на территории (собирают оливки, овощи), спа с видом на море (процедуры от ₽9 500 (≈ $100)). Пляж — дикий, с крупной галькой, но есть лагуна с песчаным дном. Рекомендуется для тех, кто ищет уединение и здоровый образ жизни.</p>
+<div id="hc_373709" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Six Senses Kaplankaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Six Senses Kaplankaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_373709 .hc-slide');var d=document.querySelectorAll('#hc_373709 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_373709 .hc-slide');var d=document.querySelectorAll('#hc_373709 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Six Senses Kaplankaya &bull; 2 photos</p></div>
+<p>Эко-курорт на полуострове Капланкая, в 25 км от центра. 141 вилла и номер, минимальная цена ₽47 500 ($500)за ночь (август 2026). Особенности: программа детокса и йоги, органическая ферма на территории (собирают оливки, овощи), спа с видом на море (процедуры от ₽9 500 ($100)). Пляж — дикий, с крупной галькой, но есть лагуна с песчаным дном. Рекомендуется для тех, кто ищет уединение и здоровый образ жизни.</p>
 
 <h3>10. Mandarin Oriental Bodrum (Торба)</h3>
-<p>Один из самых престижных отелей Турции, 5 звезд, 105 номеров и 35 вилл. Цена: ₽57 000 (≈ $600)–2000 за номер (июль 2026). Особенности: собственный пляж с белым песком (150 м), три бассейна (включая бесконечный), ресторан с видом на залив (средний чек ₽14 250 (≈ $150) на человека). Спа-центр площадью 3000 кв. м с хаммамом, сауной, 10 процедурными кабинетами. Услуги консьержа: частные яхты (от ₽190 000 (≈ $2000) в день), вертолетные экскурсии, трансфер на Rolls-Royce. Минус: удаленность от города — до центра Бодрума 20 минут на такси (₽1 425 (≈ $15)).</p>
+<p>Один из самых престижных отелей Турции, 5 звезд, 105 номеров и 35 вилл. Цена: ₽57 000 ($600)–2000 за номер (июль 2026). Особенности: собственный пляж с белым песком (150 м), три бассейна (включая бесконечный), ресторан с видом на залив (средний чек ₽14 250 ($150)на человека). Спа-центр площадью 3000 кв. м с хаммамом, сауной, 10 процедурными кабинетами. Услуги консьержа: частные яхты (от ₽190 000 ($2 000)в день), вертолетные экскурсии, трансфер на Rolls-Royce. Минус: удаленность от города — до центра Бодрума 20 минут на такси (₽1 425 ($15)).</p>
 
 <h2>Как выбрать район</h2>
 <p>Выбор района в Бодруме зависит от целей поездки. Для пляжного отдыха с детьми рекомендую Гюмбет (песок, мелкая вода, инфраструктура) или Битез (тихий, семейный, с галечными пляжами). Для экскурсий и исторических достопримечательностей выбирайте центр Бодрума — отсюда пешком до замка Святого Петра (XIV век), Музея подводной археологии и амфитеатра. Для ночной жизни — район Бар-стрит в центре или Ялыкавак (элитные клубы, марина, рестораны с танцами до 4 утра). Для романтического уединения — Торба или Капланкая (тишина, природа, дорогие отели).</p>
 
-<p>Если вы путешествуете на машине, учтите, что парковка в центре Бодрума платная (около ₽190 (≈ $2) в час), а в Ялыкаваке и Торбе — бесплатная на территории отелей. Общественный транспорт — долмуши (микроавтобусы) ходят каждые 15–20 минут, стоимость проезда ₽95 (≈ $1)–2. Такси — ₽76 (≈ $0.8) за километр, но торгуйтесь перед посадкой.</p>
+<p>Если вы путешествуете на машине, учтите, что парковка в центре Бодрума платная (около ₽190 ($2)в час), а в Ялыкаваке и Торбе — бесплатная на территории отелей. Общественный транспорт — долмуши (микроавтобусы) ходят каждые 15–20 минут, стоимость проезда ₽95 ($1)–2. Такси — ₽76 ($1)за километр, но торгуйтесь перед посадкой.</p>
 
 <h2>Советы по бронированию</h2>
 <p>Чтобы сэкономить на проживании в Бодруме в 2026 году, бронируйте за 3–4 месяца до поездки — раннее бронирование дает скидку 20–30%. Избегайте бронирования на август и новогодние праздники (цены максимальны). Лучшие сервисы для поиска: <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> (широкий выбор, отзывы), <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (скидки для азиатских туристов, до 15%), турецкий Etstur (локальные цены, часто дешевле на 10–15%). Используйте VPN с турецким IP — цены могут быть на 20% ниже.</p>
 
-<p>Проверяйте включенные услуги: завтрак, Wi-Fi (скорость уточняйте), трансфер из аэропорта (аэропорт Милас-Бодрум находится в 35 км, такси ₽2 850 (≈ $30)–40, автобус Havaş ₽475 (≈ $5)). Для all-inclusive уточняйте, включены ли алкогольные напитки (обычно только местные, импортные — за отдельную плату). Читайте отзывы на TripAdvisor за последние 6 месяцев — отели могут менять качество после смены управления. И последнее: всегда имейте наличные лиры — карты принимают не везде, особенно в маленьких отелях и на рынках.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p>Проверяйте включенные услуги: завтрак, Wi-Fi (скорость уточняйте), трансфер из аэропорта (аэропорт Милас-Бодрум находится в 35 км, такси ₽2 850 ($30)–40, автобус Havaş ₽475 ($5)). Для all-inclusive уточняйте, включены ли алкогольные напитки (обычно только местные, импортные — за отдельную плату). Читайте отзывы на TripAdvisor за последние 6 месяцев — отели могут менять качество после смены управления. И последнее: всегда имейте наличные лиры — карты принимают не везде, особенно в маленьких отелях и на рынках.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -504,6 +606,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -532,6 +635,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -549,8 +653,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

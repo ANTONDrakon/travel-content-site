@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Istanbul 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Istanbul 2026: Budget to Luxury Istanbul’s hotel scene in 2026 is a dynamic blend of centuries-old Ottoman mansions, sleek contemporary towe...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/istanbul-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/istanbul-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/istanbul-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/istanbul-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Istanbul 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Istanbul 2026: Budget to Luxury Istanbul’s hotel scene in 2026 is a dynamic blend of centuries-old Ottoman mansions, sleek contemporary towe...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/turkey/istanbul-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/istanbul-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/istanbul.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Istanbul 2026: Budget to Luxury</div>
@@ -359,61 +383,129 @@
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
-<p>Istanbul’s hotel scene in 2026 is a dynamic blend of centuries-old Ottoman mansions, sleek contemporary towers, and revitalized boutique properties. The city’s infrastructure has seen significant upgrades, including the expanded Istanbul Airport (IST) now handling over 100 million passengers annually and the completion of the Kanal Istanbul waterway, which has spurred new hotel developments along the European side. Neighborhoods like Sultanahmet, Beyoğlu, and Kadıköy remain central, but emerging districts such as Bomonti and Ataköy offer modern options with better value. Prices have stabilized post-pandemic, with budget rooms averaging $35 (≈ ₽3 325)–$50  (≈ ₽4 750) mid-range accommodations at $70 (≈ ₽6 650)–$130  (≈ ₽12 350) and luxury suites starting from $200 (≈ ₽19 000) per night, though seasonal spikes during the Istanbul Tulip Festival (April) and the International Film Festival (March) can push rates 20–30% higher.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Istanbul’s hotel scene in 2026 is a dynamic blend of centuries-old Ottoman mansions, sleek contemporary towers, and revitalized boutique properties. The city’s infrastructure has seen significant upgrades, including the expanded Istanbul Airport (IST) now handling over 100 million passengers annually and the completion of the Kanal Istanbul waterway, which has spurred new hotel developments along the European side. Neighborhoods like Sultanahmet, Beyoğlu, and Kadıköy remain central, but emerging districts such as Bomonti and Ataköy offer modern options with better value. Prices have stabilized post-pandemic, with budget rooms averaging $35–$50mid-range accommodations at $70–$130and luxury suites starting from $200per night, though seasonal spikes during the Istanbul Tulip Festival (April) and the International Film Festival (March) can push rates 20–30% higher.</p>
+<div id="hc_271827" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="w hotel developments along the European side. Neighborhoods like Sultanahmet, Beyoğlu, and Kadıköy remain central, but emerging districts such as Bomonti and Ataköy offer modern options with better value. Prices have stabilized post-pandemic, with budget rooms averaging $35–$50mid-range accommodations at $70–$130and luxury suites starting from $200per night, though seasonal spikes during the Istanbul Tulip Festival - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="w hotel developments along the European side. Neighborhoods like Sultanahmet, Beyoğlu, and Kadıköy remain central, but emerging districts such as Bomonti and Ataköy offer modern options with better value. Prices have stabilized post-pandemic, with budget rooms averaging $35–$50mid-range accommodations at $70–$130and luxury suites starting from $200per night, though seasonal spikes during the Istanbul Tulip Festival - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_271827 .hc-slide');var d=document.querySelectorAll('#hc_271827 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_271827 .hc-slide');var d=document.querySelectorAll('#hc_271827 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">w hotel developments along the European side. Neighborhoods like Sultanahmet, Beyoğlu, and Kadıköy remain central, but emerging districts such as Bomonti and Ataköy offer modern options with better value. Prices have stabilized post-pandemic, with budget rooms averaging $35–$50mid-range accommodations at $70–$130and luxury suites starting from $200per night, though seasonal spikes during the Istanbul Tulip Festival &bull; 2 photos</p></div>
 
 <p>The city’s hotel infrastructure now emphasizes sustainability and digital convenience. Many properties have adopted solar heating, greywater recycling, and AI-powered concierge services. The new Metro line linking Başakşehir to the historic peninsula has made outlying hotels more accessible, while the expansion of the Marmaray rail tunnel connects European and Asian sides seamlessly. For travelers, this means more options at every price point, from hostels with co-working spaces to ultra-luxury resorts with private seaplane access. Below, we break down the top 10 hotels for 2026, categorized by budget, to help you navigate this sprawling metropolis.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_69446" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="peninsula has made outlying hotels more accessible, while the expansion of the Marmaray rail tunnel connects European and Asian sides seamlessly. For travelers, this means more options at every price point, from hostels with co-working spaces to ultra-luxury resorts with private seaplane access. Below, we break down the top 10 hotels for 2026, categorized by budget, to help you navigate this sprawling metropolis. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="peninsula has made outlying hotels more accessible, while the expansion of the Marmaray rail tunnel connects European and Asian sides seamlessly. For travelers, this means more options at every price point, from hostels with co-working spaces to ultra-luxury resorts with private seaplane access. Below, we break down the top 10 hotels for 2026, categorized by budget, to help you navigate this sprawling metropolis. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_69446 .hc-slide');var d=document.querySelectorAll('#hc_69446 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_69446 .hc-slide');var d=document.querySelectorAll('#hc_69446 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">peninsula has made outlying hotels more accessible, while the expansion of the Marmaray rail tunnel connects European and Asian sides seamlessly. For travelers, this means more options at every price point, from hostels with co-working spaces to ultra-luxury resorts with private seaplane access. Below, we break down the top 10 hotels for 2026, categorized by budget, to help you navigate this sprawling metropolis. &bull; 2 photos</p></div>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Cheers Hostel & Hotel</h3>
-<p><strong>Location:</strong> Sultanahmet, just 300 meters from the Blue Mosque. <strong>Price:</strong> $25 (≈ ₽2 375)–$45 (≈ ₽4 275) per night for a private double room; dorm beds from $12. (≈ ₽1 140) <strong>Description:</strong> A family-run property in a restored 19th-century building with a rooftop terrace offering panoramic views of the Hagia Sophia. Rooms are compact but spotless, with free Wi-Fi and a Turkish breakfast buffet included. <strong>Pros:</strong> Unbeatable location for sightseeing, 24-hour reception, and a social atmosphere with free walking tours. <strong>Cons:</strong> Thin walls (street noise can be an issue), limited private bathrooms (shared facilities for some rooms), and no elevator (steep stairs only).</p>
+<div id="hc_920924" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Cheers Hostel & Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Cheers Hostel & Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_920924 .hc-slide');var d=document.querySelectorAll('#hc_920924 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_920924 .hc-slide');var d=document.querySelectorAll('#hc_920924 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Cheers Hostel & Hotel &bull; 2 photos</p></div>
+<p><strong>Location:</strong> Sultanahmet, just 300 meters from the Blue Mosque. <strong>Price:</strong> $25–$45per night for a private double room; dorm beds from $12<strong>Description:</strong> A family-run property in a restored 19th-century building with a rooftop terrace offering panoramic views of the Hagia Sophia. Rooms are compact but spotless, with free Wi-Fi and a Turkish breakfast buffet included. <strong>Pros:</strong> Unbeatable location for sightseeing, 24-hour reception, and a social atmosphere with free walking tours. <strong>Cons:</strong> Thin walls (street noise can be an issue), limited private bathrooms (shared facilities for some rooms), and no elevator (steep stairs only).</p>
 
 <h3>2. Hotel Peninsula Istanbul</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Location:</strong> Laleli, a 10-minute walk from the Grand Bazaar. <strong>Price:</strong> $35 (≈ ₽3 325)–$50 (≈ ₽4 750) per night for a standard double. <strong>Description:</strong> A no-frills property with 40 rooms, each featuring air conditioning, LCD TVs, and minibars. The hotel has a small garden courtyard and a restaurant serving simple Turkish dishes. <strong>Pros:</strong> Excellent value for the area, free airport shuttle (shared), and helpful staff who arrange tours. <strong>Cons:</strong> Basic furnishings, no gym or pool, and the neighborhood is busy with street vendors and traffic noise until late evening.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_715830" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hotel Peninsula Istanbul - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Hotel Peninsula Istanbul - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_715830 .hc-slide');var d=document.querySelectorAll('#hc_715830 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_715830 .hc-slide');var d=document.querySelectorAll('#hc_715830 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Peninsula Istanbul &bull; 2 photos</p></div>
+<p><strong>Location:</strong> Laleli, a 10-minute walk from the Grand Bazaar. <strong>Price:</strong> $35–$50per night for a standard double. <strong>Description:</strong> A no-frills property with 40 rooms, each featuring air conditioning, LCD TVs, and minibars. The hotel has a small garden courtyard and a restaurant serving simple Turkish dishes. <strong>Pros:</strong> Excellent value for the area, free airport shuttle (shared), and helpful staff who arrange tours. <strong>Cons:</strong> Basic furnishings, no gym or pool, and the neighborhood is busy with street vendors and traffic noise until late evening.</p>
 
 <h3>3. Hostel Le Banc</h3>
-<p><strong>Location:</strong> Beyoğlu, near Taksim Square. <strong>Price:</strong> $20 (≈ ₽1 900)–$35 (≈ ₽3 325) per night for a private en-suite room; dorms from $10. (≈ ₽950) <strong>Description:</strong> A trendy budget option with industrial-chic decor, a rooftop bar, and a co-working space. Rooms have minimalist design with USB ports and lockers. <strong>Pros:</strong> Lively common areas, free pasta dinners on Tuesdays, and a prime location for nightlife and Istiklal Avenue. <strong>Cons:</strong> No breakfast included, noise from the bar until 2 AM, and limited luggage storage space.</p>
+<div id="hc_904199" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Hostel Le Banc - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Hostel Le Banc - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_904199 .hc-slide');var d=document.querySelectorAll('#hc_904199 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_904199 .hc-slide');var d=document.querySelectorAll('#hc_904199 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hostel Le Banc &bull; 2 photos</p></div>
+<p><strong>Location:</strong> Beyoğlu, near Taksim Square. <strong>Price:</strong> $20–$35per night for a private en-suite room; dorms from $10<strong>Description:</strong> A trendy budget option with industrial-chic decor, a rooftop bar, and a co-working space. Rooms have minimalist design with USB ports and lockers. <strong>Pros:</strong> Lively common areas, free pasta dinners on Tuesdays, and a prime location for nightlife and Istiklal Avenue. <strong>Cons:</strong> No breakfast included, noise from the bar until 2 AM, and limited luggage storage space.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>4. Sirkeci Mansion Hotel</h3>
-<p><strong>Location:</strong> Sirkeci, a 5-minute walk from the Topkapi Palace. <strong>Price:</strong> $75 (≈ ₽7 125)–$110 (≈ ₽10 450) per night for a deluxe double. <strong>Highlights:</strong> A boutique property with Ottoman-inspired interiors, a marble lobby, and a rooftop restaurant with views of the Bosphorus. Rooms feature handcrafted furniture, rain showers, and complimentary Turkish delight. The hotel offers a free afternoon tea service and a small spa with a hammam.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_543316" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sirkeci Mansion Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sirkeci Mansion Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sirkeci Mansion Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_543316 .hc-slide');var d=document.querySelectorAll('#hc_543316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_543316 .hc-slide');var d=document.querySelectorAll('#hc_543316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_543316 .hc-slide');var d=document.querySelectorAll('#hc_543316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sirkeci Mansion Hotel &bull; 3 photos</p></div>
+<p><strong>Location:</strong> Sirkeci, a 5-minute walk from the Topkapi Palace. <strong>Price:</strong> $75–$110per night for a deluxe double. <strong>Highlights:</strong> A boutique property with Ottoman-inspired interiors, a marble lobby, and a rooftop restaurant with views of the Bosphorus. Rooms feature handcrafted furniture, rain showers, and complimentary Turkish delight. The hotel offers a free afternoon tea service and a small spa with a hammam.</p>
 
 <h3>5. The Marmara Taksim</h3>
-<p><strong>Location:</strong> Taksim Square, directly on Istiklal Avenue. <strong>Price:</strong> $90 (≈ ₽8 550)–$140 (≈ ₽13 300) per night for a superior room. <strong>Highlights:</strong> A landmark hotel with panoramic city views from its rooftop pool and bar. Rooms are modern with floor-to-ceiling windows, Nespresso machines, and marble bathrooms. The hotel has a fitness center, a Turkish bath, and a Michelin-starred restaurant serving Anatolian cuisine.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_914046" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Marmara Taksim - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Marmara Taksim - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Marmara Taksim - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_914046 .hc-slide');var d=document.querySelectorAll('#hc_914046 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_914046 .hc-slide');var d=document.querySelectorAll('#hc_914046 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_914046 .hc-slide');var d=document.querySelectorAll('#hc_914046 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Marmara Taksim &bull; 3 photos</p></div>
+<p><strong>Location:</strong> Taksim Square, directly on Istiklal Avenue. <strong>Price:</strong> $90–$140per night for a superior room. <strong>Highlights:</strong> A landmark hotel with panoramic city views from its rooftop pool and bar. Rooms are modern with floor-to-ceiling windows, Nespresso machines, and marble bathrooms. The hotel has a fitness center, a Turkish bath, and a Michelin-starred restaurant serving Anatolian cuisine.</p>
 
 <h3>6. Sumahan on the Water</h3>
-<p><strong>Location:</strong> Çengelköy, on the Asian shore of the Bosphorus. <strong>Price:</strong> $110 (≈ ₽10 450)–$150 (≈ ₽14 250) per night for a standard room. <strong>Highlights:</strong> A converted 19th-century distillery with private dock access and a glass-walled spa overlooking the water. Rooms have exposed brick walls, heated floors, and handmade soaps. The hotel provides a free boat shuttle to the European side every hour and a daily wine reception.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_354439" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sumahan on the Water - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sumahan on the Water - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sumahan on the Water - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_354439 .hc-slide');var d=document.querySelectorAll('#hc_354439 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_354439 .hc-slide');var d=document.querySelectorAll('#hc_354439 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_354439 .hc-slide');var d=document.querySelectorAll('#hc_354439 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sumahan on the Water &bull; 3 photos</p></div>
+<p><strong>Location:</strong> Çengelköy, on the Asian shore of the Bosphorus. <strong>Price:</strong> $110–$150per night for a standard room. <strong>Highlights:</strong> A converted 19th-century distillery with private dock access and a glass-walled spa overlooking the water. Rooms have exposed brick walls, heated floors, and handmade soaps. The hotel provides a free boat shuttle to the European side every hour and a daily wine reception.</p>
 
 <h3>7. Hotel Amira Istanbul</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Am" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Location:</strong> Küçükayasofya, in the Sultanahmet district. <strong>Price:</strong> $80 (≈ ₽7 600)–$130 (≈ ₽12 350) per night for a superior double. <strong>Highlights:</strong> A boutique hotel with a serene courtyard garden and a rooftop terrace offering direct views of the Sea of Marmara. Rooms are decorated with Iznik tiles and feature king-sized beds, free minibars, and bathrobes. The hotel has a small library, a bar with live piano music on weekends, and a complimentary evening meze platter.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_983325" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Amira Istanbul - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Amira Istanbul - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Amira Istanbul - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_983325 .hc-slide');var d=document.querySelectorAll('#hc_983325 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_983325 .hc-slide');var d=document.querySelectorAll('#hc_983325 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_983325 .hc-slide');var d=document.querySelectorAll('#hc_983325 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Amira Istanbul &bull; 3 photos</p></div>
+<p><strong>Location:</strong> Küçükayasofya, in the Sultanahmet district. <strong>Price:</strong> $80–$130per night for a superior double. <strong>Highlights:</strong> A boutique hotel with a serene courtyard garden and a rooftop terrace offering direct views of the Sea of Marmara. Rooms are decorated with Iznik tiles and feature king-sized beds, free minibars, and bathrobes. The hotel has a small library, a bar with live piano music on weekends, and a complimentary evening meze platter.</p>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>8. Four Seasons Hotel Istanbul at Sultanahmet</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Location:</strong> Sultanahmet, housed in a former Ottoman prison. <strong>Price:</strong> $250 (≈ ₽23 750)–$450 (≈ ₽42 750) per night for a deluxe room. <strong>Features:</strong> A neoclassical building with a central courtyard, a Michelin-starred restaurant (Araka), and a subterranean spa with a heated indoor pool. Rooms have high ceilings, antique furnishings, and marble bathrooms with soaking tubs. The hotel offers private guided tours of the Hagia Sophia and a helicopter transfer from the airport.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_181961" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons Hotel Istanbul at Sultanahmet - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons Hotel Istanbul at Sultanahmet - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons Hotel Istanbul at Sultanahmet - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_181961 .hc-slide');var d=document.querySelectorAll('#hc_181961 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_181961 .hc-slide');var d=document.querySelectorAll('#hc_181961 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_181961 .hc-slide');var d=document.querySelectorAll('#hc_181961 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons Hotel Istanbul at Sultanahmet &bull; 3 photos</p></div>
+<p><strong>Location:</strong> Sultanahmet, housed in a former Ottoman prison. <strong>Price:</strong> $250–$450per night for a deluxe room. <strong>Features:</strong> A neoclassical building with a central courtyard, a Michelin-starred restaurant (Araka), and a subterranean spa with a heated indoor pool. Rooms have high ceilings, antique furnishings, and marble bathrooms with soaking tubs. The hotel offers private guided tours of the Hagia Sophia and a helicopter transfer from the airport.</p>
 
 <h3>9. Raffles Istanbul</h3>
-<p><strong>Location:</strong> Zorlu Center, a luxury shopping complex in Beşiktaş. <strong>Price:</strong> $350 (≈ ₽33 250)–$600 (≈ ₽57 000) per night for a suite. <strong>Features:</strong> An ultra-modern tower with floor-to-ceiling Bosphorus views, a 1,500-square-meter spa with a hammam and salt room, and a rooftop infinity pool. Suites have separate living areas, walk-in closets, and butler service. The hotel’s restaurant, Arola, serves Spanish-Turkish fusion cuisine, and the Long Bar offers 360-degree city views.</p>
+<p><strong>Location:</strong> Zorlu Center, a luxury shopping complex in Beşiktaş. <strong>Price:</strong> $350–$600per night for a suite. <strong>Features:</strong> An ultra-modern tower with floor-to-ceiling Bosphorus views, a 1,500-square-meter spa with a hammam and salt room, and a rooftop infinity pool. Suites have separate living areas, walk-in closets, and butler service. The hotel’s restaurant, Arola, serves Spanish-Turkish fusion cuisine, and the Long Bar offers 360-degree city views.</p>
 
 <h3>10. Çırağan Palace Kempinski Istanbul</h3>
-<p><strong>Location:</strong> Beşiktaş, on the Bosphorus waterfront. <strong>Price:</strong> $400 (≈ ₽38 000)–$800 (≈ ₽76 000) per night for a palace room. <strong>Features:</strong> A restored Ottoman palace with original frescoes, crystal chandeliers, and a private beach club. Rooms in the palace wing have four-poster beds and hand-painted ceilings, while the modern wing offers Bosphorus-facing balconies. The hotel has a floating restaurant, a full-service spa with a Turkish bath, and a 24-karat gold-leafed swimming pool. Guests receive complimentary access to the nearby Yıldız Park.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Location:</strong> Beşiktaş, on the Bosphorus waterfront. <strong>Price:</strong> $400–$800per night for a palace room. <strong>Features:</strong> A restored Ottoman palace with original frescoes, crystal chandeliers, and a private beach club. Rooms in the palace wing have four-poster beds and hand-painted ceilings, while the modern wing offers Bosphorus-facing balconies. The hotel has a floating restaurant, a full-service spa with a Turkish bath, and a 24-karat gold-leafed swimming pool. Guests receive complimentary access to the nearby Yıldız Park.</p>
 
 <h2>How to Choose the Right Area</h2>
 
-<p><strong>For Beach Lovers:</strong> The Princes’ Islands (Büyükada, Heybeliada) offer car-free beaches and Victorian hotels, but they require a ferry ride (45 minutes from Kabataş). On the mainland, the Florya coast (European side) has public beaches and mid-range hotels like the Florya House Hotel ($60 (≈ ₽5 700)/night). The best luxury beach option is the Shangri-La Bosphorus in Beşiktaş, with a private marina and sun deck.</p>
+<p><strong>For Beach Lovers:</strong> The Princes’ Islands (Büyükada, Heybeliada) offer car-free beaches and Victorian hotels, but they require a ferry ride (45 minutes from Kabataş). On the mainland, the Florya coast (European side) has public beaches and mid-range hotels like the Florya House Hotel ($60/night). The best luxury beach option is the Shangri-La Bosphorus in Beşiktaş, with a private marina and sun deck.</p>
 
 <p><strong>For Sightseeing:</strong> Sultanahmet is the epicenter, with the Hagia Sophia, Blue Mosque, and Topkapi Palace all within walking distance. Budget hotels like Cheers Hostel work well here, while luxury options like the Four Seasons offer guided access. For a quieter base, Sirkeci is a 10-minute walk to the same landmarks but with fewer crowds and cheaper dining.</p>
 
@@ -425,7 +517,7 @@
 
 <p><strong>When to Book:</strong> Avoid the peak months of April (Tulip Festival) and September–October (warm weather, cruises). The best times for deals are November (except for Republic Day, Oct 29) and February (rainy but low season). Book at least 4–6 weeks in advance for mid-range hotels; luxury properties often release discounted rates 60 days before check-in. For last-minute bookings, use HotelTonight or the hotel’s own app for unsold rooms.</p>
 
-<p><strong>Best Services:</strong> Use the Istanbul Tourist Pass (€100 for 5 days) for free museum entry and airport transfer discounts. For airport transfers, book via Havaist buses ($5 (≈ ₽475) per person) or the new Metro M11 line ($2 (≈ ₽190)). Many hotels offer free shuttle services—always ask. For dining, download the Zomato app for local restaurant reviews and book tables at high-end spots like Mikla or Neolokal at least 2 weeks in advance.</p>
+<p><strong>Best Services:</strong> Use the Istanbul Tourist Pass ($108 (€100)for 5 days) for free museum entry and airport transfer discounts. For airport transfers, book via Havaist buses ($5per person) or the new Metro M11 line ($2). Many hotels offer free shuttle services—always ask. For dining, download the Zomato app for local restaurant reviews and book tables at high-end spots like Mikla or Neolokal at least 2 weeks in advance.</p>
 
 <p><strong>Additional Tips:</strong> Always confirm the hotel’s cancellation policy—many mid-range properties offer free cancellation 48 hours before arrival. If traveling to the Asian side, consider hotels near the Kadıköy ferry terminal for easy access to the European side. For long stays (7+ nights), negotiate a weekly rate directly with the hotel; many will offer 20–30% off for extended bookings. Finally, carry a small amount of Turkish Lira for taxis and tips, as not all budget hotels accept credit cards.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -518,6 +610,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -546,6 +639,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -563,8 +657,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

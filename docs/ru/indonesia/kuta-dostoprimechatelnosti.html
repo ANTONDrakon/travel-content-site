@@ -7,8 +7,8 @@
     <meta name="description" content="Что посмотреть в Кута: 15 лучших мест 2026 Кута, оживлённый курортный город на южном побережье Бали, часто воспринимается исключительно как центр серфинга и ...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-dostoprimechatelnosti.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-things-to-do.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/kuta-things-to-do.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-dostoprimechatelnosti.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Что посмотреть в Кута: 15 лучших мест 2026">
     <meta property="og:description" content="Что посмотреть в Кута: 15 лучших мест 2026 Кута, оживлённый курортный город на южном побережье Бали, часто воспринимается исключительно как центр серфинга и ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/kuta-dostoprimechatelnosti.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/kuta-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/kuta.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Что посмотреть в Кута: 15 лучших мест 2026</div>
@@ -363,23 +387,22 @@
 <p>Кута, оживлённый курортный город на южном побережье Бали, часто воспринимается исключительно как центр серфинга и ночной жизни. Однако за шумными барами и волнами скрывается богатая культурная и природная сокровищница. В 2026 году Кута предлагает путешественникам уникальное сочетание современных аттракционов, древних храмов и живописных ландшафтов. Здесь вы найдёте не только знаменитый пляж, но и исторические памятники, художественные галереи и даже водопады, доступные за час езды. Город идеально подходит для тех, кто хочет совместить активный отдых с познавательными экскурсиями, не тратя время на долгие переезды. В этой статье мы собрали 15 лучших мест, которые стоит увидеть в Куте в 2026 году, с точными ценами, часами работы и практическими советами.</p>
 
 <h2>15 лучших достопримечательностей</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Пляж Кута (Kuta Beach)</h3>
 <p>Главный пляж города протянулся на 2,5 километра вдоль Индийского океана. Это идеальное место для наблюдения за закатом, серфинга для начинающих и прогулок по мягкому песку. Пляж знаменит своими мощными волнами, которые привлекают сёрферов со всего мира, а также развитой инфраструктурой с шезлонгами и зонтиками.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно (аренда шезлонга — 50 000 IDR, около 3,5 USD).</li>
+<li><strong>Цена билета:</strong> Бесплатно (аренда шезлонга —₽300 (50 ₽0 (000 IDR)), около 3,5 USD).</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
-<li><strong>Как добраться:</strong> Пешком из центра города (10-15 минут) или на такси от аэропорта Нгурах-Рай (15 минут, 70 000 IDR).</li>
+<li><strong>Как добраться:</strong> Пешком из центра города (10-15 минут) или на такси от аэропорта Нгурах-Рай (15 минут₽420 (70 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Приходите в 6:00 утра, чтобы избежать толп и увидеть рыбацкие лодки, возвращающиеся с уловом.</li>
 </ul>
 
 <h3>2. Храм Пура Танах Лот (Pura Tanah Lot)</h3>
 <p>Один из самых знаковых храмов Бали, расположенный на скалистом островке в 20 километрах к западу от Куты. Построенный в XVI веке, он посвящён морским духам и особенно красив во время прилива, когда кажется, что он парит над водой. В 2026 году храм остаётся обязательным для посещения из-за своей уникальной архитектуры и панорамных видов.</p>
 <ul>
-<li><strong>Цена билета:</strong> 60 000 IDR (4 USD) для взрослых, 30 000 IDR (2 USD) для детей.</li>
+<li><strong>Цена билета:</strong>₽360 (60 ₽0 (000 IDR)) (4 USD) для взрослых₽180 (30 ₽0 (000 IDR)) (2 USD) для детей.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 7:00 до 19:00.</li>
-<li><strong>Как добраться:</strong> На такси из Куты (30-40 минут, 150 000-200 000 IDR) или на арендованном скутере.</li>
+<li><strong>Как добраться:</strong> На такси из Куты (30-40 минут, 150 000-₽1 200 (200 ₽0 (000 IDR))) или на арендованном скутере.</li>
 <li><strong>Совет:</strong> Посещайте храм на закате (около 18:00), но будьте готовы к большому количеству туристов — приезжайте за час до заката.</li>
 </ul>
 
@@ -395,9 +418,9 @@
 <h3>4. Аквапарк Waterbom Bali</h3>
 <p>Один из лучших аквапарков в Азии, занимающий площадь 3,8 гектара. Здесь есть 26 горок и аттракционов, включая знаменитую Climax с падением под углом 60 градусов. В 2026 году парк обновил зону для детей и добавил новые водные игровые площадки.</p>
 <ul>
-<li><strong>Цена билета:</strong> 535 000 IDR (36 USD) для взрослых, 375 000 IDR (25 USD) для детей (онлайн-бронирование со скидкой 10%).</li>
+<li><strong>Цена билета:</strong>₽3 210 (535 ₽0 (000 IDR)) (36 USD) для взрослых₽2 250 (375 ₽0 (000 IDR)) (25 USD) для детей (онлайн-бронирование со скидкой 10%).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 9:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> Пешком из центра Куты (15 минут) или на такси (50 000 IDR).</li>
+<li><strong>Как добраться:</strong> Пешком из центра Куты (15 минут) или на такси (₽300 (50 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Покупайте билеты заранее онлайн, чтобы избежать очередей, и берите с собой водонепроницаемый чехол для телефона.</li>
 </ul>
 
@@ -407,7 +430,7 @@
 <li><strong>Цена билета:</strong> Бесплатно (вход).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 8:00 до 21:00.</li>
 <li><strong>Как добраться:</strong> На улице Poppies Lane I, в 10 минутах от пляжа.</li>
-<li><strong>Совет:</strong> Покупайте батик ручной работы — качество выше, чем в магазинах, а цена после торга составит 50 000-100 000 IDR.</li>
+<li><strong>Совет:</strong> Покупайте батик ручной работы — качество выше, чем в магазинах, а цена после торга составит 50 000-₽600 (100 ₽0 (000 IDR)).</li>
 </ul>
 
 <h3>6. Пляж Легиан (Legian Beach)</h3>
@@ -422,45 +445,45 @@
 <h3>7. Музей Бали (Bali Museum)</h3>
 <p>Расположенный в Денпасаре, в 10 километрах от Куты, музей демонстрирует коллекцию балийских артефактов: от древних каменных скульптур до традиционных тканей. Здание музея само по себе является архитектурной достопримечательностью в стиле дворца.</p>
 <ul>
-<li><strong>Цена билета:</strong> 50 000 IDR (3,5 USD) для взрослых.</li>
+<li><strong>Цена билета:</strong>₽300 (50 ₽0 (000 IDR)) (3,5 USD) для взрослых.</li>
 <li><strong>Часы работы:</strong> Вторник-воскресенье с 8:00 до 16:00 (понедельник — выходной).</li>
-<li><strong>Как добраться:</strong> На такси (30 минут, 100 000 IDR) или на автобусе Trans Sarbagita (10 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси (30 минут₽600 (100 ₽0 (000 IDR))) или на автобусе Trans Sarbagita (₽60 (10 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Возьмите аудиогид (бесплатно на английском) — он значительно обогащает экскурсию.</li>
 </ul>
 
 <h3>8. Пляж Джимбаран (Jimbaran Bay)</h3>
 <p>Залив в 8 километрах к югу от Куты, знаменитый своими ресторанами морепродуктов прямо на песке. Вечером здесь зажигают факелы, и туристы ужинают под звёздами. Пляж также популярен для наблюдения за взлётами самолётов из аэропорта.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно (ужин — от 200 000 IDR на человека).</li>
+<li><strong>Цена билета:</strong> Бесплатно (ужин — от₽1 200 (200 ₽0 (000 IDR)) на человека).</li>
 <li><strong>Часы работы:</strong> Рестораны работают с 17:00 до 23:00.</li>
-<li><strong>Как добраться:</strong> На такси (15-20 минут, 80 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси (15-20 минут₽480 (80 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Заказывайте свежую рыбу на гриле (например, Snapper) — цена фиксирована, но можно попросить скидку за большой заказ.</li>
 </ul>
 
 <h3>9. Храм Пура Улун Дану (Pura Ulun Danu Beratan)</h3>
 <p>Храм на озере Братан в 50 километрах от Куты, построенный в XVII веке. Он посвящён богине озера и является одним из самых фотографируемых мест Бали. В 2026 году храм доступен для посещения с утра до вечера, а туман над озером создаёт мистическую атмосферу.</p>
 <ul>
-<li><strong>Цена билета:</strong> 75 000 IDR (5 USD) для взрослых.</li>
+<li><strong>Цена билета:</strong>₽450 (75 ₽0 (000 IDR)) (5 USD) для взрослых.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 7:00 до 17:00.</li>
-<li><strong>Как добраться:</strong> На такси (1,5 часа, 350 000 IDR) или с организованной экскурсией.</li>
+<li><strong>Как добраться:</strong> На такси (1,5 часа₽2 100 (350 ₽0 (000 IDR))) или с организованной экскурсией.</li>
 <li><strong>Совет:</strong> Приезжайте до 9:00, чтобы застать туман и избежать толп туристических автобусов.</li>
 </ul>
 
 <h3>10. Парк птиц Бали (Bali Bird Park)</h3>
 <p>Парк площадью 2 гектара, где обитает более 1000 птиц из 250 видов, включая редких балийских скворцов. Здесь проводятся шоу с участием попугаев и орлов, а также есть зона для кормления птиц.</p>
 <ul>
-<li><strong>Цена билета:</strong> 385 000 IDR (26 USD) для взрослых, 195 000 IDR (13 USD) для детей.</li>
+<li><strong>Цена билета:</strong>₽2 310 (385 ₽0 (000 IDR)) (26 USD) для взрослых₽1 170 (195 ₽0 (000 IDR)) (13 USD) для детей.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 9:00 до 17:30.</li>
-<li><strong>Как добраться:</strong> На такси (40 минут, 150 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси (40 минут₽900 (150 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Посетите шоу в 11:00 — это самое зрелищное представление с хищными птицами.</li>
 </ul>
 
 <h3>11. Водопад Тибгула (Tibumana Waterfall)</h3>
 <p>Живописный водопад высотой 20 метров в 30 километрах от Куты, окружённый тропическим лесом. Вода падает в естественный бассейн, где можно искупаться. В 2026 году тропа к водопаду оборудована лестницами, что делает её доступной для всех.</p>
 <ul>
-<li><strong>Цена билета:</strong> 20 000 IDR (1,5 USD) за парковку.</li>
+<li><strong>Цена билета:</strong>₽120 (20 ₽0 (000 IDR)) (1,5 USD) за парковку.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 6:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На арендованном скутере (1 час) или на такси (300 000 IDR с ожиданием).</li>
+<li><strong>Как добраться:</strong> На арендованном скутере (1 час) или на такси (₽1 800 (300 ₽0 (000 IDR)) с ожиданием).</li>
 <li><strong>Совет:</strong> Берите с собой купальник и водонепроницаемую обувь — камни скользкие.</li>
 </ul>
 
@@ -476,7 +499,7 @@
 <h3>13. Спа-центр Theta Spa by the Sea</h3>
 <p>Спа-салон прямо на пляже Кута, предлагающий традиционный балийский массаж и процедуры с использованием местных трав. В 2026 году популярны пакеты с массажем и скрабом из кофе.</p>
 <ul>
-<li><strong>Цена билета:</strong> Массаж 60 минут — от 250 000 IDR (17 USD).</li>
+<li><strong>Цена билета:</strong> Массаж 60 минут — от₽1 500 (250 ₽0 (000 IDR)) (17 USD).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 9:00 до 21:00.</li>
 <li><strong>Как добраться:</strong> Пешком из центра (10 минут).</li>
 <li><strong>Совет:</strong> Бронируйте за день — в высокий сезон места заканчиваются к полудню.</li>
@@ -488,22 +511,22 @@
 <li><strong>Цена билета:</strong> Бесплатно (пожертвования приветствуются).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 8:00 до 18:00.</li>
 <li><strong>Как добраться:</strong> На улице Gelogor Carik, в 15 минутах от пляжа.</li>
-<li><strong>Совет:</strong> Наденьте саронг (можно взять напрокат у входа за 10 000 IDR).</li>
+<li><strong>Совет:</strong> Наденьте саронг (можно взять напрокат у входа за₽60 (10 ₽0 (000 IDR))).</li>
 </ul>
 
 <h3>15. Парк развлечений Krisna Wisata</h3>
 <p>Семейный парк с аттракционами, мини-зоопарком и культурными шоу. Здесь можно увидеть традиционные балийские танцы и попробовать местные сладости. Парк занимает 5 гектаров и подходит для детей.</p>
 <ul>
-<li><strong>Цена билета:</strong> 150 000 IDR (10 USD) для взрослых, 100 000 IDR (7 USD) для детей.</li>
+<li><strong>Цена билета:</strong>₽900 (150 ₽0 (000 IDR)) (10 USD) для взрослых₽600 (100 ₽0 (000 IDR)) (7 USD) для детей.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 10:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На такси (20 минут, 100 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси (20 минут₽600 (100 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Посетите шоу танца «Кечак» в 16:00 — оно включено в стоимость билета.</li>
 </ul>
 
 <h2>Маршруты на 1, 2 и 3 дня</h2>
 
 <h3>Маршрут на 1 день: Концентрация на Куте</h3>
-<p>Начните день в 7:00 с прогулки по пляжу Кута и завтрака в кафе на Легиане (например, Café Bali, средний чек 80 000 IDR). В 9:00 посетите Мемориал жертвам теракта и рынок Кута. Обед в 12:00 в ресторане мо<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p>Начните день в 7:00 с прогулки по пляжу Кута и завтрака в кафе на Легиане (например, Café Bali, средний чек₽480 (80 ₽0 (000 IDR))). В 9:00 посетите Мемориал жертвам теракта и рынок Кута. Обед в 12:00 в ресторане мо<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -589,6 +612,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -617,6 +641,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -634,8 +659,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

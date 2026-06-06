@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Каир 2026: от бюджета до люкса Каир, столица Египта с населением более 20 миллионов человек, остается одним из самых привлекательных туристич...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Каир 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Каир 2026: от бюджета до люкса Каир, столица Египта с населением более 20 миллионов человек, остается одним из самых привлекательных туристич...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/cairo-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/cairo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Каир 2026: от бюджета до люкса</div>
@@ -362,68 +386,135 @@
 <p>Каир, столица Египта с населением более 20 миллионов человек, остается одним из самых привлекательных туристических направлений в мире. В 2026 году гостиничная инфраструктура города насчитывает более 1200 отелей, от хостелов до пятизвездочных комплексов. Основные районы проживания — центр города (Майдан Тахрир, Гарден-Сити), Гизы (для близости к пирамидам), Замалек (остров на Ниле, тихий и престижный) и Новый Каир (современные кварталы на востоке). Средняя загрузка отелей в пиковый сезон (октябрь-апрель) достигает 85%, а цены на проживание варьируются от 30 до 500 долларов за ночь.</p>
 
 <p>В 2026 году рынок отелей Каира стабилизировался после постпандемийного восстановления. Инвестиции в новые гостиницы, такие как St. Regis Cairo и Four Seasons at The First Residence, укрепили позиции города как люксового направления. При этом бюджетные варианты, особенно в районе Мохандесин и Докки, остаются доступными благодаря высокой конкуренции. В этой статье мы разберем 10 лучших отелей Каира 2026 года, разделенных по ценовым категориям, с реальными ценами и фактами.</p>
+<div id="hc_448009" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons at The First Residence, укрепили позиции города как люксового направления. При этом бюджетные варианты, особенно в районе Мохандесин и Докки, остаются доступными благодаря высокой конкуренции. В этой статье мы разберем 10 лучших отелей Каира 2026 года, разделенных по ценовым категориям, с реальными ценами и фактами. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons at The First Residence, укрепили позиции города как люксового направления. При этом бюджетные варианты, особенно в районе Мохандесин и Докки, остаются доступными благодаря высокой конкуренции. В этой статье мы разберем 10 лучших отелей Каира 2026 года, разделенных по ценовым категориям, с реальными ценами и фактами. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons at The First Residence, укрепили позиции города как люксового направления. При этом бюджетные варианты, особенно в районе Мохандесин и Докки, остаются доступными благодаря высокой конкуренции. В этой статье мы разберем 10 лучших отелей Каира 2026 года, разделенных по ценовым категориям, с реальными ценами и фактами. - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_448009 .hc-slide');var d=document.querySelectorAll('#hc_448009 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_448009 .hc-slide');var d=document.querySelectorAll('#hc_448009 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_448009 .hc-slide');var d=document.querySelectorAll('#hc_448009 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons at The First Residence, укрепили позиции города как люксового направления. При этом бюджетные варианты, особенно в районе Мохандесин и Докки, остаются доступными благодаря высокой конкуренции. В этой статье мы разберем 10 лучших отелей Каира 2026 года, разделенных по ценовым категориям, с реальными ценами и фактами. &bull; 3 photos</p></div>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Cairo City Center Hotel (район Мохандесин, 4 звезды)</h3>
+<div id="hc_192000" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Cairo City Center Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Cairo City Center Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Cairo City Center Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_192000 .hc-slide');var d=document.querySelectorAll('#hc_192000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_192000 .hc-slide');var d=document.querySelectorAll('#hc_192000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_192000 .hc-slide');var d=document.querySelectorAll('#hc_192000 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Cairo City Center Hotel &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Отель на 45 номеров, расположенный в деловом районе Мохандесин. Номера оснащены кондиционерами, мини-барами и спутниковым телевидением. На территории есть небольшой бассейн на крыше и ресторан египетской кухни.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От 35 до 48 долларов за стандартный двухместный номер в зависимости от сезона. Завтрак включен (континентальный или местный).</p>
 <p><strong>Плюсы:</strong> Бесплатный Wi-Fi (скорость до 50 Мбит/с), круглосуточная стойка регистрации, близость к метро (станция «Мохандесин» в 5 минутах).</p>
 <p><strong>Минусы:</strong> Шум с улицы (район оживленный), нет тренажерного зала, уборка номеров только по запросу.</p>
 
 <h3>2. Pyramids View Inn (Гизы, 3 звезды)</h3>
+<div id="hc_664545" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80" alt="Pyramids View Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80" alt="Pyramids View Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_664545 .hc-slide');var d=document.querySelectorAll('#hc_664545 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_664545 .hc-slide');var d=document.querySelectorAll('#hc_664545 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pyramids View Inn &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Семейный отель с 20 номерами, расположенный прямо напротив комплекса пирамид Гизы. Из номеров открывается вид на Великую пирамиду Хеопса. В отеле есть терраса на крыше и кафе.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От 40 до 50 долларов за номер с видом на пирамиды. Без вида — от 30 долларов.</p>
 <p><strong>Плюсы:</strong> Уникальное расположение (до входа в комплекс пирамид 200 метров), дружелюбный персонал, возможность заказать экскурсии на месте.</p>
 <p><strong>Минусы:</strong> Старая мебель (ремонт 2019 года), слабый Wi-Fi (только в лобби), нет парковки.</p>
 
 <h3>3. Hotel Cleopatra (центр Каира, 3 звезды)</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Cl" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_321667" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hotel Cleopatra - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80" alt="Hotel Cleopatra - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_321667 .hc-slide');var d=document.querySelectorAll('#hc_321667 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_321667 .hc-slide');var d=document.querySelectorAll('#hc_321667 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Cleopatra &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Отель в историческом здании 1920-х годов на улице Шариа-аль-Фаляки, недалеко от Египетского музея. 30 номеров с высокими потолками и лепниной. Есть ресторан и бар.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От 25 до 40 долларов за ночь. Завтрак не включен (дополнительно 5 долларов).</p>
 <p><strong>Плюсы:</strong> Аутентичная атмосфера, центр города (10 минут до музея), низкая цена.</p>
 <p><strong>Минусы:</strong> Нет кондиционера в некоторых номерах (только вентилятор), шум от уличного движения, состояние ванных комнат требует обновления.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Ramses Hilton (центр Каира, 5 звезд)</h3>
+<div id="hc_232985" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ramses Hilton - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ramses Hilton - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Ramses Hilton - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_232985 .hc-slide');var d=document.querySelectorAll('#hc_232985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_232985 .hc-slide');var d=document.querySelectorAll('#hc_232985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_232985 .hc-slide');var d=document.querySelectorAll('#hc_232985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ramses Hilton &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Крупный отель на 800 номеров, расположенный на берегу Нила. Номера просторные (от 30 кв. м), с панорамными окнами. На территории — бассейн, спа-центр, несколько ресторанов (итальянский, азиатский, египетский).</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От 80 до 120 долларов за стандартный номер с видом на Нил. Завтрак «шведский стол» включен.</p>
 <p><strong>Фишки:</strong> Прямой доступ к набережной Нила, ночной клуб «Sky Lounge» на 36-м этаже, бесплатный шаттл до Египетского музея.</p>
 
 <h3>5. Steigenberger Hotel El Tahrir (Майдан Тахрир, 5 звезд)</h3>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="El" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_119636" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Steigenberger Hotel El Tahrir - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Steigenberger Hotel El Tahrir - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_119636 .hc-slide');var d=document.querySelectorAll('#hc_119636 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_119636 .hc-slide');var d=document.querySelectorAll('#hc_119636 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Steigenberger Hotel El Tahrir &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Отель на 200 номеров, открытый в 2018 году. Современный дизайн, номера с звукоизоляцией. Есть фитнес-центр, бассейн на крыше и бизнес-центр.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От 90 до 140 долларов за ночь. Завтрак включен.</p>
 <p><strong>Фишки:</strong> Расположение прямо на площади Тахрир, рядом с метро (станция «Садат»), панорамный ресторан с видом на Нил.</p>
 
 <h3>6. Novotel Cairo Airport (район аэропорта, 4 звезды)</h3>
+<div id="hc_339590" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Novotel Cairo Airport - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Novotel Cairo Airport - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_339590 .hc-slide');var d=document.querySelectorAll('#hc_339590 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_339590 .hc-slide');var d=document.querySelectorAll('#hc_339590 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Novotel Cairo Airport &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Отель при терминале 1 международного аэропорта Каира. 350 номеров, звукоизолированные окна. Есть бассейн, тренажерный зал и два ресторана.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От 70 до 100 долларов за ночь. Завтрак включен.</p>
 <p><strong>Фишки:</strong> Бесплатный трансфер до терминалов (круглосуточно), подходит для транзитных пассажиров, есть бизнес-центр с принтерами и сканерами.</p>
 
 <h3>7. Sofitel Cairo Nile El Gezirah (Замалек, 5 звезд)</h3>
+<div id="hc_572806" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Sofitel Cairo Nile El Gezirah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sofitel Cairo Nile El Gezirah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_572806 .hc-slide');var d=document.querySelectorAll('#hc_572806 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_572806 .hc-slide');var d=document.querySelectorAll('#hc_572806 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sofitel Cairo Nile El Gezirah &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Отель на острове Замалек, 400 номеров с видом на Нил. Дизайн в стиле ар-деко. На территории — спа-центр, бассейн, теннисный корт и несколько ресторанов (включая ресторан с мишленовским шеф-поваром).</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От 110 до 150 долларов за стандартный номер. Завтрак включен.</p>
 <p><strong>Фишки:</strong> Частная пристань для яхт, близость к Каирской опере (10 минут пешком), эксклюзивный клуб «Le Bar» с живой музыкой.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Four Seasons Hotel Cairo at The First Residence (Гизы, 5 звезд)</h3>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_651240" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons Hotel Cairo at The First Residence - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons Hotel Cairo at The First Residence - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons Hotel Cairo at The First Residence - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_651240 .hc-slide');var d=document.querySelectorAll('#hc_651240 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_651240 .hc-slide');var d=document.querySelectorAll('#hc_651240 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_651240 .hc-slide');var d=document.querySelectorAll('#hc_651240 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons Hotel Cairo at The First Residence &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Отель в престижном районе Гизы, 269 номеров и люксов. Интерьеры выполнены из мрамора и дерева. Есть спа-центр площадью 1000 кв. м, бассейн с подогревом, рестораны высокой кухни (включая ресторан с видом на пирамиды).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p><strong>Цены:</strong> От 250 до 500 долларов за ночь в зависимости от категории номера. Завтрак включен.</p>
 <p><strong>Особенности:</strong> Персональный консьерж, частный трансфер на Rolls-Royce, доступ к эксклюзивному торговому центру The First Residence Mall.</p>
 
 <h3>9. St. Regis Cairo (остров Замалек, 5 звезд)</h3>
+<div id="hc_913471" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="St. Regis Cairo - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="St. Regis Cairo - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_913471 .hc-slide');var d=document.querySelectorAll('#hc_913471 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_913471 .hc-slide');var d=document.querySelectorAll('#hc_913471 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">St. Regis Cairo &bull; 2 photos</p></div>
 <p><strong>Описание:</strong> Отель, открытый в 2021 году, 200 номеров и люксов. Дизайн от архитектора Майкла Грейвса. На территории — спа-центр с хаммамом, бассейн с видом на Нил, рестораны с международной кухней.</p>
 <p><strong>Цены:</strong> От 300 до 600 долларов за ночь. Завтрак включен.</p>
 <p><strong>Особенности:</strong> Услуги дворецкого (butler service) 24/7, фирменный коктейль «Bloody Mary» в баре, частная терраса для мероприятий.</p>
@@ -438,7 +529,6 @@
 <ul>
 <li><strong>Для пляжного отдыха:</strong> Каир не имеет выхода к морю (пляжи в 2-3 часах езды в Хургаде или Александрии). В самом городе выбирайте отели с бассейнами на крыше, например, Ramses Hilton или Steigenberger El Tahrir. Для поездок на море бронируйте отели рядом с аэропортом (Novotel Cairo Airport).</li>
 <li><strong>Для экскурсий:</strong> Лучший район — Гизы (Pyramids View Inn, Marriott Mena House). Оттуда до пирамид 5-10 минут, до Сфинкса — 15 минут. Для посещения Египетского музея и цитадели Саладина выбирайте центр (Hotel Cleopatra, Ramses Hilton).</li>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Cl" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <li><strong>Для ночной жизни:</strong> Остров Замалек (Sofitel, St. Regis) — тихий, но с барами и клубами. В центре (Майдан Тахрир) — больше шума, но есть ночные клубы и казино. Для молодежной тусовки — район Мохандесин (Cairo City Center Hotel).</li>
 <li><strong>Для шопинга:</strong> Новый Каир (отели вроде Four Seasons) — современные торговые центры. Для рынков (хан-эль-Халили) — центр города.</li>
 </ul>
@@ -541,6 +631,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -569,6 +660,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -586,8 +678,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

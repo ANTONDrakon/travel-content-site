@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Nusa Dua 2026</title>
     <meta name="description" content="15 Best Things to Do in Nusa Dua 2026 Nusa Dua, located on the southern coast of Bali, Indonesia, is a purpose-built resort enclave known for its pristine wh...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Nusa Dua 2026">
     <meta property="og:description" content="15 Best Things to Do in Nusa Dua 2026 Nusa Dua, located on the southern coast of Bali, Indonesia, is a purpose-built resort enclave known for its pristine wh...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/nusa-dua-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/nusa-dua.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Nusa Dua 2026</div>
@@ -363,111 +387,110 @@
 <p>Nusa Dua, located on the southern coast of Bali, Indonesia, is a purpose-built resort enclave known for its pristine white-sand beaches, world-class hotels, and manicured landscapes. Unlike the bustling streets of Kuta or the cultural heart of Ubud, Nusa Dua offers a more refined, tranquil experience focused on relaxation and curated attractions. In 2026, the area continues to evolve with new water sports, cultural shows, and eco-tourism initiatives. Whether you are a luxury traveler, a family with children, or an adventure seeker, Nusa Dua provides a diverse range of activities within a compact, well-maintained area. This guide covers 15 essential attractions, practical itineraries, and insider tips to maximize your visit.</p>
 
 <h2>15 Best Attractions in Nusa Dua</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Geger Beach (Pasir Putih)</h3>
 <p>Geger Beach is a stunning stretch of white sand located just south of the main Nusa Dua resort area. It is less crowded than the main beach and offers calm, turquoise waters perfect for swimming. The beach is lined with warungs (local eateries) where you can enjoy fresh coconut and grilled seafood. In 2026, the beach remains free to access, though parking fees apply for scooters and cars.</p>
-<p><strong>Ticket Price:</strong> Free entry. Parking: IDR 5,000 for scooters, IDR 20,000 for cars.</p>
+<p><strong>Ticket Price:</strong> Free entry. Parking: $0 (5 $0 (000 IDR))for scooters, $1 (20 $0 (000 IDR))for cars.</p>
 <p><strong>Hours:</strong> Open 24 hours; best visited 7:00 AM – 5:00 PM.</p>
-<p><strong>How to Get There:</strong> From the Nusa Dua gate, take Jalan Pantai Geger for 2 km. Taxi from Nusa Dua center costs IDR 30,000–50,000.</p>
+<p><strong>How to Get There:</strong> From the Nusa Dua gate, take Jalan Pantai Geger for 2 km. Taxi from Nusa Dua center costs $2 (30 $0 (000 IDR))–50,000.</p>
 <p><strong>Tip:</strong> Arrive before 9:00 AM to secure a shaded spot under a coconut tree. Avoid weekends for fewer crowds.</p>
 
 <h3>2. Waterblow Nusa Dua</h3>
 <p>Waterblow is a natural rock formation on the southern coast of Nusa Dua where waves crash into a narrow crevice, shooting water up to 10 meters high. It is a spectacular photo opportunity, especially during high tide. The site is located within the ITDC (Indonesian Tourism Development Corporation) complex, near the Nusa Dua Beach Hotel. While the attraction is free, it can be dangerous during rough seas.</p>
 <p><strong>Ticket Price:</strong> Free.</p>
 <p><strong>Hours:</strong> Best viewed at high tide; check local tide tables. Accessible 24 hours.</p>
-<p><strong>How to Get There:</strong> Walk from the Nusa Dua Beach Hotel or take a hotel shuttle. Taxi from any Nusa Dua hotel costs IDR 20,000–40,000.</p>
+<p><strong>How to Get There:</strong> Walk from the Nusa Dua Beach Hotel or take a hotel shuttle. Taxi from any Nusa Dua hotel costs $1 (20 $0 (000 IDR))–40,000.</p>
 <p><strong>Tip:</strong> Bring a waterproof camera or phone case. Stand at a safe distance as waves can be unpredictable.</p>
 
 <h3>3. Museum Pasifika</h3>
 <p>Museum Pasifika is a premier art museum showcasing over 600 works from 200 artists across Asia and the Pacific. It features 11 galleries covering Indonesian, Balinese, and international art, including pieces by renowned artists like Arie Smit and Rudolf Bonnet. The museum is housed in a beautiful Balinese-style building within the Bali Tourism Development Corporation (BTDC) area. In 2026, it remains a cultural highlight for those interested in art history.</p>
-<p><strong>Ticket Price:</strong> Adult IDR 100,000; child (6–12) IDR 50,000.</p>
+<p><strong>Ticket Price:</strong> Adult $6 (100 $0 (000 IDR)); child (6–12) $3 (50 $0 (000 IDR))</p>
 <p><strong>Hours:</strong> 10:00 AM – 6:00 PM (last entry 5:00 PM).</p>
 <p><strong>How to Get There:</strong> Located on Jalan Nusa Dua, near the Nusa Dua Beach Hotel. Free shuttle from many hotels.</p>
-<p><strong>Tip:</strong> Combine with a visit to Waterblow, as both are within walking distance. Audio guides are available for IDR 50,000.</p>
+<p><strong>Tip:</strong> Combine with a visit to Waterblow, as both are within walking distance. Audio guides are available for $3 (50 $0 (000 IDR))</p>
 
 <h3>4. Nusa Dua Beach (Main Beach)</h3>
 <p>The main Nusa Dua Beach is a 5-km stretch of white sand that is meticulously maintained by the ITDC. It is divided into public and hotel sections, but all are open to the public. The water is calm and clear, ideal for swimming, stand-up paddleboarding, and kayaking. The beach is lined with luxury resorts, but public access points are clearly marked.</p>
 <p><strong>Ticket Price:</strong> Free.</p>
 <p><strong>Hours:</strong> 24 hours; lifeguards on duty 8:00 AM – 6:00 PM.</p>
 <p><strong>How to Get There:</strong> Use the public beach access at Jalan Nusa Dua. Free parking is available near the ITDC office.</p>
-<p><strong>Tip:</strong> Rent a sun lounger from a hotel for IDR 100,000–150,000 for the day. Bring reef-safe sunscreen as the water is pristine.</p>
+<p><strong>Tip:</strong> Rent a sun lounger from a hotel for $6 (100 $0 (000 IDR))–150,000 for the day. Bring reef-safe sunscreen as the water is pristine.</p>
 
 <h3>5. Bali Collection Shopping Centre</h3>
 <p>Bali Collection is an open-air shopping mall in the heart of Nusa Dua, featuring over 80 stores, restaurants, and entertainment options. It offers a mix of high-end boutiques, local handicrafts, and international brands. The mall also hosts cultural performances, including Balinese dance shows, every evening. In 2026, it remains the main retail hub for the area.</p>
 <p><strong>Ticket Price:</strong> Free entry.</p>
 <p><strong>Hours:</strong> 10:00 AM – 10:00 PM daily.</p>
 <p><strong>How to Get There:</strong> Located on Jalan Nusa Dua. Free shuttle from most hotels in the area.</p>
-<p><strong>Tip:</strong> Visit in the evening for the dance performances (usually 7:00 PM). The food court offers affordable local dishes from IDR 30,000.</p>
+<p><strong>Tip:</strong> Visit in the evening for the dance performances (usually 7:00 PM). The food court offers affordable local dishes from $2 (30 $0 (000 IDR))</p>
 
 <h3>6. Devdan Show (Treasure of the Archipelago)</h3>
 <p>Devdan is a spectacular 90-minute performance at the Bali Nusa Dua Theatre, showcasing the cultural diversity of Indonesia through dance, acrobatics, and special effects. It features over 100 performers and state-of-the-art lighting and sound. The show is suitable for all ages and is a must-see for families. In 2026, it continues to be one of the top evening attractions in Bali.</p>
-<p><strong>Ticket Price:</strong> Premium IDR 450,000; Standard IDR 350,000 (online discounts available).</p>
+<p><strong>Ticket Price:</strong> Premium $28 (450 $0 (000 IDR)); Standard $22 (350 $0 (000 IDR))(online discounts available).</p>
 <p><strong>Hours:</strong> Shows at 7:30 PM (check schedule for additional matinees).</p>
 <p><strong>How to Get There:</strong> The theatre is inside the Bali Nusa Dua Convention Center. Free shuttle from major hotels.</p>
 <p><strong>Tip:</strong> Book tickets online at least 24 hours in advance for a 15% discount. Arrive 30 minutes early for good seats.</p>
 
 <h3>7. Turtle Conservation and Education Centre (TCEC)</h3>
 <p>The TCEC is a small but impactful conservation center dedicated to protecting sea turtles. Visitors can learn about the life cycle of turtles, see hatchlings, and even participate in release programs (seasonal). The center is run by local volunteers and offers a hands-on experience. In 2026, it remains a popular activity for families and eco-conscious travelers.</p>
-<p><strong>Ticket Price:</strong> Donation-based (IDR 20,000–50,000 suggested).</p>
+<p><strong>Ticket Price:</strong> Donation-based ($1 (20 $0 (000 IDR))–50,000 suggested).</p>
 <p><strong>Hours:</strong> 9:00 AM – 5:00 PM daily.</p>
-<p><strong>How to Get There:</strong> Located on Jalan Pantai Geger, near Geger Beach. Walk or take a taxi from Nusa Dua (IDR 30,000).</p>
+<p><strong>How to Get There:</strong> Located on Jalan Pantai Geger, near Geger Beach. Walk or take a taxi from Nusa Dua ($2 (30 $0 (000 IDR))).</p>
 <p><strong>Tip:</strong> Visit between April and October for the highest chance of seeing hatchlings. Call ahead to confirm release schedules.</p>
 
 <h3>8. Atuh Beach (via Nusa Dua)</h3>
 <p>Atuh Beach is a stunning white-sand beach located on the southeast coast of Nusa Penida island, but it is easily accessed via a fast boat from Nusa Dua. The beach is framed by dramatic limestone cliffs and turquoise water. It is less crowded than other Nusa Penida beaches like Kelingking. In 2026, day trips from Nusa Dua are well-organized.</p>
-<p><strong>Ticket Price:</strong> Boat transfer IDR 300,000–400,000 round trip (includes snorkeling gear). Beach entry free.</p>
+<p><strong>Ticket Price:</strong> Boat transfer $19 (300 $0 (000 IDR))–400,000 round trip (includes snorkeling gear). Beach entry free.</p>
 <p><strong>Hours:</strong> Boats depart Nusa Dua at 7:00 AM and return by 4:00 PM.</p>
-<p><strong>How to Get There:</strong> Book a tour from Nusa Dua hotels or take a taxi to the Nusa Dua harbor (IDR 20,000).</p>
+<p><strong>How to Get There:</strong> Book a tour from Nusa Dua hotels or take a taxi to the Nusa Dua harbor ($1 (20 $0 (000 IDR))).</p>
 <p><strong>Tip:</strong> Bring water shoes as the beach has small pebbles. Avoid the rainy season (November–March) for calm seas.</p>
 
 <h3>9. Bali National Golf Club</h3>
 <p>This 18-hole championship golf course is designed by Nelson & Haworth and offers stunning views of the Indian Ocean and surrounding hills. It is consistently ranked among the top golf courses in Indonesia. The course features 6,800 yards of fairways with challenging water hazards and bunkers. In 2026, it remains a premier destination for golf enthusiasts.</p>
-<p><strong>Ticket Price:</strong> Green fee IDR 1,200,000 (weekday), IDR 1,500,000 (weekend). Club rental IDR 500,000.</p>
+<p><strong>Ticket Price:</strong> Green fee $76 (1 $13 (200000 IDR))(weekday), $95 (1 $32 (500000 IDR))(weekend). Club rental $32 (500 $0 (000 IDR))</p>
 <p><strong>Hours:</strong> 6:00 AM – 6:00 PM daily.</p>
 <p><strong>How to Get There:</strong> Located on Jalan Nusa Dua. Complimentary shuttle from nearby hotels.</p>
 <p><strong>Tip:</strong> Book tee times online to secure early morning slots. The pro shop offers high-quality equipment.</p>
 
 <h3>10. Taman Bhagawan (Water Park)</h3>
 <p>Taman Bhagawan is a water park located within the Nusa Dua Beach Hotel, but open to the public. It features several slides, a lazy river, and a children’s pool. The park is smaller than Waterbom Bali but offers a more relaxed atmosphere. In 2026, it is ideal for families with young children.</p>
-<p><strong>Ticket Price:</strong> IDR 200,000 (adult), IDR 100,000 (child under 12). Includes towel and locker.</p>
+<p><strong>Ticket Price:</strong> $13 (200 $0 (000 IDR))(adult), $6 (100 $0 (000 IDR))(child under 12). Includes towel and locker.</p>
 <p><strong>Hours:</strong> 9:00 AM – 6:00 PM daily.</p>
-<p><strong>How to Get There:</strong> Enter through the Nusa Dua Beach Hotel lobby. Taxi from other hotels costs IDR 30,000.</p>
+<p><strong>How to Get There:</strong> Enter through the Nusa Dua Beach Hotel lobby. Taxi from other hotels costs $2 (30 $0 (000 IDR))</p>
 <p><strong>Tip:</strong> Visit on weekdays for fewer crowds. Sunscreen is not allowed on slides, so reapply after each ride.</p>
 
 <h3>11. Serangan Island (Turtle Island)</h3>
 <p>Serangan Island, also known as Turtle Island, is a small island just off the coast of Nusa Dua. It is home to a turtle conservation center and offers opportunities for snorkeling, kayaking, and visiting a traditional fishing village. The island is accessible via a short boat ride. In 2026, it remains a peaceful escape from the resort crowds.</p>
-<p><strong>Ticket Price:</strong> Boat transfer IDR 100,000 round trip. Conservation center donation IDR 20,000.</p>
+<p><strong>Ticket Price:</strong> Boat transfer $6 (100 $0 (000 IDR))round trip. Conservation center donation $1 (20 $0 (000 IDR))</p>
 <p><strong>Hours:</strong> Boats run 8:00 AM – 5:00 PM.</p>
-<p><strong>How to Get There:</strong> Take a taxi to the Serangan boat dock (IDR 40,000 from Nusa Dua).</p>
+<p><strong>How to Get There:</strong> Take a taxi to the Serangan boat dock ($3 (40 $0 (000 IDR))from Nusa Dua).</p>
 <p><strong>Tip:</strong> Combine with a visit to the nearby Mangrove Forest for a half-day trip.</p>
 
 <h3>12. Nusa Dua Mangrove Forest</h3>
 <p>This protected mangrove forest is located along the coast between Nusa Dua and Serangan Island. It offers a boardwalk trail and kayak tours through the dense mangrove tunnels. The area is rich in birdlife, including herons and kingfishers. In 2026, eco-tours are popular for nature lovers.</p>
-<p><strong>Ticket Price:</strong> IDR 50,000 (walking trail), IDR 150,000 (kayak tour).</p>
+<p><strong>Ticket Price:</strong> $3 (50 $0 (000 IDR))(walking trail), $9 (150 $0 (000 IDR))(kayak tour).</p>
 <p><strong>Hours:</strong> 8:00 AM – 5:00 PM.</p>
-<p><strong>How to Get There:</strong> Located near the Serangan bridge. Taxi from Nusa Dua costs IDR 50,000.</p>
+<p><strong>How to Get There:</strong> Located near the Serangan bridge. Taxi from Nusa Dua costs $3 (50 $0 (000 IDR))</p>
 <p><strong>Tip:</strong> Bring insect repellent and wear long pants. Kayak tours are best at sunrise or sunset.</p>
 
 <h3>13. Istana Air (Water Palace)</h3>
 <p>Istana Air is a small water palace located within the Grand Hyatt Bali resort, but open to the public. It features ornate Balinese architecture, lotus ponds, and a peaceful garden. The palace was built in the 1990s as a replica of traditional Balinese water palaces. It is a popular spot for wedding photos.</p>
 <p><strong>Ticket Price:</strong> Free (enter through Grand Hyatt lobby).</p>
 <p><strong>Hours:</strong> 8:00 AM – 6:00 PM.</p>
-<p><strong>How to Get There:</strong> Walk from the main Nusa Dua beach path. Taxi to Grand Hyatt costs IDR 20,000.</p>
+<p><strong>How to Get There:</strong> Walk from the main Nusa Dua beach path. Taxi to Grand Hyatt costs $1 (20 $0 (000 IDR))</p>
 <p><strong>Tip:</strong> Visit early morning for the best light and fewer tourists. Combine with a walk along the beach.</p>
 
 <h3>14. Nusa Dua Bay Water Sports</h3>
 <p>The Nusa Dua Bay is a hub for water sports, including parasailing, jet skiing, banana boats, and flyboarding. Several operators offer packages at the public beach area. Prices are regulated by the ITDC, ensuring safety standards. In 2026, it remains a top activity for adrenaline seekers.</p>
-<p><strong>Ticket Price:</strong> Parasailing IDR 250,000 (15 min), jet ski IDR 400,000 (30 min), banana boat IDR 150,000 (20 min).</p>
+<p><strong>Ticket Price:</strong> Parasailing $16 (250 $0 (000 IDR))(15 min), jet ski $25 (400 $0 (000 IDR))(30 min), banana boat $9 (150 $0 (000 IDR))(20 min).</p>
 <p><strong>Hours:</strong> 9:00 AM – 5:00 PM.</p>
 <p><strong>How to Get There:</strong> Head to the public beach access near the ITDC office. Walk from any Nusa Dua hotel.</p>
-<p><strong>Tip:</strong> Negotiate for package deals (e.g., 3 activities for IDR 600,000). Bring a waterproof bag for valuables.</p>
+<p><strong>Tip:</strong> Negotiate for package deals (e.g., 3 activities for $38 (600 $0 (000 IDR))). Bring a waterproof bag for valuables.</p>
 
 <h3>15. Puja Mandala</h3>
 <p>Puja Mandala is a unique interfaith complex featuring five different houses of worship: a Hindu temple, a Buddhist temple, a Catholic church, a Protestant church, and a mosque. It symbolizes religious harmony in Bali. The complex is located on the main road between Nusa Dua and Kuta. In 2026, it is a peaceful place for reflection and photography.</p>
 <p><strong>Ticket Price:</strong> Free.</p>
 <p><strong>Hours:</strong> 6:00 AM – 8:00 PM daily.</p>
-<p><strong>How to Get There:</strong> Located on Jalan Bypass Ngurah Rai. Taxi from Nusa Dua costs IDR 60,000.</p>
+<p><strong>How to Get There:</strong> Located on Jalan Bypass Ngurah Rai. Taxi from Nusa Dua costs $4 (60 $0 (000 IDR))</p>
 <p><strong>Tip:</strong> Dress modestly (cover shoulders and knees). Visit during morning prayers for a serene atmosphere.</p>
 
 <h2>Optimal Itineraries for 1, 2, and 3 Days</h2>
@@ -584,6 +607,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -612,6 +636,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -629,8 +654,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

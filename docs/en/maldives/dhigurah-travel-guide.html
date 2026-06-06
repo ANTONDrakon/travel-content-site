@@ -6,7 +6,7 @@
     <title>Dhigurah Travel Guide 2026</title>
     <meta name="description" content="Dhigurah Travel Guide 2026 Oh, my friend, let me tell you about Dhigurah — a slice of paradise that feels like it was plucked straight from a dream. This tin...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/dhigurah-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/dhigurah-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/dhigurah-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/dhigurah-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Dhigurah Travel Guide 2026">
     <meta property="og:description" content="Dhigurah Travel Guide 2026 Oh, my friend, let me tell you about Dhigurah — a slice of paradise that feels like it was plucked straight from a dream. This tin...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/dhigurah-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/dhigurah-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://i.ytimg.com/vi/p6XxR6fn8xA/maxresdefault.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/dhigurah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Dhigurah Travel Guide 2026</div>
@@ -368,19 +392,19 @@
 <h2>How to Get There</h2>
 <p>Your journey begins at Velana International Airport (MLE) in Malé, the main gateway to the Maldives. From major cities like Moscow, Dubai, or London, you'll find direct flights with airlines like Aeroflot, Emirates, or British Airways. Here are the average prices I've seen for 2026 (remember, I always mark up 12-15% to cover my booking fees and peace of mind):</p>
 <ul>
-<li><strong>From Moscow (SVO)</strong>: Round-trip economy — $780 (≈ ₽74 100) to $950 (≈ ₽90 250) (with a layover in Dubai or Doha).</li>
-<li><strong>From Dubai (DXB)</strong>: Round-trip — $450 (≈ ₽42 750) to $600. (≈ ₽57 000)</li>
-<li><strong>From London (LHR)</strong>: Round-trip — $820 (≈ ₽77 900) to $1 050. (≈ ₽99 750)</li>
-<li><strong>From New York (JFK)</strong>: Round-trip — $1 100 (≈ ₽104 500) to $1 400. (≈ ₽133 000)</li>
+<li><strong>From Moscow (SVO)</strong>: Round-trip economy — $780to $950(with a layover in Dubai or Doha).</li>
+<li><strong>From Dubai (DXB)</strong>: Round-trip — $450to $600</li>
+<li><strong>From London (LHR)</strong>: Round-trip — $820to $1 050</li>
+<li><strong>From New York (JFK)</strong>: Round-trip — $1 100to $1 400</li>
 </ul>
-<p>Once you land in Malé, you'll need to get to Dhigurah. There are two options: a 20-minute domestic flight to Maamigili Airport (followed by a 15-minute speedboat) or a direct 3-hour speedboat from Malé. I recommend the speedboat for the views — it's an adventure in itself. Prices: domestic flight + speedboat combo — $260 (≈ ₽24 700) per person round-trip; direct speedboat — $200 (≈ ₽19 000) per person round-trip. Book through your guesthouse for the best rates.</p>
+<p>Once you land in Malé, you'll need to get to Dhigurah. There are two options: a 20-minute domestic flight to Maamigili Airport (followed by a 15-minute speedboat) or a direct 3-hour speedboat from Malé. I recommend the speedboat for the views — it's an adventure in itself. Prices: domestic flight + speedboat combo — $260per person round-trip; direct speedboat — $200per person round-trip. Book through your guesthouse for the best rates.</p>
 
 <h2>Where to Stay</h2>
 <p>Dhigurah has a lovely range of accommodations, from budget-friendly guesthouses to mid-range boutique stays. There are no 5-star resorts here, and that's the charm. Here are my top picks for every budget:</p>
 <ul>
-<li><strong>Budget</strong>: <em>Sunrise Beach Guesthouse</em> — a cozy spot with 6 rooms, just steps from the beach. Double room: $85 (≈ ₽8 075) per night (including breakfast). Free bike rental. Perfect for solo travelers and couples.</li>
-<li><strong>Mid-Range</strong>: <em>Manta Lodge Dhigurah</em> — my personal favorite. They have a rooftop terrace, a small pool, and organize whale shark excursions. Double room: $145 (≈ ₽13 775) per night. Worth every cent.</li>
-<li><strong>Splurge</strong>: <em>Ocean Dreams Boutique Hotel</em> — the closest you'll get to luxury on a local island. Modern rooms with ocean views, a spa, and a restaurant serving international cuisine. Double room: $220 (≈ ₽20 900) per night.</li>
+<li><strong>Budget</strong>: <em>Sunrise Beach Guesthouse</em> — a cozy spot with 6 rooms, just steps from the beach. Double room: $85per night (including breakfast). Free bike rental. Perfect for solo travelers and couples.</li>
+<li><strong>Mid-Range</strong>: <em>Manta Lodge Dhigurah</em> — my personal favorite. They have a rooftop terrace, a small pool, and organize whale shark excursions. Double room: $145per night. Worth every cent.</li>
+<li><strong>Splurge</strong>: <em>Ocean Dreams Boutique Hotel</em> — the closest you'll get to luxury on a local island. Modern rooms with ocean views, a spa, and a restaurant serving international cuisine. Double room: $220per night.</li>
 </ul>
 <p>Neighborhoods? The island is so small that "neighborhoods" are just different stretches of beach. The south side is quieter, with fewer guesthouses; the north side has more cafés and the main jetty. I recommend staying near the bikini beach (yes, there's a designated area for swimwear) — it's the liveliest part.</p>
 
@@ -389,47 +413,47 @@
 <table>
 <tr><th>#</th><th>Attraction</th><th>Description</th><th>Ticket Price</th><th>Opening Hours</th></tr>
 <tr><td>1</td><td>Dhigurah Sandbank</td><td>A 3-km sandbank that appears at low tide. Walk barefoot on pure white sand with turquoise water on both sides. Unforgettable.</td><td>Free</td><td>24/7 (best at low tide)</td></tr>
-<tr><td>2</td><td>Whale Shark Point</td><td>Snorkel with whale sharks in the South Ari Marine Protected Area. Guides ensure safe, ethical encounters.</td><td>$95 (≈ ₽9 025) per person (guided tour)</td><td>6 AM – 12 PM</td></tr>
-<tr><td>3</td><td>Manta Reef</td><td>A cleaning station where manta rays glide gracefully. Snorkeling trip included.</td><td>$85 (≈ ₽8 075) per person</td><td>7 AM – 11 AM</td></tr>
+<tr><td>2</td><td>Whale Shark Point</td><td>Snorkel with whale sharks in the South Ari Marine Protected Area. Guides ensure safe, ethical encounters.</td><td>$95per person (guided tour)</td><td>6 AM – 12 PM</td></tr>
+<tr><td>3</td><td>Manta Reef</td><td>A cleaning station where manta rays glide gracefully. Snorkeling trip included.</td><td>$85per person</td><td>7 AM – 11 AM</td></tr>
 <tr><td>4</td><td>Bikini Beach</td><td>A designated beach for swimming in swimwear. Soft sand, calm waters, and a few loungers.</td><td>Free</td><td>Sunrise to sunset</td></tr>
 <tr><td>5</td><td>Dhigurah Mosque</td><td>A beautiful white mosque with intricate carvings. Respectful dress required.</td><td>Free</td><td>Open for prayers; visitors ask permission</td></tr>
 <tr><td>6</td><td>Local Harbor</td><td>Watch fishermen bring in the catch of the day. Colorful dhoni boats and lively atmosphere.</td><td>Free</td><td>6 AM – 8 AM</td></tr>
 <tr><td>7</td><td>Thundi Beach</td><td>A quiet stretch on the south side, perfect for sunset picnics.</td><td>Free</td><td>24/7</td></tr>
-<tr><td>8</td><td>Nightingale Island</td><td>A tiny uninhabited island nearby. Take a picnic and feel like a castaway.</td><td>Free (boat ride: $30 (≈ ₽2 850))</td><td>Day trips only</td></tr>
-<tr><td>9</td><td>Dhigurah Dive Center</td><td>PADI-certified dives to coral gardens, caves, and drop-offs. Equipment included.</td><td>$120 (≈ ₽11 400) per dive</td><td>8 AM – 5 PM</td></tr>
-<tr><td>10</td><td>Sea Turtle Sanctuary</td><td>A conservation area where rescued turtles are rehabilitated. Educational and heartwarming.</td><td>$10 (≈ ₽950) donation</td><td>9 AM – 4 PM</td></tr>
-<tr><td>11</td><td>Sunset Fishing Trip</td><td>Join locals for traditional line fishing. Catch your own dinner!</td><td>$55 (≈ ₽5 225) per person</td><td>4 PM – 7 PM</td></tr>
+<tr><td>8</td><td>Nightingale Island</td><td>A tiny uninhabited island nearby. Take a picnic and feel like a castaway.</td><td>Free (boat ride: $30)</td><td>Day trips only</td></tr>
+<tr><td>9</td><td>Dhigurah Dive Center</td><td>PADI-certified dives to coral gardens, caves, and drop-offs. Equipment included.</td><td>$120per dive</td><td>8 AM – 5 PM</td></tr>
+<tr><td>10</td><td>Sea Turtle Sanctuary</td><td>A conservation area where rescued turtles are rehabilitated. Educational and heartwarming.</td><td>$10donation</td><td>9 AM – 4 PM</td></tr>
+<tr><td>11</td><td>Sunset Fishing Trip</td><td>Join locals for traditional line fishing. Catch your own dinner!</td><td>$55per person</td><td>4 PM – 7 PM</td></tr>
 <tr><td>12</td><td>Coconut Grove</td><td>A shaded area with hammocks and fresh coconut water. Relax and read a book.</td><td>Free</td><td>Sunrise to sunset</td></tr>
 <tr><td>13</td><td>Dhigurah Viewpoint</td><td>A small tower near the harbor offering panoramic island views. Great for photos.</td><td>Free</td><td>6 AM – 6 PM</td></tr>
 <tr><td>14</td><td>Local Market</td><td>Fresh fruits, vegetables, and handmade souvenirs. Try the banana chips!</td><td>Free entry</td><td>7 AM – 12 PM (Fri closed)</td></tr>
-<tr><td>15</td><td>Night Snorkeling</td><td>Glow-in-the-dark plankton and nocturnal marine life. A surreal experience.</td><td>$70 (≈ ₽6 650) per person</td><td>8 PM – 10 PM</td></tr>
+<tr><td>15</td><td>Night Snorkeling</td><td>Glow-in-the-dark plankton and nocturnal marine life. A surreal experience.</td><td>$70per person</td><td>8 PM – 10 PM</td></tr>
 </table>
 
 <h2>Getting Around</h2>
 <p>Dhigurah is tiny — only 1.2 km long and 200 meters wide — so you won't need a car. Here's how to get around:</p>
 <ul>
 <li><strong>Walking</strong>: The main path runs the length of the island. It takes 20 minutes to walk from end to end. Free and healthy!</li>
-<li><strong>Bicycle Rental</strong>: Most guesthouses offer bikes for $5 (≈ ₽475) per day. I highly recommend this — the breeze on your face as you pedal past palm trees is pure joy.</li>
-<li><strong>Taxi</strong>: There are no cars, but you'll find a few "taxi bikes" for $2 (≈ ₽190) per ride. Useful if you're carrying heavy bags.</li>
-<li><strong>Speedboat Transfers</strong>: For trips to nearby islands or Malé, book through your guesthouse. $30 (≈ ₽2 850)-$50 (≈ ₽4 750) per person one-way.</li>
+<li><strong>Bicycle Rental</strong>: Most guesthouses offer bikes for $5per day. I highly recommend this — the breeze on your face as you pedal past palm trees is pure joy.</li>
+<li><strong>Taxi</strong>: There are no cars, but you'll find a few "taxi bikes" for $2per ride. Useful if you're carrying heavy bags.</li>
+<li><strong>Speedboat Transfers</strong>: For trips to nearby islands or Malé, book through your guesthouse. $30-$50per person one-way.</li>
 </ul>
 
 <h2>Where to Eat</h2>
 <p>Maldivian cuisine is all about fresh fish, coconut, and rice. Here are my favorite spots on Dhigurah:</p>
 <ul>
-<li><strong>Manta Ray Restaurant</strong>: The best local food on the island. Try the mas huni (shredded smoked tuna with coconut) for breakfast — $8. (≈ ₽760) Dinner mains: $15 (≈ ₽1 425)-$25. (≈ ₽2 375)</li>
-<li><strong>Sunset Café</strong>: A laid-back spot with ocean views. Their tuna sandwich and fresh juice combo is $10. (≈ ₽950) Open 7 AM – 9 PM.</li>
-<li><strong>Street Food Stall near Harbor</strong>: Grab grilled fish skewers and roti for $3 (≈ ₽285)-$5. (≈ ₽475) Eat like a local!</li>
-<li><strong>Ocean Dreams Restaurant</strong>: Upscale dining with pasta, steaks, and seafood platters. Mains: $25 (≈ ₽2 375)-$40. (≈ ₽3 800) Perfect for a splurge night.</li>
-<li><strong>Bikini Beach Snack Bar</strong>: Quick bites like fries, ice cream, and cold drinks. $2 (≈ ₽190)-$6. (≈ ₽570)</li>
+<li><strong>Manta Ray Restaurant</strong>: The best local food on the island. Try the mas huni (shredded smoked tuna with coconut) for breakfast — $8Dinner mains: $15-$25</li>
+<li><strong>Sunset Café</strong>: A laid-back spot with ocean views. Their tuna sandwich and fresh juice combo is $10Open 7 AM – 9 PM.</li>
+<li><strong>Street Food Stall near Harbor</strong>: Grab grilled fish skewers and roti for $3-$5Eat like a local!</li>
+<li><strong>Ocean Dreams Restaurant</strong>: Upscale dining with pasta, steaks, and seafood platters. Mains: $25-$40Perfect for a splurge night.</li>
+<li><strong>Bikini Beach Snack Bar</strong>: Quick bites like fries, ice cream, and cold drinks. $2-$6</li>
 </ul>
-<p>Price ranges: Breakfast $5 (≈ ₽475)-$10  (≈ ₽950) Lunch $8 (≈ ₽760)-$15  (≈ ₽1 425) Dinner $12 (≈ ₽1 140)-$30. (≈ ₽2 850) I recommend budgeting $40 (≈ ₽3 800)-$50 (≈ ₽4 750) per day for food if you eat out for all meals.</p>
+<p>Price ranges: Breakfast $5-$10Lunch $8-$15Dinner $12-$30I recommend budgeting $40-$50per day for food if you eat out for all meals.</p>
 
 <h2>Best Time to Visit</h2>
 <p>The Maldives has two main seasons: dry (November to April) and wet (May to October). Here's the breakdown:</p>
 <ul>
 <li><strong>November to April</strong>: Peak season. Sunny skies, calm seas, and excellent visibility for snorkeling. Prices are 30-40% higher. I recommend December and January for the best weather — temperatures hover around 28-30°C (82-86°F).</li>
-<li><strong>May to October</strong>: Low season. Expect short rain showers and stronger winds, but also lower prices and fewer crowds. Whale sharks are still present. June to August is great for budget travelers — guesthouse rates drop to $60 (≈ ₽5 700)-$80 (≈ ₽7 600) per night.</li>
+<li><strong>May to October</strong>: Low season. Expect short rain showers and stronger winds, but also lower prices and fewer crowds. Whale sharks are still present. June to August is great for budget travelers — guesthouse rates drop to $60-$80per night.</li>
 <li><strong>September-October</strong>: My secret sweet spot. The rain eases, the ocean is warm, and prices are moderate. Plus, you'll see manta rays gathering in large numbers.</li>
 </ul>
 <p>Average temperatures year-round: 27-31°C. Water temperature: 26-30°C.</p>
@@ -440,7 +464,7 @@
 <li>Passport valid for at least 6 months from your entry date.</li>
 <li>Confirmed return flight ticket.</li>
 <li>Proof of accommodation (hotel booking).</li>
-<li>Sufficient funds for your stay (around $100 (≈ ₽9 500) per day).</li>
+<li>Sufficient funds for your stay (around $100per day).</li>
 </ul>
 <p>No visa fee, no application in advance. Just show up with a smile. For other nationalities, check with the Maldives Immigration website — most countries get visa-free or visa-on-arrival.</p>
 
@@ -448,14 +472,14 @@
 <p>Let's break down costs for a 7-night stay in Dhigurah (mid-range, per person). Remember, I've added my 12-15% markup:</p>
 <table>
 <tr><th>Category</th><th>Budget</th><th>Mid-Range</th><th>Splurge</th></tr>
-<tr><td>Accommodation (7 nights)</td><td>$595 (≈ ₽56 525)</td><td>$1 015 (≈ ₽96 425)</td><td>$1 540 (≈ ₽146 300)</td></tr>
-<tr><td>Food (7 days, 3 meals)</td><td>$210 (≈ ₽19 950)</td><td>$350 (≈ ₽33 250)</td><td>$490 (≈ ₽46 550)</td></tr>
-<tr><td>Transport (speedboat to/from MLE)</td><td>$200 (≈ ₽19 000)</td><td>$200 (≈ ₽19 000)</td><td>$200 (≈ ₽19 000)</td></tr>
-<tr><td>Activities (3 tours + snorkeling)</td><td>$255 (≈ ₽24 225)</td><td>$340 (≈ ₽32 300)</td><td>$425 (≈ ₽40 375)</td></tr>
-<tr><td>Miscellaneous (souvenirs, tips, snacks)</td><td>$70 (≈ ₽6 650)</td><td>$115 (≈ ₽10 925)</td><td>$170 (≈ ₽16 150)</td></tr>
-<tr><td><strong>Total</strong></td><td><strong>$1 330 (≈ ₽126 350)</strong></td><td><strong>$2 020 (≈ ₽191 900)</strong></td><td><strong>$2 825 (≈ ₽268 375)</strong></td></tr>
+<tr><td>Accommodation (7 nights)</td><td>$595</td><td>$1 015</td><td>$1 540</td></tr>
+<tr><td>Food (7 days, 3 meals)</td><td>$210</td><td>$350</td><td>$490</td></tr>
+<tr><td>Transport (speedboat to/from MLE)</td><td>$200</td><td>$200</td><td>$200</td></tr>
+<tr><td>Activities (3 tours + snorkeling)</td><td>$255</td><td>$340</td><td>$425</td></tr>
+<tr><td>Miscellaneous (souvenirs, tips, snacks)</td><td>$70</td><td>$115</td><td>$170</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>$1 330</strong></td><td><strong>$2 020</strong></td><td><strong>$2 825</strong></td></tr>
 </table>
-<p>Flights not included. For a budget traveler, $1 330 (≈ ₽126 350) is doable if you stay in a guesthouse and eat at local stalls. Mid-range is comfortable with a few tours. Splurge gets you the best room and all activities.</p>
+<p>Flights not included. For a budget traveler, $1 330is doable if you stay in a guesthouse and eat at local stalls. Mid-range is comfortable with a few tours. Splurge gets you the best room and all activities.</p>
 
 <h2>10 Travel Tips</h2>
 <p>Here are my hard-earned tips for first-timers in Dhigurah:</p>
@@ -577,6 +601,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -605,6 +630,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -622,8 +648,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Best Time to Visit Ubud 2026: Seasons &amp; Weather</title>
     <meta name="description" content="Best Time to Visit Ubud 2026: Seasons &amp; Weather Ubud, the cultural heart of Bali, sits at an elevation of approximately 300 meters above sea level in the cen...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-best-time-to-visit.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-kogda-luchshe-ekhat.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-best-time-to-visit.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-best-time-to-visit.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Best Time to Visit Ubud 2026: Seasons &amp; Weather">
     <meta property="og:description" content="Best Time to Visit Ubud 2026: Seasons &amp; Weather Ubud, the cultural heart of Bali, sits at an elevation of approximately 300 meters above sea level in the cen...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-best-time-to-visit.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/ubud-best-time-to-visit.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ubud.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Best Time to Visit Ubud 2026: Seasons &amp; Weather</div>
@@ -484,7 +508,7 @@
 
 <p><strong>Why visit during high season:</strong> The weather is at its most reliable. You can book sunrise treks up Mount Batur (elevation 1,717 meters) with near-certain clear views. Rice terrace walks in Tegallalang are bathed in golden light. The Ubud Monkey Forest is less muddy and more pleasant. Cultural performances, such as the Kecak dance at Uluwatu Temple (a 90-minute drive), run nightly without rain cancellations.</p>
 
-<p><strong>Prices:</strong> Accommodation costs increase by 40–60% compared to low season. A mid-range hotel room that costs IDR 800,000 (approximately USD 50) in April can jump to IDR 1,300,000 (USD 80) in August. Luxury villas in Sayan or Campuhan can exceed USD 400 per night. Restaurants and tour operators also raise prices by 15–25%. Advance booking is essential—popular hotels like the Hanging Gardens of Bali or Como Shambhala Estate sell out three months ahead.</p>
+<p><strong>Prices:</strong> Accommodation costs increase by 40–60% compared to low season. A mid-range hotel room that costs $51 (800 $0 (000 IDR))(approximately USD 50) in April can jump to $82 (1 $19 (300000 IDR))(USD 80) in August. Luxury villas in Sayan or Campuhan can exceed USD 400 per night. Restaurants and tour operators also raise prices by 15–25%. Advance booking is essential—popular hotels like the Hanging Gardens of Bali or Como Shambhala Estate sell out three months ahead.</p>
 
 <p><a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_ubud" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Find hotels in Ubud on Hotellook</a></p>
 
@@ -492,13 +516,13 @@
 
 <p>The low season in Ubud runs from <strong>January to March</strong> and <strong>November</strong>, excluding the Christmas-New Year window. These months see the heaviest rainfall, but also the lowest tourist numbers and prices.</p>
 
-<p><strong>Pros of low season:</strong> Hotel rates drop by 30–50%. You can find boutique guesthouses in central Ubud for as low as IDR 350,000 (USD 22) per night. Temples like Tirta Empul and Goa Gajah are uncrowded—you might have the ancient bathing pools to yourself. Spa treatments at places like Karsa Spa or Ubud Bodyworks are available at walk-in rates with no queue. Flights from major hubs like Singapore, Sydney, or Tokyo are significantly cheaper, often by 35–45%.</p>
+<p><strong>Pros of low season:</strong> Hotel rates drop by 30–50%. You can find boutique guesthouses in central Ubud for as low as $22 (350 $0 (000 IDR))(USD 22) per night. Temples like Tirta Empul and Goa Gajah are uncrowded—you might have the ancient bathing pools to yourself. Spa treatments at places like Karsa Spa or Ubud Bodyworks are available at walk-in rates with no queue. Flights from major hubs like Singapore, Sydney, or Tokyo are significantly cheaper, often by 35–45%.</p>
 
 <p><strong>Cons of low season:</strong> Afternoon downpours are intense and frequent, typically starting around 2:00 PM and lasting 2–3 hours. Trails to waterfalls like Tegenungan or Kanto Lampo become slippery and dangerous. Mosquito activity increases, raising the risk of dengue fever (always use repellent). Some remote restaurants and yoga studios close for maintenance or owner holidays.</p>
 
 <p><strong>Weather:</strong> Expect temperatures of 26–27°C (79–81°F) with 80–90% humidity. Rain falls on 20–25 days per month. However, mornings are often clear and sunny until 11:00 AM, making early-day sightseeing viable.</p>
 
-<p><strong>Prices:</strong> A meal at a mid-range warung costs IDR 50,000–70,000 (USD 3–4.50) versus IDR 80,000–100,000 in high season. Yoga classes drop from IDR 150,000 to IDR 100,000.</p>
+<p><strong>Prices:</strong> A meal at a mid-range warung costs $3 (50 $0 (000 IDR))–70,000 (USD 3–4.50) versus $5 (80 $0 (000 IDR))–100,000 in high season. Yoga classes drop from $9 (150 $0 (000 IDR))to $6 (100 $0 (000 IDR))</p>
 
 <h2>Best Time for Beach Vacation</h2>
 
@@ -629,6 +653,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -657,6 +682,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -674,8 +700,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

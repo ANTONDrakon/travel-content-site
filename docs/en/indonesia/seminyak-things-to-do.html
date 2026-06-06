@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Seminyak 2026</title>
     <meta name="description" content="15 Best Things to Do in Seminyak 2026 Seminyak, Bali’s sophisticated coastal enclave, has evolved into a premier destination for travelers seeking a blend of...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/seminyak-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/seminyak-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/seminyak-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/seminyak-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Seminyak 2026">
     <meta property="og:description" content="15 Best Things to Do in Seminyak 2026 Seminyak, Bali’s sophisticated coastal enclave, has evolved into a premier destination for travelers seeking a blend of...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/seminyak-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/seminyak-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/seminyak.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Seminyak 2026</div>
@@ -363,13 +387,12 @@
 <p>Seminyak, Bali’s sophisticated coastal enclave, has evolved into a premier destination for travelers seeking a blend of luxury, culture, and vibrant nightlife. Unlike the bustling streets of Kuta or the spiritual heart of Ubud, Seminyak offers a refined experience with world-class dining, high-end boutiques, and stunning beaches. Its attractions range from serene sunset temples to cutting-edge art galleries, making it a versatile base for exploring Bali’s southwest coast. In 2026, the area continues to attract visitors with new developments while preserving its classic charm. This guide covers the top 15 attractions, practical itineraries, and insider tips to maximize your visit.</p>
 
 <h2>15 Best Attractions</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Double Six Beach</h3>
 <p>Double Six Beach is the epicenter of Seminyak’s beach culture, known for its golden sand and legendary sunset views. It stretches for about 1.5 kilometers and is lined with beach clubs like Ku De Ta and Double Six Rooftop. The waves here are gentle, making it ideal for swimming and beginner surfers. In 2026, the beach has undergone a clean-up initiative, ensuring pristine conditions.</p>
-<p><strong>Ticket Price:</strong> Free (access to public areas). Beach clubs may have minimum spend requirements (approx. IDR 200,000–500,000).</p>
+<p><strong>Ticket Price:</strong> Free (access to public areas). Beach clubs may have minimum spend requirements (approx. $13 (200 $0 (000 IDR))–500,000).</p>
 <p><strong>Hours:</strong> 24/7 (best visited from 16:00 for sunset).</p>
-<p><strong>How to Get There:</strong> Located on Jalan Double Six, a 10-minute walk from central Seminyak. Taxis or ride-hailing apps (e.g., Gojek) cost around IDR 30,000 from the main square.</p>
+<p><strong>How to Get There:</strong> Located on Jalan Double Six, a 10-minute walk from central Seminyak. Taxis or ride-hailing apps (e.g., Gojek) cost around $2 (30 $0 (000 IDR))from the main square.</p>
 <p><strong>Tip:</strong> Arrive by 16:30 to secure a good spot at the beach clubs; the sun sets at approximately 18:15 year-round.</p>
 
 <h3>2. Seminyak Village Mall</h3>
@@ -381,14 +404,14 @@
 
 <h3>3. Petitenget Temple</h3>
 <p>Petitenget Temple is a 16th-century Hindu temple located near the beach, known for its intricate stone carvings and spiritual significance. It is part of a chain of sea temples along Bali’s coast, believed to protect the island from evil spirits. The temple is small but photogenic, with a serene courtyard shaded by banyan trees. In 2026, the temple has improved visitor facilities, including a meditation garden.</p>
-<p><strong>Ticket Price:</strong> Donation-based (suggested IDR 10,000–20,000).</p>
+<p><strong>Ticket Price:</strong> Donation-based (suggested $1 (10 $0 (000 IDR))–20,000).</p>
 <p><strong>Hours:</strong> 8:00–18:00 daily.</p>
-<p><strong>How to Get There:</strong> On Jalan Petitenget, a 5-minute drive from Seminyak Village. Ride-hailing cost: IDR 20,000.</p>
-<p><strong>Tip:</strong> Wear a sarong and sash (available for rent at the entrance for IDR 10,000); visit during the morning prayer time (around 10:00) for a glimpse of local rituals.</p>
+<p><strong>How to Get There:</strong> On Jalan Petitenget, a 5-minute drive from Seminyak Village. Ride-hailing cost: $1 (20 $0 (000 IDR))</p>
+<p><strong>Tip:</strong> Wear a sarong and sash (available for rent at the entrance for $1 (10 $0 (000 IDR))); visit during the morning prayer time (around 10:00) for a glimpse of local rituals.</p>
 
 <h3>4. Ku De Ta Beach Club</h3>
 <p>Ku De Ta is an iconic beachfront venue that has defined Seminyak’s luxury social scene since 2000. It features a restaurant, bar, and infinity pool overlooking the Indian Ocean. The club hosts regular DJ sets and themed parties, especially during sunset hours. In 2026, it has introduced a “Sunset Lounge” package with premium seating and canapés.</p>
-<p><strong>Ticket Price:</strong> Free entry (minimum spend IDR 350,000 per person for lounge seating).</p>
+<p><strong>Ticket Price:</strong> Free entry (minimum spend $22 (350 $0 (000 IDR))per person for lounge seating).</p>
 <p><strong>Hours:</strong> 11:00–00:00 daily.</p>
 <p><strong>How to Get There:</strong> On Jalan Kayu Aya, a 10-minute walk from Seminyak Village.</p>
 <p><strong>Tip:</strong> Book a table online at least 3 days in advance during peak season (June–August) to avoid disappointment.</p>
@@ -409,91 +432,91 @@
 
 <h3>7. Bodyworks Spa</h3>
 <p>Bodyworks is a premier spa in Seminyak, offering traditional Balinese massages, body scrubs, and facials in a serene garden setting. The spa uses natural ingredients like coconut and frangipani. In 2026, it has introduced a “Volcanic Stone Therapy” using stones from Mount Agung. It’s consistently rated among the top 10 spas in Bali by travel magazines.</p>
-<p><strong>Ticket Price:</strong> 60-minute Balinese massage from IDR 350,000; packages up to IDR 1,500,000 for 3-hour treatments.</p>
+<p><strong>Ticket Price:</strong> 60-minute Balinese massage from $22 (350 $0 (000 IDR)); packages up to $95 (1 $32 (500000 IDR))for 3-hour treatments.</p>
 <p><strong>Hours:</strong> 9:00–21:00 daily.</p>
 <p><strong>How to Get There:</strong> On Jalan Kayu Aya, a 5-minute walk from Seminyak Village.</p>
 <p><strong>Tip:</strong> Book at least 24 hours in advance via their website for a 10% discount; request a room near the koi pond for extra tranquility.</p>
 
 <h3>8. La Plancha</h3>
 <p>La Plancha is a colorful beachfront bar on Double Six Beach, famous for its giant beanbags and vibrant umbrellas. It serves Spanish-inspired tapas and cocktails, with a lively atmosphere at sunset. The venue has a relaxed, bohemian vibe and is a favorite for Instagram photos. In 2026, it has expanded its menu to include vegan options.</p>
-<p><strong>Ticket Price:</strong> Free entry (minimum spend IDR 150,000 per person).</p>
+<p><strong>Ticket Price:</strong> Free entry (minimum spend $9 (150 $0 (000 IDR))per person).</p>
 <p><strong>Hours:</strong> 11:00–23:00 daily.</p>
 <p><strong>How to Get There:</strong> Directly on Double Six Beach, accessible from Jalan Double Six.</p>
-<p><strong>Tip:</strong> Arrive by 17:00 to claim a beanbag on the front row; the sangria (IDR 120,000) is a bestseller.</p>
+<p><strong>Tip:</strong> Arrive by 17:00 to claim a beanbag on the front row; the sangria ($8 (120 $0 (000 IDR))) is a bestseller.</p>
 
 <h3>9. Seminyak Art Market</h3>
-<p>This daily market features over 100 stalls selling handmade crafts, batik clothing, silver jewelry, and wooden carvings. It’s a great place to bargain for souvenirs, with prices starting from IDR 20,000 for small items. In 2026, the market has introduced a “Sustainable Craft” section with eco-friendly products. Haggling is expected, so start at 50% of the initial price.</p>
+<p>This daily market features over 100 stalls selling handmade crafts, batik clothing, silver jewelry, and wooden carvings. It’s a great place to bargain for souvenirs, with prices starting from $1 (20 $0 (000 IDR))for small items. In 2026, the market has introduced a “Sustainable Craft” section with eco-friendly products. Haggling is expected, so start at 50% of the initial price.</p>
 <p><strong>Ticket Price:</strong> Free entry.</p>
 <p><strong>Hours:</strong> 9:00–18:00 daily.</p>
 <p><strong>How to Get There:</strong> On Jalan Raya Seminyak, a 10-minute walk from Petitenget Temple.</p>
-<p><strong>Tip:</strong> Bring small bills (IDR 10,000–50,000) for easier transactions; avoid buying knock-off electronics as they may not work.</p>
+<p><strong>Tip:</strong> Bring small bills ($1 (10 $0 (000 IDR))–50,000) for easier transactions; avoid buying knock-off electronics as they may not work.</p>
 
 <h3>10. Uluwatu Temple (Day Trip)</h3>
 <p>While technically in Uluwatu, this clifftop temple is a popular day trip from Seminyak, located 30 km south. It offers dramatic ocean views and a resident monkey population. The temple is famous for its Kecak fire dance performances at sunset. In 2026, the entrance has been upgraded with a new visitor center and shuttle service to the temple.</p>
-<p><strong>Ticket Price:</strong> IDR 50,000 per person (domestic/international); Kecak dance show: IDR 100,000.</p>
+<p><strong>Ticket Price:</strong> $3 (50 $0 (000 IDR))per person (domestic/international); Kecak dance show: $6 (100 $0 (000 IDR))</p>
 <p><strong>Hours:</strong> 7:00–19:00 daily.</p>
-<p><strong>How to Get There:</strong> 45-minute drive from Seminyak via taxi (approx. IDR 250,000 one-way) or tour bus.</p>
+<p><strong>How to Get There:</strong> 45-minute drive from Seminyak via taxi (approx. $16 (250 $0 (000 IDR))one-way) or tour bus.</p>
 <p><strong>Tip:</strong> Secure your belongings from monkeys; wear closed-toe shoes for the steep stairs. Book the dance show in advance online for guaranteed seats.</p>
 
 <h3>11. Potato Head Beach Club</h3>
 <p>Potato Head is a sprawling beach club in Petitenget, known for its amphitheater-style design and infinity pool. It features multiple restaurants, a bar, and a gallery space. The venue hosts international DJs and live music events. In 2026, it has opened a “Sunset Terrace” with panoramic views. It’s a hotspot for celebrities and influencers.</p>
-<p><strong>Ticket Price:</strong> Free entry (minimum spend IDR 400,000 for poolside seating).</p>
+<p><strong>Ticket Price:</strong> Free entry (minimum spend $25 (400 $0 (000 IDR))for poolside seating).</p>
 <p><strong>Hours:</strong> 10:00–00:00 daily.</p>
 <p><strong>How to Get There:</strong> On Jalan Petitenget, a 5-minute walk from Petitenget Temple.</p>
-<p><strong>Tip:</strong> Arrive before 11:00 to avoid queues; the Sunday brunch (IDR 500,000 per person) is highly recommended.</p>
+<p><strong>Tip:</strong> Arrive before 11:00 to avoid queues; the Sunday brunch ($32 (500 $0 (000 IDR))per person) is highly recommended.</p>
 
 <h3>12. Canggu Rice Terraces (Day Trip)</h3>
 <p>Located 15 km north of Seminyak, the Canggu rice terraces offer a glimpse of Bali’s agricultural heritage. Unlike the touristy Tegallalang terraces in Ubud, these are less crowded and free to explore. The area features walking paths through green paddies and small waterfalls. In 2026, a new eco-trail has been established linking several villages.</p>
-<p><strong>Ticket Price:</strong> Free (donation of IDR 10,000 appreciated at some entrances).</p>
+<p><strong>Ticket Price:</strong> Free (donation of $1 (10 $0 (000 IDR))appreciated at some entrances).</p>
 <p><strong>Hours:</strong> 24/7 (best in the morning, 7:00–10:00).</p>
-<p><strong>How to Get There:</strong> 30-minute drive from Seminyak via taxi (IDR 150,000) or scooter rental (IDR 50,000 per day).</p>
-<p><strong>Tip:</strong> Wear insect repellent and sturdy shoes; hire a local guide (IDR 100,000) for a 2-hour tour to learn about rice cultivation.</p>
+<p><strong>How to Get There:</strong> 30-minute drive from Seminyak via taxi ($9 (150 $0 (000 IDR))) or scooter rental ($3 (50 $0 (000 IDR))per day).</p>
+<p><strong>Tip:</strong> Wear insect repellent and sturdy shoes; hire a local guide ($6 (100 $0 (000 IDR))) for a 2-hour tour to learn about rice cultivation.</p>
 
 <h3>13. Seminyak Night Market</h3>
-<p>This evening market operates from 17:00 to 23:00, offering street food like satay, nasi goreng, and fresh seafood. It’s a budget-friendly dining option with dishes starting from IDR 15,000. The market has a lively atmosphere with live acoustic music. In 2026, it has expanded to include a “Craft Beer Corner” with local brews.</p>
+<p>This evening market operates from 17:00 to 23:00, offering street food like satay, nasi goreng, and fresh seafood. It’s a budget-friendly dining option with dishes starting from $1 (15 $0 (000 IDR))The market has a lively atmosphere with live acoustic music. In 2026, it has expanded to include a “Craft Beer Corner” with local brews.</p>
 <p><strong>Ticket Price:</strong> Free entry.</p>
 <p><strong>Hours:</strong> 17:00–23:00 daily.</p>
 <p><strong>How to Get There:</strong> On Jalan Kayu Jati, a 7-minute walk from Seminyak Village.</p>
-<p><strong>Tip:</strong> Try the “Babi Guling” (suckling pig) from Warung Babi Guling Ibu Oka, starting at IDR 25,000; bring cash as cards are rarely accepted.</p>
+<p><strong>Tip:</strong> Try the “Babi Guling” (suckling pig) from Warung Babi Guling Ibu Oka, starting at $2 (25 $0 (000 IDR)); bring cash as cards are rarely accepted.</p>
 
 <h3>14. Re.juve Cold Pressed Juices</h3>
-<p>This health-focused café and juice bar offers organic cold-pressed juices, smoothie bowls, and vegan meals. It’s a popular spot for detoxing after a night out. The ingredients are sourced from local farms in Bedugul. In 2026, it has launched a “Juice Cleanse Package” (3-day, IDR 1,200,000) with delivery service.</p>
-<p><strong>Ticket Price:</strong> Drinks from IDR 60,000.</p>
+<p>This health-focused café and juice bar offers organic cold-pressed juices, smoothie bowls, and vegan meals. It’s a popular spot for detoxing after a night out. The ingredients are sourced from local farms in Bedugul. In 2026, it has launched a “Juice Cleanse Package” (3-day, $76 (1 $13 (200000 IDR))) with delivery service.</p>
+<p><strong>Ticket Price:</strong> Drinks from $4 (60 $0 (000 IDR))</p>
 <p><strong>Hours:</strong> 7:00–21:00 daily.</p>
 <p><strong>How to Get There:</strong> On Jalan Petitenget, a 3-minute walk from Potato Head.</p>
-<p><strong>Tip:</strong> Order the “Green Goddess” juice (IDR 75,000) for a refreshing boost; join their loyalty program for a free drink after 5 purchases.</p>
+<p><strong>Tip:</strong> Order the “Green Goddess” juice ($5 (75 $0 (000 IDR))) for a refreshing boost; join their loyalty program for a free drink after 5 purchases.</p>
 
 <h3>15. Seminyak Yoga Center</h3>
-<p>This studio offers daily yoga classes in a peaceful bamboo pavilion, including Hatha, Vinyasa, and meditation sessions. In 2026, it has added a “Sunrise Yoga” class on the beach (6:00–7:00) for IDR 150,000. The center also hosts workshops on Balinese healing techniques. It’s suitable for all levels, from beginners to advanced.</p>
-<p><strong>Ticket Price:</strong> Drop-in class: IDR 150,000; 10-class pass: IDR 1,200,000.</p>
+<p>This studio offers daily yoga classes in a peaceful bamboo pavilion, including Hatha, Vinyasa, and meditation sessions. In 2026, it has added a “Sunrise Yoga” class on the beach (6:00–7:00) for $9 (150 $0 (000 IDR))The center also hosts workshops on Balinese healing techniques. It’s suitable for all levels, from beginners to advanced.</p>
+<p><strong>Ticket Price:</strong> Drop-in class: $9 (150 $0 (000 IDR)); 10-class pass: $76 (1 $13 (200000 IDR))</p>
 <p><strong>Hours:</strong> 7:00–20:00 daily.</p>
 <p><strong>How to Get There:</strong> On Jalan Raya Seminyak, a 5-minute walk from Seminyak Art Market.</p>
-<p><strong>Tip:</strong> Arrive 15 minutes early to rent a mat (IDR 20,000) and hydrate; book online for a 5% discount.</p>
+<p><strong>Tip:</strong> Arrive 15 minutes early to rent a mat ($1 (20 $0 (000 IDR))) and hydrate; book online for a 5% discount.</p>
 
 <h2>1-Day, 2-Day, 3-Day Itineraries</h2>
 
 <h3>1-Day Itinerary: Seminyak Highlights</h3>
 <ul>
 <li><strong>7:00–8:30:</strong> Sunrise yoga at Seminyak Yoga Center or beach walk on Seminyak Beach Walk.</li>
-<li><strong>9:00–10:30:</strong> Breakfast at Re.juve Cold Pressed Juices (smoothie bowl, IDR 80,000).</li>
+<li><strong>9:00–10:30:</strong> Breakfast at Re.juve Cold Pressed Juices (smoothie bowl, $5 (80 $0 (000 IDR))).</li>
 <li><strong>11:00–12:30:</strong> Visit Petitenget Temple and Nyaman Gallery.</li>
-<li><strong>13:00–14:30:</strong> Lunch at Seminyak Night Market (satay and nasi goreng, IDR 50,000).</li>
+<li><strong>13:00–14:30:</strong> Lunch at Seminyak Night Market (satay and nasi goreng, $3 (50 $0 (000 IDR))).</li>
 <li><strong>15:00–17:00:</strong> Relax at Double Six Beach with a swim.</li>
-<li><strong>17:30–19:30:</strong> Sunset at Ku De Ta (minimum spend IDR 350,000).</li>
-<li><strong>20:00–22:00:</strong> Dinner at La Plancha (tapas and cocktails, IDR 200,000).</li>
+<li><strong>17:30–19:30:</strong> Sunset at Ku De Ta (minimum spend $22 (350 $0 (000 IDR))).</li>
+<li><strong>20:00–22:00:</strong> Dinner at La Plancha (tapas and cocktails, $13 (200 $0 (000 IDR))).</li>
 </ul>
 
 <h3>2-Day Itinerary: Culture and Luxury</h3>
 <ul>
-<li><strong>Day 1:</strong> Follow the 1-day itinerary, but replace dinner with a spa treatment at Bodyworks (evening session, IDR 500,000).</li>
+<li><strong>Day 1:</strong> Follow the 1-day itinerary, but replace dinner with a spa treatment at Bodyworks (evening session, $32 (500 $0 (000 IDR))).</li>
 <li><strong>Day 2:</strong>
 <ul>
 <li><strong>7:00–9:00:</strong> Morning at Seminyak Art Market (bargain for souvenirs).</li>
-<li><strong>9:30–12:00:</strong> Day trip to Canggu Rice Terraces (guided walk, IDR 100,000).</li>
-<li><strong>12:30–14:00:</strong> Lunch at Potato Head Beach Club (IDR 300,000).</li>
+<li><strong>9:30–12:00:</strong> Day trip to Canggu Rice Terraces (guided walk, $6 (100 $0 (000 IDR))).</li>
+<li><strong>12:30–14:00:</strong> Lunch at Potato Head Beach Club ($19 (300 $0 (000 IDR))).</li>
 <li><strong>14:30–16:30:</strong> Shopping at Seminyak Village Mall.</li>
 <li><strong>17:00–19:00:</strong> Sunset at Petitenget Beach (free).</li>
-<li><strong>19:30–21:00:</strong> Dinner at a local warung (e.g., Warung Nia, IDR 100,000).</li>
+<li><strong>19:30–21:00:</strong> Dinner at a local warung (e.g., Warung Nia, $6 (100 $0 (000 IDR))).</li>
 </ul>
 </li>
 </ul>
@@ -586,6 +609,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -614,6 +638,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -631,8 +656,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

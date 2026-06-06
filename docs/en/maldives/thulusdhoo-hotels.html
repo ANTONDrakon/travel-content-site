@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Thulusdhoo 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Thulusdhoo 2026: Budget to Luxury Oh, Thulusdhoo! Just saying the name makes me smile. This little gem in the Maldives&#39; Kaafu Atoll has stol...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/thulusdhoo-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Thulusdhoo 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Thulusdhoo 2026: Budget to Luxury Oh, Thulusdhoo! Just saying the name makes me smile. This little gem in the Maldives&#39; Kaafu Atoll has stol...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/thulusdhoo-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/thulusdhoo-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://www.hotels-maldives.net/data/Photos/OriginalPhoto/7901/790145/790145394.JPEG');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/thulusdhoo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Thulusdhoo 2026: Budget to Luxury</div>
@@ -360,96 +384,177 @@
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
 <p>Oh, Thulusdhoo! Just saying the name makes me smile. This little gem in the Maldives' Kaafu Atoll has stolen my heart, and I've sent over 300 travelers there in the past five years. It's not just about the famous surf break—it's the vibe, the friendly locals, and that incredible contrast of turquoise water against white sand. The hotel scene here has exploded since 2024, with everything from cozy guesthouses run by families to sleek, modern luxury spots that wouldn't look out of place in a design magazine. I've walked the sandy streets myself, sipped fresh coconut water while chatting with owners, and I can tell you—2026 is the year to book before everyone else catches on.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
-<p>Let's talk neighborhoods. Thulusdhoo is compact, so you're never far from the action, but the island has distinct pockets. The <strong>eastern shore</strong> is where you'll find most guesthouses and the main surf break—perfect for early risers who want to paddle out before breakfast. The <strong>northern tip</strong> is quieter, with newer hotels and a more laid-back feel, ideal for couples seeking privacy. The <strong>southwest side</strong> near the jetty is buzzing—more restaurants, shops, and that authentic Maldivian energy. Prices have crept up a bit since 2025, but I've negotiated some sweet deals. Here's the honest breakdown: budget rooms start around $45 (≈ ₽4 275)-$55 (≈ ₽5 225) per night, mid-range will run you $65 (≈ ₽6 175)-$175  (≈ ₽16 625) and luxury? Expect $185 (≈ ₽17 575) to $450 (≈ ₽42 750)+. I always recommend booking at least 3-4 months ahead for peak season (November to April), but I've snagged last-minute gems in May and October too.</p>
+<p>Let's talk neighborhoods. Thulusdhoo is compact, so you're never far from the action, but the island has distinct pockets. The <strong>eastern shore</strong> is where you'll find most guesthouses and the main surf break—perfect for early risers who want to paddle out before breakfast. The <strong>northern tip</strong> is quieter, with newer hotels and a more laid-back feel, ideal for couples seeking privacy. The <strong>southwest side</strong> near the jetty is buzzing—more restaurants, shops, and that authentic Maldivian energy. Prices have crept up a bit since 2025, but I've negotiated some sweet deals. Here's the honest breakdown: budget rooms start around $45-$55per night, mid-range will run you $65-$175and luxury? Expect $185to $450+. I always recommend booking at least 3-4 months ahead for peak season (November to April), but I've snagged last-minute gems in May and October too.</p>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <p>I love budget travel—it's where you find the real soul of a place. These three hotels prove you don't need deep pockets for a magical Maldivian stay. I've personally stayed at two of them, and the third comes highly recommended by my clients who loved the value.</p>
 
 <h3>1. Surfside Inn</h3>
+<div id="hc_192640" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Surfside Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Surfside Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Surfside Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_192640 .hc-slide');var d=document.querySelectorAll('#hc_192640 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_192640 .hc-slide');var d=document.querySelectorAll('#hc_192640 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_192640 .hc-slide');var d=document.querySelectorAll('#hc_192640 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Surfside Inn &bull; 3 photos</p></div>
 <p>Tucked just a two-minute walk from the famous Thulusdhoo surf break, Surfside Inn is a family-run charmer with six simple but spotless rooms. Think whitewashed walls, ceiling fans, and colorful local art. The owner, Ahmed, is a former surfer who'll give you tips on the waves and even lend you gear. The shared terrace overlooks a small garden with coconut palms—perfect for evening chats. I love that they serve a hearty Maldivian breakfast (mas huni and fresh roshi) included in the rate.</p>
 <ul>
-<li><strong>Price:</strong> $48 (≈ ₽4 560) per night (standard double room)</li>
+<li><strong>Price:</strong> $48per night (standard double room)</li>
 <li><strong>Pros:</strong> Incredible location for surfers; genuine local hospitality; free breakfast with local flavors.</li>
 <li><strong>Cons:</strong> Rooms are basic (no AC in some, just fans); shared bathroom for two rooms; no restaurant on-site for lunch/dinner.</li>
 </ul>
 
 <h3>2. Coral Breeze Guesthouse</h3>
+<div id="hc_751556" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Breeze Guesthouse - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Breeze Guesthouse - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_751556 .hc-slide');var d=document.querySelectorAll('#hc_751556 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_751556 .hc-slide');var d=document.querySelectorAll('#hc_751556 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Breeze Guesthouse &bull; 2 photos</p></div>
 <p>A three-minute stroll from the beach, Coral Breeze feels like staying at a friend's home. It's a newer property (opened early 2025) with four rooms, each with a small private balcony. The vibe is super chill—hammocks in the courtyard, a tiny library of travel books, and a kitchen where guests can cook simple meals. The owners, a young couple named Fathimath and Ibrahim, often host barbecue nights on the rooftop. I recommend this for solo travelers or small groups who want a social atmosphere without party noise.</p>
+<div id="hc_315737" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Breeze feels like staying at a friend's home. It's a newer property - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Breeze feels like staying at a friend's home. It's a newer property - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_315737 .hc-slide');var d=document.querySelectorAll('#hc_315737 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_315737 .hc-slide');var d=document.querySelectorAll('#hc_315737 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Breeze feels like staying at a friend's home. It's a newer property &bull; 2 photos</p></div>
 <ul>
-<li><strong>Price:</strong> $46 (≈ ₽4 370) per night (double room with private balcony)</li>
-<li><strong>Pros:</strong> Rooftop BBQ nights (extra $12 (≈ ₽1 140)); kitchen access; friendly, family-like atmosphere.</li>
+<li><strong>Price:</strong> $46per night (double room with private balcony)</li>
+<li><strong>Pros:</strong> Rooftop BBQ nights (extra $12); kitchen access; friendly, family-like atmosphere.</li>
 <li><strong>Cons:</strong> No AC in standard rooms (only fan); limited hot water in mornings; a bit far from the main jetty (10-min walk).</li>
 </ul>
 
 <h3>3. Thulusdhoo Island Lodge</h3>
+<div id="hc_548551" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Thulusdhoo Island Lodge - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Thulusdhoo Island Lodge - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Thulusdhoo Island Lodge - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_548551 .hc-slide');var d=document.querySelectorAll('#hc_548551 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_548551 .hc-slide');var d=document.querySelectorAll('#hc_548551 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_548551 .hc-slide');var d=document.querySelectorAll('#hc_548551 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Thulusdhoo Island Lodge &bull; 3 photos</p></div>
 <p>This place is a hidden gem for backpackers and budget-conscious families. It's a bit further from the surf (about 7 minutes' walk), but that means quieter nights. The lodge has eight rooms, all with private bathrooms and ceiling fans. What wins me over is the honesty system for snacks and drinks—just grab a soda from the fridge and leave cash. The garden is lush with banana and papaya trees, and they offer free bike rentals to explore the island. I sent a group of four friends here last year, and they raved about the value.</p>
 <ul>
-<li><strong>Price:</strong> $43 (≈ ₽4 085) per night (twin room)</li>
+<li><strong>Price:</strong> $43per night (twin room)</li>
 <li><strong>Pros:</strong> Free bike rentals; lush garden; honesty snack bar; quiet location.</li>
 <li><strong>Cons:</strong> No AC; basic breakfast (bread, jam, tea); limited power outlets in rooms.</li>
 </ul>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <p>This is my sweet spot for Thulusdhoo—you get comfort, character, and often a bit of luxury without breaking the bank. I've handpicked four hotels that consistently get glowing feedback from my travelers. Each has its own personality, and I'll tell you exactly who they're perfect for.</p>
 
 <h3>1. Blue Wave Retreat</h3>
+<div id="hc_282054" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Blue Wave Retreat - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Blue Wave Retreat - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Blue Wave Retreat - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_282054 .hc-slide');var d=document.querySelectorAll('#hc_282054 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_282054 .hc-slide');var d=document.querySelectorAll('#hc_282054 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_282054 .hc-slide');var d=document.querySelectorAll('#hc_282054 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Blue Wave Retreat &bull; 3 photos</p></div>
 <p>Right on the eastern beachfront, Blue Wave Retreat is a modern mid-rise with ten rooms, all facing the ocean. I've sent over 20 clients here, and the reviews are always about the view—floor-to-ceiling windows make you feel like you're sleeping on the water. Each room has AC, a mini-fridge, and a private balcony with chairs. The rooftop restaurant serves fresh tuna steaks and coconut curries that are honestly some of the best on the island. The staff organized a snorkeling trip for me to see sea turtles—magical.</p>
 <ul>
-<li><strong>Price:</strong> $92 (≈ ₽8 740) per night (ocean-view double room)</li>
+<li><strong>Price:</strong> $92per night (ocean-view double room)</li>
 <li><strong>Highlights:</strong> Stunning ocean views from every room; excellent rooftop restaurant; free snorkeling gear rental; friendly, English-speaking staff.</li>
 </ul>
 
 <h3>2. Palm Breeze Hotel</h3>
+<div id="hc_557756" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Palm Breeze Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Palm Breeze Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Palm Breeze Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_557756 .hc-slide');var d=document.querySelectorAll('#hc_557756 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_557756 .hc-slide');var d=document.querySelectorAll('#hc_557756 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_557756 .hc-slide');var d=document.querySelectorAll('#hc_557756 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Palm Breeze Hotel &bull; 3 photos</p></div>
 <p>Set in the northern part of the island, Palm Breeze is a boutique hotel with a tropical garden feel. It's newer (renovated in late 2025) with twelve rooms, each decorated in soft blues and whites. What I adore is the plunge pool—small but refreshing after a day in the sun. The hotel also has a small spa offering Maldivian coconut oil massages. I recommend this for couples who want romance without the luxury price tag. The breakfast spread includes fresh fruit, eggs, and local short eats.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Price:</strong> $118 (≈ ₽11 210) per night (garden-view double room); $135 (≈ ₽12 825) (pool-view)</li>
+<li><strong>Price:</strong> $118per night (garden-view double room); $135(pool-view)</li>
 <li><strong>Highlights:</strong> Small plunge pool; spa with local treatments; romantic garden setting; free Wi-Fi (fastest on the island).</li>
 </ul>
 
 <h3>3. Surfers' Paradise Inn</h3>
+<div id="hc_498472" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Surfers' Paradise Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Surfers' Paradise Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Surfers' Paradise Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_498472 .hc-slide');var d=document.querySelectorAll('#hc_498472 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_498472 .hc-slide');var d=document.querySelectorAll('#hc_498472 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_498472 .hc-slide');var d=document.querySelectorAll('#hc_498472 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Surfers' Paradise Inn &bull; 3 photos</p></div>
 <p>Don't let the name fool you—this isn't just for surfers. Surfers' Paradise Inn is a lively, colorful hotel with 15 rooms, a bar, and a restaurant that hosts live music twice a week. It's located near the main surf break, so you'll see guests carrying boards at dawn. The rooms are spacious, with AC, hot water, and modern bathrooms. I love the social vibe—there's a common area with board games and a bookshelf. The owner, Ali, is a former competitive surfer who gives free wave-forecast briefings every morning.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Price:</strong> $76 (≈ ₽7 220) per night (standard double); $89 (≈ ₽8 455) (deluxe with sea view)</li>
+<li><strong>Price:</strong> $76per night (standard double); $89(deluxe with sea view)</li>
 <li><strong>Highlights:</strong> Lively social atmosphere; live music twice a week; free surfboard storage; great for solo travelers.</li>
 </ul>
 
 <h3>4. Island Pearl Hotel</h3>
+<div id="hc_947270" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Island Pearl Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Island Pearl Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Island Pearl Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_947270 .hc-slide');var d=document.querySelectorAll('#hc_947270 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_947270 .hc-slide');var d=document.querySelectorAll('#hc_947270 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_947270 .hc-slide');var d=document.querySelectorAll('#hc_947270 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Island Pearl Hotel &bull; 3 photos</p></div>
 <p>Island Pearl is my pick for families or groups who want space and convenience. It has eight large rooms (some with two double beds), a shared kitchen, and a huge terrace with picnic tables. The location is central—three minutes to the beach, two minutes to the local shop. The rooms have AC, flat-screen TVs (local channels), and mini-fridges. I appreciate the honesty and flexibility here: late checkout is often free if they're not fully booked. The staff helped me arrange a day trip to a nearby sandbank—unforgettable.</p>
 <ul>
-<li><strong>Price:</strong> $102 (≈ ₽9 690) per night (family room with two double beds)</li>
+<li><strong>Price:</strong> $102per night (family room with two double beds)</li>
 <li><strong>Highlights:</strong> Spacious family rooms; shared kitchen; central location; flexible late checkout; helpful staff for excursions.</li>
 </ul>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Luxury Hotels ($150+/night)</h2>
 
 <p>When you want to splurge in Thulusdhoo, these three hotels deliver on experience, comfort, and that "wow" factor. I've personally stayed at two, and the third is on my bucket list for 2026. Each offers something unique—privacy, design, or service that feels like five-star.</p>
 
 <h3>1. Ocean Pearl Resort</h3>
+<div id="hc_82366" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ocean Pearl Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Ocean Pearl Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Ocean Pearl Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_82366 .hc-slide');var d=document.querySelectorAll('#hc_82366 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_82366 .hc-slide');var d=document.querySelectorAll('#hc_82366 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_82366 .hc-slide');var d=document.querySelectorAll('#hc_82366 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ocean Pearl Resort &bull; 3 photos</p></div>
 <p>Ocean Pearl Resort is the most luxurious property on Thulusdhoo, and it's easy to see why. Perched on the northern tip, it has 20 villas—some overwater, some beachfront—all with private decks and outdoor showers. The design is minimalist Maldivian: thatched roofs, polished concrete floors, and floor-to-ceiling glass. The infinity pool seems to merge with the ocean, and the spa offers treatments using local ingredients like coconut and seaweed. I stayed here for two nights last year, and the highlight was the private dinner on the beach—candlelit, with a personal chef. The staff remembered my name and my favorite drink (fresh lime soda). It's pricey, but for a special occasion, it's perfection.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Price:</strong> $285 (≈ ₽27 075) per night (beachfront villa); $395 (≈ ₽37 525) (overwater villa)</li>
+<li><strong>Price:</strong> $285per night (beachfront villa); $395(overwater villa)</li>
 <li><strong>Features:</strong> Infinity pool; overwater and beachfront villas; private beach dinners; full-service spa; butler service; free kayak and paddleboard rentals.</li>
 </ul>
 
 <h3>2. The Surf House</h3>
+<div id="hc_203501" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Surf House - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Surf House - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Surf House - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_203501 .hc-slide');var d=document.querySelectorAll('#hc_203501 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_203501 .hc-slide');var d=document.querySelectorAll('#hc_203501 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_203501 .hc-slide');var d=document.querySelectorAll('#hc_203501 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Surf House &bull; 3 photos</p></div>
 <p>Don't let the name fool you—The Surf House is luxury through and through, but with a laid-back, surfer-chic vibe. It's located right on the eastern shore, steps from the break, with eight suites that feel like boutique hotel rooms. Each suite has a king bed, a sitting area, and a private terrace with an outdoor rain shower. The real star is the rooftop lounge with a bar, sun loungers, and a telescope for stargazing. I recommend this for couples or small groups who want luxury without the resort formality. The breakfast is made-to-order, and they serve fresh sushi for dinner. The owner, a Swiss-Maldivian couple, curated the art on the walls—local pieces that tell stories.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ro" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <ul>
-<li><strong>Price:</strong> $219 (≈ ₽20 805) per night (suite with terrace); $249 (≈ ₽23 655) (ocean-view suite)</li>
+<li><strong>Price:</strong> $219per night (suite with terrace); $249(ocean-view suite)</li>
 <li><strong>Features:</strong> Rooftop lounge with bar; outdoor rain showers; made-to-order breakfast; sushi dinners; curated local art; free surf lessons for guests.</li>
 </ul>
 
 <h3>3. Villa Nautica</h3>
 <p>Villa Nautica is a newcomer (opened December 2025) and already turning heads. It's a small, exclusive property with just five villas, each designed like a private sanctuary. The architecture is stunning—curved white walls, floor-to-ceiling windows, and private pools for every villa. The property is on the southwest side, offering sunset views that will make you emotional (I almost cried, not gonna lie). The restaurant focuses on Maldivian-Italian fusion—think lobster ravioli with coconut cream sauce. The service is impeccable: they arranged a private sandbank picnic for me with Champagne and fresh fruit. It's the most expensive on the island, but for total privacy and luxury, it's unmatched.</p>
 <ul>
-<li><strong>Price:</strong> $385 (≈ ₽36 575) per night (pool villa); $449 (≈ ₽42 655) (sunset pool villa)</li>
+<li><strong>Price:</strong> $385per night (pool villa); $449(sunset pool villa)</li>
 <li><strong>Features:</strong> Private pool for each villa; Maldivian-Italian fusion restaurant; sunset views; private sandbank picnics; butler service; free snorkeling excursions.</li>
 </ul>
 
@@ -462,7 +567,6 @@
 
 <h3>For Sightseeing and Culture</h3>
 <p>The <strong>southwest side</strong> near the jetty is your best bet. You're close to the local shops, the fish market (open daily until noon), and the island's small mosque. I love staying at Island Pearl Hotel or Thulusdhoo Island Lodge here—you can walk to everything. Don't miss the local craft market on Fridays, where artisans sell handmade coconut jewelry and lacquer work. This area is also closest to the ferry terminal if you're island-hopping.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="or" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>For Nightlife and Socializing</h3>
 <p>Honestly, Thulusdhoo isn't a party island, but the <strong>eastern shore near the surf break</strong> has the most energy. Surfers' Paradise Inn has live music twice a week, and several guesthouses host barbecue nights. The northern tip is quieter, so if you want social buzz, stick to the east. I've spent many evenings at the rooftop bar at The Surf House—great cocktails and a chance to meet fellow travelers.</p>
@@ -472,20 +576,16 @@
 <p>After sending hundreds of travelers to Thulusdhoo, I've learned a few tricks to save money and stress. Here's my insider advice.</p>
 
 <p><strong>Book early for peak season (November to April).</strong> I recommend reserving at least 4-5 months ahead—luxury hotels like Ocean Pearl Resort sell out by September. For budget and mid-range, 2-3 months is usually fine, but don't gamble if you have specific dates. I've seen prices jump 30% in January for last-minute bookings.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="se" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
-<p><strong>Travel in shoulder season (May, June, September, October).</strong> The weather is still good (short afternoon showers), but prices drop 15-25%. I've booked Blue Wave Retreat for $72 (≈ ₽6 840) per night in May—a steal for that ocean view. Plus, the island is less crowded, and you'll get more attention from staff.</p>
+<p><strong>Travel in shoulder season (May, June, September, October).</strong> The weather is still good (short afternoon showers), but prices drop 15-25%. I've booked Blue Wave Retreat for $72per night in May—a steal for that ocean view. Plus, the island is less crowded, and you'll get more attention from staff.</p>
 
-<p><strong>Use local booking platforms.</strong> While big sites like <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> are convenient, I've found that emailing hotels directly often gets you a 10-15% discount. For example, Coral Breeze Guesthouse offered me a 12% discount when I booked via WhatsApp. Also, check if they include airport transfers—some mid-range hotels like Palm Breeze Hotel include it in the rate, saving you $30 (≈ ₽2 850)-40 each way.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Use local booking platforms.</strong> While big sites like <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> are convenient, I've found that emailing hotels directly often gets you a 10-15% discount. For example, Coral Breeze Guesthouse offered me a 12% discount when I booked via WhatsApp. Also, check if they include airport transfers—some mid-range hotels like Palm Breeze Hotel include it in the rate, saving you $30-40 each way.</p>
 
-<p><strong>Consider meal plans.</strong> Many budget hotels offer half-board (breakfast and dinner) for an extra $15 (≈ ₽1 425)-20 per person per day. At Surfside Inn, the dinner options are limited, so half-board with a nearby restaurant is worth it. For luxury hotels, all-inclusive packages sometimes include excursions—I snagged a free snorkeling trip at Ocean Pearl Resort by booking their package.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="by" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Consider meal plans.</strong> Many budget hotels offer half-board (breakfast and dinner) for an extra $15-20 per person per day. At Surfside Inn, the dinner options are limited, so half-board with a nearby restaurant is worth it. For luxury hotels, all-inclusive packages sometimes include excursions—I snagged a free snorkeling trip at Ocean Pearl Resort by booking their package.</p>
 
 <p><strong>Watch for hidden fees.</strong> Some hotels add a 10% service charge or a 5% green tax (common in the Maldives). Always ask for the total price including taxes. I recommend using a travel agent (like me!) to negotiate these fees—I've waived service charges for clients before.</p>
 
 <p><strong>Best booking services:</strong> For budget, <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> often has the best deals. For mid-range and luxury, I prefer <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com for its free cancellation policy. For local charm, emailing the hotel directly is unbeatable. I also love using Airbnb for unique stays (Villa Nautica lists there sometimes).</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="di" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>So there you have it—my top 10 hotels in Thulusdhoo for 2026, from cozy budget stays to overwater luxury. I've poured my heart into this list because this island deserves to be experienced right. Whether you're a solo surfer, a couple celebrating an anniversary, or a family making memories, there's a perfect spot for you. If you have questions, just ask—I'm always here to help plan your dream trip. Happy travels!</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -578,6 +678,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -606,6 +707,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -623,8 +725,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

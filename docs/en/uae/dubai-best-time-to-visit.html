@@ -6,7 +6,7 @@
     <title>Best Time to Visit Dubai 2026: Seasons &amp; Weather</title>
     <meta name="description" content="Best Time to Visit Dubai 2026: Seasons &amp; Weather Dubai, a city of superlatives, offers a unique blend of futuristic architecture, luxurious shopping, and des...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-best-time-to-visit.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-kogda-luchshe-ekhat.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-best-time-to-visit.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-best-time-to-visit.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Best Time to Visit Dubai 2026: Seasons &amp; Weather">
     <meta property="og:description" content="Best Time to Visit Dubai 2026: Seasons &amp; Weather Dubai, a city of superlatives, offers a unique blend of futuristic architecture, luxurious shopping, and des...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-best-time-to-visit.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/dubai-best-time-to-visit.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/dubai.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Best Time to Visit Dubai 2026: Seasons &amp; Weather</div>
@@ -471,7 +495,7 @@
 
 <p>The high season in Dubai runs from November through March. This period coincides with the most pleasant weather, with daytime temperatures ranging from a comfortable 20°C (68°F) in January to 30°C (86°F) in November and March. The evenings are cool, often dropping to 14°C (57°F), making it ideal for outdoor dining and desert safaris.</p>
 
-<p>Why it’s high season: This is the peak time for tourism, as the weather is perfect for outdoor attractions like the Burj Khalifa observation decks, Dubai Marina walks, and beach activities. The city hosts major events such as the Dubai Shopping Festival (typically December to January) and the Dubai Food Festival (February to March). Hotels and flights are at their most expensive, with average hotel rates increasing by 40-60% compared to the low season. For example, a 5-star room at the Atlantis The Palm might cost AED 2,500 per night in January, versus AED 1,200 in August.</p>
+<p>Why it’s high season: This is the peak time for tourism, as the weather is perfect for outdoor attractions like the Burj Khalifa observation decks, Dubai Marina walks, and beach activities. The city hosts major events such as the Dubai Shopping Festival (typically December to January) and the Dubai Food Festival (February to March). Hotels and flights are at their most expensive, with average hotel rates increasing by 40-60% compared to the low season. For example, a 5-star room at the Atlantis The Palm might cost $682 (2 $136 (500 AED))per night in January, versus $327 (1 $55 (200 AED))in August.</p>
 
 <p>Tips for high season: Book accommodations at least 3-4 months in advance. Expect crowds at major attractions; consider purchasing "Fast Track" tickets for the Burj Khalifa. The Dubai Metro can be packed during peak hours, so plan travel accordingly. Prices for dining and shopping remain standard, but availability is limited at popular restaurants.</p>
 
@@ -481,13 +505,13 @@
 
 <p>The low season in Dubai spans from June to September, with July and August being the hottest months. Daytime temperatures consistently exceed 40°C (104°F), and humidity often reaches 90%, making outdoor activities challenging. However, this period offers significant advantages for budget-conscious travelers.</p>
 
-<p>Pros: Hotel rates drop by 50-70%. For instance, a room at the Burj Al Arab might cost AED 3,000 per night in August versus AED 8,000 in December. Flights are also cheaper, with discounts of 30-50% from major hubs like London and New York. The city is less crowded, meaning shorter queues at malls and attractions. Many indoor attractions, such as the Dubai Mall (with its indoor aquarium and ice rink) and the Museum of the Future, are fully air-conditioned.</p>
+<p>Pros: Hotel rates drop by 50-70%. For instance, a room at the Burj Al Arab might cost $818 (3 $0 (000 AED))per night in August versus $2 181 (8 $0 (000 AED))in December. Flights are also cheaper, with discounts of 30-50% from major hubs like London and New York. The city is less crowded, meaning shorter queues at malls and attractions. Many indoor attractions, such as the Dubai Mall (with its indoor aquarium and ice rink) and the Museum of the Future, are fully air-conditioned.</p>
 
 <p>Cons: The heat is extreme. Walking outside for more than 10 minutes can be dangerous. Beach activities are limited to early morning or late evening, and the sea water temperature reaches 33°C (91°F), offering little relief. Outdoor events are rare, and some desert tours operate only in the early morning or after sunset. The humidity can be oppressive, especially for those not accustomed to tropical climates.</p>
 
 <p>Weather: Expect clear, sunny skies with zero precipitation. The air temperature in July and August averages 41°C (106°F), with occasional peaks of 48°C (118°F). The "feels like" temperature can exceed 50°C (122°F) due to humidity.</p>
 
-<p>Prices: This is the cheapest time to visit. A budget hotel room might cost AED 200 per night, and a 5-star hotel can be found for AED 600-800. Dining deals are common, with many restaurants offering "summer specials." The Dubai Summer Surprises festival runs from July to August, providing discounts on shopping and entertainment.</p>
+<p>Prices: This is the cheapest time to visit. A budget hotel room might cost $55 (200 AED)per night, and a 5-star hotel can be found for $164 (600 AED)-800. Dining deals are common, with many restaurants offering "summer specials." The Dubai Summer Surprises festival runs from July to August, providing discounts on shopping and entertainment.</p>
 
 <h2>Best Time for Beach Vacation</h2>
 
@@ -630,6 +654,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -658,6 +683,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -675,8 +701,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

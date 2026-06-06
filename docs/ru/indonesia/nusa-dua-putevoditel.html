@@ -7,8 +7,8 @@
     <meta name="description" content="Нуса-Дуа: полный путеводитель 2026 Нуса-Дуа — это не просто курортная зона на юге Бали, а образцовый пример тропического рая, созданного для взыскательного п...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Нуса-Дуа: полный путеводитель 2026">
     <meta property="og:description" content="Нуса-Дуа: полный путеводитель 2026 Нуса-Дуа — это не просто курортная зона на юге Бали, а образцовый пример тропического рая, созданного для взыскательного п...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/nusa-dua-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/nusa-dua.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Нуса-Дуа: полный путеводитель 2026</div>
@@ -370,15 +394,15 @@
 
 <p>Единственный международный аэропорт, обслуживающий Нуса-Дуа, — это аэропорт Нгурах-Рай (DPS) в Денпасаре, расположенный в 15 километрах от курортной зоны. В 2026 году аэропорт продолжает принимать рейсы из более чем 50 городов мира, включая прямые рейсы из Москвы, Санкт-Петербурга, Новосибирска и Владивостока. Прямые перелеты из Москвы выполняют авиакомпании «Аэрофлот» и «Россия» (время в пути — 11–12 часов), а также Turkish Airlines и Qatar Airways с одной пересадкой. Средняя цена билета из Москвы в эконом-классе составляет 45 000–70 000 рублей в обе стороны в зависимости от сезона. Из регионов: из Санкт-Петербурга — от 55 000 рублей, из Екатеринбурга — от 60 000 рублей, из Новосибирска — от 50 000 рублей.</p>
 
-<p>Из аэропорта до Нуса-Дуа можно добраться несколькими способами. Такси с фиксированной ценой (купить талон на стойке в зоне прилета) стоит 150 000–200 000 индонезийских рупий (IDR) (около 900–1200 рублей) и занимает 25–35 минут в зависимости от трафика. Альтернатива — предварительный заказ трансфера через сервисы <a href="https://tp.media/click?shmarker=736226&promo_id=3797&source_type=link&type=click&campaign_id=120&trs=klook" target="_blank" rel="nofollow sponsored" class="partner-link">Klook</a> или Grab (от 180 000 IDR). Автобусы общественного транспорта (Trans Sarbagita) ходят редко и неудобны для туристов, поэтому их использование не рекомендуется. Аренда автомобиля с водителем на день обойдется в 500 000–800 000 IDR, что выгодно, если вы планируете посетить несколько точек на полуострове Букит.</p>
+<p>Из аэропорта до Нуса-Дуа можно добраться несколькими способами. Такси с фиксированной ценой (купить талон на стойке в зоне прилета) стоит 150 000–200 000 индонезийских рупий (IDR) (около 900–1200 рублей) и занимает 25–35 минут в зависимости от трафика. Альтернатива — предварительный заказ трансфера через сервисы <a href="https://tp.media/click?shmarker=736226&promo_id=3797&source_type=link&type=click&campaign_id=120&trs=klook" target="_blank" rel="nofollow sponsored" class="partner-link">Klook</a> или Grab (от₽1 080 (180 ₽0 (000 IDR))). Автобусы общественного транспорта (Trans Sarbagita) ходят редко и неудобны для туристов, поэтому их использование не рекомендуется. Аренда автомобиля с водителем на день обойдется в 500 000–₽4 800 (800 ₽0 (000 IDR)), что выгодно, если вы планируете посетить несколько точек на полуострове Букит.</p>
 
 <h2>Где остановиться</h2>
 
 <p>Нуса-Дуа предлагает жилье на любой вкус и бюджет, но доминируют здесь отели категории 4–5 звезд, расположенные вдоль побережья. Район условно делится на три зоны: центральная часть (Bali Collection), восточная (Geger Beach) и западная (Mulia Resort). Для бюджетных путешественников есть несколько гестхаусов и хостелов в близлежащей деревне Беноа, но они находятся в 10–15 минутах езды от пляжа.</p>
 
-<p>Для экономного отдыха (до 500 000 IDR за ночь) подойдут гостевые дома в Беноа, например, RedDoorz или OYO Rooms. Средний сегмент (500 000–1 500 000 IDR) представлен отелями типа Holiday Inn Resort Baruna Bali (от 800 000 IDR за ночь) и Amnaya Resort Nusa Dua (от 1 200 000 IDR). Люкс-класс (от 2 000 000 IDR) включает такие гранды, как The St. Regis Bali Resort (от 6 000 000 IDR), Mulia Resort & Villas (от 4 500 000 IDR) и The Laguna Resort & Spa (от 3 500 000 IDR). Все отели люкс-класса имеют собственные пляжи, бассейны с морской водой, спа-салоны и рестораны с интернациональной кухней.</p>
+<p>Для экономного отдыха (до₽3 000 (500 ₽0 (000 IDR)) за ночь) подойдут гостевые дома в Беноа, например, RedDoorz или OYO Rooms. Средний сегмент (500 000–₽9 000 (1 ₽3 000 (500000 IDR))) представлен отелями типа Holiday Inn Resort Baruna Bali (от₽4 800 (800 ₽0 (000 IDR)) за ночь) и Amnaya Resort Nusa Dua (от₽7 200 (1 ₽1 200 (200000 IDR))). Люкс-класс (от₽12 000 (2 ₽0 (000000 IDR))) включает такие гранды, как The St. Regis Bali Resort (от₽36 000 (6 ₽0 (000000 IDR))), Mulia Resort & Villas (от₽27 000 (4 ₽3 000 (500000 IDR))) и The Laguna Resort & Spa (от₽21 000 (3 ₽3 000 (500000 IDR))). Все отели люкс-класса имеют собственные пляжи, бассейны с морской водой, спа-салоны и рестораны с интернациональной кухней.</p>
 
-<p>Важно: в 2026 году в Нуса-Дуа введен налог на проживание для иностранных туристов в размере 150 000 IDR с человека за ночь, который взимается отдельно при заселении. Также рекомендуется бронировать отели за 2–3 месяца до поездки, особенно в высокий сезон (июль-август, декабрь-январь), когда цены вырастают на 30–50%.</p>
+<p>Важно: в 2026 году в Нуса-Дуа введен налог на проживание для иностранных туристов в размере₽900 (150 ₽0 (000 IDR)) с человека за ночь, который взимается отдельно при заселении. Также рекомендуется бронировать отели за 2–3 месяца до поездки, особенно в высокий сезон (июль-август, декабрь-январь), когда цены вырастают на 30–50%.</p>
 
 <h2>Топ-15 достопримечательностей</h2>
 
@@ -396,7 +420,7 @@
     <td>1</td>
     <td>Пляж Geger Beach</td>
     <td>Самый чистый пляж Нуса-Дуа с белым песком и спокойной водой. Идеален для плавания и снорклинга. Есть шезлонги и зонтики.</td>
-    <td>Бесплатно, шезлонг — 50 000 IDR</td>
+    <td>Бесплатно, шезлонг —₽300 (50 ₽0 (000 IDR))</td>
     <td>24/7</td>
   </tr>
   <tr>
@@ -410,28 +434,28 @@
     <td>3</td>
     <td>Храм Пура-Лухур-Улувату</td>
     <td>Знаменитый храм на скале высотой 70 метров. Славится закатами и представлениями танца Кечак.</td>
-    <td>50 000 IDR</td>
+    <td>₽300 (50 ₽0 (000 IDR))</td>
     <td>07:00–19:00</td>
   </tr>
   <tr>
     <td>4</td>
     <td>Пляж Dreamland</td>
     <td>Популярное место для серфинга с мощными волнами. Песок сероватый, но вода кристально чистая.</td>
-    <td>10 000 IDR</td>
+    <td>₽60 (10 ₽0 (000 IDR))</td>
     <td>24/7</td>
   </tr>
   <tr>
     <td>5</td>
     <td>Гольф-клуб Bali National Golf Resort</td>
     <td>Поле на 18 лунок с видом на океан. Входит в топ-10 полей Азии. Есть прокат оборудования.</td>
-    <td>1 200 000 IDR за раунд</td>
+    <td>₽7 200 (1 ₽1 200 (200000 IDR)) за раунд</td>
     <td>06:00–18:00</td>
   </tr>
   <tr>
     <td>6</td>
     <td>Музей Пасифик</td>
     <td>Музей мирового класса с коллекцией батика, скульптур и исторических артефактов из 25 стран Азии.</td>
-    <td>100 000 IDR</td>
+    <td>₽600 (100 ₽0 (000 IDR))</td>
     <td>09:00–17:00</td>
   </tr>
   <tr>
@@ -445,21 +469,21 @@
     <td>8</td>
     <td>Водный парк Waterbom Bali</td>
     <td>Один из лучших аквапарков Азии: 22 горки, ленивая река, зона для детей. Расположен в 20 минутах езды.</td>
-    <td>450 000 IDR (взрослый)</td>
+    <td>₽2 700 (450 ₽0 (000 IDR)) (взрослый)</td>
     <td>09:00–18:00</td>
   </tr>
   <tr>
     <td>9</td>
     <td>Центр спасения черепах (Turtle Conservation Centre)</td>
     <td>Экологический проект по защите морских черепах. Можно увидеть детенышей и выпустить их в море.</td>
-    <td>Донация от 50 000 IDR</td>
+    <td>Донация от₽300 (50 ₽0 (000 IDR))</td>
     <td>09:00–16:00</td>
   </tr>
   <tr>
     <td>10</td>
     <td>Храм Пура-Гага-Улувату</td>
     <td>Меньше известный, но не менее живописный храм с видом на океан. Меньше туристов, чем в Улувату.</td>
-    <td>30 000 IDR</td>
+    <td>₽180 (30 ₽0 (000 IDR))</td>
     <td>07:00–18:00</td>
   </tr>
   <tr>
@@ -494,27 +518,27 @@
     <td>15</td>
     <td>Пляж Pandawa</td>
     <td>Живописный пляж, скрытый за известняковыми скалами. Есть статуи индуистских божеств.</td>
-    <td>15 000 IDR</td>
+    <td>₽90 (15 ₽0 (000 IDR))</td>
     <td>24/7</td>
   </tr>
 </table>
 
 <h2>Транспорт в городе</h2>
 
-<p>В Нуса-Дуа нет метро, а общественный транспорт ограничен. Основной способ передвижения — такси и аренда скутера или автомобиля. Такси с фиксированным тарифом (Blue Bird Group) стоит от 10 000 IDR за километр, минимальная поездка по курорту — 50 000–70 000 IDR. Grab и Gojek (аналоги Uber) работают стабильно: поездка в пределах Нуса-Дуа обойдется в 30 000–50 000 IDR, до Улувату — 80 000–120 000 IDR.</p>
+<p>В Нуса-Дуа нет метро, а общественный транспорт ограничен. Основной способ передвижения — такси и аренда скутера или автомобиля. Такси с фиксированным тарифом (Blue Bird Group) стоит от₽60 (10 ₽0 (000 IDR)) за километр, минимальная поездка по курорту — 50 000–₽420 (70 ₽0 (000 IDR)). Grab и Gojek (аналоги Uber) работают стабильно: поездка в пределах Нуса-Дуа обойдется в 30 000–₽300 (50 ₽0 (000 IDR)), до Улувату — 80 000–₽720 (120 ₽0 (000 IDR)).</p>
 
-<p>Аренда скутера — популярный вариант для самостоятельных путешественников. Цена — 70 000–100 000 IDR в сутки, бензин — 10 000 IDR за литр. Важно: в 2026 году для аренды скутера требуется международное водительское удостоверение категории A, а также шлем (обязателен). Аренда автомобиля — от 300 000 IDR в сутки без водителя, с водителем — от 500 000 IDR. Парковка в курортной зоне платная: 5 000–10 000 IDR в час. Для поездок на дальние расстояния (например, в Убуд или Чангу) лучше нанять такси на целый день — от 600 000 IDR.</p>
+<p>Аренда скутера — популярный вариант для самостоятельных путешественников. Цена — 70 000–₽600 (100 ₽0 (000 IDR)) в сутки, бензин —₽60 (10 ₽0 (000 IDR)) за литр. Важно: в 2026 году для аренды скутера требуется международное водительское удостоверение категории A, а также шлем (обязателен). Аренда автомобиля — от₽1 800 (300 ₽0 (000 IDR)) в сутки без водителя, с водителем — от₽3 000 (500 ₽0 (000 IDR)). Парковка в курортной зоне платная: 5 000–₽60 (10 ₽0 (000 IDR)) в час. Для поездок на дальние расстояния (например, в Убуд или Чангу) лучше нанять такси на целый день — от₽3 600 (600 ₽0 (000 IDR)).</p>
 
-<p>Велосипеды доступны для аренды в отелях (от 50 000 IDR в сутки), но из-за холмистого рельефа полуострова Букит они подходят только для коротких поездок вдоль побережья. Пешие прогулки по Нуса-Дуа комфортны: вдоль пляжа проложена бетонная дорожка длиной 5 километров, соединяющая основные отели и пляжи.</p>
+<p>Велосипеды доступны для аренды в отелях (от₽300 (50 ₽0 (000 IDR)) в сутки), но из-за холмистого рельефа полуострова Букит они подходят только для коротких поездок вдоль побережья. Пешие прогулки по Нуса-Дуа комфортны: вдоль пляжа проложена бетонная дорожка длиной 5 километров, соединяющая основные отели и пляжи.</p>
 
 <h2>Где поесть</h2>
 
-<p>Кухня Нуса-Дуа — это микс индонезийской, интернациональной и, конечно, балийской гастрономии. Уличная еда здесь менее распространена, чем в центре Бали, но в районе Bali Collection и вдоль главной дороги Jl. Nusa Dua есть множество варунгов (небольших семейных ресторанов) и ресторанов высокого класса. Средняя стоимость обеда в варунге — 30 000–50 000 IDR, в ресторане среднего уровня — 100 000–200 000 IDR, в люкс-ресторане отеля — от 300 000 IDR.</p>
+<p>Кухня Нуса-Дуа — это микс индонезийской, интернациональной и, конечно, балийской гастрономии. Уличная еда здесь менее распространена, чем в центре Бали, но в районе Bali Collection и вдоль главной дороги Jl. Nusa Dua есть множество варунгов (небольших семейных ресторанов) и ресторанов высокого класса. Средняя стоимость обеда в варунге — 30 000–₽300 (50 ₽0 (000 IDR)), в ресторане среднего уровня — 100 000–₽1 200 (200 ₽0 (000 IDR)), в люкс-ресторане отеля — от₽1 800 (300 ₽0 (000 IDR)).</p>
 
 <p>Топ-5 мест для еды в Нуса-Дуа:</p>
 <ul>
-  <li><strong>Warung Babi Guling Ibu Oka</strong> — знаменитый ресторан балийской кухни, специализирующийся на блюде babi guling (жареный поросенок). Средний чек — 60 000 IDR. Адрес: Jl. Nusa Dua, рядом с Bali Collection.</li>
-  <li><strong>Kayu Manis Restaurant</strong> — ресторан индонезийской и азиатской кухни с видом на сад. Рекомендуется попробовать nasi campur (рис с гарнирами) за 80 000 IDR.</li>
+  <li><strong>Warung Babi Guling Ibu Oka</strong> — знаменитый ресторан балийской кухни, специализирующийся на блюде babi guling (жареный поросенок). Средний чек —₽360 (60 ₽0 (000 IDR)). Адрес: Jl. Nusa Dua, рядом с Bali Collection.</li>
+  <li><strong>Kayu Manis Restaurant</strong> — ресторан индонезийской и азиатской кухни с видом на сад. Рекомендуется попробовать nasi campur (рис с гарнирами) за₽480 (80 ₽0 (000 IDR)).</li>
   <li><strong>Bumbu Bali</strong> — ресторан традиционной балийской кухни, где подают bebek betutu (утка, запеченная в бананов<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
@@ -621,6 +645,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -649,6 +674,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -666,8 +692,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

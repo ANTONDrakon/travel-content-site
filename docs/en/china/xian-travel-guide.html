@@ -6,7 +6,7 @@
     <title>Xi&#39;an Travel Guide 2026</title>
     <meta name="description" content="Xi&#39;an Travel Guide 2026 Oh, Xi’an! Just saying the name makes my heart skip a beat. This is a city where ancient history doesn’t just live in museums—it brea...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/xian-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/xian-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/xian-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/xian-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Xi&#39;an Travel Guide 2026">
     <meta property="og:description" content="Xi&#39;an Travel Guide 2026 Oh, Xi’an! Just saying the name makes my heart skip a beat. This is a city where ancient history doesn’t just live in museums—it brea...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/china/xian-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/xian-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/xian.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Xi&#39;an Travel Guide 2026</div>
@@ -371,15 +395,15 @@
 <p>Xi’an Xianyang International Airport (XIY) is your gateway. It’s a major hub, so you’ll find direct flights from all over Asia, Europe, and North America. From Beijing, it’s about 2 hours; from Shanghai, 2.5 hours. Average prices in 2026 (with my 12-15% markup, rounded up):</p>
 
 <ul>
-  <li><strong>From Beijing:</strong> $210 (≈ ₽19 950)–$310 (≈ ₽29 450) round trip (economy)</li>
-  <li><strong>From Shanghai:</strong> $260 (≈ ₽24 700)–$380 (≈ ₽36 100) round trip</li>
-  <li><strong>From Hong Kong:</strong> $340 (≈ ₽32 300)–$480 (≈ ₽45 600) round trip</li>
-  <li><strong>From Tokyo:</strong> $430 (≈ ₽40 850)–$580 (≈ ₽55 100) round trip</li>
-  <li><strong>From London:</strong> $640 (≈ ₽60 800)–$820 (≈ ₽77 900) round trip</li>
-  <li><strong>From Los Angeles:</strong> $720 (≈ ₽68 400)–$950 (≈ ₽90 250) round trip</li>
+  <li><strong>From Beijing:</strong> $210–$310round trip (economy)</li>
+  <li><strong>From Shanghai:</strong> $260–$380round trip</li>
+  <li><strong>From Hong Kong:</strong> $340–$480round trip</li>
+  <li><strong>From Tokyo:</strong> $430–$580round trip</li>
+  <li><strong>From London:</strong> $640–$820round trip</li>
+  <li><strong>From Los Angeles:</strong> $720–$950round trip</li>
 </ul>
 
-<p>Pro tip: Book 2-3 months in advance for the best deals. The airport is about 40km from the city center. A taxi into town costs around $28 (≈ ₽2 660)–$38 (≈ ₽3 610) (fixed price, but always confirm). There’s also the Airport Shuttle Bus for $7 (≈ ₽665)–$10  (≈ ₽950) which drops you at major spots like the Bell Tower. I prefer the taxi after a long flight—it’s worth the extra dollars for door-to-door comfort.</p>
+<p>Pro tip: Book 2-3 months in advance for the best deals. The airport is about 40km from the city center. A taxi into town costs around $28–$38(fixed price, but always confirm). There’s also the Airport Shuttle Bus for $7–$10which drops you at major spots like the Bell Tower. I prefer the taxi after a long flight—it’s worth the extra dollars for door-to-door comfort.</p>
 
 <h2>Where to Stay</h2>
 
@@ -396,30 +420,30 @@
   <tr>
     <td><strong>Muslim Quarter</strong></td>
     <td>Lively, street food central, close to Drum Tower</td>
-    <td>$45 (≈ ₽4 275)–$65 (≈ ₽6 175)</td>
-    <td>$85 (≈ ₽8 075)–$120 (≈ ₽11 400)</td>
-    <td>$180 (≈ ₽17 100)–$250 (≈ ₽23 750)</td>
+    <td>$45–$65</td>
+    <td>$85–$120</td>
+    <td>$180–$250</td>
   </tr>
   <tr>
     <td><strong>Bell Tower Area</strong></td>
     <td>Central, easy access to metro & attractions</td>
-    <td>$50 (≈ ₽4 750)–$75 (≈ ₽7 125)</td>
-    <td>$95 (≈ ₽9 025)–$140 (≈ ₽13 300)</td>
-    <td>$200 (≈ ₽19 000)–$300 (≈ ₽28 500)</td>
+    <td>$50–$75</td>
+    <td>$95–$140</td>
+    <td>$200–$300</td>
   </tr>
   <tr>
     <td><strong>Qujiang District</strong></td>
     <td>Quiet, modern, near Giant Wild Goose Pagoda</td>
-    <td>$55 (≈ ₽5 225)–$80 (≈ ₽7 600)</td>
-    <td>$100 (≈ ₽9 500)–$150 (≈ ₽14 250)</td>
-    <td>$220 (≈ ₽20 900)–$350 (≈ ₽33 250)</td>
+    <td>$55–$80</td>
+    <td>$100–$150</td>
+    <td>$220–$350</td>
   </tr>
   <tr>
     <td><strong>Near Xi’an Railway Station</strong></td>
     <td>Convenient for trains, budget-friendly</td>
-    <td>$35 (≈ ₽3 325)–$50 (≈ ₽4 750)</td>
-    <td>$70 (≈ ₽6 650)–$100 (≈ ₽9 500)</td>
-    <td>$150 (≈ ₽14 250)–$200 (≈ ₽19 000)</td>
+    <td>$35–$50</td>
+    <td>$70–$100</td>
+    <td>$150–$200</td>
   </tr>
 </table>
 
@@ -430,20 +454,20 @@
 <p>These are my absolute must-sees. Prices are marked up 12-15% and rounded up. Opening hours can change, so always double-check.</p>
 
 <ol>
-  <li><strong>Terracotta Warriors and Horses Museum</strong> — The undisputed star. Over 8,000 life-sized warriors guard Emperor Qin’s tomb. It’s mind-blowing. Allow 3-4 hours. Ticket: $28. (≈ ₽2 660) Opening hours: 8:30 AM–5:30 PM (Mar-Nov), 8:30 AM–5:00 PM (Dec-Feb).</li>
-  <li><strong>Xi’an City Wall</strong> — The best-preserved ancient city wall in China. Rent a bike ($8 (≈ ₽760)) and cycle the 14km loop. Ticket: $9. (≈ ₽855) Opening hours: 8:00 AM–10:00 PM (south gate open till 10 PM).</li>
-  <li><strong>Giant Wild Goose Pagoda (Dayan Pagoda)</strong> — A Tang Dynasty marvel. Climb the 7 stories for epic views. Ticket: $7 (≈ ₽665) (pagoda), $18 (≈ ₽1 710) (complex including temple). Opening hours: 8:00 AM–6:30 PM.</li>
-  <li><strong>Muslim Quarter (Huimin Street)</strong> — A bustling labyrinth of food stalls, souvenirs, and the Great Mosque. Free entry to the quarter. Great Mosque ticket: $8. (≈ ₽760) Opening hours: 24/7 for the quarter, mosque 8:00 AM–7:00 PM.</li>
-  <li><strong>Shaanxi History Museum</strong> — One of China’s best museums. Free entry (book ahead!), but paid tickets for special exhibits ($10 (≈ ₽950)). Opening hours: 8:30 AM–6:00 PM (closed Mondays).</li>
-  <li><strong>Bell Tower and Drum Tower</strong> — Iconic landmarks in the city center. Bell Tower ticket: $6. (≈ ₽570) Drum Tower ticket: $6. (≈ ₽570) Combo ticket: $10. (≈ ₽950) Opening hours: 8:30 AM–9:30 PM.</li>
-  <li><strong>Huaqing Hot Springs</strong> — A beautiful Tang Dynasty palace complex at the foot of Mount Li. Ticket: $18. (≈ ₽1 710) Opening hours: 7:30 AM–6:00 PM.</li>
-  <li><strong>Mount Huashan</strong> — A day trip (1.5 hours by train). Known for its plank walk and stunning peaks. Cable car one-way: $28. (≈ ₽2 660) Entry ticket: $22. (≈ ₽2 090) Opening hours: 7:00 AM–7:00 PM.</li>
-  <li><strong>Tang Paradise</strong> — A massive theme park recreating Tang Dynasty gardens. Great for families. Ticket: $18. (≈ ₽1 710) Opening hours: 9:00 AM–10:00 PM.</li>
-  <li><strong>Great Mosque of Xi’an</strong> — A beautiful fusion of Chinese and Islamic architecture. Ticket: $8. (≈ ₽760) Opening hours: 8:00 AM–7:00 PM.</li>
-  <li><strong>Small Wild Goose Pagoda (Xiaoyan Pagoda)</strong> — Less crowded, peaceful grounds. Ticket: $6. (≈ ₽570) Opening hours: 8:00 AM–6:00 PM.</li>
+  <li><strong>Terracotta Warriors and Horses Museum</strong> — The undisputed star. Over 8,000 life-sized warriors guard Emperor Qin’s tomb. It’s mind-blowing. Allow 3-4 hours. Ticket: $28Opening hours: 8:30 AM–5:30 PM (Mar-Nov), 8:30 AM–5:00 PM (Dec-Feb).</li>
+  <li><strong>Xi’an City Wall</strong> — The best-preserved ancient city wall in China. Rent a bike ($8) and cycle the 14km loop. Ticket: $9Opening hours: 8:00 AM–10:00 PM (south gate open till 10 PM).</li>
+  <li><strong>Giant Wild Goose Pagoda (Dayan Pagoda)</strong> — A Tang Dynasty marvel. Climb the 7 stories for epic views. Ticket: $7(pagoda), $18(complex including temple). Opening hours: 8:00 AM–6:30 PM.</li>
+  <li><strong>Muslim Quarter (Huimin Street)</strong> — A bustling labyrinth of food stalls, souvenirs, and the Great Mosque. Free entry to the quarter. Great Mosque ticket: $8Opening hours: 24/7 for the quarter, mosque 8:00 AM–7:00 PM.</li>
+  <li><strong>Shaanxi History Museum</strong> — One of China’s best museums. Free entry (book ahead!), but paid tickets for special exhibits ($10). Opening hours: 8:30 AM–6:00 PM (closed Mondays).</li>
+  <li><strong>Bell Tower and Drum Tower</strong> — Iconic landmarks in the city center. Bell Tower ticket: $6Drum Tower ticket: $6Combo ticket: $10Opening hours: 8:30 AM–9:30 PM.</li>
+  <li><strong>Huaqing Hot Springs</strong> — A beautiful Tang Dynasty palace complex at the foot of Mount Li. Ticket: $18Opening hours: 7:30 AM–6:00 PM.</li>
+  <li><strong>Mount Huashan</strong> — A day trip (1.5 hours by train). Known for its plank walk and stunning peaks. Cable car one-way: $28Entry ticket: $22Opening hours: 7:00 AM–7:00 PM.</li>
+  <li><strong>Tang Paradise</strong> — A massive theme park recreating Tang Dynasty gardens. Great for families. Ticket: $18Opening hours: 9:00 AM–10:00 PM.</li>
+  <li><strong>Great Mosque of Xi’an</strong> — A beautiful fusion of Chinese and Islamic architecture. Ticket: $8Opening hours: 8:00 AM–7:00 PM.</li>
+  <li><strong>Small Wild Goose Pagoda (Xiaoyan Pagoda)</strong> — Less crowded, peaceful grounds. Ticket: $6Opening hours: 8:00 AM–6:00 PM.</li>
   <li><strong>Xi’an Museum</strong> — Located near the Small Wild Goose Pagoda. Free entry with ID. Opening hours: 9:00 AM–5:30 PM (closed Mondays).</li>
-  <li><strong>Forest of Stelae Museum</strong> — A treasure trove of ancient stone tablets and calligraphy. Ticket: $13. (≈ ₽1 235) Opening hours: 8:00 AM–6:30 PM.</li>
-  <li><strong>Daming Palace National Heritage Park</strong> — The ruins of the Tang Dynasty imperial palace. Vast and impressive. Ticket: $15. (≈ ₽1 425) Opening hours: 8:30 AM–6:00 PM.</li>
+  <li><strong>Forest of Stelae Museum</strong> — A treasure trove of ancient stone tablets and calligraphy. Ticket: $13Opening hours: 8:00 AM–6:30 PM.</li>
+  <li><strong>Daming Palace National Heritage Park</strong> — The ruins of the Tang Dynasty imperial palace. Vast and impressive. Ticket: $15Opening hours: 8:30 AM–6:00 PM.</li>
   <li><strong>Qujiang Pool Relics Park</strong> — A serene park with lotus ponds and Tang Dynasty ruins. Free entry. Opening hours: 24/7.</li>
 </ol>
 
@@ -452,11 +476,11 @@
 <p>Xi’an’s public transport is excellent and cheap. Here’s the lowdown with marked-up prices:</p>
 
 <ul>
-  <li><strong>Metro:</strong> 4 lines (more coming in 2026). Fares: $0.60 (≈ ₽57)–$1.50 (≈ ₽142) per ride. A day pass is $5. (≈ ₽475) The metro is clean, fast, and covers all major attractions.</li>
-  <li><strong>Buses:</strong> $0.30 (≈ ₽28)–$0.60 (≈ ₽57) per ride. Routes are numbered and have English signs. I recommend the tourist bus lines like Route 5 to the Terracotta Warriors.</li>
-  <li><strong>Taxis:</strong> Flagfall $1.50  (≈ ₽142) then $0.40 (≈ ₽38) per km. A ride across the city costs $4 (≈ ₽380)–$8. (≈ ₽760) Use Didi (China’s Uber) for convenience—it’s in English.</li>
-  <li><strong>Bicycle Rental:</strong> Shared bikes like Mobike and Hellobike: $0.30 (≈ ₽28) per 30 minutes. Or rent from a shop for $5 (≈ ₽475)–$8 (≈ ₽760) per day.</li>
-  <li><strong>Private Car & Driver:</strong> $50 (≈ ₽4 750)–$80 (≈ ₽7 600) for a full day (8 hours). Worth it for visiting the Terracotta Warriors and Huaqing Hot Springs in one day.</li>
+  <li><strong>Metro:</strong> 4 lines (more coming in 2026). Fares: $1–$2per ride. A day pass is $5The metro is clean, fast, and covers all major attractions.</li>
+  <li><strong>Buses:</strong> $0–$1per ride. Routes are numbered and have English signs. I recommend the tourist bus lines like Route 5 to the Terracotta Warriors.</li>
+  <li><strong>Taxis:</strong> Flagfall $2then $0per km. A ride across the city costs $4–$8Use Didi (China’s Uber) for convenience—it’s in English.</li>
+  <li><strong>Bicycle Rental:</strong> Shared bikes like Mobike and Hellobike: $0per 30 minutes. Or rent from a shop for $5–$8per day.</li>
+  <li><strong>Private Car & Driver:</strong> $50–$80for a full day (8 hours). Worth it for visiting the Terracotta Warriors and Huaqing Hot Springs in one day.</li>
 </ul>
 
 <p>My advice: Use the metro for long distances, and walk or bike for short hops. The city is very walkable, especially around the Bell Tower and Muslim Quarter.</p>
@@ -466,11 +490,11 @@
 <p>Xi’an is a food paradise. The Muslim Quarter is ground zero, but don’t miss these spots. Prices marked up 12-15% and rounded up:</p>
 
 <ul>
-  <li><strong>Muslim Quarter Street Food:</strong> Try <em>yangrou paomo</em> (lamb soup with flatbread) at <strong>Lao Sun Jia</strong> ($4 (≈ ₽380)–$6 (≈ ₽570)). <em>Biangbiang noodles</em> at <strong>Biang Biang Mian</strong> ($3 (≈ ₽285)–$5 (≈ ₽475)). <em>Lamb skewers</em> ($0.50 (≈ ₽47) each).</li>
-  <li><strong>Local Favorite:</strong> <strong>Defachang Dumpling Restaurant</strong> for a dumpling banquet ($15 (≈ ₽1 425)–$25 (≈ ₽2 375) per person).</li>
-  <li><strong>Rooftop Dining:</strong> <strong>Dragon Palace</strong> near the Bell Tower offers views and great Sichuan-Xi’an fusion ($20 (≈ ₽1 900)–$35 (≈ ₽3 325) per person).</li>
-  <li><strong>Budget Eats:</strong> <strong>Xiaochi</strong> (street snacks) at <strong>Xiyang Shi Market</strong> — you can feast for $5 (≈ ₽475)–$10. (≈ ₽950)</li>
-  <li><strong>Fine Dining:</strong> <strong>Tang House</strong> for an upscale Tang Dynasty experience ($40 (≈ ₽3 800)–$60 (≈ ₽5 700) per person).</li>
+  <li><strong>Muslim Quarter Street Food:</strong> Try <em>yangrou paomo</em> (lamb soup with flatbread) at <strong>Lao Sun Jia</strong> ($4–$6). <em>Biangbiang noodles</em> at <strong>Biang Biang Mian</strong> ($3–$5). <em>Lamb skewers</em> ($0each).</li>
+  <li><strong>Local Favorite:</strong> <strong>Defachang Dumpling Restaurant</strong> for a dumpling banquet ($15–$25per person).</li>
+  <li><strong>Rooftop Dining:</strong> <strong>Dragon Palace</strong> near the Bell Tower offers views and great Sichuan-Xi’an fusion ($20–$35per person).</li>
+  <li><strong>Budget Eats:</strong> <strong>Xiaochi</strong> (street snacks) at <strong>Xiyang Shi Market</strong> — you can feast for $5–$10</li>
+  <li><strong>Fine Dining:</strong> <strong>Tang House</strong> for an upscale Tang Dynasty experience ($40–$60per person).</li>
 </ul>
 
 <p>Don’t leave without trying <em>liangpi</em> (cold noodles), <em>roujiamo</em> (Chinese hamburger), and <em>shizi tou</em> (lion’s head meatballs). And for dessert, <em>jinggao</em> (persimmon cake) is divine.</p>
@@ -490,7 +514,7 @@
 
 <h2>Visa & Documents</h2>
 
-<p>Most travelers need a visa to visit Xi’an. But here’s the good news: you can get a <strong>tourist visa (L-visa)</strong> processed through a tour operator. They handle the paperwork—you just send your passport and photos. Cost: $60 (≈ ₽5 700)–$100 (≈ ₽9 500) (including service fee). Processing time: 4-7 business days.</p>
+<p>Most travelers need a visa to visit Xi’an. But here’s the good news: you can get a <strong>tourist visa (L-visa)</strong> processed through a tour operator. They handle the paperwork—you just send your passport and photos. Cost: $60–$100(including service fee). Processing time: 4-7 business days.</p>
 
 <p>For those heading to Hainan (a tropical island in southern China), there’s a <strong>visa-free policy</strong> for up to 30 days, but it must be arranged through a tour operator. You’ll need a confirmed itinerary and hotel bookings.</p>
 
@@ -511,39 +535,39 @@
   </tr>
   <tr>
     <td><strong>Accommodation</strong> (7 nights)</td>
-    <td>$245 (≈ ₽23 275)–$455 (≈ ₽43 225)</td>
-    <td>$595 (≈ ₽56 525)–$980 (≈ ₽93 100)</td>
-    <td>$1 260 (≈ ₽119 700)–$2 450 (≈ ₽232 750)</td>
+    <td>$245–$455</td>
+    <td>$595–$980</td>
+    <td>$1 260–$2 450</td>
   </tr>
   <tr>
     <td><strong>Food</strong> (7 days)</td>
-    <td>$105 (≈ ₽9 975)–$175 (≈ ₽16 625)</td>
-    <td>$245 (≈ ₽23 275)–$420 (≈ ₽39 900)</td>
-    <td>$490 (≈ ₽46 550)–$840 (≈ ₽79 800)</td>
+    <td>$105–$175</td>
+    <td>$245–$420</td>
+    <td>$490–$840</td>
   </tr>
   <tr>
     <td><strong>Transport</strong> (local)</td>
-    <td>$28 (≈ ₽2 660)–$56 (≈ ₽5 320)</td>
-    <td>$56 (≈ ₽5 320)–$112 (≈ ₽10 640)</td>
-    <td>$140 (≈ ₽13 300)–$280 (≈ ₽26 600)</td>
+    <td>$28–$56</td>
+    <td>$56–$112</td>
+    <td>$140–$280</td>
   </tr>
   <tr>
     <td><strong>Attractions</strong> (15 top spots)</td>
-    <td>$70 (≈ ₽6 650)–$100 (≈ ₽9 500)</td>
-    <td>$100 (≈ ₽9 500)–$150 (≈ ₽14 250)</td>
-    <td>$150 (≈ ₽14 250)–$200 (≈ ₽19 000)</td>
+    <td>$70–$100</td>
+    <td>$100–$150</td>
+    <td>$150–$200</td>
   </tr>
   <tr>
     <td><strong>Miscellaneous</strong> (snacks, tips, souvenirs)</td>
-    <td>$28 (≈ ₽2 660)–$56 (≈ ₽5 320)</td>
-    <td>$56 (≈ ₽5 320)–$112 (≈ ₽10 640)</td>
-    <td>$140 (≈ ₽13 300)–$280 (≈ ₽26 600)</td>
+    <td>$28–$56</td>
+    <td>$56–$112</td>
+    <td>$140–$280</td>
   </tr>
   <tr>
     <td><strong>Total (per week)</strong></td>
-    <td><strong>$476 (≈ ₽45 220)–$842 (≈ ₽79 990)</strong></td>
-    <td><strong>$1 052 (≈ ₽99 940)–$1 774 (≈ ₽168 530)</strong></td>
-    <td><strong>$2 180 (≈ ₽207 100)–$4 050 (≈ ₽384 750)</strong></td>
+    <td><strong>$476–$842</strong></td>
+    <td><strong>$1 052–$1 774</strong></td>
+    <td><strong>$2 180–$4 050</strong></td>
   </tr>
 </table>
 
@@ -660,6 +684,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -688,6 +713,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -705,8 +731,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

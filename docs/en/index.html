@@ -11,11 +11,13 @@
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/index.html">
 
     
+    <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/en/index.html">
+    
 
     <meta property="og:title" content="TravelHub — Expert Travel Guides 2026">
     <meta property="og:description" content="Expert travel guides for 35 cities across 7 countries. Hotels, cheap flights, top attractions. Turkey, Thailand, Egypt, UAE, Indonesia, China, Maldives.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/index.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -223,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -241,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -265,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -317,7 +343,7 @@
 
 
 <!-- HERO -->
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1400&q=80');">
+<div class="hero-section" style="background-image:url('/assets/countries/travel-hero.webp');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Your Dream Trip Starts Here</h1>
@@ -332,7 +358,7 @@
     <div class="cards-grid">
         
         <a href="/en/turkey/index.html" class="destination-card">
-            <img src="https://as2.ftcdn.net/jpg/08/45/68/41/1000_F_845684119_DjY0EbNBL7XLomrwnYvTEZU9LvUYfi3U.jpg" alt="Turkey" class="card-img" loading="lazy">
+            <img src="/assets/countries/turkey.webp" alt="Turkey" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Turkey</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
@@ -356,7 +382,7 @@
         </a>
         
         <a href="/en/thailand/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1200&amp;q=80" alt="Thailand" class="card-img" loading="lazy">
+            <img src="/assets/countries/thailand.webp" alt="Thailand" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Thailand</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
@@ -380,7 +406,7 @@
         </a>
         
         <a href="/en/egypt/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=1200&amp;q=80" alt="Egypt" class="card-img" loading="lazy">
+            <img src="/assets/countries/egypt.webp" alt="Egypt" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Egypt</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
@@ -404,7 +430,7 @@
         </a>
         
         <a href="/en/uae/index.html" class="destination-card">
-            <img src="https://plantravel.ru/Upload/images/other/php8loD6m.jpg" alt="UAE" class="card-img" loading="lazy">
+            <img src="/assets/countries/uae.webp" alt="UAE" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>UAE</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
@@ -428,7 +454,7 @@
         </a>
         
         <a href="/en/indonesia/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&amp;q=80" alt="Indonesia" class="card-img" loading="lazy">
+            <img src="/assets/countries/indonesia.webp" alt="Indonesia" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Indonesia</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
@@ -452,7 +478,7 @@
         </a>
         
         <a href="/en/china/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&amp;q=80" alt="China" class="card-img" loading="lazy">
+            <img src="/assets/countries/china.webp" alt="China" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>China</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
@@ -461,9 +487,9 @@
                 </p>
                 <div class="card-cities">
                     
-                    <span>Sanya (Hainan)</span>
+                    <span>Sanya</span>
                     
-                    <span>Haikou (Hainan)</span>
+                    <span>Haikou</span>
                     
                     <span>Beijing</span>
                     
@@ -476,7 +502,7 @@
         </a>
         
         <a href="/en/maldives/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&amp;q=80" alt="Maldives" class="card-img" loading="lazy">
+            <img src="/assets/countries/maldives.webp" alt="Maldives" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>Maldives</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
@@ -612,6 +638,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -640,6 +667,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -657,8 +685,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

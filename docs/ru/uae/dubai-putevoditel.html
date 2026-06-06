@@ -7,8 +7,8 @@
     <meta name="description" content="Дубай: полный путеводитель 2026 Дубай — это город-феномен, выросший из пустыни в глобальный мегаполис, где футуристическая архитектура соседствует с традицио...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/dubai-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Дубай: полный путеводитель 2026">
     <meta property="og:description" content="Дубай: полный путеводитель 2026 Дубай — это город-феномен, выросший из пустыни в глобальный мегаполис, где футуристическая архитектура соседствует с традицио...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/uae/dubai-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/dubai-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/dubai.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Дубай: полный путеводитель 2026</div>
@@ -404,71 +428,71 @@
   </tr>
 </table>
 
-<p>Из аэропорта в город можно добраться на метро (красная линия, до станции Union — 15 минут, стоимость 8 AED), на такси (фиксированная цена 25–50 AED до центра города) или на автобусе-шаттле (маршруты C1, X28, стоимость 5 AED). Для туристов с большим багажом рекомендую заказать трансфер через приложение Careem или Uber — цена от 60 AED до района Dubai Marina.</p>
+<p>Из аэропорта в город можно добраться на метро (красная линия, до станции Union — 15 минут, стоимость₽207 (8 AED)), на такси (фиксированная цена 25–₽1 295 (50 AED) до центра города) или на автобусе-шаттле (маршруты C1, X28, стоимость₽129 (5 AED)). Для туристов с большим багажом рекомендую заказать трансфер через приложение Careem или Uber — цена от₽1 554 (60 AED) до района Dubai Marina.</p>
 
 <h2>Где остановиться</h2>
 <p>Дубай предлагает жилье на любой вкус и бюджет. Город условно делится на три зоны: исторический центр (Бур-Дубай, Дейра), современный центр (Даунтаун, Бизнес-Бэй) и пляжные районы (Дубай-Марина, Джумейра, Палм-Джумейра). Цены на отели в 2026 году выросли на 8–10% по сравнению с 2024 годом из-за высокого спроса, но все еще остаются доступными при правильном выборе.</p>
 
-<h3>Бюджетное размещение (до 300 AED/ночь)</h3>
+<h3>Бюджетное размещение (до₽7 770 (300 AED)/ночь)</h3>
 <ul>
-  <li><strong>Район Дейра (Deira):</strong> старый город, где сосредоточены хостелы и гостевые дома. Например, Pearl Creek Hotel — цена от 180 AED за двухместный номер. Минус: шумно, до пляжа 30 минут на метро.</li>
-  <li><strong>Район Аль-Барша (Al Barsha):</strong> рядом с Mall of the Emirates. Отель Ibis Styles Dubai Mall of the Emirates — от 250 AED, есть бассейн и бесплатный автобус до пляжа.</li>
-  <li><strong>Хостелы:</strong> Backpacker 16 Hostel в районе Бур-Дубай — от 70 AED за койку в общем номере.</li>
+  <li><strong>Район Дейра (Deira):</strong> старый город, где сосредоточены хостелы и гостевые дома. Например, Pearl Creek Hotel — цена от₽4 662 (180 AED) за двухместный номер. Минус: шумно, до пляжа 30 минут на метро.</li>
+  <li><strong>Район Аль-Барша (Al Barsha):</strong> рядом с Mall of the Emirates. Отель Ibis Styles Dubai Mall of the Emirates — от₽6 475 (250 AED), есть бассейн и бесплатный автобус до пляжа.</li>
+  <li><strong>Хостелы:</strong> Backpacker 16 Hostel в районе Бур-Дубай — от₽1 813 (70 AED) за койку в общем номере.</li>
 </ul>
 
-<h3>Средний сегмент (300–800 AED/ночь)</h3>
+<h3>Средний сегмент (300–₽20 720 (800 AED)/ночь)</h3>
 <ul>
-  <li><strong>Район Джумейра (Jumeirah):</strong> отели 3–4 звезды в 10 минутах от пляжа. Jumeirah Rotana — от 400 AED, с завтраком. Рядом знаменитый рынок Souk Madinat.</li>
-  <li><strong>Даунтаун (Downtown):</strong> отели с видом на Бурдж-Халифа. Rove Downtown — от 500 AED, стильный дизайн, бассейн на крыше.</li>
-  <li><strong>Дубай-Марина (Dubai Marina):</strong> апартаменты с кухней. Address Dubai Marina — от 600 AED, идеально для семей.</li>
+  <li><strong>Район Джумейра (Jumeirah):</strong> отели 3–4 звезды в 10 минутах от пляжа. Jumeirah Rotana — от₽10 360 (400 AED), с завтраком. Рядом знаменитый рынок Souk Madinat.</li>
+  <li><strong>Даунтаун (Downtown):</strong> отели с видом на Бурдж-Халифа. Rove Downtown — от₽12 950 (500 AED), стильный дизайн, бассейн на крыше.</li>
+  <li><strong>Дубай-Марина (Dubai Marina):</strong> апартаменты с кухней. Address Dubai Marina — от₽15 540 (600 AED), идеально для семей.</li>
 </ul>
 
-<h3>Люкс (от 800 AED/ночь)</h3>
+<h3>Люкс (от₽20 720 (800 AED)/ночь)</h3>
 <ul>
-  <li><strong>Палм-Джумейра (Palm Jumeirah):</strong> Atlantis The Palm — от 1 200 AED, аквапарк Aquaventure включен в стоимость. Номера с видом на Персидский залив.</li>
-  <li><strong>Бурдж-Халифа (Burj Khalifa):</strong> Armani Hotel Dubai — от 2 500 AED, дизайн от Джорджо Армани, прямой доступ к смотровой площадке.</li>
-  <li><strong>Остров Блювотерс (Bluewaters Island):</strong> Caesars Palace Dubai — от 1 500 AED, частный пляж и рестораны с мишленовскими звездами.</li>
+  <li><strong>Палм-Джумейра (Palm Jumeirah):</strong> Atlantis The Palm — от₽31 080 (1 ₽5 180 (200 AED)), аквапарк Aquaventure включен в стоимость. Номера с видом на Персидский залив.</li>
+  <li><strong>Бурдж-Халифа (Burj Khalifa):</strong> Armani Hotel Dubai — от₽64 750 (2 ₽12 950 (500 AED)), дизайн от Джорджо Армани, прямой доступ к смотровой площадке.</li>
+  <li><strong>Остров Блювотерс (Bluewaters Island):</strong> Caesars Palace Dubai — от₽38 850 (1 ₽12 950 (500 AED)), частный пляж и рестораны с мишленовскими звездами.</li>
 </ul>
 
 <h2>Топ-15 достопримечательностей</h2>
 <p>Каждое место в списке проверено тысячами туристов. Указаны часы работы и цены на 2026 год. Рекомендую покупать билеты онлайн — это дешевле на 10–15% и позволяет избежать очередей.</p>
 
 <ol>
-  <li><strong>Бурдж-Халифа (Burj Khalifa)</strong> — самое высокое здание в мире (828 м). Смотровая площадка At The Top на 124–125 этажах предлагает панорамный вид на город. Цена: 169 AED (взрослый), 125 AED (детский). Часы: 8:30–22:00. Лучшее время — закат (билеты дороже на 30%).</li>
-  <li><strong>Дубай-Молл (The Dubai Mall)</strong> — крупнейший торговый центр планеты (1,2 млн кв. м). Внутри: океанариум Dubai Aquarium (билет 130 AED), ледовый каток, кинотеатр IMAX. Вход бесплатный. Часы: 10:00–00:00.</li>
-  <li><strong>Пальма Джумейра (Palm Jumeirah)</strong> — искусственный остров в форме пальмы. Прогулка по набережной Crescent — бесплатно. Можно посетить отель Atlantis The Palm (экскурсия 100 AED).</li>
-  <li><strong>Старая часть Аль-Фахиди (Al Fahidi Historical Neighbourhood)</strong> — традиционные дома из кораллового камня, ветряные башни. Вход свободный. Часы: 9:00–18:00. Рядом находится Дубайский музей (вход 3 AED).</li>
-  <li><strong>Дубайский аквапарк Aquaventure</strong> — один из лучших в мире, 30 горок, включая самую высокую (27 м). Цена: 310 AED (взрослый), 250 AED (детский). Часы: 10:00–18:00.</li>
+  <li><strong>Бурдж-Халифа (Burj Khalifa)</strong> — самое высокое здание в мире (828 м). Смотровая площадка At The Top на 124–125 этажах предлагает панорамный вид на город. Цена:₽4 377 (169 AED) (взрослый)₽3 237 (125 AED) (детский). Часы: 8:30–22:00. Лучшее время — закат (билеты дороже на 30%).</li>
+  <li><strong>Дубай-Молл (The Dubai Mall)</strong> — крупнейший торговый центр планеты (1,2 млн кв. м). Внутри: океанариум Dubai Aquarium (билет₽3 367 (130 AED)), ледовый каток, кинотеатр IMAX. Вход бесплатный. Часы: 10:00–00:00.</li>
+  <li><strong>Пальма Джумейра (Palm Jumeirah)</strong> — искусственный остров в форме пальмы. Прогулка по набережной Crescent — бесплатно. Можно посетить отель Atlantis The Palm (экскурсия₽2 590 (100 AED)).</li>
+  <li><strong>Старая часть Аль-Фахиди (Al Fahidi Historical Neighbourhood)</strong> — традиционные дома из кораллового камня, ветряные башни. Вход свободный. Часы: 9:00–18:00. Рядом находится Дубайский музей (вход₽77 (3 AED)).</li>
+  <li><strong>Дубайский аквапарк Aquaventure</strong> — один из лучших в мире, 30 горок, включая самую высокую (27 м). Цена:₽8 029 (310 AED) (взрослый)₽6 475 (250 AED) (детский). Часы: 10:00–18:00.</li>
   <li><strong>Золотой рынок (Gold Souk)</strong> — более 300 магазинов с золотом, серебром и драгоценными камнями. Вход бесплатный. Часы: 10:00–22:00 (с перерывом на обед 13:30–16:30).</li>
-  <li><strong>Мечеть Джумейра (Jumeirah Mosque)</strong> — единственная мечеть в Дубае, открытая для туристов. Экскурсии проводятся трижды в день. Цена: 25 AED. Часы: 10:00, 11:00, 14:00.</li>
-  <li><strong>Дубай-Крик (Dubai Creek)</strong> — исторический водный канал. Прогулка на абра (традиционной лодке) стоит 1 AED. Лучшее время — закат.</li>
-  <li><strong>Музей будущего (Museum of the Future)</strong> — футуристическое здание в форме тора. Экспозиции про космос, климат, технологии. Цена: 149 AED. Часы: 10:00–20:00.</li>
-  <li><strong>Сады Miracle Garden</strong> — крупнейший цветочный сад в мире (150 млн цветов). Открыт с ноября по март. Цена: 75 AED. Часы: 9:00–21:00.</li>
-  <li><strong>Дубай-Марина (Dubai Marina)</strong> — искусственный канал длиной 3 км с небоскребами. Прогулка на яхте (от 150 AED за час). Бесплатный променад.</li>
-  <li><strong>Смотровая площадка Sky Views</strong> — на 52-м этаже отеля Address Sky View. Есть стеклянный пол и горка-тобогган. Цена: 89 AED. Часы: 10:00–22:00.</li>
-  <li><strong>Аквариум Dubai Aquarium</strong> — 10 млн литров воды, 33 000 морских животных. Туннель длиной 48 м. Цена: 130 AED. Часы: 10:00–22:00.</li>
-  <li><strong>Экспо-Сити (Expo City Dubai)</strong> — территория бывшей выставки Expo 2020. Павильоны Sustainability и Mobility. Вход: 50 AED. Часы: 10:00–18:00.</li>
-  <li><strong>Пустыня Аль-Айн (Al Ain Desert)</strong> — сафари на джипах, катание на верблюдах, ужин под звездами. Тур от 250 AED за человека (включает трансфер).</li>
+  <li><strong>Мечеть Джумейра (Jumeirah Mosque)</strong> — единственная мечеть в Дубае, открытая для туристов. Экскурсии проводятся трижды в день. Цена:₽647 (25 AED). Часы: 10:00, 11:00, 14:00.</li>
+  <li><strong>Дубай-Крик (Dubai Creek)</strong> — исторический водный канал. Прогулка на абра (традиционной лодке) стоит₽25 (1 AED). Лучшее время — закат.</li>
+  <li><strong>Музей будущего (Museum of the Future)</strong> — футуристическое здание в форме тора. Экспозиции про космос, климат, технологии. Цена:₽3 859 (149 AED). Часы: 10:00–20:00.</li>
+  <li><strong>Сады Miracle Garden</strong> — крупнейший цветочный сад в мире (150 млн цветов). Открыт с ноября по март. Цена:₽1 942 (75 AED). Часы: 9:00–21:00.</li>
+  <li><strong>Дубай-Марина (Dubai Marina)</strong> — искусственный канал длиной 3 км с небоскребами. Прогулка на яхте (от₽3 885 (150 AED) за час). Бесплатный променад.</li>
+  <li><strong>Смотровая площадка Sky Views</strong> — на 52-м этаже отеля Address Sky View. Есть стеклянный пол и горка-тобогган. Цена:₽2 305 (89 AED). Часы: 10:00–22:00.</li>
+  <li><strong>Аквариум Dubai Aquarium</strong> — 10 млн литров воды, 33 000 морских животных. Туннель длиной 48 м. Цена:₽3 367 (130 AED). Часы: 10:00–22:00.</li>
+  <li><strong>Экспо-Сити (Expo City Dubai)</strong> — территория бывшей выставки Expo 2020. Павильоны Sustainability и Mobility. Вход:₽1 295 (50 AED). Часы: 10:00–18:00.</li>
+  <li><strong>Пустыня Аль-Айн (Al Ain Desert)</strong> — сафари на джипах, катание на верблюдах, ужин под звездами. Тур от₽6 475 (250 AED) за человека (включает трансфер).</li>
 </ol>
 
 <h2>Транспорт в городе</h2>
 <p>Дубай — один из немногих городов мира, где общественный транспорт работает с комфортом уровня бизнес-класса. Система метро (две линии: красная и зеленая) охватывает 53 станции. В 2026 году открылась золотая линия (Gold Line) протяженностью 14 км с 8 станциями, которая связывает Даунтаун с новым районом Дубай-Крик-Харбор.</p>
 
 <ul>
-  <li><strong>Метро:</strong> работает с 5:00 до 00:00 (пятница — до 1:00). Цена проезда: от 3 до 7,5 AED в зависимости от расстояния. Используйте карту Nol Card (стоимость карты 6 AED, пополнение на кассах). Суточный проездной — 20 AED.</li>
-  <li><strong>Автобусы:</strong> 150 маршрутов, кондиционеры. Цена: 2–4 AED за поездку. Карта Nol Card обязательна. Ночные маршруты ходят до 4:00.</li>
-  <li><strong>Такси:</strong> государственные (RTA) и частные (Careem, Uber). Посадка — 12 AED, далее 1,82 AED за км. Средняя поездка по городу — 25–50 AED. В час пик цены растут на 20%.</li>
-  <li><strong>Аренда автомобиля:</strong> от 80 AED в сутки (эконом-класс). Требуются международные права. Парковка платная: 2 AED в час (зона A), 4 AED (зона B). Штрафы за превышение скорости — от 300 AED.</li>
-  <li><strong>Водное такси (Abra):</strong> традиционные лодки через Дубай-Крик. Цена: 1 AED за поездку. Маршруты: Дейра — Бур-Дубай.</li>
+  <li><strong>Метро:</strong> работает с 5:00 до 00:00 (пятница — до 1:00). Цена проезда: от 3 до₽1 942 (75 AED) в зависимости от расстояния. Используйте карту Nol Card (стоимость карты₽155 (6 AED), пополнение на кассах). Суточный проездной —₽518 (20 AED).</li>
+  <li><strong>Автобусы:</strong> 150 маршрутов, кондиционеры. Цена: 2–₽103 (4 AED) за поездку. Карта Nol Card обязательна. Ночные маршруты ходят до 4:00.</li>
+  <li><strong>Такси:</strong> государственные (RTA) и частные (Careem, Uber). Посадка —₽310 (12 AED), далее₽4 713 (182 AED) за км. Средняя поездка по городу — 25–₽1 295 (50 AED). В час пик цены растут на 20%.</li>
+  <li><strong>Аренда автомобиля:</strong> от₽2 072 (80 AED) в сутки (эконом-класс). Требуются международные права. Парковка платная:₽51 (2 AED) в час (зона A)₽103 (4 AED) (зона B). Штрафы за превышение скорости — от₽7 770 (300 AED).</li>
+  <li><strong>Водное такси (Abra):</strong> традиционные лодки через Дубай-Крик. Цена:₽25 (1 AED) за поездку. Маршруты: Дейра — Бур-Дубай.</li>
 </ul>
 
 <h2>Где поесть</h2>
-<p>Дубай — гастрономическая столица региона с 14 ресторанами, удостоенными звезд Мишлен (на 2026 год). Здесь можно попробовать кухню 200 национальностей, от ливанского меззе до японского кайсэки. Цены варьируются от 10 AED за уличную шаурму до 800 AED за ужин в ресторане с видом на Бурдж-Халифа.</p>
+<p>Дубай — гастрономическая столица региона с 14 ресторанами, удостоенными звезд Мишлен (на 2026 год). Здесь можно попробовать кухню 200 национальностей, от ливанского меззе до японского кайсэки. Цены варьируются от₽259 (10 AED) за уличную шаурму до₽20 720 (800 AED) за ужин в ресторане с видом на Бурдж-Халифа.</p>
 
 <h3>Уличная еда и бюджетные заведения</h3>
 <ul>
-  <li><strong>Al Ustad Special Kebab</strong> (район Бур-Дубай) — иранский кебаб с рисом, порция 35 AED. Работает с 1968 года.</li>
-  <li><strong>Ravi Restaurant</strong> (Сатьяма-роуд) — пакистанское карри, порция 15 AED. Популярен среди местных.</li>
+  <li><strong>Al Ustad Special Kebab</strong> (район Бур-Дубай) — иранский кебаб с рисом, порция₽906 (35 AED). Работает с 1968 года.</li>
+  <li><strong>Ravi Restaurant</strong> (Сатьяма-роуд) — пакистанское карри, порция₽388 (15 AED). Популярен среди местных.</li>
   <li><strong>Shawarma Al Farooj</strong> (Дейра<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
@@ -575,6 +599,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -603,6 +628,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -620,8 +646,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

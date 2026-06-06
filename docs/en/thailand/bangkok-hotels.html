@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Bangkok 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Bangkok 2026: Budget to Luxury Bangkok’s hotel scene in 2026 is more dynamic than ever, with new properties opening alongside iconic landmar...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/bangkok-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/bangkok-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/bangkok-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/bangkok-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Bangkok 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Bangkok 2026: Budget to Luxury Bangkok’s hotel scene in 2026 is more dynamic than ever, with new properties opening alongside iconic landmar...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/thailand/bangkok-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/bangkok-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/bangkok.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Bangkok 2026: Budget to Luxury</div>
@@ -360,57 +384,126 @@
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
 <p>Bangkok’s hotel scene in 2026 is more dynamic than ever, with new properties opening alongside iconic landmarks. The city’s infrastructure improvements, including the expanded BTS Skytrain lines reaching farther into suburbs and the completion of the MRT Orange Line, have made previously remote neighborhoods highly accessible. Hotel prices have risen approximately 8–12% since 2024 due to increased demand from both leisure and business travelers, but savvy visitors can still find excellent value. Neighborhoods like Sukhumvit continue to dominate for convenience, while Rattanakosin offers cultural immersion near temples, and Riverside provides a tranquil escape with stunning views of the Chao Phraya River. Whether you seek a hostel-style budget stay or a five-star suite with butler service, Bangkok delivers an unmatched range of accommodations.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
-<p>Price ranges in this guide reflect average nightly rates for a standard double room in January 2026, including taxes and service charges. Budget hotels under $50 (≈ ₽4 750) often lack pools or gyms but compensate with central locations. Mid-range options ($50 (≈ ₽4 750)–150) typically include breakfast and modern amenities. Luxury properties ($150 (≈ ₽14 250)+) offer world-class spas, infinity pools, and Michelin-starred dining. Below, we detail ten top hotels across these tiers, with honest assessments of their strengths and weaknesses.</p>
+<p>Price ranges in this guide reflect average nightly rates for a standard double room in January 2026, including taxes and service charges. Budget hotels under $50often lack pools or gyms but compensate with central locations. Mid-range options ($50–150) typically include breakfast and modern amenities. Luxury properties ($150+) offer world-class spas, infinity pools, and Michelin-starred dining. Below, we detail ten top hotels across these tiers, with honest assessments of their strengths and weaknesses.</p>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Lub d Bangkok Siam</h3>
-<p><strong>Price:</strong> $25 (≈ ₽2 375)–40/night. Located in the heart of Siam Square, this hostel-style hotel offers private rooms and dorms. The rooftop bar overlooks the bustling shopping district. <strong>Pros:</strong> Unbeatable location near BTS Siam, free Wi-Fi, and a social atmosphere. <strong>Cons:</strong> Thin walls; noise from common areas can be disruptive. Ideal for solo travelers under 35.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_318818" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Lub d Bangkok Siam - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Lub d Bangkok Siam - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_318818 .hc-slide');var d=document.querySelectorAll('#hc_318818 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_318818 .hc-slide');var d=document.querySelectorAll('#hc_318818 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Lub d Bangkok Siam &bull; 2 photos</p></div>
+<p><strong>Price:</strong> $25–40/night. Located in the heart of Siam Square, this hostel-style hotel offers private rooms and dorms. The rooftop bar overlooks the bustling shopping district. <strong>Pros:</strong> Unbeatable location near BTS Siam, free Wi-Fi, and a social atmosphere. <strong>Cons:</strong> Thin walls; noise from common areas can be disruptive. Ideal for solo travelers under 35.</p>
 
 <h3>2. Niras Bankok Culture Hostel</h3>
-<p><strong>Price:</strong> $18 (≈ ₽1 710)–35/night. A boutique hostel in Banglamphu, near Khao San Road. The property features Thai-inspired decor, a garden courtyard, and a library. <strong>Pros:</strong> Quiet despite proximity to nightlife, excellent staff, and free walking tours. <strong>Cons:</strong> No elevator; rooms on upper floors require stair climbing. Shared bathrooms may not suit all.</p>
+<div id="hc_456665" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Niras Bankok Culture Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Niras Bankok Culture Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_456665 .hc-slide');var d=document.querySelectorAll('#hc_456665 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_456665 .hc-slide');var d=document.querySelectorAll('#hc_456665 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Niras Bankok Culture Hostel &bull; 2 photos</p></div>
+<p><strong>Price:</strong> $18–35/night. A boutique hostel in Banglamphu, near Khao San Road. The property features Thai-inspired decor, a garden courtyard, and a library. <strong>Pros:</strong> Quiet despite proximity to nightlife, excellent staff, and free walking tours. <strong>Cons:</strong> No elevator; rooms on upper floors require stair climbing. Shared bathrooms may not suit all.</p>
 
 <h3>3. The Warehouse Bangkok</h3>
-<p><strong>Price:</strong> $30 (≈ ₽2 850)–48/night. A converted 1950s warehouse in Khlong Toei, now a hip hotel with industrial-chic design. Rooms feature exposed brick and concrete. <strong>Pros:</strong> Unique architecture, rooftop pool, and a lively bar. <strong>Cons:</strong> Located in a gritty district; walking alone at night is not recommended. Limited dining options nearby.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_617764" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Warehouse Bangkok - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Warehouse Bangkok - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Warehouse Bangkok - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_617764 .hc-slide');var d=document.querySelectorAll('#hc_617764 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_617764 .hc-slide');var d=document.querySelectorAll('#hc_617764 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_617764 .hc-slide');var d=document.querySelectorAll('#hc_617764 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Warehouse Bangkok &bull; 3 photos</p></div>
+<p><strong>Price:</strong> $30–48/night. A converted 1950s warehouse in Khlong Toei, now a hip hotel with industrial-chic design. Rooms feature exposed brick and concrete. <strong>Pros:</strong> Unique architecture, rooftop pool, and a lively bar. <strong>Cons:</strong> Located in a gritty district; walking alone at night is not recommended. Limited dining options nearby.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)–150/night)</h2>
+<h2>Mid-Range Hotels ($50–150/night)</h2>
 
 <h3>4. Holiday Inn Express Bangkok Siam</h3>
-<p><strong>Price:</strong> $65 (≈ ₽6 175)–95/night. A reliable chain hotel on Phayathai Road, steps from BTS Ratchathewi. Rooms are compact but efficient, with blackout curtains and power showers. <strong>Highlights:</strong> Free breakfast buffet with Thai and Western options, a small fitness center, and a 24-hour business center. Best for business travelers or families needing a central base.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_654065" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Express Bangkok Siam - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Express Bangkok Siam - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_654065 .hc-slide');var d=document.querySelectorAll('#hc_654065 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_654065 .hc-slide');var d=document.querySelectorAll('#hc_654065 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Express Bangkok Siam &bull; 2 photos</p></div>
+<p><strong>Price:</strong> $65–95/night. A reliable chain hotel on Phayathai Road, steps from BTS Ratchathewi. Rooms are compact but efficient, with blackout curtains and power showers. <strong>Highlights:</strong> Free breakfast buffet with Thai and Western options, a small fitness center, and a 24-hour business center. Best for business travelers or families needing a central base.</p>
 
 <h3>5. The Quarter Hualamphong by UHG</h3>
-<p><strong>Price:</strong> $55 (≈ ₽5 225)–85/night. Located opposite the historic Hualamphong Train Station, this hotel blends vintage railway themes with modern comfort. The rooftop bar offers views of the station’s clock tower. <strong>Highlights:</strong> Spacious rooms with railway memorabilia, a saltwater pool, and a Thai restaurant serving local classics. Perfect for train enthusiasts or those exploring Chinatown.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="bl" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_752844" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Quarter Hualamphong by UHG - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Quarter Hualamphong by UHG - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Quarter Hualamphong by UHG - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_752844 .hc-slide');var d=document.querySelectorAll('#hc_752844 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_752844 .hc-slide');var d=document.querySelectorAll('#hc_752844 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_752844 .hc-slide');var d=document.querySelectorAll('#hc_752844 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Quarter Hualamphong by UHG &bull; 3 photos</p></div>
+<p><strong>Price:</strong> $55–85/night. Located opposite the historic Hualamphong Train Station, this hotel blends vintage railway themes with modern comfort. The rooftop bar offers views of the station’s clock tower. <strong>Highlights:</strong> Spacious rooms with railway memorabilia, a saltwater pool, and a Thai restaurant serving local classics. Perfect for train enthusiasts or those exploring Chinatown.</p>
 
 <h3>6. Ariyasom Villa</h3>
-<p><strong>Price:</strong> $90 (≈ ₽8 550)–140/night. A tranquil boutique hotel in Sukhumvit Soi 1, set in a restored 1940s villa. Rooms feature teakwood floors and claw-foot bathtubs. <strong>Highlights:</strong> An organic spa, a lush garden pool, and a vegetarian-friendly restaurant. The hotel hosts weekly cooking classes. Ideal for couples seeking romance away from the crowds.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_100441" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ariyasom Villa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ariyasom Villa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ariyasom Villa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_100441 .hc-slide');var d=document.querySelectorAll('#hc_100441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_100441 .hc-slide');var d=document.querySelectorAll('#hc_100441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_100441 .hc-slide');var d=document.querySelectorAll('#hc_100441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ariyasom Villa &bull; 3 photos</p></div>
+<p><strong>Price:</strong> $90–140/night. A tranquil boutique hotel in Sukhumvit Soi 1, set in a restored 1940s villa. Rooms feature teakwood floors and claw-foot bathtubs. <strong>Highlights:</strong> An organic spa, a lush garden pool, and a vegetarian-friendly restaurant. The hotel hosts weekly cooking classes. Ideal for couples seeking romance away from the crowds.</p>
 
 <h3>7. The Sukosol Hotel</h3>
-<p><strong>Price:</strong> $70 (≈ ₽6 650)–110/night. Near Phaya Thai BTS station, this hotel is known for its antique collection—over 500 pieces of Thai art and furniture. Rooms are elegant, with silk cushions and marble bathrooms. <strong>Highlights:</strong> A large outdoor pool, a jazz bar with live music on weekends, and a free shuttle to Siam Paragon. Great for culture lovers who want modern amenities.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_800446" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Sukosol Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Sukosol Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Sukosol Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_800446 .hc-slide');var d=document.querySelectorAll('#hc_800446 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_800446 .hc-slide');var d=document.querySelectorAll('#hc_800446 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_800446 .hc-slide');var d=document.querySelectorAll('#hc_800446 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Sukosol Hotel &bull; 3 photos</p></div>
+<p><strong>Price:</strong> $70–110/night. Near Phaya Thai BTS station, this hotel is known for its antique collection—over 500 pieces of Thai art and furniture. Rooms are elegant, with silk cushions and marble bathrooms. <strong>Highlights:</strong> A large outdoor pool, a jazz bar with live music on weekends, and a free shuttle to Siam Paragon. Great for culture lovers who want modern amenities.</p>
+<div id="hc_240970" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="jazz bar with live music on weekends, and a free shuttle to Siam Paragon. Great for culture lovers who want modern amenities. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="jazz bar with live music on weekends, and a free shuttle to Siam Paragon. Great for culture lovers who want modern amenities. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_240970 .hc-slide');var d=document.querySelectorAll('#hc_240970 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_240970 .hc-slide');var d=document.querySelectorAll('#hc_240970 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">jazz bar with live music on weekends, and a free shuttle to Siam Paragon. Great for culture lovers who want modern amenities. &bull; 2 photos</p></div>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>8. Mandarin Oriental Bangkok</h3>
-<p><strong>Price:</strong> $450 (≈ ₽42 750)–900/night. A legendary property on the Chao Phraya River, operating since 1876. The 2026 renovation refreshed its guest rooms with Thai silk and hand-painted murals. <strong>Features:</strong> The award-winning Bamboo Bar, a three-tiered infinity pool, and the Oriental Spa with traditional Thai treatments. Butler service includes a personal valet for unpacking. The hotel’s private boat ferries guests to its Thai cooking school across the river.</p>
+<div id="hc_730126" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Mandarin Oriental Bangkok - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Mandarin Oriental Bangkok - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_730126 .hc-slide');var d=document.querySelectorAll('#hc_730126 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_730126 .hc-slide');var d=document.querySelectorAll('#hc_730126 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Mandarin Oriental Bangkok &bull; 2 photos</p></div>
+<p><strong>Price:</strong> $450–900/night. A legendary property on the Chao Phraya River, operating since 1876. The 2026 renovation refreshed its guest rooms with Thai silk and hand-painted murals. <strong>Features:</strong> The award-winning Bamboo Bar, a three-tiered infinity pool, and the Oriental Spa with traditional Thai treatments. Butler service includes a personal valet for unpacking. The hotel’s private boat ferries guests to its Thai cooking school across the river.</p>
+<div id="hc_590616" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Oriental Spa with traditional Thai treatments. Butler service includes a personal valet for unpacking. The hotel’s private boat ferries guests to its Thai cooking school across the river. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Oriental Spa with traditional Thai treatments. Butler service includes a personal valet for unpacking. The hotel’s private boat ferries guests to its Thai cooking school across the river. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_590616 .hc-slide');var d=document.querySelectorAll('#hc_590616 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_590616 .hc-slide');var d=document.querySelectorAll('#hc_590616 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Oriental Spa with traditional Thai treatments. Butler service includes a personal valet for unpacking. The hotel’s private boat ferries guests to its Thai cooking school across the river. &bull; 2 photos</p></div>
 
 <h3>9. The Siam Hotel</h3>
-<p><strong>Price:</strong> $350 (≈ ₽33 250)–700/night. An ultra-luxury property in Dusit, designed by Bill Bensley. Each suite is a standalone villa with a private pool and garden. <strong>Features:</strong> A museum-worthy collection of Asian antiques, a riverside infinity pool, and a gym with river views. The hotel’s restaurant, Chon Thai, serves royal Thai cuisine. The concierge can arrange private temple tours by vintage car.</p>
+<p><strong>Price:</strong> $350–700/night. An ultra-luxury property in Dusit, designed by Bill Bensley. Each suite is a standalone villa with a private pool and garden. <strong>Features:</strong> A museum-worthy collection of Asian antiques, a riverside infinity pool, and a gym with river views. The hotel’s restaurant, Chon Thai, serves royal Thai cuisine. The concierge can arrange private temple tours by vintage car.</p>
 
 <h3>10. Rosewood Bangkok</h3>
-<p><strong>Price:</strong> $300 (≈ ₽28 500)–600/night. A skyscraper hotel in Ploenchit, with a dramatic 30-meter lobby waterfall. Rooms have floor-to-ceiling windows overlooking the city. <strong>Features:</strong> The Lakehouse restaurant on the 19th floor, a spa with Himalayan salt sauna, and a rooftop bar with 360-degree views. The hotel’s infinity pool on the 20th floor appears to merge with the sky. Perfect for business travelers and luxury shoppers.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Price:</strong> $300–600/night. A skyscraper hotel in Ploenchit, with a dramatic 30-meter lobby waterfall. Rooms have floor-to-ceiling windows overlooking the city. <strong>Features:</strong> The Lakehouse restaurant on the 19th floor, a spa with Himalayan salt sauna, and a rooftop bar with 360-degree views. The hotel’s infinity pool on the 20th floor appears to merge with the sky. Perfect for business travelers and luxury shoppers.</p>
 
 <h2>How to Choose the Right Area</h2>
 
 <p>Selecting the right neighborhood in Bangkok can make or break your trip. For beach access, consider hotels near the Chao Phraya River (Riverside area) or those offering shuttle boats to Koh Kret. The Mandarin Oriental and The Siam Hotel both provide private piers. For sightseeing, stay in Rattanakosin (near the Grand Palace and Wat Pho) or Siam (for shopping at MBK and CentralWorld). Budget hotels like Lub d Bangkok Siam put you steps from BTS connections to all major attractions. For nightlife, Sukhumvit Soi 11 and Thonglor are epicenters. The Quarter Hualamphong offers quick access to Khao San Road’s bars via a short taxi ride. Families should prioritize Sukhumvit for its parks and kid-friendly restaurants, while business travelers benefit from Ploenchit’s proximity to offices and the BTS.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="bo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
@@ -505,6 +598,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -533,6 +627,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -550,8 +645,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

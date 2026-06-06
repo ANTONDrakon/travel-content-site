@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Самуи 2026: от бюджета до люкса Остров Самуи, расположенный в Сиамском заливе, является вторым по величине островом Таиланда и одним из самых...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/koh-samui-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/koh-samui-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/koh-samui-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/koh-samui-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/koh-samui-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/koh-samui-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Самуи 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Самуи 2026: от бюджета до люкса Остров Самуи, расположенный в Сиамском заливе, является вторым по величине островом Таиланда и одним из самых...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/koh-samui-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/koh-samui-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/koh-samui.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Самуи 2026: от бюджета до люкса</div>
@@ -361,56 +385,125 @@
 
 <p>Остров Самуи, расположенный в Сиамском заливе, является вторым по величине островом Таиланда и одним из самых популярных туристических направлений Юго-Восточной Азии. По данным Управления по туризму Таиланда (TAT), в 2025 году остров принял более 3,2 миллиона иностранных туристов, и прогноз на 2026 год предполагает рост на 8-10%. Гостиничная инфраструктура Самуи поражает разнообразием: здесь представлено более 1 200 отелей, курортов и гестхаусов, от скромных бунгало на пляже до пятизвездочных резиденций с частными бассейнами. Основные районы для проживания — Чавенг (самый оживленный с развитой ночной жизнью), Ламай (спокойный семейный пляж), Бопут (исторический центр с рыбным рынком), Маенам (тихий пляж с видом на Ко Панган) и Чонгмон (элитный район с дорогими виллами).</p>
 
-<p>Цены на проживание в 2026 году варьируются в зависимости от сезона: высокий сезон (декабрь-февраль, июль-август) поднимает стоимость номеров на 30-50%, тогда как в низкий сезон (май-июнь, сентябрь-октябрь) можно найти скидки до 60%. Средняя стоимость номера в бюджетном сегменте составляет ₽2 850 (≈ $30)-50 за ночь, в среднем классе — ₽6 650 (≈ $70)-120, а в люксовом — от ₽19 000 (≈ $200) до ₽95 (≈ $1) 500 за ночь. Важно учитывать, что на Самуи популярны длительные бронирования (от 7 ночей), которые часто включают бесплатный трансфер из аэропорта. Ниже представлен подробный обзор лучших отелей 2026 года, разделенных по ценовым категориям, с реальными цифрами и фактами.</p>
+<p>Цены на проживание в 2026 году варьируются в зависимости от сезона: высокий сезон (декабрь-февраль, июль-август) поднимает стоимость номеров на 30-50%, тогда как в низкий сезон (май-июнь, сентябрь-октябрь) можно найти скидки до 60%. Средняя стоимость номера в бюджетном сегменте составляет ₽2 850 ($30)-50 за ночь, в среднем классе — ₽6 650 ($70)-120, а в люксовом — от ₽19 000 ($200)до ₽142 500 ($1 500)за ночь. Важно учитывать, что на Самуи популярны длительные бронирования (от 7 ночей), которые часто включают бесплатный трансфер из аэропорта. Ниже представлен подробный обзор лучших отелей 2026 года, разделенных по ценовым категориям, с реальными цифрами и фактами.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. The Secret Garden Boutique Hotel (Чавенг)</h3>
-<p>Этот небольшой отель расположен в тихом переулке в 500 метрах от пляжа Чавенг, главной туристической артерии острова. Номерной фонд составляет 24 комнаты, каждая из которых оформлена в традиционном тайском стиле с использованием натурального дерева и бамбука. Стоимость стандартного номера в низкий сезон — ₽2 660 (≈ $28) за ночь, в высокий сезон — ₽4 275 (≈ $45.) В цену включен завтрак (континентальный или тайский). Плюсы: бесплатный Wi-Fi (скорость до 50 Мбит/с), круглосуточная стойка регистрации, близость к ночным рынкам (5 минут пешком). Минусы: отсутствие бассейна (доступен общественный бассейн соседнего отеля за ₽475 (≈ $5)), шум от баров до 2 часов ночи в период с декабря по февраль. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 8.4.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_182170" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Secret Garden Boutique Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Secret Garden Boutique Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Secret Garden Boutique Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_182170 .hc-slide');var d=document.querySelectorAll('#hc_182170 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_182170 .hc-slide');var d=document.querySelectorAll('#hc_182170 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_182170 .hc-slide');var d=document.querySelectorAll('#hc_182170 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Secret Garden Boutique Hotel &bull; 3 photos</p></div>
+<p>Этот небольшой отель расположен в тихом переулке в 500 метрах от пляжа Чавенг, главной туристической артерии острова. Номерной фонд составляет 24 комнаты, каждая из которых оформлена в традиционном тайском стиле с использованием натурального дерева и бамбука. Стоимость стандартного номера в низкий сезон — ₽2 660 ($28)за ночь, в высокий сезон — ₽4 275 ($45)В цену включен завтрак (континентальный или тайский). Плюсы: бесплатный Wi-Fi (скорость до 50 Мбит/с), круглосуточная стойка регистрации, близость к ночным рынкам (5 минут пешком). Минусы: отсутствие бассейна (доступен общественный бассейн соседнего отеля за ₽475 ($5)), шум от баров до 2 часов ночи в период с декабря по февраль. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 8.4.</p>
 
 <h3>2. Lamai Coconut Beach Resort (Ламай)</h3>
-<p>Расположенный прямо на пляже Ламай, этот отель предлагает 18 деревянных бунгало с верандами и гамаками. Пляж песчаный, с пологим входом в море, что идеально для семей с детьми. Цена за ночь — ₽3 325 (≈ $35) в низкий сезон и ₽4 750 (≈ $50) в высокий. В стоимость входит пользование шезлонгами и зонтами на пляже. Плюсы: личный доступ к морю, ресторан с морепродуктами (средний чек ₽760 (≈ $8)-12), бесплатный паркинг. Минусы: номера без кондиционера (только вентилятор), что делает проживание некомфортным в апреле-мае (температура до 35°C), минимальный срок бронирования — 3 ночи. Рейтинг — 8.1.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_727849" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Lamai Coconut Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Lamai Coconut Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_727849 .hc-slide');var d=document.querySelectorAll('#hc_727849 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_727849 .hc-slide');var d=document.querySelectorAll('#hc_727849 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Lamai Coconut Beach Resort &bull; 2 photos</p></div>
+<p>Расположенный прямо на пляже Ламай, этот отель предлагает 18 деревянных бунгало с верандами и гамаками. Пляж песчаный, с пологим входом в море, что идеально для семей с детьми. Цена за ночь — ₽3 325 ($35)в низкий сезон и ₽4 750 ($50)в высокий. В стоимость входит пользование шезлонгами и зонтами на пляже. Плюсы: личный доступ к морю, ресторан с морепродуктами (средний чек ₽760 ($8)-12), бесплатный паркинг. Минусы: номера без кондиционера (только вентилятор), что делает проживание некомфортным в апреле-мае (температура до 35°C), минимальный срок бронирования — 3 ночи. Рейтинг — 8.1.</p>
 
 <h3>3. Baan Kilee (Маенам)</h3>
-<p>Хостел с приватными номерами, расположенный в 1 км от пляжа Маенам. Владелец — тайская семья, которая предлагает 10 номеров с общей кухней и зоной отдыха. Стоимость двухместного номера — ₽2 090 (≈ $22) за ночь (низкий сезон) и ₽3 610 (≈ $38) (высокий сезон). Плюсы: очень низкая цена, бесплатный чай и кофе, возможность арендовать скутер за ₽475 (≈ $5) в день. Минусы: общий душ и туалет (4 кабины на всех гостей), удаленность от пляжа (15 минут пешком), отсутствие кондиционера в общих зонах. Рейтинг — 7.9.</p>
+<div id="hc_683276" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Baan Kilee - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Baan Kilee - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_683276 .hc-slide');var d=document.querySelectorAll('#hc_683276 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_683276 .hc-slide');var d=document.querySelectorAll('#hc_683276 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Baan Kilee &bull; 2 photos</p></div>
+<p>Хостел с приватными номерами, расположенный в 1 км от пляжа Маенам. Владелец — тайская семья, которая предлагает 10 номеров с общей кухней и зоной отдыха. Стоимость двухместного номера — ₽2 090 ($22)за ночь (низкий сезон) и ₽3 610 ($38)(высокий сезон). Плюсы: очень низкая цена, бесплатный чай и кофе, возможность арендовать скутер за ₽475 ($5)в день. Минусы: общий душ и туалет (4 кабины на всех гостей), удаленность от пляжа (15 минут пешком), отсутствие кондиционера в общих зонах. Рейтинг — 7.9.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Chaweng Regent Beach Resort (Чавенг)</h3>
-<p>Четырехзвездочный курорт с 168 номерами, расположенный в центре Чавенга, в 100 метрах от пляжа. Отель был полностью отремонтирован в 2024 году: обновлены номера, установлены новые системы кондиционирования и сантехника. Цена стандартного номера — ₽8 075 (≈ $85) за ночь в низкий сезон и ₽12 350 (≈ $130) в высокий. Фишки: два бассейна (один с детской зоной), спа-центр с традиционным тайским массажем (₽2 850 (≈ $30) за 60 минут), ресторан тайской и интернациональной кухни (завтрак-шведский стол включен). Рейтинг — 8.7. Минусы: шум от дороги в номерах, выходящих на главную улицу.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="бы" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_515461" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Chaweng Regent Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Chaweng Regent Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_515461 .hc-slide');var d=document.querySelectorAll('#hc_515461 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_515461 .hc-slide');var d=document.querySelectorAll('#hc_515461 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Chaweng Regent Beach Resort &bull; 2 photos</p></div>
+<p>Четырехзвездочный курорт с 168 номерами, расположенный в центре Чавенга, в 100 метрах от пляжа. Отель был полностью отремонтирован в 2024 году: обновлены номера, установлены новые системы кондиционирования и сантехника. Цена стандартного номера — ₽8 075 ($85)за ночь в низкий сезон и ₽12 350 ($130)в высокий. Фишки: два бассейна (один с детской зоной), спа-центр с традиционным тайским массажем (₽2 850 ($30)за 60 минут), ресторан тайской и интернациональной кухни (завтрак-шведский стол включен). Рейтинг — 8.7. Минусы: шум от дороги в номерах, выходящих на главную улицу.</p>
 
 <h3>5. The Cosy Maenam Beach Resort (Маенам)</h3>
-<p>Бутик-отель на 32 номера, расположенный на первой линии пляжа Маенам. Особенность — все номера имеют вид на море и собственные террасы с лежаками. Стоимость — ₽6 650 (≈ $70) в низкий сезон и ₽10 450 (≈ $110) в высокий сезон. Фишки: бесплатный каяк и снорклинг (маски и трубки выдаются на стойке), ресторан с панорамным видом на залив, вечерние шоу с тайским боксом (по вторникам и пятницам). Рейтинг — 8.9. Минусы: маленький пляж (ширина 10 метров), во время отлива вода уходит на 50 метров.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_546384" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="The Cosy Maenam Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="The Cosy Maenam Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Cosy Maenam Beach Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_546384 .hc-slide');var d=document.querySelectorAll('#hc_546384 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_546384 .hc-slide');var d=document.querySelectorAll('#hc_546384 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_546384 .hc-slide');var d=document.querySelectorAll('#hc_546384 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Cosy Maenam Beach Resort &bull; 3 photos</p></div>
+<p>Бутик-отель на 32 номера, расположенный на первой линии пляжа Маенам. Особенность — все номера имеют вид на море и собственные террасы с лежаками. Стоимость — ₽6 650 ($70)в низкий сезон и ₽10 450 ($110)в высокий сезон. Фишки: бесплатный каяк и снорклинг (маски и трубки выдаются на стойке), ресторан с панорамным видом на залив, вечерние шоу с тайским боксом (по вторникам и пятницам). Рейтинг — 8.9. Минусы: маленький пляж (ширина 10 метров), во время отлива вода уходит на 50 метров.</p>
 
 <h3>6. Bophut Beach Hotel (Бопут)</h3>
-<p>Расположен в историческом районе Бопут, рядом с знаменитым рыбным рынком (Fisherman’s Village). Отель состоит из 45 номеров, часть из которых — студии с мини-кухней. Цена — ₽8 550 (≈ $90) за ночь в низкий сезон и ₽13 300 (≈ $140) в высокий. Фишки: бесплатный трансфер до пирса для поездок на Ко Панган, бассейн с морской водой, вечерние рынки в 2 минутах ходьбы (каждую пятницу). Рейтинг — 8.6. Минусы: отсутствие парковки (машину нужно оставлять на платной стоянке за ₽475 (≈ $5) в день), шум от ресторанов до полуночи.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="со" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_45417" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Bophut Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Bophut Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_45417 .hc-slide');var d=document.querySelectorAll('#hc_45417 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_45417 .hc-slide');var d=document.querySelectorAll('#hc_45417 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Bophut Beach Hotel &bull; 2 photos</p></div>
+<p>Расположен в историческом районе Бопут, рядом с знаменитым рыбным рынком (Fisherman’s Village). Отель состоит из 45 номеров, часть из которых — студии с мини-кухней. Цена — ₽8 550 ($90)за ночь в низкий сезон и ₽13 300 ($140)в высокий. Фишки: бесплатный трансфер до пирса для поездок на Ко Панган, бассейн с морской водой, вечерние рынки в 2 минутах ходьбы (каждую пятницу). Рейтинг — 8.6. Минусы: отсутствие парковки (машину нужно оставлять на платной стоянке за ₽475 ($5)в день), шум от ресторанов до полуночи.</p>
 
 <h3>7. Samui Paradise Chaweng (Чавенг)</h3>
-<p>Трехзвездочный отель на 60 номеров с акцентом на семейный отдых. Расположен в 200 метрах от пляжа Чавенг Ной (северная часть). Стоимость — ₽5 225 (≈ $55) в низкий сезон и ₽9 025 (≈ $95) в высокий. Фишки: детский клуб (с 10:00 до 18:00), большой бассейн с горкой, бесплатный Wi-Fi на всей территории. Рейтинг — 8.3. Минусы: завтрак не включен (доплата ₽760 (≈ $8) на человека), номера требуют косметического ремонта (обои местами отходят, мебель 2018 года).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_730112" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Samui Paradise Chaweng - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Samui Paradise Chaweng - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_730112 .hc-slide');var d=document.querySelectorAll('#hc_730112 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_730112 .hc-slide');var d=document.querySelectorAll('#hc_730112 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Samui Paradise Chaweng &bull; 2 photos</p></div>
+<p>Трехзвездочный отель на 60 номеров с акцентом на семейный отдых. Расположен в 200 метрах от пляжа Чавенг Ной (северная часть). Стоимость — ₽5 225 ($55)в низкий сезон и ₽9 025 ($95)в высокий. Фишки: детский клуб (с 10:00 до 18:00), большой бассейн с горкой, бесплатный Wi-Fi на всей территории. Рейтинг — 8.3. Минусы: завтрак не включен (доплата ₽760 ($8)на человека), номера требуют косметического ремонта (обои местами отходят, мебель 2018 года).</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Six Senses Samui (Чонгмон)</h3>
-<p>Пятизвездочный курорт, расположенный на северной оконечности острова, на скалистом полуострове с видом на архипелаг. Номерной фонд — 66 вилл, каждая с частным бассейном (от 15 до 50 кв. м) и террасой. Стоимость — от ₽42 750 (≈ $450) за ночь в низкий сезон до ₽95 (≈ $1) 200 в высокий (вилла с двумя спальнями). Особенности: спа-центр мирового класса (10 процедурных кабинетов, хаммам, йога-студия), ресторан "Dining on the Rocks" (мишленовская звезда с 2022 года, средний чек ₽14 250 (≈ $150) на человека), органическая ферма на территории (овощи и специи используются в кухне). Рейтинг — 9.4. Минусы: удаленность от центров (до Чавенга 20 минут на такси, ₽1 425 (≈ $15)), крутые спуски к пляжу (не рекомендовано для пожилых).</p>
+<div id="hc_589284" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Six Senses Samui - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Six Senses Samui - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_589284 .hc-slide');var d=document.querySelectorAll('#hc_589284 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_589284 .hc-slide');var d=document.querySelectorAll('#hc_589284 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Six Senses Samui &bull; 2 photos</p></div>
+<p>Пятизвездочный курорт, расположенный на северной оконечности острова, на скалистом полуострове с видом на архипелаг. Номерной фонд — 66 вилл, каждая с частным бассейном (от 15 до 50 кв. м) и террасой. Стоимость — от ₽42 750 ($450)за ночь в низкий сезон до ₽114 000 ($1 200)в высокий (вилла с двумя спальнями). Особенности: спа-центр мирового класса (10 процедурных кабинетов, хаммам, йога-студия), ресторан "Dining on the Rocks" (мишленовская звезда с 2022 года, средний чек ₽14 250 ($150)на человека), органическая ферма на территории (овощи и специи используются в кухне). Рейтинг — 9.4. Минусы: удаленность от центров (до Чавенга 20 минут на такси, ₽1 425 ($15)), крутые спуски к пляжу (не рекомендовано для пожилых).</p>
 
 <h3>9. W Koh Samui (Маенам)</h3>
-<p>Бутик-отель сети W Hotels, расположенный на пляже Маенам. Номерной фонд — 74 виллы, из которых 30 — с прямым выходом к бассейну (Wet Deck). Стоимость — от ₽23 750 (≈ $250) за ночь в низкий сезон до ₽57 000 (≈ $600) в высокий. Особенности: знаменитый бассейн с подсветкой и подводными динамиками, ночной клуб "Woo Bar" (работает до 2 часов ночи), спа-центр с программами детокса (7-дневный курс от ₽95 (≈ $1) 500). Рейтинг — 9.1. Минусы: минимальный возраст гостей — 16 лет (не подходит для семей с детьми), высокая стоимость дополнительных услуг (трансфер из аэропорта — ₽4 750 (≈ $50)).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="се" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_504239" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="W Koh Samui - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="W Koh Samui - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="W Koh Samui - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_504239 .hc-slide');var d=document.querySelectorAll('#hc_504239 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_504239 .hc-slide');var d=document.querySelectorAll('#hc_504239 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_504239 .hc-slide');var d=document.querySelectorAll('#hc_504239 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">W Koh Samui &bull; 3 photos</p></div>
+<p>Бутик-отель сети W Hotels, расположенный на пляже Маенам. Номерной фонд — 74 виллы, из которых 30 — с прямым выходом к бассейну (Wet Deck). Стоимость — от ₽23 750 ($250)за ночь в низкий сезон до ₽57 000 ($600)в высокий. Особенности: знаменитый бассейн с подсветкой и подводными динамиками, ночной клуб "Woo Bar" (работает до 2 часов ночи), спа-центр с программами детокса (7-дневный курс от ₽142 500 ($1 500)). Рейтинг — 9.1. Минусы: минимальный возраст гостей — 16 лет (не подходит для семей с детьми), высокая стоимость дополнительных услуг (трансфер из аэропорта — ₽4 750 ($50)).</p>
+<div id="hc_620963" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="W Hotels, расположенный на пляже Маенам. Номерной фонд — 74 виллы, из которых 30 — с прямым выходом к бассейну - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="W Hotels, расположенный на пляже Маенам. Номерной фонд — 74 виллы, из которых 30 — с прямым выходом к бассейну - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_620963 .hc-slide');var d=document.querySelectorAll('#hc_620963 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_620963 .hc-slide');var d=document.querySelectorAll('#hc_620963 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">W Hotels, расположенный на пляже Маенам. Номерной фонд — 74 виллы, из которых 30 — с прямым выходом к бассейну &bull; 2 photos</p></div>
 
 <h3>10. Banyan Tree Samui (Ламай)</h3>
-<p>Элитный курорт на холме с видом на залив Ламай. 88 вилл, каждая с частным бассейном (от 20 кв. м) и садом. Стоимость — от ₽33 250 (≈ $350) за ночь в низкий сезон до ₽76 000 (≈ $800) в высокий. Особенности: спа-центр "Banyan Tree Spa" (лауреат премии World Spa Awards 2025), ресторан "Saffron" (тайская кухня с авторскими блюдами, ₽7 600 (≈ $80) на человека), экскурсионное бюро (частные туры на яхте от ₽47 500 (≈ $500)). Рейтинг — 9.3. Минусы: крутой подъем от пляжа (работает шаттл каждые 15 минут), дорогой мини-бар (вода ₽475 (≈ $5 ) пиво ₽950 (≈ $10)).</p>
+<p>Элитный курорт на холме с видом на залив Ламай. 88 вилл, каждая с частным бассейном (от 20 кв. м) и садом. Стоимость — от ₽33 250 ($350)за ночь в низкий сезон до ₽76 000 ($800)в высокий. Особенности: спа-центр "Banyan Tree Spa" (лауреат премии World Spa Awards 2025), ресторан "Saffron" (тайская кухня с авторскими блюдами, ₽7 600 ($80)на человека), экскурсионное бюро (частные туры на яхте от ₽47 500 ($500)). Рейтинг — 9.3. Минусы: крутой подъем от пляжа (работает шаттл каждые 15 минут), дорогой мини-бар (вода ₽475 ($5)пиво ₽950 ($10)).</p>
 
 <h2>Как выбрать район</h2>
 <p>Выбор района на Самуи напрямую зависит от целей вашей поездки. Если вы приехали за пляжным отдыхом и спокойствием, лучшим выбором будет Маенам или Чонгмон. Пляж Маенам (длина 3 км) отличается мелким песком и пологим входом, а уровень шума минимален — здесь практически нет баров. Чонгмон — это элитный район с дорогими виллами и частными пляжами, где вода кристально чистая, но инфраструктура ограничена (ближайший супермаркет — 2 км). Для экскурсий и активного отдыха выбирайте Бопут или Ламай. Бопут — исторический центр с рыбным рынком (работает с 17:00 до 22:00), откуда легко добраться до водопада Намуанг (15 км) и храма Big Buddha (5 км). Ламай — оптимальный баланс: здесь есть и пляж, и ночная жизнь (барная улица длиной 500 метров), и доступ к экскурсиям (например, к скале Hin Ta Hin Ya). Если ваша цель — ночная жизнь и тусовки, однозначно выбирайте Чавенг. Это самый оживленный район с десятками клубов (например, "Ark Bar" и "Green Mango"), ресторанами и магазинами. Однако учтите: шум в центре Чавенга не стихает до 4 утра, а цены на жилье здесь на 20-30% выше, чем в других районах.</p>
 
 <h2>Советы по бронированию</h2>
-<p>Чтобы сэкономить на проживании в Самуи в 2026 году, следуйте нескольким простым правилам. Во-первых, бронируйте отель за 2-3 месяца до поездки — это позволяет получить скидку до 25% на раннее бронирование (early bird). Особенно это актуально для высокого сезона (декабрь-февраль), когда свободные номера заканчиваются за 4-6 недель. Во-вторых, используйте агрегаторы с гибкой ценой: <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com часто предлагает "тайные скидки" (до 40%) для зарегистрированных пользователей, а <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> специализируется на азиатских отелях и дает дополнительные 10% за оплату картой Mastercard. В-третьих, рассмотрите вариант длительного бронирования (от 7 ночей) — многие отели, особенно в среднем и бюджетном сегменте, предлагают бесплатный трансфер из аэропорта (экономия ₽1 900 (≈ $20)-30) или один бесплатный ужин. В-четвертых, избегайте бронирования через посредников на месте (турагентства в аэропорту) — они накручивают до 50% стоимости. Лучше всего бронировать онлайн за 2 недели до вылета, когда отели публикуют последние свободные номера со скидками. Наконец, проверяйте отзывы на Google Maps и TripAdvisor — отели с рейтингом ниже 8.0 часто имеют проблемы с чистотой или обслуживанием. Средняя экономия при соблюдении этих советов составляет 30-40% от базовой цены.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p>Чтобы сэкономить на проживании в Самуи в 2026 году, следуйте нескольким простым правилам. Во-первых, бронируйте отель за 2-3 месяца до поездки — это позволяет получить скидку до 25% на раннее бронирование (early bird). Особенно это актуально для высокого сезона (декабрь-февраль), когда свободные номера заканчиваются за 4-6 недель. Во-вторых, используйте агрегаторы с гибкой ценой: <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com часто предлагает "тайные скидки" (до 40%) для зарегистрированных пользователей, а <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> специализируется на азиатских отелях и дает дополнительные 10% за оплату картой Mastercard. В-третьих, рассмотрите вариант длительного бронирования (от 7 ночей) — многие отели, особенно в среднем и бюджетном сегменте, предлагают бесплатный трансфер из аэропорта (экономия ₽1 900 ($20)-30) или один бесплатный ужин. В-четвертых, избегайте бронирования через посредников на месте (турагентства в аэропорту) — они накручивают до 50% стоимости. Лучше всего бронировать онлайн за 2 недели до вылета, когда отели публикуют последние свободные номера со скидками. Наконец, проверяйте отзывы на Google Maps и TripAdvisor — отели с рейтингом ниже 8.0 часто имеют проблемы с чистотой или обслуживанием. Средняя экономия при соблюдении этих советов составляет 30-40% от базовой цены.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -501,6 +594,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -529,6 +623,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -546,8 +641,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

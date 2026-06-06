@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Male 2026</title>
     <meta name="description" content="15 Best Things to Do in Male 2026 I’ll be honest with you — when most people think of the Maldives, they picture overwater bungalows and turquoise lagoons, n...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/male-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/male-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Male 2026">
     <meta property="og:description" content="15 Best Things to Do in Male 2026 I’ll be honest with you — when most people think of the Maldives, they picture overwater bungalows and turquoise lagoons, n...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/male-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://cs.pikabu.ru/post_img/big/2013/03/30/2/1364602604_1624085555.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/male.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Male 2026</div>
@@ -363,16 +387,15 @@
 <p>I’ll be honest with you — when most people think of the Maldives, they picture overwater bungalows and turquoise lagoons, not a bustling capital city. But after sending over 300 travelers to this paradise over the last five years, I’ve learned that skipping Malé is like skipping the heart of the Maldives. This tiny, vibrant island-city packs a punch with its colorful markets, historic mosques, and local life that feels a world away from the resort scene. In 2026, Malé is more accessible and exciting than ever, with new cafes, improved waterfront walks, and a cultural renaissance that’s hard to resist. So grab a cup of masala tea (trust me, you’ll love it), and let me walk you through the 15 best things to do in Malé that’ll make your trip unforgettable.</p>
 
 <h2>15 Best Attractions in Malé</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Hukuru Miskiy (Old Friday Mosque)</h3>
 <p>This is the oldest mosque in the Maldives, built in 1656 from coral stone — yes, actual coral blocks carved with intricate Quranic inscriptions. The moment you step inside, the cool, quiet atmosphere hits you like a wave, and the woodwork is simply stunning. It’s a living piece of history, and I always tell my clients to visit early morning to avoid the heat. The mosque is still active, so dress modestly and remove your shoes. <strong>Ticket price:</strong> Free (donations appreciated). <strong>Hours:</strong> 9:00 AM – 5:00 PM (closed during prayer times). <strong>How to get there:</strong> It’s a 5-minute walk from the main ferry terminal on Medhuziyaaraiy Magu. <strong>Tip:</strong> Visit just after Fajr prayer (around 6:30 AM) for a serene, crowd-free experience — I’ve done this myself and felt like I had the place to myself.</p>
 
 <h3>2. Malé Fish Market</h3>
-<p>If you want to see Malé at its rawest and most authentic, head to the fish market. By 4:00 PM, the place erupts with fishermen hauling in yellowfin tuna, skipjack, and reef fish — the energy is electric. I’ve watched locals haggle over the freshest catches while the smell of salt and sea fills the air. It’s not for the squeamish, but it’s a photographer’s dream. <strong>Ticket price:</strong> Free to enter; fish prices vary (around MVR 50–100 per kilo). <strong>Hours:</strong> 6:00 AM – 10:00 PM daily (busiest 4:00 PM – 7:00 PM). <strong>How to get there:</strong> On the waterfront at Boduthakurufaanu Magu, a 3-minute walk from the jetty. <strong>Tip:</strong> Bring cash in small denominations — vendors rarely have change for large bills, and you’ll want to buy a fresh tuna steak for under $5. (≈ ₽475)</p>
+<p>If you want to see Malé at its rawest and most authentic, head to the fish market. By 4:00 PM, the place erupts with fishermen hauling in yellowfin tuna, skipjack, and reef fish — the energy is electric. I’ve watched locals haggle over the freshest catches while the smell of salt and sea fills the air. It’s not for the squeamish, but it’s a photographer’s dream. <strong>Ticket price:</strong> Free to enter; fish prices vary (around $3 (50 MVR)–100 per kilo). <strong>Hours:</strong> 6:00 AM – 10:00 PM daily (busiest 4:00 PM – 7:00 PM). <strong>How to get there:</strong> On the waterfront at Boduthakurufaanu Magu, a 3-minute walk from the jetty. <strong>Tip:</strong> Bring cash in small denominations — vendors rarely have change for large bills, and you’ll want to buy a fresh tuna steak for under $5</p>
 
 <h3>3. National Museum</h3>
-<p>Housed in the former Sultan’s Palace, this museum is a treasure trove of Maldivian history, from ancient coral artifacts to royal thrones and pre-Islamic Buddhist relics. I was blown away by the intricate lacquerwork and the old photographs showing Malé before it modernized. The building itself is a beauty, with its whitewashed walls and wooden verandas. <strong>Ticket price:</strong> MVR 100 (around $6.50 (≈ ₽617)) for adults, MVR 50 for children. <strong>Hours:</strong> 9:00 AM – 5:00 PM (closed Fridays). <strong>How to get there:</strong> Inside the Sultan Park, off Medhuziyaaraiy Magu. <strong>Tip:</strong> Combine this with a stroll through Sultan Park (free) — it’s a 5-minute walk from the mosque, and you’ll save time.</p>
+<p>Housed in the former Sultan’s Palace, this museum is a treasure trove of Maldivian history, from ancient coral artifacts to royal thrones and pre-Islamic Buddhist relics. I was blown away by the intricate lacquerwork and the old photographs showing Malé before it modernized. The building itself is a beauty, with its whitewashed walls and wooden verandas. <strong>Ticket price:</strong> $7 (100 MVR)(around $6) for adults, $3 (50 MVR)for children. <strong>Hours:</strong> 9:00 AM – 5:00 PM (closed Fridays). <strong>How to get there:</strong> Inside the Sultan Park, off Medhuziyaaraiy Magu. <strong>Tip:</strong> Combine this with a stroll through Sultan Park (free) — it’s a 5-minute walk from the mosque, and you’ll save time.</p>
 
 <h3>4. Sultan Park</h3>
 <p>This lush, green oasis in the heart of Malé is my go-to spot for a breather after museum-hopping. It was once part of the Sultan’s Palace grounds, and today it’s filled with banyan trees, flowering shrubs, and benches where locals chat and kids play. I love sitting here with a cold coconut water, watching life go by. <strong>Ticket price:</strong> Free. <strong>Hours:</strong> 7:00 AM – 9:00 PM daily. <strong>How to get there:</strong> Adjacent to the National Museum, on Medhuziyaaraiy Magu. <strong>Tip:</strong> Visit late afternoon (around 5:00 PM) when the light filters through the trees — perfect for photos without the midday glare.</p>
@@ -381,13 +404,13 @@
 <p>Yes, it’s man-made, but don’t let that fool you — this crescent of white sand on the eastern shore is a lifesaver for a quick dip. The water is calm, and there’s a lively promenade with food stalls selling grilled fish and samosas. I’ve spent many evenings here watching the sunset paint the sky in shades of pink and orange. <strong>Ticket price:</strong> Free. <strong>Hours:</strong> 24/7 (lifeguards on duty 8:00 AM – 6:00 PM). <strong>How to get there:</strong> Along the eastern coast, a 10-minute walk from the fish market. <strong>Tip:</strong> Go at sunset (around 6:30 PM) — the crowds thin out, and the street food vendors fire up their grills for the best tuna kebabs in town.</p>
 
 <h3>6. Grand Friday Mosque (Masjid Al-Sultan Muhammad Thakurufaanu Al-Auzam)</h3>
-<p>This gleaming white mosque, with its golden dome and towering minaret, is the largest in the Maldives and a landmark you can’t miss. Built in 1984, it can hold 5,000 worshippers, and its interior is adorned with intricate Arabic calligraphy and chandeliers. I always recommend visiting during non-prayer times to appreciate its grandeur. <strong>Ticket price:</strong> Free (guided tours available for MVR 50). <strong>Hours:</strong> 9:00 AM – 12:00 PM, 2:00 PM – 5:00 PM (closed during prayers). <strong>How to get there:</strong> On Medhuziyaaraiy Magu, opposite the National Museum. <strong>Tip:</strong> Women must cover their heads and arms — bring a scarf; the mosque provides robes if you forget, but they’re limited.</p>
+<p>This gleaming white mosque, with its golden dome and towering minaret, is the largest in the Maldives and a landmark you can’t miss. Built in 1984, it can hold 5,000 worshippers, and its interior is adorned with intricate Arabic calligraphy and chandeliers. I always recommend visiting during non-prayer times to appreciate its grandeur. <strong>Ticket price:</strong> Free (guided tours available for $3 (50 MVR)). <strong>Hours:</strong> 9:00 AM – 12:00 PM, 2:00 PM – 5:00 PM (closed during prayers). <strong>How to get there:</strong> On Medhuziyaaraiy Magu, opposite the National Museum. <strong>Tip:</strong> Women must cover their heads and arms — bring a scarf; the mosque provides robes if you forget, but they’re limited.</p>
 
 <h3>7. Theemuge (Presidential Palace)</h3>
 <p>This colonial-style palace, painted a soft cream with red-tiled roofs, is the official residence of the President of the Maldives. You can’t go inside, but the building’s elegance and the manicured gardens make it worth a photo stop. I love the contrast between this historic structure and the modern skyscrapers around it. <strong>Ticket price:</strong> Free (exterior only). <strong>Hours:</strong> 24/7 (best viewed during daylight). <strong>How to get there:</strong> On Ameer Ahmed Magu, a 5-minute walk from the Grand Friday Mosque. <strong>Tip:</strong> Visit early morning (around 7:00 AM) to catch the guards changing shifts — it’s a small ceremony with a lot of pomp.</p>
 
 <h3>8. Local Market (Malé Local Market)</h3>
-<p>This covered market is a sensory overload in the best way — piles of tropical fruits (mangoes, papayas, dragon fruit), spices (cinnamon, cloves, vanilla), and souvenirs like lacquer boxes and coconut-shell crafts. I always tell my clients to bargain politely; the vendors expect it, and you’ll get a better deal. <strong>Ticket price:</strong> Free entry. <strong>Hours:</strong> 8:00 AM – 10:00 PM daily. <strong>How to get there:</strong> On Majeedhee Magu, next to the fish market. <strong>Tip:</strong> Try a fresh coconut water here for MVR 15 (around $1 (≈ ₽95)) — it’s the sweetest I’ve ever had, and it’s a great way to cool down.</p>
+<p>This covered market is a sensory overload in the best way — piles of tropical fruits (mangoes, papayas, dragon fruit), spices (cinnamon, cloves, vanilla), and souvenirs like lacquer boxes and coconut-shell crafts. I always tell my clients to bargain politely; the vendors expect it, and you’ll get a better deal. <strong>Ticket price:</strong> Free entry. <strong>Hours:</strong> 8:00 AM – 10:00 PM daily. <strong>How to get there:</strong> On Majeedhee Magu, next to the fish market. <strong>Tip:</strong> Try a fresh coconut water here for $1 (15 MVR)(around $1) — it’s the sweetest I’ve ever had, and it’s a great way to cool down.</p>
 
 <h3>9. Victory Monument (Maldives National Defence Force Monument)</h3>
 <p>This sleek, modern monument commemorates the 1988 coup attempt and is a symbol of Maldivian resilience. It’s shaped like a sail, reflecting the nation’s maritime heritage, and sits in a small plaza with flags fluttering in the breeze. I find it thought-provoking, especially when locals pause to pay respects. <strong>Ticket price:</strong> Free. <strong>Hours:</strong> 24/7. <strong>How to get there:</strong> On Boduthakurufaanu Magu, near the fish market. <strong>Tip:</strong> Combine this with a walk along the waterfront — the monument is lit up beautifully at night.</p>
@@ -408,24 +431,23 @@
 <p>This recently renovated waterfront park is a hit with joggers, families, and couples. It has walking paths, a playground, and food kiosks serving local snacks like “mas huni” (tuna and coconut dish) and “hedhikaa” (short eats). I tried the “bajiya” (samosas) here — spicy and delicious. <strong>Ticket price:</strong> Free. <strong>Hours:</strong> 6:00 AM – 10:00 PM daily. <strong>How to get there:</strong> On the eastern coast, near the Tsunami Monument. <strong>Tip:</strong> Come in the early morning (around 6:30 AM) for a jog or walk — the sea breeze is refreshing, and you’ll see locals doing yoga on the grass.</p>
 
 <h3>15. Medhuziyaaraiy Magu (Main Street)</h3>
-<p>This isn’t a single attraction, but Malé’s main thoroughfare is an experience in itself. Lined with shops selling electronics, clothing, and spices, it’s a chaotic, colorful artery of city life. I love the energy here — motorbikes weaving through crowds, shopkeepers calling out deals, and the smell of frying food from street stalls. <strong>Ticket price:</strong> Free. <strong>Hours:</strong> 24/7 (shops open 9:00 AM – 10:00 PM). <strong>How to get there:</strong> Runs through the center of Malé, from the ferry terminal to the Grand Friday Mosque. <strong>Tip:</strong> Walk it at dusk (around 6:00 PM) when the street lights come on and the stalls are most active — grab a “sai” (tea) from a roadside vendor for MVR 5.</p>
+<p>This isn’t a single attraction, but Malé’s main thoroughfare is an experience in itself. Lined with shops selling electronics, clothing, and spices, it’s a chaotic, colorful artery of city life. I love the energy here — motorbikes weaving through crowds, shopkeepers calling out deals, and the smell of frying food from street stalls. <strong>Ticket price:</strong> Free. <strong>Hours:</strong> 24/7 (shops open 9:00 AM – 10:00 PM). <strong>How to get there:</strong> Runs through the center of Malé, from the ferry terminal to the Grand Friday Mosque. <strong>Tip:</strong> Walk it at dusk (around 6:00 PM) when the street lights come on and the stalls are most active — grab a “sai” (tea) from a roadside vendor for $0 (5 MVR)</p>
 
 <h2>1-Day, 2-Day, and 3-Day Itineraries for Malé</h2>
 
 <h3>1-Day Itinerary: The Best of Malé in a Day</h3>
-<p>Start your morning at the Grand Friday Mosque and Islamic Centre (9:00 AM–10:30 AM), then walk to the National Museum and Sultan Park (10:30 AM–12:30 PM). Grab lunch at a local cafe on Medhuziyaaraiy Magu — try “mas huni” with flatbread for around MVR 80 ($5 (≈ ₽475)). Afternoon: Visit the Old Friday Mosque and its coral carvings (1:30 PM–2:30 PM), then head to the Fish Market and Local Market (3:00 PM–5:00 PM). End your day at Artificial Beach for sunset (6:00 PM–7:00 PM), with dinner at a waterfront stall — grilled tuna skewers are MVR 50 ($3 (≈ ₽285)) each. This route covers all highlights without rushing, and you’ll get a real taste of Malé’s culture.</p>
+<p>Start your morning at the Grand Friday Mosque and Islamic Centre (9:00 AM–10:30 AM), then walk to the National Museum and Sultan Park (10:30 AM–12:30 PM). Grab lunch at a local cafe on Medhuziyaaraiy Magu — try “mas huni” with flatbread for around $5 (80 MVR)($5). Afternoon: Visit the Old Friday Mosque and its coral carvings (1:30 PM–2:30 PM), then head to the Fish Market and Local Market (3:00 PM–5:00 PM). End your day at Artificial Beach for sunset (6:00 PM–7:00 PM), with dinner at a waterfront stall — grilled tuna skewers are $3 (50 MVR)($3) each. This route covers all highlights without rushing, and you’ll get a real taste of Malé’s culture.</p>
 
 <h3>2-Day Itinerary: Deeper Dive into Malé</h3>
-<p><strong>Day 1:</strong> Follow the 1-day itinerary above, but add the Victory Monument and Theemuge (Presidential Palace) in the late afternoon (4:00 PM–5:00 PM). End with dinner at a sit-down restaurant like “The Sea House” on Boduthakurufaanu Magu — a seafood platter costs around MVR 350 ($22 (≈ ₽2 090)). <strong>Day 2:</strong> Start with a morning walk at Rasfannu Beach (7:00 AM–8:30 AM), then visit Dharumavantha Rasfannu for a relaxed stroll (9:00 AM–10:30 AM). Spend midday exploring Medhuziyaaraiy Magu for shopping — buy lacquer boxes as souvenirs (MVR 100–300 each). Afternoon: Visit the Tsunami Monument (1:00 PM–2:00 PM), then take a ferry to nearby Hulhumalé Island (MVR 5.50, 15 minutes) for a beach afternoon. Return to Malé for dinner at a local “hotel” (small eatery) — try “biryani” for MVR 100 ($6 (≈ ₽570)). This gives you a mix of culture, relaxation, and a taste of island life beyond the capital.</p>
+<p><strong>Day 1:</strong> Follow the 1-day itinerary above, but add the Victory Monument and Theemuge (Presidential Palace) in the late afternoon (4:00 PM–5:00 PM). End with dinner at a sit-down restaurant like “The Sea House” on Boduthakurufaanu Magu — a seafood platter costs around $23 (350 MVR)($22). <strong>Day 2:</strong> Start with a morning walk at Rasfannu Beach (7:00 AM–8:30 AM), then visit Dharumavantha Rasfannu for a relaxed stroll (9:00 AM–10:30 AM). Spend midday exploring Medhuziyaaraiy Magu for shopping — buy lacquer boxes as souvenirs ($7 (100 MVR)–300 each). Afternoon: Visit the Tsunami Monument (1:00 PM–2:00 PM), then take a ferry to nearby Hulhumalé Island ($0 (6 MVR)minutes) for a beach afternoon. Return to Malé for dinner at a local “hotel” (small eatery) — try “biryani” for $7 (100 MVR)($6). This gives you a mix of culture, relaxation, and a taste of island life beyond the capital.</p>
 
 <h3>3-Day Itinerary: Full Immersion in Malé and Beyond</h3>
-<p><strong>Day 1:</strong> Same as 2-day Day 1. <strong>Day 2:</strong> Same as 2-day Day 2, but skip Hulhumalé and instead take a guided tour of the Old Friday Mosque’s coral carvings with a local historian (book via your hotel, around MVR 300 per person). <strong>Day 3:</strong> Start with a sunrise visit to the Local Market (6:00 AM–8:00 AM) for the freshest produce, then take a speedboat to Villingili Island (MVR 100 return, 10 minutes) for a beach day and snorkeling (gear rental MVR 200). Return to Malé by 3:00 PM for a final walk through Sultan Park and a farewell dinner at a rooftop restaurant like “Sky Lounge” on Majeedhee Magu — a three-course meal costs around MVR 600 ($38 (≈ ₽3 610)). This itinerary gives you time to explore the capital and nearby islands, offering a balanced trip.</p>
+<p><strong>Day 1:</strong> Same as 2-day Day 1. <strong>Day 2:</strong> Same as 2-day Day 2, but skip Hulhumalé and instead take a guided tour of the Old Friday Mosque’s coral carvings with a local historian (book via your hotel, around $20 (300 MVR)per person). <strong>Day 3:</strong> Start with a sunrise visit to the Local Market (6:00 AM–8:00 AM) for the freshest produce, then take a speedboat to Villingili Island ($7 (100 MVR)return, 10 minutes) for a beach day and snorkeling (gear rental $13 (200 MVR)). Return to Malé by 3:00 PM for a final walk through Sultan Park and a farewell dinner at a rooftop restaurant like “Sky Lounge” on Majeedhee Magu — a three-course meal costs around $39 (600 MVR)($38). This itinerary gives you time to explore the capital and nearby islands, offering a balanced trip.</p>
 
 <h2>Tours & Excursions in Malé</h2>
-<p><a href="https://tp.media/click?shmarker=736226&promo_id=3774&source_type=link&type=click&campaign_id=103&trs=search_tours_male" target="_blank" rel="nofollow sponsored" class="affiliate-link">🏝 Book a tour to Male</a> — For 2026, I recommend a few standout tours that my clients rave about. A guided walking tour of Malé’s historic mosques and markets costs around MVR 450 ($28 (≈ ₽2 660)) per person for 3 hours, including entrance fees and a local guide who shares stories you won’t find in any guidebook. For a half-day excursion to the nearby sandbanks and snorkeling spots, expect to pay MVR 1,200 ($75 (≈ ₽7 125)) per person, which includes speedboat transfer, snorkel gear, and lunch. The sunset fishing tour is another favorite — MVR 800 ($50 (≈ ₽4 750)) per person for 4 hours, with the chance to catch your own dinner (the crew will grill it for you on the boat). I always tell my clients to book through their hotel or a reputable agency like “Maldives Tours” to avoid scams — prices are marked up 12-15% from local rates, so budget accordingly.</p>
+<p><a href="https://tp.media/click?shmarker=736226&promo_id=3774&source_type=link&type=click&campaign_id=103&trs=search_tours_male" target="_blank" rel="nofollow sponsored" class="affiliate-link">🏝 Book a tour to Male</a> — For 2026, I recommend a few standout tours that my clients rave about. A guided walking tour of Malé’s historic mosques and markets costs around $29 (450 MVR)($28) per person for 3 hours, including entrance fees and a local guide who shares stories you won’t find in any guidebook. For a half-day excursion to the nearby sandbanks and snorkeling spots, expect to pay $78 (1 $13 (200 MVR))($75) per person, which includes speedboat transfer, snorkel gear, and lunch. The sunset fishing tour is another favorite — $52 (800 MVR)($50) per person for 4 hours, with the chance to catch your own dinner (the crew will grill it for you on the boat). I always tell my clients to book through their hotel or a reputable agency like “Maldives Tours” to avoid scams — prices are marked up 12-15% from local rates, so budget accordingly.</p>
 
 <h2>Free Attractions in Malé</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <p>You don’t need a big budget to enjoy Malé. The Old Friday Mosque<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
@@ -512,6 +534,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -540,6 +563,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -557,8 +581,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

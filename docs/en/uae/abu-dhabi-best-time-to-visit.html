@@ -6,7 +6,7 @@
     <title>Best Time to Visit Abu Dhabi 2026: Seasons &amp; Weather</title>
     <meta name="description" content="Best Time to Visit Abu Dhabi 2026: Seasons &amp; Weather Abu Dhabi, the capital of the United Arab Emirates, offers a unique blend of ultra-modern architecture, ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-best-time-to-visit.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-kogda-luchshe-ekhat.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-best-time-to-visit.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-best-time-to-visit.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Best Time to Visit Abu Dhabi 2026: Seasons &amp; Weather">
     <meta property="og:description" content="Best Time to Visit Abu Dhabi 2026: Seasons &amp; Weather Abu Dhabi, the capital of the United Arab Emirates, offers a unique blend of ultra-modern architecture, ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-best-time-to-visit.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/abu-dhabi-best-time-to-visit.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://ic.pics.livejournal.com/pantv/14908973/12182338/12182338_original.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/abu-dhabi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Best Time to Visit Abu Dhabi 2026: Seasons &amp; Weather</div>
@@ -394,11 +418,11 @@
 
 <h2>High Season</h2>
 <p>The high season in Abu Dhabi runs from November to March. This period coincides with the most comfortable weather of the year, with daytime temperatures ranging from 22°C to 30°C and cooler evenings. The city is bustling with tourists from Europe, Asia, and the wider Middle East, escaping colder climates. This is the peak time for outdoor activities, desert safaris, and beach visits.</p>
-<p>Hotel prices during these months can increase by 50% to 100% compared to summer rates. Five-star resorts like the Emirates Palace Mandarin Oriental or the St. Regis Saadiyat Island Resort often exceed AED 2,000 (USD 545) per night. Demand is highest during the Christmas and New Year period (December 20 – January 5) and during the Abu Dhabi Grand Prix (typically early December). <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> at least three to six months in advance is strongly recommended for 2026.</p>
+<p>Hotel prices during these months can increase by 50% to 100% compared to summer rates. Five-star resorts like the Emirates Palace Mandarin Oriental or the St. Regis Saadiyat Island Resort often exceed $545 (2 $0 (000 AED))(USD 545) per night. Demand is highest during the Christmas and New Year period (December 20 – January 5) and during the Abu Dhabi Grand Prix (typically early December). <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> at least three to six months in advance is strongly recommended for 2026.</p>
 <p><a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_abu-dhabi" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Find hotels in Abu Dhabi on Hotellook</a></p>
 
 <h2>Low Season</h2>
-<p>The low season spans from June to September, characterized by extreme heat and humidity. Daytime temperatures regularly exceed 40°C, with humidity levels often above 80%. This period is known locally as the "summer break," and many residents travel abroad. The pros of visiting during this time are significantly lower prices. Hotel rates can drop by 60% or more, with five-star rooms available for AED 500–800 (USD 136–218) per night. Airfare is also considerably cheaper, and popular attractions like the Sheikh Zayed Grand Mosque and the Louvre Abu Dhabi are far less crowded.</p>
+<p>The low season spans from June to September, characterized by extreme heat and humidity. Daytime temperatures regularly exceed 40°C, with humidity levels often above 80%. This period is known locally as the "summer break," and many residents travel abroad. The pros of visiting during this time are significantly lower prices. Hotel rates can drop by 60% or more, with five-star rooms available for $136 (500 AED)–800 (USD 136–218) per night. Airfare is also considerably cheaper, and popular attractions like the Sheikh Zayed Grand Mosque and the Louvre Abu Dhabi are far less crowded.</p>
 <p>The main con is the oppressive heat, which makes outdoor sightseeing from 10:00 AM to 4:00 PM almost unbearable. The city compensates with extensive indoor activities, including world-class shopping malls (Yas Mall, The Galleria), indoor theme parks (Warner Bros. World, Ferrari World), and air-conditioned cultural sites. For budget-conscious travelers who can tolerate the heat and plan indoor itineraries, the low season offers exceptional value.</p>
 
 <h2>Best Time for Beach Vacation</h2>
@@ -520,6 +544,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -548,6 +573,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -565,8 +591,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

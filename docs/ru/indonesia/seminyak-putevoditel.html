@@ -7,8 +7,8 @@
     <meta name="description" content="Семиньяк: полный путеводитель 2026 Семиньяк — это эпицентр стильной и расслабленной жизни на Бали, расположенный на юго-западном побережье острова, всего в 1...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/seminyak-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/seminyak-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/seminyak-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/seminyak-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/seminyak-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/seminyak-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Семиньяк: полный путеводитель 2026">
     <meta property="og:description" content="Семиньяк: полный путеводитель 2026 Семиньяк — это эпицентр стильной и расслабленной жизни на Бали, расположенный на юго-западном побережье острова, всего в 1...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/seminyak-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/seminyak-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/seminyak.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Семиньяк: полный путеводитель 2026</div>
@@ -378,31 +402,31 @@
   <li>Из Владивостока: 45 000 – 70 000 рублей</li>
 </ul>
 
-<p>Время в пути из Москвы — около 12 часов. Альтернатива — стыковочные рейсы через Стамбул (Turkish Airlines), Доху (Qatar Airways) или Дубай (Emirates). Цены на стыковочные билеты могут быть на 10–15% ниже, но время в пути увеличивается до 16–20 часов. Из аэропорта до Семиньяка удобнее всего брать такси (фиксированная цена от стойки — 200 000–250 000 IDR, или 1200–1500 рублей). Сервисы Grab и Gojek (аналоги Uber) стоят от 180 000 IDR.</p>
+<p>Время в пути из Москвы — около 12 часов. Альтернатива — стыковочные рейсы через Стамбул (Turkish Airlines), Доху (Qatar Airways) или Дубай (Emirates). Цены на стыковочные билеты могут быть на 10–15% ниже, но время в пути увеличивается до 16–20 часов. Из аэропорта до Семиньяка удобнее всего брать такси (фиксированная цена от стойки — 200 000–₽1 500 (250 ₽0 (000 IDR)), или 1200–1500 рублей). Сервисы Grab и Gojek (аналоги Uber) стоят от₽1 080 (180 ₽0 (000 IDR)).</p>
 
 <h2>Где остановиться</h2>
 
 <p>Семиньяк предлагает жильё на любой вкус и кошелёк, от хостелов до вилл с частными бассейнами. Главные районы: центр Семиньяка (улицы Джалан Кайю Ара и Джалан Лаван) — для любителей ресторанов и ночной жизни; северная часть (ближе к Чангу) — для спокойного отдыха; и прибрежная зона — для видов на океан.</p>
 
-<h3>Бюджетные варианты (до 500 000 IDR за ночь)</h3>
+<h3>Бюджетные варианты (до₽3 000 (500 ₽0 (000 IDR)) за ночь)</h3>
 <ul>
-  <li><strong>M Boutique Hostel</strong> — койка в 8-местном номере от 150 000 IDR (900 рублей), завтрак включён, есть бассейн.</li>
-  <li><strong>Kosta Hostel</strong> — от 120 000 IDR за койку, расположен в 5 минутах от пляжа Дублонг.</li>
-  <li><strong>Puri Saron Hotel Seminyak</strong> — классический балийский отель 3 звезды, стандартный номер от 350 000 IDR (2100 рублей).</li>
+  <li><strong>M Boutique Hostel</strong> — койка в 8-местном номере от₽900 (150 ₽0 (000 IDR)) (900 рублей), завтрак включён, есть бассейн.</li>
+  <li><strong>Kosta Hostel</strong> — от₽720 (120 ₽0 (000 IDR)) за койку, расположен в 5 минутах от пляжа Дублонг.</li>
+  <li><strong>Puri Saron Hotel Seminyak</strong> — классический балийский отель 3 звезды, стандартный номер от₽2 100 (350 ₽0 (000 IDR)) (2100 рублей).</li>
 </ul>
 
-<h3>Средний сегмент (500 000 – 1 500 000 IDR за ночь)</h3>
+<h3>Средний сегмент (500 000 –₽9 000 (1 ₽3 000 (500000 IDR)) за ночь)</h3>
 <ul>
-  <li><strong>Alila Seminyak</strong> — современный отель 5 звезд с собственным пляжем, номера от 1 200 000 IDR (7200 рублей).</li>
-  <li><strong>Villa Seminyak Estate & Spa</strong> — вилла с двумя спальнями и бассейном от 800 000 IDR (4800 рублей).</li>
-  <li><strong>Hotel Indigo Bali Seminyak Beach</strong> — бутик-отель от 950 000 IDR (5700 рублей).</li>
+  <li><strong>Alila Seminyak</strong> — современный отель 5 звезд с собственным пляжем, номера от₽7 200 (1 ₽1 200 (200000 IDR)) (7200 рублей).</li>
+  <li><strong>Villa Seminyak Estate & Spa</strong> — вилла с двумя спальнями и бассейном от₽4 800 (800 ₽0 (000 IDR)) (4800 рублей).</li>
+  <li><strong>Hotel Indigo Bali Seminyak Beach</strong> — бутик-отель от₽5 700 (950 ₽0 (000 IDR)) (5700 рублей).</li>
 </ul>
 
-<h3>Премиум (от 1 500 000 IDR за ночь)</h3>
+<h3>Премиум (от₽9 000 (1 ₽3 000 (500000 IDR)) за ночь)</h3>
 <ul>
-  <li><strong>W Bali – Seminyak</strong> — культовый отель сети Marriott, номера от 3 000 000 IDR (18 000 рублей).</li>
-  <li><strong>Potato Head Suites & Studios</strong> — апартаменты с доступом в пляжный клуб, от 2 500 000 IDR (15 000 рублей).</li>
-  <li><strong>Samaya Seminyak Bali</strong> — виллы с видом на закат, от 4 000 000 IDR (24 000 рублей).</li>
+  <li><strong>W Bali – Seminyak</strong> — культовый отель сети Marriott, номера от₽18 000 (3 ₽0 (000000 IDR)) (18 000 рублей).</li>
+  <li><strong>Potato Head Suites & Studios</strong> — апартаменты с доступом в пляжный клуб, от₽15 000 (2 ₽3 000 (500000 IDR)) (15 000 рублей).</li>
+  <li><strong>Samaya Seminyak Bali</strong> — виллы с видом на закат, от₽24 000 (4 ₽0 (000000 IDR)) (24 000 рублей).</li>
 </ul>
 
 <h2>Топ-15 достопримечательностей</h2>
@@ -429,21 +453,21 @@
       <td>2</td>
       <td>Ku De Ta</td>
       <td>Культовый пляжный клуб с рестораном и зоной отдыха. Популярен для вечеринок на закате.</td>
-      <td>Вход свободный, минимальный заказ 300 000 IDR (1800 рублей)</td>
+      <td>Вход свободный, минимальный заказ₽1 800 (300 ₽0 (000 IDR)) (1800 рублей)</td>
       <td>08:00 – 00:00</td>
     </tr>
     <tr>
       <td>3</td>
       <td>Potato Head Beach Club</td>
       <td>Архитектурный шедевр с рестораном, бассейном и живой музыкой. Вместимость до 2000 человек.</td>
-      <td>Вход свободный, депозит 250 000 IDR (1500 рублей)</td>
+      <td>Вход свободный, депозит₽1 500 (250 ₽0 (000 IDR)) (1500 рублей)</td>
       <td>10:00 – 23:00</td>
     </tr>
     <tr>
       <td>4</td>
       <td>Храм Петитенгет (Pura Petitenget)</td>
       <td>Древний индуистский храм (основан в XVI веке), расположенный прямо на берегу. Важное место для церемоний.</td>
-      <td>Бесплатно, пожертвование 10 000 IDR</td>
+      <td>Бесплатно, пожертвование₽60 (10 ₽0 (000 IDR))</td>
       <td>07:00 – 19:00</td>
     </tr>
     <tr>
@@ -471,7 +495,7 @@
       <td>8</td>
       <td>Mama San Restaurant</td>
       <td>Ресторан азиатской кухни в стиле 1920-х годов. Интерьер с винтажной мебелью.</td>
-      <td>Средний чек 250 000 IDR (1500 рублей)</td>
+      <td>Средний чек₽1 500 (250 ₽0 (000 IDR)) (1500 рублей)</td>
       <td>12:00 – 23:00</td>
     </tr>
     <tr>
@@ -485,14 +509,14 @@
       <td>10</td>
       <td>Bioskop Cinema</td>
       <td>Кинотеатр с показами голливудских и индонезийских фильмов. Есть зал с подушками.</td>
-      <td>От 80 000 IDR (480 рублей)</td>
+      <td>От₽480 (80 ₽0 (000 IDR)) (480 рублей)</td>
       <td>12:00 – 22:00</td>
     </tr>
     <tr>
       <td>11</td>
       <td>Спа-центр Bodyworks</td>
-      <td>Один из лучших спа-салонов на Бали. Массаж от 200 000 IDR (1200 рублей) за час.</td>
-      <td>Цены от 200 000 IDR</td>
+      <td>Один из лучших спа-салонов на Бали. Массаж от₽1 200 (200 ₽0 (000 IDR)) (1200 рублей) за час.</td>
+      <td>Цены от₽1 200 (200 ₽0 (000 IDR))</td>
       <td>09:00 – 21:00</td>
     </tr>
     <tr>
@@ -506,21 +530,21 @@
       <td>13</td>
       <td>La Plancha</td>
       <td>Пляжный бар с разноцветными зонтиками и лежаками. Известен коктейлями и закусками.</td>
-      <td>Вход свободный, минимальный заказ 150 000 IDR (900 рублей)</td>
+      <td>Вход свободный, минимальный заказ₽900 (150 ₽0 (000 IDR)) (900 рублей)</td>
       <td>08:00 – 23:00</td>
     </tr>
     <tr>
       <td>14</td>
       <td>Водопад Тирта-Эмпул (Tirta Empul)</td>
       <td>Священный храм с источником воды в 30 км от Семиньяка. Популярен для ритуального очищения.</td>
-      <td>50 000 IDR (300 рублей)</td>
+      <td>₽300 (50 ₽0 (000 IDR)) (300 рублей)</td>
       <td>08:00 – 18:00</td>
     </tr>
     <tr>
       <td>15</td>
       <td>Парк птиц Бали (Bali Bird Park)</td>
       <td>Зоопарк с более чем 1000 птиц из 250 видов. Есть шоу попугаев.</td>
-      <td>385 000 IDR (2300 рублей)</td>
+      <td>₽2 310 (385 ₽0 (000 IDR)) (2300 рублей)</td>
       <td>09:00 – 17:00</td>
     </tr>
   </tbody>
@@ -530,11 +554,11 @@
 
 <p>Метро в Семиньяке нет. Основные виды транспорта:</p>
 <ul>
-  <li><strong>Такси</strong> — официальные синие такси (Blue Bird Group) стоят 7 000 IDR за посадку + 5 000 IDR за км. Поездка по центру города — 30 000–50 000 IDR (180–300 рублей).</li>
-  <li><strong>Grab/Gojek</strong> — мобильные приложения-агрегаторы. Цены на 20–30% ниже такси. Поездка через весь Семиньяк — 20 000–40 000 IDR (120–240 рублей).</li>
-  <li><strong>Аренда скутера</strong> — самый популярный вариант. Цена: 50 000–80 000 IDR в сутки (300–480 рублей). Нужны международные права (IDP) категории A.</li>
-  <li><strong>Аренда автомобиля</strong> — от 250 000 IDR в сутки (1500 рублей) без водителя, с водителем — от 500 000 IDR (3000 рублей).</li>
-  <li><strong>Велосипед</strong> — аренда 30 000 IDR в сутки (180 рублей). Подходит для коротких поездок.</li>
+  <li><strong>Такси</strong> — официальные синие такси (Blue Bird Group) стоят₽42 (7 ₽0 (000 IDR)) за посадку +₽30 (5 ₽0 (000 IDR)) за км. Поездка по центру города — 30 000–₽300 (50 ₽0 (000 IDR)) (180–300 рублей).</li>
+  <li><strong>Grab/Gojek</strong> — мобильные приложения-агрегаторы. Цены на 20–30% ниже такси. Поездка через весь Семиньяк — 20 000–₽240 (40 ₽0 (000 IDR)) (120–240 рублей).</li>
+  <li><strong>Аренда скутера</strong> — самый популярный вариант. Цена: 50 000–₽480 (80 ₽0 (000 IDR)) в сутки (300–480 рублей). Нужны международные права (IDP) категории A.</li>
+  <li><strong>Аренда автомобиля</strong> — от₽1 500 (250 ₽0 (000 IDR)) в сутки (1500 рублей) без водителя, с водителем — от₽3 000 (500 ₽0 (000 IDR)) (3000 рублей).</li>
+  <li><strong>Велосипед</strong> — аренда₽180 (30 ₽0 (000 IDR)) в сутки (180 рублей). Подходит для коротких поездок.</li>
 </ul>
 <p>Общественные автобусы (Bemo) ходят нерегулярно и неудобны для туристов. Рекомендуется использовать скутер или Grab.</p>
 
@@ -544,22 +568,22 @@
 
 <h3>Местная кухня (уличная еда)</h3>
 <ul>
-  <li><strong>Варунг (Warung) — Nasi Campur</strong> — рис с мясом, овощами и соусом. Цена: 25 000–40 000 IDR (150–240 рублей).</li>
-  <li><strong>Babi Guling</strong> — запечённый поросёнок. Попробуйте в Warung Babi Guling Ibu Oka. Цена: 50 000 IDR (300 рублей).</li>
-  <li><strong>Маркеты (Pasar Seminyak)</strong> — фрукты (манго, драконий фрукт) от 10 000 IDR за кг.</li>
+  <li><strong>Варунг (Warung) — Nasi Campur</strong> — рис с мясом, овощами и соусом. Цена: 25 000–₽240 (40 ₽0 (000 IDR)) (150–240 рублей).</li>
+  <li><strong>Babi Guling</strong> — запечённый поросёнок. Попробуйте в Warung Babi Guling Ibu Oka. Цена:₽300 (50 ₽0 (000 IDR)) (300 рублей).</li>
+  <li><strong>Маркеты (Pasar Seminyak)</strong> — фрукты (манго, драконий фрукт) от₽60 (10 ₽0 (000 IDR)) за кг.</li>
 </ul>
 
 <h3>Рестораны среднего уровня</h3>
 <ul>
-  <li><strong>Biku</strong> — популярное кафе с бранчами и выпечкой. Средний чек: 150 000 IDR (900 рублей).</li>
-  <li><strong>Revolver Espresso</strong> — культовое место для завтрака. Кофе от 40 000 IDR, тосты от 60 000 IDR.</li>
-  <li><strong>Sardine</strong> — ресторан морепродуктов с видом на рисовые поля. Ужин на двоих: 500 000 IDR (3000 рублей).</li>
+  <li><strong>Biku</strong> — популярное кафе с бранчами и выпечкой. Средний чек:₽900 (150 ₽0 (000 IDR)) (900 рублей).</li>
+  <li><strong>Revolver Espresso</strong> — культовое место для завтрака. Кофе от₽240 (40 ₽0 (000 IDR)), тосты от₽360 (60 ₽0 (000 IDR)).</li>
+  <li><strong>Sardine</strong> — ресторан морепродуктов с видом на рисовые поля. Ужин на двоих:₽3 000 (500 ₽0 (000 IDR)) (3000 рублей).</li>
 </ul>
 
 <h3>Премиум-рестораны</h3>
 <ul>
-  <li><strong>Merah Putih</strong> — индонезийская кухня high-end. Средний чек: 800 000 IDR (4800 рублей).</li>
-  <li><strong>Métis</strong> — французско-азиатский фьюжн. Ужин с вином: от 1 500 000 IDR (9000 рублей).</li><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+  <li><strong>Merah Putih</strong> — индонезийская кухня high-end. Средний чек:₽4 800 (800 ₽0 (000 IDR)) (4800 рублей).</li>
+  <li><strong>Métis</strong> — французско-азиатский фьюжн. Ужин с вином: от₽9 000 (1 ₽3 000 (500000 IDR)) (9000 рублей).</li><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
 
         
@@ -665,6 +689,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -693,6 +718,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -710,8 +736,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

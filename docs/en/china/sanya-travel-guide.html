@@ -6,7 +6,7 @@
     <title>Sanya (Hainan) Travel Guide 2026</title>
     <meta name="description" content="Sanya (Hainan) Travel Guide 2026 Oh, Sanya! If you’ve never been to China’s tropical paradise, you’re in for a real treat. I still remember my first trip the...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/sanya-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/sanya-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/sanya-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/sanya-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Sanya (Hainan) Travel Guide 2026">
     <meta property="og:description" content="Sanya (Hainan) Travel Guide 2026 Oh, Sanya! If you’ve never been to China’s tropical paradise, you’re in for a real treat. I still remember my first trip the...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/china/sanya-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -300,7 +324,7 @@
 
     
     <script type="application/ld+json">
-    [{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "Travel Guide Hub"}, "dateModified": "2026-06-01", "datePublished": "2026-01-15", "description": "Sanya (Hainan) Travel Guide 2026 Oh, Sanya! If you\u2019ve never been to China\u2019s tropical paradise, you\u2019re in for a real treat. I still remember my first trip the...", "headline": "Sanya (Hainan) Travel Guide 2026", "mainEntityOfPage": {"@id": "/en/china/sanya-travel-guide.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "Travel Guide Hub"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "For a full experience of Sanya (Hainan), we recommend 4-7 days."}, "name": "How many days do I need in Sanya (Hainan)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Average weekly budget: from $500 per person excluding flights."}, "name": "What\u0027s the budget for a trip to Sanya (Hainan)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Visa requirements depend on your nationality \u2014 check with the local embassy."}, "name": "Do I need a visa for Sanya (Hainan)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Best time depends on the season \u2014 check our seasons guide."}, "name": "When is the best time to visit Sanya (Hainan)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Sanya (Hainan) is a popular tourist destination, safe with standard precautions."}, "name": "Is Sanya (Hainan) safe?"}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "/en/index.html", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "/en/china/index.html", "name": "China", "position": 2}, {"@type": "ListItem", "item": "/en/china/sanya-travel-guide.html", "name": "Sanya (Hainan)", "position": 3}]}]
+    [{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "Travel Guide Hub"}, "dateModified": "2026-06-01", "datePublished": "2026-01-15", "description": "Sanya (Hainan) Travel Guide 2026 Oh, Sanya! If you\u2019ve never been to China\u2019s tropical paradise, you\u2019re in for a real treat. I still remember my first trip the...", "headline": "Sanya (Hainan) Travel Guide 2026", "mainEntityOfPage": {"@id": "/en/china/sanya-travel-guide.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "Travel Guide Hub"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "For a full experience of Sanya, we recommend 4-7 days."}, "name": "How many days do I need in Sanya?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Average weekly budget: from $500 per person excluding flights."}, "name": "What\u0027s the budget for a trip to Sanya?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Visa requirements depend on your nationality \u2014 check with the local embassy."}, "name": "Do I need a visa for Sanya?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Best time depends on the season \u2014 check our seasons guide."}, "name": "When is the best time to visit Sanya?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Sanya is a popular tourist destination, safe with standard precautions."}, "name": "Is Sanya safe?"}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "/en/index.html", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "/en/china/index.html", "name": "China", "position": 2}, {"@type": "ListItem", "item": "/en/china/sanya-travel-guide.html", "name": "Sanya", "position": 3}]}]
     </script>
     
 </head>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/sanya-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -330,7 +354,7 @@
         
     
         
-            <span>Sanya (Hainan)</span>
+            <span>Sanya</span>
         
     
 </div>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://avatars.mds.yandex.net/get-altay/6322664/2a000001907e422c5f8766638ecbd3745e61/orig');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/sanya.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Sanya (Hainan) Travel Guide 2026</div>
@@ -371,27 +395,27 @@
 
 <p>Here’s a rough idea of average prices (remember, I always mark up a bit to account for booking fees and last-minute changes — you’ll thank me later):</p>
 <ul>
-    <li><strong>From Beijing:</strong> Around $180 (≈ ₽17 100)–$280 (≈ ₽26 600) (¥1,300–¥2,000) one-way in economy. Flights take about 4 hours.</li>
-    <li><strong>From Shanghai:</strong> Approximately $160 (≈ ₽15 200)–$250 (≈ ₽23 750) (¥1,150–¥1,800) one-way. 3.5 hours in the air.</li>
-    <li><strong>From Guangzhou:</strong> Short hop — $80 (≈ ₽7 600)–$130 (≈ ₽12 350) (¥580–¥940) one-way, just over an hour.</li>
-    <li><strong>From Bangkok:</strong> Direct flights start around $120 (≈ ₽11 400)–$200 (≈ ₽19 000) (¥870–¥1,450) one-way.</li>
+    <li><strong>From Beijing:</strong> Around $180–$280($182 (1 300 ¥)–$280 (2 000 ¥)) one-way in economy. Flights take about 4 hours.</li>
+    <li><strong>From Shanghai:</strong> Approximately $160–$250($161 (1 150 ¥)–$252 (1 800 ¥)) one-way. 3.5 hours in the air.</li>
+    <li><strong>From Guangzhou:</strong> Short hop — $80–$130($81 (580 ¥)–$132 (940 ¥)) one-way, just over an hour.</li>
+    <li><strong>From Bangkok:</strong> Direct flights start around $120–$200($122 (870 ¥)–$203 (1 450 ¥)) one-way.</li>
 </ul>
-<p>Pro tip: Book at least 3-4 weeks ahead, especially during Chinese holidays (Spring Festival, Golden Week in October). Prices can double! If you’re on a budget, consider flying into Haikou (the capital, about 3 hours north) and taking a high-speed train to Sanya — it’s scenic and costs only $25 (≈ ₽2 375)–$35 (≈ ₽3 325) (¥180–¥250).</p>
+<p>Pro tip: Book at least 3-4 weeks ahead, especially during Chinese holidays (Spring Festival, Golden Week in October). Prices can double! If you’re on a budget, consider flying into Haikou (the capital, about 3 hours north) and taking a high-speed train to Sanya — it’s scenic and costs only $25–$35($25 (180 ¥)–$35 (250 ¥)).</p>
 
 <h2>Where to Stay</h2>
 <p>Sanya has three main beach areas, each with its own personality. I’ve stayed in all of them, and here’s my honest take:</p>
 
 <h3>Sanya Bay (City Beach)</h3>
-<p>This is the most affordable and convenient area. You’re close to the airport, downtown, and the famous "Sunset Beach." It’s a bit more local and less polished, but the sunsets are jaw-dropping. Hotels range from $40 (≈ ₽3 800)–$100 (≈ ₽9 500) (¥290–¥720) per night for mid-range options. I recommend the <strong>Holiday Inn Sanya Bay</strong> — clean, good pool, and right on the beach.</p>
+<p>This is the most affordable and convenient area. You’re close to the airport, downtown, and the famous "Sunset Beach." It’s a bit more local and less polished, but the sunsets are jaw-dropping. Hotels range from $40–$100($41 (290 ¥)–$101 (720 ¥)) per night for mid-range options. I recommend the <strong>Holiday Inn Sanya Bay</strong> — clean, good pool, and right on the beach.</p>
 
 <h3>Yalong Bay (Luxury & Resorts)</h3>
-<p>This is the postcard-perfect Sanya — powdery white sand, crystal-clear water, and rows of high-end resorts. It’s quieter, more expensive, and absolutely worth it if you want pampering. Prices: $150 (≈ ₽14 250)–$400 (≈ ₽38 000) (¥1,080–¥2,880) per night. The <strong>Ritz-Carlton Sanya</strong> and <strong>InterContinental Sanya</strong> are my top picks. The service is impeccable, and the infinity pools are dreamy.</p>
+<p>This is the postcard-perfect Sanya — powdery white sand, crystal-clear water, and rows of high-end resorts. It’s quieter, more expensive, and absolutely worth it if you want pampering. Prices: $150–$400($151 (1 080 ¥)–$403 (2 880 ¥)) per night. The <strong>Ritz-Carlton Sanya</strong> and <strong>InterContinental Sanya</strong> are my top picks. The service is impeccable, and the infinity pools are dreamy.</p>
 
 <h3>Dadonghai Bay (Balanced)</h3>
-<p>Right between city and resort life. Dadonghai is lively, with restaurants, bars, and a decent beach. It’s popular with younger travelers and families. Mid-range hotels cost $60 (≈ ₽5 700)–$150 (≈ ₽14 250) (¥430–¥1,080) per night. I’ve had great stays at the <strong>Sanya Marriott Hotel Dadonghai Bay</strong> — great location and a fantastic breakfast buffet.</p>
+<p>Right between city and resort life. Dadonghai is lively, with restaurants, bars, and a decent beach. It’s popular with younger travelers and families. Mid-range hotels cost $60–$150($60 (430 ¥)–$151 (1 080 ¥)) per night. I’ve had great stays at the <strong>Sanya Marriott Hotel Dadonghai Bay</strong> — great location and a fantastic breakfast buffet.</p>
 
 <h3>Budget Options</h3>
-<p>Hostels and guesthouses start at $15 (≈ ₽1 425)–$30 (≈ ₽2 850) (¥110–¥220) per night. Look around Sanya Bay or the city center. <strong>Sanya Backpackers Hostel</strong> is clean and social, with tours you can join.</p>
+<p>Hostels and guesthouses start at $15–$30($15 (110 ¥)–$31 (220 ¥)) per night. Look around Sanya Bay or the city center. <strong>Sanya Backpackers Hostel</strong> is clean and social, with tours you can join.</p>
 
 <h2>Top 15 Attractions</h2>
 <p>Here’s my curated list of must-sees. Prices are marked up slightly (as always) to give you a realistic budget. Opening hours are standard, but always double-check during holidays.</p>
@@ -407,41 +431,41 @@
         <td>1</td>
         <td>Yalong Bay Tropical Paradise Forest Park</td>
         <td>A lush rainforest with suspension bridges, glass walkways, and stunning views of Yalong Bay. The "Skywalk" is not for the faint-hearted! Takes 2-3 hours to explore.</td>
-        <td>$25 (≈ ₽2 375) (¥180)</td>
+        <td>$25($25 (180 ¥))</td>
         <td>07:30–18:00</td>
     </tr>
     <tr>
         <td>2</td>
         <td>Nanshan Temple & Cultural Park</td>
         <td>Home to the towering 108-meter Guan Yin statue (one of the tallest in the world). Peaceful gardens, Buddhist temples, and a vegetarian restaurant. Plan half a day.</td>
-        <td>$22 (≈ ₽2 090) (¥158)</td>
+        <td>$22($22 (158 ¥))</td>
         <td>08:00–17:30</td>
     </tr>
     <tr>
         <td>3</td>
         <td>Wuzhizhou Island</td>
         <td>A tropical island with pristine beaches, coral reefs for snorkeling, and water sports. Take a ferry from the mainland (20 min). I recommend the glass-bottom boat tour.</td>
-        <td>$28 (≈ ₽2 660) (¥200) including ferry</td>
+        <td>$28($28 (200 ¥)) including ferry</td>
         <td>08:00–17:30 (last ferry back at 17:00)</td>
     </tr>
     <tr>
         <td>4</td>
         <td>Tianya Haijiao (End of the Earth)</td>
         <td>Famous for its giant rocks and romantic legends. It’s a bit touristy, but the coastal walk is beautiful, especially at sunset. Perfect for photos.</td>
-        <td>$15 (≈ ₽1 425) (¥108)</td>
+        <td>$15($15 (108 ¥))</td>
         <td>07:00–18:30</td>
     </tr>
     <tr>
         <td>5</td>
         <td>Luhuitou Park (Deer Turning Head Park)</td>
         <td>A hilltop park with a legendary love story. Climb (or take a golf cart) to the top for panoramic views of Sanya city and the sea. The statue at the top is iconic.</td>
-        <td>$10 (≈ ₽950) (¥72)</td>
+        <td>$10($10 (72 ¥))</td>
         <td>07:30–22:00</td>
     </tr>
     <tr>
         <td>6</td>
         <td>Yalong Bay Beach</td>
-        <td>Free and open to all! The best beach for swimming and sunbathing. Rent a chair for $5 (≈ ₽475) (¥36) or just lay your towel. Water is calm and clean.</td>
+        <td>Free and open to all! The best beach for swimming and sunbathing. Rent a chair for $5($5 (36 ¥)) or just lay your towel. Water is calm and clean.</td>
         <td>Free</td>
         <td>24/7</td>
     </tr>
@@ -463,28 +487,28 @@
         <td>9</td>
         <td>Yanoda Rainforest Cultural Tourism Zone</td>
         <td>A stunning rainforest with waterfalls, zip lines, and a "sky bridge." You can hike, swim in natural pools, or just enjoy the greenery. About 45 min from Sanya.</td>
-        <td>$20 (≈ ₽1 900) (¥144)</td>
+        <td>$20($20 (144 ¥))</td>
         <td>08:00–17:30</td>
     </tr>
     <tr>
         <td>10</td>
         <td>Sanya Romance Park</td>
         <td>A theme park with a giant Ferris wheel, light shows, and cultural performances. Fun for families or couples. The evening laser show is spectacular.</td>
-        <td>$18 (≈ ₽1 710) (¥130)</td>
+        <td>$18($18 (130 ¥))</td>
         <td>10:00–22:00</td>
     </tr>
     <tr>
         <td>11</td>
         <td>Binglang Valley Li & Miao Cultural Heritage Park</td>
         <td>Experience the indigenous cultures of Hainan’s Li and Miao ethnic groups. Traditional dances, crafts, and food. A bit commercial but educational.</td>
-        <td>$25 (≈ ₽2 375) (¥180)</td>
+        <td>$25($25 (180 ¥))</td>
         <td>08:00–17:30</td>
     </tr>
     <tr>
         <td>12</td>
         <td>Xidao Island (West Island)</td>
-        <td>A quieter island with fishing villages and coral reefs. Snorkel, kayak, or just relax. The ferry is cheap ($5 (≈ ₽475)/¥36 round trip).</td>
-        <td>$12 (≈ ₽1 140) (¥86) including ferry</td>
+        <td>A quieter island with fishing villages and coral reefs. Snorkel, kayak, or just relax. The ferry is cheap ($5/$5 (36 ¥)round trip).</td>
+        <td>$12($12 (86 ¥)) including ferry</td>
         <td>08:00–17:00</td>
     </tr>
     <tr>
@@ -498,14 +522,14 @@
         <td>14</td>
         <td>Hainan Tropical Wildlife Park & Botanical Garden</td>
         <td>See exotic animals like pandas, tigers, and crocodiles in a natural setting. Great for kids. The botanical garden part is lovely for a stroll.</td>
-        <td>$22 (≈ ₽2 090) (¥158)</td>
+        <td>$22($22 (158 ¥))</td>
         <td>08:00–18:00</td>
     </tr>
     <tr>
         <td>15</td>
         <td>Dongtian Park (Cave of Heaven & Earth)</td>
         <td>A Taoist site with ancient caves, temples, and a giant "Dragon King" statue. Peaceful and off the beaten path. The sea views are bonus.</td>
-        <td>$15 (≈ ₽1 425) (¥108)</td>
+        <td>$15($15 (108 ¥))</td>
         <td>07:30–17:30</td>
     </tr>
 </table>
@@ -513,21 +537,21 @@
 <h2>Getting Around</h2>
 <p>Sanya is surprisingly easy to navigate. Here’s what I recommend based on my own experiences:</p>
 <ul>
-    <li><strong>Metro:</strong> Sanya has a light rail system (Line 1 and 2) that connects the airport, city center, and some beaches. Fares are $0.50 (≈ ₽47)–$2 (≈ ₽190) (¥3.5–¥14). It’s clean and efficient, though not super extensive yet. I use it to avoid traffic.</li>
-    <li><strong>Buses:</strong> Cheap and frequent. Routes 8, 15, and 25 cover most tourist spots. Fares: $0.30 (≈ ₽28)–$1.50 (≈ ₽142) (¥2–¥10). Buses can be crowded, but they’re a great way to see local life.</li>
-    <li><strong>Taxis:</strong> Readily available. Starting fare is about $2.50 (≈ ₽237) (¥18), then $0.50 (≈ ₽47) (¥3.5) per km. A ride from the airport to Yalong Bay costs around $20 (≈ ₽1 900) (¥144). Always insist on the meter — some drivers might try to haggle a flat rate.</li>
-    <li><strong>Rental Cars/Scooters:</strong> You can rent a car from $30 (≈ ₽2 850) (¥216) per day (international license required). Scooters are popular but risky — I’d skip them unless you’re experienced in Asian traffic. DiDi (Chinese Uber) works great and costs $3 (≈ ₽285)–$10 (≈ ₽950) (¥22–¥72) for most trips.</li>
+    <li><strong>Metro:</strong> Sanya has a light rail system (Line 1 and 2) that connects the airport, city center, and some beaches. Fares are $0–$2($0 (4 ¥)–$2 (14 ¥)). It’s clean and efficient, though not super extensive yet. I use it to avoid traffic.</li>
+    <li><strong>Buses:</strong> Cheap and frequent. Routes 8, 15, and 25 cover most tourist spots. Fares: $0–$2($0 (2 ¥)–$1 (10 ¥)). Buses can be crowded, but they’re a great way to see local life.</li>
+    <li><strong>Taxis:</strong> Readily available. Starting fare is about $2($3 (18 ¥)), then $0($0 (4 ¥)) per km. A ride from the airport to Yalong Bay costs around $20($20 (144 ¥)). Always insist on the meter — some drivers might try to haggle a flat rate.</li>
+    <li><strong>Rental Cars/Scooters:</strong> You can rent a car from $30($30 (216 ¥)) per day (international license required). Scooters are popular but risky — I’d skip them unless you’re experienced in Asian traffic. DiDi (Chinese Uber) works great and costs $3–$10($3 (22 ¥)–$10 (72 ¥)) for most trips.</li>
 </ul>
 
 <h2>Where to Eat</h2>
 <p>Oh, the food! Sanya is a seafood lover’s dream. I always tell my travelers: don’t be afraid to eat where the locals eat. Here are my favorites:</p>
 <ul>
-    <li><strong>Seafood Street (Sanya Bay):</strong> A row of open-air restaurants where you pick your live seafood from tanks. They cook it any way you like (steamed, grilled, stir-fried). A feast for two: $30 (≈ ₽2 850)–$50 (≈ ₽4 750) (¥216–¥360). Try the garlic steamed clams and spicy crab.</li>
-    <li><strong>Wenchang Chicken (local specialty):</strong> Head to <strong>Wenchang Chicken Restaurant</strong> (multiple locations). Tender, poached chicken with ginger-scallion sauce. A plate costs $8 (≈ ₽760)–$12 (≈ ₽1 140) (¥58–¥86). Simple but divine.</li>
-    <li><strong>Coconut Rice (street food):</strong> Sticky rice cooked in coconut milk, served in a coconut shell. Found everywhere for $2 (≈ ₽190)–$3 (≈ ₽285) (¥14–¥22). Sweet, creamy, and addictive.</li>
-    <li><strong>Hainan Noodles (Bamian):</strong> A hearty noodle soup with pork, shrimp, and peanuts. Try it at <strong>Noodle King</strong> in Dadonghai — $4 (≈ ₽380) (¥29) a bowl.</li>
-    <li><strong>Fine Dining:</strong> For a splurge, <strong>Orchid Restaurant</strong> at the Ritz-Carlton offers incredible fusion cuisine. Dinner for two: $100 (≈ ₽9 500)–$150 (≈ ₽14 250) (¥720–¥1,080).</li>
-    <li><strong>Street Markets:</strong> Visit <strong>First Market</strong> (near Sanya Bay) for grilled skewers, fried bananas, and fresh fruit juices. Everything is $1 (≈ ₽95)–$5 (≈ ₽475) (¥7–¥36).</li>
+    <li><strong>Seafood Street (Sanya Bay):</strong> A row of open-air restaurants where you pick your live seafood from tanks. They cook it any way you like (steamed, grilled, stir-fried). A feast for two: $30–$50($30 (216 ¥)–$50 (360 ¥)). Try the garlic steamed clams and spicy crab.</li>
+    <li><strong>Wenchang Chicken (local specialty):</strong> Head to <strong>Wenchang Chicken Restaurant</strong> (multiple locations). Tender, poached chicken with ginger-scallion sauce. A plate costs $8–$12($8 (58 ¥)–$12 (86 ¥)). Simple but divine.</li>
+    <li><strong>Coconut Rice (street food):</strong> Sticky rice cooked in coconut milk, served in a coconut shell. Found everywhere for $2–$3($2 (14 ¥)–$3 (22 ¥)). Sweet, creamy, and addictive.</li>
+    <li><strong>Hainan Noodles (Bamian):</strong> A hearty noodle soup with pork, shrimp, and peanuts. Try it at <strong>Noodle King</strong> in Dadonghai — $4($4 (29 ¥)) a bowl.</li>
+    <li><strong>Fine Dining:</strong> For a splurge, <strong>Orchid Restaurant</strong> at the Ritz-Carlton offers incredible fusion cuisine. Dinner for two: $100–$150($101 (720 ¥)–$151 (1 080 ¥)).</li>
+    <li><strong>Street Markets:</strong> Visit <strong>First Market</strong> (near Sanya Bay) for grilled skewers, fried bananas, and fresh fruit juices. Everything is $1–$5($1 (7 ¥)–$5 (36 ¥)).</li>
 </ul>
 
 <h2>Best Time to Visit</h2>
@@ -550,28 +574,28 @@
             </h2>
             
             <details>
-                <summary>How many days do I need in Sanya (Hainan)?</summary>
-                <p>For a full experience of Sanya (Hainan), we recommend 4-7 days.</p>
+                <summary>How many days do I need in Sanya?</summary>
+                <p>For a full experience of Sanya, we recommend 4-7 days.</p>
             </details>
             
             <details>
-                <summary>What&#39;s the budget for a trip to Sanya (Hainan)?</summary>
+                <summary>What&#39;s the budget for a trip to Sanya?</summary>
                 <p>Average weekly budget: from $500 per person excluding flights.</p>
             </details>
             
             <details>
-                <summary>Do I need a visa for Sanya (Hainan)?</summary>
+                <summary>Do I need a visa for Sanya?</summary>
                 <p>Visa requirements depend on your nationality — check with the local embassy.</p>
             </details>
             
             <details>
-                <summary>When is the best time to visit Sanya (Hainan)?</summary>
+                <summary>When is the best time to visit Sanya?</summary>
                 <p>Best time depends on the season — check our seasons guide.</p>
             </details>
             
             <details>
-                <summary>Is Sanya (Hainan) safe?</summary>
-                <p>Sanya (Hainan) is a popular tourist destination, safe with standard precautions.</p>
+                <summary>Is Sanya safe?</summary>
+                <p>Sanya is a popular tourist destination, safe with standard precautions.</p>
             </details>
             
         </div>
@@ -586,22 +610,22 @@
                 
                 <a href="/en/china/sanya-hotels.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Hotels</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Sanya (Hainan)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Sanya</p>
                 </a>
                 
                 <a href="/en/china/sanya-cheap-flights.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Flights</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Sanya (Hainan)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Sanya</p>
                 </a>
                 
                 <a href="/en/china/sanya-things-to-do.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Attractions</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Sanya (Hainan)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Sanya</p>
                 </a>
                 
                 <a href="/en/china/sanya-best-time-to-visit.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Seasons &amp; Weather</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Sanya (Hainan)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Sanya</p>
                 </a>
                 
             </div>
@@ -646,6 +670,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -674,6 +699,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -691,8 +717,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

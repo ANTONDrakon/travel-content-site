@@ -7,8 +7,8 @@
     <meta name="description" content="Санья (Хайнань): полный путеводитель 2026 Санья — это тропическая сказка, которая стала реальностью для тысяч туристов из России. Каждый раз, когда я возвращ...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/sanya-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/sanya-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/sanya-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/sanya-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/sanya-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/sanya-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Санья (Хайнань): полный путеводитель 2026">
     <meta property="og:description" content="Санья (Хайнань): полный путеводитель 2026 Санья — это тропическая сказка, которая стала реальностью для тысяч туристов из России. Каждый раз, когда я возвращ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/china/sanya-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -300,7 +324,7 @@
 
     
     <script type="application/ld+json">
-    [{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "Travel Guide Hub"}, "dateModified": "2026-06-01", "datePublished": "2026-01-15", "description": "\u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c): \u043f\u043e\u043b\u043d\u044b\u0439 \u043f\u0443\u0442\u0435\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c 2026 \u0421\u0430\u043d\u044c\u044f \u2014 \u044d\u0442\u043e \u0442\u0440\u043e\u043f\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0441\u043a\u0430\u0437\u043a\u0430, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u0441\u0442\u0430\u043b\u0430 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c\u044e \u0434\u043b\u044f \u0442\u044b\u0441\u044f\u0447 \u0442\u0443\u0440\u0438\u0441\u0442\u043e\u0432 \u0438\u0437 \u0420\u043e\u0441\u0441\u0438\u0438. \u041a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437, \u043a\u043e\u0433\u0434\u0430 \u044f \u0432\u043e\u0437\u0432\u0440\u0430\u0449...", "headline": "\u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c): \u043f\u043e\u043b\u043d\u044b\u0439 \u043f\u0443\u0442\u0435\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c 2026", "mainEntityOfPage": {"@id": "/ru/china/sanya-putevoditel.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "Travel Guide Hub"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0414\u043b\u044f \u043f\u043e\u043b\u043d\u043e\u0446\u0435\u043d\u043d\u043e\u0433\u043e \u0437\u043d\u0430\u043a\u043e\u043c\u0441\u0442\u0432\u0430 \u0441 \u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c) \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u043c 4-7 \u0434\u043d\u0435\u0439."}, "name": "\u0421\u043a\u043e\u043b\u044c\u043a\u043e \u0434\u043d\u0435\u0439 \u043d\u0443\u0436\u043d\u043e \u043d\u0430 \u043e\u0441\u043c\u043e\u0442\u0440 \u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u0431\u044e\u0434\u0436\u0435\u0442 \u043d\u0430 \u043d\u0435\u0434\u0435\u043b\u044e: \u043e\u0442 $500 \u043d\u0430 \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430 \u0431\u0435\u0437 \u0443\u0447\u0451\u0442\u0430 \u043f\u0435\u0440\u0435\u043b\u0451\u0442\u0430."}, "name": "\u041a\u0430\u043a\u043e\u0439 \u0431\u044e\u0434\u0436\u0435\u0442 \u043d\u0443\u0436\u0435\u043d \u043d\u0430 \u043f\u043e\u0435\u0437\u0434\u043a\u0443 \u0432 \u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0413\u0440\u0430\u0436\u0434\u0430\u043d\u0430\u043c \u0420\u0424 \u0434\u043b\u044f \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u044f \u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c) \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0437\u0430\u0433\u0440\u0430\u043d\u043f\u0430\u0441\u043f\u043e\u0440\u0442."}, "name": "\u041d\u0443\u0436\u043d\u0430 \u043b\u0438 \u0432\u0438\u0437\u0430 \u0434\u043b\u044f \u043f\u043e\u0435\u0437\u0434\u043a\u0438 \u0432 \u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u041b\u0443\u0447\u0448\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u0434\u043b\u044f \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u044f: \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0441\u0435\u0437\u043e\u043d\u0430 \u2014 \u0441\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u043d\u0430\u0448 \u0433\u0438\u0434 \u043f\u043e \u0441\u0435\u0437\u043e\u043d\u0430\u043c."}, "name": "\u041a\u043e\u0433\u0434\u0430 \u043b\u0443\u0447\u0448\u0435 \u0435\u0445\u0430\u0442\u044c \u0432 \u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c)?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c) \u2014 \u043f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u043e\u0435 \u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435, \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0435 \u043f\u0440\u0438 \u0441\u043e\u0431\u043b\u044e\u0434\u0435\u043d\u0438\u0438 \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0445 \u043c\u0435\u0440."}, "name": "\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e \u043b\u0438 \u0432 \u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c)?"}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "/ru/index.html", "name": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f", "position": 1}, {"@type": "ListItem", "item": "/ru/china/index.html", "name": "\u041a\u0438\u0442\u0430\u0439", "position": 2}, {"@type": "ListItem", "item": "/ru/china/sanya-putevoditel.html", "name": "\u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c)", "position": 3}]}]
+    [{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "Travel Guide Hub"}, "dateModified": "2026-06-01", "datePublished": "2026-01-15", "description": "\u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c): \u043f\u043e\u043b\u043d\u044b\u0439 \u043f\u0443\u0442\u0435\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c 2026 \u0421\u0430\u043d\u044c\u044f \u2014 \u044d\u0442\u043e \u0442\u0440\u043e\u043f\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0441\u043a\u0430\u0437\u043a\u0430, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u0441\u0442\u0430\u043b\u0430 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c\u044e \u0434\u043b\u044f \u0442\u044b\u0441\u044f\u0447 \u0442\u0443\u0440\u0438\u0441\u0442\u043e\u0432 \u0438\u0437 \u0420\u043e\u0441\u0441\u0438\u0438. \u041a\u0430\u0436\u0434\u044b\u0439 \u0440\u0430\u0437, \u043a\u043e\u0433\u0434\u0430 \u044f \u0432\u043e\u0437\u0432\u0440\u0430\u0449...", "headline": "\u0421\u0430\u043d\u044c\u044f (\u0425\u0430\u0439\u043d\u0430\u043d\u044c): \u043f\u043e\u043b\u043d\u044b\u0439 \u043f\u0443\u0442\u0435\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c 2026", "mainEntityOfPage": {"@id": "/ru/china/sanya-putevoditel.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "Travel Guide Hub"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0414\u043b\u044f \u043f\u043e\u043b\u043d\u043e\u0446\u0435\u043d\u043d\u043e\u0433\u043e \u0437\u043d\u0430\u043a\u043e\u043c\u0441\u0442\u0432\u0430 \u0441 \u0421\u0430\u043d\u044c\u044f \u0440\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u043c 4-7 \u0434\u043d\u0435\u0439."}, "name": "\u0421\u043a\u043e\u043b\u044c\u043a\u043e \u0434\u043d\u0435\u0439 \u043d\u0443\u0436\u043d\u043e \u043d\u0430 \u043e\u0441\u043c\u043e\u0442\u0440 \u0421\u0430\u043d\u044c\u044f?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0421\u0440\u0435\u0434\u043d\u0438\u0439 \u0431\u044e\u0434\u0436\u0435\u0442 \u043d\u0430 \u043d\u0435\u0434\u0435\u043b\u044e: \u043e\u0442 $500 \u043d\u0430 \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u0430 \u0431\u0435\u0437 \u0443\u0447\u0451\u0442\u0430 \u043f\u0435\u0440\u0435\u043b\u0451\u0442\u0430."}, "name": "\u041a\u0430\u043a\u043e\u0439 \u0431\u044e\u0434\u0436\u0435\u0442 \u043d\u0443\u0436\u0435\u043d \u043d\u0430 \u043f\u043e\u0435\u0437\u0434\u043a\u0443 \u0432 \u0421\u0430\u043d\u044c\u044f?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0413\u0440\u0430\u0436\u0434\u0430\u043d\u0430\u043c \u0420\u0424 \u0434\u043b\u044f \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u044f \u0421\u0430\u043d\u044c\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u0437\u0430\u0433\u0440\u0430\u043d\u043f\u0430\u0441\u043f\u043e\u0440\u0442."}, "name": "\u041d\u0443\u0436\u043d\u0430 \u043b\u0438 \u0432\u0438\u0437\u0430 \u0434\u043b\u044f \u043f\u043e\u0435\u0437\u0434\u043a\u0438 \u0432 \u0421\u0430\u043d\u044c\u044f?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u041b\u0443\u0447\u0448\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u0434\u043b\u044f \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u044f: \u0437\u0430\u0432\u0438\u0441\u0438\u0442 \u043e\u0442 \u0441\u0435\u0437\u043e\u043d\u0430 \u2014 \u0441\u043c\u043e\u0442\u0440\u0438\u0442\u0435 \u043d\u0430\u0448 \u0433\u0438\u0434 \u043f\u043e \u0441\u0435\u0437\u043e\u043d\u0430\u043c."}, "name": "\u041a\u043e\u0433\u0434\u0430 \u043b\u0443\u0447\u0448\u0435 \u0435\u0445\u0430\u0442\u044c \u0432 \u0421\u0430\u043d\u044c\u044f?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "\u0421\u0430\u043d\u044c\u044f \u2014 \u043f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u043e\u0435 \u0442\u0443\u0440\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435, \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0435 \u043f\u0440\u0438 \u0441\u043e\u0431\u043b\u044e\u0434\u0435\u043d\u0438\u0438 \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0445 \u043c\u0435\u0440."}, "name": "\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e \u043b\u0438 \u0432 \u0421\u0430\u043d\u044c\u044f?"}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "/ru/index.html", "name": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f", "position": 1}, {"@type": "ListItem", "item": "/ru/china/index.html", "name": "\u041a\u0438\u0442\u0430\u0439", "position": 2}, {"@type": "ListItem", "item": "/ru/china/sanya-putevoditel.html", "name": "\u0421\u0430\u043d\u044c\u044f", "position": 3}]}]
     </script>
     
 </head>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/sanya-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -330,7 +354,7 @@
         
     
         
-            <span>Санья (Хайнань)</span>
+            <span>Санья</span>
         
     
 </div>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://avatars.mds.yandex.net/get-altay/6322664/2a000001907e422c5f8766638ecbd3745e61/orig');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/sanya.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Санья (Хайнань): полный путеводитель 2026</div>
@@ -514,28 +538,28 @@
             </h2>
             
             <details>
-                <summary>Сколько дней нужно на осмотр Санья (Хайнань)?</summary>
-                <p>Для полноценного знакомства с Санья (Хайнань) рекомендуем 4-7 дней.</p>
+                <summary>Сколько дней нужно на осмотр Санья?</summary>
+                <p>Для полноценного знакомства с Санья рекомендуем 4-7 дней.</p>
             </details>
             
             <details>
-                <summary>Какой бюджет нужен на поездку в Санья (Хайнань)?</summary>
+                <summary>Какой бюджет нужен на поездку в Санья?</summary>
                 <p>Средний бюджет на неделю: от $500 на человека без учёта перелёта.</p>
             </details>
             
             <details>
-                <summary>Нужна ли виза для поездки в Санья (Хайнань)?</summary>
-                <p>Гражданам РФ для посещения Санья (Хайнань) требуется загранпаспорт.</p>
+                <summary>Нужна ли виза для поездки в Санья?</summary>
+                <p>Гражданам РФ для посещения Санья требуется загранпаспорт.</p>
             </details>
             
             <details>
-                <summary>Когда лучше ехать в Санья (Хайнань)?</summary>
+                <summary>Когда лучше ехать в Санья?</summary>
                 <p>Лучшее время для посещения: зависит от сезона — смотрите наш гид по сезонам.</p>
             </details>
             
             <details>
-                <summary>Безопасно ли в Санья (Хайнань)?</summary>
-                <p>Санья (Хайнань) — популярное туристическое направление, безопасное при соблюдении стандартных мер.</p>
+                <summary>Безопасно ли в Санья?</summary>
+                <p>Санья — популярное туристическое направление, безопасное при соблюдении стандартных мер.</p>
             </details>
             
         </div>
@@ -550,22 +574,22 @@
                 
                 <a href="/ru/china/sanya-oteli.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Отели</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Санья (Хайнань)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Санья</p>
                 </a>
                 
                 <a href="/ru/china/sanya-aviabilety.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Авиабилеты</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Санья (Хайнань)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Санья</p>
                 </a>
                 
                 <a href="/ru/china/sanya-dostoprimechatelnosti.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Достопримечательности</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Санья (Хайнань)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Санья</p>
                 </a>
                 
                 <a href="/ru/china/sanya-kogda-luchshe-ekhat.html" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">Сезоны и погода</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Санья (Хайнань)</p>
+                    <p style="font-weight:600;font-size:15px;margin-top:6px;">Санья</p>
                 </a>
                 
             </div>
@@ -610,6 +634,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -638,6 +663,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -655,8 +681,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

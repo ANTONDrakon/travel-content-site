@@ -6,7 +6,7 @@
     <title>Beijing Travel Guide 2026</title>
     <meta name="description" content="Beijing Travel Guide 2026 Beijing is one of those cities that grabs you by the heart and doesn’t let go. I still remember my first morning there — stepping o...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/beijing-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/beijing-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Beijing Travel Guide 2026">
     <meta property="og:description" content="Beijing Travel Guide 2026 Beijing is one of those cities that grabs you by the heart and doesn’t let go. I still remember my first morning there — stepping o...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/beijing-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/beijing.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Beijing Travel Guide 2026</div>
@@ -368,7 +392,7 @@
 
 <h2>How to Get There</h2>
 
-<p>Beijing is served by two major airports: Beijing Capital International Airport (PEK) and the newer Beijing Daxing International Airport (PKX). PEK is the busiest, with flights from nearly every major city worldwide. PKX, which opened in 2019, is a stunning architectural marvel — think a giant starfish — and handles many international and domestic routes. Flights from the US West Coast (like Los Angeles or San Francisco) average around $780 (≈ ₽74 100)-$1 050 (≈ ₽99 750) round-trip in economy, while from Europe (London, Paris, Frankfurt) you’re looking at $620 (≈ ₽58 900)-$850 (≈ ₽80 750) round-trip. From Southeast Asia (Bangkok, Singapore, Tokyo), prices are lower at $280 (≈ ₽26 600)-$450 (≈ ₽42 750) round-trip. I always recommend booking at least 3 months in advance for the best deals, and consider flying into PKX — it’s less crowded and the high-speed train into the city takes just 20 minutes.</p>
+<p>Beijing is served by two major airports: Beijing Capital International Airport (PEK) and the newer Beijing Daxing International Airport (PKX). PEK is the busiest, with flights from nearly every major city worldwide. PKX, which opened in 2019, is a stunning architectural marvel — think a giant starfish — and handles many international and domestic routes. Flights from the US West Coast (like Los Angeles or San Francisco) average around $780-$1 050round-trip in economy, while from Europe (London, Paris, Frankfurt) you’re looking at $620-$850round-trip. From Southeast Asia (Bangkok, Singapore, Tokyo), prices are lower at $280-$450round-trip. I always recommend booking at least 3 months in advance for the best deals, and consider flying into PKX — it’s less crowded and the high-speed train into the city takes just 20 minutes.</p>
 
 <a href="https://tp.media/click?shmarker=736226&promo_id=3770&source_type=link&type=click&campaign_id=100&trs=search_flights_MOW_BEI" target="_blank" rel="nofollow sponsored" class="affiliate-link">✈️ Find cheap flights to Beijing on Aviasales</a>
 
@@ -376,22 +400,22 @@
 
 <p>Choosing where to stay in Beijing can make or break your trip. I’ve stayed in all kinds of neighborhoods, and here are my top picks for every budget.</p>
 
-<h3>Budget (Under $45 (≈ ₽4 275)/night)</h3>
+<h3>Budget (Under $45/night)</h3>
 <ul>
-<li><strong>365 Inn (Dongcheng)</strong> — A cozy hostel near the Lama Temple. Dorm beds from $18 (≈ ₽1 710)/night, private rooms from $38 (≈ ₽3 610)/night. Clean, social, and they organize Great Wall trips.</li>
-<li><strong>Beijing Downtown Travelotel (Xicheng)</strong> — Basic but comfortable, with private rooms from $42 (≈ ₽3 990)/night. Close to the metro and a 15-minute walk to Tiananmen Square.</li>
+<li><strong>365 Inn (Dongcheng)</strong> — A cozy hostel near the Lama Temple. Dorm beds from $18/night, private rooms from $38/night. Clean, social, and they organize Great Wall trips.</li>
+<li><strong>Beijing Downtown Travelotel (Xicheng)</strong> — Basic but comfortable, with private rooms from $42/night. Close to the metro and a 15-minute walk to Tiananmen Square.</li>
 </ul>
 
-<h3>Mid-Range ($70 (≈ ₽6 650)-$130 (≈ ₽12 350)/night)</h3>
+<h3>Mid-Range ($70-$130/night)</h3>
 <ul>
-<li><strong>Holiday Inn Express Dongzhimen</strong> — A solid choice with modern rooms, free breakfast, and a great location near the Dongzhimen metro hub. Rooms from $89 (≈ ₽8 455)/night.</li>
-<li><strong>Hutong Boutique Hotel (Nanluoguxiang)</strong> — A charming hotel converted from a traditional courtyard house. Rooms from $105 (≈ ₽9 975)/night. You’ll feel like you’re living in old Beijing.</li>
+<li><strong>Holiday Inn Express Dongzhimen</strong> — A solid choice with modern rooms, free breakfast, and a great location near the Dongzhimen metro hub. Rooms from $89/night.</li>
+<li><strong>Hutong Boutique Hotel (Nanluoguxiang)</strong> — A charming hotel converted from a traditional courtyard house. Rooms from $105/night. You’ll feel like you’re living in old Beijing.</li>
 </ul>
 
-<h3>Luxury ($180 (≈ ₽17 100)+/night)</h3>
+<h3>Luxury ($180+/night)</h3>
 <ul>
-<li><strong>The Peninsula Beijing</strong> — World-class luxury in the heart of Wangfujing. Rooms from $295 (≈ ₽28 025)/night. The service is impeccable, and the spa is divine.</li>
-<li><strong>Rosewood Beijing</strong> — A stunning hotel with a rooftop bar and incredible views. Rooms from $240 (≈ ₽22 800)/night. Perfect for a splurge.</li>
+<li><strong>The Peninsula Beijing</strong> — World-class luxury in the heart of Wangfujing. Rooms from $295/night. The service is impeccable, and the spa is divine.</li>
+<li><strong>Rosewood Beijing</strong> — A stunning hotel with a rooftop bar and incredible views. Rooms from $240/night. Perfect for a splurge.</li>
 </ul>
 
 <a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_beijing" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Find hotels in Beijing on Hotellook</a>
@@ -402,21 +426,21 @@
 
 <table>
 <tr><th>#</th><th>Attraction</th><th>Description</th><th>Ticket Price</th><th>Opening Hours</th></tr>
-<tr><td>1</td><td>Forbidden City</td><td>The imperial palace of the Ming and Qing dynasties. It’s a massive complex with over 980 buildings. I recommend spending at least 3 hours here. The Hall of Supreme Harmony is breathtaking.</td><td>$14 (≈ ₽1 330) (peak), $10 (≈ ₽950) (off-peak)</td><td>8:30 AM - 5 PM (closed Mondays)</td></tr>
-<tr><td>2</td><td>Great Wall (Mutianyu)</td><td>The most well-restored section near Beijing. Less crowded than Badaling, with a cable car and toboggan ride down. It’s a 2-hour drive from the city.</td><td>$9 (≈ ₽855) (entrance), $16 (≈ ₽1 520) (cable car round-trip)</td><td>7:30 AM - 6 PM</td></tr>
+<tr><td>1</td><td>Forbidden City</td><td>The imperial palace of the Ming and Qing dynasties. It’s a massive complex with over 980 buildings. I recommend spending at least 3 hours here. The Hall of Supreme Harmony is breathtaking.</td><td>$14(peak), $10(off-peak)</td><td>8:30 AM - 5 PM (closed Mondays)</td></tr>
+<tr><td>2</td><td>Great Wall (Mutianyu)</td><td>The most well-restored section near Beijing. Less crowded than Badaling, with a cable car and toboggan ride down. It’s a 2-hour drive from the city.</td><td>$9(entrance), $16(cable car round-trip)</td><td>7:30 AM - 6 PM</td></tr>
 <tr><td>3</td><td>Tiananmen Square</td><td>The world’s largest public square, flanked by monuments and the Great Hall of the People. It’s a moving experience, especially at sunrise when the flag is raised.</td><td>Free (ID required)</td><td>24/7 (flag raising at sunrise)</td></tr>
-<tr><td>4</td><td>Temple of Heaven</td><td>A stunning Ming-era temple complex where emperors prayed for good harvests. The circular Hall of Prayer is iconic. Locals practice tai chi in the surrounding park.</td><td>$6 (≈ ₽570) (peak), $4 (≈ ₽380) (off-peak)</td><td>8 AM - 5:30 PM</td></tr>
-<tr><td>5</td><td>Summer Palace</td><td>A sprawling imperial garden with Kunming Lake and Longevity Hill. Rent a boat or just stroll the covered walkways. It’s a peaceful escape from the city.</td><td>$8 (≈ ₽760) (peak), $5 (≈ ₽475) (off-peak)</td><td>7 AM - 5 PM</td></tr>
-<tr><td>6</td><td>Lama Temple (Yonghe Temple)</td><td>Beijing’s most famous Tibetan Buddhist temple. The 18-meter-tall Maitreya Buddha statue is awe-inspiring. The incense smoke and chanting create a magical atmosphere.</td><td>$4 (≈ ₽380)</td><td>9 AM - 4:30 PM</td></tr>
+<tr><td>4</td><td>Temple of Heaven</td><td>A stunning Ming-era temple complex where emperors prayed for good harvests. The circular Hall of Prayer is iconic. Locals practice tai chi in the surrounding park.</td><td>$6(peak), $4(off-peak)</td><td>8 AM - 5:30 PM</td></tr>
+<tr><td>5</td><td>Summer Palace</td><td>A sprawling imperial garden with Kunming Lake and Longevity Hill. Rent a boat or just stroll the covered walkways. It’s a peaceful escape from the city.</td><td>$8(peak), $5(off-peak)</td><td>7 AM - 5 PM</td></tr>
+<tr><td>6</td><td>Lama Temple (Yonghe Temple)</td><td>Beijing’s most famous Tibetan Buddhist temple. The 18-meter-tall Maitreya Buddha statue is awe-inspiring. The incense smoke and chanting create a magical atmosphere.</td><td>$4</td><td>9 AM - 4:30 PM</td></tr>
 <tr><td>7</td><td>National Museum of China</td><td>Located on Tiananmen Square, this museum covers Chinese history from ancient times to the modern era. The “Ancient China” exhibit is a must-see.</td><td>Free (book in advance)</td><td>9 AM - 5 PM (closed Mondays)</td></tr>
-<tr><td>8</td><td>798 Art District</td><td>A former factory complex turned into a vibrant contemporary art hub. Galleries, cafes, and street art everywhere. I love the rotating exhibitions here.</td><td>Free (some galleries charge $3 (≈ ₽285)-$8 (≈ ₽760))</td><td>10 AM - 6 PM (most galleries)</td></tr>
-<tr><td>9</td><td>Jingshan Park</td><td>A hill right behind the Forbidden City. Climb to the top for the best panoramic view of Beijing’s rooftops. It’s especially beautiful at sunset.</td><td>$3 (≈ ₽285)</td><td>6 AM - 8 PM</td></tr>
-<tr><td>10</td><td>Beihai Park</td><td>An ancient imperial garden with a stunning white pagoda on an island. Rent a paddleboat or just wander the lotus-filled lakes.</td><td>$3 (≈ ₽285) (peak), $2 (≈ ₽190) (off-peak)</td><td>6:30 AM - 8 PM</td></tr>
+<tr><td>8</td><td>798 Art District</td><td>A former factory complex turned into a vibrant contemporary art hub. Galleries, cafes, and street art everywhere. I love the rotating exhibitions here.</td><td>Free (some galleries charge $3-$8)</td><td>10 AM - 6 PM (most galleries)</td></tr>
+<tr><td>9</td><td>Jingshan Park</td><td>A hill right behind the Forbidden City. Climb to the top for the best panoramic view of Beijing’s rooftops. It’s especially beautiful at sunset.</td><td>$3</td><td>6 AM - 8 PM</td></tr>
+<tr><td>10</td><td>Beihai Park</td><td>An ancient imperial garden with a stunning white pagoda on an island. Rent a paddleboat or just wander the lotus-filled lakes.</td><td>$3(peak), $2(off-peak)</td><td>6:30 AM - 8 PM</td></tr>
 <tr><td>11</td><td>Nanluoguxiang</td><td>A famous hutong street packed with shops, cafes, and street food. It’s touristy but fun. Try the candied hawthorn skewers.</td><td>Free</td><td>24/7 (shops open 10 AM - 10 PM)</td></tr>
-<tr><td>12</td><td>Ming Tombs</td><td>The burial site of 13 Ming emperors, located about 50 km from Beijing. The Sacred Way with its stone animals is a highlight.</td><td>$8 (≈ ₽760) (combined ticket)</td><td>8:30 AM - 5 PM</td></tr>
-<tr><td>13</td><td>Beijing Zoo</td><td>Home to the famous giant pandas. It’s a bit old-school, but the panda house is worth it. Go early to see them active.</td><td>$5 (≈ ₽475) (panda house extra $3 (≈ ₽285))</td><td>7:30 AM - 6 PM</td></tr>
-<tr><td>14</td><td>Olympic Park (Bird’s Nest & Water Cube)</td><td>The iconic 2008 Olympics venues. You can walk inside the Bird’s Nest or even ski in the Water Cube (yes, it’s now a water park).</td><td>$6 (≈ ₽570) (Bird’s Nest), $8 (≈ ₽760) (Water Cube)</td><td>9 AM - 6 PM</td></tr>
-<tr><td>15</td><td>Hutongs of Shichahai</td><td>A network of lakes and alleys with bars, restaurants, and traditional courtyard homes. Take a rickshaw ride for the full experience.</td><td>Free (rickshaw tour ~$12 (≈ ₽1 140))</td><td>24/7</td></tr>
+<tr><td>12</td><td>Ming Tombs</td><td>The burial site of 13 Ming emperors, located about 50 km from Beijing. The Sacred Way with its stone animals is a highlight.</td><td>$8(combined ticket)</td><td>8:30 AM - 5 PM</td></tr>
+<tr><td>13</td><td>Beijing Zoo</td><td>Home to the famous giant pandas. It’s a bit old-school, but the panda house is worth it. Go early to see them active.</td><td>$5(panda house extra $3)</td><td>7:30 AM - 6 PM</td></tr>
+<tr><td>14</td><td>Olympic Park (Bird’s Nest & Water Cube)</td><td>The iconic 2008 Olympics venues. You can walk inside the Bird’s Nest or even ski in the Water Cube (yes, it’s now a water park).</td><td>$6(Bird’s Nest), $8(Water Cube)</td><td>9 AM - 6 PM</td></tr>
+<tr><td>15</td><td>Hutongs of Shichahai</td><td>A network of lakes and alleys with bars, restaurants, and traditional courtyard homes. Take a rickshaw ride for the full experience.</td><td>Free (rickshaw tour ~$12)</td><td>24/7</td></tr>
 </table>
 
 <h2>Getting Around</h2>
@@ -424,11 +448,11 @@
 <p>Beijing’s public transport is excellent and affordable. The metro is my favorite way to get around — it’s clean, fast, and covers almost every attraction.</p>
 
 <ul>
-<li><strong>Metro:</strong> 23 lines covering the city and suburbs. Single rides cost $0.35 (≈ ₽33)-$0.70 (≈ ₽66) depending on distance. A 7-day unlimited pass is $12. (≈ ₽1 140) You can pay with a transport card (Yikatong) or Alipay. Download the “Beijing Metro” app for route planning.</li>
-<li><strong>Buses:</strong> Even cheaper at $0.20 (≈ ₽19) per ride, but can be confusing for non-Chinese speakers. Use Google Maps or Baidu Maps for routes.</li>
-<li><strong>Taxis:</strong> Flagfall is $3.50 (≈ ₽332) for the first 3 km, then $0.35 (≈ ₽33) per km. Uber-style apps like Didi are widely used and often cheaper. Just download the app and use the English version.</li>
-<li><strong>Rental Cars:</strong> Not recommended for first-timers — traffic is chaotic and parking is hard. If you must, rental starts at $45 (≈ ₽4 275)/day. You’ll need an International Driving Permit.</li>
-<li><strong>Bikes:</strong> Shared bikes (Mobike, Hellobike) are everywhere. Rent via app for $0.15 (≈ ₽14) per 30 minutes. It’s a fun way to explore hutongs.</li>
+<li><strong>Metro:</strong> 23 lines covering the city and suburbs. Single rides cost $0-$1depending on distance. A 7-day unlimited pass is $12You can pay with a transport card (Yikatong) or Alipay. Download the “Beijing Metro” app for route planning.</li>
+<li><strong>Buses:</strong> Even cheaper at $0per ride, but can be confusing for non-Chinese speakers. Use Google Maps or Baidu Maps for routes.</li>
+<li><strong>Taxis:</strong> Flagfall is $4for the first 3 km, then $0per km. Uber-style apps like Didi are widely used and often cheaper. Just download the app and use the English version.</li>
+<li><strong>Rental Cars:</strong> Not recommended for first-timers — traffic is chaotic and parking is hard. If you must, rental starts at $45/day. You’ll need an International Driving Permit.</li>
+<li><strong>Bikes:</strong> Shared bikes (Mobike, Hellobike) are everywhere. Rent via app for $0per 30 minutes. It’s a fun way to explore hutongs.</li>
 </ul>
 
 <h2>Where to Eat</h2>
@@ -437,17 +461,17 @@
 
 <h3>Local Cuisine Must-Tries</h3>
 <ul>
-<li><strong>Peking Duck</strong> — The holy grail. Go to <strong>Da Dong</strong> (multiple locations) for a modern take, or <strong>Quanjude</strong> (Qianmen) for the classic experience. A whole duck costs $35 (≈ ₽3 325)-$55  (≈ ₽5 225) serving 2-3 people.</li>
-<li><strong>Jianbing</strong> — A savory crepe with egg, scallions, and chili sauce. Grab one from a street cart for $1.50 (≈ ₽142)-$2.50. Perfect for breakfast.</li>
-<li><strong>Zhajiangmian</strong> — Noodles with a thick soybean paste sauce. Try it at <strong>Haidilao</strong> or a local hutong spot for $3 (≈ ₽285)-$5. (≈ ₽475)</li>
-<li><strong>Hot Pot</strong> — A communal dining experience where you cook meats and veggies in bubbling broth. <strong>Haidilao</strong> is famous for its service and costs $15 (≈ ₽1 425)-$25 (≈ ₽2 375) per person.</li>
+<li><strong>Peking Duck</strong> — The holy grail. Go to <strong>Da Dong</strong> (multiple locations) for a modern take, or <strong>Quanjude</strong> (Qianmen) for the classic experience. A whole duck costs $35-$55serving 2-3 people.</li>
+<li><strong>Jianbing</strong> — A savory crepe with egg, scallions, and chili sauce. Grab one from a street cart for $2-$2.50. Perfect for breakfast.</li>
+<li><strong>Zhajiangmian</strong> — Noodles with a thick soybean paste sauce. Try it at <strong>Haidilao</strong> or a local hutong spot for $3-$5</li>
+<li><strong>Hot Pot</strong> — A communal dining experience where you cook meats and veggies in bubbling broth. <strong>Haidilao</strong> is famous for its service and costs $15-$25per person.</li>
 </ul>
 
 <h3>Restaurants by Budget</h3>
 <ul>
-<li><strong>Street Food ($1 (≈ ₽95)-$5 (≈ ₽475)):</strong> Wangfujing Snack Street or Donghuamen Night Market (if it reopens). Try lamb skewers, stinky tofu, and sugar-coated hawthorns.</li>
-<li><strong>Casual Dining ($8 (≈ ₽760)-$15 (≈ ₽1 425)):</strong> <strong>Din Tai Fung</strong> for soup dumplings (xiao long bao), or <strong>Mr. Shi’s Dumplings</strong> in the hutongs for hand-made dumplings.</li>
-<li><strong>Fine Dining ($40 (≈ ₽3 800)+):</strong> <strong>TRB Hutong</strong> for French-Chinese fusion, or <strong>Made in China</strong> at the Grand Hyatt for Peking duck in an elegant setting.</li>
+<li><strong>Street Food ($1-$5):</strong> Wangfujing Snack Street or Donghuamen Night Market (if it reopens). Try lamb skewers, stinky tofu, and sugar-coated hawthorns.</li>
+<li><strong>Casual Dining ($8-$15):</strong> <strong>Din Tai Fung</strong> for soup dumplings (xiao long bao), or <strong>Mr. Shi’s Dumplings</strong> in the hutongs for hand-made dumplings.</li>
+<li><strong>Fine Dining ($40+):</strong> <strong>TRB Hutong</strong> for French-Chinese fusion, or <strong>Made in China</strong> at the Grand Hyatt for Peking duck in an elegant setting.</li>
 </ul>
 
 <h2>Best Time to Visit</h2>
@@ -465,7 +489,7 @@
 
 <h2>Visa & Documents</h2>
 
-<p>Most travelers need a visa to enter China. The standard tourist visa (L-visa) is valid for 30 days and costs around $140 (≈ ₽13 300) for US citizens (processing via a tour operator or agency). I always recommend using a reputable tour operator to handle the paperwork — it saves headaches. You’ll need a valid passport (6+ months), a completed application form, a passport photo, and proof of accommodation and flights.</p>
+<p>Most travelers need a visa to enter China. The standard tourist visa (L-visa) is valid for 30 days and costs around $140for US citizens (processing via a tour operator or agency). I always recommend using a reputable tour operator to handle the paperwork — it saves headaches. You’ll need a valid passport (6+ months), a completed application form, a passport photo, and proof of accommodation and flights.</p>
 
 <p><strong>Important Update for 2026:</strong> Hainan Island now offers visa-free entry for up to 30 days via a registered tour operator. This is a fantastic option if you want to add a beach escape to your trip. Just book through an approved agency.</p>
 
@@ -477,15 +501,15 @@
 
 <table>
 <tr><th>Category</th><th>Cost per Week</th></tr>
-<tr><td>Accommodation (mid-range hotel)</td><td>$490 (≈ ₽46 550) - $910 (≈ ₽86 450)</td></tr>
-<tr><td>Food (mix of street food and restaurants)</td><td>$175 (≈ ₽16 625) - $350 (≈ ₽33 250)</td></tr>
-<tr><td>Transport (metro, taxis, bike rentals)</td><td>$35 (≈ ₽3 325) - $70 (≈ ₽6 650)</td></tr>
-<tr><td>Attractions (entrance fees, tours)</td><td>$80 (≈ ₽7 600) - $150 (≈ ₽14 250)</td></tr>
-<tr><td>Miscellaneous (snacks, drinks, souvenirs)</td><td>$50 (≈ ₽4 750) - $100 (≈ ₽9 500)</td></tr>
-<tr><td><strong>Total</strong></td><td><strong>$830 (≈ ₽78 850) - $1 580 (≈ ₽150 100)</strong></td></tr>
+<tr><td>Accommodation (mid-range hotel)</td><td>$490- $910</td></tr>
+<tr><td>Food (mix of street food and restaurants)</td><td>$175- $350</td></tr>
+<tr><td>Transport (metro, taxis, bike rentals)</td><td>$35- $70</td></tr>
+<tr><td>Attractions (entrance fees, tours)</td><td>$80- $150</td></tr>
+<tr><td>Miscellaneous (snacks, drinks, souvenirs)</td><td>$50- $100</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>$830- $1 580</strong></td></tr>
 </table>
 
-<p>For budget travelers, you can do it for $450 (≈ ₽42 750)-$600 (≈ ₽57 000)/week (hostels, street food, metro only). Luxury travelers should budget $2 500 (≈ ₽237 500)+ per week.</p>
+<p>For budget travelers, you can do it for $450-$600/week (hostels, street food, metro only). Luxury travelers should budget $2 500+ per week.</p>
 
 <h2>10 Travel Tips</h2>
 
@@ -598,6 +622,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -626,6 +651,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -643,8 +669,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

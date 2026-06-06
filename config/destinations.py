@@ -52,8 +52,8 @@ DESTINATIONS = {
         "name_en": "Thailand",
         "slug": "thailand",
         "currency": "THB",
-        "visa_ru": "безвизовый въезд до 30 дней",
-        "visa_en": "visa-free entry for up to 30 days",
+        "visa_ru": "безвизовый въезд до 60 дней для граждан РФ (с 2024 года)",
+        "visa_en": "visa-free entry up to 60 days for Russian citizens (since 2024)",
         "airport_code": "BKK",
         "cities": {
             "bangkok": {
@@ -245,15 +245,15 @@ DESTINATIONS = {
         "airport_code": "SYX",
         "cities": {
             "sanya": {
-                "name_ru": "Санья (Хайнань)",
-                "name_en": "Sanya (Hainan)",
+                "name_ru": "Санья",
+                "name_en": "Sanya",
                 "slug": "sanya",
                 "airport_codes": ["SYX"],
                 "lat": 18.2528, "lon": 109.5120,
             },
             "haikou": {
-                "name_ru": "Хайкоу (Хайнань)",
-                "name_en": "Haikou (Hainan)",
+                "name_ru": "Хайкоу",
+                "name_en": "Haikou",
                 "slug": "haikou",
                 "airport_codes": ["HAK"],
                 "lat": 20.0174, "lon": 110.3492,
@@ -286,7 +286,7 @@ DESTINATIONS = {
         "name_ru_prepositional": "Мальдивах",
         "name_en": "Maldives",
         "slug": "maldives",
-        "currency": "MVR (USD accepted)",
+        "currency": "MVR",
         "visa_ru": "безвизовый въезд до 90 дней для граждан РФ. Бесплатная виза по прибытии.",
         "visa_en": "visa-free entry up to 90 days for Russian citizens. Free visa on arrival.",
         "airport_code": "MLE",
@@ -327,7 +327,7 @@ DESTINATIONS = {
                 "lat": 3.5267, "lon": 72.9258,
             },
             "resort-islands": {
-                "name_ru": "Резорт Острова",
+                "name_ru": "Курортные острова",
                 "name_en": "Resort Islands",
                 "slug": "resort-islands",
                 "airport_codes": ["MLE"],

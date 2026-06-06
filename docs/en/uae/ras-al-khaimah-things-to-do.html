@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Ras Al Khaimah 2026</title>
     <meta name="description" content="15 Best Things to Do in Ras Al Khaimah 2026 Ras Al Khaimah, the northernmost emirate of the United Arab Emirates, has emerged as a premier destination for ad...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/ras-al-khaimah-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/ras-al-khaimah-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Ras Al Khaimah 2026">
     <meta property="og:description" content="15 Best Things to Do in Ras Al Khaimah 2026 Ras Al Khaimah, the northernmost emirate of the United Arab Emirates, has emerged as a premier destination for ad...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/ras-al-khaimah-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/ras-al-khaimah-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://fs.tonkosti.ru/sized/c800x800/8d/ut/8dutekrq5hwc0kwgw4gs4wooc.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ras-al-khaimah.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Ras Al Khaimah 2026</div>
@@ -363,55 +387,54 @@
 <p>Ras Al Khaimah, the northernmost emirate of the United Arab Emirates, has emerged as a premier destination for adventure, culture, and natural beauty. Unlike the towering skyscrapers of Dubai, RAK offers a raw, unspoiled landscape of rugged mountains, pristine beaches, and a deep-rooted heritage. In 2026, the emirate continues to expand its attractions, from the world’s longest zipline to new luxury resorts and cultural districts. Whether you are an adrenaline junkie, a history buff, or a family seeking serene escapes, this guide details the 15 best things to do, with precise ticket prices, opening hours, and insider tips.</p>
 
 <h2>15 Best Attractions in Ras Al Khaimah</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Jebel Jais Flight – The World’s Longest Zipline</h3>
 <p>Soar across the Hajar Mountains on the Jebel Jais Flight, a zipline that stretches 2.83 kilometers (1.76 miles) at speeds up to 150 km/h (93 mph). This 2026 experience includes a new dual-line system, allowing two riders to race side-by-side. The ride lasts approximately 3 minutes, offering breathtaking views of the mountain peaks and wadis below.</p>
-<p><strong>Ticket Price:</strong> AED 299 per person (2026 rate). Combo with Jais Sky Tour (via ferrata) costs AED 499.<br>
+<p><strong>Ticket Price:</strong> $82 (299 AED)per person (2026 rate). Combo with Jais Sky Tour (via ferrata) costs $136 (499 AED)<br>
 <strong>Hours:</strong> Daily 9:00 AM to 5:00 PM (last booking at 4:00 PM). Closed during extreme weather.<br>
 <strong>How to Get There:</strong> Drive 45 minutes from Ras Al Khaimah city via E311, then follow signs to Jebel Jais. Free parking available.<br>
 <strong>Tip:</strong> Book online at least 3 days in advance, as slots sell out quickly. Wear closed-toe shoes and avoid loose jewelry.</p>
 
 <h3>2. Jebel Jais Via Ferrata – Jais Sky Tour</h3>
 <p>This climbing route on Jebel Jais features a series of steel cables, ladders, and a sky bridge suspended 1,200 meters (3,937 feet) above sea level. The tour includes a 20-meter (66-foot) zipline as part of the course. It is suitable for beginners with basic fitness, and all safety gear is provided.</p>
-<p><strong>Ticket Price:</strong> AED 250 per person (2026). Children under 12 must be accompanied by an adult.<br>
+<p><strong>Ticket Price:</strong> $68 (250 AED)per person (2026). Children under 12 must be accompanied by an adult.<br>
 <strong>Hours:</strong> Daily 9:00 AM to 3:00 PM (last entry 2:00 PM).<br>
 <strong>How to Get There:</strong> Same access as Jebel Jais Flight; the meeting point is at the Jais Adventure Peak.<br>
 <strong>Tip:</strong> Arrive 30 minutes early for a safety briefing. Bring water and sunscreen.</p>
 
 <h3>3. Dhayah Fort – Historic Hilltop Fortress</h3>
 <p>Perched on a 350-meter (1,148-foot) hill, Dhayah Fort is the only remaining hilltop fort in the UAE. Dating back to the 16th century, it was the site of a 1819 battle against British forces. The climb rewards visitors with panoramic views of date palm plantations and the Arabian Gulf. In 2026, a new interpretive center explains the fort’s history.</p>
-<p><strong>Ticket Price:</strong> AED 10 per person (free for children under 6).<br>
+<p><strong>Ticket Price:</strong> $3 (10 AED)per person (free for children under 6).<br>
 <strong>Hours:</strong> Saturday to Thursday 9:00 AM to 5:00 PM; Friday 2:00 PM to 7:00 PM.<br>
-<strong>How to Get There:</strong> Located 15 km north of Ras Al Khaimah city; take Ras Al Khaimah-Al Rams Road and follow signs. Taxi from city center costs AED 30.<br>
+<strong>How to Get There:</strong> Located 15 km north of Ras Al Khaimah city; take Ras Al Khaimah-Al Rams Road and follow signs. Taxi from city center costs $8 (30 AED)<br>
 <strong>Tip:</strong> Visit at sunset for cooler temperatures and golden light photography.</p>
 
 <h3>4. Ras Al Khaimah National Museum</h3>
 <p>Housed in a historic fort that once served as the ruling family’s residence, this museum showcases archaeological finds, traditional weapons, and pearl-diving equipment. The museum’s 2026 renovation added interactive displays on Bedouin life and the emirate’s maritime history. It is a must for understanding RAK’s culture.</p>
-<p><strong>Ticket Price:</strong> AED 20 for adults, AED 10 for students (ages 6-18).<br>
+<p><strong>Ticket Price:</strong> $5 (20 AED)for adults, $3 (10 AED)for students (ages 6-18).<br>
 <strong>Hours:</strong> Sunday to Thursday 8:00 AM to 6:00 PM; Friday 2:00 PM to 6:00 PM; Saturday 9:00 AM to 6:00 PM.<br>
 <strong>How to Get There:</strong> Located at Al Hisn Road in the old city. Walkable from the RAK Corniche.<br>
 <strong>Tip:</strong> Combine with a visit to the adjacent Souq Al Qasba for traditional crafts.</p>
 
 <h3>5. Al Marjan Island – Beach and Water Sports</h3>
 <p>This artificial archipelago of four coral-shaped islands offers white-sand beaches, clear waters, and a range of water sports. In 2026, the island features a new floating Aqua Park with inflatable obstacles. The public beach at Al Marjan has shaded areas and showers.</p>
-<p><strong>Ticket Price:</strong> Free entry to public beach. Aqua Park costs AED 100 per person (2-hour session). Jet ski rental starts at AED 250 for 30 minutes.<br>
+<p><strong>Ticket Price:</strong> Free entry to public beach. Aqua Park costs $27 (100 AED)per person (2-hour session). Jet ski rental starts at $68 (250 AED)for 30 minutes.<br>
 <strong>Hours:</strong> Public beach open 24/7; Aqua Park 10:00 AM to 6:00 PM.<br>
 <strong>How to Get There:</strong> Drive 20 minutes from city center via Sheikh Mohammed bin Salem Road. Free parking at the beach.<br>
 <strong>Tip:</strong> Weekdays are less crowded. Bring your own snorkeling gear for the reef near Island 3.</p>
 
 <h3>6. Bear Grylls Explorers Camp</h3>
 <p>Inspired by the survival expert, this camp on Jebel Jais offers multi-activity adventures including rock climbing, abseiling, and survival skills training. The 2026 season introduces a night survival challenge under starlight. It is suitable for families and groups.</p>
-<p><strong>Ticket Price:</strong> AED 350 per person for the 4-hour Explorer Experience. Full-day packages from AED 550.<br>
+<p><strong>Ticket Price:</strong> $95 (350 AED)per person for the 4-hour Explorer Experience. Full-day packages from $150 (550 AED)<br>
 <strong>Hours:</strong> Daily 8:00 AM to 6:00 PM (bookings required).<br>
 <strong>How to Get There:</strong> Located near the Jebel Jais Flight base; shuttle from the parking area.<br>
 <strong>Tip:</strong> Wear long sleeves and pants to protect from sun and rocks.</p>
 
 <h3>7. Suwaidi Pearls Farm</h3>
 <p>Experience the UAE’s pearl-diving heritage at this working farm. Visitors take a short boat ride to the farm, learn about oyster cultivation, and can open an oyster to find a pearl. The 2026 tour includes a traditional dhow cruise and a pearl jewelry workshop.</p>
-<p><strong>Ticket Price:</strong> AED 150 per person (includes boat ride and one oyster opening). Extra oysters AED 50 each.<br>
+<p><strong>Ticket Price:</strong> $41 (150 AED)per person (includes boat ride and one oyster opening). Extra oysters $14 (50 AED)each.<br>
 <strong>Hours:</strong> Tours at 10:00 AM and 2:00 PM (Tuesday to Sunday). Closed Mondays.<br>
-<strong>How to Get There:</strong> Located in Al Rams area, 30 km north of city. Taxi costs AED 60.<br>
+<strong>How to Get There:</strong> Located in Al Rams area, 30 km north of city. Taxi costs $16 (60 AED)<br>
 <strong>Tip:</strong> Book online for a guaranteed slot. The farm has a café serving local seafood.</p>
 
 <h3>8. RAK Corniche – Waterfront Promenade</h3>
@@ -430,28 +453,28 @@
 
 <h3>10. RAK Golf Club – Championship Course</h3>
 <p>This 18-hole, par-72 course is set against the Hajar Mountains and designed by Peter Harradine. The 2026 season includes a new floodlit driving range and a golf academy. It is one of the top courses in the UAE.</p>
-<p><strong>Ticket Price:</strong> Green fees AED 350 (weekdays), AED 450 (weekends). Club rental AED 150.<br>
+<p><strong>Ticket Price:</strong> Green fees $95 (350 AED)(weekdays), $123 (450 AED)(weekends). Club rental $41 (150 AED)<br>
 <strong>Hours:</strong> Daily 6:30 AM to 8:00 PM (last tee time 6:00 PM).<br>
-<strong>How to Get There:</strong> Located on Al Jazirah Al Hamra Road, 15 km from city center. Taxi costs AED 40.<br>
-<strong>Tip:</strong> Book a twilight tee time (after 3:00 PM) for a reduced rate of AED 250.</p>
+<strong>How to Get There:</strong> Located on Al Jazirah Al Hamra Road, 15 km from city center. Taxi costs $11 (40 AED)<br>
+<strong>Tip:</strong> Book a twilight tee time (after 3:00 PM) for a reduced rate of $68 (250 AED)</p>
 
 <h3>11. Ice Land Water Park</h3>
 <p>This themed water park offers over 30 rides and slides, including a wave pool and a lazy river. The 2026 expansion includes a new “Arctic Zone” with snow play areas and a tube slide. It is popular for families.</p>
-<p><strong>Ticket Price:</strong> AED 150 for adults, AED 100 for children (under 1.2 meters).<br>
+<p><strong>Ticket Price:</strong> $41 (150 AED)for adults, $27 (100 AED)for children (under 1.2 meters).<br>
 <strong>Hours:</strong> Daily 10:00 AM to 6:00 PM (closed for maintenance on Tuesdays in low season).<br>
 <strong>How to Get There:</strong> Located on E311 near the RAK Exhibition Center. Free parking.<br>
-<strong>Tip:</strong> Bring towels and sunscreen. Lockers are available for AED 30.</p>
+<strong>Tip:</strong> Bring towels and sunscreen. Lockers are available for $8 (30 AED)</p>
 
 <h3>12. Al Wadi Nature Reserve – Desert Safari</h3>
 <p>This protected area covers 500 hectares and is home to Arabian oryx, gazelles, and over 100 bird species. Guided desert safaris in 4x4 vehicles or on horseback are available. The reserve includes a luxury desert camp for overnight stays.</p>
-<p><strong>Ticket Price:</strong> AED 250 per person for a 2-hour safari (includes guide and refreshments). Horseback rides from AED 400.<br>
+<p><strong>Ticket Price:</strong> $68 (250 AED)per person for a 2-hour safari (includes guide and refreshments). Horseback rides from $109 (400 AED)<br>
 <strong>Hours:</strong> Safaris at 7:00 AM and 4:00 PM daily.<br>
-<strong>How to Get There:</strong> Located near Al Hamra, 25 km south of city. Taxi costs AED 50.<br>
+<strong>How to Get There:</strong> Located near Al Hamra, 25 km south of city. Taxi costs $14 (50 AED)<br>
 <strong>Tip:</strong> Book the sunset safari for the best wildlife viewing and photography.</p>
 
 <h3>13. RAK Art & Culture Festival (Seasonal)</h3>
 <p>Held annually from January to March, this festival features art exhibitions, live performances, and workshops at Al Qasba and the National Museum. In 2026, the festival runs from January 15 to March 1, with a focus on contemporary Emirati artists.</p>
-<p><strong>Ticket Price:</strong> Free entry to most events. Workshops cost AED 50-100.<br>
+<p><strong>Ticket Price:</strong> Free entry to most events. Workshops cost $14 (50 AED)-100.<br>
 <strong>Hours:</strong> Varies; typically 10:00 AM to 10:00 PM.<br>
 <strong>How to Get There:</strong> Al Qasba is on Al Qasba Road, 5 minutes from the city center.<br>
 <strong>Tip:</strong> Check the official RAK tourism website for the full program.</p>
@@ -465,7 +488,7 @@
 
 <h3>15. RAK Pearls Island – Luxury Resort Experience</h3>
 <p>This private island off Al Marjan is home to the Ritz-Carlton Ras Al Khaimah, Al Wadi Desert (opened 2025). The island offers a spa, fine dining, and a private beach. Day passes are available for non-guests.</p>
-<p><strong>Ticket Price:</strong> Day pass AED 350 per person (includes beach access, pool, and lunch credit of AED 100).<br>
+<p><strong>Ticket Price:</strong> Day pass $95 (350 AED)per person (includes beach access, pool, and lunch credit of $27 (100 AED)).<br>
 <strong>Hours:</strong> Daily 9:00 AM to 6:00 PM.<br>
 <strong>How to Get There:</strong> Access via a shuttle boat from Al Marjan Marina (departs every 30 minutes).<br>
 <strong>Tip:</strong> Book the day pass at least one week in advance during peak season (November to March).</p>
@@ -473,30 +496,29 @@
 <h2>Optimal Itineraries for Ras Al Khaimah</h2>
 
 <h3>1-Day Itinerary: Highlights Tour</h3>
-<p>Start at 8:00 AM at Jebel Jais for the zipline or via ferrata (allow 3 hours). Drive to Dhayah Fort (30 minutes) for a quick climb and photos. Lunch at a local restaurant in Al Rams (e.g., Al Fanar Restaurant, AED 60 per person). Afternoon: Visit the National Museum (1.5 hours) and stroll the Corniche. Evening: Dinner at Al Marjan Island (e.g., The Beach House) and a sunset walk. Total cost: AED 400-500 per person (excluding transport).</p>
+<p>Start at 8:00 AM at Jebel Jais for the zipline or via ferrata (allow 3 hours). Drive to Dhayah Fort (30 minutes) for a quick climb and photos. Lunch at a local restaurant in Al Rams (e.g., Al Fanar Restaurant, $16 (60 AED)per person). Afternoon: Visit the National Museum (1.5 hours) and stroll the Corniche. Evening: Dinner at Al Marjan Island (e.g., The Beach House) and a sunset walk. Total cost: $109 (400 AED)-500 per person (excluding transport).</p>
 
 <h3>2-Day Itinerary: Adventure & Culture</h3>
 <p><strong>Day 1:</strong> Morning at Jebel Jais (zipline or Bear Grylls camp). Afternoon at Suwaidi Pearls Farm (2-hour tour). Evening at RAK Corniche and dinner at the floating market.<br>
-<strong>Day 2:</strong> Morning at Al Wadi Nature Reserve (safari at 7:00 AM). Late morning at Jazirat Al Hamra (1 hour). Afternoon at Ice Land Water Park (3 hours). Evening at RAK Golf Club for a twilight round. Total cost: AED 800-1,000 per person.</p>
+<strong>Day 2:</strong> Morning at Al Wadi Nature Reserve (safari at 7:00 AM). Late morning at Jazirat Al Hamra (1 hour). Afternoon at Ice Land Water Park (3 hours). Evening at RAK Golf Club for a twilight round. Total cost: $218 (800 AED)-1,000 per person.</p>
 
 <h3>3-Day Itinerary: Full Immersion</h3>
-<p><strong>Day 1:</strong> Jebel Jais activities (zipline and via ferrata). Visit Dhayah Fort and Wadi Shawka for a late afternoon swim. Dinner at a local farm-to-table restaurant (e.g., The Farm, AED 80).<br>
-<strong>Day 2:</strong> Al Wadi Nature Reserve morning safari. Suwaidi Pearls Farm afternoon. Evening at the RAK Art & Culture Festival (if in season) or a dhow cruise on the creek (AED 150 per person).<br>
-<strong>Day 3:</strong> Morning at Al Marjan Island (beach and Aqua Park). Afternoon at the National Museum and Jazirat Al Hamra. Departure. Total cost: AED 1,200-1,500 per person.</p>
+<p><strong>Day 1:</strong> Jebel Jais activities (zipline and via ferrata). Visit Dhayah Fort and Wadi Shawka for a late afternoon swim. Dinner at a local farm-to-table restaurant (e.g., The Farm, $22 (80 AED)).<br>
+<strong>Day 2:</strong> Al Wadi Nature Reserve morning safari. Suwaidi Pearls Farm afternoon. Evening at the RAK Art & Culture Festival (if in season) or a dhow cruise on the creek ($41 (150 AED)per person).<br>
+<strong>Day 3:</strong> Morning at Al Marjan Island (beach and Aqua Park). Afternoon at the National Museum and Jazirat Al Hamra. Departure. Total cost: $327 (1 $55 (200 AED))-1,500 per person.</p>
 
 <h2>Tours & Excursions</h2>
 <p>For a hassle-free experience, consider these guided tours available in 2026:</p>
 <ul>
-<li><strong>Jebel Jais Adventure Combo:</strong> Includes zipline, via ferrata, and lunch. AED 599 per person. Duration 5 hours. Book via RAK Tourism website.</li>
-<li><strong>Desert Safari with Dinner:</strong> Dune bashing, camel ride, BBQ dinner, and stargazing. AED 250 per person. Departs at 3:00 PM from RAK city.</li>
-<li><strong>Pearl Diving Heritage Tour:</strong> Full-day tour covering Suwaidi Pearls Farm, Al Rams fishing village, and a traditional dhow lunch. AED 400 per person. Includes transport.</li>
-<li><strong>Mountain Bike Tour:</strong> Guided e-bike ride on Jebel Jais trails. AED 300 per person (bike and helmet included). 3 hours.</li>
-<li><strong>Sunset Dhow Cruise:</strong> 2-hour cruise on the creek with dinner. AED 150 per person. Departs at 5:00 PM from Al Qasba.</li>
+<li><strong>Jebel Jais Adventure Combo:</strong> Includes zipline, via ferrata, and lunch. $163 (599 AED)per person. Duration 5 hours. Book via RAK Tourism website.</li>
+<li><strong>Desert Safari with Dinner:</strong> Dune bashing, camel ride, BBQ dinner, and stargazing. $68 (250 AED)per person. Departs at 3:00 PM from RAK city.</li>
+<li><strong>Pearl Diving Heritage Tour:</strong> Full-day tour covering Suwaidi Pearls Farm, Al Rams fishing village, and a traditional dhow lunch. $109 (400 AED)per person. Includes transport.</li>
+<li><strong>Mountain Bike Tour:</strong> Guided e-bike ride on Jebel Jais trails. $82 (300 AED)per person (bike and helmet included). 3 hours.</li>
+<li><strong>Sunset Dhow Cruise:</strong> 2-hour cruise on the creek with dinner. $41 (150 AED)per person. Departs at 5:00 PM from Al Qasba.</li>
 </ul>
 <p><a href="https://tp.media/click?shmarker=736226&promo_id=3774&source_type=link&type=click&campaign_id=103&trs=search_tours_ras_al_khaimah" target="_blank" rel="nofollow sponsored" class="affiliate-link">🏝 Book a tour to Ras Al Khaimah</a></p>
 
 <h2>Free Attractions in Ras Al Khaimah</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <p>Several attractions cost nothing to enjoy:</p>
 <ul>
 <li><strong>RAK Corniche:</strong> Walk, jog, or picnic with views of the creek and mountains.</li>
@@ -587,6 +609,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -615,6 +638,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -632,8 +656,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Nusa Dua 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Nusa Dua 2026: Budget to Luxury Nusa Dua, located on the southern tip of Bali, is renowned for its pristine white-sand beaches, world-class ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Nusa Dua 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Nusa Dua 2026: Budget to Luxury Nusa Dua, located on the southern tip of Bali, is renowned for its pristine white-sand beaches, world-class ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/nusa-dua-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/nusa-dua.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Nusa Dua 2026: Budget to Luxury</div>
@@ -359,70 +383,132 @@
         <div class="article-body">
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
-<p>Nusa Dua, located on the southern tip of Bali, is renowned for its pristine white-sand beaches, world-class golf courses, and meticulously planned resort enclave. Unlike the bustling streets of Kuta or the artistic vibe of Ubud, Nusa Dua offers a serene, upscale atmosphere with a heavy focus on hotel infrastructure. The area is divided into two main zones: the gated BTDC (Bali Tourism Development Corporation) complex, which houses most of the five-star resorts with direct beach access, and the surrounding neighborhoods like Tanjung Benoa and Sawangan, which offer a mix of mid-range and budget accommodations. As of 2026, the average nightly rate for a standard room in a luxury resort in the BTDC area hovers around $250 (≈ ₽23 750)–$450  (≈ ₽42 750) while mid-range hotels in Sawangan range from $60 (≈ ₽5 700) to $120. (≈ ₽11 400) Budget options, often found in small guesthouses along Jalan Pratama or near the Bali Collection shopping center, start as low as $25 (≈ ₽2 375) per night. Prices have risen approximately 8% since 2024 due to increased demand from Australian and European tourists, but Nusa Dua remains a premium destination for those seeking calm and security.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="en" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Nusa Dua, located on the southern tip of Bali, is renowned for its pristine white-sand beaches, world-class golf courses, and meticulously planned resort enclave. Unlike the bustling streets of Kuta or the artistic vibe of Ubud, Nusa Dua offers a serene, upscale atmosphere with a heavy focus on hotel infrastructure. The area is divided into two main zones: the gated BTDC (Bali Tourism Development Corporation) complex, which houses most of the five-star resorts with direct beach access, and the surrounding neighborhoods like Tanjung Benoa and Sawangan, which offer a mix of mid-range and budget accommodations. As of 2026, the average nightly rate for a standard room in a luxury resort in the BTDC area hovers around $250–$450while mid-range hotels in Sawangan range from $60to $120Budget options, often found in small guesthouses along Jalan Pratama or near the Bali Collection shopping center, start as low as $25per night. Prices have risen approximately 8% since 2024 due to increased demand from Australian and European tourists, but Nusa Dua remains a premium destination for those seeking calm and security.</p>
 
 <p>The hotel landscape in Nusa Dua is dominated by large international chains such as The St. Regis, The Ritz-Carlton, and Westin, but there is a growing trend of boutique villas and eco-friendly lodges in the Sawangan area. The BTDC complex itself is a self-contained resort city with 24-hour security, manicured gardens, and a central convention center. Neighborhoods outside the BTDC gate offer more local flavor, with warungs (small restaurants), dive shops, and water sports facilities. For 2026, the key trend is the integration of wellness tourism, with many hotels adding dedicated yoga pavilions, organic farm-to-table restaurants, and advanced spa treatments. Whether you are a backpacker or a honeymooner, Nusa Dua provides a distinct choice for every traveler.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="la" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_976898" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton, and Westin, but there is a growing trend of boutique villas and eco-friendly lodges in the Sawangan area. The BTDC complex itself is a self-contained resort city with 24-hour security, manicured gardens, and a central convention center. Neighborhoods outside the BTDC gate offer more local flavor, with warungs - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton, and Westin, but there is a growing trend of boutique villas and eco-friendly lodges in the Sawangan area. The BTDC complex itself is a self-contained resort city with 24-hour security, manicured gardens, and a central convention center. Neighborhoods outside the BTDC gate offer more local flavor, with warungs - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton, and Westin, but there is a growing trend of boutique villas and eco-friendly lodges in the Sawangan area. The BTDC complex itself is a self-contained resort city with 24-hour security, manicured gardens, and a central convention center. Neighborhoods outside the BTDC gate offer more local flavor, with warungs - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_976898 .hc-slide');var d=document.querySelectorAll('#hc_976898 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_976898 .hc-slide');var d=document.querySelectorAll('#hc_976898 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_976898 .hc-slide');var d=document.querySelectorAll('#hc_976898 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton, and Westin, but there is a growing trend of boutique villas and eco-friendly lodges in the Sawangan area. The BTDC complex itself is a self-contained resort city with 24-hour security, manicured gardens, and a central convention center. Neighborhoods outside the BTDC gate offer more local flavor, with warungs &bull; 3 photos</p></div>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Grandmas Plus Hotel Airport Nusa Dua</h3>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ai" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Located just 3 kilometers from the BTDC area, Grandmas Plus offers clean, compact rooms starting at $32 (≈ ₽3 040) per night in 2026. The hotel features a small swimming pool, a 24-hour front desk, and free Wi-Fi. Each room includes air conditioning, a flat-screen TV, and an en-suite bathroom with hot water. The on-site restaurant serves Indonesian staples like nasi goreng and mie goreng for under $4. (≈ ₽380)</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_418715" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Grandmas Plus Hotel Airport Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Grandmas Plus Hotel Airport Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_418715 .hc-slide');var d=document.querySelectorAll('#hc_418715 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_418715 .hc-slide');var d=document.querySelectorAll('#hc_418715 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grandmas Plus Hotel Airport Nusa Dua &bull; 2 photos</p></div>
+<p>Located just 3 kilometers from the BTDC area, Grandmas Plus offers clean, compact rooms starting at $32per night in 2026. The hotel features a small swimming pool, a 24-hour front desk, and free Wi-Fi. Each room includes air conditioning, a flat-screen TV, and an en-suite bathroom with hot water. The on-site restaurant serves Indonesian staples like nasi goreng and mie goreng for under $4</p>
+<div id="hc_643475" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Grandmas Plus offers clean, compact rooms starting at $32per night in 2026. The hotel features a small swimming pool, a 24-hour front desk, and free Wi-Fi. Each room includes air conditioning, a flat-screen TV, and an en-suite bathroom with hot water. The on-site restaurant serves Indonesian staples like nasi goreng and mie goreng for under $4 - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Grandmas Plus offers clean, compact rooms starting at $32per night in 2026. The hotel features a small swimming pool, a 24-hour front desk, and free Wi-Fi. Each room includes air conditioning, a flat-screen TV, and an en-suite bathroom with hot water. The on-site restaurant serves Indonesian staples like nasi goreng and mie goreng for under $4 - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_643475 .hc-slide');var d=document.querySelectorAll('#hc_643475 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_643475 .hc-slide');var d=document.querySelectorAll('#hc_643475 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grandmas Plus offers clean, compact rooms starting at $32per night in 2026. The hotel features a small swimming pool, a 24-hour front desk, and free Wi-Fi. Each room includes air conditioning, a flat-screen TV, and an en-suite bathroom with hot water. The on-site restaurant serves Indonesian staples like nasi goreng and mie goreng for under $4 &bull; 2 photos</p></div>
 <p><strong>Pros:</strong> Close to the airport (15 minutes by taxi), very affordable, quiet neighborhood. <strong>Cons:</strong> No direct beach access, limited breakfast options, rooms are small (approximately 18 square meters).</p>
 
 <h3>2. Swiss-Belinn Nusa Dua</h3>
-<p>This three-star property on Jalan Pratama offers a pool, a fitness center, and a restaurant. Rates in 2026 start at $40 (≈ ₽3 800) per night for a standard double room. The hotel provides a free shuttle to the nearby Geger Beach (10 minutes away) and to the Bali Collection shopping mall. Rooms are modern with wooden floors and rainfall showers.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="pr" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_601610" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Swiss-Belinn Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Swiss-Belinn Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Swiss-Belinn Nusa Dua - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_601610 .hc-slide');var d=document.querySelectorAll('#hc_601610 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_601610 .hc-slide');var d=document.querySelectorAll('#hc_601610 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_601610 .hc-slide');var d=document.querySelectorAll('#hc_601610 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Swiss-Belinn Nusa Dua &bull; 3 photos</p></div>
+<p>This three-star property on Jalan Pratama offers a pool, a fitness center, and a restaurant. Rates in 2026 start at $40per night for a standard double room. The hotel provides a free shuttle to the nearby Geger Beach (10 minutes away) and to the Bali Collection shopping mall. Rooms are modern with wooden floors and rainfall showers.</p>
 <p><strong>Pros:</strong> Good value for money, helpful staff, free shuttle service. <strong>Cons:</strong> Beach is not walkable (requires shuttle), pool is small, breakfast buffet is basic (eggs, toast, fruit).</p>
 
 <h3>3. Nusa Dua Beach Hotel &amp; Spa (Budget Wing)</h3>
-<p>While primarily a luxury resort, the budget wing of Nusa Dua Beach Hotel offers garden-view rooms from $45 (≈ ₽4 275) per night in 2026. Guests have access to the main pool, beachfront, and all facilities including the spa and several restaurants. The budget rooms are older but well-maintained with traditional Balinese decor.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>While primarily a luxury resort, the budget wing of Nusa Dua Beach Hotel offers garden-view rooms from $45per night in 2026. Guests have access to the main pool, beachfront, and all facilities including the spa and several restaurants. The budget rooms are older but well-maintained with traditional Balinese decor.</p>
 <p><strong>Pros:</strong> Access to five-star facilities for a budget price, direct beach access, lush gardens. <strong>Cons:</strong> Budget rooms are in a separate block with no sea view, check-in can be slow, Wi-Fi is spotty in the budget wing.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Amnaya Resort Nusa Dua</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Nu" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Amnaya Resort, located in the quiet Tanjung Benoa area, offers a serene escape with Balinese-inspired architecture. Rates in 2026 range from $70 (≈ ₽6 650) to $95 (≈ ₽9 025) per night for a deluxe room. The resort features a large lagoon-style pool, a spa with traditional Balinese massages ($35 (≈ ₽3 325) for 60 minutes), and a restaurant serving Indonesian and Western cuisine. Rooms are spacious (35 square meters) with four-poster beds and private balconies overlooking the garden.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_642750" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Amnaya Resort Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Amnaya Resort Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_642750 .hc-slide');var d=document.querySelectorAll('#hc_642750 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_642750 .hc-slide');var d=document.querySelectorAll('#hc_642750 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amnaya Resort Nusa Dua &bull; 2 photos</p></div>
+<p>Amnaya Resort, located in the quiet Tanjung Benoa area, offers a serene escape with Balinese-inspired architecture. Rates in 2026 range from $70to $95per night for a deluxe room. The resort features a large lagoon-style pool, a spa with traditional Balinese massages ($35for 60 minutes), and a restaurant serving Indonesian and Western cuisine. Rooms are spacious (35 square meters) with four-poster beds and private balconies overlooking the garden.</p>
+<div id="hc_608758" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Amnaya Resort, located in the quiet Tanjung Benoa area, offers a serene escape with Balinese-inspired architecture. Rates in 2026 range from $70to $95per night for a deluxe room. The resort features a large lagoon-style pool, a spa with traditional Balinese massages - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Amnaya Resort, located in the quiet Tanjung Benoa area, offers a serene escape with Balinese-inspired architecture. Rates in 2026 range from $70to $95per night for a deluxe room. The resort features a large lagoon-style pool, a spa with traditional Balinese massages - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_608758 .hc-slide');var d=document.querySelectorAll('#hc_608758 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_608758 .hc-slide');var d=document.querySelectorAll('#hc_608758 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amnaya Resort, located in the quiet Tanjung Benoa area, offers a serene escape with Balinese-inspired architecture. Rates in 2026 range from $70to $95per night for a deluxe room. The resort features a large lagoon-style pool, a spa with traditional Balinese massages &bull; 2 photos</p></div>
 <p><strong>Highlights:</strong> Free afternoon tea daily, complimentary yoga classes on Tuesday and Thursday, and a free shuttle to Nusa Dua beach (5 minutes).</p>
 
 <h3>2. Hotel Santika Nusa Dua</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sa" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>A reliable three-star chain hotel located near the Bali Convention Center. Rates start at $55 (≈ ₽5 225) per night in 2026, rising to $80 (≈ ₽7 600) during peak season (July-August). The hotel has a large outdoor pool, a kids' club, and a 24-hour gym. Rooms are functional with modern furniture, a work desk, and a safe. The breakfast buffet is generous with both Indonesian and continental options.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="lo" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Highlights:</strong> Convenient location for business travelers (walking distance to the convention center), excellent value for families, and a 24-hour room service menu with prices under $10. (≈ ₽950)</p>
+<div id="hc_6883" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Santika Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Santika Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Santika Nusa Dua - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_6883 .hc-slide');var d=document.querySelectorAll('#hc_6883 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_6883 .hc-slide');var d=document.querySelectorAll('#hc_6883 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_6883 .hc-slide');var d=document.querySelectorAll('#hc_6883 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Santika Nusa Dua &bull; 3 photos</p></div>
+<p>A reliable three-star chain hotel located near the Bali Convention Center. Rates start at $55per night in 2026, rising to $80during peak season (July-August). The hotel has a large outdoor pool, a kids' club, and a 24-hour gym. Rooms are functional with modern furniture, a work desk, and a safe. The breakfast buffet is generous with both Indonesian and continental options.</p>
+<p><strong>Highlights:</strong> Convenient location for business travelers (walking distance to the convention center), excellent value for families, and a 24-hour room service menu with prices under $10</p>
 
 <h3>3. The Sakala Resort Bali</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>An all-suite resort in the Sawangan area, The Sakala offers one-bedroom suites starting at $110 (≈ ₽10 450) per night in 2026. Each suite includes a separate living area, a kitchenette, and a large bathroom with a bathtub. The resort boasts a stunning infinity pool overlooking the ocean, a private beach club, and a fine-dining restaurant called "Di Mare." The property is known for its exceptional service and spacious accommodations (suites are 55 square meters).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_808979" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="The Sakala Resort Bali - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="The Sakala Resort Bali - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Sakala Resort Bali - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_808979 .hc-slide');var d=document.querySelectorAll('#hc_808979 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_808979 .hc-slide');var d=document.querySelectorAll('#hc_808979 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_808979 .hc-slide');var d=document.querySelectorAll('#hc_808979 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Sakala Resort Bali &bull; 3 photos</p></div>
+<p>An all-suite resort in the Sawangan area, The Sakala offers one-bedroom suites starting at $110per night in 2026. Each suite includes a separate living area, a kitchenette, and a large bathroom with a bathtub. The resort boasts a stunning infinity pool overlooking the ocean, a private beach club, and a fine-dining restaurant called "Di Mare." The property is known for its exceptional service and spacious accommodations (suites are 55 square meters).</p>
 <p><strong>Highlights:</strong> Free airport transfer for stays of 3 nights or more, a daily afternoon tea service, and a 24-hour butler service for suite guests.</p>
 
 <h3>4. Novotel Bali Nusa Dua</h3>
-<p>A family-friendly four-star hotel within the BTDC complex. Rates range from $85 (≈ ₽8 075) to $130 (≈ ₽12 350) per night in 2026. The hotel features multiple pools (including a dedicated kids' pool), a water slide, a spa, and several restaurants including a Japanese teppanyaki grill. Rooms are modern with Balinese accents, and many offer garden or partial ocean views. The property is a 5-minute walk from the beach.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_573081" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Novotel Bali Nusa Dua - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Novotel Bali Nusa Dua - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_573081 .hc-slide');var d=document.querySelectorAll('#hc_573081 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_573081 .hc-slide');var d=document.querySelectorAll('#hc_573081 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Novotel Bali Nusa Dua &bull; 2 photos</p></div>
+<p>A family-friendly four-star hotel within the BTDC complex. Rates range from $85to $130per night in 2026. The hotel features multiple pools (including a dedicated kids' pool), a water slide, a spa, and several restaurants including a Japanese teppanyaki grill. Rooms are modern with Balinese accents, and many offer garden or partial ocean views. The property is a 5-minute walk from the beach.</p>
 <p><strong>Highlights:</strong> Kids stay and eat free (under 12), a large fitness center with daily classes, and direct access to the BTDC shuttle bus that stops at Bali Collection and the beach.</p>
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. The St. Regis Bali Resort</h3>
-<p>Arguably the most prestigious hotel in Nusa Dua, The St. Regis offers an unparalleled level of luxury. Rates in 2026 start at $450 (≈ ₽42 750) per night for a garden-view suite, with ocean-view suites reaching $800. (≈ ₽76 000) The resort features a 12,000-square-foot lagoon pool, a private beach with butler service, and the renowned "Kayuputi" restaurant (a fine-dining establishment with a 7-course tasting menu for $150 (≈ ₽14 250) per person). Each suite is exquisitely decorated with Balinese art, marble bathrooms, and a private terrace. The resort also offers a 24-hour butler service, a Remède Spa with a hydrotherapy pool, and a daily champagne sabering ritual at sunset.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_681085" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="The St. Regis Bali Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The St. Regis Bali Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_681085 .hc-slide');var d=document.querySelectorAll('#hc_681085 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_681085 .hc-slide');var d=document.querySelectorAll('#hc_681085 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The St. Regis Bali Resort &bull; 2 photos</p></div>
+<p>Arguably the most prestigious hotel in Nusa Dua, The St. Regis offers an unparalleled level of luxury. Rates in 2026 start at $450per night for a garden-view suite, with ocean-view suites reaching $800The resort features a 12,000-square-foot lagoon pool, a private beach with butler service, and the renowned "Kayuputi" restaurant (a fine-dining establishment with a 7-course tasting menu for $150per person). Each suite is exquisitely decorated with Balinese art, marble bathrooms, and a private terrace. The resort also offers a 24-hour butler service, a Remède Spa with a hydrotherapy pool, and a daily champagne sabering ritual at sunset.</p>
 <p><strong>Features:</strong> Private butler for every suite, a 24-hour fitness center with personal trainers, and a complimentary Rolls-Royce airport transfer for suite guests.</p>
 
 <h3>2. The Ritz-Carlton, Bali</h3>
-<p>Perched on a cliff in the Sawangan area, The Ritz-Carlton offers breathtaking ocean views and a serene atmosphere. Rates start at $350 (≈ ₽33 250) per night in 2026 for a resort-view room, with suites starting at $600. (≈ ₽57 000) The hotel features a 60-meter infinity pool, a world-class spa with 11 treatment rooms, and six restaurants including "Beach Grill" for fresh seafood. Rooms are spacious (45 square meters) with floor-to-ceiling windows, a deep soaking tub, and a private balcony. The resort also has a kids' club, a cooking school, and a chapel for weddings.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>Perched on a cliff in the Sawangan area, The Ritz-Carlton offers breathtaking ocean views and a serene atmosphere. Rates start at $350per night in 2026 for a resort-view room, with suites starting at $600The hotel features a 60-meter infinity pool, a world-class spa with 11 treatment rooms, and six restaurants including "Beach Grill" for fresh seafood. Rooms are spacious (45 square meters) with floor-to-ceiling windows, a deep soaking tub, and a private balcony. The resort also has a kids' club, a cooking school, and a chapel for weddings.</p>
 <p><strong>Features:</strong> A dedicated concierge for each guest, a 24-hour fitness center with ocean views, and a complimentary afternoon tea in the lobby lounge.</p>
 
 <h3>3. Mulia Resort &amp; Villas Nusa Dua</h3>
-<p>One of the largest luxury resorts in the area, Mulia offers a mix of rooms, suites, and private villas. Rates in 2026 start at $280 (≈ ₽26 600) per night for a garden-view room, with villas starting at $1 200. (≈ ₽114 000) The resort is known for its opulent design, with crystal chandeliers, marble floors, and a massive 120-meter lagoon pool. Facilities include 12 dining venues, a 5,000-square-meter spa, a fitness center, and a private beach. The "Mulia Villa" category features private pools, outdoor living areas, and personal butler service.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p>One of the largest luxury resorts in the area, Mulia offers a mix of rooms, suites, and private villas. Rates in 2026 start at $280per night for a garden-view room, with villas starting at $1 200The resort is known for its opulent design, with crystal chandeliers, marble floors, and a massive 120-meter lagoon pool. Facilities include 12 dining venues, a 5,000-square-meter spa, a fitness center, and a private beach. The "Mulia Villa" category features private pools, outdoor living areas, and personal butler service.</p>
 <p><strong>Features:</strong> A 24-hour butler service for villa guests, a complimentary shuttle to Bali Collection, and a daily high tea service in the grand lobby.</p>
 
 <h2>How to Choose the Right Area</h2>
@@ -430,15 +516,12 @@
 <p><strong>For Beach Lovers:</strong> The best area is inside the BTDC complex, where you have direct access to the calm, protected beaches of Nusa Dua. Hotels like The St. Regis and Westin are right on the sand, with loungers, umbrellas, and water sports like kayaking and paddleboarding. The water is generally calm due to a reef barrier, making it ideal for swimming and families with children. Avoid the Tanjung Benoa area if you want a quiet beach, as it is busier with jet ski and banana boat operators.</p>
 
 <p><strong>For Sightseeing:</strong> Choose a hotel near the Bali Collection shopping center or on Jalan Pratama. These locations provide easy access to the main road for trips to Uluwatu Temple (30 minutes by car), the Garuda Wisnu Kencana Cultural Park (20 minutes), and the waterblow at Nusa Dua beach (10 minutes). Budget hotels like Swiss-Belinn are well-positioned for this purpose, as they are close to taxi stands and local bus stops. For a more cultural experience, stay in Sawangan near the Ritz-Carlton, which is close to the ancient Pura Geger temple.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="ne" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p><strong>For Nightlife:</strong> Nusa Dua is not a party destination, but for evening entertainment, stay near the BTDC complex. The Bali Collection has several bars and restaurants that stay open until 11 PM, and the Westin and Novotel have live music on weekends. For a livelier scene, you need to travel to Jimbaran (15 minutes by taxi) or Seminyak (30 minutes), so a hotel with easy taxi access like the Santika or Amnaya is preferable. Avoid staying in the far south of Sawangan if you want to walk to bars, as the area is very quiet after 9 PM.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="wi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Booking Tips</h2>
 
 <p>To save money on your Nusa Dua hotel in 2026, book at least 45 days in advance for the best rates, especially for luxury properties. Use aggregators like <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> or <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> to compare prices, but also check the hotel's own website for direct booking perks such as free breakfast or room upgrades. The cheapest months to visit are February, March, and November, excluding the Christmas and New Year period. Avoid booking during school holidays (June-July for Australia, July-August for Europe) when prices can double. For budget hotels, consider using Hostelworld or Airbnb for private rooms in guesthouses, which can be 20% cheaper than hotel listings.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>For mid-range hotels, look for package deals that include airport transfers or meal plans. The Amnaya Resort and Sakala often offer "stay 4, pay 3" promotions during the low season. For luxury hotels, consider using a travel agent who has access to VIP rates or loyalty program discounts. The St. Regis and Ritz-Carlton frequently offer "third night free" deals if you book directly. Always read the cancellation policy carefully, as many budget hotels in Nusa Dua now require 48-hour notice for free cancellation. Finally, consider purchasing travel insurance that covers trip cancellations, as weather disruptions (rare but possible during the rainy season from December to March) can affect your plans.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -531,6 +614,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -559,6 +643,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -576,8 +661,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

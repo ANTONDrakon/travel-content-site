@@ -6,7 +6,7 @@
     <title>Marsa Alam Travel Guide 2026</title>
     <meta name="description" content="Marsa Alam Travel Guide 2026 Nestled along the Red Sea coast of Egypt, Marsa Alam is a serene escape that has quietly transformed from a fishing village into...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Marsa Alam Travel Guide 2026">
     <meta property="og:description" content="Marsa Alam Travel Guide 2026 Nestled along the Red Sea coast of Egypt, Marsa Alam is a serene escape that has quietly transformed from a fishing village into...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/marsa-alam-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/marsa-alam.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Marsa Alam Travel Guide 2026</div>
@@ -369,20 +393,20 @@
 <h2>How to Get There</h2>
 
 <h3>By Air</h3>
-<p>The primary gateway is Marsa Alam International Airport (RMF), located about 70 kilometers north of the town center. As of 2026, the airport handles direct flights from major European cities, including London, Berlin, Milan, Paris, and Zurich. Charter flights are frequent during the high season (October to April), with scheduled airlines such as EgyptAir, TUI, and easyJet offering year-round service. Average round-trip ticket prices from Europe range from €250 to €450 in low season (May–September) and €400 to €700 in high season (October–April). From the United States, expect to fly via Cairo (CAI) with a connecting flight to RMF; round-trip fares from New York or Los Angeles average $800 (≈ ₽76 000)–$1 200. (≈ ₽114 000)</p>
+<p>The primary gateway is Marsa Alam International Airport (RMF), located about 70 kilometers north of the town center. As of 2026, the airport handles direct flights from major European cities, including London, Berlin, Milan, Paris, and Zurich. Charter flights are frequent during the high season (October to April), with scheduled airlines such as EgyptAir, TUI, and easyJet offering year-round service. Average round-trip ticket prices from Europe range from $271 (€250)to $488 (€450)in low season (May–September) and $434 (€400)to $759 (€700)in high season (October–April). From the United States, expect to fly via Cairo (CAI) with a connecting flight to RMF; round-trip fares from New York or Los Angeles average $800–$1 200</p>
 
 <h3>By Road</h3>
-<p>If you are already in Egypt, you can drive from Hurghada (270 km north, about 3.5 hours) or Luxor (280 km west, about 4 hours). Buses run daily from Cairo (720 km, 8–9 hours) for around $15 (≈ ₽1 425)–$20. (≈ ₽1 900) Private transfers from Hurghada Airport cost $60 (≈ ₽5 700)–$80. (≈ ₽7 600)</p>
+<p>If you are already in Egypt, you can drive from Hurghada (270 km north, about 3.5 hours) or Luxor (280 km west, about 4 hours). Buses run daily from Cairo (720 km, 8–9 hours) for around $15–$20Private transfers from Hurghada Airport cost $60–$80</p>
 
 <h2>Where to Stay</h2>
 
 <h3>Neighborhoods and Hotels for Every Budget</h3>
 
-<p><strong>Luxury (€150–€350 per night):</strong> The Wadi Lahmy area, 40 km south of town, is home to the eco-chic <em>Wadi Lahmy Azur Resort</em> and the <em>Deep South Diving Village</em>, both offering beachfront bungalows with direct reef access. For all-inclusive luxury, <em>Jaz Marsa Alam Resort</em> (near the airport) features five pools, a spa, and multiple restaurants, with rates from €180 per night.</p>
+<p><strong>Luxury ($163 (€150)–$379 (€350)per night):</strong> The Wadi Lahmy area, 40 km south of town, is home to the eco-chic <em>Wadi Lahmy Azur Resort</em> and the <em>Deep South Diving Village</em>, both offering beachfront bungalows with direct reef access. For all-inclusive luxury, <em>Jaz Marsa Alam Resort</em> (near the airport) features five pools, a spa, and multiple restaurants, with rates from $195 (€180)per night.</p>
 
-<p><strong>Mid-Range (€60–€120 per night):</strong> The town center and the Port Ghalib area offer excellent value. <em>Port Ghalib Resort & Marina</em> is a popular choice with a private beach and marina, rooms from €80. <em>Three Corners Fayrouz Plaza</em> in Quseir (30 minutes north) is a family-friendly option with a water park, from €70.</p>
+<p><strong>Mid-Range ($65 (€60)–$130 (€120)per night):</strong> The town center and the Port Ghalib area offer excellent value. <em>Port Ghalib Resort & Marina</em> is a popular choice with a private beach and marina, rooms from $87 (€80)<em>Three Corners Fayrouz Plaza</em> in Quseir (30 minutes north) is a family-friendly option with a water park, from $76 (€70)</p>
 
-<p><strong>Budget (€20–€50 per night):</strong> Guesthouses and hostels in Marsa Alam town itself are basic but clean. <em>Marsa Shagra Village</em> is a dive-oriented eco-camp with tented rooms from €30 per night, including meals. <em>Red Sea Relax</em> is a simple hotel with rooms from €25, popular with backpackers.</p>
+<p><strong>Budget ($22 (€20)–$54 (€50)per night):</strong> Guesthouses and hostels in Marsa Alam town itself are basic but clean. <em>Marsa Shagra Village</em> is a dive-oriented eco-camp with tented rooms from $33 (€30)per night, including meals. <em>Red Sea Relax</em> is a simple hotel with rooms from $27 (€25)popular with backpackers.</p>
 
 <h2>Top 15 Attractions</h2>
 
@@ -393,22 +417,22 @@
     <th>#</th><th>Name</th><th>Description</th><th>Ticket Price (USD)</th><th>Opening Hours</th>
   </tr>
   <tr>
-    <td>1</td><td>Elphinstone Reef</td><td>A world-class dive site 12 km offshore, famous for hammerhead sharks and pristine coral walls. Boat trips only; visibility often exceeds 30 meters.</td><td>$40 (≈ ₽3 800) (boat trip)</td><td>Daily 8:00–16:00</td>
+    <td>1</td><td>Elphinstone Reef</td><td>A world-class dive site 12 km offshore, famous for hammerhead sharks and pristine coral walls. Boat trips only; visibility often exceeds 30 meters.</td><td>$40(boat trip)</td><td>Daily 8:00–16:00</td>
   </tr>
   <tr>
-    <td>2</td><td>Abu Dabbab Bay</td><td>A shallow, sandy bay where dugongs and green sea turtles graze year-round. Snorkeling is excellent from the shore.</td><td>$10 (≈ ₽950)</td><td>Daily 8:00–17:00</td>
+    <td>2</td><td>Abu Dabbab Bay</td><td>A shallow, sandy bay where dugongs and green sea turtles graze year-round. Snorkeling is excellent from the shore.</td><td>$10</td><td>Daily 8:00–17:00</td>
   </tr>
   <tr>
-    <td>3</td><td>Dolphin House (Sha'ab Samadai)</td><td>A horseshoe-shaped reef where spinner dolphins rest. Snorkelers and divers can observe them in a protected zone.</td><td>$35 (≈ ₽3 325) (boat trip)</td><td>Daily 8:00–15:00</td>
+    <td>3</td><td>Dolphin House (Sha'ab Samadai)</td><td>A horseshoe-shaped reef where spinner dolphins rest. Snorkelers and divers can observe them in a protected zone.</td><td>$35(boat trip)</td><td>Daily 8:00–15:00</td>
   </tr>
   <tr>
-    <td>4</td><td>Marsa Mubarak</td><td>A sheltered bay with a large population of dugongs. Calm waters ideal for beginner snorkelers.</td><td>$8 (≈ ₽760)</td><td>Daily 7:00–18:00</td>
+    <td>4</td><td>Marsa Mubarak</td><td>A sheltered bay with a large population of dugongs. Calm waters ideal for beginner snorkelers.</td><td>$8</td><td>Daily 7:00–18:00</td>
   </tr>
   <tr>
-    <td>5</td><td>Wadi El Gemal National Park</td><td>A vast protected area combining desert, mangroves, and coral reefs. Hike or 4x4 through ancient valleys.</td><td>$15 (≈ ₽1 425)</td><td>Daily 6:00–18:00</td>
+    <td>5</td><td>Wadi El Gemal National Park</td><td>A vast protected area combining desert, mangroves, and coral reefs. Hike or 4x4 through ancient valleys.</td><td>$15</td><td>Daily 6:00–18:00</td>
   </tr>
   <tr>
-    <td>6</td><td>Emerald Mines (Mons Smaragdus)</td><td>Roman-era emerald mines in the Eastern Desert. A 4x4 tour includes a guide and lunch.</td><td>$25 (≈ ₽2 375) (tour)</td><td>Tour departs 8:00</td>
+    <td>6</td><td>Emerald Mines (Mons Smaragdus)</td><td>Roman-era emerald mines in the Eastern Desert. A 4x4 tour includes a guide and lunch.</td><td>$25(tour)</td><td>Tour departs 8:00</td>
   </tr>
   <tr>
     <td>7</td><td>Port Ghalib Marina</td><td>A modern marina with shops, cafes, and yacht charters. Great for an evening stroll.</td><td>Free</td><td>24 hours</td>
@@ -417,37 +441,37 @@
     <td>8</td><td>Sha'ab Sharm (Lighthouse Reef)</td><td>A shallow reef with a lighthouse, perfect for shore snorkeling. Abundant clownfish and parrotfish.</td><td>Free (shore access)</td><td>24 hours</td>
   </tr>
   <tr>
-    <td>9</td><td>Qulaan (Abu Ghosun)</td><td>A remote bay with a small resort and excellent house reef. Ideal for those seeking total seclusion.</td><td>$5 (≈ ₽475) (day use)</td><td>Daily 8:00–17:00</td>
+    <td>9</td><td>Qulaan (Abu Ghosun)</td><td>A remote bay with a small resort and excellent house reef. Ideal for those seeking total seclusion.</td><td>$5(day use)</td><td>Daily 8:00–17:00</td>
   </tr>
   <tr>
     <td>10</td><td>Marsa Alam Old Town</td><td>The original fishing village with a souk (market) selling spices, textiles, and fresh fish. Authentic and low-key.</td><td>Free</td><td>Daily 6:00–22:00</td>
   </tr>
   <tr>
-    <td>11</td><td>Hamata Islands</td><td>A group of untouched islands south of Marsa Alam, reachable by boat. Snorkeling, birdwatching, and pristine beaches.</td><td>$50 (≈ ₽4 750) (boat trip)</td><td>Daily 7:00–16:00</td>
+    <td>11</td><td>Hamata Islands</td><td>A group of untouched islands south of Marsa Alam, reachable by boat. Snorkeling, birdwatching, and pristine beaches.</td><td>$50(boat trip)</td><td>Daily 7:00–16:00</td>
   </tr>
   <tr>
     <td>12</td><td>Sharm El Luli</td><td>A stunning white-sand beach with turquoise water and a fringing reef. No facilities—bring your own supplies.</td><td>Free</td><td>24 hours</td>
   </tr>
   <tr>
-    <td>13</td><td>Marsa Alam Museum</td><td>A small museum in town showcasing Bedouin culture, fossils, and marine artifacts.</td><td>$3 (≈ ₽285)</td><td>Sat–Thu 9:00–16:00</td>
+    <td>13</td><td>Marsa Alam Museum</td><td>A small museum in town showcasing Bedouin culture, fossils, and marine artifacts.</td><td>$3</td><td>Sat–Thu 9:00–16:00</td>
   </tr>
   <tr>
-    <td>14</td><td>Gota Abu Ramada</td><td>A dive site known for its coral gardens and frequent sightings of Napoleon wrasse and moray eels.</td><td>$35 (≈ ₽3 325) (boat trip)</td><td>Daily 8:00–15:00</td>
+    <td>14</td><td>Gota Abu Ramada</td><td>A dive site known for its coral gardens and frequent sightings of Napoleon wrasse and moray eels.</td><td>$35(boat trip)</td><td>Daily 8:00–15:00</td>
   </tr>
   <tr>
-    <td>15</td><td>Ras Banas Peninsula</td><td>A restricted military area with some of the most pristine reefs in the Red Sea. Only accessible via organized liveaboard trips.</td><td>$200 (≈ ₽19 000)+ (liveaboard)</td><td>By arrangement</td>
+    <td>15</td><td>Ras Banas Peninsula</td><td>A restricted military area with some of the most pristine reefs in the Red Sea. Only accessible via organized liveaboard trips.</td><td>$200+ (liveaboard)</td><td>By arrangement</td>
   </tr>
 </table>
 
 <h2>Getting Around</h2>
 
-<p><strong>Metro/Public Transit:</strong> Marsa Alam has no metro. Public buses are limited to the main road between Quseir and Marsa Alam town; fares are $0.50 (≈ ₽47)–$1 (≈ ₽95) per ride.</p>
+<p><strong>Metro/Public Transit:</strong> Marsa Alam has no metro. Public buses are limited to the main road between Quseir and Marsa Alam town; fares are $0–$1per ride.</p>
 
-<p><strong>Taxis:</strong> White taxis are the most common option. Short trips within town cost $2 (≈ ₽190)–$5 (≈ ₽475); longer trips to Port Ghalib or Abu Dabbab are $10 (≈ ₽950)–$20. (≈ ₽1 900) Always agree on the fare before starting.</p>
+<p><strong>Taxis:</strong> White taxis are the most common option. Short trips within town cost $2–$5; longer trips to Port Ghalib or Abu Dabbab are $10–$20Always agree on the fare before starting.</p>
 
-<p><strong>Rental Cars:</strong> Rental agencies operate at the airport and in town. Prices start at $30 (≈ ₽2 850) per day for a small car (e.g., Hyundai i10) and $60 (≈ ₽5 700) for a 4x4 (essential for desert roads). Fuel costs about $0.50 (≈ ₽47) per liter. Roads are generally good, but driving at night is discouraged due to unlit stretches and wandering camels.</p>
+<p><strong>Rental Cars:</strong> Rental agencies operate at the airport and in town. Prices start at $30per day for a small car (e.g., Hyundai i10) and $60for a 4x4 (essential for desert roads). Fuel costs about $0per liter. Roads are generally good, but driving at night is discouraged due to unlit stretches and wandering camels.</p>
 
-<p><strong>Bicycles and Scooters:</strong> Many resorts rent bicycles for $10 (≈ ₽950)/day or scooters for $25 (≈ ₽2 375)/day. This is a fun way to explore coastal roads, but bring water and sun protection.</p>
+<p><strong>Bicycles and Scooters:</strong> Many resorts rent bicycles for $10/day or scooters for $25/day. This is a fun way to explore coastal roads, but bring water and sun protection.</p>
 
 <h2>Where to Eat</h2>
 
@@ -455,13 +479,13 @@
 
 <h3>Restaurants by Price Range</h3>
 
-<p><strong>Budget ($3 (≈ ₽285)–$8 (≈ ₽760)):</strong> <em>El Shish Kebab Restaurant</em> in town serves excellent grilled chicken and koshari for $4. (≈ ₽380) <em>Abu Hashish</em> is a street-food stall offering fresh fish sandwiches for $3. (≈ ₽285)</p>
+<p><strong>Budget ($3–$8):</strong> <em>El Shish Kebab Restaurant</em> in town serves excellent grilled chicken and koshari for $4<em>Abu Hashish</em> is a street-food stall offering fresh fish sandwiches for $3</p>
 
-<p><strong>Mid-Range ($8 (≈ ₽760)–$20 (≈ ₽1 900)):</strong> <em>Mosaic Restaurant</em> at Port Ghalib offers Mediterranean and Egyptian dishes with sea views; a full meal costs $15. (≈ ₽1 425) <em>Red Sea Fish Restaurant</em> near the marina serves grilled fish with rice and salad for $12. (≈ ₽1 140)</p>
+<p><strong>Mid-Range ($8–$20):</strong> <em>Mosaic Restaurant</em> at Port Ghalib offers Mediterranean and Egyptian dishes with sea views; a full meal costs $15<em>Red Sea Fish Restaurant</em> near the marina serves grilled fish with rice and salad for $12</p>
 
-<p><strong>High-End ($20 (≈ ₽1 900)–$50 (≈ ₽4 750)):</strong> <em>Mövenpick Resort’s Al Sultan</em> offers a fine-dining experience with fresh lobster and international wines; dinner for two starts at $60. (≈ ₽5 700) <em>Wadi Lahmy’s Beach Restaurant</em> serves candlelit dinners on the sand, $40 (≈ ₽3 800) per person.</p>
+<p><strong>High-End ($20–$50):</strong> <em>Mövenpick Resort’s Al Sultan</em> offers a fine-dining experience with fresh lobster and international wines; dinner for two starts at $60<em>Wadi Lahmy’s Beach Restaurant</em> serves candlelit dinners on the sand, $40per person.</p>
 
-<p><strong>Street Food:</strong> Try ta’amiya (Egyptian falafel), shawarma wraps, and fresh sugarcane juice from stalls in the old town. Most items cost $1 (≈ ₽95)–$2. (≈ ₽190)</p>
+<p><strong>Street Food:</strong> Try ta’amiya (Egyptian falafel), shawarma wraps, and fresh sugarcane juice from stalls in the old town. Most items cost $1–$2</p>
 
 <h2>Best Time to Visit</h2>
 
@@ -475,9 +499,9 @@
 
 <h2>Visa & Documents</h2>
 
-<p>Most nationalities can obtain a visa on arrival at Marsa Alam International Airport (RMF) for $25 (≈ ₽2 375) USD (cash only). The visa is a single-entry sticker valid for 30 days. Alternatively, you can apply for an e-visa online through the official Egyptian visa portal (cost: $25 (≈ ₽2 375) plus a $3 (≈ ₽285) processing fee) up to 30 days before travel. Your passport must be valid for at least six months from the date of entry. No vaccination certificates are required, but hepatitis A and typhoid vaccines are recommended.</p>
+<p>Most nationalities can obtain a visa on arrival at Marsa Alam International Airport (RMF) for $25USD (cash only). The visa is a single-entry sticker valid for 30 days. Alternatively, you can apply for an e-visa online through the official Egyptian visa portal (cost: $25plus a $3processing fee) up to 30 days before travel. Your passport must be valid for at least six months from the date of entry. No vaccination certificates are required, but hepatitis A and typhoid vaccines are recommended.</p>
 
-<p><strong>Important:</strong> If you plan to travel to other parts of Egypt (e.g., Luxor or Cairo), ensure your visa is a multi-entry visa (available at the airport for $60 (≈ ₽5 700)). Single-entry visas do not allow re-entry after leaving the country.</p>
+<p><strong>Important:</strong> If you plan to travel to other parts of Egypt (e.g., Luxor or Cairo), ensure your visa is a multi-entry visa (available at the airport for $60). Single-entry visas do not allow re-entry after leaving the country.</p>
 
 <h2>Weekly Trip Budget (per person)</h2>
 
@@ -488,22 +512,22 @@
     <th>Category</th><th>Budget Traveler</th><th>Mid-Range</th><th>Luxury</th>
   </tr>
   <tr>
-    <td>Accommodation</td><td>$140 (≈ ₽13 300) (7 nights at $20 (≈ ₽1 900)/night)</td><td>$490 (≈ ₽46 550) (7 nights at $70 (≈ ₽6 650)/night)</td><td>$1 400 (≈ ₽133 000) (7 nights at $200 (≈ ₽19 000)/night)</td>
+    <td>Accommodation</td><td>$140(7 nights at $20/night)</td><td>$490(7 nights at $70/night)</td><td>$1 400(7 nights at $200/night)</td>
   </tr>
   <tr>
-    <td>Food</td><td>$70 (≈ ₽6 650) (7 days at $10 (≈ ₽950)/day)</td><td>$175 (≈ ₽16 625) (7 days at $25 (≈ ₽2 375)/day)</td><td>$350 (≈ ₽33 250) (7 days at $50 (≈ ₽4 750)/day)</td>
+    <td>Food</td><td>$70(7 days at $10/day)</td><td>$175(7 days at $25/day)</td><td>$350(7 days at $50/day)</td>
   </tr>
   <tr>
-    <td>Local Transport</td><td>$30 (≈ ₽2 850) (taxis and buses)</td><td>$70 (≈ ₽6 650) (rental scooter for 3 days + taxis)</td><td>$140 (≈ ₽13 300) (rental car for 7 days)</td>
+    <td>Local Transport</td><td>$30(taxis and buses)</td><td>$70(rental scooter for 3 days + taxis)</td><td>$140(rental car for 7 days)</td>
   </tr>
   <tr>
-    <td>Attractions & Diving</td><td>$50 (≈ ₽4 750) (2 snorkel trips)</td><td>$200 (≈ ₽19 000) (3 boat trips + park fees)</td><td>$500 (≈ ₽47 500) (5 dives + liveaboard day)</td>
+    <td>Attractions & Diving</td><td>$50(2 snorkel trips)</td><td>$200(3 boat trips + park fees)</td><td>$500(5 dives + liveaboard day)</td>
   </tr>
   <tr>
-    <td>Miscellaneous (tips, snacks)</td><td>$30 (≈ ₽2 850)</td><td>$60 (≈ ₽5 700)</td><td>$100 (≈ ₽9 500)</td>
+    <td>Miscellaneous (tips, snacks)</td><td>$30</td><td>$60</td><td>$100</td>
   </tr>
   <tr>
-    <td><strong>Total</strong></td><td><strong>$320 (≈ ₽30 400)</strong></td><td><strong>$995 (≈ ₽94 525)</strong></td><td><strong>$2 490 (≈ ₽236 550)</strong></td>
+    <td><strong>Total</strong></td><td><strong>$320</strong></td><td><strong>$995</strong></td><td><strong>$2 490</strong></td>
   </tr>
 </table>
 
@@ -517,9 +541,9 @@
   <li><strong>Dress modestly.</strong> While swimwear is fine at the beach, cover shoulders and knees in town and when visiting local villages. This is a conservative Muslim area.</li>
   <li><strong>Learn a few Arabic phrases.</strong> “Shukran” (thank you), “Afwan” (you’re welcome), and “Kam?” (how much?) go a long way.</li>
   <li><strong>Bargain politely.</strong> Haggling is expected in markets and with taxi drivers. Start at 50% of the asking price and negotiate with a smile.</li>
-  <li><strong>Stay hydrated.</strong> The dry desert air dehydrates you quickly. Carry a reusable water bottle; filtered water is available at most hotels for $0.50 (≈ ₽47) per liter.</li>
+  <li><strong>Stay hydrated.</strong> The dry desert air dehydrates you quickly. Carry a reusable water bottle; filtered water is available at most hotels for $0per liter.</li>
   <li><strong>Watch out for sea urchins.</strong> Wear reef shoes when walking on rocky shores or entering the water from the beach.</li>
-  <li><strong>Book dive trips in advance.</strong> During high season, slots fill up fast. Reputable centers like Emperor Divers or Orca Dive Club charge $40 (≈ ₽3 800)–$60 (≈ ₽5 700) per dive.</li>
+  <li><strong>Book dive trips in advance.</strong> During high season, slots fill up fast. Reputable centers like Emperor Divers or Orca Dive Club charge $40–$60per dive.</li>
   <li><strong>Use a local SIM card.</strong<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
@@ -626,6 +650,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -654,6 +679,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -671,8 +697,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

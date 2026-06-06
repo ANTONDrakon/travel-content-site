@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Каппадокии 2026: от бюджета до люкса Каппадокия, расположенная в центральной части Турции, остается одним из самых магических направлений для...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/cappadocia-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/cappadocia-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/cappadocia-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/cappadocia-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/cappadocia-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/cappadocia-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Каппадокии 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Каппадокии 2026: от бюджета до люкса Каппадокия, расположенная в центральной части Турции, остается одним из самых магических направлений для...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/cappadocia-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/cappadocia-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/173895/RfFySz3wO2UvbxBAH17Q.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/cappadocia.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Каппадокии 2026: от бюджета до люкса</div>
@@ -361,76 +385,150 @@
 
 <p>Каппадокия, расположенная в центральной части Турции, остается одним из самых магических направлений для путешествий в 2026 году. Ее уникальный лунный ландшафт, вырезанные в скалах пещерные жилища и знаменитые воздушные шары на рассвете привлекают более 3,5 миллионов туристов ежегодно. Инфраструктура региона за последние три года совершила колоссальный скачок: к 2026 году здесь открыто более 850 лицензированных объектов размещения, от скромных гостевых домов в деревне Учхисар до ультра-люксовых бутик-отелей с частными бассейнами в Гёреме. Цены варьируются в зависимости от сезона и района: высокий сезон (апрель-октябрь) может увеличить стоимость проживания на 40–60%, в то время как зимние месяцы (декабрь-февраль) предлагают скидки до 50%.</p>
 
-<p>Главные районы для проживания — Гёреме (туристический центр с наибольшей концентрацией ресторанов и магазинов, средняя цена номера ₽8 075 (≈ $85)/ночь), Учхисар (более спокойный, с панорамными видами, средняя цена ₽10 450 (≈ $110)/ночь), Ортахисар (аутентичный, с крепостью, средняя цена ₽6 175 (≈ $65)/ночь) и Юргюп (винодельческий регион, средняя цена ₽7 125 (≈ $75)/ночь). В 2026 году особенно популярны отели с устойчивым развитием: 30% новых объектов используют солнечные панели и системы рециклинга воды. Ниже представлен субъективный, но тщательно отобранный список из десяти отелей, разделенных по бюджету, с актуальными ценами и детальным анализом.</p>
+<p>Главные районы для проживания — Гёреме (туристический центр с наибольшей концентрацией ресторанов и магазинов, средняя цена номера ₽8 075 ($85)/ночь), Учхисар (более спокойный, с панорамными видами, средняя цена ₽10 450 ($110)/ночь), Ортахисар (аутентичный, с крепостью, средняя цена ₽6 175 ($65)/ночь) и Юргюп (винодельческий регион, средняя цена ₽7 125 ($75)/ночь). В 2026 году особенно популярны отели с устойчивым развитием: 30% новых объектов используют солнечные панели и системы рециклинга воды. Ниже представлен субъективный, но тщательно отобранный список из десяти отелей, разделенных по бюджету, с актуальными ценами и детальным анализом.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Cave Pension Göreme</h3>
-<p>Расположенный в самом сердце Гёреме, в 200 метрах от автовокзала, этот семейный пансион предлагает 12 номеров, частично вырезанных в скале. Номер на двоих с завтраком стоит от ₽3 325 (≈ $35)/ночь в низкий сезон и ₽4 560 (≈ $48) в высокий. Все номера оснащены кондиционером, бесплатным Wi-Fi и собственной ванной комнатой. Завтрак — шведский стол с местными сырами, оливками и домашним хлебом.</p>
+<p>Расположенный в самом сердце Гёреме, в 200 метрах от автовокзала, этот семейный пансион предлагает 12 номеров, частично вырезанных в скале. Номер на двоих с завтраком стоит от ₽3 325 ($35)/ночь в низкий сезон и ₽4 560 ($48)в высокий. Все номера оснащены кондиционером, бесплатным Wi-Fi и собственной ванной комнатой. Завтрак — шведский стол с местными сырами, оливками и домашним хлебом.</p>
 <p>Плюсы: идеальное расположение (рядом с музеем под открытым небом), дружелюбный персонал, говорящий на английском и русском, бесплатная парковка. Минусы: стены тонкие, слышимость соседей высокая, нет бассейна, завтрак подают только с 8:00 утра.</p>
 
 <h3>2. Stone House Cappadocia</h3>
-<p>Этот отель в деревне Ортахисар предлагает 8 номеров в отреставрированном каменном здании 18 века. Цена — от ₽2 850 (≈ $30)/ночь за двухместный номер с общим душем и туалетом на этаже. Номера с собственной ванной стоят от ₽4 275 (≈ $45)/ночь. Отель славится своей террасой с видом на Ортахисарскую крепость.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_434053" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Stone House Cappadocia - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Stone House Cappadocia - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Stone House Cappadocia - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_434053 .hc-slide');var d=document.querySelectorAll('#hc_434053 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_434053 .hc-slide');var d=document.querySelectorAll('#hc_434053 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_434053 .hc-slide');var d=document.querySelectorAll('#hc_434053 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Stone House Cappadocia &bull; 3 photos</p></div>
+<p>Этот отель в деревне Ортахисар предлагает 8 номеров в отреставрированном каменном здании 18 века. Цена — от ₽2 850 ($30)/ночь за двухместный номер с общим душем и туалетом на этаже. Номера с собственной ванной стоят от ₽4 275 ($45)/ночь. Отель славится своей террасой с видом на Ортахисарскую крепость.</p>
 <p>Плюсы: очень низкая цена, аутентичная атмосфера, возможность приготовить чай на общей кухне, бесплатный трансфер от автовокзала. Минусы: удаленность от центра Гёреме (4 км), нет кондиционеров (только вентиляторы), горячая вода может заканчиваться вечером.</p>
 
 <h3>3. Flintstone Cave House</h3>
-<p>Бюджетный пещерный отель в Учхисаре, в 1,5 км от знаменитой смотровой площадки. Двухместный номер в пещере стоит ₽3 800 (≈ $40)/ночь. Отель имеет 6 номеров, каждый с уникальной формой скалы. Владелец — местный гид, предлагающий бесплатные пешие экскурсии по долине.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Плюсы: настоящий пещерный опыт, тишина и покой, бесплатный чай и кофе в течение дня, возможность заказать ужин за ₽950 (≈ $10.) Минусы: слабый Wi-Fi, нет телевизора, зимой в номерах прохладно (работают обогреватели).</p>
+<div id="hc_186418" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Flintstone Cave House - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Flintstone Cave House - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Flintstone Cave House - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_186418 .hc-slide');var d=document.querySelectorAll('#hc_186418 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_186418 .hc-slide');var d=document.querySelectorAll('#hc_186418 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_186418 .hc-slide');var d=document.querySelectorAll('#hc_186418 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Flintstone Cave House &bull; 3 photos</p></div>
+<p>Бюджетный пещерный отель в Учхисаре, в 1,5 км от знаменитой смотровой площадки. Двухместный номер в пещере стоит ₽3 800 ($40)/ночь. Отель имеет 6 номеров, каждый с уникальной формой скалы. Владелец — местный гид, предлагающий бесплатные пешие экскурсии по долине.</p>
+<p>Плюсы: настоящий пещерный опыт, тишина и покой, бесплатный чай и кофе в течение дня, возможность заказать ужин за ₽950 ($10)Минусы: слабый Wi-Fi, нет телевизора, зимой в номерах прохладно (работают обогреватели).</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Sultan Cave Suites</h3>
-<p>Один из самых фотографируемых отелей Каппадокии, расположенный на холме в Гёреме. Известен своей террасой, где каждое утро взлетают десятки воздушных шаров, создавая идеальный кадр. Стандартный двухместный номер стоит от ₽9 025 (≈ $95)/ночь, номер-люкс с джакузи — от ₽12 350 (≈ $130)/ночь. Отель насчитывает 25 номеров, включая 10 пещерных. Завтрак включен и подается на террасе до 10:30.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_727908" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sultan Cave Suites - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sultan Cave Suites - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sultan Cave Suites - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_727908 .hc-slide');var d=document.querySelectorAll('#hc_727908 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_727908 .hc-slide');var d=document.querySelectorAll('#hc_727908 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_727908 .hc-slide');var d=document.querySelectorAll('#hc_727908 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sultan Cave Suites &bull; 3 photos</p></div>
+<p>Один из самых фотографируемых отелей Каппадокии, расположенный на холме в Гёреме. Известен своей террасой, где каждое утро взлетают десятки воздушных шаров, создавая идеальный кадр. Стандартный двухместный номер стоит от ₽9 025 ($95)/ночь, номер-люкс с джакузи — от ₽12 350 ($130)/ночь. Отель насчитывает 25 номеров, включая 10 пещерных. Завтрак включен и подается на террасе до 10:30.</p>
 <p>Фишки: бесплатный прокат велосипедов, ежедневная дегустация местного вина в 18:00, возможность забронировать полет на шаре прямо на стойке регистрации со скидкой 10%. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 9.1.</p>
 
 <h3>5. Mithra Cave Hotel</h3>
-<p>Находится в Гёреме, в 300 метрах от Sultan Cave Suites, но с более спокойной атмосферой. Цены начинаются от ₽7 600 (≈ $80)/ночь за стандартный номер и ₽10 450 (≈ $110) за номер с видом на долину. Отель имеет 18 номеров, все в скале, с каменными стенами и сводчатыми потолками. В 2025 году отель прошел полную реновацию систем отопления и водоснабжения.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="им" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Фишки: большой сад с фруктовыми деревьями, бесплатный трансфер до аэропорта Кайсери (при бронировании от 3 ночей), спа-центр с турецкой баней за ₽1 900 (≈ $20.) Идеален для пар, ищущих романтику.</p>
+<div id="hc_677674" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Mithra Cave Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Mithra Cave Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Mithra Cave Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_677674 .hc-slide');var d=document.querySelectorAll('#hc_677674 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_677674 .hc-slide');var d=document.querySelectorAll('#hc_677674 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_677674 .hc-slide');var d=document.querySelectorAll('#hc_677674 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Mithra Cave Hotel &bull; 3 photos</p></div>
+<p>Находится в Гёреме, в 300 метрах от Sultan Cave Suites, но с более спокойной атмосферой. Цены начинаются от ₽7 600 ($80)/ночь за стандартный номер и ₽10 450 ($110)за номер с видом на долину. Отель имеет 18 номеров, все в скале, с каменными стенами и сводчатыми потолками. В 2025 году отель прошел полную реновацию систем отопления и водоснабжения.</p>
+<p>Фишки: большой сад с фруктовыми деревьями, бесплатный трансфер до аэропорта Кайсери (при бронировании от 3 ночей), спа-центр с турецкой баней за ₽1 900 ($20)Идеален для пар, ищущих романтику.</p>
 
 <h3>6. Heaven Cave House</h3>
-<p>Бутик-отель на 7 номеров в тихом районе Учхисар, в 500 метрах от замка. Цена: ₽6 650 (≈ $70)/ночь за двухместный номер и ₽9 500 (≈ $100) за люкс с отдельным входом. Отель принадлежит семье, которая живет на первом этаже, что создает атмосферу домашнего уюта. Все номера имеют оригинальные скальные стены и современную сантехнику.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Фишки: хозяйка Мерием готовит традиционный турецкий завтрак с домашними лепешками и вареньем, бесплатный чай в любое время, возможность участвовать в мастер-классе по приготовлению гёзлеме (₽1 425 (≈ $15)). Подходит для одиночных путешественников.</p>
+<div id="hc_268707" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Heaven Cave House - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Heaven Cave House - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Heaven Cave House - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_268707 .hc-slide');var d=document.querySelectorAll('#hc_268707 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_268707 .hc-slide');var d=document.querySelectorAll('#hc_268707 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_268707 .hc-slide');var d=document.querySelectorAll('#hc_268707 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Heaven Cave House &bull; 3 photos</p></div>
+<p>Бутик-отель на 7 номеров в тихом районе Учхисар, в 500 метрах от замка. Цена: ₽6 650 ($70)/ночь за двухместный номер и ₽9 500 ($100)за люкс с отдельным входом. Отель принадлежит семье, которая живет на первом этаже, что создает атмосферу домашнего уюта. Все номера имеют оригинальные скальные стены и современную сантехнику.</p>
+<p>Фишки: хозяйка Мерием готовит традиционный турецкий завтрак с домашними лепешками и вареньем, бесплатный чай в любое время, возможность участвовать в мастер-классе по приготовлению гёзлеме (₽1 425 ($15)). Подходит для одиночных путешественников.</p>
 
 <h3>7. Cappadocia Caves Hotel</h3>
-<p>Расположен в Юргюпе, в 5 км от центра Гёреме, что обеспечивает более низкие цены и аутентичность. Стандартный номер — ₽5 225 (≈ $55)/ночь, пещерный люкс — ₽8 075 (≈ $85)/ночь. Отель имеет 14 номеров, большой открытый бассейн (работает с мая по сентябрь) и собственный виноградник. Вид на долину Гюльшехир — один из лучших в регионе.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="им" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Фишки: бесплатная дегустация домашнего вина, бесплатный велосипед, трансфер до Гёреме за ₽475 (≈ $5.) Минус — нет ресторана на территории, только завтрак. Отличный выбор для тех, кто арендует машину.</p>
+<div id="hc_941314" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Cappadocia Caves Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Cappadocia Caves Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Cappadocia Caves Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_941314 .hc-slide');var d=document.querySelectorAll('#hc_941314 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_941314 .hc-slide');var d=document.querySelectorAll('#hc_941314 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_941314 .hc-slide');var d=document.querySelectorAll('#hc_941314 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Cappadocia Caves Hotel &bull; 3 photos</p></div>
+<p>Расположен в Юргюпе, в 5 км от центра Гёреме, что обеспечивает более низкие цены и аутентичность. Стандартный номер — ₽5 225 ($55)/ночь, пещерный люкс — ₽8 075 ($85)/ночь. Отель имеет 14 номеров, большой открытый бассейн (работает с мая по сентябрь) и собственный виноградник. Вид на долину Гюльшехир — один из лучших в регионе.</p>
+<p>Фишки: бесплатная дегустация домашнего вина, бесплатный велосипед, трансфер до Гёреме за ₽475 ($5)Минус — нет ресторана на территории, только завтрак. Отличный выбор для тех, кто арендует машину.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Museum Hotel Cappadocia</h3>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ca" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p>Первый и единственный отель в Каппадокии, входящий в ассоциацию Leading Hotels of the World. Расположен в Учхисаре, на вершине холма. Цены начинаются от ₽33 250 (≈ $350)/ночь за стандартный номер и достигают ₽114 000 (≈ $1200) за президентский люкс. Отель построен на месте древнего монастыря, многие артефакты выставлены в лобби. Имеет 30 номеров, включая 10 с частными бассейнами.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_743509" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Museum Hotel Cappadocia - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Museum Hotel Cappadocia - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Museum Hotel Cappadocia - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_743509 .hc-slide');var d=document.querySelectorAll('#hc_743509 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_743509 .hc-slide');var d=document.querySelectorAll('#hc_743509 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_743509 .hc-slide');var d=document.querySelectorAll('#hc_743509 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Museum Hotel Cappadocia &bull; 3 photos</p></div>
+<p>Первый и единственный отель в Каппадокии, входящий в ассоциацию Leading Hotels of the World. Расположен в Учхисаре, на вершине холма. Цены начинаются от ₽33 250 ($350)/ночь за стандартный номер и достигают ₽114 000 ($1 200)за президентский люкс. Отель построен на месте древнего монастыря, многие артефакты выставлены в лобби. Имеет 30 номеров, включая 10 с частными бассейнами.</p>
 <p>Особенности: собственный виноградник и винный погреб с более чем 200 сортами, ресторан Lil'a с мишленовским шеф-поваром, спа-центр с хаммамом 16 века, бесконечный бассейн с подогревом, с которого открывается панорама на всю долину. В стоимость включен завтрак, трансфер из аэропорта и приветственное шампанское. Рейтинг — 9.7.</p>
 
 <h3>9. Argos in Cappadocia</h3>
-<p>Отель, вырезанный в скалах на склоне холма в Учхисаре, предлагает 53 номера и люкса, каждый с уникальным дизайном. Минимальная цена — ₽26 600 (≈ $280)/ночь. Отель известен своим рестораном Seki, который подает блюда из местных продуктов, и спа-центром с крытым бассейном. В 2024 году отель получил награду World Travel Awards как лучший бутик-отель Турции.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="из" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_485166" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Argos in Cappadocia - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Argos in Cappadocia - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Argos in Cappadocia - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_485166 .hc-slide');var d=document.querySelectorAll('#hc_485166 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_485166 .hc-slide');var d=document.querySelectorAll('#hc_485166 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_485166 .hc-slide');var d=document.querySelectorAll('#hc_485166 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Argos in Cappadocia &bull; 3 photos</p></div>
+<p>Отель, вырезанный в скалах на склоне холма в Учхисаре, предлагает 53 номера и люкса, каждый с уникальным дизайном. Минимальная цена — ₽26 600 ($280)/ночь. Отель известен своим рестораном Seki, который подает блюда из местных продуктов, и спа-центром с крытым бассейном. В 2024 году отель получил награду World Travel Awards как лучший бутик-отель Турции.</p>
 <p>Особенности: частная смотровая площадка для запуска воздушных шаров, библиотека с камином, кулинарные классы, винные туры по собственным погребам. Для гостей доступен бесплатный шаттл в Гёреме каждые 30 минут. Идеален для медовых месяцев.</p>
 
 <h3>10. Kayakapi Premium Caves</h3>
-<p>Уникальный отель, расположенный в историческом районе Каякапы в Учхисаре, который был восстановлен из древнего греческого поселения. Цены от ₽19 000 (≈ $200)/ночь за стандартный пещерный номер до ₽80 750 (≈ $850) за виллу с тремя спальнями. Отель занимает территорию 40 000 кв. м и включает 65 номеров, 5 ресторанов, спа-центр площадью 1500 кв. м и открытый бассейн.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="за" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_592222" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Kayakapi Premium Caves - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Kayakapi Premium Caves - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Kayakapi Premium Caves - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_592222 .hc-slide');var d=document.querySelectorAll('#hc_592222 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_592222 .hc-slide');var d=document.querySelectorAll('#hc_592222 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_592222 .hc-slide');var d=document.querySelectorAll('#hc_592222 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kayakapi Premium Caves &bull; 3 photos</p></div>
+<p>Уникальный отель, расположенный в историческом районе Каякапы в Учхисаре, который был восстановлен из древнего греческого поселения. Цены от ₽19 000 ($200)/ночь за стандартный пещерный номер до ₽80 750 ($850)за виллу с тремя спальнями. Отель занимает территорию 40 000 кв. м и включает 65 номеров, 5 ресторанов, спа-центр площадью 1500 кв. м и открытый бассейн.</p>
 <p>Особенности: в стоимость включен полный пансион (завтрак, обед, ужин) в ресторане "Kaya", бесплатный доступ к хаммаму и сауне, экскурсия по исторической части отеля с гидом. Отель имеет собственный органический сад, откуда поставляются овощи и фрукты. Подходит для больших семей и групп.</p>
-<img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Как выбрать район</h2>
 <p>Выбор района в Каппадокии напрямую зависит от целей вашей поездки. Если ваша главная цель — пляжный отдых, стоит сразу отметить, что Каппадокия не имеет выхода к морю. Ближайший пляж находится в Анталии (500 км). Вместо этого регион предлагает бассейны в отелях и искусственные озера. Для пляжного отдыха лучше выбрать отель с большим открытым бассейном, например, Kayakapi Premium Caves или Cappadocia Caves Hotel.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Для экскурсий и осмотра достопримечательностей лучший район — Гёреме. Здесь находятся музей под открытым небом, долина любви и долина мечей. Отели Sultan Cave Suites и Mithra Cave Hotel расположены в пешей доступности от всех главных троп. Если вы планируете много ходить пешком, выбирайте Гёреме. Для тех, кто арендует машину, подойдет Юргюп или Учхисар — там меньше туристов и более спокойная атмосфера.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 <p>Для ночной жизни выбор невелик. Гёреме — единственный район с барами и клубами, работающими до 2:00 ночи. На главной улице есть несколько заведений с живой музыкой и кальяном. Ортахисар и Учхисар затихают после 22:00. Если вы хотите танцевать, выбирайте отель в центре Гёреме, но будьте готовы к шуму до полуночи.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="в" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h2>Советы по бронированию</h2>
 <p>Чтобы сэкономить на проживании в Каппадокии, бронируйте отели за 3-4 месяца до поездки, особенно на высокий сезон (май-сентябрь). Самые низкие цены — в январе и феврале, когда туристов в 4 раза меньше. Используйте сайты-агрегаторы, такие как <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com (наиболее широкий выбор, бесплатная отмена), <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (часто дает скидки для азиатских туристов) и Expedia (пакеты отель+авиабилет). Для люксовых отелей выгодно бронировать напрямую через сайт отеля — часто предлагают ранний заезд или улучшение номера.</p>
-<p>Лучшие сервисы для поиска: Hotels.com (каждые 10 ночей — одна бесплатная), Trivago (сравнение цен), Airbnb (для аренды целых домов, особенно в Юргюпе). Обязательно читайте отзывы на Google Maps и TripAdvisor — они часто содержат актуальные фото и информацию о шуме или ремонте. Если вы путешествуете в высокий сезон, рассмотрите отели в Ортахисаре или Юргюпе — они на 20-30% дешевле, чем в Гёреме, при том же уровне сервиса. И последний совет: всегда проверяйте, включен ли завтрак в стоимость — в Каппадокии это может сэкономить до ₽1 425 (≈ $15) на человека в день.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<p>Лучшие сервисы для поиска: Hotels.com (каждые 10 ночей — одна бесплатная), Trivago (сравнение цен), Airbnb (для аренды целых домов, особенно в Юргюпе). Обязательно читайте отзывы на Google Maps и TripAdvisor — они часто содержат актуальные фото и информацию о шуме или ремонте. Если вы путешествуете в высокий сезон, рассмотрите отели в Ортахисаре или Юргюпе — они на 20-30% дешевле, чем в Гёреме, при том же уровне сервиса. И последний совет: всегда проверяйте, включен ли завтрак в стоимость — в Каппадокии это может сэкономить до ₽1 425 ($15)на человека в день.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
+<div id="hc_838739" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия &bull; 2 photos</p></div>
         </div>
 
         
@@ -521,6 +619,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -549,6 +648,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -566,8 +666,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

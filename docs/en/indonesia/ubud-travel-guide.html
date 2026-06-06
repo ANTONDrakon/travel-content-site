@@ -6,7 +6,7 @@
     <title>Ubud Travel Guide 2026</title>
     <meta name="description" content="Ubud Travel Guide 2026 Ubud, the cultural heart of Bali, Indonesia, is a serene haven nestled among lush tropical rainforests, terraced rice paddies, and sac...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Ubud Travel Guide 2026">
     <meta property="og:description" content="Ubud Travel Guide 2026 Ubud, the cultural heart of Bali, Indonesia, is a serene haven nestled among lush tropical rainforests, terraced rice paddies, and sac...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/ubud-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ubud.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Ubud Travel Guide 2026</div>
@@ -367,7 +391,7 @@
 <p>Ubud’s charm lies in its contradictions: it is both a quiet retreat and a bustling market town. You can spend a morning practicing yoga overlooking a jungle valley, an afternoon bargaining for handmade crafts at Ubud Market, and an evening watching a traditional Legong dance at the Ubud Palace. The town’s energy is palpable but never overwhelming, making it an ideal destination for solo travelers, couples, and families alike. In 2026, Ubud remains a must-visit for anyone seeking to reconnect with nature, culture, and themselves.</p>
 
 <h2>How to Get There</h2>
-<p>The nearest airport is Ngurah Rai International Airport (DPS) in Denpasar, approximately 35 kilometers south of Ubud. In 2026, direct flights are available from major cities including Singapore (from $120 (≈ ₽11 400) round trip), Kuala Lumpur (from $100 (≈ ₽9 500)), Bangkok (from $150 (≈ ₽14 250)), Tokyo (from $400 (≈ ₽38 000)), Sydney (from $350 (≈ ₽33 250)), and London (from $600 (≈ ₽57 000)). Average round-trip prices from the U.S. West Coast range from $500 (≈ ₽47 500) to $700  (≈ ₽66 500) with connections via Hong Kong or Singapore. From DPS, you can take a pre-booked taxi or private transfer (approximately $30 (≈ ₽2 850) to $40 (≈ ₽3 800) USD, or 450,000 to 600,000 IDR) for the 1.5-hour drive to Ubud. Alternatively, ride-hailing apps like Gojek and Grab offer car services (around $25 (≈ ₽2 375) to $35 (≈ ₽3 325) USD, or 375,000 to 525,000 IDR).</p>
+<p>The nearest airport is Ngurah Rai International Airport (DPS) in Denpasar, approximately 35 kilometers south of Ubud. In 2026, direct flights are available from major cities including Singapore (from $120round trip), Kuala Lumpur (from $100), Bangkok (from $150), Tokyo (from $400), Sydney (from $350), and London (from $600). Average round-trip prices from the U.S. West Coast range from $500to $700with connections via Hong Kong or Singapore. From DPS, you can take a pre-booked taxi or private transfer (approximately $30to $40USD, or 450,000 to$38 (600 $0 (000 IDR))) for the 1.5-hour drive to Ubud. Alternatively, ride-hailing apps like Gojek and Grab offer car services (around $25to $35USD, or 375,000 to$33 (525 $0 (000 IDR))).</p>
 
 <h2>Where to Stay</h2>
 <p>Ubud offers accommodation for every budget, from backpacker hostels to ultra-luxury resorts. Here are key neighborhoods and recommended options:</p>
@@ -380,60 +404,60 @@
   </tr>
   <tr>
     <td>Central Ubud (near Ubud Palace)</td>
-    <td>Puri Garden Hotel & Hostel (dorm from $10 (≈ ₽950)/night)</td>
-    <td>Alaya Resort Ubud (from $80 (≈ ₽7 600)/night)</td>
-    <td>Komaneka at Bisma (from $200 (≈ ₽19 000)/night)</td>
+    <td>Puri Garden Hotel & Hostel (dorm from $10/night)</td>
+    <td>Alaya Resort Ubud (from $80/night)</td>
+    <td>Komaneka at Bisma (from $200/night)</td>
   </tr>
   <tr>
     <td>Pengosekan (south of center)</td>
-    <td>Ubud Nyuh Bali Resort (budget rooms from $25 (≈ ₽2 375)/night)</td>
-    <td>Bambu Indah (from $120 (≈ ₽11 400)/night)</td>
-    <td>Amandari (from $800 (≈ ₽76 000)/night)</td>
+    <td>Ubud Nyuh Bali Resort (budget rooms from $25/night)</td>
+    <td>Bambu Indah (from $120/night)</td>
+    <td>Amandari (from $800/night)</td>
   </tr>
   <tr>
     <td>Campuhan Ridge (west of center)</td>
-    <td>Pondok Sebatu (from $15 (≈ ₽1 425)/night)</td>
-    <td>Pita Maha Resort (from $90 (≈ ₽8 550)/night)</td>
-    <td>Four Seasons Resort Bali at Sayan (from $600 (≈ ₽57 000)/night)</td>
+    <td>Pondok Sebatu (from $15/night)</td>
+    <td>Pita Maha Resort (from $90/night)</td>
+    <td>Four Seasons Resort Bali at Sayan (from $600/night)</td>
   </tr>
   <tr>
     <td>Tegalalang (north, rice terraces)</td>
-    <td>Green Coconut Cottage (from $20 (≈ ₽1 900)/night)</td>
-    <td>Ubud Rice Terrace Homestay (from $45 (≈ ₽4 275)/night)</td>
-    <td>Kappa Senses Ubud (from $350 (≈ ₽33 250)/night)</td>
+    <td>Green Coconut Cottage (from $20/night)</td>
+    <td>Ubud Rice Terrace Homestay (from $45/night)</td>
+    <td>Kappa Senses Ubud (from $350/night)</td>
   </tr>
 </table>
-<p>For budget travelers, hostels in central Ubud start at $8 (≈ ₽760) to $15 (≈ ₽1 425) per night. Mid-range hotels (private rooms with pool) average $50 (≈ ₽4 750) to $100 (≈ ₽9 500) per night. Luxury resorts often include spa credits, yoga classes, and private pools, with rates from $200 (≈ ₽19 000) to over $1 000 (≈ ₽95 000) per night.</p>
+<p>For budget travelers, hostels in central Ubud start at $8to $15per night. Mid-range hotels (private rooms with pool) average $50to $100per night. Luxury resorts often include spa credits, yoga classes, and private pools, with rates from $200to over $1 000per night.</p>
 
 <h2>Top 15 Attractions</h2>
 <ol>
-  <li><strong>Tegallalang Rice Terraces</strong> – Iconic stepped rice paddies 10 kilometers north of Ubud. Best visited at sunrise (6:00 AM) to avoid crowds. Ticket: 50,000 IDR ($3.30 (≈ ₽313)). Open daily 6:00 AM to 6:00 PM.</li>
-  <li><strong>Ubud Monkey Forest (Sacred Monkey Forest Sanctuary)</strong> – A 12-hectare forest home to over 700 long-tailed macaques. Ticket: 80,000 IDR ($5.30 (≈ ₽503)) for adults. Open 8:30 AM to 5:30 PM daily.</li>
-  <li><strong>Ubud Palace (Puri Saren Agung)</strong> – Historic royal palace in the town center. Free entry. Open 8:00 AM to 7:00 PM. Traditional dance performances nightly at 7:30 PM (ticket: 100,000 IDR).</li>
+  <li><strong>Tegallalang Rice Terraces</strong> – Iconic stepped rice paddies 10 kilometers north of Ubud. Best visited at sunrise (6:00 AM) to avoid crowds. Ticket:$3 (50 $0 (000 IDR)) ($3). Open daily 6:00 AM to 6:00 PM.</li>
+  <li><strong>Ubud Monkey Forest (Sacred Monkey Forest Sanctuary)</strong> – A 12-hectare forest home to over 700 long-tailed macaques. Ticket:$5 (80 $0 (000 IDR)) ($5) for adults. Open 8:30 AM to 5:30 PM daily.</li>
+  <li><strong>Ubud Palace (Puri Saren Agung)</strong> – Historic royal palace in the town center. Free entry. Open 8:00 AM to 7:00 PM. Traditional dance performances nightly at 7:30 PM (ticket:$6 (100 $0 (000 IDR))).</li>
   <li><strong>Campuhan Ridge Walk</strong> – A scenic 2-kilometer walking path along a ridge with panoramic views. Free entry. Open 24 hours, but best at sunrise or sunset.</li>
-  <li><strong>Tirta Empul Temple</strong> – Holy water temple 20 minutes north of Ubud. Used for purification rituals. Ticket: 50,000 IDR ($3.30 (≈ ₽313)). Open 7:00 AM to 6:00 PM. Sarong rental included.</li>
-  <li><strong>Goa Gajah (Elephant Cave)</strong> – Ancient archaeological site with a cave entrance carved like a demon’s face. Ticket: 50,000 IDR ($3.30 (≈ ₽313)). Open 8:00 AM to 5:00 PM.</li>
-  <li><strong>Tegenungan Waterfall</strong> – Powerful waterfall 12 kilometers south of Ubud. Swimming allowed. Ticket: 20,000 IDR ($1.30 (≈ ₽123)). Open 6:30 AM to 6:00 PM.</li>
+  <li><strong>Tirta Empul Temple</strong> – Holy water temple 20 minutes north of Ubud. Used for purification rituals. Ticket:$3 (50 $0 (000 IDR)) ($3). Open 7:00 AM to 6:00 PM. Sarong rental included.</li>
+  <li><strong>Goa Gajah (Elephant Cave)</strong> – Ancient archaeological site with a cave entrance carved like a demon’s face. Ticket:$3 (50 $0 (000 IDR)) ($3). Open 8:00 AM to 5:00 PM.</li>
+  <li><strong>Tegenungan Waterfall</strong> – Powerful waterfall 12 kilometers south of Ubud. Swimming allowed. Ticket:$1 (20 $0 (000 IDR)) ($1). Open 6:30 AM to 6:00 PM.</li>
   <li><strong>Ubud Art Market</strong> – Daily market selling handicrafts, textiles, and art. Open 6:00 AM to 6:00 PM. Bargaining expected. Free entry.</li>
-  <li><strong>Blanco Renaissance Museum</strong> – Museum dedicated to artist Antonio Blanco, with eclectic art and lush gardens. Ticket: 100,000 IDR ($6.60 (≈ ₽627)). Open 9:00 AM to 5:00 PM.</li>
-  <li><strong>Neka Art Museum</strong> – Comprehensive museum of Balinese art, with over 300 works. Ticket: 75,000 IDR ($5.00 (≈ ₽475)). Open 9:00 AM to 5:00 PM daily.</li>
-  <li><strong>Bali Bird Park</strong> – A 2-hectare aviary with over 1,000 birds from 250 species. Ticket: 385,000 IDR ($25.50 (≈ ₽2 422)) for adults. Open 9:00 AM to 5:30 PM.</li>
-  <li><strong>Bali Zoo</strong> – Family-friendly zoo with over 500 animals, including orangutans and elephants. Ticket: 420,000 IDR ($28.00 (≈ ₽2 660)). Open 9:00 AM to 5:00 PM.</li>
-  <li><strong>Bali Pulina (Luak Coffee Plantation)</strong> – A coffee plantation offering tastings of luwak coffee and other local brews. Free entry; tasting sets from 50,000 IDR ($3.30 (≈ ₽313)). Open 8:00 AM to 6:00 PM.</li>
-  <li><strong>Pura Gunung Kawi</strong> – Ancient rock-cut shrines in a river valley, dating from the 11th century. Ticket: 50,000 IDR ($3.30 (≈ ₽313)). Open 7:00 AM to 5:00 PM.</li>
-  <li><strong>Ubud Yoga House</strong> – A peaceful yoga studio overlooking rice fields. Drop-in classes cost 120,000 IDR ($8.00 (≈ ₽760)). Open 7:00 AM to 7:00 PM.</li>
+  <li><strong>Blanco Renaissance Museum</strong> – Museum dedicated to artist Antonio Blanco, with eclectic art and lush gardens. Ticket:$6 (100 $0 (000 IDR)) ($7). Open 9:00 AM to 5:00 PM.</li>
+  <li><strong>Neka Art Museum</strong> – Comprehensive museum of Balinese art, with over 300 works. Ticket:$5 (75 $0 (000 IDR)) ($5). Open 9:00 AM to 5:00 PM daily.</li>
+  <li><strong>Bali Bird Park</strong> – A 2-hectare aviary with over 1,000 birds from 250 species. Ticket:$24 (385 $0 (000 IDR)) ($26) for adults. Open 9:00 AM to 5:30 PM.</li>
+  <li><strong>Bali Zoo</strong> – Family-friendly zoo with over 500 animals, including orangutans and elephants. Ticket:$27 (420 $0 (000 IDR)) ($28). Open 9:00 AM to 5:00 PM.</li>
+  <li><strong>Bali Pulina (Luak Coffee Plantation)</strong> – A coffee plantation offering tastings of luwak coffee and other local brews. Free entry; tasting sets from$3 (50 $0 (000 IDR)) ($3). Open 8:00 AM to 6:00 PM.</li>
+  <li><strong>Pura Gunung Kawi</strong> – Ancient rock-cut shrines in a river valley, dating from the 11th century. Ticket:$3 (50 $0 (000 IDR)) ($3). Open 7:00 AM to 5:00 PM.</li>
+  <li><strong>Ubud Yoga House</strong> – A peaceful yoga studio overlooking rice fields. Drop-in classes cost$8 (120 $0 (000 IDR)) ($8). Open 7:00 AM to 7:00 PM.</li>
 </ol>
 
 <h2>Getting Around</h2>
 <p>Ubud is a walkable town center, but exploring the surrounding countryside requires transport. Options include:</p>
 <ul>
   <li><strong>Walking</strong> – Best for central Ubud and the Campuhan Ridge. Free.</li>
-  <li><strong>Bicycle rental</strong> – Available from 50,000 IDR ($3.30 (≈ ₽313)) per day. Many guesthouses provide free bikes.</li>
-  <li><strong>Scooter rental</strong> – Widely available for 70,000 to 100,000 IDR ($4.60 (≈ ₽436) to $6.60 (≈ ₽627)) per day. Requires an international driving permit. Fuel costs about 10,000 IDR ($0.65 (≈ ₽61)) per liter.</li>
-  <li><strong>Gojek/Grab (ride-hailing apps)</strong> – Short rides within town: 15,000 to 30,000 IDR ($1.00 (≈ ₽95) to $2.00 (≈ ₽190)). Longer trips to Tegalalang or waterfalls: 50,000 to 100,000 IDR ($3.30 (≈ ₽313) to $6.60 (≈ ₽627)).</li>
-  <li><strong>Taxi</strong> – Metered taxis are rare; negotiate fares in advance. Typical short trip: 50,000 IDR ($3.30 (≈ ₽313)).</li>
-  <li><strong>Private driver</strong> – Full-day hire (8 hours) costs 400,000 to 600,000 IDR ($26 (≈ ₽2 470) to $40 (≈ ₽3 800)). Ideal for visiting multiple attractions.</li>
-  <li><strong>Bemos (local minibuses)</strong> – Cheap but infrequent. Routes connect Ubud to nearby villages. Fares from 5,000 to 20,000 IDR ($0.30 (≈ ₽28) to $1.30 (≈ ₽123)).</li>
+  <li><strong>Bicycle rental</strong> – Available from$3 (50 $0 (000 IDR)) ($3) per day. Many guesthouses provide free bikes.</li>
+  <li><strong>Scooter rental</strong> – Widely available for 70,000 to$6 (100 $0 (000 IDR)) ($5to $7) per day. Requires an international driving permit. Fuel costs about$1 (10 $0 (000 IDR)) ($1) per liter.</li>
+  <li><strong>Gojek/Grab (ride-hailing apps)</strong> – Short rides within town: 15,000 to$2 (30 $0 (000 IDR)) ($1to $2). Longer trips to Tegalalang or waterfalls: 50,000 to$6 (100 $0 (000 IDR)) ($3to $7).</li>
+  <li><strong>Taxi</strong> – Metered taxis are rare; negotiate fares in advance. Typical short trip:$3 (50 $0 (000 IDR)) ($3).</li>
+  <li><strong>Private driver</strong> – Full-day hire (8 hours) costs 400,000 to$38 (600 $0 (000 IDR)) ($26to $40). Ideal for visiting multiple attractions.</li>
+  <li><strong>Bemos (local minibuses)</strong> – Cheap but infrequent. Routes connect Ubud to nearby villages. Fares from 5,000 to$1 (20 $0 (000 IDR)) ($0to $1).</li>
 </ul>
 
 <h2>Where to Eat</h2>
@@ -447,25 +471,25 @@
   <tr>
     <td>Street food / Warung</td>
     <td>Warung Babi Guling Ibu Oka (babi guling), Warung Sopa (vegetarian)</td>
-    <td>20,000 to 40,000 IDR ($1.30 (≈ ₽123) to $2.60 (≈ ₽247))</td>
+    <td>20,000 to$3 (40 $0 (000 IDR)) ($1to $3)</td>
   </tr>
   <tr>
     <td>Casual restaurant</td>
     <td>Melting Wok Warung (Indonesian fusion), Clear Café (organic)</td>
-    <td>50,000 to 100,000 IDR ($3.30 (≈ ₽313) to $6.60 (≈ ₽627))</td>
+    <td>50,000 to$6 (100 $0 (000 IDR)) ($3to $7)</td>
   </tr>
   <tr>
     <td>Mid-range restaurant</td>
     <td>Locavore (modern Indonesian), The Elephant (European-Asian)</td>
-    <td>150,000 to 300,000 IDR ($10 (≈ ₽950) to $20 (≈ ₽1 900))</td>
+    <td>150,000 to$19 (300 $0 (000 IDR)) ($10to $20)</td>
   </tr>
   <tr>
     <td>Fine dining</td>
     <td>Locavore (tasting menu), Hujan Locale (Indonesian fine dining)</td>
-    <td>400,000 to 800,000 IDR ($26 (≈ ₽2 470) to $53 (≈ ₽5 035))</td>
+    <td>400,000 to$51 (800 $0 (000 IDR)) ($26to $53)</td>
   </tr>
 </table>
-<p>For an authentic experience, visit the Ubud Night Market (Pasar Malam) on Jalan Goutama, open from 6:00 PM to 10:00 PM, where you can try sate lilit (minced fish satay) for 10,000 IDR ($0.65 (≈ ₽61)) per stick.</p>
+<p>For an authentic experience, visit the Ubud Night Market (Pasar Malam) on Jalan Goutama, open from 6:00 PM to 10:00 PM, where you can try sate lilit (minced fish satay) for$1 (10 $0 (000 IDR)) ($1) per stick.</p>
 
 <h2>Best Time to Visit</h2>
 <p>Ubud has a tropical monsoon climate with two seasons: dry (April to October) and wet (November to March). Here’s a month-by-month breakdown:</p>
@@ -565,7 +589,7 @@
 <p>The best time to visit is April to October, with June through August offering the most reliable sunshine. Prices for accommodation can be 30-50% higher during peak months. For budget travelers, November to March offers lower rates but frequent rain showers (often short, heavy downpours).</p>
 
 <h2>Visa & Documents</h2>
-<p>Most nationalities, including citizens of the United States, United Kingdom, Australia, Canada, and European Union countries, can obtain a Visa on Arrival (VoA) at Ngurah Rai Airport. The VoA costs 500,000 IDR (approximately $33 (≈ ₽3 135) USD) and is valid for 30 days. It can be extended once for an additional 30 days at an immigration office (cost: 500,000 IDR). You must have a passport valid for at least 6 months from the date of entry and a return or onward ticket. For longer stays, consider a B211A Social-Cultural Visa (available through agents for around $200 (≈ ₽19 000) to $300 (≈ ₽28 500) USD, valid for up to 60 days with extensions). Always check the latest regulations with the Indonesian embassy before travel.</p>
+<p>Most nationalities, including citizens of the United States, United Kingdom, Australia, Canada, and European Union countries, can obtain a Visa on Arrival (VoA) at Ngurah Rai Airport. The VoA costs$32 (500 $0 (000 IDR)) (approximately $33USD) and is valid for 30 days. It can be extended once for an additional 30 days at an immigration office (cost:$32 (500 $0 (000 IDR))). You must have a passport valid for at least 6 months from the date of entry and a return or onward ticket. For longer stays, consider a B211A Social-Cultural Visa (available through agents for around $200to $300USD, valid for up to 60 days with extensions). Always check the latest regulations with the Indonesian embassy before travel.</p>
 
 <h2>Weekly Trip Budget</h2>
 <p>Estimated costs for a one-week trip to Ubud in 2026, per person (in USD):</p>
@@ -578,14 +602,14 @@
   </tr>
   <tr>
     <td>Accommodation (7 nights)</td>
-    <td>$70 (≈ ₽6 650)–$140 (≈ ₽13 300)</td>
-    <td>$350 (≈ ₽33 250)–$700 (≈ ₽66 500)</td>
-    <td>$1 400 (≈ ₽133 000)–$7 000 (≈ ₽665 000)</td>
+    <td>$70–$140</td>
+    <td>$350–$700</td>
+    <td>$1 400–$7 000</td>
   </tr>
   <tr>
     <td>Food (7 days)</td>
-    <td>$35 (≈ ₽3 325)–$70 (≈ ₽6 650)</td>
-    <td>$140 (≈ ₽13 300)–<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+    <td>$35–$70</td>
+    <td>$140–<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -691,6 +715,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -719,6 +744,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -736,8 +762,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

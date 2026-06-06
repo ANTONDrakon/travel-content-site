@@ -11,11 +11,13 @@
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/index.html">
 
     
+    <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/index.html">
+    
 
     <meta property="og:title" content="Отдых в Египте 2026 — полный путеводитель | TravelHub">
     <meta property="og:description" content="Отдых в Египте 2026: лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/index.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -223,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -241,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -265,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -303,7 +329,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/index.html" class="nav-pill nav-pill-outline">EN</a>
@@ -329,7 +355,7 @@
 
 
 <!-- HERO -->
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=1200&amp;q=80');min-height:560px;">
+<div class="hero-section" style="background-image:url('/assets/countries/egypt.webp');min-height:560px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Отдых в Египте 2026</h1>
@@ -338,7 +364,7 @@
             <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">Подобрать тур →</a>
             
             <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);padding:8px 16px;border-radius:50px;">
-                <img src="/assets/agent/photo_2026-06-06_00-51-06.jpg" alt="Валентина" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Валентина" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
                 <span style="color:#fff;font-size:14px;font-weight:500;">Туркова Валентина<br><span style="font-size:12px;opacity:0.8;">Турагент-эксперт</span></span>
             </div>
             
@@ -394,7 +420,7 @@
         <div class="cards-grid" style="margin-top:40px;">
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Sharm_El_Sheikh_-_panoramio_%2811%29.jpg" alt="Шарм-эль-Шейх" class="card-img" loading="lazy" style="height:220px;">
+                <img src="/assets/cities/sharm-el-sheikh.webp" alt="Шарм-эль-Шейх" class="card-img" loading="lazy" style="height:220px;">
                 <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
                     <a href="/ru/egypt/sharm-el-sheikh-putevoditel.html" style="text-decoration:none;color:inherit;">
                         <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Шарм-эль-Шейх</h3>
@@ -417,7 +443,7 @@
             </div>
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://avatars.mds.yandex.net/get-altay/14296560/2a000001925220f1ecd9241e93837a93b267/orig" alt="Хургада" class="card-img" loading="lazy" style="height:220px;">
+                <img src="/assets/cities/hurghada.webp" alt="Хургада" class="card-img" loading="lazy" style="height:220px;">
                 <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
                     <a href="/ru/egypt/hurghada-putevoditel.html" style="text-decoration:none;color:inherit;">
                         <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Хургада</h3>
@@ -440,7 +466,7 @@
             </div>
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&amp;q=80" alt="Каир" class="card-img" loading="lazy" style="height:220px;">
+                <img src="/assets/cities/cairo.webp" alt="Каир" class="card-img" loading="lazy" style="height:220px;">
                 <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
                     <a href="/ru/egypt/cairo-putevoditel.html" style="text-decoration:none;color:inherit;">
                         <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Каир</h3>
@@ -463,7 +489,7 @@
             </div>
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://hurghadaexcurs.com/wp-content/uploads/2024/05/EXCURSION_TO_LUXOR_2_DAYS_INDIVIDUALLY_FROM_HURGHADA_main.jpg" alt="Луксор" class="card-img" loading="lazy" style="height:220px;">
+                <img src="/assets/cities/luxor.webp" alt="Луксор" class="card-img" loading="lazy" style="height:220px;">
                 <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
                     <a href="/ru/egypt/luxor-putevoditel.html" style="text-decoration:none;color:inherit;">
                         <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Луксор</h3>
@@ -486,7 +512,7 @@
             </div>
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&amp;q=80" alt="Марса-Алам" class="card-img" loading="lazy" style="height:220px;">
+                <img src="/assets/cities/marsa-alam.webp" alt="Марса-Алам" class="card-img" loading="lazy" style="height:220px;">
                 <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
                     <a href="/ru/egypt/marsa-alam-putevoditel.html" style="text-decoration:none;color:inherit;">
                         <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Марса-Алам</h3>
@@ -709,23 +735,23 @@
         <div style="display:flex;align-items:center;gap:24px;margin-bottom:28px;flex-wrap:wrap;">
             <div class="agent-carousel" style="width:160px;height:160px;border-radius:50%;overflow:hidden;border:3px solid var(--vermillion);position:relative;flex-shrink:0;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-51-06.jpg" alt="Valentina" class="agent-carousel-img" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:1;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Valentina" class="agent-carousel-img" loading="eager" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:1;transition:opacity 0.8s;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-51-10.jpg" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-10.webp" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-51-17.jpg" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-17.webp" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-51-44.jpg" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-44.webp" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-51-49.jpg" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-49.webp" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-51-53.jpg" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-53.webp" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-51-58.jpg" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-51-58.webp" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-52-01.jpg" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-52-01.webp" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
                 
-                <img src="/assets/agent/photo_2026-06-06_00-52-05.jpg" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
+                <img src="/assets/agent/photo_2026-06-06_00-52-05.webp" alt="Valentina" class="agent-carousel-img" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:0;transition:opacity 0.8s;">
                 
             </div>
             <div>
@@ -785,6 +811,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -813,6 +840,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -830,8 +858,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

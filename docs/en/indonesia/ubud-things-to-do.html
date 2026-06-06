@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Ubud 2026</title>
     <meta name="description" content="15 Best Things to Do in Ubud 2026 Ubud, the cultural heart of Bali, offers an unparalleled blend of lush rice terraces, ancient temples, vibrant art markets,...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Ubud 2026">
     <meta property="og:description" content="15 Best Things to Do in Ubud 2026 Ubud, the cultural heart of Bali, offers an unparalleled blend of lush rice terraces, ancient temples, vibrant art markets,...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/ubud-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ubud.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Ubud 2026</div>
@@ -363,12 +387,11 @@
 <p>Ubud, the cultural heart of Bali, offers an unparalleled blend of lush rice terraces, ancient temples, vibrant art markets, and spiritual retreats. In 2026, the town has refined its attractions with improved infrastructure, sustainable tourism initiatives, and new immersive experiences. From the iconic Monkey Forest to hidden waterfalls, Ubud’s attractions cater to nature lovers, culture enthusiasts, and wellness seekers alike. This guide covers the 15 best things to do, practical itineraries, top tours, free activities, and essential tips to maximize your visit.</p>
 
 <h2>15 Best Attractions in Ubud</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Sacred Monkey Forest Sanctuary</h3>
 <p>This lush forest sanctuary is home to over 700 long-tailed macaques and three ancient Hindu temples. Visitors walk along shaded pathways surrounded by towering banyan trees and moss-covered stone statues. The monkeys are accustomed to humans but can be mischievous, so secure all belongings. Entrance fees support conservation and temple maintenance.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 80,000 (approx. USD 5.50) for adults, IDR 60,000 for children.</li>
+<li><strong>Ticket Price:</strong> $5 (80 $0 (000 IDR))(approx. USD 5.50) for adults, $4 (60 $0 (000 IDR))for children.</li>
 <li><strong>Hours:</strong> Daily 8:30 AM – 5:30 PM.</li>
 <li><strong>How to Get There:</strong> Located in central Ubud, a 10-minute walk from Ubud Palace. Use a taxi or scooter from the town center.</li>
 <li><strong>Tip:</strong> Visit early morning (before 10 AM) to avoid crowds and see monkeys during their most active feeding time.</li>
@@ -377,16 +400,16 @@
 <h3>2. Tegallalang Rice Terraces</h3>
 <p>These iconic stepped rice paddies form a stunning green amphitheater carved into the hillside 20 minutes north of Ubud. In 2026, the terraces have been restored with new walking paths and viewing platforms to prevent erosion. Farmers still work the fields using traditional irrigation systems called subak. The best photos are taken from the top, where the layered landscapes stretch to the horizon.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 50,000 (approx. USD 3.40) per person, plus optional donation for parking.</li>
+<li><strong>Ticket Price:</strong> $3 (50 $0 (000 IDR))(approx. USD 3.40) per person, plus optional donation for parking.</li>
 <li><strong>Hours:</strong> Open daily, sunrise to sunset (best light 6:30 AM – 9 AM).</li>
-<li><strong>How to Get There:</strong> 20-minute drive north from Ubud center; take a scooter or taxi (around IDR 100,000 one-way).</li>
+<li><strong>How to Get There:</strong> 20-minute drive north from Ubud center; take a scooter or taxi (around $6 (100 $0 (000 IDR))one-way).</li>
 <li><strong>Tip:</strong> Walk down into the terraces for free (avoid the paid “swing” photo spots) and bargain with local guides for a 30-minute trek.</li>
 </ul>
 
 <h3>3. Ubud Palace (Puri Saren Agung)</h3>
 <p>This royal palace in the heart of Ubud dates back to the 19th century and features traditional Balinese architecture with intricate stone carvings and lotus ponds. The palace is still inhabited by the royal family, so only the front courtyard and some pavilions are open to the public. Evening dance performances (Legong and Barong) are held here nightly. Entry is free, making it a budget-friendly cultural stop.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Free entry. Dance performances cost IDR 100,000 (approx. USD 6.80).</li>
+<li><strong>Ticket Price:</strong> Free entry. Dance performances cost $6 (100 $0 (000 IDR))(approx. USD 6.80).</li>
 <li><strong>Hours:</strong> Grounds open daily 8 AM – 7 PM; performances start at 7:30 PM.</li>
 <li><strong>How to Get There:</strong> On Jalan Raya Ubud, opposite Ubud Market; easily walkable from most central hotels.</li>
 <li><strong>Tip:</strong> Arrive 30 minutes early for performances to secure a front-row seat on the stone floor.</li>
@@ -404,25 +427,25 @@
 <h3>5. Goa Gajah (Elephant Cave)</h3>
 <p>This 9th-century cave temple features a demonic face carved into the rock entrance, leading to a small meditation chamber with lingam and yoni symbols. The site includes a bathing pool with three fountains, a small museum, and rice fields. It is a UNESCO World Heritage candidate and a key archaeological site. The cave is small, but the surrounding garden is peaceful.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 50,000 (approx. USD 3.40) per person, including sarong rental.</li>
+<li><strong>Ticket Price:</strong> $3 (50 $0 (000 IDR))(approx. USD 3.40) per person, including sarong rental.</li>
 <li><strong>Hours:</strong> Daily 8 AM – 5 PM.</li>
-<li><strong>How to Get There:</strong> 5 kilometers southeast of Ubud center; 15-minute drive by scooter or taxi (IDR 70,000).</li>
+<li><strong>How to Get There:</strong> 5 kilometers southeast of Ubud center; 15-minute drive by scooter or taxi ($4 (70 $0 (000 IDR))).</li>
 <li><strong>Tip:</strong> Combine with a visit to the nearby Yeh Pulu relief (500 meters away) for a quieter experience.</li>
 </ul>
 
 <h3>6. Tegenungan Waterfall</h3>
 <p>This powerful 15-meter waterfall plunges into a deep pool surrounded by lush jungle, making it one of the most accessible waterfalls near Ubud. In 2026, new safety railings and changing rooms have been installed. Visitors can swim in the cool water, but currents can be strong after rain. The site has a café and viewing platform.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 20,000 (approx. USD 1.40) per person, plus IDR 5,000 for parking.</li>
+<li><strong>Ticket Price:</strong> $1 (20 $0 (000 IDR))(approx. USD 1.40) per person, plus $0 (5 $0 (000 IDR))for parking.</li>
 <li><strong>Hours:</strong> Daily 6:30 AM – 6 PM.</li>
-<li><strong>How to Get There:</strong> 30-minute drive south of Ubud; take a taxi (IDR 150,000 one-way) or join a waterfall tour.</li>
+<li><strong>How to Get There:</strong> 30-minute drive south of Ubud; take a taxi ($9 (150 $0 (000 IDR))one-way) or join a waterfall tour.</li>
 <li><strong>Tip:</strong> Visit on a weekday to avoid crowds; bring a waterproof bag for valuables.</li>
 </ul>
 
 <h3>7. Ubud Art Market (Pasar Seni Ubud)</h3>
 <p>This bustling market near Ubud Palace sells handmade crafts, batik fabrics, silver jewelry, wood carvings, and paintings. Bargaining is expected, and prices start at 50% of the initial asking price. In 2026, the market has been reorganized with clearer sections for textiles and souvenirs. It is a great place to buy authentic Balinese art and gifts.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Free to enter; items range from IDR 20,000 to IDR 500,000.</li>
+<li><strong>Ticket Price:</strong> Free to enter; items range from $1 (20 $0 (000 IDR))to $32 (500 $0 (000 IDR))</li>
 <li><strong>Hours:</strong> Daily 6 AM – 6 PM (stalls open fully by 8 AM).</li>
 <li><strong>How to Get There:</strong> Central Ubud, opposite Ubud Palace; walk from any central hotel.</li>
 <li><strong>Tip:</strong> Shop early morning for the best selection and lower prices; avoid midday heat.</li>
@@ -431,16 +454,16 @@
 <h3>8. Tirta Empul Temple (Holy Water Temple)</h3>
 <p>This active water temple features a purification pool with 30 spouts of holy spring water. Balinese Hindus and visitors participate in a ritual cleansing, which involves a sequence of prayers and immersions. The temple complex includes a large courtyard, shrines, and a fish-filled pond. In 2026, the temple has introduced guided purification sessions for tourists.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 50,000 (approx. USD 3.40) per person, including sarong rental.</li>
+<li><strong>Ticket Price:</strong> $3 (50 $0 (000 IDR))(approx. USD 3.40) per person, including sarong rental.</li>
 <li><strong>Hours:</strong> Daily 8 AM – 6 PM (purification ritual until 5 PM).</li>
-<li><strong>How to Get There:</strong> 20-minute drive north of Ubud, near Tegallalang; take a taxi (IDR 120,000).</li>
-<li><strong>Tip:</strong> Wear a swimsuit under your sarong for the purification ritual; rent a locker for IDR 10,000.</li>
+<li><strong>How to Get There:</strong> 20-minute drive north of Ubud, near Tegallalang; take a taxi ($8 (120 $0 (000 IDR))).</li>
+<li><strong>Tip:</strong> Wear a swimsuit under your sarong for the purification ritual; rent a locker for $1 (10 $0 (000 IDR))</li>
 </ul>
 
 <h3>9. Blanco Renaissance Museum</h3>
 <p>This museum dedicated to Spanish-born artist Antonio Blanco features his surrealist paintings, erotic art, and a collection of Balinese artifacts. The building itself is a whimsical white palace with a garden filled with tropical birds and fountains. In 2026, a new wing displays works by his daughter, also an artist. The museum offers a unique blend of art and nature.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 100,000 (approx. USD 6.80) per person.</li>
+<li><strong>Ticket Price:</strong> $6 (100 $0 (000 IDR))(approx. USD 6.80) per person.</li>
 <li><strong>Hours:</strong> Daily 9 AM – 6 PM.</li>
 <li><strong>How to Get There:</strong> On Jalan Raya Campuhan, a 10-minute walk from Ubud center.</li>
 <li><strong>Tip:</strong> Combine with a visit to the nearby Neka Art Museum for a full art tour.</li>
@@ -449,16 +472,16 @@
 <h3>10. Kanto Lampo Waterfall</h3>
 <p>This tiered waterfall cascades over mossy rocks into a shallow pool, creating a natural “staircase” effect. It is less crowded than Tegenungan and offers great photo opportunities with its unique rock formations. In 2026, a new wooden walkway provides safe access to the base. Swimming is allowed, but the rocks can be slippery.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 20,000 (approx. USD 1.40) per person.</li>
+<li><strong>Ticket Price:</strong> $1 (20 $0 (000 IDR))(approx. USD 1.40) per person.</li>
 <li><strong>Hours:</strong> Daily 7 AM – 6 PM.</li>
-<li><strong>How to Get There:</strong> 20-minute drive east of Ubud; take a scooter or taxi (IDR 100,000).</li>
+<li><strong>How to Get There:</strong> 20-minute drive east of Ubud; take a scooter or taxi ($6 (100 $0 (000 IDR))).</li>
 <li><strong>Tip:</strong> Visit at 8 AM to have the waterfall almost to yourself.</li>
 </ul>
 
 <h3>11. Ubud Monkey Forest Temple (Pura Dalem Agung Padangtegal)</h3>
 <p>Within the Monkey Forest, three ancient temples—Pura Dalem Agung, Pura Beji, and Pura Prajapati—are integral to the sanctuary. Pura Dalem Agung, the “Temple of Death,” features intricate carvings of demons and spirits. These temples are active worship sites, so visitors must wear sarongs. The forest itself covers 12.5 hectares and is a protected area.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Included in Monkey Forest entry (IDR 80,000).</li>
+<li><strong>Ticket Price:</strong> Included in Monkey Forest entry ($5 (80 $0 (000 IDR))).</li>
 <li><strong>Hours:</strong> Same as Monkey Forest.</li>
 <li><strong>How to Get There:</strong> Same as Monkey Forest.</li>
 <li><strong>Tip:</strong> Do not touch the monkeys or look them directly in the eye, as this can provoke aggression.</li>
@@ -467,7 +490,7 @@
 <h3>12. Saraswati Temple (Pura Taman Saraswati)</h3>
 <p>This water temple dedicated to the goddess of knowledge features a stunning lotus pond in front, making it a popular photo spot. The temple’s carvings depict scenes from the Hindu epic Ramayana. Evening dance performances are held here, similar to Ubud Palace. Entry is free, and the pond is best photographed in the morning light.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Free to enter the grounds; dance performances cost IDR 100,000.</li>
+<li><strong>Ticket Price:</strong> Free to enter the grounds; dance performances cost $6 (100 $0 (000 IDR))</li>
 <li><strong>Hours:</strong> Grounds open daily 8 AM – 6 PM; performances at 7:30 PM.</li>
 <li><strong>How to Get There:</strong> On Jalan Raya Ubud, next to Ubud Palace.</li>
 <li><strong>Tip:</strong> Visit at sunset for golden reflections on the lotus pond.</li>
@@ -476,7 +499,7 @@
 <h3>13. Tegalalang Swing (Bali Swing)</h3>
 <p>This giant swing over the rice terraces offers adrenaline-pumping views and Instagram-worthy photos. In 2026, several new swings with higher safety standards have opened, including tandem swings for couples. Most include a bird’s nest prop for photos. Prices vary by package, often including lunch or a fruit platter.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 150,000 – IDR 350,000 (approx. USD 10–24) depending on package.</li>
+<li><strong>Ticket Price:</strong> $9 (150 $0 (000 IDR))– $22 (350 $0 (000 IDR))(approx. USD 10–24) depending on package.</li>
 <li><strong>Hours:</strong> Daily 8 AM – 5 PM.</li>
 <li><strong>How to Get There:</strong> Same area as Tegallalang Rice Terraces; many operators line the main road.</li>
 <li><strong>Tip:</strong> Book a package with a private driver to save on transport costs.</li>
@@ -485,34 +508,34 @@
 <h3>14. Neka Art Museum</h3>
 <p>This comprehensive museum showcases Balinese art from the 19th century to contemporary works, with a focus on traditional painting styles and foreign artists who lived in Bali. The collection includes over 300 pieces, including works by Arie Smit and I Gusti Nyoman Lempad. In 2026, a new wing features digital art installations. The museum has a gift shop and café with terrace views.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 75,000 (approx. USD 5.10) per person.</li>
+<li><strong>Ticket Price:</strong> $5 (75 $0 (000 IDR))(approx. USD 5.10) per person.</li>
 <li><strong>Hours:</strong> Daily 9 AM – 5 PM.</li>
 <li><strong>How to Get There:</strong> On Jalan Raya Campuhan, a 15-minute walk from Ubud center.</li>
-<li><strong>Tip:</strong> Spend at least 1.5 hours here; the audio guide (IDR 50,000) is worth it.</li>
+<li><strong>Tip:</strong> Spend at least 1.5 hours here; the audio guide ($3 (50 $0 (000 IDR))) is worth it.</li>
 </ul>
 
 <h3>15. Gunung Kawi Sebatu Temple</h3>
 <p>This serene temple complex features 10 rock-cut shrines (candi) carved into a cliff face, surrounded by rice paddies and a spring-fed pool. Unlike the more famous Gunung Kawi in Tampaksiring, this site is quieter and less touristy. The temple is dedicated to the Hindu god Vishnu and has a holy spring for purification. In 2026, new interpretive signs explain the history.</p>
 <ul>
-<li><strong>Ticket Price:</strong> IDR 50,000 (approx. USD 3.40) per person.</li>
+<li><strong>Ticket Price:</strong> $3 (50 $0 (000 IDR))(approx. USD 3.40) per person.</li>
 <li><strong>Hours:</strong> Daily 8 AM – 5 PM.</li>
-<li><strong>How to Get There:</strong> 25-minute drive north of Ubud; take a taxi (IDR 150,000) or join a temple tour.</li>
+<li><strong>How to Get There:</strong> 25-minute drive north of Ubud; take a taxi ($9 (150 $0 (000 IDR))) or join a temple tour.</li>
 <li><strong>Tip:</strong> Combine with Tirta Empul and Tegallalang for a half-day north Ubud trip.</li>
 </ul>
 
 <h2>1-Day, 2-Day, and 3-Day Itineraries</h2>
 
 <h3>1-Day Itinerary: Ubud Highlights</h3>
-<p><strong>Morning (6:30 AM – 12 PM):</strong> Start with sunrise at Campuhan Ridge Walk (free, 1 hour). Then visit Ubud Palace and Saraswati Temple (30 minutes each). Walk to the Monkey Forest (9 AM opening, 2 hours). <strong>Lunch:</strong> At a local warung near Monkey Forest (IDR 50,000). <strong>Afternoon (1 PM – 5 PM):</strong> Drive to Tegallalang Rice Terraces (30 minutes, 1.5 hours). Stop at Tirta Empul for purification (1 hour). <strong>Evening (6 PM – 8 PM):</strong> Return to Ubud for a Legong dance performance at Ubud Palace (7:30 PM). <strong>Total cost:</strong> IDR 330,000 (approx. USD 22) excluding transport and meals.</p>
+<p><strong>Morning (6:30 AM – 12 PM):</strong> Start with sunrise at Campuhan Ridge Walk (free, 1 hour). Then visit Ubud Palace and Saraswati Temple (30 minutes each). Walk to the Monkey Forest (9 AM opening, 2 hours). <strong>Lunch:</strong> At a local warung near Monkey Forest ($3 (50 $0 (000 IDR))). <strong>Afternoon (1 PM – 5 PM):</strong> Drive to Tegallalang Rice Terraces (30 minutes, 1.5 hours). Stop at Tirta Empul for purification (1 hour). <strong>Evening (6 PM – 8 PM):</strong> Return to Ubud for a Legong dance performance at Ubud Palace (7:30 PM). <strong>Total cost:</strong> $21 (330 $0 (000 IDR))(approx. USD 22) excluding transport and meals.</p>
 
 <h3>2-Day Itinerary: Culture and Nature</h3>
-<p><strong>Day 1:</strong> Follow the 1-day itinerary above but skip the evening performance. Instead, enjoy dinner at a restaurant overlooking rice fields (e.g., Melting Wok Warung). <strong>Day 2:</strong> Start at 7 AM with Goa Gajah (1 hour). Then visit Kanto Lampo Waterfall (1 hour). Mid-morning, explore the Neka Art Museum (2 hours). Lunch at a café on Jalan Raya Ubud. Afternoon: Visit the Blanco Museum (1.5 hours) and Ubud Art Market (1 hour). Evening: Attend a Barong dance at a local temple (7 PM). <strong>Total cost:</strong> IDR 500,000 (approx. USD 34) excluding transport and meals.</p>
+<p><strong>Day 1:</strong> Follow the 1-day itinerary above but skip the evening performance. Instead, enjoy dinner at a restaurant overlooking rice fields (e.g., Melting Wok Warung). <strong>Day 2:</strong> Start at 7 AM with Goa Gajah (1 hour). Then visit Kanto Lampo Waterfall (1 hour). Mid-morning, explore the Neka Art Museum (2 hours). Lunch at a café on Jalan Raya Ubud. Afternoon: Visit the Blanco Museum (1.5 hours) and Ubud Art Market (1 hour). Evening: Attend a Barong dance at a local temple (7 PM). <strong>Total cost:</strong> $32 (500 $0 (000 IDR))(approx. USD 34) excluding transport and meals.</p>
 
 <h3>3-Day Itinerary: Deep Dive</h3>
-<p><strong>Day 1:</strong> Same as 2-day Day 1. <strong>Day 2:</strong> Same as 2-day Day 2. <strong>Day 3:</strong> Start at 6 AM with a sunrise trek through Tegallalang Rice Terraces (guided, 2 hours, IDR 150,000). Then visit Gunung Kawi Sebatu Temple (1 hour). Midday: Relax at a yoga studio (e.g., Yoga Barn, class IDR 150,000). Afternoon: Visit the Tegalalang Swing (1 hour) and a local coffee plantation (free tasting). Evening: Last shopping at Ubud Market and a farewell dinner. <strong>Total cost:</strong> IDR 750,000 (approx. USD 51) excluding transport and meals.</p>
+<p><strong>Day 1:</strong> Same as 2-day Day 1. <strong>Day 2:</strong> Same as 2-day Day 2. <strong>Day 3:</strong> Start at 6 AM with a sunrise trek through Tegallalang Rice Terraces (guided, 2 hours, $9 (150 $0 (000 IDR))). Then visit Gunung Kawi Sebatu Temple (1 hour). Midday: Relax at a yoga studio (e.g., Yoga Barn, class $9 (150 $0 (000 IDR))). Afternoon: Visit the Tegalalang Swing (1 hour) and a local coffee plantation (free tasting). Evening: Last shopping at Ubud Market and a farewell dinner. <strong>Total cost:</strong> $47 (750 $0 (000 IDR))(approx. USD 51) excluding transport and meals.</p>
 
 <h2>Tours & Excursions</h2>
-<p>Several guided tours simplify exploring Ubud’s attractions. The <strong>Ubud Full-Day Tour</strong> (IDR 500,000 per person,<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<p>Several guided tours simplify exploring Ubud’s attractions. The <strong>Ubud Full-Day Tour</strong> ($32 (500 $0 (000 IDR))per person,<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -598,6 +621,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -626,6 +650,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -643,8 +668,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

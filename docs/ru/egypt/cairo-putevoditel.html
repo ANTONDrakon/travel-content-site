@@ -7,8 +7,8 @@
     <meta name="description" content="Каир: полный путеводитель 2026 Каир — это не просто столица Египта, а гигантский мультикультурный организм, где история фараонов переплетается с шумом соврем...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Каир: полный путеводитель 2026">
     <meta property="og:description" content="Каир: полный путеводитель 2026 Каир — это не просто столица Египта, а гигантский мультикультурный организм, где история фараонов переплетается с шумом соврем...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/cairo-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/cairo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Каир: полный путеводитель 2026</div>
@@ -372,7 +396,7 @@
 
 <p>Из России в Каир летают прямые рейсы из Москвы (Шереметьево и Домодедово), Санкт-Петербурга и Казани. Авиакомпании: «Аэрофлот», EgyptAir, «Россия», а также бюджетные перевозчики (например, Air Cairo). Средняя цена билета туда-обратно в 2026 году составляет от 35 000 до 55 000 рублей в зависимости от сезона. В низкий сезон (май, сентябрь) можно найти билеты за 25 000–30 000 рублей. Время в полете из Москвы — около 4 часов 30 минут.</p>
 
-<p>Альтернативный вариант — долететь до Шарм-эль-Шейха или Хургады (часто дешевле), а затем пересесть на внутренний рейс (около 5 000–8 000 рублей) или автобус (Go Bus, 12–14 часов, от 1 000 рублей). Из аэропорта Каира до центра проще всего доехать на такси Uber (около 400–600 EGP, или 800–1200 рублей) или на автобусе Airport Bus №111 (до площади Тахрир, 15 EGP).</p>
+<p>Альтернативный вариант — долететь до Шарм-эль-Шейха или Хургады (часто дешевле), а затем пересесть на внутренний рейс (около 5 000–8 000 рублей) или автобус (Go Bus, 12–14 часов, от 1 000 рублей). Из аэропорта Каира до центра проще всего доехать на такси Uber (около 400–₽1 140 (600 EGP), или 800–1200 рублей) или на автобусе Airport Bus №111 (до площади Тахрир₽28 (15 EGP)).</p>
 
 <h2>Где остановиться</h2>
 
@@ -402,10 +426,10 @@
 <tr><td>9</td><td>Древний Вавилон (Старый Каир)</td><td>Римская крепость, коптские церкви, синагога Бен-Эзра. Исторический квартал с узкими улочками.</td><td>Бесплатно (улицы); церкви — пожертвования</td><td>Круглосуточно (церкви до 16:00)</td></tr>
 <tr><td>10</td><td>Парк Аль-Азхар</td><td>Гигантский парк (30 гектаров) на месте мусорной свалки. Открыт в 2005 году. Вид на Цитадель. Идеален для вечера.</td><td>50</td><td>09:00–22:00</td></tr>
 <tr><td>11</td><td>Мечеть Султана Хасана</td><td>Мамелюкская мечеть XIV века. Считается шедевром исламской архитектуры. Высота минарета — 68 метров.</td><td>100</td><td>09:00–16:00</td></tr>
-<tr><td>12</td><td>Нил (прогулка на фелуке)</td><td>Традиционная парусная лодка. Лучшее время — закат. Маршрут от района Замалек до острова Рода.</td><td>200–400 EGP за час (с торгом)</td><td>09:00–18:00</td></tr>
+<tr><td>12</td><td>Нил (прогулка на фелуке)</td><td>Традиционная парусная лодка. Лучшее время — закат. Маршрут от района Замалек до острова Рода.</td><td>200–₽760 (400 EGP) за час (с торгом)</td><td>09:00–18:00</td></tr>
 <tr><td>13</td><td>Музей современного искусства (Гезира)</td><td>Коллекция египетского искусства XX-XXI веков. Расположен в красивом здании на острове Замалек.</td><td>100</td><td>10:00–17:00 (пн-сб)</td></tr>
 <tr><td>14</td><td>Дворец барона Эмпена</td><td>Уникальный индуистско-кампучийский дворец в Гелиополисе. Построен в 1911 году. Внутри — музей.</td><td>100</td><td>09:00–16:00</td></tr>
-<tr><td>15</td><td>Город мёртвых (Карафа)</td><td>Гигантское кладбище, где живут люди (около 500 000 жителей). Спорное, но атмосферное место. Лучше с гидом.</td><td>Бесплатно (экскурсия с гидом — от 500 EGP)</td><td>Дневное время</td></tr>
+<tr><td>15</td><td>Город мёртвых (Карафа)</td><td>Гигантское кладбище, где живут люди (около 500 000 жителей). Спорное, но атмосферное место. Лучше с гидом.</td><td>Бесплатно (экскурсия с гидом — от₽950 (500 EGP))</td><td>Дневное время</td></tr>
 </table>
 
 <h2>Транспорт в городе</h2>
@@ -413,22 +437,22 @@
 <p>Каир — город контрастов, и транспорт здесь такой же. Основные варианты:</p>
 
 <ul>
-<li><strong>Метро:</strong> Самое эффективное средство. Три линии (1, 2, 3), работают с 05:00 до 00:30. Стоимость проезда — 5–8 EGP (10–16 рублей) в зависимости от расстояния. Женские вагоны (первые два) — обязательны для женщин в час пик. Станции чистые, но в час пик очень людно. В 2026 году запущена линия 3 до аэропорта.</li>
-<li><strong>Автобусы:</strong> Городские автобусы (Cairo Transport Authority) — дешево (2–5 EGP), но хаотично. Нет расписания, маршруты на арабском. Туристам не рекомендуется. Междугородние автобусы (Go Bus, Blue Bus) — хороший вариант для поездок в Александрию (3 часа, 150 EGP).</li>
-<li><strong>Такси и Uber:</strong> Uber и Careem работают отлично. Поездка по центру — 50–150 EGP (100–300 рублей). Белые такси (счетчик часто «сломан») — торгуйтесь перед посадкой. Средняя цена за 10 минут — 30–50 EGP.</li>
-<li><strong>Аренда автомобиля:</strong> Не рекомендуется для новичков. Движение хаотичное, правила не соблюдаются. Аренда — от 1 500 EGP (3 000 рублей) в сутки. Парковка в центре — отдельная проблема.</li>
-<li><strong>Микроавтобусы:</strong> Маршрутки (микроавтобусы) — самый дешевый транспорт (2–5 EGP), но самый опасный и неудобный. Ходят по фиксированным маршрутам, но останавливаются где угодно.</li>
+<li><strong>Метро:</strong> Самое эффективное средство. Три линии (1, 2, 3), работают с 05:00 до 00:30. Стоимость проезда — 5–₽15 (8 EGP) (10–16 рублей) в зависимости от расстояния. Женские вагоны (первые два) — обязательны для женщин в час пик. Станции чистые, но в час пик очень людно. В 2026 году запущена линия 3 до аэропорта.</li>
+<li><strong>Автобусы:</strong> Городские автобусы (Cairo Transport Authority) — дешево (2–₽9 (5 EGP)), но хаотично. Нет расписания, маршруты на арабском. Туристам не рекомендуется. Междугородние автобусы (Go Bus, Blue Bus) — хороший вариант для поездок в Александрию (3 часа₽285 (150 EGP)).</li>
+<li><strong>Такси и Uber:</strong> Uber и Careem работают отлично. Поездка по центру — 50–₽285 (150 EGP) (100–300 рублей). Белые такси (счетчик часто «сломан») — торгуйтесь перед посадкой. Средняя цена за 10 минут — 30–₽95 (50 EGP).</li>
+<li><strong>Аренда автомобиля:</strong> Не рекомендуется для новичков. Движение хаотичное, правила не соблюдаются. Аренда — от₽2 850 (1 ₽950 (500 EGP)) (3 000 рублей) в сутки. Парковка в центре — отдельная проблема.</li>
+<li><strong>Микроавтобусы:</strong> Маршрутки (микроавтобусы) — самый дешевый транспорт (2–₽9 (5 EGP)), но самый опасный и неудобный. Ходят по фиксированным маршрутам, но останавливаются где угодно.</li>
 </ul>
 
 <h2>Где поесть</h2>
 
-<p>Египетская кухня — это праздник для вегетарианцев и любителей мяса. Главные блюда: кошар (рис, макароны, чечевица, томатный соус, лук — от 20 EGP), фул медамес (тушеная фасоль — от 15 EGP), таамия (египетские фалафели из бобов — от 10 EGP), шаурма (от 50 EGP), кебаб (от 150 EGP).</p>
+<p>Египетская кухня — это праздник для вегетарианцев и любителей мяса. Главные блюда: кошар (рис, макароны, чечевица, томатный соус, лук — от₽38 (20 EGP)), фул медамес (тушеная фасоль — от₽28 (15 EGP)), таамия (египетские фалафели из бобов — от₽19 (10 EGP)), шаурма (от₽95 (50 EGP)), кебаб (от₽285 (150 EGP)).</p>
 
 <ul>
-<li><strong>Рестораны среднего класса:</strong> Abou El Sid (Замалек) — традиционная кухня, средний чек 600–800 EGP на человека. Felfela (Даунтаун) — легендарное место, кошар от 50 EGP.</li>
-<li><strong>Уличная еда:</strong> Лотки на улицах продают кошар, фул, таамию. Будьте осторожны с водой — пейте только бутилированную. Средняя цена обеда на улице — 50–100 EGP.</li>
-<li><strong>Кофейни (Ахва):</strong> Традиционные египетские кофейни. Пейте чай с мятой (10–15 EGP) или кофе по-турецки (15–20 EGP). Кальян (шиша) — от 30 EGP.</li>
-<li><strong>Рестораны на Ниле:</strong> River Boat (Замалек) — ужин с видом на Нил, средний чек 1 500–2 000 EGP. Бронировать заранее.</li>
+<li><strong>Рестораны среднего класса:</strong> Abou El Sid (Замалек) — традиционная кухня, средний чек 600–₽1 520 (800 EGP) на человека. Felfela (Даунтаун) — легендарное место, кошар от₽95 (50 EGP).</li>
+<li><strong>Уличная еда:</strong> Лотки на улицах продают кошар, фул, таамию. Будьте осторожны с водой — пейте только бутилированную. Средняя цена обеда на улице — 50–₽190 (100 EGP).</li>
+<li><strong>Кофейни (Ахва):</strong> Традиционные египетские кофейни. Пейте чай с мятой (10–₽28 (15 EGP)) или кофе по-турецки (15–₽38 (20 EGP)). Кальян (шиша) — от₽57 (30 EGP).</li>
+<li><strong>Рестораны на Ниле:</strong> River Boat (Замалек) — ужин с видом на Нил, средний чек 1 500–₽3 800 (2 ₽0 (000 EGP)). Бронировать заранее.</li>
 </ul>
 
 <h2>Лучшее время для поездки</h2>
@@ -543,6 +567,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -571,6 +596,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -588,8 +614,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

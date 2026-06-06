@@ -6,7 +6,7 @@
     <title>Alanya Travel Guide 2026</title>
     <meta name="description" content="Alanya Travel Guide 2026 Alanya, a stunning resort city on Turkey’s Turquoise Coast, offers a unique blend of ancient history, vibrant nightlife, and breatht...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/alanya-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/turkey/alanya-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/alanya-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/turkey/alanya-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Alanya Travel Guide 2026">
     <meta property="og:description" content="Alanya Travel Guide 2026 Alanya, a stunning resort city on Turkey’s Turquoise Coast, offers a unique blend of ancient history, vibrant nightlife, and breatht...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/turkey/alanya-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/turkey/alanya-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/alanya.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Alanya Travel Guide 2026</div>
@@ -367,11 +391,11 @@
 
 <h2>How to Get There</h2>
 
-<p>The primary gateway is Gazipaşa-Alanya Airport (GZP), located approximately 40 kilometers east of the city center. In 2026, the airport has expanded its terminal to handle increased traffic, with direct flights from over 60 cities. Average flight prices from major European capitals range from €80 to €250 for a one-way economy ticket, depending on the season. From London (STN/LGW), budget carriers like Pegasus and easyJet offer fares starting at €90 in low season (November-March) and rising to €200 in August. From Moscow (VKO/SVO), direct flights with Turkish Airlines and Aeroflot average €150-€300 round-trip. From Berlin (BER) and Frankfurt (FRA), expect prices between €120 and €220. Antalya Airport (AYT) is another option, 120 km west, with more frequent international connections and slightly lower fares on average (€70-€180), but requiring a 1.5-2 hour bus or taxi transfer (€10-€50).</p>
+<p>The primary gateway is Gazipaşa-Alanya Airport (GZP), located approximately 40 kilometers east of the city center. In 2026, the airport has expanded its terminal to handle increased traffic, with direct flights from over 60 cities. Average flight prices from major European capitals range from $87 (€80)to $271 (€250)for a one-way economy ticket, depending on the season. From London (STN/LGW), budget carriers like Pegasus and easyJet offer fares starting at $98 (€90)in low season (November-March) and rising to $217 (€200)in August. From Moscow (VKO/SVO), direct flights with Turkish Airlines and Aeroflot average $163 (€150)-$325 (€300)round-trip. From Berlin (BER) and Frankfurt (FRA), expect prices between $130 (€120)and $239 (€220)Antalya Airport (AYT) is another option, 120 km west, with more frequent international connections and slightly lower fares on average ($76 (€70)-$195 (€180)), but requiring a 1.5-2 hour bus or taxi transfer ($11 (€10)-$54 (€50)).</p>
 
 <h2>Where to Stay</h2>
 
-<p>Alanya’s neighborhoods cater to different travel styles. For luxury and beachfront access, the **Kızıl Kule (Red Tower) area** and **Cleopatra Beach** stretch offer five-star resorts like the **Alanya Resort & Spa** (from €150/night in high season) and boutique hotels like **Hillside Suites** (€120/night). For a historic vibe, the **Tophane neighborhood** on the castle hill is ideal, with restored Ottoman houses turned into guesthouses like **Kale Pansiyon** (€50-€80/night), offering stunning sea views and cobblestone streets. For budget travelers, the **Oba district**, 5 km east of the center, is packed with hostels and pension-style hotels, such as **Oba Garden Hotel** (€25-€40/night), with easy access to the beach and local markets. The **Mahmutlar area**, further east, is popular with long-stay tourists and families, offering all-inclusive resorts like **Club Mahmutlar** (€80-€130/night) with extensive amenities.</p>
+<p>Alanya’s neighborhoods cater to different travel styles. For luxury and beachfront access, the **Kızıl Kule (Red Tower) area** and **Cleopatra Beach** stretch offer five-star resorts like the **Alanya Resort & Spa** (from $163 (€150)/night in high season) and boutique hotels like **Hillside Suites** ($130 (€120)/night). For a historic vibe, the **Tophane neighborhood** on the castle hill is ideal, with restored Ottoman houses turned into guesthouses like **Kale Pansiyon** ($54 (€50)-$87 (€80)/night), offering stunning sea views and cobblestone streets. For budget travelers, the **Oba district**, 5 km east of the center, is packed with hostels and pension-style hotels, such as **Oba Garden Hotel** ($27 (€25)-$43 (€40)/night), with easy access to the beach and local markets. The **Mahmutlar area**, further east, is popular with long-stay tourists and families, offering all-inclusive resorts like **Club Mahmutlar** ($87 (€80)-$141 (€130)/night) with extensive amenities.</p>
 
 <table>
   <tr>
@@ -384,42 +408,42 @@
     <td>Budget</td>
     <td>Oba</td>
     <td>Oba Garden Hotel</td>
-    <td>€30</td>
+    <td>$33 (€30)</td>
   </tr>
   <tr>
     <td>Mid-Range</td>
     <td>Cleopatra Beach</td>
     <td>Hillside Suites</td>
-    <td>€100</td>
+    <td>$108 (€100)</td>
   </tr>
   <tr>
     <td>Luxury</td>
     <td>Kızıl Kule</td>
     <td>Alanya Resort & Spa</td>
-    <td>€180</td>
+    <td>$195 (€180)</td>
   </tr>
   <tr>
     <td>Long-Stay/Family</td>
     <td>Mahmutlar</td>
     <td>Club Mahmutlar</td>
-    <td>€110</td>
+    <td>$119 (€110)</td>
   </tr>
 </table>
 
 <h2>Top 15 Attractions</h2>
 
 <ol>
-  <li><strong>Alanya Castle (Alanya Kalesi)</strong> – A 13th-century Seljuk fortress perched on a 250-meter rocky peninsula. Explore the walls, cisterns, and the Süleymaniye Mosque. Ticket: €8. Hours: 08:00-19:00 (April-October), 08:00-17:00 (November-March).</li>
+  <li><strong>Alanya Castle (Alanya Kalesi)</strong> – A 13th-century Seljuk fortress perched on a 250-meter rocky peninsula. Explore the walls, cisterns, and the Süleymaniye Mosque. Ticket: $9 (€8)Hours: 08:00-19:00 (April-October), 08:00-17:00 (November-March).</li>
   <li><strong>Cleopatra Beach</strong> – A 2-km stretch of golden sand named after the Egyptian queen. Free public access. Lifeguards on duty. No ticket. Open 24 hours.</li>
-  <li><strong>Kızıl Kule (Red Tower)</strong> – A five-story octagonal tower built in 1226, now a museum. Climb to the top for panoramic views. Ticket: €5. Hours: 09:00-18:00.</li>
-  <li><strong>Damlatas Cave</strong> – A stalactite cave discovered in 1948, reputed for its therapeutic air (high humidity and carbon dioxide). Ticket: €4. Hours: 09:00-18:00.</li>
-  <li><strong>Alanya Archaeological Museum</strong> – Showcasing artifacts from the Bronze Age to the Ottoman period, including a famous Heracles sarcophagus. Ticket: €6. Hours: 08:30-17:30 (closed Mondays).</li>
-  <li><strong>Syedra Ancient City</strong> – Ruins 20 km north of Alanya, including a Roman bath, agora, and a 1,500-seat theater. Ticket: €4. Hours: 08:00-19:00.</li>
-  <li><strong>Alanya Teleferik (Cable Car)</strong> – A 1.2 km cable car ride from the beach to the castle, offering stunning coastal views. Ticket: €10 round-trip. Hours: 09:00-20:00.</li>
-  <li><strong>Dim Cave</strong> – A massive cave 10 km east, with a 360-meter walking path and a restaurant inside. Ticket: €5. Hours: 09:00-18:00.</li>
-  <li><strong>Dim River (Dim Çayı)</strong> – A scenic river valley with riverside restaurants serving trout. Free entry; meal costs €10-€20. Open daily.</li>
-  <li><strong>Alanya Harbor</strong> – A bustling marina with yachts, fishing boats, and sunset cruises. Free to walk. Boat tours from €15 per person.</li>
-  <li><strong>Alanya Aquapark</strong> – A water park with slides, wave pool, and lazy river. Ticket: €20 adults, €12 children. Hours: 10:00-18:00 (June-September).</li>
+  <li><strong>Kızıl Kule (Red Tower)</strong> – A five-story octagonal tower built in 1226, now a museum. Climb to the top for panoramic views. Ticket: $5 (€5)Hours: 09:00-18:00.</li>
+  <li><strong>Damlatas Cave</strong> – A stalactite cave discovered in 1948, reputed for its therapeutic air (high humidity and carbon dioxide). Ticket: $4 (€4)Hours: 09:00-18:00.</li>
+  <li><strong>Alanya Archaeological Museum</strong> – Showcasing artifacts from the Bronze Age to the Ottoman period, including a famous Heracles sarcophagus. Ticket: $7 (€6)Hours: 08:30-17:30 (closed Mondays).</li>
+  <li><strong>Syedra Ancient City</strong> – Ruins 20 km north of Alanya, including a Roman bath, agora, and a 1,500-seat theater. Ticket: $4 (€4)Hours: 08:00-19:00.</li>
+  <li><strong>Alanya Teleferik (Cable Car)</strong> – A 1.2 km cable car ride from the beach to the castle, offering stunning coastal views. Ticket: $11 (€10)round-trip. Hours: 09:00-20:00.</li>
+  <li><strong>Dim Cave</strong> – A massive cave 10 km east, with a 360-meter walking path and a restaurant inside. Ticket: $5 (€5)Hours: 09:00-18:00.</li>
+  <li><strong>Dim River (Dim Çayı)</strong> – A scenic river valley with riverside restaurants serving trout. Free entry; meal costs $11 (€10)-$22 (€20)Open daily.</li>
+  <li><strong>Alanya Harbor</strong> – A bustling marina with yachts, fishing boats, and sunset cruises. Free to walk. Boat tours from $16 (€15)per person.</li>
+  <li><strong>Alanya Aquapark</strong> – A water park with slides, wave pool, and lazy river. Ticket: $22 (€20)adults, $13 (€12)children. Hours: 10:00-18:00 (June-September).</li>
   <li><strong>İncekum Nature Park</strong> – A protected beach 25 km west, with a lighthouse and picnic areas. Free entry. Open 24 hours.</li>
   <li><strong>Alanya Souk (Market)</strong> – A weekly market every Saturday, selling textiles, spices, and souvenirs. Free entry. Hours: 08:00-20:00.</li>
   <li><strong>Kızılkule Etnografya Müzesi</strong> – An ethnographic museum inside the Red Tower, displaying traditional costumes and crafts. Included in Kızıl Kule ticket.</li>
@@ -428,11 +452,11 @@
 
 <h2>Getting Around</h2>
 
-<p>Alanya’s public transport is efficient and affordable. The **Alanya city bus system** (operated by Alanya Belediyesi) covers most areas, with single rides costing €0.50 (10 TL). A rechargeable **Alanya Kart** costs €1 and offers discounted fares (€0.35 per ride). For longer distances, **minibuses (dolmuş)** run along the coastal road from Mahmutlar to Konaklı, with fares ranging from €0.70 to €1.50. Taxis are plentiful, with a starting fare of €1.50 and €0.80 per kilometer; a trip from the city center to Oba costs about €5. For independence, rent a car from agencies like **Budget** or **Avis** for €25-€50 per day (including insurance). Scooter rentals are popular, at €15-€25 per day, but require an international driver’s permit. The **Alanya Tram** (a light rail system) is under construction as of 2026, with the first line from the harbor to Oba expected to open in late 2026.</p>
+<p>Alanya’s public transport is efficient and affordable. The **Alanya city bus system** (operated by Alanya Belediyesi) covers most areas, with single rides costing $1 (€0)(10 TL). A rechargeable **Alanya Kart** costs $1 (€1)and offers discounted fares ($0 (€0)per ride). For longer distances, **minibuses (dolmuş)** run along the coastal road from Mahmutlar to Konaklı, with fares ranging from $1 (€1)to €1.50. Taxis are plentiful, with a starting fare of $2 (€2)and $1 (€1)per kilometer; a trip from the city center to Oba costs about $5 (€5)For independence, rent a car from agencies like **Budget** or **Avis** for $27 (€25)-$54 (€50)per day (including insurance). Scooter rentals are popular, at $16 (€15)-$27 (€25)per day, but require an international driver’s permit. The **Alanya Tram** (a light rail system) is under construction as of 2026, with the first line from the harbor to Oba expected to open in late 2026.</p>
 
 <h2>Where to Eat</h2>
 
-<p>Alanya’s culinary scene is a delight, blending Turkish classics with fresh Mediterranean ingredients. For an upscale experience, **Portakal Restaurant** (Cleopatra Beach) offers grilled sea bass and mezes for €25-€40 per person. Mid-range options abound: **Şehzade Restaurant** (city center) serves excellent kebabs and pide for €10-€18. For street food, try **Alanya Gözleme Evi** (near the harbor) for freshly made gözleme (stuffed flatbread) at €3-€5. Local specialties include **Alanya böreği** (a pastry with cheese and spinach) and **tandır kebabı** (slow-cooked lamb). Don’t miss the **Dim River trout restaurants**, where a whole grilled trout with salad costs €8-€12. For budget meals, **Köfteci Ramiz** (Oba) serves köfte and beans for €4-€6. Beer (Efes) costs €2-€4 in bars, and a glass of local wine (e.g., Kalecik Karası) starts at €5.</p>
+<p>Alanya’s culinary scene is a delight, blending Turkish classics with fresh Mediterranean ingredients. For an upscale experience, **Portakal Restaurant** (Cleopatra Beach) offers grilled sea bass and mezes for $27 (€25)-$43 (€40)per person. Mid-range options abound: **Şehzade Restaurant** (city center) serves excellent kebabs and pide for $11 (€10)-$20 (€18)For street food, try **Alanya Gözleme Evi** (near the harbor) for freshly made gözleme (stuffed flatbread) at $3 (€3)-$5 (€5)Local specialties include **Alanya böreği** (a pastry with cheese and spinach) and **tandır kebabı** (slow-cooked lamb). Don’t miss the **Dim River trout restaurants**, where a whole grilled trout with salad costs $9 (€8)-$13 (€12)For budget meals, **Köfteci Ramiz** (Oba) serves köfte and beans for $4 (€4)-$7 (€6)Beer (Efes) costs $2 (€2)-$4 (€4)in bars, and a glass of local wine (e.g., Kalecik Karası) starts at $5 (€5)</p>
 
 <table>
   <tr>
@@ -443,28 +467,28 @@
   <tr>
     <td>Fine Dining</td>
     <td>Portakal Restaurant</td>
-    <td>€25-€40</td>
+    <td>$27 (€25)-$43 (€40)</td>
   </tr>
   <tr>
     <td>Mid-Range</td>
     <td>Şehzade Restaurant</td>
-    <td>€10-€18</td>
+    <td>$11 (€10)-$20 (€18)</td>
   </tr>
   <tr>
     <td>Street Food</td>
     <td>Alanya Gözleme Evi</td>
-    <td>€3-€5</td>
+    <td>$3 (€3)-$5 (€5)</td>
   </tr>
   <tr>
     <td>Budget</td>
     <td>Köfteci Ramiz</td>
-    <td>€4-€6</td>
+    <td>$4 (€4)-$7 (€6)</td>
   </tr>
 </table>
 
 <h2>Best Time to Visit</h2>
 
-<p>Alanya enjoys a hot-summer Mediterranean climate. The **peak season** (June-September) sees temperatures averaging 30-35°C (86-95°F) and sea temperatures of 25-28°C (77-82°F). Prices are highest, with hotel rates doubling. **Shoulder season** (April-May and October) offers pleasant weather (20-28°C) and lower crowds, ideal for sightseeing and hiking. **Winter** (November-March) is mild (10-18°C) and rainy, but attractions remain open, and prices drop by 50-70%. For budget-conscious travelers, May and October are optimal: average hotel rates are €40-€80 per night, and flights are 30% cheaper than in August.</p>
+<p>Alanya enjoys a hot-summer Mediterranean climate. The **peak season** (June-September) sees temperatures averaging 30-35°C (86-95°F) and sea temperatures of 25-28°C (77-82°F). Prices are highest, with hotel rates doubling. **Shoulder season** (April-May and October) offers pleasant weather (20-28°C) and lower crowds, ideal for sightseeing and hiking. **Winter** (November-March) is mild (10-18°C) and rainy, but attractions remain open, and prices drop by 50-70%. For budget-conscious travelers, May and October are optimal: average hotel rates are $43 (€40)-$87 (€80)per night, and flights are 30% cheaper than in August.</p>
 
 <table>
   <tr>
@@ -506,11 +530,11 @@
 
 <h2>Visa & Documents</h2>
 
-<p>Russian citizens are visa-free for stays up to 60 days in Turkey. A valid passport with at least 6 months validity from the date of entry is required. Citizens of the UK, EU, USA, and Canada need an e-Visa (€25-€60, depending on nationality) obtained online at least 48 hours before travel. All travelers must have proof of accommodation and return flight. No specific vaccinations are required, but travel insurance is strongly recommended.</p>
+<p>Russian citizens are visa-free for stays up to 60 days in Turkey. A valid passport with at least 6 months validity from the date of entry is required. Citizens of the UK, EU, USA, and Canada need an e-Visa ($27 (€25)-$65 (€60)depending on nationality) obtained online at least 48 hours before travel. All travelers must have proof of accommodation and return flight. No specific vaccinations are required, but travel insurance is strongly recommended.</p>
 
 <h2>Weekly Trip Budget</h2>
 
-<p>For a 7-day trip in June 2026, a budget traveler can manage with €400-€600, a mid-range traveler with €800-€1,200, and a luxury traveler with €1,800+. Below is a breakdown for a mid-range solo traveler:</p>
+<p>For a 7-day trip in June 2026, a budget traveler can manage with $434 (€400)-$651 (€600)a mid-range traveler with $867 (€800)-$1 301 (€1 200)and a luxury traveler with $1 952 (€1 800)+. Below is a breakdown for a mid-range solo traveler:</p>
 
 <table>
   <tr>
@@ -519,31 +543,31 @@
   </tr>
   <tr>
     <td>Accommodation (mid-range hotel)</td>
-    <td>€700 (€100/night)</td>
+    <td>$759 (€700)($108 (€100)/night)</td>
   </tr>
   <tr>
     <td>Food (3 meals + snacks)</td>
-    <td>€250 (€35/day)</td>
+    <td>$271 (€250)($38 (€35)/day)</td>
   </tr>
   <tr>
     <td>Local Transport (buses + 2 taxis)</td>
-    <td>€30</td>
+    <td>$33 (€30)</td>
   </tr>
   <tr>
     <td>Attractions (entry fees for 5 sites)</td>
-    <td>€40</td>
+    <td>$43 (€40)</td>
   </tr>
   <tr>
     <td>Entertainment (1 boat tour + 2 drinks)</td>
-    <td>€50</td>
+    <td>$54 (€50)</td>
   </tr>
   <tr>
     <td>Miscellaneous (souvenirs, tips)</td>
-    <td>€30</td>
+    <td>$33 (€30)</td>
   </tr>
   <tr>
     <td><strong>Total</strong></td>
-    <td><strong>€1,100</strong></td>
+    <td><strong>$1 193 (€1 100)</strong></td>
   </tr>
 </table>
 
@@ -554,7 +578,7 @@
   <li><strong>Bargain at markets, but not at restaurants.</strong> In the Alanya Souk, start at 50% of the asking price. Restaurants and taxis have fixed prices—don’t haggle.</li>
   <li><strong>Use sunscreen and stay hydrated.</strong> The UV index in summer is extreme (9-10). Apply SPF 50+ and drink 2-3 liters of water daily.</li>
   <li><strong>Respect dress codes at mosques.</strong> Cover shoulders and knees, and remove shoes. Women should bring a scarf for head covering.</li>
-  <li><strong>Be cautious with tap water.</strong> It’s treated but may cause stomach upset. Drink bottled water (€0.30 per liter) and avoid ice in street stalls.</li>
+  <li><strong>Be cautious with tap water.</strong> It’s treated but may cause stomach upset. Drink bottled water ($0 (€0)per liter) and avoid ice in street stalls.</li>
   <li><strong>Use the Alanya Kart for public transport.</strong> It’s cheaper than cash and can be topped up at kiosks. Get one at the bus station.</li>
   <li><strong>Plan for siesta.</strong> Many shops close from 12:00-14:00, especially in summer. Use this time for a beach nap or a cool drink.</li>
   <li><strong>Book attractions online in advance.</strong> For the cable car and Damlatas Cave, queues can exceed 1 hour in July. Skip the line by purchasing tickets online.</li>
@@ -666,6 +690,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -694,6 +719,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -711,8 +737,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

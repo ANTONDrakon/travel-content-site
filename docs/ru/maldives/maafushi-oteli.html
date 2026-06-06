@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Маафуши 2026: от бюджета до люкса Друзья, если вы мечтаете о Мальдивах, но бюджет пока не резиновый — Маафуши станет вашим идеальным компроми...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/maafushi-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/maafushi-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Маафуши 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Маафуши 2026: от бюджета до люкса Друзья, если вы мечтаете о Мальдивах, но бюджет пока не резиновый — Маафуши станет вашим идеальным компроми...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/maafushi-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/maafushi-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://vectorme.ru/wp-content/uploads/2023/03/ostrov-maafushi-2048x1091.png');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/maafushi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Маафуши 2026: от бюджета до люкса</div>
@@ -361,54 +385,123 @@
 
 <p>Друзья, если вы мечтаете о Мальдивах, но бюджет пока не резиновый — Маафуши станет вашим идеальным компромиссом. Это не просто остров, а настоящий туристический хаб, где можно почувствовать и местный колорит, и расслабленную пляжную атмосферу. Я объездила полмира, но именно Маафуши запал мне в душу своей искренностью. Здесь нет перегруженных курортов «всё включено», зато есть живая энергия, отличный серфинг и потрясающие закаты. В 2026 году инфраструктура острова стала ещё лучше: новые кафе, обновлённые гостевые дома и более удобное транспортное сообщение с Мале. Остров разделён на две части — местную и туристическую, но поверьте, границы здесь почти не чувствуются. Вы будете гулять по узким улочкам, здороваться с местными рыбаками и наслаждаться жизнью без галстуков.</p>
 
-<p>Цены на жильё в Маафуши варьируются от смешных ₽2 850 (≈ $30) за ночь в гестхаусе до ₽28 500 (≈ $300)+ за номер с видом на океан. Я рекомендую всегда бронировать заранее, особенно если планируете поездку на высокий сезон (ноябрь-апрель). В 2026 году, по моим наблюдениям, спрос вырос на 20%, так что лучшие варианты разлетаются как горячие пирожки. Ниже — моя личная подборка, проверенная на себе и сотнях клиентов. Все цены указаны с учётом моей стандартной наценки в 12-15% (так я гарантирую вам качество и поддержку 24/7). Поехали!</p>
+<p>Цены на жильё в Маафуши варьируются от смешных ₽2 850 ($30)за ночь в гестхаусе до ₽28 500 ($300)+ за номер с видом на океан. Я рекомендую всегда бронировать заранее, особенно если планируете поездку на высокий сезон (ноябрь-апрель). В 2026 году, по моим наблюдениям, спрос вырос на 20%, так что лучшие варианты разлетаются как горячие пирожки. Ниже — моя личная подборка, проверенная на себе и сотнях клиентов. Все цены указаны с учётом моей стандартной наценки в 12-15% (так я гарантирую вам качество и поддержку 24/7). Поехали!</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Sun Tan Beach Inn</h3>
-<p>Этот гестхаус — настоящая находка для соло-путешественников и пар, которые хотят сэкономить, но не потерять в уюте. Расположен в 2 минутах от пляжа Бикини-Бич, где можно купаться без ограничений. Номера простые, но чистые: кондиционер, горячая вода, мини-холодильник. Завтрак включён — местные лепёшки, фрукты и чай. Цена: ₽4 275 (≈ $45) за ночь (с наценкой — ₽4 940 (≈ $52)). Плюсы: дружелюбный хозяин Ахмед, который организует снорклинг-туры за полцены. Минусы: шумно по вечерам из-за близости к кафе, и Wi-Fi ловит только на веранде.</p>
+<div id="hc_503032" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Sun Tan Beach Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sun Tan Beach Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_503032 .hc-slide');var d=document.querySelectorAll('#hc_503032 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_503032 .hc-slide');var d=document.querySelectorAll('#hc_503032 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sun Tan Beach Inn &bull; 2 photos</p></div>
+<p>Этот гестхаус — настоящая находка для соло-путешественников и пар, которые хотят сэкономить, но не потерять в уюте. Расположен в 2 минутах от пляжа Бикини-Бич, где можно купаться без ограничений. Номера простые, но чистые: кондиционер, горячая вода, мини-холодильник. Завтрак включён — местные лепёшки, фрукты и чай. Цена: ₽4 275 ($45)за ночь (с наценкой — ₽4 940 ($52)). Плюсы: дружелюбный хозяин Ахмед, который организует снорклинг-туры за полцены. Минусы: шумно по вечерам из-за близости к кафе, и Wi-Fi ловит только на веранде.</p>
 
 <h3>2. Maafushi Inn</h3>
-<p>Один из старейших гестхаусов на острове, но в 2025 году его полностью отремонтировали. Мне нравится за атмосферу домашнего уюта: здесь есть общая терраса с гамаками и маленький сад. Номера скромные, но есть семейные варианты с двумя спальнями. Цена: ₽3 610 (≈ $38) за ночь (с наценкой — ₽4 180 (≈ $44)). Плюсы: очень тихое место, идеально для семей с детьми. Минусы: до пляжа идти 10 минут, а завтрак однообразный (яйца и тосты каждое утро). Зато рядом — лучший магазин сувениров!</p>
+<div id="hc_10735" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Maafushi Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Maafushi Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Maafushi Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_10735 .hc-slide');var d=document.querySelectorAll('#hc_10735 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_10735 .hc-slide');var d=document.querySelectorAll('#hc_10735 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_10735 .hc-slide');var d=document.querySelectorAll('#hc_10735 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Maafushi Inn &bull; 3 photos</p></div>
+<p>Один из старейших гестхаусов на острове, но в 2025 году его полностью отремонтировали. Мне нравится за атмосферу домашнего уюта: здесь есть общая терраса с гамаками и маленький сад. Номера скромные, но есть семейные варианты с двумя спальнями. Цена: ₽3 610 ($38)за ночь (с наценкой — ₽4 180 ($44)). Плюсы: очень тихое место, идеально для семей с детьми. Минусы: до пляжа идти 10 минут, а завтрак однообразный (яйца и тосты каждое утро). Зато рядом — лучший магазин сувениров!</p>
 
 <h3>3. Relax Beach Inn</h3>
-<p>Название говорит само за себя. Этот отельчик — для тех, кто хочет минимализм и полный релакс. Номера выходят во внутренний дворик, где растут пальмы и поют птицы. Владелец — бывший рыбак, который каждый вечер жарит туну на гриле для гостей (бесплатно, если подружиться). Цена: ₽3 990 (≈ $42) за ночь (с наценкой — ₽4 560 (≈ $48)). Плюсы: невероятно чисто, каждый день уборка, и есть прокат масок и ласт. Минусы: нет ресепшена, всё решается через WhatsApp, и кондиционер шумноват. Но за такие деньги — просто сказка!</p>
+<div id="hc_144104" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Relax Beach Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Relax Beach Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_144104 .hc-slide');var d=document.querySelectorAll('#hc_144104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_144104 .hc-slide');var d=document.querySelectorAll('#hc_144104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Relax Beach Inn &bull; 2 photos</p></div>
+<p>Название говорит само за себя. Этот отельчик — для тех, кто хочет минимализм и полный релакс. Номера выходят во внутренний дворик, где растут пальмы и поют птицы. Владелец — бывший рыбак, который каждый вечер жарит туну на гриле для гостей (бесплатно, если подружиться). Цена: ₽3 990 ($42)за ночь (с наценкой — ₽4 560 ($48)). Плюсы: невероятно чисто, каждый день уборка, и есть прокат масок и ласт. Минусы: нет ресепшена, всё решается через WhatsApp, и кондиционер шумноват. Но за такие деньги — просто сказка!</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Arena Beach Hotel</h3>
-<p>Мой личный фаворит среди «середнячков». Отель стоит прямо на пляжной линии, и из некоторых номеров слышен шум прибоя. В 2026 году здесь открыли новый ресторан с панорамной террасой — попробуйте их карри из креветок, это божественно! Номера просторные, с современной мебелью и большими кроватями. Цена: ₽9 025 (≈ $95) за ночь (с наценкой — ₽10 355 (≈ $109)). Фишки: бесплатный трансфер от причала, ежедневная йога на пляже в 7 утра и скидка 15% на дайвинг-центр. Идеально для пар, которые хотят романтику без переплаты.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ст" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_722582" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Arena Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Arena Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_722582 .hc-slide');var d=document.querySelectorAll('#hc_722582 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_722582 .hc-slide');var d=document.querySelectorAll('#hc_722582 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Arena Beach Hotel &bull; 2 photos</p></div>
+<p>Мой личный фаворит среди «середнячков». Отель стоит прямо на пляжной линии, и из некоторых номеров слышен шум прибоя. В 2026 году здесь открыли новый ресторан с панорамной террасой — попробуйте их карри из креветок, это божественно! Номера просторные, с современной мебелью и большими кроватями. Цена: ₽9 025 ($95)за ночь (с наценкой — ₽10 355 ($109)). Фишки: бесплатный трансфер от причала, ежедневная йога на пляже в 7 утра и скидка 15% на дайвинг-центр. Идеально для пар, которые хотят романтику без переплаты.</p>
 
 <h3>5. Kaani Village & Spa</h3>
-<p>Если вы ищете спа-процедуры по доступной цене — вам сюда. Отель предлагает массаж, хаммам и даже аюрведические программы. Номера оформлены в мальдивском стиле: дерево, батик, плетёная мебель. Есть бассейн (редкость для Маафуши) и детский клуб. Цена: ₽11 400 (≈ $120) за ночь (с наценкой — ₽13 110 (≈ $138)). Фишки: по четвергам — живая музыка на ужине, и можно заказать ужин на крыше с видом на океан. Минус: Wi-Fi платный (но я всегда договариваюсь о бесплатном для своих клиентов).</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="пр" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_989717" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Kaani Village & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Kaani Village & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_989717 .hc-slide');var d=document.querySelectorAll('#hc_989717 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_989717 .hc-slide');var d=document.querySelectorAll('#hc_989717 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kaani Village & Spa &bull; 2 photos</p></div>
+<p>Если вы ищете спа-процедуры по доступной цене — вам сюда. Отель предлагает массаж, хаммам и даже аюрведические программы. Номера оформлены в мальдивском стиле: дерево, батик, плетёная мебель. Есть бассейн (редкость для Маафуши) и детский клуб. Цена: ₽11 400 ($120)за ночь (с наценкой — ₽13 110 ($138)). Фишки: по четвергам — живая музыка на ужине, и можно заказать ужин на крыше с видом на океан. Минус: Wi-Fi платный (но я всегда договариваюсь о бесплатном для своих клиентов).</p>
 
 <h3>6. White Shell Beach Inn</h3>
-<p>Этот отель — для тех, кто ценит дизайн. Белоснежные стены, голубые акценты, инстаграмные зоны — каждый уголок просится на фото. Номера с выходом на общую террасу, где подают завтрак. Есть небольшой спортзал и библиотека. Цена: ₽8 075 (≈ $85) за ночь (с наценкой — ₽9 310 (≈ $98)). Фишки: бесплатный велосипед на время проживания, и каждую субботу — мастер-класс по приготовлению мальдивских блюд. Идеально для молодых пар и блогеров.</p>
+<div id="hc_737462" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="White Shell Beach Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="White Shell Beach Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_737462 .hc-slide');var d=document.querySelectorAll('#hc_737462 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_737462 .hc-slide');var d=document.querySelectorAll('#hc_737462 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">White Shell Beach Inn &bull; 2 photos</p></div>
+<p>Этот отель — для тех, кто ценит дизайн. Белоснежные стены, голубые акценты, инстаграмные зоны — каждый уголок просится на фото. Номера с выходом на общую террасу, где подают завтрак. Есть небольшой спортзал и библиотека. Цена: ₽8 075 ($85)за ночь (с наценкой — ₽9 310 ($98)). Фишки: бесплатный велосипед на время проживания, и каждую субботу — мастер-класс по приготовлению мальдивских блюд. Идеально для молодых пар и блогеров.</p>
 
 <h3>7. Sunrise Beach Hotel</h3>
-<p>Название не обманывает — отель расположен на восточной стороне острова, и вы будете просыпаться с первыми лучами солнца. Номера с балконами, откуда видно рыбацкие лодки. Владельцы — семья с тремя детьми, поэтому атмосфера очень тёплая. Цена: ₽10 450 (≈ $110) за ночь (с наценкой — ₽12 065 (≈ $127)). Фишки: бесплатный снорклинг-гид по утрам, и можно взять напрокат каяк. Минус: ресторан закрывается в 21:00, так что для ночных сов не подойдёт. Но завтраки — лучшие на острове!</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ра" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_385044" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sunrise Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Sunrise Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_385044 .hc-slide');var d=document.querySelectorAll('#hc_385044 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_385044 .hc-slide');var d=document.querySelectorAll('#hc_385044 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunrise Beach Hotel &bull; 2 photos</p></div>
+<p>Название не обманывает — отель расположен на восточной стороне острова, и вы будете просыпаться с первыми лучами солнца. Номера с балконами, откуда видно рыбацкие лодки. Владельцы — семья с тремя детьми, поэтому атмосфера очень тёплая. Цена: ₽10 450 ($110)за ночь (с наценкой — ₽12 065 ($127)). Фишки: бесплатный снорклинг-гид по утрам, и можно взять напрокат каяк. Минус: ресторан закрывается в 21:00, так что для ночных сов не подойдёт. Но завтраки — лучшие на острове!</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Coco Palm Inn</h3>
-<p>Это не просто отель, а маленький курорт. Номера-люкс с отдельными джакузи, частные пляжные зоны и круглосуточный консьерж. Здесь есть свой дайв-центр, где можно получить сертификат PADI за 3 дня. Цена: ₽17 100 (≈ $180) за ночь (с наценкой — ₽19 665 (≈ $207)). Особенности: ресторан с мишленовским шеф-поваром (попробуйте тартар из лобстера), и спа с океанским видом. Идеально для медового месяца или юбилея. Я рекомендую бронировать номер с выходом на бассейн — это стоит каждой копейки.</p>
+<div id="hc_310035" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Coco Palm Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coco Palm Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_310035 .hc-slide');var d=document.querySelectorAll('#hc_310035 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_310035 .hc-slide');var d=document.querySelectorAll('#hc_310035 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coco Palm Inn &bull; 2 photos</p></div>
+<p>Это не просто отель, а маленький курорт. Номера-люкс с отдельными джакузи, частные пляжные зоны и круглосуточный консьерж. Здесь есть свой дайв-центр, где можно получить сертификат PADI за 3 дня. Цена: ₽17 100 ($180)за ночь (с наценкой — ₽19 665 ($207)). Особенности: ресторан с мишленовским шеф-поваром (попробуйте тартар из лобстера), и спа с океанским видом. Идеально для медового месяца или юбилея. Я рекомендую бронировать номер с выходом на бассейн — это стоит каждой копейки.</p>
 
 <h3>9. Island Luxury Retreat</h3>
-<p>Самый новый отель на острове (открылся в конце 2025 года). Всё здесь дышит роскошью: мраморные полы, дизайнерская мебель, смарт-панели управления. Есть частный пляж с белым песком и шезлонгами. Цена: ₽23 750 (≈ $250) за ночь (с наценкой — ₽27 360 (≈ $288)). Особенности: вертолётный трансфер из Мале (дополнительно ₽47 500 (≈ $500)), винный погреб с 200 сортами и персональный батлер. Для тех, кто хочет почувствовать себя звездой. Минус: очень дорогой ресторан (ужин на двоих — от ₽14 250 (≈ $150)).</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="на" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_395349" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Island Luxury Retreat - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Island Luxury Retreat - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Island Luxury Retreat - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_395349 .hc-slide');var d=document.querySelectorAll('#hc_395349 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_395349 .hc-slide');var d=document.querySelectorAll('#hc_395349 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_395349 .hc-slide');var d=document.querySelectorAll('#hc_395349 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Island Luxury Retreat &bull; 3 photos</p></div>
+<p>Самый новый отель на острове (открылся в конце 2025 года). Всё здесь дышит роскошью: мраморные полы, дизайнерская мебель, смарт-панели управления. Есть частный пляж с белым песком и шезлонгами. Цена: ₽23 750 ($250)за ночь (с наценкой — ₽27 360 ($288)). Особенности: вертолётный трансфер из Мале (дополнительно ₽47 500 ($500)), винный погреб с 200 сортами и персональный батлер. Для тех, кто хочет почувствовать себя звездой. Минус: очень дорогой ресторан (ужин на двоих — от ₽14 250 ($150)).</p>
 
 <h3>10. Ocean Breeze Villa</h3>
-<p>Эти виллы — для тех, кто хочет уединения. Расположены на самой южной оконечности острова, вдали от шума. Каждая вилла имеет свой бассейн и террасу с видом на лагуну. Интерьер — смесь мальдивского колорита и современного минимализма. Цена: ₽28 500 (≈ $300) за ночь (с наценкой — ₽32 775 (≈ $345)). Особенности: приватный повар (готовит по вашему меню), каяки и сап-борды бесплатно, и ежедневный круиз на закате. Идеально для пар, которые хотят полной приватности. Я обожаю это место за тишину и звёздное небо.</p>
+<div id="hc_10275" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Ocean Breeze Villa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Ocean Breeze Villa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_10275 .hc-slide');var d=document.querySelectorAll('#hc_10275 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_10275 .hc-slide');var d=document.querySelectorAll('#hc_10275 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ocean Breeze Villa &bull; 2 photos</p></div>
+<p>Эти виллы — для тех, кто хочет уединения. Расположены на самой южной оконечности острова, вдали от шума. Каждая вилла имеет свой бассейн и террасу с видом на лагуну. Интерьер — смесь мальдивского колорита и современного минимализма. Цена: ₽28 500 ($300)за ночь (с наценкой — ₽32 775 ($345)). Особенности: приватный повар (готовит по вашему меню), каяки и сап-борды бесплатно, и ежедневный круиз на закате. Идеально для пар, которые хотят полной приватности. Я обожаю это место за тишину и звёздное небо.</p>
 
 <h2>Как выбрать район</h2>
 <p>Маафуши не такой уж большой, но у каждого района есть свой характер. Если вы едете за пляжем и морем — выбирайте отели на западной стороне (Бикини-Бич). Там лучший песок и пологий вход в воду. Для экскурсий и снорклинга лучше селиться ближе к причалу — оттуда стартуют лодки на рифы и соседние острова. А если вы хотите ночной жизни — ищите жильё в центре, рядом с кафе и барами. Там по вечерам играет музыка, и можно танцевать до утра. Лично я советую комбинировать: пару ночей в центре (для вечеринок) и пару — на пляже (для релакса).</p>
 
 <h2>Советы по бронированию</h2>
 <p>Хотите сэкономить? Бронируйте за 2-3 месяца до поездки — так цены ниже на 20-30%. Избегайте пиковых дат (Рождество, Новый год, китайский Новый год). Лучшие сервисы для бронирования — <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> и <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a>, но я лично проверяю каждый вариант и договариваюсь о скидках для своих клиентов. Ещё один лайфхак: пишите отелю напрямую в WhatsApp после брони — часто они предлагают бесплатный апгрейд номера или трансфер. И не забудьте про страховку — покрытие медицинских расходов на Мальдивах обязательно. Если хотите, чтобы я подобрала отель под ваш бюджет и пожелания — просто напишите мне, я всегда на связи!</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="по" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <p>Вот такая подборка, друзья. Маафуши в 2026 году — это место, где каждый найдёт свой уголок рая. От бюджетных гестхаусов до роскошных вилл — выбор огромен. Главное — не бояться планировать и доверять профессионалам. Я уже собираю чемоданы в свою следующую поездку, и, честно говоря, завидую тем, кто поедет впервые. Это будет незабываемо!</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
@@ -501,6 +594,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -529,6 +623,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -546,8 +641,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

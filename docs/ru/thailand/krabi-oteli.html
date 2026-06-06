@@ -7,8 +7,8 @@
     <meta name="description" content="Топ-10 отелей в Краби 2026: от бюджета до люкса Краби — одно из самых живописных направлений Таиланда, привлекающее путешественников своими известняковыми ск...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/krabi-oteli.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/krabi-oteli.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/krabi-oteli.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/krabi-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/krabi-hotels.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/krabi-oteli.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Топ-10 отелей в Краби 2026: от бюджета до люкса">
     <meta property="og:description" content="Топ-10 отелей в Краби 2026: от бюджета до люкса Краби — одно из самых живописных направлений Таиланда, привлекающее путешественников своими известняковыми ск...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/krabi-oteli.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/krabi-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/krabi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Топ-10 отелей в Краби 2026: от бюджета до люкса</div>
@@ -361,81 +385,155 @@
 
 <p>Краби — одно из самых живописных направлений Таиланда, привлекающее путешественников своими известняковыми скалами, бирюзовыми водами и расслабленной атмосферой. Гостиничная инфраструктура здесь развита превосходно: от скромных гестхаусов до пятизвездочных курортов с частными пляжами. Основные районы для проживания — Ао Нанг (главный туристический центр с ресторанами и ночной жизнью), Рейли Бич (доступен только на лодке, идеален для скалолазания и уединения), а также более спокойные пляжи Клонг Муанг и Ноппарат Тара.</p>
 
-<p>Цены на проживание в Краби в 2026 году варьируются в зависимости от сезона. Высокий сезон (ноябрь–апрель) приносит сухую погоду и максимальные тарифы: бюджетные номера стоят от ₽2 850 (≈ $30 ) средний сегмент — от ₽5 700 (≈ $60 ) люкс — от ₽17 100 (≈ $180.) В низкий сезон (май–октябрь) цены падают на 30–50%, однако возможны кратковременные дожди. Для комфортного отдыха рекомендуем бронировать жилье за 2–3 месяца до поездки, особенно на Рейли Бич, где количество отелей ограничено.</p>
+<p>Цены на проживание в Краби в 2026 году варьируются в зависимости от сезона. Высокий сезон (ноябрь–апрель) приносит сухую погоду и максимальные тарифы: бюджетные номера стоят от ₽2 850 ($30)средний сегмент — от ₽5 700 ($60)люкс — от ₽17 100 ($180)В низкий сезон (май–октябрь) цены падают на 30–50%, однако возможны кратковременные дожди. Для комфортного отдыха рекомендуем бронировать жилье за 2–3 месяца до поездки, особенно на Рейли Бич, где количество отелей ограничено.</p>
 
-<h2>Бюджетные отели (до ₽4 750 (≈ $50)/ночь)</h2>
+<h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Baan Khao Thong Resort</h3>
+<div id="hc_332957" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Baan Khao Thong Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Baan Khao Thong Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_332957 .hc-slide');var d=document.querySelectorAll('#hc_332957 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_332957 .hc-slide');var d=document.querySelectorAll('#hc_332957 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Baan Khao Thong Resort &bull; 2 photos</p></div>
 <p><strong>Расположение:</strong> Ао Нанг, в 10 минутах ходьбы от пляжа.</p>
 <p><strong>Описание:</strong> Семейный отель с бунгало в тропическом саду. Номера оснащены кондиционером, холодильником и собственной террасой. На территории есть небольшой бассейн и бесплатный Wi-Fi.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цена:</strong> от ₽3 325 (≈ $35) за ночь в стандартном номере (высокий сезон).</p>
+<p><strong>Цена:</strong> от ₽3 325 ($35)за ночь в стандартном номере (высокий сезон).</p>
 <p><strong>Плюсы:</strong> тихое место, приветливый персонал, близость к рынку Ао Нанг.</p>
 <p><strong>Минусы:</strong> нет завтрака, старая мебель в некоторых номерах, слабый напор воды в душе.</p>
 
 <h3>2. The Nice Beach Hotel</h3>
+<div id="hc_6293" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="The Nice Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="The Nice Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Nice Beach Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_6293 .hc-slide');var d=document.querySelectorAll('#hc_6293 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_6293 .hc-slide');var d=document.querySelectorAll('#hc_6293 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_6293 .hc-slide');var d=document.querySelectorAll('#hc_6293 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Nice Beach Hotel &bull; 3 photos</p></div>
 <p><strong>Расположение:</strong> Пляж Ноппарат Тара, в 50 метрах от моря.</p>
 <p><strong>Описание:</strong> Простой, но чистый отель с номерами категории «стандарт» и «люкс». Имеется открытый бассейн, кафе с тайской кухней и бесплатный трансфер до Ао Нанг.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цена:</strong> от ₽3 800 (≈ $40) за ночь (включая завтрак).</p>
+<p><strong>Цена:</strong> от ₽3 800 ($40)за ночь (включая завтрак).</p>
 <p><strong>Плюсы:</strong> отличное расположение на первой линии, дружелюбный персонал, хороший Wi-Fi.</p>
 <p><strong>Минусы:</strong> шумно из-за близости дороги, небольшие номера, нет сейфа.</p>
 
 <h3>3. Pak-Up Hostel & Rooms</h3>
+<div id="hc_540543" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Pak-Up Hostel & Rooms - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Pak-Up Hostel & Rooms - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_540543 .hc-slide');var d=document.querySelectorAll('#hc_540543 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_540543 .hc-slide');var d=document.querySelectorAll('#hc_540543 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pak-Up Hostel & Rooms &bull; 2 photos</p></div>
 <p><strong>Расположение:</strong> Центр Ао Нанг, рядом с пирсом.</p>
 <p><strong>Описание:</strong> Гибрид хостела и отеля: есть как общие спальни, так и частные номера с ванной. Современный дизайн, общая кухня, коворкинг-зона.</p>
-<p><strong>Цена:</strong> от ₽1 425 (≈ $15) за койку в дормитории, от ₽4 275 (≈ $45) за частный номер.</p>
+<p><strong>Цена:</strong> от ₽1 425 ($15)за койку в дормитории, от ₽4 275 ($45)за частный номер.</p>
 <p><strong>Плюсы:</strong> бюджетно, социальная атмосфера, чистота, возможность познакомиться с другими путешественниками.</p>
 <p><strong>Минусы:</strong> шумно по вечерам, нет бассейна, ограниченное количество частных номеров.</p>
 
-<h2>Отели среднего класса (₽4 750 (≈ $50)-150/ночь)</h2>
+<h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Ao Nang Princeville Resort</h3>
+<div id="hc_773717" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ao Nang Princeville Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Ao Nang Princeville Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Ao Nang Princeville Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_773717 .hc-slide');var d=document.querySelectorAll('#hc_773717 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_773717 .hc-slide');var d=document.querySelectorAll('#hc_773717 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_773717 .hc-slide');var d=document.querySelectorAll('#hc_773717 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ao Nang Princeville Resort &bull; 3 photos</p></div>
 <p><strong>Расположение:</strong> Ао Нанг, в 200 метрах от пляжа.</p>
 <p><strong>Описание:</strong> Отель с большим бассейном, окруженным пальмами. Номера выполнены в тайском стиле с деревянной мебелью. В ресторане подают блюда интернациональной кухни.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цена:</strong> от ₽6 175 (≈ $65) за ночь (стандартный номер).</p>
+<p><strong>Цена:</strong> от ₽6 175 ($65)за ночь (стандартный номер).</p>
 <p><strong>Фишки:</strong> бесплатный прокат каяков, спа-салон с тайским массажем, вечерняя развлекательная программа.</p>
 
 <h3>5. Krabi Resort</h3>
+<div id="hc_828620" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Krabi Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Krabi Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_828620 .hc-slide');var d=document.querySelectorAll('#hc_828620 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_828620 .hc-slide');var d=document.querySelectorAll('#hc_828620 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Krabi Resort &bull; 2 photos</p></div>
 <p><strong>Расположение:</strong> Собственный участок пляжа Ао Нанг (южная часть).</p>
 <p><strong>Описание:</strong> Курортный отель с несколькими бассейнами, теннисным кортом и детским клубом. Номера — от стандартных до вилл с частным бассейном.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цена:</strong> от ₽7 600 (≈ $80) за ночь (стандартный номер с завтраком).</p>
+<p><strong>Цена:</strong> от ₽7 600 ($80)за ночь (стандартный номер с завтраком).</p>
 <p><strong>Фишки:</strong> прямой выход на пляж, школа дайвинга, экскурсионное бюро на стойке регистрации.</p>
 
 <h3>6. Anyavee Ban Ao Nang</h3>
+<div id="hc_375859" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Anyavee Ban Ao Nang - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Anyavee Ban Ao Nang - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_375859 .hc-slide');var d=document.querySelectorAll('#hc_375859 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_375859 .hc-slide');var d=document.querySelectorAll('#hc_375859 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Anyavee Ban Ao Nang &bull; 2 photos</p></div>
 <p><strong>Расположение:</strong> Тихий переулок в 5 минутах от пляжа Ао Нанг.</p>
 <p><strong>Описание:</strong> Бутик-отель с минималистичным дизайном. Всего 20 номеров, что обеспечивает уют. Есть небольшой бассейн и зона для завтрака.</p>
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="с" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цена:</strong> от ₽5 225 (≈ $55) за ночь.</p>
+<p><strong>Цена:</strong> от ₽5 225 ($55)за ночь.</p>
 <p><strong>Фишки:</strong> бесплатный велосипед для гостей, органические завтраки, отсутствие детей до 12 лет (тишина и спокойствие).</p>
 
 <h3>7. Rayavadee Resort (доступен только на лодке)</h3>
+<div id="hc_526709" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Rayavadee Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Rayavadee Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Rayavadee Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_526709 .hc-slide');var d=document.querySelectorAll('#hc_526709 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_526709 .hc-slide');var d=document.querySelectorAll('#hc_526709 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_526709 .hc-slide');var d=document.querySelectorAll('#hc_526709 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rayavadee Resort &bull; 3 photos</p></div>
 <p><strong>Расположение:</strong> Полуостров Рейли Бич.</p>
 <p><strong>Описание:</strong> Уникальный отель, расположенный среди тропического леса и известняковых скал. Номера представляют собой отдельные двухэтажные павильоны. Три частных пляжа.</p>
-<p><strong>Цена:</strong> от ₽13 300 (≈ $140) за ночь (стандартный павильон).</p>
+<p><strong>Цена:</strong> от ₽13 300 ($140)за ночь (стандартный павильон).</p>
 <p><strong>Фишки:</strong> бесплатный трансфер на лодке из Ао Нанг, спа-центр, три ресторана, возможность скалолазания прямо на территории.</p>
 
-<h2>Люксовые отели (от ₽14 250 (≈ $150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Pimalai Resort & Spa</h3>
+<div id="hc_667999" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Pimalai Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Pimalai Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Pimalai Resort & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_667999 .hc-slide');var d=document.querySelectorAll('#hc_667999 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_667999 .hc-slide');var d=document.querySelectorAll('#hc_667999 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_667999 .hc-slide');var d=document.querySelectorAll('#hc_667999 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pimalai Resort & Spa &bull; 3 photos</p></div>
 <p><strong>Расположение:</strong> Пляж Клонг Муанг, в 20 минутах от аэропорта Краби.</p>
 <p><strong>Описание:</strong> Пятизвездочный курорт на 100 акрах земли с собственным пляжем, тремя бассейнами и спа-центром мирового класса. Номера и виллы оформлены с использованием натуральных материалов.</p>
-<p><strong>Цена:</strong> от ₽23 750 (≈ $250) за ночь (стандартный номер).</p>
+<p><strong>Цена:</strong> от ₽23 750 ($250)за ночь (стандартный номер).</p>
 <p><strong>Особенности:</strong> частный пляж с белым песком, школа тайской кухни, бесплатный трансфер в город, винный погреб с дегустациями.</p>
 
 <h3>9. Banyan Tree Krabi</h3>
+<div id="hc_91253" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Banyan Tree Krabi - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Banyan Tree Krabi - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_91253 .hc-slide');var d=document.querySelectorAll('#hc_91253 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_91253 .hc-slide');var d=document.querySelectorAll('#hc_91253 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Banyan Tree Krabi &bull; 2 photos</p></div>
 <p><strong>Расположение:</strong> Бухта Ту Каек, в 15 минутах от аэропорта.</p>
 <p><strong>Описание:</strong> Роскошный курорт с виллами, каждая из которых имеет частный бассейн и сад. Архитектура сочетает современный стиль с традиционными тайскими элементами.</p>
-<p><strong>Цена:</strong> от ₽33 250 (≈ $350) за ночь (вилла с бассейном).</p>
+<p><strong>Цена:</strong> от ₽33 250 ($350)за ночь (вилла с бассейном).</p>
 <p><strong>Особенности:</strong> спа-программы с использованием местных трав, ресторан с видом на море, эксклюзивные экскурсии на частных лодках, услуги персонального дворецкого.</p>
 
 <h3>10. Ritz-Carlton Reserve (Phulay Bay)</h3>
+<div id="hc_265148" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton Reserve - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton Reserve - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton Reserve - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_265148 .hc-slide');var d=document.querySelectorAll('#hc_265148 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_265148 .hc-slide');var d=document.querySelectorAll('#hc_265148 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_265148 .hc-slide');var d=document.querySelectorAll('#hc_265148 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton Reserve &bull; 3 photos</p></div>
 <p><strong>Расположение:</strong> Бухта Пхулай, в 30 минутах от аэропорта.</p>
 <p><strong>Описание:</strong> Эксклюзивный отель сети Ritz-Carlton, входящий в коллекцию Reserve. Всего 54 виллы, каждая с частным бассейном и панорамным видом на Андаманское море.</p>
-<img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="се" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Цена:</strong> от ₽47 500 (≈ $500) за ночь (вилла с бассейном).</p>
+<p><strong>Цена:</strong> от ₽47 500 ($500)за ночь (вилла с бассейном).</p>
 <p><strong>Особенности:</strong> спа-центр ESPA, ресторан с мишленовским шеф-поваром, бесконечный бассейн, йога-сессии на закате, индивидуальное планирование маршрута.</p>
 
 <h2>Как выбрать район</h2>
@@ -456,7 +554,7 @@
 
 <p><strong>Лучшие сервисы:</strong> <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com — самый популярный с бесплатной отменой. Agoda — часто дешевле для Азии. Airbnb — для аренды вилл или апартаментов. Для бюджетных вариантов — Hostelworld. Для люкса — сайты отелей или Virtuoso (эксклюзивные предложения).</p>
 
-<p><strong>Дополнительные советы:</strong> Проверьте, включен ли завтрак — в Краби это часто выгодно. Уточните наличие трансфера из аэропорта (стоимость такси — ₽1 425 (≈ $15)–25). Для отелей на Рейли Бич трансфер на лодке обычно бесплатный. Не забудьте о страховке — медицина в Таиланде платная.</p>
+<p><strong>Дополнительные советы:</strong> Проверьте, включен ли завтрак — в Краби это часто выгодно. Уточните наличие трансфера из аэропорта (стоимость такси — ₽1 425 ($15)–25). Для отелей на Рейли Бич трансфер на лодке обычно бесплатный. Не забудьте о страховке — медицина в Таиланде платная.</p>
 
 <p>Краби в 2026 году предлагает жилье на любой вкус и бюджет. От скромных гестхаусов до вилл с частными бассейнами — каждый найдет идеальный вариант для своего путешествия. Планируйте заранее, выбирайте район по целям и наслаждайтесь раем на земле.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
         </div>
@@ -549,6 +647,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -577,6 +676,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -594,8 +694,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

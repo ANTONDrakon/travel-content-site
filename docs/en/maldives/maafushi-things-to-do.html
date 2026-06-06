@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Maafushi 2026</title>
     <meta name="description" content="15 Best Things to Do in Maafushi 2026 Oh, Maafushi! If you’ve been dreaming of the Maldives but thought it was only for honeymooners with bottomless wallets,...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/maafushi-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/maafushi-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Maafushi 2026">
     <meta property="og:description" content="15 Best Things to Do in Maafushi 2026 Oh, Maafushi! If you’ve been dreaming of the Maldives but thought it was only for honeymooners with bottomless wallets,...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/maldives/maafushi-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/maafushi-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://vectorme.ru/wp-content/uploads/2023/03/ostrov-maafushi-2048x1091.png');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/maafushi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Maafushi 2026</div>
@@ -363,7 +387,6 @@
 <p>Oh, Maafushi! If you’ve been dreaming of the Maldives but thought it was only for honeymooners with bottomless wallets, let me stop you right there. I’ve sent over 300 travelers to this little gem in the South Male Atoll, and every single one comes back with stars in their eyes. Maafushi is the Maldives’ best-kept secret for budget-conscious explorers—think turquoise lagoons, powdery white sands, and a local island vibe that feels like a warm hug. In 2026, it’s only getting better with new activities and easy access from Male. Trust me, you’ll want to pack your bags right now. Let me walk you through the 15 best things to do here, with all the insider tips I’ve gathered from my own trips and my clients’ stories.</p>
 
 <h2>15 Best Attractions in Maafushi</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <p>I’ve handpicked these attractions based on what my travelers rave about most. Each one offers a slice of paradise, whether you’re a beach bum, an adventurer, or a culture lover. Prices are current as of late 2025, with a little markup I’ve added to account for booking fees and seasonal changes (because I want you to budget smartly!).</p>
 
@@ -397,7 +420,7 @@
 <h3>4. Sandbank Excursion</h3>
 <p>Imagine a tiny island of pure white sand, surrounded by impossibly blue water—that’s the sandbank experience near Maafushi. You’ll take a short boat ride and have a couple of hours to swim, sunbathe, and feel like a castaway (but with snacks). I’ve done this trip four times, and the feeling of isolation is addictive.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $45 (≈ ₽4 275)–$60 (≈ ₽5 700) per person (including boat transfer and basic refreshments)</li>
+<li><strong>Ticket Price:</strong> $45–$60per person (including boat transfer and basic refreshments)</li>
 <li><strong>Hours:</strong> Departs 9:00 AM, returns 12:00 PM or 2:00 PM–5:00 PM</li>
 <li><strong>How to Get There:</strong> Book through your guesthouse or local tour operators near the harbor.</li>
 <li><strong>Tip:</strong> Bring reef-safe sunscreen and a hat—there’s zero shade on the sandbank!</li>
@@ -406,7 +429,7 @@
 <h3>5. Coral Reef Snorkeling at Turtle Reef</h3>
 <p>Just a 15-minute boat ride away, Turtle Reef is a snorkeler’s paradise. I’ve swum alongside green sea turtles, parrotfish, and even a shy reef shark here. The coral is vibrant, though a bit damaged in spots—so please don’t touch. It’s the kind of experience that makes you feel like you’re in a National Geographic documentary.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $35 (≈ ₽3 325)–$50 (≈ ₽4 750) per person (includes snorkel gear and guide)</li>
+<li><strong>Ticket Price:</strong> $35–$50per person (includes snorkel gear and guide)</li>
 <li><strong>Hours:</strong> Trips at 8:30 AM and 1:30 PM; each lasts 2–3 hours</li>
 <li><strong>How to Get There:</strong> Book with a local tour operator; they’ll pick you up from the harbor.</li>
 <li><strong>Tip:</strong> Go early morning for the best visibility—the water is calmer and the turtles are more active.</li>
@@ -415,7 +438,7 @@
 <h3>6. Maafushi Local Market</h3>
 <p>This bustling market is where locals shop for fresh fish, fruits, and spices. It’s small but bursting with color and energy—I once bought a bag of mangoes so sweet they made my teeth ache. You’ll find tuna, snapper, and local snacks like bajiya (samosas). It’s a great spot to people-watch and snap candid photos.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Free entry; items cost $1 (≈ ₽95)–$10 (≈ ₽950)</li>
+<li><strong>Ticket Price:</strong> Free entry; items cost $1–$10</li>
 <li><strong>Hours:</strong> 7:00 AM–12:00 PM and 4:00 PM–7:00 PM daily</li>
 <li><strong>How to Get There:</strong> Near the main road, a 10-minute walk from Bikini Beach.</li>
 <li><strong>Tip:</strong> Visit in the morning for the freshest catch—and haggle politely for souvenirs.</li>
@@ -424,7 +447,7 @@
 <h3>7. Night Fishing Trip</h3>
 <p>Glide into the dark lagoon under a canopy of stars, armed with a handline and a sense of adventure. You’ll catch reef fish like snapper or grouper, and the crew often cooks your haul on the boat. I did this with a group of solo travelers, and we bonded over grilled fish under the Milky Way—magical.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $55 (≈ ₽5 225)–$70 (≈ ₽6 650) per person (includes dinner and equipment)</li>
+<li><strong>Ticket Price:</strong> $55–$70per person (includes dinner and equipment)</li>
 <li><strong>Hours:</strong> Departs 6:00 PM, returns 9:00 PM</li>
 <li><strong>How to Get There:</strong> Book through your guesthouse or any tour desk on the island.</li>
 <li><strong>Tip:</strong> Bring a light jacket—the sea breeze gets chilly after sunset.</li>
@@ -442,7 +465,7 @@
 <h3>9. Dolphin Watching Cruise</h3>
 <p>Spinner dolphins love the waters around Maafushi, and a cruise is your ticket to seeing them leap and twirl. I’ve gone three times, and we saw pods every time—sometimes 50 dolphins at once! The boats are comfortable, and the crew often plays music, making it a party on the water.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $50 (≈ ₽4 750)–$65 (≈ ₽6 175) per person (includes snacks and drinks)</li>
+<li><strong>Ticket Price:</strong> $50–$65per person (includes snacks and drinks)</li>
 <li><strong>Hours:</strong> Departs 6:00 AM or 4:00 PM; lasts 2 hours</li>
 <li><strong>How to Get There:</strong> Book at the harbor or through your guesthouse.</li>
 <li><strong>Tip:</strong> Choose the morning cruise for calmer seas and more active dolphins.</li>
@@ -460,7 +483,7 @@
 <h3>11. Water Sports at Bikini Beach</h3>
 <p>From jet skiing to banana boat rides, Bikini Beach transforms into an aquatic playground. I tried parasailing here once, and the view of the atoll from above is unreal. The equipment is well-maintained, and instructors are patient—even if you’re a beginner.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $20 (≈ ₽1 900)–$80 (≈ ₽7 600) per activity (e.g., jet ski $60 (≈ ₽5 700) for 15 minutes, banana boat $25 (≈ ₽2 375) per person)</li>
+<li><strong>Ticket Price:</strong> $20–$80per activity (e.g., jet ski $60for 15 minutes, banana boat $25per person)</li>
 <li><strong>Hours:</strong> 9:00 AM–5:00 PM</li>
 <li><strong>How to Get There:</strong> Directly on Bikini Beach; look for the rental huts.</li>
 <li><strong>Tip:</strong> Negotiate a package deal if you want multiple activities—saves you 10–15%.</li>
@@ -469,7 +492,7 @@
 <h3>12. Maafushi Cultural Show</h3>
 <p>Held at some guesthouses and local venues, this show features traditional Bodu Beru drumming and dance. The rhythm is hypnotic, and you might even be pulled up to dance! I’ve seen travelers go from shy to shaking their hips in minutes—it’s pure joy.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $15 (≈ ₽1 425)–$25 (≈ ₽2 375) per person (includes a drink)</li>
+<li><strong>Ticket Price:</strong> $15–$25per person (includes a drink)</li>
 <li><strong>Hours:</strong> Usually 8:00 PM–9:30 PM; check your guesthouse schedule</li>
 <li><strong>How to Get There:</strong> Ask at your accommodation for the nearest venue.</li>
 <li><strong>Tip:</strong> Arrive early for a front-row seat—the drummers’ energy is contagious.</li>
@@ -478,7 +501,7 @@
 <h3>13. Underwater Scooter Adventure</h3>
 <p>New for 2026! You can now ride an underwater scooter along the reef, breathing normally through a helmet. It’s like being in a sci-fi movie, with fish swirling around you. I tried it last year, and it’s perfect for non-swimmers who want to explore the deep.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $90 (≈ ₽8 550)–$110 (≈ ₽10 450) per person (30-minute ride, includes training)</li>
+<li><strong>Ticket Price:</strong> $90–$110per person (30-minute ride, includes training)</li>
 <li><strong>Hours:</strong> 10:00 AM and 2:00 PM sessions</li>
 <li><strong>How to Get There:</strong> Book through dive centers near the harbor.</li>
 <li><strong>Tip:</strong> Don’t wear heavy sunscreen—it can fog the helmet visor.</li>
@@ -487,7 +510,7 @@
 <h3>14. Picnic Island Excursion</h3>
 <p>A short boat ride takes you to a deserted island where you can have a private picnic. The water is so clear you can see your toes at 10 feet deep. I packed a lunch of local curries and ate with my feet in the sand—blissful doesn’t cover it.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $60 (≈ ₽5 700)–$80 (≈ ₽7 600) per person (includes boat, food, and drinks)</li>
+<li><strong>Ticket Price:</strong> $60–$80per person (includes boat, food, and drinks)</li>
 <li><strong>Hours:</strong> 10:00 AM–3:00 PM</li>
 <li><strong>How to Get There:</strong> Book at the harbor; groups of 4+ get a discount.</li>
 <li><strong>Tip:</strong> Bring a waterproof speaker for music—the silence is golden, but a little tune adds magic.</li>
@@ -496,7 +519,7 @@
 <h3>15. Local Cooking Class</h3>
 <p>Learn to make mas huni (tuna and coconut salad) or garudhiya (fish soup) from a Maafushi family. I took a class with Auntie Fathima, and her secret is using fresh coconut milk. You’ll eat what you cook, and the recipes are simple enough to recreate at home.</p>
 <ul>
-<li><strong>Ticket Price:</strong> $35 (≈ ₽3 325)–$50 (≈ ₽4 750) per person (includes ingredients and meal)</li>
+<li><strong>Ticket Price:</strong> $35–$50per person (includes ingredients and meal)</li>
 <li><strong>Hours:</strong> 11:00 AM–2:00 PM or 5:00 PM–8:00 PM</li>
 <li><strong>How to Get There:</strong> Book through your guesthouse or local hosts.</li>
 <li><strong>Tip:</strong> Bring a notebook to jot down recipes—you’ll want to make them for friends back home.</li>
@@ -508,39 +531,39 @@
 
 <h3>1-Day Itinerary</h3>
 <ul>
-<li><strong>Morning (8:00 AM–12:00 PM):</strong> Start with a sandbank excursion ($50 (≈ ₽4 750)). Then, snorkel at Turtle Reef ($40 (≈ ₽3 800)).</li>
-<li><strong>Lunch (12:30 PM):</strong> Grab fish curry at a local café (around $8 (≈ ₽760)).</li>
-<li><strong>Afternoon (1:30 PM–4:00 PM):</strong> Relax at Bikini Beach and try jet skiing ($60 (≈ ₽5 700)).</li>
+<li><strong>Morning (8:00 AM–12:00 PM):</strong> Start with a sandbank excursion ($50). Then, snorkel at Turtle Reef ($40).</li>
+<li><strong>Lunch (12:30 PM):</strong> Grab fish curry at a local café (around $8).</li>
+<li><strong>Afternoon (1:30 PM–4:00 PM):</strong> Relax at Bikini Beach and try jet skiing ($60).</li>
 <li><strong>Evening (5:00 PM–7:00 PM):</strong> Walk around the island, visit the harbor for sunset, and spot the mosque.</li>
-<li><strong>Night (8:00 PM):</strong> Night fishing trip ($65 (≈ ₽6 175)) or cultural show ($20 (≈ ₽1 900)).</li>
+<li><strong>Night (8:00 PM):</strong> Night fishing trip ($65) or cultural show ($20).</li>
 </ul>
 
 <h3>2-Day Itinerary</h3>
 <ul>
-<li><strong>Day 1:</strong> Follow the 1-day plan, but skip night fishing. Instead, have dinner at a guesthouse (around $15 (≈ ₽1 425)).</li>
-<li><strong>Day 2 Morning (8:00 AM–12:00 PM):</strong> Dolphin watching cruise ($60 (≈ ₽5 700)) followed by a visit to the local market.</li>
-<li><strong>Day 2 Afternoon (1:00 PM–5:00 PM):</strong> Picnic island excursion ($75 (≈ ₽7 125)) with lunch included.</li>
-<li><strong>Day 2 Evening:</strong> Underwater scooter adventure ($100 (≈ ₽9 500)) or a cooking class ($45 (≈ ₽4 275)).</li>
+<li><strong>Day 1:</strong> Follow the 1-day plan, but skip night fishing. Instead, have dinner at a guesthouse (around $15).</li>
+<li><strong>Day 2 Morning (8:00 AM–12:00 PM):</strong> Dolphin watching cruise ($60) followed by a visit to the local market.</li>
+<li><strong>Day 2 Afternoon (1:00 PM–5:00 PM):</strong> Picnic island excursion ($75) with lunch included.</li>
+<li><strong>Day 2 Evening:</strong> Underwater scooter adventure ($100) or a cooking class ($45).</li>
 </ul>
 
 <h3>3-Day Itinerary</h3>
 <ul>
 <li><strong>Day 1:</strong> Same as 2-day Day 1.</li>
 <li><strong>Day 2:</strong> Same as 2-day Day 2.</li>
-<li><strong>Day 3 Morning (8:00 AM–12:00 PM):</strong> Water sports at Bikini Beach (try parasailing for $75 (≈ ₽7 125)) and a final snorkel at Turtle Reef.</li>
+<li><strong>Day 3 Morning (8:00 AM–12:00 PM):</strong> Water sports at Bikini Beach (try parasailing for $75) and a final snorkel at Turtle Reef.</li>
 <li><strong>Day 3 Afternoon (1:00 PM–5:00 PM):</strong> Maafushi Island walk, visit the jail, and buy souvenirs at the market.</li>
-<li><strong>Day 3 Evening:</strong> Cultural show ($20 (≈ ₽1 900)) and a farewell dinner at a beachside café.</li>
+<li><strong>Day 3 Evening:</strong> Cultural show ($20) and a farewell dinner at a beachside café.</li>
 </ul>
 
 <p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Tours & Excursions</h2>
 <p>For the best deals, I recommend booking tours through your guesthouse—they often bundle activities. Here are the top tours with my marked-up prices (12-15% above market):</p>
 <table>
 <tr><th>Tour</th><th>Price (per person)</th><th>Duration</th><th>Best For</th></tr>
-<tr><td>Sandbank & Snorkeling Combo</td><td>$70 (≈ ₽6 650)</td><td>4 hours</td><td>First-timers</td></tr>
-<tr><td>Full-Day Island Hopping (3 islands)</td><td>$120 (≈ ₽11 400)</td><td>8 hours</td><td>Adventurers</td></tr>
-<tr><td>Dolphin & Sunset Cruise</td><td>$75 (≈ ₽7 125)</td><td>3 hours</td><td>Romance</td></tr>
-<tr><td>Private Fishing Charter</td><td>$200 (≈ ₽19 000) (up to 4 people)</td><td>4 hours</td><td>Groups</td></tr>
-<tr><td>Scuba Diving (2 dives)</td><td>$130 (≈ ₽12 350)</td><td>5 hours<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<tr><td>Sandbank & Snorkeling Combo</td><td>$70</td><td>4 hours</td><td>First-timers</td></tr>
+<tr><td>Full-Day Island Hopping (3 islands)</td><td>$120</td><td>8 hours</td><td>Adventurers</td></tr>
+<tr><td>Dolphin & Sunset Cruise</td><td>$75</td><td>3 hours</td><td>Romance</td></tr>
+<tr><td>Private Fishing Charter</td><td>$200(up to 4 people)</td><td>4 hours</td><td>Groups</td></tr>
+<tr><td>Scuba Diving (2 dives)</td><td>$130</td><td>5 hours<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -626,6 +649,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -654,6 +678,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -671,8 +696,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

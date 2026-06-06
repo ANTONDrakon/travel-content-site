@@ -6,7 +6,7 @@
     <title>Sharm El Sheikh Travel Guide 2026</title>
     <meta name="description" content="Sharm El Sheikh Travel Guide 2026 Sharm El Sheikh is a vibrant resort city perched on the southern tip of the Sinai Peninsula, where the crystal-clear waters...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/sharm-el-sheikh-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/sharm-el-sheikh-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Sharm El Sheikh Travel Guide 2026">
     <meta property="og:description" content="Sharm El Sheikh Travel Guide 2026 Sharm El Sheikh is a vibrant resort city perched on the southern tip of the Sinai Peninsula, where the crystal-clear waters...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/sharm-el-sheikh-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/sharm-el-sheikh-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Sharm_El_Sheikh_-_panoramio_%2811%29.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/sharm-el-sheikh.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Sharm El Sheikh Travel Guide 2026</div>
@@ -367,60 +391,60 @@
 
 <h2>How to Get There</h2>
 
-<p>Sharm El Sheikh International Airport (SSH) is your main entry point. It receives direct flights from over 30 cities across Europe, the Middle East, and Russia. In 2026, expect expanded routes from low-cost carriers like Wizz Air, Ryanair, and easyJet, alongside charter flights from tour operators. From the United Kingdom, direct flights from London Gatwick, Manchester, and Birmingham take approximately 5 hours, with return fares averaging $180 (≈ ₽17 100)-$350 (≈ ₽33 250) in low season and $350 (≈ ₽33 250)-$600 (≈ ₽57 000) in peak summer. From Germany (Frankfurt, Berlin), prices range from $200 (≈ ₽19 000)-$400. (≈ ₽38 000) From Italy (Rome, Milan), expect $150 (≈ ₽14 250)-$350. (≈ ₽33 250) From Russia (Moscow, St. Petersburg), direct flights are frequent, averaging $250 (≈ ₽23 750)-$450. (≈ ₽42 750) Note that flights from the United States typically require a connection in Europe (e.g., Istanbul, London, Frankfurt), with total travel time 12-18 hours and prices from $600 (≈ ₽57 000)-$1 200. (≈ ₽114 000)</p>
+<p>Sharm El Sheikh International Airport (SSH) is your main entry point. It receives direct flights from over 30 cities across Europe, the Middle East, and Russia. In 2026, expect expanded routes from low-cost carriers like Wizz Air, Ryanair, and easyJet, alongside charter flights from tour operators. From the United Kingdom, direct flights from London Gatwick, Manchester, and Birmingham take approximately 5 hours, with return fares averaging $180-$350in low season and $350-$600in peak summer. From Germany (Frankfurt, Berlin), prices range from $200-$400From Italy (Rome, Milan), expect $150-$350From Russia (Moscow, St. Petersburg), direct flights are frequent, averaging $250-$450Note that flights from the United States typically require a connection in Europe (e.g., Istanbul, London, Frankfurt), with total travel time 12-18 hours and prices from $600-$1 200</p>
 
-<p>For those already in Egypt, you can fly from Cairo (1 hour, $60 (≈ ₽5 700)-$120 (≈ ₽11 400) one-way) or take a bus via the 12-hour journey through the Sinai desert (prices $15 (≈ ₽1 425)-$30 (≈ ₽2 850)). The airport is located about 10 km from Naama Bay, and a taxi to your hotel should cost $10 (≈ ₽950)-$20. (≈ ₽1 900)</p>
+<p>For those already in Egypt, you can fly from Cairo (1 hour, $60-$120one-way) or take a bus via the 12-hour journey through the Sinai desert (prices $15-$30). The airport is located about 10 km from Naama Bay, and a taxi to your hotel should cost $10-$20</p>
 
 <h2>Where to Stay</h2>
 
 <p>Sharm El Sheikh is divided into distinct neighborhoods, each offering a different experience. Naama Bay is the historic heart—bustling, with restaurants, bars, and shops. It’s ideal for nightlife lovers and first-time visitors. Hotels here range from budget-friendly to mid-range.</p>
 
-<p>Hadaba and Nabq Bay are quieter, more family-oriented areas with long stretches of beach and all-inclusive resorts. Shark’s Bay is famous for its diving centers and quieter atmosphere. For luxury, head to the Four Seasons Resort (from $400 (≈ ₽38 000)/night) or the Ritz-Carlton (from $350 (≈ ₽33 250)/night). For mid-range, the Mercure Naama Bay (from $80 (≈ ₽7 600)/night) or the Hilton Sharks Bay (from $100 (≈ ₽9 500)/night) offer great value. Budget travelers can find hostels and guesthouses in the Old Market area, like the Camel Dive Camp (from $25 (≈ ₽2 375)/night for a dorm).</p>
+<p>Hadaba and Nabq Bay are quieter, more family-oriented areas with long stretches of beach and all-inclusive resorts. Shark’s Bay is famous for its diving centers and quieter atmosphere. For luxury, head to the Four Seasons Resort (from $400/night) or the Ritz-Carlton (from $350/night). For mid-range, the Mercure Naama Bay (from $80/night) or the Hilton Sharks Bay (from $100/night) offer great value. Budget travelers can find hostels and guesthouses in the Old Market area, like the Camel Dive Camp (from $25/night for a dorm).</p>
 
 <table>
 <tr><th>Budget</th><th>Neighborhood</th><th>Example Hotel</th><th>Price/Night (2026)</th></tr>
-<tr><td>Budget</td><td>Old Market</td><td>Camel Dive Camp</td><td>$25 (≈ ₽2 375)-$40 (≈ ₽3 800)</td></tr>
-<tr><td>Mid-Range</td><td>Naama Bay</td><td>Mercure Naama Bay</td><td>$80 (≈ ₽7 600)-$150 (≈ ₽14 250)</td></tr>
-<tr><td>Luxury</td><td>Nabq Bay</td><td>Four Seasons Resort</td><td>$350 (≈ ₽33 250)-$800 (≈ ₽76 000)</td></tr>
+<tr><td>Budget</td><td>Old Market</td><td>Camel Dive Camp</td><td>$25-$40</td></tr>
+<tr><td>Mid-Range</td><td>Naama Bay</td><td>Mercure Naama Bay</td><td>$80-$150</td></tr>
+<tr><td>Luxury</td><td>Nabq Bay</td><td>Four Seasons Resort</td><td>$350-$800</td></tr>
 </table>
 
 <h2>Top 15 Attractions</h2>
 
 <ol>
-<li><strong>Ras Mohammed National Park</strong> — Egypt’s premier dive and snorkel site, with stunning coral reefs and the famous "Magic Lake." Entry: $10 (≈ ₽950) per person. Open daily 8:00 AM–5:00 PM.</li>
+<li><strong>Ras Mohammed National Park</strong> — Egypt’s premier dive and snorkel site, with stunning coral reefs and the famous "Magic Lake." Entry: $10per person. Open daily 8:00 AM–5:00 PM.</li>
 <li><strong>Naama Bay</strong> — The main tourist hub with a long promenade, shops, and beach clubs. Free to walk. Open 24/7.</li>
-<li><strong>Thistlegorm Wreck</strong> — A world-famous WWII shipwreck dive site, accessible only by boat. Dive trip cost: $80 (≈ ₽7 600)-$120 (≈ ₽11 400) including gear. Dives typically 8:00 AM–3:00 PM.</li>
-<li><strong>St. Catherine’s Monastery</strong> — A 6th-century monastery at the foot of Mount Sinai. Entry: $15. (≈ ₽1 425) Open 9:00 AM–12:00 PM (closed Fridays and Sundays).</li>
-<li><strong>Mount Sinai</strong> — Climb the 2,285-meter peak for sunrise. Guided tours from $40. (≈ ₽3 800) Start at midnight to reach the top by 5:00 AM.</li>
-<li><strong>Colored Canyon</strong> — A striking geological formation with red, yellow, and purple rock walls. Entry: $10. (≈ ₽950) Open 8:00 AM–4:00 PM.</li>
-<li><strong>Soho Square</strong> — A modern entertainment complex with ice skating, a bowling alley, and restaurants. Free entry; activities from $10. (≈ ₽950) Open 10:00 AM–2:00 AM.</li>
+<li><strong>Thistlegorm Wreck</strong> — A world-famous WWII shipwreck dive site, accessible only by boat. Dive trip cost: $80-$120including gear. Dives typically 8:00 AM–3:00 PM.</li>
+<li><strong>St. Catherine’s Monastery</strong> — A 6th-century monastery at the foot of Mount Sinai. Entry: $15Open 9:00 AM–12:00 PM (closed Fridays and Sundays).</li>
+<li><strong>Mount Sinai</strong> — Climb the 2,285-meter peak for sunrise. Guided tours from $40Start at midnight to reach the top by 5:00 AM.</li>
+<li><strong>Colored Canyon</strong> — A striking geological formation with red, yellow, and purple rock walls. Entry: $10Open 8:00 AM–4:00 PM.</li>
+<li><strong>Soho Square</strong> — A modern entertainment complex with ice skating, a bowling alley, and restaurants. Free entry; activities from $10Open 10:00 AM–2:00 AM.</li>
 <li><strong>Old Market</strong> — A traditional bazaar with spices, perfumes, and souvenirs. Free entry. Open 9:00 AM–11:00 PM.</li>
-<li><strong>Sharm El Sheikh Museum</strong> — Showcasing Sinai’s history and artifacts. Entry: $8. (≈ ₽760) Open 9:00 AM–5:00 PM (closed Mondays).</li>
-<li><strong>Aqua Blue Water Park</strong> — A large water park with 20 slides and pools. Entry: $30 (≈ ₽2 850) adults, $20 (≈ ₽1 900) children. Open 10:00 AM–6:00 PM.</li>
+<li><strong>Sharm El Sheikh Museum</strong> — Showcasing Sinai’s history and artifacts. Entry: $8Open 9:00 AM–5:00 PM (closed Mondays).</li>
+<li><strong>Aqua Blue Water Park</strong> — A large water park with 20 slides and pools. Entry: $30adults, $20children. Open 10:00 AM–6:00 PM.</li>
 <li><strong>Ras Um Sid</strong> — A popular snorkeling spot with easy shore access. Free. Open 24/7.</li>
 <li><strong>Al Mustafa Mosque</strong> — A beautiful modern mosque with intricate architecture. Free. Open 9:00 AM–8:00 PM (non-prayer times).</li>
-<li><strong>Nabq Bay Nature Reserve</strong> — A protected area with mangroves, desert, and beaches. Entry: $5. (≈ ₽475) Open 8:00 AM–4:00 PM.</li>
-<li><strong>Shark’s Bay Beach</strong> — A calm, shallow bay perfect for families. Free entry; loungers from $5. (≈ ₽475) Open 24/7.</li>
-<li><strong>Desert Safari (Quad Biking)</strong> — A thrilling ride through the Sinai desert. Tours from $30. (≈ ₽2 850) Typically 2-3 hours, starting at 4:00 PM for sunset.</li>
+<li><strong>Nabq Bay Nature Reserve</strong> — A protected area with mangroves, desert, and beaches. Entry: $5Open 8:00 AM–4:00 PM.</li>
+<li><strong>Shark’s Bay Beach</strong> — A calm, shallow bay perfect for families. Free entry; loungers from $5Open 24/7.</li>
+<li><strong>Desert Safari (Quad Biking)</strong> — A thrilling ride through the Sinai desert. Tours from $30Typically 2-3 hours, starting at 4:00 PM for sunset.</li>
 </ol>
 
 <h2>Getting Around</h2>
 
-<p>Sharm El Sheikh does not have a metro or public bus system. The primary modes of transport are taxis, ride-hailing apps, and rental cars. Taxis are plentiful but negotiate the price before getting in. A short ride within Naama Bay costs $3 (≈ ₽285)-$5  (≈ ₽475) while a trip from Naama to Nabq Bay is $10 (≈ ₽950)-$15. (≈ ₽1 425) Uber and Careem operate in the city, offering fixed rates (e.g., Naama to airport: $8 (≈ ₽760)-$12 (≈ ₽1 140)).</p>
+<p>Sharm El Sheikh does not have a metro or public bus system. The primary modes of transport are taxis, ride-hailing apps, and rental cars. Taxis are plentiful but negotiate the price before getting in. A short ride within Naama Bay costs $3-$5while a trip from Naama to Nabq Bay is $10-$15Uber and Careem operate in the city, offering fixed rates (e.g., Naama to airport: $8-$12).</p>
 
-<p>For independence, rent a car from $25 (≈ ₽2 375)/day (manual) or $35 (≈ ₽3 325)/day (automatic) from agencies like Budget or local operators. Fuel is cheap at $0.30 (≈ ₽28) per liter. Alternatively, rent a scooter for $15 (≈ ₽1 425)/day. Buses are limited to tourist shuttles between hotels and the airport, costing $5 (≈ ₽475)-$10 (≈ ₽950) per trip. Most visitors rely on taxis or organized tours for longer distances.</p>
+<p>For independence, rent a car from $25/day (manual) or $35/day (automatic) from agencies like Budget or local operators. Fuel is cheap at $0per liter. Alternatively, rent a scooter for $15/day. Buses are limited to tourist shuttles between hotels and the airport, costing $5-$10per trip. Most visitors rely on taxis or organized tours for longer distances.</p>
 
 <h2>Where to Eat</h2>
 
-<p>Sharm El Sheikh offers a diverse culinary scene, from Egyptian street food to international fine dining. Local staples include koshari (rice, lentils, pasta, and tomato sauce), ful medames (stewed fava beans), and fresh seafood grilled with lemon and garlic. Street food is cheap: a falafel sandwich costs $0.50  (≈ ₽47) and a shawarma wrap is $1 (≈ ₽95)-$2. (≈ ₽190)</p>
+<p>Sharm El Sheikh offers a diverse culinary scene, from Egyptian street food to international fine dining. Local staples include koshari (rice, lentils, pasta, and tomato sauce), ful medames (stewed fava beans), and fresh seafood grilled with lemon and garlic. Street food is cheap: a falafel sandwich costs $0and a shawarma wrap is $1-$2</p>
 
-<p>For sit-down meals, head to Naama Bay. <strong>Fares Seafood Restaurant</strong> offers a mixed grill for $15. (≈ ₽1 425) <strong>El Masrien</strong> serves authentic Egyptian cuisine, with a full meal for $10. (≈ ₽950) For fine dining, <strong>Il Frantoio</strong> (Italian) at the Four Seasons costs $50 (≈ ₽4 750)-$80 (≈ ₽7 600) per person. Soho Square has international options like <strong>Hard Rock Cafe</strong> (burgers from $15 (≈ ₽1 425)) and <strong>La Veranda</strong> (French, $40 (≈ ₽3 800)-$60 (≈ ₽5 700)). Budget travelers can eat well at local cafes for $5 (≈ ₽475)-$10 (≈ ₽950) per meal. Tipping 10-15% is customary.</p>
+<p>For sit-down meals, head to Naama Bay. <strong>Fares Seafood Restaurant</strong> offers a mixed grill for $15<strong>El Masrien</strong> serves authentic Egyptian cuisine, with a full meal for $10For fine dining, <strong>Il Frantoio</strong> (Italian) at the Four Seasons costs $50-$80per person. Soho Square has international options like <strong>Hard Rock Cafe</strong> (burgers from $15) and <strong>La Veranda</strong> (French, $40-$60). Budget travelers can eat well at local cafes for $5-$10per meal. Tipping 10-15% is customary.</p>
 
 <table>
 <tr><th>Type</th><th>Example</th><th>Price Range</th></tr>
-<tr><td>Street Food</td><td>Koshari, Falafel</td><td>$1 (≈ ₽95)-$3 (≈ ₽285)</td></tr>
-<tr><td>Casual Restaurant</td><td>El Masrien</td><td>$10 (≈ ₽950)-$20 (≈ ₽1 900)</td></tr>
-<tr><td>Fine Dining</td><td>Il Frantoio</td><td>$50 (≈ ₽4 750)-$100 (≈ ₽9 500)</td></tr>
+<tr><td>Street Food</td><td>Koshari, Falafel</td><td>$1-$3</td></tr>
+<tr><td>Casual Restaurant</td><td>El Masrien</td><td>$10-$20</td></tr>
+<tr><td>Fine Dining</td><td>Il Frantoio</td><td>$50-$100</td></tr>
 </table>
 
 <h2>Best Time to Visit</h2>
@@ -437,7 +461,7 @@
 
 <h2>Visa & Documents</h2>
 
-<p>Most nationalities, including US, UK, EU, Canadian, and Australian citizens, can obtain a visa on arrival at Sharm El Sheikh Airport. The cost is $25 (≈ ₽2 375) USD (cash only, exact change preferred). The visa is a single-entry sticker valid for 30 days. Alternatively, you can apply for an e-visa online at the official Egyptian visa portal ($25 (≈ ₽2 375) plus processing fee) before traveling. Your passport must be valid for at least six months from your date of entry. For stays limited to the Sharm El Sheikh resort area (including Ras Mohammed and Mount Sinai), a free 15-day "Sinai-only" stamp is available at the airport—ask the immigration officer. This does not allow travel to Cairo or Luxor.</p>
+<p>Most nationalities, including US, UK, EU, Canadian, and Australian citizens, can obtain a visa on arrival at Sharm El Sheikh Airport. The cost is $25USD (cash only, exact change preferred). The visa is a single-entry sticker valid for 30 days. Alternatively, you can apply for an e-visa online at the official Egyptian visa portal ($25plus processing fee) before traveling. Your passport must be valid for at least six months from your date of entry. For stays limited to the Sharm El Sheikh resort area (including Ras Mohammed and Mount Sinai), a free 15-day "Sinai-only" stamp is available at the airport—ask the immigration officer. This does not allow travel to Cairo or Luxor.</p>
 
 <h2>Weekly Trip Budget</h2>
 
@@ -445,12 +469,12 @@
 
 <table>
 <tr><th>Category</th><th>Budget</th><th>Mid-Range</th><th>Luxury</th></tr>
-<tr><td>Accommodation (7 nights)</td><td>$175 (≈ ₽16 625) ($25 (≈ ₽2 375)/night)</td><td>$700 (≈ ₽66 500) ($100 (≈ ₽9 500)/night)</td><td>$2 800 (≈ ₽266 000) ($400 (≈ ₽38 000)/night)</td></tr>
-<tr><td>Food (7 days)</td><td>$140 (≈ ₽13 300) ($20 (≈ ₽1 900)/day)</td><td>$350 (≈ ₽33 250) ($50 (≈ ₽4 750)/day)</td><td>$700 (≈ ₽66 500) ($100 (≈ ₽9 500)/day)</td></tr>
-<tr><td>Transport (taxis, tours)</td><td>$50 (≈ ₽4 750)</td><td>$150 (≈ ₽14 250)</td><td>$300 (≈ ₽28 500)</td></tr>
-<tr><td>Attractions (5-7 entries)</td><td>$50 (≈ ₽4 750)</td><td>$100 (≈ ₽9 500)</td><td>$200 (≈ ₽19 000)</td></tr>
-<tr><td>Miscellaneous (tips, shopping)</td><td>$50 (≈ ₽4 750)</td><td>$100 (≈ ₽9 500)</td><td>$300 (≈ ₽28 500)</td></tr>
-<tr><td><strong>Total</strong></td><td><strong>$465 (≈ ₽44 175)</strong></td><td><strong>$1 400 (≈ ₽133 000)</strong></td><td><strong>$4 300 (≈ ₽408 500)</strong></td></tr>
+<tr><td>Accommodation (7 nights)</td><td>$175($25/night)</td><td>$700($100/night)</td><td>$2 800($400/night)</td></tr>
+<tr><td>Food (7 days)</td><td>$140($20/day)</td><td>$350($50/day)</td><td>$700($100/day)</td></tr>
+<tr><td>Transport (taxis, tours)</td><td>$50</td><td>$150</td><td>$300</td></tr>
+<tr><td>Attractions (5-7 entries)</td><td>$50</td><td>$100</td><td>$200</td></tr>
+<tr><td>Miscellaneous (tips, shopping)</td><td>$50</td><td>$100</td><td>$300</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>$465</strong></td><td><strong>$1 400</strong></td><td><strong>$4 300</strong></td></tr>
 </table>
 
 <h2>10 Travel Tips</h2>
@@ -464,7 +488,7 @@
 <li><strong>Respect local customs during Ramadan.</strong> If visiting during the holy month (expected March 1-29, 2026), avoid eating, drinking, or smoking in public during daylight hours. Many restaurants are closed until sunset, but hotels serve meals discreetly.</li>
 <li><strong>Use sunscreen and reef-safe products.</strong> The sun is intense year-round. SPF 50+ is essential. Avoid sunscreens with oxybenzone, which damages coral reefs—many shops sell reef-safe brands.</li>
 <li><strong>Learn a few Arabic phrases.</strong> "Shukran" (thank you), "Salam Alaikum" (hello), and "Kam?" (how much?) are appreciated. English is widely spoken in tourist areas, but locals warm to efforts.</li>
-<li><strong>Be cautious with desert tours.</strong> Choose operators with good reviews (e.g., on TripAdvisor). Avoid extremely cheap tours ($15 (≈ ₽1 425) or less) as they may cut corners on safety. Always carry water and a scarf for dust.</li>
+<li><strong>Be cautious with desert tours.</strong> Choose operators with good reviews (e.g., on TripAdvisor). Avoid extremely cheap tours ($15or less) as they may cut corners on safety. Always carry water and a scarf for dust.</li>
 <li><strong>Check your flight’s visa requirements.</strong> If you have a connecting flight in a country like Turkey or Saudi Arabia, ensure you meet transit visa rules. For the Sinai-only stamp, you cannot leave the Sharm region—plan accordingly.</li>
 </ol><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -572,6 +596,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -600,6 +625,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -617,8 +643,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

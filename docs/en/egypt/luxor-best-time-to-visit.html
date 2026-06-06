@@ -6,7 +6,7 @@
     <title>Best Time to Visit Luxor 2026: Seasons &amp; Weather</title>
     <meta name="description" content="Best Time to Visit Luxor 2026: Seasons &amp; Weather Luxor, the ancient city of Thebes, sits on the east bank of the Nile in southern Egypt. It experiences a sub...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/luxor-best-time-to-visit.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/luxor-kogda-luchshe-ekhat.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/luxor-best-time-to-visit.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/luxor-best-time-to-visit.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Best Time to Visit Luxor 2026: Seasons &amp; Weather">
     <meta property="og:description" content="Best Time to Visit Luxor 2026: Seasons &amp; Weather Luxor, the ancient city of Thebes, sits on the east bank of the Nile in southern Egypt. It experiences a sub...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/luxor-best-time-to-visit.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/luxor-best-time-to-visit.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://hurghadaexcurs.com/wp-content/uploads/2024/05/EXCURSION_TO_LUXOR_2_DAYS_INDIVIDUALLY_FROM_HURGHADA_main.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/luxor.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Best Time to Visit Luxor 2026: Seasons &amp; Weather</div>
@@ -398,7 +422,7 @@
 
 <p>The high season in Luxor spans from November through February. During these months, daytime temperatures range from 24°C to 30°C (75°F–86°F), and nights can drop to 8°C (46°F), requiring a light jacket. This is the most popular period for tourists because the weather is perfect for exploring outdoor sites like the Valley of the Kings and Karnak Temple.</p>
 
-<p>Why visit in high season? The moderate temperatures allow for comfortable walking tours and hot air balloon rides. Hotel prices increase by 40–60% compared to summer rates. A standard 4-star hotel room that costs $80 (≈ ₽7 600) per night in July can rise to $130 (≈ ₽12 350)–$150 (≈ ₽14 250) in December. Crowds are heavy at major attractions, with wait times of 30–60 minutes at the tomb entrances in the Valley of the Kings.</p>
+<p>Why visit in high season? The moderate temperatures allow for comfortable walking tours and hot air balloon rides. Hotel prices increase by 40–60% compared to summer rates. A standard 4-star hotel room that costs $80per night in July can rise to $130–$150in December. Crowds are heavy at major attractions, with wait times of 30–60 minutes at the tomb entrances in the Valley of the Kings.</p>
 
 <p><a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_luxor" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Find hotels in Luxor on Hotellook</a></p>
 
@@ -406,7 +430,7 @@
 
 <p>The low season runs from June through August, when temperatures routinely exceed 42°C (108°F). The intense heat deters most tourists, resulting in significantly reduced crowds and prices.</p>
 
-<p>Pros of low season: Hotel rooms can be found for as little as $40 (≈ ₽3 800)–$60 (≈ ₽5 700) per night at 4-star properties. Attractions are nearly empty—you might have the Tomb of Tutankhamun to yourself. The Nile water is warm (30°C), perfect for swimming or felucca rides. Cons: Sightseeing is physically demanding. You must start tours at 6:00 AM and finish by 10:00 AM to avoid the worst heat. Many shops and smaller restaurants close during midday. Air conditioning is essential, and power outages can occur.</p>
+<p>Pros of low season: Hotel rooms can be found for as little as $40–$60per night at 4-star properties. Attractions are nearly empty—you might have the Tomb of Tutankhamun to yourself. The Nile water is warm (30°C), perfect for swimming or felucca rides. Cons: Sightseeing is physically demanding. You must start tours at 6:00 AM and finish by 10:00 AM to avoid the worst heat. Many shops and smaller restaurants close during midday. Air conditioning is essential, and power outages can occur.</p>
 
 <p>Weather in low season: Expect clear, cloudless skies every day. Humidity is low (around 20%), which makes the heat more bearable than in coastal areas, but direct sun exposure is dangerous. Sunscreen, a wide-brimmed hat, and 3–4 liters of water per person per day are mandatory.</p>
 
@@ -540,6 +564,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -568,6 +593,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -585,8 +611,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

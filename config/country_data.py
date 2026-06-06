@@ -15,6 +15,7 @@ COUNTRY_DATA = {
             ("🏛", "History & Culture", "20 UNESCO sites. Ancient cities of Ephesus, Troy, Pergamon. Ottoman architecture in Istanbul."),
             ("💱", "Affordable Prices", "In 2026, the lira exchange rate makes Turkey one of the most budget-friendly destinations. All Inclusive from $40/night."),
             ("🍽", "Gastronomy", "Turkish cuisine is one of the world's three great cuisines. Kebabs, meze, baklava, Turkish tea and coffee."),
+            ("🛍", "Shopping", "Grand Bazaar in Istanbul — 4000 shops. Leather, textiles, carpets, gold, spices."),
             ("👨‍👩‍👧", "Family-Friendly", "All Inclusive hotels with kids' clubs, water parks, and animation. Visa-free entry."),
         ],
         "seasons_ru": [
@@ -128,7 +129,7 @@ COUNTRY_DATA = {
             ("👑 Premium", "$4 000+", ["Villa / 5* resort: from $150/night", "Fine dining, private guide", "Car with driver", "VIP tours, spa programs"]),
         ],
         "practical_ru": {
-            "visa": "Безвизовый въезд до 30 дней. Можно продлить ещё на 30 дней в иммиграционном офисе.",
+            "visa": "Безвизовый въезд до 60 дней (с 2024). Можно продлить ещё на 30 дней в иммиграционном офисе.",
             "currency": "Тайский бат (THB). Ориентировочно: 1฿ ≈ 2.8 рубля (июнь 2026). Обменивайте в Таиланде — курс лучше.",
             "language": "Тайский. В туристических зонах — английский, частично русский.",
             "transport": "Метро/скайтрейн в Бангкоке, тук-туки, сонгтео, паромы. Аренда байка от ฿200/день.",
@@ -136,7 +137,7 @@ COUNTRY_DATA = {
             "internet": "Wi-Fi повсеместно. Местная SIM (AIS, TrueMove) — от ฿200 с безлимитным интернетом на 7 дней.",
         },
         "practical_en": {
-            "visa": "Visa-free entry up to 30 days. Can extend for another 30 days at immigration office.",
+            "visa": "Visa-free entry up to 60 days (since 2024). Can extend for another 30 days at immigration office.",
             "currency": "Thai Baht (THB). Exchange in Thailand for better rates.",
             "language": "Thai. English widely spoken in tourist areas, some Russian.",
             "transport": "BTS/MRT in Bangkok, tuk-tuks, songthaews, ferries. Scooter rental from ฿200/day.",
@@ -144,7 +145,7 @@ COUNTRY_DATA = {
             "internet": "Wi-Fi everywhere. Local SIM (AIS, TrueMove) — from ฿200 with unlimited internet for 7 days.",
         },
         "faq_ru": [
-            ("Нужна ли виза в Таиланд?", "Гражданам РФ — безвизовый въезд до 30 дней. Загранпаспорт должен действовать не менее 6 месяцев."),
+            ("Нужна ли виза в Таиланд?", "Гражданам РФ — безвизовый въезд до 60 дней (с 2024 года). Загранпаспорт должен действовать не менее 6 месяцев."),
             ("Какая валюта в Таиланде?", "Тайский бат (THB). Обменивайте в Таиланде, курс выгоднее. Карты принимают в крупных магазинах и отелях."),
             ("Когда лучше ехать в Таиланд?", "Ноябрь–март — высокий сезон, сухо. Апрель–май — жарко. Июнь–октябрь — дожди, но цены ниже."),
             ("Сколько стоит отдых в Таиланде?", "Эконом: от ₽90 000/чел. Комфорт: от ₽180 000. Премиум: от ₽400 000. Цены с перелётом."),
@@ -154,7 +155,7 @@ COUNTRY_DATA = {
             ("Нужны ли прививки?", "Официально не требуются. Рекомендуется прививка от гепатита А и брюшного тифа."),
         ],
         "faq_en": [
-            ("Do I need a visa for Thailand?", "Russian citizens: visa-free up to 30 days. Passport valid for at least 6 months."),
+            ("Do I need a visa for Thailand?", "Russian citizens: visa-free up to 60 days (since 2024). Passport valid for at least 6 months."),
             ("What currency is used?", "Thai Baht (THB). Exchange in Thailand for better rates."),
             ("When is the best time to visit?", "November–March: high season, dry. April–May: hot. June–October: rain, lower prices."),
             ("How much does a trip cost?", "Economy: from $900/person. Comfort: from $1 800. Premium: from $4 000. Flights included."),
@@ -588,17 +589,17 @@ COUNTRY_DATA = {
     },
 }
 
-AGENT_PHOTO = "/assets/agent/photo_2026-06-06_00-51-06.jpg"
+AGENT_PHOTO = "/assets/agent/photo_2026-06-06_00-51-06.webp"
 AGENT_PHOTOS = [
-    "/assets/agent/photo_2026-06-06_00-51-06.jpg",
-    "/assets/agent/photo_2026-06-06_00-51-10.jpg",
-    "/assets/agent/photo_2026-06-06_00-51-17.jpg",
-    "/assets/agent/photo_2026-06-06_00-51-44.jpg",
-    "/assets/agent/photo_2026-06-06_00-51-49.jpg",
-    "/assets/agent/photo_2026-06-06_00-51-53.jpg",
-    "/assets/agent/photo_2026-06-06_00-51-58.jpg",
-    "/assets/agent/photo_2026-06-06_00-52-01.jpg",
-    "/assets/agent/photo_2026-06-06_00-52-05.jpg",
+    "/assets/agent/photo_2026-06-06_00-51-06.webp",
+    "/assets/agent/photo_2026-06-06_00-51-10.webp",
+    "/assets/agent/photo_2026-06-06_00-51-17.webp",
+    "/assets/agent/photo_2026-06-06_00-51-44.webp",
+    "/assets/agent/photo_2026-06-06_00-51-49.webp",
+    "/assets/agent/photo_2026-06-06_00-51-53.webp",
+    "/assets/agent/photo_2026-06-06_00-51-58.webp",
+    "/assets/agent/photo_2026-06-06_00-52-01.webp",
+    "/assets/agent/photo_2026-06-06_00-52-05.webp",
 ]
 
 AGENT_NAME = "Туркова Валентина"

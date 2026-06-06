@@ -6,7 +6,7 @@
     <title>Top 10 Hotels in Ubud 2026: Budget to Luxury</title>
     <meta name="description" content="Top 10 Hotels in Ubud 2026: Budget to Luxury Ubud, the cultural heart of Bali, has evolved significantly by 2026, with a hotel scene that ranges from humble ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-hotels.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/ubud-oteli.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-hotels.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-hotels.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Top 10 Hotels in Ubud 2026: Budget to Luxury">
     <meta property="og:description" content="Top 10 Hotels in Ubud 2026: Budget to Luxury Ubud, the cultural heart of Bali, has evolved significantly by 2026, with a hotel scene that ranges from humble ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/ubud-hotels.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/ubud-hotels.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/ubud.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Top 10 Hotels in Ubud 2026: Budget to Luxury</div>
@@ -360,77 +384,147 @@
             <p style="font-size:14px;color:var(--meta);margin-bottom:16px;padding:12px 16px;background:var(--bg);border-radius:8px;">⚠️ All prices and exchange rates in this article are approximate as of June 2026. Verify current rates and prices before booking.</p>
 
 <p>Ubud, the cultural heart of Bali, has evolved significantly by 2026, with a hotel scene that ranges from humble family-run homestays to world-class luxury resorts. The infrastructure in Ubud has seen major improvements: the main Jalan Raya Ubud is now partially pedestrianized, and a new bypass road has reduced traffic to the Monkey Forest and Campuhan areas by nearly 30% compared to 2023. Neighborhoods have distinct characters: the central Ubud Market area is bustling with cafes and art galleries; Sayan and Kedewatan offer deep river valleys and rice terraces; Penestanan is a quiet artist colony; while Lodtunduh and Nyuh Kuning provide a more local, village-like atmosphere.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="sc" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
-<p>Prices in Ubud have risen moderately since the post-pandemic recovery. A budget double room that cost $30 (≈ ₽2 850) in 2023 now averages $40 (≈ ₽3 800)–50. Mid-range properties have seen 10–15% increases, with many now including co-working spaces and digital detox packages. Luxury hotels have expanded their wellness offerings, with on-site Ayurvedic doctors and cryotherapy chambers becoming standard. The key to value in 2026 Ubud is booking direct or through specialized platforms that offer free cancellation, as walk-in rates at popular hotels can be 20–30% higher during peak season (July–August and December–January).</p>
+<p>Prices in Ubud have risen moderately since the post-pandemic recovery. A budget double room that cost $30in 2023 now averages $40–50. Mid-range properties have seen 10–15% increases, with many now including co-working spaces and digital detox packages. Luxury hotels have expanded their wellness offerings, with on-site Ayurvedic doctors and cryotherapy chambers becoming standard. The key to value in 2026 Ubud is booking direct or through specialized platforms that offer free cancellation, as walk-in rates at popular hotels can be 20–30% higher during peak season (July–August and December–January).</p>
 
-<h2>Budget Hotels (under $50 (≈ ₽4 750)/night)</h2>
+<h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Puri Garden Hotel & Hostel</h3>
+<div id="hc_410485" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Puri Garden Hotel & Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Puri Garden Hotel & Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_410485 .hc-slide');var d=document.querySelectorAll('#hc_410485 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_410485 .hc-slide');var d=document.querySelectorAll('#hc_410485 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Puri Garden Hotel & Hostel &bull; 2 photos</p></div>
 <p><strong>Description:</strong> A social hub in the heart of Ubud, just a 5-minute walk from the Ubud Palace. This property combines a hostel with private rooms. The garden features a large saltwater pool, yoga bale, and a nightly social dinner. Rooms are simple Balinese-style with fan or AC.</p>
-<p><strong>Prices:</strong> Dorm beds from $12 (≈ ₽1 140)/night; private double rooms from $35 (≈ ₽3 325)/night (including breakfast).</p>
+<p><strong>Prices:</strong> Dorm beds from $12/night; private double rooms from $35/night (including breakfast).</p>
 <p><strong>Pros:</strong> Excellent social atmosphere, free daily yoga, central location, very clean. <strong>Cons:</strong> Can be noisy at night due to social events, thin walls in some rooms, limited privacy in dorms.</p>
 
 <h3>2. Pondok Sebatu Cottages</h3>
+<div id="hc_476750" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Pondok Sebatu Cottages - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Pondok Sebatu Cottages - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Pondok Sebatu Cottages - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_476750 .hc-slide');var d=document.querySelectorAll('#hc_476750 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_476750 .hc-slide');var d=document.querySelectorAll('#hc_476750 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_476750 .hc-slide');var d=document.querySelectorAll('#hc_476750 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pondok Sebatu Cottages &bull; 3 photos</p></div>
 <p><strong>Description:</strong> Located in the village of Sebatu, 15 minutes north of central Ubud by scooter. This family-run property sits beside a holy spring temple and working rice fields. Rooms are traditional wooden cottages with open-air bathrooms and verandas overlooking jungle.</p>
-<p><strong>Prices:</strong> Double rooms from $42 (≈ ₽3 990)/night (breakfast included, free coffee/tea all day).</p>
+<p><strong>Prices:</strong> Double rooms from $42/night (breakfast included, free coffee/tea all day).</p>
 <p><strong>Pros:</strong> Authentic village experience, incredibly peaceful, friendly family hosts, free shuttle to Ubud center twice daily. <strong>Cons:</strong> Far from restaurants and nightlife, mosquitoes can be heavy, no pool (only a natural spring-fed bathing area).</p>
 
 <h3>3. Alaya Ubud (Budget Wing)</h3>
+<div id="hc_670478" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Alaya Ubud - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Alaya Ubud - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Alaya Ubud - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_670478 .hc-slide');var d=document.querySelectorAll('#hc_670478 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_670478 .hc-slide');var d=document.querySelectorAll('#hc_670478 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_670478 .hc-slide');var d=document.querySelectorAll('#hc_670478 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Alaya Ubud &bull; 3 photos</p></div>
 <p><strong>Description:</strong> The budget wing of the well-known Alaya resort, located on Jalan Hanoman. Rooms are compact but well-designed with modern amenities, including a small desk and rainfall shower. Guests have access to the main resort's pool and garden.</p>
-<p><strong>Prices:</strong> Standard double rooms from $48 (≈ ₽4 560)/night (no breakfast included).</p>
+<p><strong>Prices:</strong> Standard double rooms from $48/night (no breakfast included).</p>
 <p><strong>Pros:</strong> Resort-level amenities at budget price, excellent location near restaurants and yoga studios, reliable AC and hot water. <strong>Cons:</strong> No breakfast, rooms face a busy street (some noise), no view from budget rooms.</p>
 
-<h2>Mid-Range Hotels ($50 (≈ ₽4 750)-150/night)</h2>
+<h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Bisma Eight</h3>
+<div id="hc_374812" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Bisma Eight - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Bisma Eight - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Bisma Eight - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_374812 .hc-slide');var d=document.querySelectorAll('#hc_374812 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_374812 .hc-slide');var d=document.querySelectorAll('#hc_374812 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_374812 .hc-slide');var d=document.querySelectorAll('#hc_374812 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Bisma Eight &bull; 3 photos</p></div>
 <p><strong>Description:</strong> A boutique hotel on Jalan Bisma, just steps from the Campuhan Ridge Walk. Each of the 38 rooms features a private balcony or terrace. The design blends industrial chic with Balinese woodwork. The rooftop pool offers views over the jungle valley.</p>
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="on" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Deluxe rooms from $95 (≈ ₽9 025)/night; suites from $145 (≈ ₽13 775)/night (breakfast included).</p>
+<p><strong>Prices:</strong> Deluxe rooms from $95/night; suites from $145/night (breakfast included).</p>
 <p><strong>Highlights:</strong> The on-site restaurant, Copper Kitchen, serves excellent farm-to-table cuisine. The hotel offers a free daily shuttle to the Ubud Market. The staff-to-guest ratio is 3:1, ensuring personalized service.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>2. Komaneka at Tanggayuda</h3>
+<div id="hc_349668" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Komaneka at Tanggayuda - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Komaneka at Tanggayuda - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Komaneka at Tanggayuda - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_349668 .hc-slide');var d=document.querySelectorAll('#hc_349668 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_349668 .hc-slide');var d=document.querySelectorAll('#hc_349668 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_349668 .hc-slide');var d=document.querySelectorAll('#hc_349668 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Komaneka at Tanggayuda &bull; 3 photos</p></div>
 <p><strong>Description:</strong> Set in the Tanggayuda village, 10 minutes from the Ubud center, this resort is surrounded by working rice terraces and the Oos River. Rooms are spacious suites with separate living areas and large soaking tubs. The infinity pool overlooks the jungle canopy.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="is" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> One-bedroom suites from $110 (≈ ₽10 450)/night; two-bedroom from $180 (≈ ₽17 100)/night (breakfast and afternoon tea included).</p>
+<p><strong>Prices:</strong> One-bedroom suites from $110/night; two-bedroom from $180/night (breakfast and afternoon tea included).</p>
 <p><strong>Highlights:</strong> The resort has a dedicated art studio offering free batik and woodcarving classes. The spa uses organic ingredients grown on-site. The hotel provides a free scheduled shuttle to Ubud center every hour from 8 AM to 10 PM.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>3. Ubud Wana Resort</h3>
+<div id="hc_481979" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ubud Wana Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Ubud Wana Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Ubud Wana Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_481979 .hc-slide');var d=document.querySelectorAll('#hc_481979 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_481979 .hc-slide');var d=document.querySelectorAll('#hc_481979 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_481979 .hc-slide');var d=document.querySelectorAll('#hc_481979 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ubud Wana Resort &bull; 3 photos</p></div>
 <p><strong>Description:</strong> Located in the quiet village of Lodtunduh, a 10-minute drive from the Ubud Monkey Forest. This resort features 42 rooms built into a hillside, each with a private plunge pool or jacuzzi. The architecture uses sustainable bamboo and recycled teak.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="fe" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Hillside rooms from $75 (≈ ₽7 125)/night; rooms with private pool from $130 (≈ ₽12 350)/night (breakfast included).</p>
+<p><strong>Prices:</strong> Hillside rooms from $75/night; rooms with private pool from $130/night (breakfast included).</p>
 <p><strong>Highlights:</strong> The resort has an organic farm where guests can pick vegetables for their dinner. The infinity pool is one of the largest in the area at 40 meters. Free yoga classes are offered twice daily in the open-air pavilion.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
 <h3>4. The Udaya Resorts & Spa</h3>
+<div id="hc_396985" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="The Udaya Resorts & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="The Udaya Resorts & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Udaya Resorts & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_396985 .hc-slide');var d=document.querySelectorAll('#hc_396985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_396985 .hc-slide');var d=document.querySelectorAll('#hc_396985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_396985 .hc-slide');var d=document.querySelectorAll('#hc_396985 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Udaya Resorts & Spa &bull; 3 photos</p></div>
 <p><strong>Description:</strong> Situated in the Penestanan neighborhood, this resort channels traditional Balinese palace design. Rooms feature four-poster beds, carved stone bathrooms, and private garden courtyards. The central pool is shaped like a lotus pond.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ch" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Prices:</strong> Deluxe rooms from $88 (≈ ₽8 360)/night; Royal Suite from $148 (≈ ₽14 060)/night (breakfast and afternoon tea included).</p>
+<p><strong>Prices:</strong> Deluxe rooms from $88/night; Royal Suite from $148/night (breakfast and afternoon tea included).</p>
 <p><strong>Highlights:</strong> The resort offers a free "Cultural Immersion" program including temple visits, offering-making classes, and traditional dance performances. The spa has a hydrotherapy pool and steam room. The hotel provides a free shuttle to the Ubud Art Market every 30 minutes.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="of" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
 
-<h2>Luxury Hotels ($150 (≈ ₽14 250)+/night)</h2>
+<h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Mandapa, a Ritz-Carlton Reserve</h3>
+<div id="hc_265148" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton Reserve - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton Reserve - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton Reserve - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_265148 .hc-slide');var d=document.querySelectorAll('#hc_265148 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_265148 .hc-slide');var d=document.querySelectorAll('#hc_265148 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_265148 .hc-slide');var d=document.querySelectorAll('#hc_265148 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton Reserve &bull; 3 photos</p></div>
 <p><strong>Description:</strong> Set in the Sayan valley along the Ayung River, this ultra-luxury resort has 60 suites and villas, each with a private pool and butler service. The architecture by renowned Indonesian architect Budiman Hendropurnomo integrates with the rice terraces. The resort spans 20 acres of tropical forest.</p>
-<img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Features:</strong> The 2,500-square-meter spa offers Ayurvedic treatments, cryotherapy, and a hammam. The resort has three restaurants, including the fine-dining Kubu which overlooks the river. Guests have access to a private riverfront lounge, a 24-hour fitness center, and a yoga pavilion. Rates include a dedicated "Reserve Host" who arranges activities from white-water rafting to temple pilgrimages. Prices start at $450 (≈ ₽42 750)/night for a suite and exceed $2 000 (≈ ₽190 000)/night for the four-bedroom villa.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Features:</strong> The 2,500-square-meter spa offers Ayurvedic treatments, cryotherapy, and a hammam. The resort has three restaurants, including the fine-dining Kubu which overlooks the river. Guests have access to a private riverfront lounge, a 24-hour fitness center, and a yoga pavilion. Rates include a dedicated "Reserve Host" who arranges activities from white-water rafting to temple pilgrimages. Prices start at $450/night for a suite and exceed $2 000/night for the four-bedroom villa.</p>
 
 <h3>2. Capella Ubud, Bali</h3>
+<div id="hc_345786" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Capella Ubud, Bali - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Capella Ubud, Bali - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_345786 .hc-slide');var d=document.querySelectorAll('#hc_345786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_345786 .hc-slide');var d=document.querySelectorAll('#hc_345786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Capella Ubud, Bali &bull; 2 photos</p></div>
 <p><strong>Description:</strong> A tented camp resort hidden in the Wos River valley, inspired by 19th-century European explorers. Each of the 22 tents is custom-designed with a private plunge pool, outdoor shower, and a fireplace. The main camp includes a library, a bar, and a dining tent serving modern Indonesian cuisine.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="hi" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Features:</strong> The resort has a 40-meter infinity pool that appears to merge with the jungle canopy. The Auriga Spa offers treatments using local herbs and spices. The "Explorer's Program" includes guided jungle treks, waterfall picnics, and silver-smithing workshops. The resort has a maximum of 44 guests, ensuring complete privacy. Prices start at $800 (≈ ₽76 000)/night for a tented suite, with the two-bedroom Lodge starting at $2 500 (≈ ₽237 500)/night.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Features:</strong> The resort has a 40-meter infinity pool that appears to merge with the jungle canopy. The Auriga Spa offers treatments using local herbs and spices. The "Explorer's Program" includes guided jungle treks, waterfall picnics, and silver-smithing workshops. The resort has a maximum of 44 guests, ensuring complete privacy. Prices start at $800/night for a tented suite, with the two-bedroom Lodge starting at $2 500/night.</p>
 
 <h3>3. Four Seasons Resort Bali at Sayan</h3>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Ba" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<div id="hc_622421" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
+<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons Resort Bali at Sayan - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons Resort Bali at Sayan - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons Resort Bali at Sayan - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
+<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+<button onclick="var s=document.querySelectorAll('#hc_622421 .hc-slide');var d=document.querySelectorAll('#hc_622421 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
+<button onclick="var s=document.querySelectorAll('#hc_622421 .hc-slide');var d=document.querySelectorAll('#hc_622421 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
+<button onclick="var s=document.querySelectorAll('#hc_622421 .hc-slide');var d=document.querySelectorAll('#hc_622421 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
+</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons Resort Bali at Sayan &bull; 3 photos</p></div>
 <p><strong>Description:</strong> An iconic property perched above the Ayung River, known for its signature lotus pond roof. The resort has 60 villas and suites, each with a private pool and expansive outdoor living area. The design by John Heah uses local stone, bamboo, and thatch.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
-<p><strong>Features:</strong> The spa is a three-level sanctuary with a yoga pavilion, meditation cave, and treatment rooms suspended over the river. The resort has two restaurants: Ayung Terrace for Indonesian cuisine and the River Cafe for casual dining. The "Sayan Experience" includes a private dinner in the rice fields, a Balinese blessing ceremony, and a guided cycling tour. The resort has a 24-hour butler service and a children's program. Prices start at $600 (≈ ₽57 000)/night for a one-bedroom villa and go up to $3 500 (≈ ₽332 500)/night for the three-bedroom Royal Villa.</p>
-<img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="ha" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>Features:</strong> The spa is a three-level sanctuary with a yoga pavilion, meditation cave, and treatment rooms suspended over the river. The resort has two restaurants: Ayung Terrace for Indonesian cuisine and the River Cafe for casual dining. The "Sayan Experience" includes a private dinner in the rice fields, a Balinese blessing ceremony, and a guided cycling tour. The resort has a 24-hour butler service and a children's program. Prices start at $600/night for a one-bedroom villa and go up to $3 500/night for the three-bedroom Royal Villa.</p>
 
 <h2>How to Choose the Right Area</h2>
 
@@ -440,8 +534,7 @@
 
 <p><strong>For nightlife and socializing:</strong> Penestanan and the area around Jalan Raya Ubud have the most bars, live music venues, and late-night cafes. The Udaya Resorts & Spa is a good mid-range option here. Budget travelers should consider Puri Garden for its social vibe. Nightlife in Ubud is generally low-key (closing by midnight), but these areas have the most options.</p>
 
-<p><strong>For village immersion:</strong> Lodtunduh, Nyuh Kuning, and Sebatu offer authentic Balinese village life with fewer tourists. Ubud Wana Resort in Lodtunduh is excellent for mid-range. Budget travelers can find homestays for under $30 (≈ ₽2 850)/night in these areas. The trade-off is distance from central attractions.</p>
-<img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="in" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">
+<p><strong>For village immersion:</strong> Lodtunduh, Nyuh Kuning, and Sebatu offer authentic Balinese village life with fewer tourists. Ubud Wana Resort in Lodtunduh is excellent for mid-range. Budget travelers can find homestays for under $30/night in these areas. The trade-off is distance from central attractions.</p>
 
 <h2>Booking Tips</h2>
 
@@ -449,9 +542,9 @@
 
 <p><strong>How to save:</strong> Always compare direct booking rates against OTAs (Online Travel Agencies). Many mid-range and luxury hotels offer 10–15% discounts for direct bookings, plus perks like free airport transfers or spa credits. Use price comparison tools like Trivago or HotelsCombined, but check the hotel's own website before finalizing. For budget hotels, booking through <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> or <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> often gives the best rates due to their market dominance in Southeast Asia. Consider staying at least 5–7 nights for weekly discounts (typically 10–20% off).</p>
 
-<p><strong>Best services:</strong> For luxury bookings, use Virtuoso or Amex Fine Hotels & Resorts for added benefits like room upgrades, breakfast, and $100 (≈ ₽9 500) property credits. For mid-range, <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com's Genius program (tier 3) offers 15–20% discounts on select properties. For budget, Hostelworld is best for dorms, while Agoda has the widest selection of private budget rooms. Always check cancellation policies: free cancellation up to 24–48 hours before check-in is standard for most hotels in Ubud. Avoid non-refundable rates unless the discount is at least 25% below the refundable rate.</p>
+<p><strong>Best services:</strong> For luxury bookings, use Virtuoso or Amex Fine Hotels & Resorts for added benefits like room upgrades, breakfast, and $100property credits. For mid-range, <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com's Genius program (tier 3) offers 15–20% discounts on select properties. For budget, Hostelworld is best for dorms, while Agoda has the widest selection of private budget rooms. Always check cancellation policies: free cancellation up to 24–48 hours before check-in is standard for most hotels in Ubud. Avoid non-refundable rates unless the discount is at least 25% below the refundable rate.</p>
 
-<p><strong>Additional tips:</strong> Book airport transfers through the hotel (typically $30 (≈ ₽2 850)–40 for a private car from Ngurah Rai Airport to Ubud) to avoid scams. Consider booking a room with breakfast included, as breakfast in Ubud cafes can cost $5 (≈ ₽475)–10 per person. For luxury hotels, inquire about "stay longer" packages (e.g., pay for 4 nights, get the 5th free). For budget hotels, ask about cash discounts (many small properties offer 5–10% off for cash payments). Always read recent reviews on Google Maps and TripAdvisor, focusing on reviews from the last 3 months for current conditions.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<p><strong>Additional tips:</strong> Book airport transfers through the hotel (typically $30–40 for a private car from Ngurah Rai Airport to Ubud) to avoid scams. Consider booking a room with breakfast included, as breakfast in Ubud cafes can cost $5–10 per person. For luxury hotels, inquire about "stay longer" packages (e.g., pay for 4 nights, get the 5th free). For budget hotels, ask about cash discounts (many small properties offer 5–10% off for cash payments). Always read recent reviews on Google Maps and TripAdvisor, focusing on reviews from the last 3 months for current conditions.</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -542,6 +635,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -570,6 +664,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -587,8 +682,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

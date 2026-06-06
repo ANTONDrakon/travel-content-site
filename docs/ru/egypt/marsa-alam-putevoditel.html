@@ -7,8 +7,8 @@
     <meta name="description" content="Марса-Алам: полный путеводитель 2026 Марса-Алам — это не просто египетский курорт, а настоящий оазис для тех, кто ищет уединения, дикой природы и кристально ...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-putevoditel.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-putevoditel.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-putevoditel.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-travel-guide.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-travel-guide.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-putevoditel.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Марса-Алам: полный путеводитель 2026">
     <meta property="og:description" content="Марса-Алам: полный путеводитель 2026 Марса-Алам — это не просто египетский курорт, а настоящий оазис для тех, кто ищет уединения, дикой природы и кристально ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-putevoditel.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/marsa-alam-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/marsa-alam.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Марса-Алам: полный путеводитель 2026</div>
@@ -367,67 +391,67 @@
 <p>Для тех, кто устал от цивилизации, Марса-Алам — идеальное убежище. Здесь вы не найдете ночных клубов или аквапарков, но получите бесценный опыт: снорклинг среди дельфинов, сафари на джипах по пустыне и ночевки под звездами в бедуинской деревне. В 2026 году курорт активно развивается: открываются новые отели категории 5 звезд, расширяется аэропорт, но при этом сохраняется его аутентичная атмосфера. Если вы хотите увидеть настоящий Египет без глянца — вам сюда.</p>
 
 <h2>Как добраться</h2>
-<p>Основной аэропорт — Международный аэропорт Марса-Алам (RMF), расположенный в 60 км к северу от города. Он принимает рейсы из Москвы, Санкт-Петербурга и Екатеринбурга. Средняя цена билета в обе стороны из Москвы в 2026 году составляет 35 000–55 000 рублей (в зависимости от сезона и авиакомпании). Прямые рейсы выполняют «Аэрофлот», Red Sea Airlines и EgyptAir. Время в пути — около 5 часов. Из аэропорта до города можно добраться на такси (стоимость 400–600 EGP, около 1200–1800 рублей) или на трансфере от отеля (часто бесплатно при бронировании). Альтернативный вариант — долететь до Хургады (HRG) и доехать на автобусе (4–5 часов, цена 250–400 EGP). Автобусы Go Bus отправляются ежедневно каждые 2 часа.</p>
+<p>Основной аэропорт — Международный аэропорт Марса-Алам (RMF), расположенный в 60 км к северу от города. Он принимает рейсы из Москвы, Санкт-Петербурга и Екатеринбурга. Средняя цена билета в обе стороны из Москвы в 2026 году составляет 35 000–55 000 рублей (в зависимости от сезона и авиакомпании). Прямые рейсы выполняют «Аэрофлот», Red Sea Airlines и EgyptAir. Время в пути — около 5 часов. Из аэропорта до города можно добраться на такси (стоимость 400–₽1 140 (600 EGP), около 1200–1800 рублей) или на трансфере от отеля (часто бесплатно при бронировании). Альтернативный вариант — долететь до Хургады (HRG) и доехать на автобусе (4–5 часов, цена 250–₽760 (400 EGP)). Автобусы Go Bus отправляются ежедневно каждые 2 часа.</p>
 
 <h2>Где остановиться</h2>
 <p>Марса-Алам делится на три ключевые зоны: сам город, пляжная полоса вдоль побережья и отдаленные курорты на юге. Выбор зависит от бюджета и целей поездки.</p>
 
 <h3>Бюджетно (до 3000 рублей за ночь)</h3>
 <ul>
-<li><strong>Отель Marsa Alam Beach Hotel</strong> — 3 звезды, прямо на пляже. Цена: 2500–3000 EGP за ночь (7500–9000 рублей). Включены завтрак и ужин.</li>
-<li><strong>Гостевой дом Al Qusair Inn</strong> — в 30 км от города, простые номера с кондиционером. Цена: 1500–2000 EGP за ночь.</li>
+<li><strong>Отель Marsa Alam Beach Hotel</strong> — 3 звезды, прямо на пляже. Цена: 2500–₽5 700 (3 ₽0 (000 EGP)) за ночь (7500–9000 рублей). Включены завтрак и ужин.</li>
+<li><strong>Гостевой дом Al Qusair Inn</strong> — в 30 км от города, простые номера с кондиционером. Цена: 1500–₽3 800 (2 ₽0 (000 EGP)) за ночь.</li>
 </ul>
 
 <h3>Средний сегмент (3000–8000 рублей за ночь)</h3>
 <ul>
-<li><strong>Jaz Marsa Alam Resort</strong> — 4 звезды, с собственным рифом и аквапарком. Цена: 4000–6000 EGP за ночь. Идеально для семей.</li>
-<li><strong>Port Ghalib Resort</strong> — 5 звезд, в марине Port Ghalib. Цена: 5000–7000 EGP. Рядом рестораны и магазины.</li>
+<li><strong>Jaz Marsa Alam Resort</strong> — 4 звезды, с собственным рифом и аквапарком. Цена: 4000–₽11 400 (6 ₽0 (000 EGP)) за ночь. Идеально для семей.</li>
+<li><strong>Port Ghalib Resort</strong> — 5 звезд, в марине Port Ghalib. Цена: 5000–₽13 300 (7 ₽0 (000 EGP)). Рядом рестораны и магазины.</li>
 </ul>
 
 <h3>Премиум (от 8000 рублей за ночь)</h3>
 <ul>
-<li><strong>The Three Corners Resort</strong> — 5 звезд, люкс-номера с видом на море. Цена: 8000–12 000 EGP. Спа-центр и частный пляж.</li>
-<li><strong>Rixos Premium Marsa Alam</strong> — 5 звезд, система «все включено». Цена: от 10 000 EGP. Роскошные виллы с бассейнами.</li>
+<li><strong>The Three Corners Resort</strong> — 5 звезд, люкс-номера с видом на море. Цена: 8000–₽22 800 (12 ₽0 (000 EGP)). Спа-центр и частный пляж.</li>
+<li><strong>Rixos Premium Marsa Alam</strong> — 5 звезд, система «все включено». Цена: от₽19 000 (10 ₽0 (000 EGP)). Роскошные виллы с бассейнами.</li>
 </ul>
 
 <h2>Топ-15 достопримечательностей</h2>
 <table>
 <tr><th>№</th><th>Название</th><th>Описание</th><th>Цена билета (EGP)</th><th>Часы работы</th></tr>
 <tr><td>1</td><td>Риф Эльфинстоун (Elphinstone Reef)</td><td>Один из лучших дайв-сайтов мира. Глубина до 30 метров, коралловые сады и акулы-молоты. Лучше всего с апреля по октябрь.</td><td>Бесплатно (доступ с катера)</td><td>Круглосуточно (только с гидом)</td></tr>
-<tr><td>2</td><td>Национальный парк Вади-эль-Гемаль</td><td>Заповедник площадью 7450 км². Горы, оазисы, бедуинские деревни. Экскурсия на джипе — 1500 EGP.</td><td>Вход 100 EGP</td><td>8:00–17:00</td></tr>
-<tr><td>3</td><td>Пляж Абу-Даббаб (Abu Dabbab)</td><td>Знаменит морскими черепахами и дюгонями. Снорклинг с берега. Песчаный вход в воду.</td><td>Бесплатно (шезлонги 50 EGP)</td><td>Круглосуточно</td></tr>
-<tr><td>4</td><td>Затонувшее судно SS Thistlegorm</td><td>Британский транспортник, затонувший в 1941 году. Глубина 30 метров. Доступно для дайверов с опытом.</td><td>Бесплатно (аренда катера от 2000 EGP)</td><td>Только с гидом</td></tr>
+<tr><td>2</td><td>Национальный парк Вади-эль-Гемаль</td><td>Заповедник площадью 7450 км². Горы, оазисы, бедуинские деревни. Экскурсия на джипе —₽2 850 (1 ₽950 (500 EGP)).</td><td>Вход₽190 (100 EGP)</td><td>8:00–17:00</td></tr>
+<tr><td>3</td><td>Пляж Абу-Даббаб (Abu Dabbab)</td><td>Знаменит морскими черепахами и дюгонями. Снорклинг с берега. Песчаный вход в воду.</td><td>Бесплатно (шезлонги₽95 (50 EGP))</td><td>Круглосуточно</td></tr>
+<tr><td>4</td><td>Затонувшее судно SS Thistlegorm</td><td>Британский транспортник, затонувший в 1941 году. Глубина 30 метров. Доступно для дайверов с опытом.</td><td>Бесплатно (аренда катера от₽3 800 (2 ₽0 (000 EGP)))</td><td>Только с гидом</td></tr>
 <tr><td>5</td><td>Марина Порт Галиб (Port Ghalib)</td><td>Современный порт с ресторанами, магазинами и яхтами. Идеально для вечерних прогулок.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
-<tr><td>6</td><td>Храм Сети I (Temple of Seti I)</td><td>Древнеегипетский храм XIX династии. Рельефы с изображением богов. Расположен в 30 км от города.</td><td>200 EGP</td><td>9:00–16:00</td></tr>
-<tr><td>7</td><td>Остров Вади-эль-Гемаль (Wadi El Gemal Island)</td><td>Необитаемый остров с белыми пляжами. Место гнездования черепах. Экскурсия на лодке.</td><td>500 EGP (с транспортом)</td><td>8:00–16:00</td></tr>
-<tr><td>8</td><td>Гора Шаиб-эль-Банат (Shayeb El Banat)</td><td>Высочайшая точка региона (2187 метров). Треккинг с гидом. Вид на пустыню и море.</td><td>Бесплатно (гид 1000 EGP)</td><td>Лучше с рассвета</td></tr>
+<tr><td>6</td><td>Храм Сети I (Temple of Seti I)</td><td>Древнеегипетский храм XIX династии. Рельефы с изображением богов. Расположен в 30 км от города.</td><td>₽380 (200 EGP)</td><td>9:00–16:00</td></tr>
+<tr><td>7</td><td>Остров Вади-эль-Гемаль (Wadi El Gemal Island)</td><td>Необитаемый остров с белыми пляжами. Место гнездования черепах. Экскурсия на лодке.</td><td>₽950 (500 EGP) (с транспортом)</td><td>8:00–16:00</td></tr>
+<tr><td>8</td><td>Гора Шаиб-эль-Банат (Shayeb El Banat)</td><td>Высочайшая точка региона (2187 метров). Треккинг с гидом. Вид на пустыню и море.</td><td>Бесплатно (гид₽1 900 (1 ₽0 (000 EGP)))</td><td>Лучше с рассвета</td></tr>
 <tr><td>9</td><td>Пляж Мандарин (Mandarin Beach)</td><td>Уединенный пляж с кораллами. Мелководье для снорклинга. Мало туристов.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
-<tr><td>10</td><td>Бедуинская деревня (Bedouin Village)</td><td>Экскурсия с чаепитием, верблюдами и ужином. Узнайте культуру бедуинов.</td><td>800 EGP (включен ужин)</td><td>16:00–21:00</td></tr>
-<tr><td>11</td><td>Риф Сата (Sataya Reef)</td><td>Место обитания дельфинов-спиннеров. Снорклинг с ними в естественной среде.</td><td>Бесплатно (катер от 1500 EGP)</td><td>8:00–15:00</td></tr>
-<tr><td>12</td><td>Форт Кусейр (Qusair Fort)</td><td>Османская крепость XVI века. Музей с артефактами. Вход — 50 EGP.</td><td>50 EGP</td><td>9:00–17:00</td></tr>
+<tr><td>10</td><td>Бедуинская деревня (Bedouin Village)</td><td>Экскурсия с чаепитием, верблюдами и ужином. Узнайте культуру бедуинов.</td><td>₽1 520 (800 EGP) (включен ужин)</td><td>16:00–21:00</td></tr>
+<tr><td>11</td><td>Риф Сата (Sataya Reef)</td><td>Место обитания дельфинов-спиннеров. Снорклинг с ними в естественной среде.</td><td>Бесплатно (катер от₽2 850 (1 ₽950 (500 EGP)))</td><td>8:00–15:00</td></tr>
+<tr><td>12</td><td>Форт Кусейр (Qusair Fort)</td><td>Османская крепость XVI века. Музей с артефактами. Вход —₽95 (50 EGP).</td><td>₽95 (50 EGP)</td><td>9:00–17:00</td></tr>
 <tr><td>13</td><td>Горячие источники Хаммам (Hammam Hot Springs)</td><td>Естественные термальные источники в пустыне. Температура воды 40°C. Бесплатно.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
 <tr><td>14</td><td>Пляж Дельфинов (Dolphin Beach)</td><td>Мелководье, где часто появляются дельфины. Снорклинг с берега.</td><td>Бесплатно</td><td>Круглосуточно</td></tr>
-<tr><td>15</td><td>Музей Марса-Алам (Marsa Alam Museum)</td><td>Небольшой музей с экспонатами о море и пустыне. Сувенирная лавка.</td><td>50 EGP</td><td>10:00–18:00</td></tr>
+<tr><td>15</td><td>Музей Марса-Алам (Marsa Alam Museum)</td><td>Небольшой музей с экспонатами о море и пустыне. Сувенирная лавка.</td><td>₽95 (50 EGP)</td><td>10:00–18:00</td></tr>
 </table>
 
 <h2>Транспорт в городе</h2>
 <p>Общественный транспорт в Марса-Аламе ограничен. Метро нет. Основные способы передвижения:</p>
 <ul>
-<li><strong>Такси</strong>: Стоимость по городу — 50–100 EGP (150–300 рублей). Между отелями — 150–300 EGP. Торгуйтесь обязательно.</li>
-<li><strong>Автобусы</strong>: Маршрут №1 соединяет город и пляжи. Билет — 10–20 EGP (30–60 рублей). Ходят редко (раз в час).</li>
-<li><strong>Аренда автомобиля</strong>: От 1500 EGP в сутки (4500 рублей). Нужны права международного образца. Бензин — 15 EGP за литр.</li>
-<li><strong>Велосипеды</strong>: Аренда в отелях — 200–400 EGP в день. Популярно среди туристов.</li>
+<li><strong>Такси</strong>: Стоимость по городу — 50–₽190 (100 EGP) (150–300 рублей). Между отелями — 150–₽570 (300 EGP). Торгуйтесь обязательно.</li>
+<li><strong>Автобусы</strong>: Маршрут №1 соединяет город и пляжи. Билет — 10–₽38 (20 EGP) (30–60 рублей). Ходят редко (раз в час).</li>
+<li><strong>Аренда автомобиля</strong>: От₽2 850 (1 ₽950 (500 EGP)) в сутки (4500 рублей). Нужны права международного образца. Бензин —₽28 (15 EGP) за литр.</li>
+<li><strong>Велосипеды</strong>: Аренда в отелях — 200–₽760 (400 EGP) в день. Популярно среди туристов.</li>
 <li><strong>Трансферы от отелей</strong>: Часто бесплатные до пляжей и марины.</li>
 </ul>
 
 <h2>Где поесть</h2>
-<p>Марса-Алам предлагает разнообразие от уличной еды до изысканных ресторанов. Средний чек на обед — 150–400 EGP (450–1200 рублей).</p>
+<p>Марса-Алам предлагает разнообразие от уличной еды до изысканных ресторанов. Средний чек на обед — 150–₽760 (400 EGP) (450–1200 рублей).</p>
 <ul>
-<li><strong>Ресторан «Al Dabab»</strong> (город): Египетская кухня — фалафель, кебаб, хумус. Средний чек 200 EGP. Часы: 11:00–23:00.</li>
-<li><strong>«Red Sea Fish House»</strong> (порт Галиб): Свежая рыба и морепродукты. Гриль-сет на двоих — 600 EGP. Часы: 12:00–22:00.</li>
-<li><strong>Уличная еда</strong>: Шаурма (30–50 EGP), кукуруза (20 EGP), соки (30 EGP). Попробуйте на рынке в центре.</li>
-<li><strong>«La Terrazza»</strong> (отель Jaz): Итальянская кухня с видом на море. Пицца — 250 EGP. Часы: 18:00–23:00.</li>
-<li><strong>Местная кухня</strong>: Обязательно попробуйте кушри (рис, макароны, чечевица) за 40–60 EGP и фул медамес (бобовое рагу) за 30 EGP.</li>
+<li><strong>Ресторан «Al Dabab»</strong> (город): Египетская кухня — фалафель, кебаб, хумус. Средний чек₽380 (200 EGP). Часы: 11:00–23:00.</li>
+<li><strong>«Red Sea Fish House»</strong> (порт Галиб): Свежая рыба и морепродукты. Гриль-сет на двоих —₽1 140 (600 EGP). Часы: 12:00–22:00.</li>
+<li><strong>Уличная еда</strong>: Шаурма (30–₽95 (50 EGP)), кукуруза (₽38 (20 EGP)), соки (₽57 (30 EGP)). Попробуйте на рынке в центре.</li>
+<li><strong>«La Terrazza»</strong> (отель Jaz): Итальянская кухня с видом на море. Пицца —₽475 (250 EGP). Часы: 18:00–23:00.</li>
+<li><strong>Местная кухня</strong>: Обязательно попробуйте кушри (рис, макароны, чечевица) за 40–₽114 (60 EGP) и фул медамес (бобовое рагу) за₽57 (30 EGP).</li>
 </ul>
 
 <h2>Лучшее время для поездки</h2>
@@ -551,6 +575,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -579,6 +604,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -596,8 +622,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

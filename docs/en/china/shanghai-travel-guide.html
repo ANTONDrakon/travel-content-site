@@ -6,7 +6,7 @@
     <title>Shanghai Travel Guide 2026</title>
     <meta name="description" content="Shanghai Travel Guide 2026 Shanghai is a city that pulses with an energy you can feel in your bones the moment you step off the plane. It’s a place where fut...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/shanghai-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/shanghai-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Shanghai Travel Guide 2026">
     <meta property="og:description" content="Shanghai Travel Guide 2026 Shanghai is a city that pulses with an energy you can feel in your bones the moment you step off the plane. It’s a place where fut...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/china/shanghai-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/shanghai-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/shanghai.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Shanghai Travel Guide 2026</div>
@@ -363,27 +387,27 @@
 <p>For me, the magic of Shanghai is in the details: the way a grandmother practices tai chi in the park at dawn, the hum of a thousand electric scooters, the taste of xiaolongbao so fresh it practically sings. This guide is built from my own experiences and the feedback from hundreds of travelers I’ve helped plan their journeys. I’ve marked up all prices by about 12-15% to give you a realistic, stress-free budget—because I’ve learned that a little cushion makes a trip feel luxurious instead of tight. Let’s dive in!</p>
 
 <h2>How to Get There</h2>
-<p>Shanghai is served by two major airports: Pudong International Airport (PVG) and Hongqiao International Airport (SHA). PVG handles most international flights and is about 45 minutes to an hour from the city center by taxi or metro. SHA is closer to downtown and handles domestic flights plus some regional routes. From the US, expect flights from Los Angeles, San Francisco, New York, and Chicago to cost between $780 (≈ ₽74 100) and $1 150 (≈ ₽109 250) round trip in economy (I’ve seen prices hit $1 300 (≈ ₽123 500) during peak seasons, so book early!). From Europe, flights from London, Paris, and Frankfurt range from $550 (≈ ₽52 250) to $850. (≈ ₽80 750) From Australia, Sydney and Melbourne flights run $600 (≈ ₽57 000) to $900. (≈ ₽85 500) I recommend booking at least three months ahead for the best deals—and always check for layovers in Hong Kong or Seoul, which can save you $100 (≈ ₽9 500)-$150. (≈ ₽14 250)</p>
+<p>Shanghai is served by two major airports: Pudong International Airport (PVG) and Hongqiao International Airport (SHA). PVG handles most international flights and is about 45 minutes to an hour from the city center by taxi or metro. SHA is closer to downtown and handles domestic flights plus some regional routes. From the US, expect flights from Los Angeles, San Francisco, New York, and Chicago to cost between $780and $1 150round trip in economy (I’ve seen prices hit $1 300during peak seasons, so book early!). From Europe, flights from London, Paris, and Frankfurt range from $550to $850From Australia, Sydney and Melbourne flights run $600to $900I recommend booking at least three months ahead for the best deals—and always check for layovers in Hong Kong or Seoul, which can save you $100-$150</p>
 
 <h2>Where to Stay</h2>
 <p>Choosing the right neighborhood is key to loving Shanghai. Here are my top picks for every budget, based on real traveler feedback and my own visits.</p>
-<h3>Luxury (Over $320 (≈ ₽30 400)/night)</h3>
+<h3>Luxury (Over $320/night)</h3>
 <ul>
-<li><strong>The Peninsula Shanghai</strong> (Bund area) – Classic elegance with river views. Rooms start at $540 (≈ ₽51 300)/night. You’ll feel like royalty.</li>
-<li><strong>W Shanghai – The Bund</strong> – Trendy, vibrant, with a rooftop bar. From $410 (≈ ₽38 950)/night.</li>
-<li><strong>Four Seasons Hotel Shanghai</strong> (Pudong) – Impeccable service. From $370 (≈ ₽35 150)/night.</li>
+<li><strong>The Peninsula Shanghai</strong> (Bund area) – Classic elegance with river views. Rooms start at $540/night. You’ll feel like royalty.</li>
+<li><strong>W Shanghai – The Bund</strong> – Trendy, vibrant, with a rooftop bar. From $410/night.</li>
+<li><strong>Four Seasons Hotel Shanghai</strong> (Pudong) – Impeccable service. From $370/night.</li>
 </ul>
-<h3>Mid-Range ($120 (≈ ₽11 400)–$300 (≈ ₽28 500)/night)</h3>
+<h3>Mid-Range ($120–$300/night)</h3>
 <ul>
-<li><strong>Jing’an Hotel</strong> (Jing’an district) – Charming boutique hotel near the temple. From $175 (≈ ₽16 625)/night.</li>
-<li><strong>Holiday Inn Express Shanghai Zhabei</strong> – Clean, reliable, close to metro. From $135 (≈ ₽12 825)/night.</li>
-<li><strong>Citadines Apart’hotel</strong> (French Concession) – Great for families, with kitchenettes. From $155 (≈ ₽14 725)/night.</li>
+<li><strong>Jing’an Hotel</strong> (Jing’an district) – Charming boutique hotel near the temple. From $175/night.</li>
+<li><strong>Holiday Inn Express Shanghai Zhabei</strong> – Clean, reliable, close to metro. From $135/night.</li>
+<li><strong>Citadines Apart’hotel</strong> (French Concession) – Great for families, with kitchenettes. From $155/night.</li>
 </ul>
-<h3>Budget (Under $100 (≈ ₽9 500)/night)</h3>
+<h3>Budget (Under $100/night)</h3>
 <ul>
-<li><strong>Mingtown Etour Youth Hostel</strong> (People’s Square) – Social vibe, dorms from $28 (≈ ₽2 660)/night, private rooms $75 (≈ ₽7 125)/night.</li>
-<li><strong>Shanghai Little Alley Hostel</strong> (French Concession) – Cozy and clean. Private rooms from $65 (≈ ₽6 175)/night.</li>
-<li><strong>Home Inn (Nanjing Road)</strong> – Basic but central. Doubles from $55 (≈ ₽5 225)/night.</li>
+<li><strong>Mingtown Etour Youth Hostel</strong> (People’s Square) – Social vibe, dorms from $28/night, private rooms $75/night.</li>
+<li><strong>Shanghai Little Alley Hostel</strong> (French Concession) – Cozy and clean. Private rooms from $65/night.</li>
+<li><strong>Home Inn (Nanjing Road)</strong> – Basic but central. Doubles from $55/night.</li>
 </ul>
 
 <h2>Top 15 Attractions</h2>
@@ -391,58 +415,58 @@
 <table>
 <tr><th>#</th><th>Attraction</th><th>Description</th><th>Ticket Price</th><th>Opening Hours</th></tr>
 <tr><td>1</td><td>The Bund</td><td>Iconic waterfront promenade with stunning views of Pudong’s skyscrapers. Best at sunset. Free to walk.</td><td>Free</td><td>24/7</td></tr>
-<tr><td>2</td><td>Oriental Pearl Tower</td><td>Futuristic TV tower with a glass-floor observation deck. A bit touristy, but the view is unbeatable.</td><td>$42 (≈ ₽3 990)</td><td>8:00 AM–9:30 PM</td></tr>
-<tr><td>3</td><td>Yu Garden</td><td>Ming Dynasty garden with intricate rockeries and pavilions. A peaceful oasis in the old city.</td><td>$12 (≈ ₽1 140)</td><td>9:00 AM–4:30 PM</td></tr>
+<tr><td>2</td><td>Oriental Pearl Tower</td><td>Futuristic TV tower with a glass-floor observation deck. A bit touristy, but the view is unbeatable.</td><td>$42</td><td>8:00 AM–9:30 PM</td></tr>
+<tr><td>3</td><td>Yu Garden</td><td>Ming Dynasty garden with intricate rockeries and pavilions. A peaceful oasis in the old city.</td><td>$12</td><td>9:00 AM–4:30 PM</td></tr>
 <tr><td>4</td><td>Shanghai Museum</td><td>World-class collection of ancient Chinese art, including bronzes and ceramics. Free entry!</td><td>Free</td><td>9:00 AM–5:00 PM (closed Mon)</td></tr>
 <tr><td>5</td><td>Nanjing Road</td><td>China’s premier shopping street, buzzing with neon lights and department stores. Great for people-watching.</td><td>Free</td><td>24/7</td></tr>
 <tr><td>6</td><td>French Concession</td><td>Leafy, historic district with art deco buildings, cafes, and boutiques. Perfect for a leisurely stroll.</td><td>Free</td><td>24/7</td></tr>
-<tr><td>7</td><td>Shanghai Tower</td><td>Second-tallest building in the world. The observation deck at 118th floor is dizzying and incredible.</td><td>$38 (≈ ₽3 610)</td><td>9:00 AM–10:00 PM</td></tr>
-<tr><td>8</td><td>Jade Buddha Temple</td><td>Active Buddhist temple housing two jade Buddha statues. Serene and spiritual.</td><td>$7 (≈ ₽665)</td><td>8:00 AM–4:30 PM</td></tr>
-<tr><td>9</td><td>Huangpu River Cruise</td><td>Boat ride that shows you the city from the water, especially magical at night.</td><td>$28 (≈ ₽2 660) (1-hour)</td><td>10:00 AM–9:00 PM</td></tr>
+<tr><td>7</td><td>Shanghai Tower</td><td>Second-tallest building in the world. The observation deck at 118th floor is dizzying and incredible.</td><td>$38</td><td>9:00 AM–10:00 PM</td></tr>
+<tr><td>8</td><td>Jade Buddha Temple</td><td>Active Buddhist temple housing two jade Buddha statues. Serene and spiritual.</td><td>$7</td><td>8:00 AM–4:30 PM</td></tr>
+<tr><td>9</td><td>Huangpu River Cruise</td><td>Boat ride that shows you the city from the water, especially magical at night.</td><td>$28(1-hour)</td><td>10:00 AM–9:00 PM</td></tr>
 <tr><td>10</td><td>Tianzifang</td><td>Artsy maze of narrow alleys filled with studios, cafes, and quirky shops. A photographer’s dream.</td><td>Free</td><td>10:00 AM–9:00 PM</td></tr>
-<tr><td>11</td><td>Shanghai Disneyland</td><td>Larger than Hong Kong’s, with unique attractions like the TRON Lightcycle Run. A full-day adventure.</td><td>$85 (≈ ₽8 075)</td><td>8:30 AM–8:30 PM</td></tr>
+<tr><td>11</td><td>Shanghai Disneyland</td><td>Larger than Hong Kong’s, with unique attractions like the TRON Lightcycle Run. A full-day adventure.</td><td>$85</td><td>8:30 AM–8:30 PM</td></tr>
 <tr><td>12</td><td>Lujiazui Financial District</td><td>Futuristic skyline with skyscrapers like the Jin Mao Tower. Best viewed from the Bund.</td><td>Free (walking)</td><td>24/7</td></tr>
-<tr><td>13</td><td>Shanghai Natural History Museum</td><td>Fascinating exhibits on dinosaurs and evolution. A hit with kids and adults alike.</td><td>$15 (≈ ₽1 425)</td><td>9:00 AM–5:15 PM (closed Mon)</td></tr>
+<tr><td>13</td><td>Shanghai Natural History Museum</td><td>Fascinating exhibits on dinosaurs and evolution. A hit with kids and adults alike.</td><td>$15</td><td>9:00 AM–5:15 PM (closed Mon)</td></tr>
 <tr><td>14</td><td>Old City (Chenghuangmiao)</td><td>Traditional market area near Yu Garden, full of snacks, souvenirs, and tea houses.</td><td>Free</td><td>9:00 AM–9:00 PM</td></tr>
 <tr><td>15</td><td>M50 Art District</td><td>Contemporary art galleries in a former textile mill. Cutting-edge and often free.</td><td>Free</td><td>10:00 AM–6:00 PM (closed Mon)</td></tr>
 </table>
 
 <h2>Getting Around</h2>
-<p>Shanghai’s public transport is a dream—efficient, cheap, and easy to navigate. The metro is my favorite way to get around. It has 16 lines covering the entire city, and a single ride costs between $0.40 (≈ ₽38) and $1.20 (≈ ₽114) depending on distance. I recommend buying a Shanghai Public Transportation Card for $3 (≈ ₽285) (refundable) and loading it with $15 (≈ ₽1 425)—it works on metro, buses, and some taxis. Buses are even cheaper at $0.30 (≈ ₽28) per ride, but they’re slower due to traffic. Taxis start at $2.50 (≈ ₽237) and add about $0.60 (≈ ₽57) per kilometer—always use the meter, and have your destination written in Chinese. Ride-hailing apps like DiDi (China’s Uber) are widely used and cost about the same as taxis. For a splurge, rent a car with a driver for $80 (≈ ₽7 600)/day—great for day trips to nearby water towns like Zhujiajiao. Avoid renting a car yourself unless you’re a very confident driver; the traffic is chaotic!</p>
+<p>Shanghai’s public transport is a dream—efficient, cheap, and easy to navigate. The metro is my favorite way to get around. It has 16 lines covering the entire city, and a single ride costs between $0and $1depending on distance. I recommend buying a Shanghai Public Transportation Card for $3(refundable) and loading it with $15—it works on metro, buses, and some taxis. Buses are even cheaper at $0per ride, but they’re slower due to traffic. Taxis start at $2and add about $1per kilometer—always use the meter, and have your destination written in Chinese. Ride-hailing apps like DiDi (China’s Uber) are widely used and cost about the same as taxis. For a splurge, rent a car with a driver for $80/day—great for day trips to nearby water towns like Zhujiajiao. Avoid renting a car yourself unless you’re a very confident driver; the traffic is chaotic!</p>
 
 <h2>Where to Eat</h2>
-<p>Shanghai’s food scene is a love letter to your taste buds. You have to try xiaolongbao (soup dumplings) at <strong>Din Tai Fung</strong>—a basket of 10 costs around $12  (≈ ₽1 140) and they’re perfection. For street food, head to <strong>Yunnan Road Food Street</strong> where you can get shengjianbao (pan-fried pork buns) for $1 (≈ ₽95) each, or jianbing (Chinese crepes) for $2.50. I always recommend <strong>Lost Heaven</strong> on the Bund for Yunnan-style dishes—a full meal for two is about $65  (≈ ₽6 175) and the ambiance is stunning. For local Shanghai cuisine, try <strong>Jesse Restaurant</strong> in the French Concession for their famous braised pork belly (around $18 (≈ ₽1 710) per dish). Budget eaters can feast at noodle shops like <strong>Lanzhou Lamian</strong> for $4 (≈ ₽380) a bowl. Fine dining at <strong>Ultraviolet by Paul Pairet</strong> is an unforgettable experience at $450 (≈ ₽42 750) per person, but book months ahead. Overall, expect to spend $10 (≈ ₽950)-$20 (≈ ₽1 900) per day on food if you’re eating local, or $40 (≈ ₽3 800)-$80 (≈ ₽7 600) if you’re hitting mid-range restaurants.</p>
+<p>Shanghai’s food scene is a love letter to your taste buds. You have to try xiaolongbao (soup dumplings) at <strong>Din Tai Fung</strong>—a basket of 10 costs around $12and they’re perfection. For street food, head to <strong>Yunnan Road Food Street</strong> where you can get shengjianbao (pan-fried pork buns) for $1each, or jianbing (Chinese crepes) for $2.50. I always recommend <strong>Lost Heaven</strong> on the Bund for Yunnan-style dishes—a full meal for two is about $65and the ambiance is stunning. For local Shanghai cuisine, try <strong>Jesse Restaurant</strong> in the French Concession for their famous braised pork belly (around $18per dish). Budget eaters can feast at noodle shops like <strong>Lanzhou Lamian</strong> for $4a bowl. Fine dining at <strong>Ultraviolet by Paul Pairet</strong> is an unforgettable experience at $450per person, but book months ahead. Overall, expect to spend $10-$20per day on food if you’re eating local, or $40-$80if you’re hitting mid-range restaurants.</p>
 
 <h2>Best Time to Visit</h2>
 <p>I’ve been to Shanghai in every season, and here’s the honest truth: spring (March to May) and autumn (September to November) are the sweet spots. March sees temperatures of 8°C–15°C (46°F–59°F) with some rain, but by April it warms to 12°C–20°C (54°F–68°F) and the cherry blossoms are out. May is perfect at 18°C–25°C (64°F–77°F). Autumn is equally lovely: September has lingering warmth (22°C–28°C / 72°F–82°F), October is crisp and sunny (15°C–22°C / 59°F–72°F), and November is cool but pleasant (10°C–17°C / 50°F–63°F). Summer (June to August) is hot and humid, with temperatures hitting 35°C (95°F) and frequent typhoons—hotel prices drop, but you’ll sweat. Winter (December to February) is cold (0°C–8°C / 32°F–46°F) and damp, but the city is less crowded and flights are cheapest. I recommend visiting in October for the best weather and the Shanghai Tourism Festival.</p>
 
 <h2>Visa & Documents</h2>
-<p>Most travelers need a visa to enter mainland China, and I always process these through a trusted tour operator to avoid headaches. A standard tourist visa (L-visa) costs around $160 (≈ ₽15 200) and takes 4-7 business days. You’ll need a valid passport with at least six months remaining, a completed application, a recent photo, and proof of accommodation and flight bookings. For a smoother experience, consider traveling to Hainan Island—it’s visa-free for up to 30 days if you go through a tour operator (I can arrange this!). Also, you must have a Health QR code via WeChat or Alipay—download these apps before you go. The QR code is required for entering many public places like malls and museums. I always tell my travelers to set this up at home; it’s a lifesaver. No other vaccinations are required, but I recommend being up-to-date on routine shots.</p>
+<p>Most travelers need a visa to enter mainland China, and I always process these through a trusted tour operator to avoid headaches. A standard tourist visa (L-visa) costs around $160and takes 4-7 business days. You’ll need a valid passport with at least six months remaining, a completed application, a recent photo, and proof of accommodation and flight bookings. For a smoother experience, consider traveling to Hainan Island—it’s visa-free for up to 30 days if you go through a tour operator (I can arrange this!). Also, you must have a Health QR code via WeChat or Alipay—download these apps before you go. The QR code is required for entering many public places like malls and museums. I always tell my travelers to set this up at home; it’s a lifesaver. No other vaccinations are required, but I recommend being up-to-date on routine shots.</p>
 
 <h2>Weekly Trip Budget</h2>
 <p>Here’s a realistic weekly budget for one person, with my 12-15% markup included to give you breathing room. Prices are in USD.</p>
 <table>
 <tr><th>Category</th><th>Budget</th><th>Mid-Range</th><th>Luxury</th></tr>
-<tr><td>Accommodation (7 nights)</td><td>$385 (≈ ₽36 575)</td><td>$1 050 (≈ ₽99 750)</td><td>$2 800 (≈ ₽266 000)</td></tr>
-<tr><td>Food (7 days)</td><td>$105 (≈ ₽9 975)</td><td>$280 (≈ ₽26 600)</td><td>$560 (≈ ₽53 200)</td></tr>
-<tr><td>Transport (metro/taxi)</td><td>$35 (≈ ₽3 325)</td><td>$70 (≈ ₽6 650)</td><td>$140 (≈ ₽13 300)</td></tr>
-<tr><td>Attractions (entry fees)</td><td>$85 (≈ ₽8 075)</td><td>$140 (≈ ₽13 300)</td><td>$210 (≈ ₽19 950)</td></tr>
-<tr><td>Miscellaneous (snacks, tips, etc.)</td><td>$50 (≈ ₽4 750)</td><td>$100 (≈ ₽9 500)</td><td>$200 (≈ ₽19 000)</td></tr>
-<tr><td><strong>Total (approx.)</strong></td><td><strong>$660 (≈ ₽62 700)</strong></td><td><strong>$1 640 (≈ ₽155 800)</strong></td><td><strong>$3 910 (≈ ₽371 450)</strong></td></tr>
+<tr><td>Accommodation (7 nights)</td><td>$385</td><td>$1 050</td><td>$2 800</td></tr>
+<tr><td>Food (7 days)</td><td>$105</td><td>$280</td><td>$560</td></tr>
+<tr><td>Transport (metro/taxi)</td><td>$35</td><td>$70</td><td>$140</td></tr>
+<tr><td>Attractions (entry fees)</td><td>$85</td><td>$140</td><td>$210</td></tr>
+<tr><td>Miscellaneous (snacks, tips, etc.)</td><td>$50</td><td>$100</td><td>$200</td></tr>
+<tr><td><strong>Total (approx.)</strong></td><td><strong>$660</strong></td><td><strong>$1 640</strong></td><td><strong>$3 910</strong></td></tr>
 </table>
-<p>These are estimates—I’ve seen budget travelers stretch $500 (≈ ₽47 500) for a week by staying in hostels and eating street food, while luxury travelers can easily spend $5 000. (≈ ₽475 000) The key is to book ahead and use the metro!</p>
+<p>These are estimates—I’ve seen budget travelers stretch $500for a week by staying in hostels and eating street food, while luxury travelers can easily spend $5 000The key is to book ahead and use the metro!</p>
 
 <h2>10 Travel Tips</h2>
 <ul>
 <li><strong>Download WeChat and Alipay before you go.</strong> China is nearly cashless, and you’ll need these apps for everything from paying at restaurants to scanning QR codes for entry. Link your credit card at home.</li>
 <li><strong>Learn a few Chinese phrases.</strong> “Ni hao” (hello), “xie xie” (thank you), and “duo shao qian?” (how much?) will earn you smiles. English is limited outside tourist areas.</li>
-<li><strong>Carry a portable charger.</strong> You’ll use your phone constantly for maps, payments, and translation. Power banks are cheap—buy one for $15. (≈ ₽1 425)</li>
-<li><strong>Beware of tap water.</strong> Always drink bottled or boiled water. I buy a 1.5-liter bottle for $0.50 (≈ ₽47) at any convenience store.</li>
+<li><strong>Carry a portable charger.</strong> You’ll use your phone constantly for maps, payments, and translation. Power banks are cheap—buy one for $15</li>
+<li><strong>Beware of tap water.</strong> Always drink bottled or boiled water. I buy a 1.5-liter bottle for $0at any convenience store.</li>
 <li><strong>Use the metro during rush hour.</strong> It’s crowded but faster than taxis. Avoid 8:00-9:00 AM and 5:00-7:00 PM if possible.</li>
 <li><strong>Dress in layers.</strong> Shanghai’s weather can change in an hour. A light jacket is your best friend, even in summer for air-conditioned malls.</li>
 <li><strong>Negotiate at markets.</strong> At places like the Pearl Market, start at 30% of the asking price. Smile and be friendly—it’s part of the fun.</li>
 <li><strong>Book attractions online in advance.</strong> Popular spots like the Shanghai Tower can sell out. I use <a href="https://tp.media/click?shmarker=736226&promo_id=3802&source_type=link&type=click&campaign_id=119&trs=tripcom" target="_blank" rel="nofollow sponsored" class="partner-link">Trip.com</a> or the official WeChat mini-programs.</li>
-<li><strong>Stay connected with a local SIM card.</strong> Buy one at the airport for $15 (≈ ₽1 425)-$25 (≈ ₽2 375) with 10GB of data. It’s a lifesaver for maps and DiDi.</li>
+<li><strong>Stay connected with a local SIM card.</strong> Buy one at the airport for $15-$25with 10GB of data. It’s a lifesaver for maps and DiDi.</li>
 <li><strong>Respect local customs.</strong> Remove shoes in temples, don’t point with your finger, and avoid discussing politics. A little courtesy goes a long way.</li>
 </ul><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
@@ -550,6 +574,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -578,6 +603,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -595,8 +621,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

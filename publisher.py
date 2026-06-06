@@ -34,41 +34,100 @@ def linkify_services(body):
             body = pattern.sub(replacement, body, count=1)
     return body
 
-PRICE_CONVERSIONS = {
-    "$": "≈ ₽{rub}", "€": "≈ ₽{rub}", "AED": "≈ ₽{rub}",
-    "฿": "≈ ₽{rub}", "THB": "≈ ₽{rub}", "₺": "≈ ₽{rub}",
-    "TRY": "≈ ₽{rub}", "EGP": "≈ ₽{rub}", "¥": "≈ ₽{rub}",
-    "CNY": "≈ ₽{rub}", "IDR": "≈ ₽{rub}",
-}
+# June 2026 approximate exchange rates (to RUB)
+RATES_TO_RUB = {"$": 95, "€": 103, "₺": 3.5, "฿": 2.7, "¥": 13.3, "AED": 25.9, "EGP": 1.9, "IDR": 0.006, "MVR": 6.2}
+
+def _clean_amount(s):
+    return s.strip().replace(",", "").replace(" ", "")
 
 def convert_prices_to_rub(body, lang="ru"):
+    """Convert raw currency amounts to RUB (RU) or USD (EN) with local currency in parentheses.
+    Skips already-converted patterns (those already containing both currencies)."""
     if lang == "ru":
-        def dollar_convert(m):
-            amt = m.group(1)
+        # RU: RUB main + (local in parentheses)
+        def _ru_convert(m):
+            amt = _clean_amount(m.group(1))
+            sym = m.group(0)[0]
             try:
-                rub = int(float(amt.replace(",", "")) * 95)
-                return f"₽{rub:,} (≈ ${amt})".replace(",", " ")
+                rate = RATES_TO_RUB.get(sym, 1)
+                rub = int(float(amt) * rate)
+                if sym == "$":
+                    return f"₽{rub:,} (${amt})".replace(",", " ")
+                elif sym == "€":
+                    return f"₽{rub:,} (€{amt})".replace(",", " ")
+                elif sym == "₺":
+                    return f"₽{rub:,} ({amt} ₺)".replace(",", " ")
+                elif sym == "฿":
+                    return f"₽{rub:,} ({amt} ฿)".replace(",", " ")
+                elif sym == "¥":
+                    return f"₽{rub:,} ({amt} ¥)".replace(",", " ")
+                else:
+                    return f"₽{rub:,} ({amt} {sym})".replace(",", " ")
             except:
                 return m.group(0)
-        body = re.sub(r'\$(\d[\d,.]*)', dollar_convert, body)
 
-        def euro_convert(m):
-            amt = m.group(1)
-            try:
-                rub = int(float(amt.replace(",", "")) * 103)
-                return f"₽{rub:,} (≈ €{amt})".replace(",", " ")
-            except:
-                return m.group(0)
-        body = re.sub(r'€(\d[\d,.]*)', euro_convert, body)
+        # Only convert if NOT already in a (parentheses) — skip pre-converted
+        for sym in ["$", "€", "₺", "฿", "¥"]:
+            escaped = "\\" + sym if sym in "₺฿¥" else sym
+            body = re.sub(r'(?<![\(\d])' + escaped + r'(\d[\d,.]*(?:\s*\d{3})*)', _ru_convert, body)
+
+        # AED/EGP/IDR/MVR with number + code format
+        for code, sym_icon in [("AED", "AED"), ("EGP", "EGP"), ("IDR", "IDR"), ("MVR", "MVR")]:
+            def _make_conv(c, si):
+                def _f(m):
+                    amt = _clean_amount(m.group(1))
+                    try:
+                        rub = int(float(amt) * RATES_TO_RUB.get(c, 1))
+                        return f"₽{rub:,} ({amt} {si})".replace(",", " ")
+                    except:
+                        return m.group(0)
+                return _f
+            body = re.sub(r'(?<![\(\d])(\d[\d,.]*(?:\s*\d{3})*)\s*' + code, _make_conv(code, sym_icon), body)
     else:
-        def dollar_add_rub(m):
-            amt = m.group(1)
+        # EN: USD main + (local in parentheses)
+        usd_rate = RATES_TO_RUB["$"]
+        def _en_convert(m):
+            amt = _clean_amount(m.group(1))
+            sym = m.group(0)[0]
             try:
-                rub = int(float(amt.replace(",", "")) * 95)
-                return f"${amt} (≈ ₽{rub:,})".replace(",", " ")
+                rub = float(amt) * RATES_TO_RUB.get(sym, 1)
+                usd = rub / usd_rate
+                if sym == "$":
+                    return f"${amt}"
+                elif sym == "€":
+                    return f"${usd:,.0f} (€{amt})".replace(",", " ")
+                elif sym == "₺":
+                    return f"${usd:,.0f} ({amt} ₺)".replace(",", " ")
+                elif sym == "฿":
+                    return f"${usd:,.0f} ({amt} ฿)".replace(",", " ")
+                elif sym == "¥":
+                    return f"${usd:,.0f} ({amt} ¥)".replace(",", " ")
+                else:
+                    return f"${usd:,.0f} ({amt} {sym})".replace(",", " ")
             except:
                 return m.group(0)
-        body = re.sub(r'\$(\d[\d,.]*)', dollar_add_rub, body)
+
+        for sym in ["$", "€", "₺", "฿", "¥"]:
+            escaped = "\\" + sym if sym in "₺฿¥" else sym
+            # For EN, skip $ if already in parentheses (pre-converted)
+            if sym == "$":
+                body = re.sub(r'(?<![\(\d])' + escaped + r'(\d[\d,.]*(?:\s*\d{3})*)', lambda m: _en_convert(m) if "₽" not in m.group(0) else m.group(0), body)
+            else:
+                body = re.sub(r'(?<![\(\d])' + escaped + r'(\d[\d,.]*(?:\s*\d{3})*)', _en_convert, body)
+
+        for code, sym_icon in [("AED", "AED"), ("EGP", "EGP"), ("IDR", "IDR"), ("MVR", "MVR")]:
+            def _make_en_conv(c, si):
+                def _f(m):
+                    amt = _clean_amount(m.group(1))
+                    try:
+                        rub = float(amt) * RATES_TO_RUB.get(c, 1)
+                        usd = rub / usd_rate
+                        return f"${usd:,.0f} ({amt} {si})".replace(",", " ")
+                    except:
+                        return m.group(0)
+                return _f
+            body = re.sub(r'(?<![\(\d])(\d[\d,.]*(?:\s*\d{3})*)\s*' + code, _make_en_conv(code, sym_icon), body)
+
     return body
 
 def inject_maldives_qr(body, country_slug):
@@ -101,52 +160,52 @@ env.globals["enumerate"] = enumerate
 
 
 COUNTRY_IMAGES = {
-    "turkey": "https://as2.ftcdn.net/jpg/08/45/68/41/1000_F_845684119_DjY0EbNBL7XLomrwnYvTEZU9LvUYfi3U.jpg",
-    "thailand": "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1200&q=80",
-    "egypt": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=1200&q=80",
-    "uae": "https://plantravel.ru/Upload/images/other/php8loD6m.jpg",
-    "indonesia": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&q=80",
-    "china": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&q=80",
-    "maldives": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
+    "turkey": "/assets/countries/turkey.webp",
+    "thailand": "/assets/countries/thailand.webp",
+    "egypt": "/assets/countries/egypt.webp",
+    "uae": "/assets/countries/uae.webp",
+    "indonesia": "/assets/countries/indonesia.webp",
+    "china": "/assets/countries/china.webp",
+    "maldives": "/assets/countries/maldives.webp",
 }
 
 CITY_IMAGES = {
-    "istanbul": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
-    "antalya": "https://youtravel.me/upload/medialibrary/73c/g4ldxc78rw7lit49arn32dfdexy36p78.jpg",
-    "alanya": "https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800&q=80",
-    "bodrum": "https://avatars.mds.yandex.net/i?id=01074de7a85624d1ae3164b00d594852_l-5319522-images-thumbs&n=13",
-    "cappadocia": "https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/173895/RfFySz3wO2UvbxBAH17Q.jpg",
-    "bangkok": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80",
-    "phuket": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80",
-    "pattaya": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&q=80",
-    "koh-samui": "https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&q=80",
-    "krabi": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80",
-    "sharm-el-sheikh": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Sharm_El_Sheikh_-_panoramio_%2811%29.jpg",
-    "hurghada": "https://avatars.mds.yandex.net/get-altay/14296560/2a000001925220f1ecd9241e93837a93b267/orig",
-    "cairo": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
-    "luxor": "https://hurghadaexcurs.com/wp-content/uploads/2024/05/EXCURSION_TO_LUXOR_2_DAYS_INDIVIDUALLY_FROM_HURGHADA_main.jpg",
-    "marsa-alam": "https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80",
-    "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
-    "abu-dhabi": "https://ic.pics.livejournal.com/pantv/14908973/12182338/12182338_original.jpg",
-    "sharjah": "https://i.pinimg.com/originals/b9/a2/23/b9a223075cf4d19a0c15c66dfaedac01.jpg",
-    "ras-al-khaimah": "https://fs.tonkosti.ru/sized/c800x800/8d/ut/8dutekrq5hwc0kwgw4gs4wooc.jpg",
-    "fujairah": "https://fs.tonkosti.ru/tonkosti/table_img/g142/9d9d/266410251.jpg",
-    "ubud": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
-    "kuta": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
-    "seminyak": "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&q=80",
-    "canggu": "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&q=80",
-    "nusa-dua": "https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&q=80",
-    "sanya": "https://avatars.mds.yandex.net/get-altay/6322664/2a000001907e422c5f8766638ecbd3745e61/orig",
-    "haikou": "https://russian.cgtn.com/news/2025-09-30/1972981899919007745/b0142e6b-dec8-41a1-b227-e290b3f07083.png",
-    "beijing": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
-    "shanghai": "https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=800&q=80",
-    "xian": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80",
-    "male": "https://cs.pikabu.ru/post_img/big/2013/03/30/2/1364602604_1624085555.jpg",
-    "hulhumale": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/70683603.jpg?k=a299869c220804e8410738b0afa5f166be86303ebfda1b3b989e7fb65128a3c5&o=",
-    "maafushi": "https://vectorme.ru/wp-content/uploads/2023/03/ostrov-maafushi-2048x1091.png",
-    "dhigurah": "https://i.ytimg.com/vi/p6XxR6fn8xA/maxresdefault.jpg",
-    "thulusdhoo": "https://www.hotels-maldives.net/data/Photos/OriginalPhoto/7901/790145/790145394.JPEG",
-    "resort-islands": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
+    "istanbul": "/assets/cities/istanbul.webp",
+    "antalya": "/assets/cities/antalya.webp",
+    "alanya": "/assets/cities/alanya.webp",
+    "bodrum": "/assets/cities/bodrum.webp",
+    "cappadocia": "/assets/cities/cappadocia.webp",
+    "bangkok": "/assets/cities/bangkok.webp",
+    "phuket": "/assets/cities/phuket.webp",
+    "pattaya": "/assets/cities/pattaya.webp",
+    "koh-samui": "/assets/cities/koh-samui.webp",
+    "krabi": "/assets/cities/krabi.webp",
+    "sharm-el-sheikh": "/assets/cities/sharm-el-sheikh.webp",
+    "hurghada": "/assets/cities/hurghada.webp",
+    "cairo": "/assets/cities/cairo.webp",
+    "luxor": "/assets/cities/luxor.webp",
+    "marsa-alam": "/assets/cities/marsa-alam.webp",
+    "dubai": "/assets/cities/dubai.webp",
+    "abu-dhabi": "/assets/cities/abu-dhabi.webp",
+    "sharjah": "/assets/cities/sharjah.webp",
+    "ras-al-khaimah": "/assets/cities/ras-al-khaimah.webp",
+    "fujairah": "/assets/cities/fujairah.webp",
+    "ubud": "/assets/cities/ubud.webp",
+    "kuta": "/assets/cities/kuta.webp",
+    "seminyak": "/assets/cities/seminyak.webp",
+    "canggu": "/assets/cities/canggu.webp",
+    "nusa-dua": "/assets/cities/nusa-dua.webp",
+    "sanya": "/assets/cities/sanya.webp",
+    "haikou": "/assets/cities/haikou.webp",
+    "beijing": "/assets/cities/beijing.webp",
+    "shanghai": "/assets/cities/shanghai.webp",
+    "xian": "/assets/cities/xian.webp",
+    "male": "/assets/cities/male.webp",
+    "hulhumale": "/assets/cities/hulhumale.webp",
+    "maafushi": "/assets/cities/maafushi.webp",
+    "dhigurah": "/assets/cities/dhigurah.webp",
+    "thulusdhoo": "/assets/cities/thulusdhoo.webp",
+    "resort-islands": "/assets/cities/resort-islands.webp",
 }
 
 

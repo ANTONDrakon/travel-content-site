@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Beijing 2026</title>
     <meta name="description" content="15 Best Things to Do in Beijing 2026 Beijing isn’t just a city—it’s a living, breathing tapestry of ancient dynasties and futuristic skylines. I’ve sent over...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/beijing-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/china/beijing-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Beijing 2026">
     <meta property="og:description" content="15 Best Things to Do in Beijing 2026 Beijing isn’t just a city—it’s a living, breathing tapestry of ancient dynasties and futuristic skylines. I’ve sent over...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/china/beijing-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/china/beijing-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/beijing.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Beijing 2026</div>
@@ -363,32 +387,31 @@
 <p>Beijing isn’t just a city—it’s a living, breathing tapestry of ancient dynasties and futuristic skylines. I’ve sent over 300 travelers here, and every single one returns with a story that lingers. There’s something magical about standing where emperors once ruled, or tasting street food that’s been perfected over centuries. In 2026, Beijing is more accessible and vibrant than ever, with new exhibitions, cleaner air, and easier transport. Let me take you through the absolute must-dos, the hidden gems, and the practical hacks that’ll make your trip unforgettable. Trust me, you’ll want to bookmark this.</p>
 
 <h2>15 Best Attractions in Beijing</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <p>I’ve curated these based on what my past travelers loved most—mix of iconic and offbeat. Prices are current for 2026, marked up slightly to account for booking fees and seasonal fluctuations (I always round up to save you surprises).</p>
 
 <h3>1. The Forbidden City</h3>
 <p>This is the heart of imperial China—a sprawling palace complex where 24 emperors once lived. Walking through the Gate of Heavenly Peace, you’ll feel the weight of history in every courtyard and carved dragon. I recommend spending at least three hours here; the Hall of Supreme Harmony alone will leave you awestruck. Book your ticket online at least a week ahead—summer sells out fast.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥85 (peak season), ¥55 (low season) – <em>I always suggest the ¥85 pass for full access</em></li>
+<li><strong>Ticket Price:</strong> $12 (85 ¥)(peak season), $8 (55 ¥)(low season) – <em>I always suggest the $12 (85 ¥)pass for full access</em></li>
 <li><strong>Hours:</strong> 8:30 AM – 5:00 PM (closed Mondays)</li>
 <li><strong>How to Get There:</strong> Take Subway Line 1 to Tiananmen East or West station, then walk 5 minutes</li>
-<li><strong>Tip:</strong> Rent an audio guide (¥40) or join a small group tour—otherwise, you’ll miss the stories behind the walls</li>
+<li><strong>Tip:</strong> Rent an audio guide ($6 (40 ¥)) or join a small group tour—otherwise, you’ll miss the stories behind the walls</li>
 </ul>
 
 <h3>2. The Great Wall at Mutianyu</h3>
 <p>Of all the Wall sections, Mutianyu is my personal favorite—less crowded than Badaling, with lush forest views and restored watchtowers. The cable car ride up gives you a bird’s-eye perspective that’s pure poetry. I’ve seen travelers tear up here; it’s that humbling. Go early—before 9 AM—to have the wall almost to yourself.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥60 (including shuttle bus) – cable car round trip ¥120</li>
+<li><strong>Ticket Price:</strong> $8 (60 ¥)(including shuttle bus) – cable car round trip $17 (120 ¥)</li>
 <li><strong>Hours:</strong> 7:30 AM – 5:30 PM (summer), 8:00 AM – 4:30 PM (winter)</li>
 <li><strong>How to Get There:</strong> Bus 916 from Dongzhimen Station (2 hours), or book a private car (I recommend this for convenience)</li>
-<li><strong>Tip:</strong> Take the toboggan slide down—it’s a thrilling 10-minute ride through the trees (¥80 extra)</li>
+<li><strong>Tip:</strong> Take the toboggan slide down—it’s a thrilling 10-minute ride through the trees ($11 (80 ¥)extra)</li>
 </ul>
 
 <h3>3. Temple of Heaven</h3>
 <p>This is where Ming and Qing emperors prayed for good harvests—and the architecture is divine. The circular Hall of Prayer for Good Harvests sits on a three-tiered marble terrace, and the acoustics are so perfect you can hear a whisper from 50 meters away. I love visiting in the morning when locals practice tai chi in the surrounding park—it’s a serene slice of Beijing life. The complex is huge, so wear comfy shoes.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥35 (park only), ¥60 (full access with halls)</li>
+<li><strong>Ticket Price:</strong> $5 (35 ¥)(park only), $8 (60 ¥)(full access with halls)</li>
 <li><strong>Hours:</strong> 6:00 AM – 9:00 PM (park), 8:00 AM – 5:30 PM (halls)</li>
 <li><strong>How to Get There:</strong> Subway Line 5 to Tiantandongmen Station, Exit A</li>
 <li><strong>Tip:</strong> Buy the full access ticket—the halls are the real draw</li>
@@ -397,7 +420,7 @@
 <h3>4. Summer Palace</h3>
 <p>An imperial escape from the summer heat, this lake-and-palace complex is a masterpiece of landscape design. The Long Corridor, with its 14,000 painted scenes, is a walk through Chinese mythology. I always tell friends to rent a paddleboat on Kunming Lake—it’s romantic and gives you the best views of the Tower of Buddhist Incense. Plan for a half-day here; it’s easy to lose time in its beauty.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥35 (winter), ¥60 (summer) – combined ticket ¥100 (includes all gardens)</li>
+<li><strong>Ticket Price:</strong> $5 (35 ¥)(winter), $8 (60 ¥)(summer) – combined ticket $14 (100 ¥)(includes all gardens)</li>
 <li><strong>Hours:</strong> 6:30 AM – 6:00 PM (summer), 7:00 AM – 5:00 PM (winter)</li>
 <li><strong>How to Get There:</strong> Subway Line 4 to Beigongmen Station, then walk 10 minutes</li>
 <li><strong>Tip:</strong> Enter through the East Gate—it’s less crowded and leads to the best sights</li>
@@ -424,7 +447,7 @@
 <h3>7. Jingshan Park</h3>
 <p>For the best panoramic view of the Forbidden City, climb the hill at Jingshan Park. The 15-minute ascent is worth every step—you’ll see the golden roofs stretch to the horizon. I’ve taken dozens of sunset photos here, and they’re always the envy of my Instagram. It’s a quick stop, but a must for photographers.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥2 (yes, really)</li>
+<li><strong>Ticket Price:</strong> $0 (2 ¥)(yes, really)</li>
 <li><strong>Hours:</strong> 6:30 AM – 8:00 PM (summer), 6:30 AM – 7:00 PM (winter)</li>
 <li><strong>How to Get There:</strong> Walk 5 minutes north from the Forbidden City’s Gate of Divine Might</li>
 <li><strong>Tip:</strong> Go 30 minutes before sunset for golden hour magic</li>
@@ -442,7 +465,7 @@
 <h3>9. Beijing Zoo & Panda House</h3>
 <p>You can’t come to Beijing without seeing the giant pandas—they’re the city’s unofficial mascots. The zoo is large, but the Panda House is the star. I’ve watched them munch bamboo for an hour; it’s oddly meditative. The zoo also has a lovely aquarium, but skip it if you’re short on time.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥25 (zoo), ¥50 (including panda house and aquarium)</li>
+<li><strong>Ticket Price:</strong> $4 (25 ¥)(zoo), $7 (50 ¥)(including panda house and aquarium)</li>
 <li><strong>Hours:</strong> 7:30 AM – 6:00 PM (summer), 7:30 AM – 5:00 PM (winter)</li>
 <li><strong>How to Get There:</strong> Subway Line 4 to Beijing Zoo Station</li>
 <li><strong>Tip:</strong> Visit at feeding time (9 AM or 3 PM)—the pandas are most active then</li>
@@ -451,7 +474,7 @@
 <h3>10. 798 Art District</h3>
 <p>This former factory complex is now Beijing’s edgy art hub—filled with galleries, murals, and avant-garde installations. I love the contrast of industrial pipes with contemporary art. It’s a great spot for a lazy afternoon, with cool cafes and bookstores. Don’t miss the UCCA Center for Contemporary Art—it’s the anchor.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Free (galleries may charge ¥20-¥100 each)</li>
+<li><strong>Ticket Price:</strong> Free (galleries may charge $3 (20 ¥)-$14 (100 ¥)each)</li>
 <li><strong>Hours:</strong> 10:00 AM – 6:00 PM (most galleries closed Mondays)</li>
 <li><strong>How to Get There:</strong> Subway Line 14 to Jiangtai Station, then walk 15 minutes</li>
 <li><strong>Tip:</strong> Wear your best outfit—this is prime photo-op territory</li>
@@ -460,16 +483,16 @@
 <h3>11. Lama Temple (Yonghe Temple)</h3>
 <p>Beijing’s most active Buddhist temple is a sensory feast—incense smoke, chanting monks, and a 26-meter-high statue of Maitreya Buddha carved from a single sandalwood tree. The architecture blends Han, Tibetan, and Mongolian styles. I always feel a deep calm here. Dress modestly—cover your shoulders and knees.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥35</li>
+<li><strong>Ticket Price:</strong> $5 (35 ¥)</li>
 <li><strong>Hours:</strong> 9:00 AM – 4:30 PM</li>
 <li><strong>How to Get There:</strong> Subway Line 2 to Yonghegong Station, Exit C</li>
 <li><strong>Tip:</strong> Arrive at opening time to avoid tour groups</li>
 </ul>
 
 <h3>12. Beihai Park</h3>
-<p>A royal garden from the Liao dynasty, Beihai Park is a serene oasis with a white dagoba perched on an island. I love walking the lakeside path, especially in autumn when the willow leaves turn golden. It’s less crowded than the Summer Palace but equally beautiful. Rent a paddleboat for ¥60 per hour—it’s worth it.</p>
+<p>A royal garden from the Liao dynasty, Beihai Park is a serene oasis with a white dagoba perched on an island. I love walking the lakeside path, especially in autumn when the willow leaves turn golden. It’s less crowded than the Summer Palace but equally beautiful. Rent a paddleboat for $8 (60 ¥)per hour—it’s worth it.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥20 (park), ¥30 (combined with dagoba)</li>
+<li><strong>Ticket Price:</strong> $3 (20 ¥)(park), $4 (30 ¥)(combined with dagoba)</li>
 <li><strong>Hours:</strong> 6:30 AM – 8:00 PM (summer), 6:30 AM – 7:00 PM (winter)</li>
 <li><strong>How to Get There:</strong> Subway Line 6 to Beihai North Station</li>
 <li><strong>Tip:</strong> Combine with a visit to the nearby hutongs for a full morning</li>
@@ -478,7 +501,7 @@
 <h3>13. Olympic Park (Bird’s Nest & Water Cube)</h3>
 <p>The 2008 Olympics left Beijing with these iconic structures—the Bird’s Nest stadium and the Water Cube aquatics center. You can walk inside both, but I actually prefer the night view when they’re lit up in neon colors. It’s a bit out of the way, but a quick subway ride makes it easy.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥100 (Bird’s Nest), ¥60 (Water Cube) – combo ¥130</li>
+<li><strong>Ticket Price:</strong> $14 (100 ¥)(Bird’s Nest), $8 (60 ¥)(Water Cube) – combo $18 (130 ¥)</li>
 <li><strong>Hours:</strong> 9:00 AM – 9:00 PM</li>
 <li><strong>How to Get There:</strong> Subway Line 8 to Olympic Sports Center Station</li>
 <li><strong>Tip:</strong> Go after 7 PM for the light show—it’s spectacular</li>
@@ -487,7 +510,7 @@
 <h3>14. Fragrant Hills Park (Xiangshan)</h3>
 <p>If you’re here in autumn (October-November), this is non-negotiable—the hills explode in red and orange maple leaves. It’s a 45-minute climb to the top, but there’s a cable car if you’re lazy (like me sometimes). The view over Beijing is stunning on a clear day. Bring a picnic; it’s a local tradition.</p>
 <ul>
-<li><strong>Ticket Price:</strong> ¥15 (peak season), ¥10 (off-peak) – cable car ¥60 one way</li>
+<li><strong>Ticket Price:</strong> $2 (15 ¥)(peak season), $1 (10 ¥)(off-peak) – cable car $8 (60 ¥)one way</li>
 <li><strong>Hours:</strong> 6:00 AM – 7:30 PM (summer), 6:00 AM – 6:30 PM (winter)</li>
 <li><strong>How to Get There:</strong> Bus 563 from the Summer Palace or Subway Line 10 to Bagou, then bus</li>
 <li><strong>Tip:</strong> Weekdays are best—weekends are packed with leaf-peepers</li>
@@ -620,6 +643,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -648,6 +672,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -665,8 +690,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

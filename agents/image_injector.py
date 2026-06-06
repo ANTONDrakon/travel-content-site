@@ -1,96 +1,149 @@
+"""Inject real hotel/attraction images with carousels into article bodies."""
 import re
+from agents.hotel_image_agent import HotelPhotoAgent
 
-HOTEL_IMAGES = {
-    "Four Seasons": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-    "Ritz Carlton": "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",
-    "Shangri-La": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
-    "Hilton": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
-    "Marriott": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
-    "Kempinski": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
-    "InterContinental": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
-    "Hyatt": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
-    "Sheraton": "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80",
-    "Radisson": "https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80",
-    "Movenpick": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
-    "Sofitel": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    "JW Marriott": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
-    "Fairmont": "https://images.unsplash.com/photo-1549638441-b787d2e11f14?w=800&q=80",
-    "St Regis": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
-    "W Hotel": "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80",
-    "Mandarin Oriental": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
-    "Banyan Tree": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
-    "Anantara": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
-    "Orient": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
-}
+_hotel_agent = HotelPhotoAgent()
 
-GENERIC_HOTEL_IMAGES = [
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
-    "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",
-    "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
-    "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
-    "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80",
+KNOWN_HOTEL_BRANDS = [
+    "Four Seasons", "Ritz-Carlton", "Ritz Carlton", "Shangri-La", "Shangri La",
+    "Hilton", "Marriott", "JW Marriott", "Kempinski", "InterContinental",
+    "Intercontinental", "Hyatt", "Sheraton", "Radisson", "Movenpick",
+    "Sofitel", "Fairmont", "St Regis", "St. Regis", "W Hotel", "W Hotels",
+    "Mandarin Oriental", "Banyan Tree", "Anantara", "Peninsula", "Orient",
+    "Conrad", "Waldorf", "Rosewood", "Six Senses", "Aman", "Como",
+    "Park Hyatt", "Grand Hyatt", "Renaissance", "Le Meridien",
+    "Swissotel", "Raffles", "Novotel", "Holiday Inn", "Pullman",
+    "Steigenberger", "Rixos", "Jaz", "Oberoi", "Mulia", "One&Only",
+    "Cinnamon", "OZEN", "Pickalbatros", "Capella", "Amari", "RedDoorz",
+    "Grand Inna", "Amnaya", "Padma", "Amaris", "Solymar", "Hotel Jen",
+    "Kaani", "Grandmas", "Wanda", "Zizhu", "Centre Point", "Lub d",
+    "Niras", "Samann", "Chaweng Regent", "Krabi Resort", "Ramses",
+    "Nefertiti", "Sunrise", "Cleopatra", "Bob Marley", "Pak-Up",
+    "Puri Agung", "Kuta Paradiso", "Coral", "Arena", "Marukab",
+    "Beehive", "Baan", "Anyavee", "Haiyi", "Jinjiang", "Metropark",
+    "Travelotel", "Dosso Dossi", "Cheers", "Sura", "Pyramids",
+    "Yalong", "Dadonghai", "Blue Ocean", "Sea Breeze", "Bophut",
+    "Lamai", "Lika", "Coco Palm", "Sun Tan", "White Shell",
+    "Relax Beach", "Ocean Breeze", "Ocean Grand", "Beach Grand",
 ]
 
-RESORT_IMAGE = "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80"
-BEACH_HOTEL = "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80"
-BUDGET_HOTEL = "https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80"
-LUXURY_HOTEL = "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80"
-
-
-def find_hotel_image(hotel_name):
-    for name, url in HOTEL_IMAGES.items():
-        if name.lower() in hotel_name.lower():
-            return url
-    return None
+def build_carousel_html(photos, hotel_name):
+    """Build image carousel from photo dicts."""
+    if not photos:
+        return ""
+    photos = photos[:3]
+    if len(photos) == 1:
+        return (
+            f'<div style="margin:16px 0;">'
+            f'<img src="{photos[0]["url"]}" alt="{hotel_name}" loading="lazy" '
+            f'style="width:100%;max-height:420px;object-fit:cover;border-radius:12px;">'
+            f'<p style="font-size:12px;color:var(--meta);margin-top:6px;text-align:center;">{hotel_name}</p></div>'
+        )
+    carousel_id = f"hc_{abs(hash(hotel_name)) % 1000000}"
+    html = [f'<div id="{carousel_id}" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">']
+    for i, p in enumerate(photos):
+        d = "block" if i == 0 else "none"
+        html.append(f'<div class="hc-slide" style="display:{d};"><img src="{p["url"]}" alt="{hotel_name} - {i+1}" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>')
+    html.append(f'<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">')
+    for i in range(len(photos)):
+        bg = "var(--vermillion)" if i == 0 else "rgba(255,255,255,0.6)"
+        html.append(f'<button onclick="var s=document.querySelectorAll(\'#{carousel_id} .hc-slide\');var d=document.querySelectorAll(\'#{carousel_id} .hc-dot\');for(var j=0;j<s.length;j++){{s[j].style.display=j=={i}?\'block\':\'none\';d[j].style.background=j=={i}?\'var(--vermillion)\':\'rgba(255,255,255,0.6)\'}}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:{bg};border:none;cursor:pointer;padding:0;" aria-label="Photo {i+1}"></button>')
+    html.append(f'</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">{hotel_name} &bull; {len(photos)} photos</p></div>')
+    return '\n'.join(html)
 
 
 def inject_hotel_images(body):
+    """Inject hotel images into article body with real photos and carousels."""
     lines = body.split("\n")
     result = []
     hotel_count = 0
+    used_brands = set()
 
     for line in lines:
         result.append(line)
-        hotel_match = re.search(r"(?:отель|Hotel|Resort|отеля)\s+[\"«]?([A-ZА-Я][A-Za-zА-Яа-я\s\-']+?)[\"»]?", line, re.IGNORECASE)
-        if hotel_match:
-            hotel_name = hotel_match.group(1).strip()
-            img_url = find_hotel_image(hotel_name)
-            if not img_url:
-                if "люкс" in line.lower() or "luxury" in line.lower() or "5 звезд" in line.lower() or "5 star" in line.lower():
-                    img_url = LUXURY_HOTEL
-                elif "бюджет" in line.lower() or "budget" in line.lower() or "хостел" in line.lower() or "hostel" in line.lower():
-                    img_url = BUDGET_HOTEL
-                elif "пляж" in line.lower() or "beach" in line.lower() or "курорт" in line.lower() or "resort" in line.lower():
-                    img_url = RESORT_IMAGE
-                else:
-                    img_url = GENERIC_HOTEL_IMAGES[hotel_count % len(GENERIC_HOTEL_IMAGES)]
-                    hotel_count += 1
-            if img_url and "https://" not in line:
-                result.append(f'<img src="{img_url}" alt="{hotel_name}" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:12px 0;">')
+
+        if hotel_count >= 10:
+            continue
+
+        if "<img" in line or "carousel" in line:
+            continue
+
+        hotel_name = None
+
+        # Pattern 1: <h3> N. Hotel Name (category) </h3>
+        m = re.search(r'<h3[^>]*>\s*(?:\d+\.\s*)?([A-ZА-Я][A-Za-zА-Яа-я\s&\-\'\.]{4,60}?)\s*(?:\([^)]*\))?\s*</h3>', line, re.IGNORECASE)
+        if m:
+            hotel_name = m.group(1).strip()
+
+        # Pattern 2: Known hotel brands
+        if not hotel_name:
+            for brand in KNOWN_HOTEL_BRANDS:
+                if brand.lower() in line.lower() and brand.lower() not in used_brands:
+                    # Find the broader context of the name
+                    idx = line.lower().find(brand.lower())
+                    end_idx = idx + len(brand)
+                    # Extend to include rest of hotel name (e.g., "Hilton Sanya Resort & Spa")
+                    while end_idx < len(line) and line[end_idx] not in '<([':
+                        end_idx += 1
+                    hotel_name = line[idx:end_idx].strip()
+                    used_brands.add(brand.lower())
+                    break
+
+        if hotel_name and len(hotel_name) >= 3:
+            photos = _hotel_agent.find_photos(hotel_name, max_photos=3)
+            if photos:
+                carousel = build_carousel_html(photos, hotel_name)
+                result.append(carousel)
+                hotel_count += 1
 
     return "\n".join(result)
 
 
 def inject_attraction_images(body):
-    markers = [
-        (r"(достопримечательност\w+|attraction\w+|must.?see|must.?visit)", "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80"),
-        (r"(храм|temple|мечеть|mosque|церковь|church)", "https://images.unsplash.com/photo-1548013146-72479767bada?w=800&q=80"),
-        (r"(пляж|beach|побережье|coastline)", "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"),
-        (r"(рынок|market|bazaar|bazar)", "https://images.unsplash.com/photo-1555529771-835f59fc5efe?w=800&q=80"),
-        (r"(музей|museum)", "https://images.unsplash.com/photo-1565254973041-83c5f334d19e?w=800&q=80"),
-        (r"(гора|mountain|вулкан|volcano)", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"),
-    ]
+    """Inject attraction images based on H2 heading categories."""
+    category_map = {
+        (r'храм|temple|мечеть|mosque|церковь|church|собор|cathedral|монастырь|monastery',
+         "https://images.unsplash.com/photo-1548013146-72479767bada?w=800&q=80"),
+        (r'пляж|beach|побережье|coast|бухта|bay|лагун|lago',
+         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"),
+        (r'рынок|market|bazaar|базар|торгов|shop|mall|grand bazaar',
+         "https://images.unsplash.com/photo-1555529771-835f59fc5efe?w=800&q=80"),
+        (r'музей|museum|галере|gallery|выстав|exhibit',
+         "https://images.unsplash.com/photo-1565254973041-83c5f334d19e?w=800&q=80"),
+        (r'гора|mountain|вулкан|volcano|пик|peak|восхож|trek|hiking',
+         "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"),
+        (r'дворец|palace|замок|castle|крепость|fortress',
+         "https://images.unsplash.com/photo-1548013146-72479767bada?w=800&q=80"),
+        (r'парк|park|сад|garden|национ|nation|заповед|reserve',
+         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80"),
+        (r'дайв|dive|снорк|snorkel|коралл|coral|риф|reef',
+         "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"),
+        (r'ресторан|restaurant|кафе|cafe|еда|food|кухня|cuisine|гастро|gastro',
+         "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"),
+        (r'спа|spa|массаж|massage|йога|yoga|оздоров|wellness',
+         "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80"),
+    }
+
     lines = body.split("\n")
     result = []
     img_inserted = 0
+    last_h2_pos = -1
 
     for i, line in enumerate(lines):
         result.append(line)
-        if img_inserted < 4 and "<h2>" in line:
-            for pattern, img_url in markers:
-                if re.search(pattern, line, re.IGNORECASE):
-                    result.append(f'<img src="{img_url}" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">')
+
+        if img_inserted >= 6:
+            continue
+
+        if re.search(r'<h2[^>]*>', line, re.IGNORECASE) and i > last_h2_pos:
+            for patterns, img_url in category_map:
+                if re.search(patterns, line, re.IGNORECASE):
+                    result.append(
+                        f'<img src="{img_url}" alt="" loading="lazy" '
+                        f'style="width:100%;max-height:400px;object-fit:cover;border-radius:12px;margin:16px 0;">'
+                    )
                     img_inserted += 1
+                    last_h2_pos = i
                     break
 
     return "\n".join(result)

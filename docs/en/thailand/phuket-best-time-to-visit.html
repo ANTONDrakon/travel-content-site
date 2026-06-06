@@ -6,7 +6,7 @@
     <title>Best Time to Visit Phuket 2026: Seasons &amp; Weather</title>
     <meta name="description" content="Best Time to Visit Phuket 2026: Seasons &amp; Weather Phuket, Thailand’s largest island, is a year-round tropical destination, but its weather is shaped by two d...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/phuket-best-time-to-visit.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/thailand/phuket-kogda-luchshe-ekhat.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-best-time-to-visit.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-best-time-to-visit.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Best Time to Visit Phuket 2026: Seasons &amp; Weather">
     <meta property="og:description" content="Best Time to Visit Phuket 2026: Seasons &amp; Weather Phuket, Thailand’s largest island, is a year-round tropical destination, but its weather is shaped by two d...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/thailand/phuket-best-time-to-visit.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/thailand/phuket-best-time-to-visit.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/phuket.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Best Time to Visit Phuket 2026: Seasons &amp; Weather</div>
@@ -399,7 +423,7 @@
 
 <p>Phuket’s high season runs from mid-November to April, coinciding with the northeast monsoon. During this period, the weather is characterized by low humidity, clear blue skies, and calm seas. Average daily sunshine is 8–10 hours, and rainfall is scarce—February averages just 20 mm, making it the driest month.</p>
 
-<p>This is the peak period for tourism. Hotel occupancy rates exceed 90% in December and January. Prices for mid-range hotels (3–4 star) typically range from $80 (≈ ₽7 600) to $150 (≈ ₽14 250) per night in high season, compared to $40 (≈ ₽3 800)–$80 (≈ ₽7 600) in low season. Luxury resorts like the Amari Phuket or The Shore at Katathani can exceed $300 (≈ ₽28 500) per night. Flights from major hubs like Bangkok, Singapore, or London also spike—round-trip economy tickets from Europe average $700 (≈ ₽66 500)–$900 (≈ ₽85 500) in high season versus $400 (≈ ₽38 000)–$600 (≈ ₽57 000) in low season.</p>
+<p>This is the peak period for tourism. Hotel occupancy rates exceed 90% in December and January. Prices for mid-range hotels (3–4 star) typically range from $80to $150per night in high season, compared to $40–$80in low season. Luxury resorts like the Amari Phuket or The Shore at Katathani can exceed $300per night. Flights from major hubs like Bangkok, Singapore, or London also spike—round-trip economy tickets from Europe average $700–$900in high season versus $400–$600in low season.</p>
 
 <p>Why visit? The conditions are perfect for beach activities, island hopping, and snorkeling. Popular spots like Patong, Kata, and Karon beaches are bustling with energy. However, expect crowds at major attractions like the Big Buddha, Phi Phi Islands, and Phang Nga Bay. <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> accommodations and tours at least 2–3 months in advance is strongly recommended.</p>
 
@@ -411,7 +435,7 @@
 
 <p>Pros:</p>
 <ul>
-  <li>Significant cost savings: hotels offer discounts of 30–50% off high-season rates. A 4-star resort in Patong may cost $50 (≈ ₽4 750)–$70 (≈ ₽6 650) per night.</li>
+  <li>Significant cost savings: hotels offer discounts of 30–50% off high-season rates. A 4-star resort in Patong may cost $50–$70per night.</li>
   <li>Fewer tourists: popular beaches like Karon and Kata are less crowded, offering a more relaxed experience.</li>
   <li>Lush greenery: the island’s interior is vibrant and verdant, ideal for photography.</li>
 </ul>
@@ -423,7 +447,7 @@
   <li>Mosquitoes: higher rainfall increases insect activity, particularly near rainforests and mangroves.</li>
 </ul>
 
-<p>Prices for flights and tours are at their lowest. For example, a round-trip flight from Bangkok to Phuket in September can be as cheap as $60 (≈ ₽5 700)–$80. (≈ ₽7 600) If you’re on a tight budget and don’t mind occasional rain, low season offers excellent value.</p>
+<p>Prices for flights and tours are at their lowest. For example, a round-trip flight from Bangkok to Phuket in September can be as cheap as $60–$80If you’re on a tight budget and don’t mind occasional rain, low season offers excellent value.</p>
 
 <h2>Best Time for Beach Vacation</h2>
 
@@ -566,6 +590,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -594,6 +619,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -611,8 +637,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="description" content="Что посмотреть в Мале: 15 лучших мест 2026 Вы когда-нибудь задумывались, что за блестящим фасадом мальдивских курортов скрывается настоящая жемчужина — столи...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/male-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-dostoprimechatelnosti.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-things-to-do.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/maldives/male-things-to-do.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/male-dostoprimechatelnosti.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Что посмотреть в Мале: 15 лучших мест 2026">
     <meta property="og:description" content="Что посмотреть в Мале: 15 лучших мест 2026 Вы когда-нибудь задумывались, что за блестящим фасадом мальдивских курортов скрывается настоящая жемчужина — столи...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/maldives/male-dostoprimechatelnosti.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/maldives/male-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://cs.pikabu.ru/post_img/big/2013/03/30/2/1364602604_1624085555.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/male.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Что посмотреть в Мале: 15 лучших мест 2026</div>
@@ -363,22 +387,21 @@
 <p>Вы когда-нибудь задумывались, что за блестящим фасадом мальдивских курортов скрывается настоящая жемчужина — столица Мале? Я, Валентина, объездила полмира, но именно этот крошечный, но невероятно живой город заставил мое сердце биться чаще. Мале — это не просто пересадочный пункт на пути к овервотер-виллам. Это место, где история дышит сквозь узкие улочки, ароматы специй смешиваются с соленым бризом Индийского океана, а древние мечети соседствуют с современными небоскребами. В 2026 году Мале стал еще более доступным и гостеприимным, и я хочу, чтобы вы влюбились в него так же, как я. Поверьте, пропустить его — значит не увидеть истинную душу Мальдив. Давайте вместе составим идеальный маршрут по 15 лучшим местам, которые подарят вам незабываемые эмоции!</p>
 
 <h2>15 лучших достопримечательностей</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 <p>Я отобрала для вас места, которые лично проверила и обожаю. Каждое из них — это маленькая история, которую стоит прожить. Держите ручку и блокнот, будет много полезного!</p>
 
 <h3>1. Национальный музей Мальдив (Maldives National Museum)</h3>
 <p>Это сердце мальдивской истории, расположенное в парке Султана. Здесь собраны древние артефакты, от коралловых резных фигур до оружия султанов, которые рассказывают о былом величии архипелага. Я обожаю этот музей за его атмосферу — тихую, задумчивую, словно вы заглядываете в сундук с сокровищами. Обязательно задержитесь у трона султана — он просто гипнотизирует!</p>
 <ul>
-<li><strong>Цена билета:</strong> Взрослый — 115 MVR (~₽712 (≈ $7.50)), детский — 50 MVR (~₽308 (≈ $3.25)). Я советую брать билеты на месте — очереди небольшие.</li>
+<li><strong>Цена билета:</strong> Взрослый —₽713 (115 MVR) (~₽712 ($8)), детский —₽310 (50 MVR) (~₽308 ($3)). Я советую брать билеты на месте — очереди небольшие.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 09:00 до 17:00, пятница — выходной (до 14:00).</li>
-<li><strong>Как добраться:</strong> Из любого района Мале пешком 10-15 минут до парка Султана. Такси из аэропорта — 75 MVR (~₽475 (≈ $5)).</li>
-<li><strong>Совет:</strong> Приходите к открытию, чтобы избежать жары и толп. Я рекомендую взять аудиогид за 50 MVR (~₽308 (≈ $3.25)) — он отлично дополняет экспозицию.</li>
+<li><strong>Как добраться:</strong> Из любого района Мале пешком 10-15 минут до парка Султана. Такси из аэропорта —₽465 (75 MVR) (~₽475 ($5)).</li>
+<li><strong>Совет:</strong> Приходите к открытию, чтобы избежать жары и толп. Я рекомендую взять аудиогид за₽310 (50 MVR) (~₽308 ($3)) — он отлично дополняет экспозицию.</li>
 </ul>
 
 <h3>2. Старая пятничная мечеть (Hukuru Miskiy)</h3>
 <p>Построенная в 1658 году из кораллового камня, эта мечеть — настоящий шедевр исламской архитектуры. Резные узоры на стенах, древние надписи и спокойствие внутри создают ощущение, что вы перенеслись на 400 лет назад. Я каждый раз замираю у входа, рассматривая детали — это ручная работа, которую невозможно повторить.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно, но приветствуется пожертвование (около 20 MVR / ₽123 (≈ $1.30)).</li>
+<li><strong>Цена билета:</strong> Бесплатно, но приветствуется пожертвование (около₽124 (20 MVR) / ₽123 ($1)).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 09:00 до 12:00 и с 14:00 до 17:00, кроме времени молитв.</li>
 <li><strong>Как добраться:</strong> Рядом с парком Султана, 5 минут пешком от National Museum.</li>
 <li><strong>Совет:</strong> Одевайтесь скромно (закрытые плечи и колени). Я советую приходить до обеда — свет падает идеально для фото.</li>
@@ -398,7 +421,7 @@
 <ul>
 <li><strong>Цена билета:</strong> Бесплатно.</li>
 <li><strong>Часы работы:</strong> Круглосуточно, но купаться лучше с 06:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На такси (50 MVR / ₽308 (≈ $3.25)) или пешком 20 минут от центра.</li>
+<li><strong>Как добраться:</strong> На такси (₽310 (50 MVR) / ₽308 ($3)) или пешком 20 минут от центра.</li>
 <li><strong>Совет:</strong> Берите полотенце и крем от солнца — тени здесь мало. Я советую приходить в будни, чтобы избежать толп.</li>
 </ul>
 
@@ -414,7 +437,7 @@
 <h3>6. Рынок местной рыбы (Malé Fish Market)</h3>
 <p>Если хотите увидеть настоящую жизнь Мале, идите сюда. Рыбаки привозят свежий улов — тунца, марлина, акулу — и прямо на глазах разделывают его. Запах, шум, крики продавцов — это чистая энергия! Я обожаю покупать здесь свежего тунца и просить местных зажарить его на гриле — вкус божественный.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно, рыба от 50 MVR за кг (~₽308 (≈ $3.25)).</li>
+<li><strong>Цена билета:</strong> Бесплатно, рыба от₽310 (50 MVR) за кг (~₽308 ($3)).</li>
 <li><strong>Часы работы:</strong> 06:00-18:00, пик — 07:00-10:00.</li>
 <li><strong>Как добраться:</strong> Рядом с портом, 15 минут пешком от центра.</li>
 <li><strong>Совет:</strong> Приходите рано утром — выбор самый богатый. Я советую торговаться, это принято.</li>
@@ -423,7 +446,7 @@
 <h3>7. Рынок местных продуктов (Local Market)</h3>
 <p>Рядом с рыбным рынком — царство фруктов и овощей. Папайя, манго, кокосы, чили — все такое свежее, что кажется, будто вы на фермерском базаре в раю. Я всегда покупаю здесь кокосовую воду — она слаще любого сока из магазина.</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно, фрукты от 20 MVR (~₽123 (≈ $1.30)).</li>
+<li><strong>Цена билета:</strong> Бесплатно, фрукты от₽124 (20 MVR) (~₽123 ($1)).</li>
 <li><strong>Часы работы:</strong> 06:00-18:00.</li>
 <li><strong>Как добраться:</strong> Рядом с Fish Market, 2 минуты пешком.</li>
 <li><strong>Совет:</strong> Пробуйте перед покупкой — продавцы рады угостить. Я рекомендую манго — оно здесь нереально сочное.</li>
@@ -441,10 +464,10 @@
 <h3>9. Дворец Утиму (Utheemu Ganduvaru)</h3>
 <p>Исторический дом национального героя Мухаммеда Такуруфану, который боролся с португальцами. Деревянные резные балконы, старинная мебель и атмосфера 16 века — как будто заглядываешь в прошлое. Я была в восторге от сохранности деталей — каждая царапина на стенах хранит историю.</p>
 <ul>
-<li><strong>Цена билета:</strong> Взрослый — 50 MVR (~₽308 (≈ $3.25)), детский — 25 MVR (~₽152 (≈ $1.60)).</li>
+<li><strong>Цена билета:</strong> Взрослый —₽310 (50 MVR) (~₽308 ($3)), детский —₽155 (25 MVR) (~₽152 ($2)).</li>
 <li><strong>Часы работы:</strong> 09:00-17:00, пятница — выходной.</li>
-<li><strong>Как добраться:</strong> На такси (75 MVR / ₽475 (≈ $5)) или пешком 30 минут от центра.</li>
-<li><strong>Совет:</strong> Возьмите гида за 100 MVR (~₽617 (≈ $6.50)) — он расскажет удивительные легенды. Я рекомендую приходить утром.</li>
+<li><strong>Как добраться:</strong> На такси (₽465 (75 MVR) / ₽475 ($5)) или пешком 30 минут от центра.</li>
+<li><strong>Совет:</strong> Возьмите гида за₽620 (100 MVR) (~₽617 ($6)) — он расскажет удивительные легенды. Я рекомендую приходить утром.</li>
 </ul>
 
 <h3>10. Порт Мале (Malé Harbour)</h3>
@@ -468,7 +491,7 @@
 <h3>12. Пляж Хулхумале (Hulhumalé Beach)</h3>
 <p>Технически это остров рядом с Мале (20 минут на пароме), но он стоит того. Широкий пляж, чистый океан и меньше туристов — идеальное место для расслабления. Я провела здесь целый день, просто плавая и читая — рай!</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно, паром — 20 MVR (~₽123 (≈ $1.30)).</li>
+<li><strong>Цена билета:</strong> Бесплатно, паром —₽124 (20 MVR) (~₽123 ($1)).</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
 <li><strong>Как добраться:</strong> Паром от порта Мале каждые 30 минут.</li>
 <li><strong>Совет:</strong> Берите еду и воду — кафе на пляже дорогие. Я рекомендую приходить в будни.</li>
@@ -486,7 +509,7 @@
 <h3>14. Национальный стадион (National Stadium)</h3>
 <p>Если вы любите спорт или атмосферу местных событий, загляните сюда. Футбольные матчи, концерты и фестивали — это место, где бьется пульс города. Я попала на финал по футболу — эмоции зашкаливали!</p>
 <ul>
-<li><strong>Цена билета:</strong> От 50 MVR (~₽308 (≈ $3.25)) за матч.</li>
+<li><strong>Цена билета:</strong> От₽310 (50 MVR) (~₽308 ($3)) за матч.</li>
 <li><strong>Часы работы:</strong> Зависит от событий, обычно 16:00-22:00.</li>
 <li><strong>Как добраться:</strong> Район Majeedhee Magu, 15 минут от центра.</li>
 <li><strong>Совет:</strong> Проверьте расписание на сайте — билеты лучше брать заранее. Я рекомендую футбольные матчи по пятницам.</li>
@@ -584,6 +607,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -612,6 +636,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -629,8 +654,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>

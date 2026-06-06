@@ -6,7 +6,7 @@
     <title>Best Time to Visit Marsa Alam 2026: Seasons &amp; Weather</title>
     <meta name="description" content="Best Time to Visit Marsa Alam 2026: Seasons &amp; Weather Marsa Alam, a tranquil gem on Egypt’s Red Sea coast, offers a unique blend of pristine coral reefs, gol...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-best-time-to-visit.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/marsa-alam-kogda-luchshe-ekhat.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-best-time-to-visit.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-best-time-to-visit.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Best Time to Visit Marsa Alam 2026: Seasons &amp; Weather">
     <meta property="og:description" content="Best Time to Visit Marsa Alam 2026: Seasons &amp; Weather Marsa Alam, a tranquil gem on Egypt’s Red Sea coast, offers a unique blend of pristine coral reefs, gol...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/marsa-alam-best-time-to-visit.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/marsa-alam-best-time-to-visit.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/marsa-alam.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Best Time to Visit Marsa Alam 2026: Seasons &amp; Weather</div>
@@ -461,15 +485,15 @@
 
 <h2>High Season</h2>
 <p>Marsa Alam’s high season spans from <strong>November through March</strong>, with a pronounced peak during the European winter holidays (mid-December to early January) and the Easter period (March–April). During these months, air temperatures are comfortably warm (22–27°C / 72–81°F), making it ideal for escaping colder climates. Sea temperatures remain pleasant for swimming (22–25°C / 72–77°F). This period attracts a significant influx of European tourists, particularly from Germany, Italy, and the UK, seeking winter sun.</p>
-<p>Consequently, hotel prices and flight costs are at their highest. A standard double room at a 4-star resort can range from $120 (≈ ₽11 400) to $250 (≈ ₽23 750) per night, with luxury properties exceeding $400. (≈ ₽38 000) All-inclusive packages are common and often booked months in advance. Popular dive sites, such as Elphinstone Reef and Dolphin House, see increased boat traffic. Reservations are essential for both accommodation and dive excursions. The weather is generally stable, but brief, light rain showers can occur in December and January. Winds are moderate, making the sea conditions excellent for snorkeling and diving.</p>
+<p>Consequently, hotel prices and flight costs are at their highest. A standard double room at a 4-star resort can range from $120to $250per night, with luxury properties exceeding $400All-inclusive packages are common and often booked months in advance. Popular dive sites, such as Elphinstone Reef and Dolphin House, see increased boat traffic. Reservations are essential for both accommodation and dive excursions. The weather is generally stable, but brief, light rain showers can occur in December and January. Winds are moderate, making the sea conditions excellent for snorkeling and diving.</p>
 <p>For travelers prioritizing comfort and reliable sunshine, the high season is unbeatable. However, expect crowds at major attractions and premium pricing. <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a> flights and hotels at least 4–6 months in advance for 2026 is strongly recommended.</p>
 <p><a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_marsa-alam" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Find hotels in Marsa Alam on Hotellook</a></p>
 
 <h2>Low Season</h2>
-<p>The low season in Marsa Alam runs from <strong>May to September</strong>, with the most extreme heat in July and August. Air temperatures regularly exceed 38°C (100°F), and sea temperatures reach a balmy 30°C (86°F). The intense heat makes midday outdoor activities uncomfortable, but the Red Sea water is wonderfully warm, perfect for extended swimming and diving. This period sees the fewest tourists, resulting in dramatically lower prices. Hotel rates can drop by 40–60% compared to high season. A 4-star double room may cost $50 (≈ ₽4 750)–$90 (≈ ₽8 550) per night, and luxury resorts often offer significant discounts.</p>
+<p>The low season in Marsa Alam runs from <strong>May to September</strong>, with the most extreme heat in July and August. Air temperatures regularly exceed 38°C (100°F), and sea temperatures reach a balmy 30°C (86°F). The intense heat makes midday outdoor activities uncomfortable, but the Red Sea water is wonderfully warm, perfect for extended swimming and diving. This period sees the fewest tourists, resulting in dramatically lower prices. Hotel rates can drop by 40–60% compared to high season. A 4-star double room may cost $50–$90per night, and luxury resorts often offer significant discounts.</p>
 <p>Pros of the low season include absolute tranquility on beaches, uncrowded dive sites, and unbeatable value. Cons include the oppressive heat, which can be challenging for those not accustomed to desert climates, and a higher risk of heat exhaustion. Winds are generally calm, leading to exceptionally clear water visibility—often exceeding 30 meters (100 feet). Some smaller restaurants or tour operators may reduce hours or close entirely, but major resorts and dive centers operate normally. For budget-conscious travelers or those solely focused on underwater experiences, the low season is a viable option, provided you plan for heat management (air-conditioned transport, early morning activities, ample hydration).</p>
 <p>Weather-wise, expect zero precipitation and relentless sunshine. The UV index is extreme (11+). Sun protection is non-negotiable.</p>
-<p>Prices: Low season offers the best value. A week-long all-inclusive package can be found for under $500 (≈ ₽47 500) per person at mid-range resorts.</p>
+<p>Prices: Low season offers the best value. A week-long all-inclusive package can be found for under $500per person at mid-range resorts.</p>
 
 <h2>Best Time for Beach Vacation</h2>
 <p>For a classic beach vacation centered on swimming, sunbathing, and water sports, the optimal months are <strong>April, May, October, and November</strong>. During these shoulder months, air temperatures are hot but not unbearable (30–34°C / 86–93°F), and sea temperatures are very comfortable (26–27°C / 79–81°F). The water is warm enough for hours of floating without a wetsuit, yet the air temperature allows for pleasant sunbathing without the scorching intensity of midsummer.</p>
@@ -584,6 +608,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -612,6 +637,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -629,8 +655,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

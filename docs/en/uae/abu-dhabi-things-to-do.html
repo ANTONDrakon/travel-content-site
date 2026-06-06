@@ -6,7 +6,7 @@
     <title>15 Best Things to Do in Abu Dhabi 2026</title>
     <meta name="description" content="15 Best Things to Do in Abu Dhabi 2026 Abu Dhabi, the capital of the United Arab Emirates, has transformed from a quiet pearl-diving village into a global hu...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-things-to-do.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/uae/abu-dhabi-dostoprimechatelnosti.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-things-to-do.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-things-to-do.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="15 Best Things to Do in Abu Dhabi 2026">
     <meta property="og:description" content="15 Best Things to Do in Abu Dhabi 2026 Abu Dhabi, the capital of the United Arab Emirates, has transformed from a quiet pearl-diving village into a global hu...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/uae/abu-dhabi-things-to-do.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/uae/abu-dhabi-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://ic.pics.livejournal.com/pantv/14908973/12182338/12182338_original.jpg');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/abu-dhabi.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">15 Best Things to Do in Abu Dhabi 2026</div>
@@ -363,86 +387,85 @@
 <p>Abu Dhabi, the capital of the United Arab Emirates, has transformed from a quiet pearl-diving village into a global hub of culture, architecture, and adventure. Unlike its flashy neighbor Dubai, Abu Dhabi offers a more refined and authentic Emirati experience, blending futuristic marvels with deep-rooted traditions. In 2026, the city continues to expand its portfolio of world-class attractions, from the stunning Sheikh Zayed Grand Mosque to the adrenaline-pumping Ferrari World. Whether you are a history buff, a thrill-seeker, or a luxury traveler, Abu Dhabi delivers a diverse range of experiences that justify a dedicated visit. This guide covers the 15 best attractions with practical details, plus itineraries, tours, free activities, and essential tips to maximize your trip.</p>
 
 <h2>15 Best Attractions in Abu Dhabi</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Sheikh Zayed Grand Mosque</h3>
 <p>This architectural masterpiece is one of the largest mosques in the world, capable of accommodating over 40,000 worshippers. Its pure white marble domes, intricate floral mosaics, and the world's largest hand-knotted carpet (over 5,600 square meters) create an atmosphere of serene grandeur. The mosque's 82 domes and four 107-meter minarets are illuminated at night, offering a breathtaking view.</p>
 <ul>
 <li><strong>Ticket Price:</strong> Free entry (online registration required for non-Muslims).</li>
 <li><strong>Hours:</strong> Saturday to Thursday, 9:00 AM to 10:00 PM; Friday, 9:00 AM to 12:00 PM and 3:00 PM to 10:00 PM.</li>
-<li><strong>How to Get There:</strong> Take a taxi from the city center (approx. 20 minutes, AED 30-50) or bus number 54 from Al Wahda Mall.</li>
+<li><strong>How to Get There:</strong> Take a taxi from the city center (approx. 20 minutes, $8 (30 AED)-50) or bus number 54 from Al Wahda Mall.</li>
 <li><strong>Tip:</strong> Visit during the golden hour before sunset for stunning photography. Dress modestly (women must cover hair, arms, and legs; abayas are provided at the entrance).</li>
 </ul>
 
 <h3>2. Louvre Abu Dhabi</h3>
 <p>Designed by architect Jean Nouvel, this "museum city" on Saadiyat Island features a spectacular 180-meter dome that creates a "rain of light" effect. The permanent collection spans from prehistoric artifacts to contemporary art, with loans from French museums like the Louvre and Musée d'Orsay. In 2026, the museum hosts special exhibitions on global trade routes and Islamic art.</p>
 <ul>
-<li><strong>Ticket Price:</strong> AED 63 (adults), free for under 18s.</li>
+<li><strong>Ticket Price:</strong> $17 (63 AED)(adults), free for under 18s.</li>
 <li><strong>Hours:</strong> Tuesday to Sunday, 10:00 AM to 6:30 PM (closed Monday).</li>
-<li><strong>How to Get There:</strong> Take a taxi (30 minutes from city center, AED 60-80) or bus 94 from Marina Mall.</li>
+<li><strong>How to Get There:</strong> Take a taxi (30 minutes from city center, $16 (60 AED)-80) or bus 94 from Marina Mall.</li>
 <li><strong>Tip:</strong> Book tickets online in advance to avoid queues. The café on the waterfront offers excellent views of the dome.</li>
 </ul>
 
 <h3>3. Ferrari World Abu Dhabi</h3>
 <p>This indoor theme park on Yas Island is home to the world's fastest roller coaster, Formula Rossa, which accelerates to 240 km/h in 4.9 seconds. Beyond the thrill rides, the park features driving simulators, a 4D cinema, and the Galleria Ferrari museum showcasing classic cars. In 2026, a new "Ferrari Racing Legends" virtual reality experience has been added.</p>
 <ul>
-<li><strong>Ticket Price:</strong> AED 345 (adults), AED 295 (children under 1.3m).</li>
+<li><strong>Ticket Price:</strong> $94 (345 AED)(adults), $80 (295 AED)(children under 1.3m).</li>
 <li><strong>Hours:</strong> Daily, 11:00 AM to 8:00 PM (extended hours on weekends).</li>
-<li><strong>How to Get There:</strong> Free shuttle from Dubai (1.5 hours) or taxi from Abu Dhabi city (20 minutes, AED 70-100).</li>
-<li><strong>Tip:</strong> Arrive early to ride Formula Rossa first, as queues can exceed 90 minutes. Purchase a "Fast Track" pass for AED 150.</li>
+<li><strong>How to Get There:</strong> Free shuttle from Dubai (1.5 hours) or taxi from Abu Dhabi city (20 minutes, $19 (70 AED)-100).</li>
+<li><strong>Tip:</strong> Arrive early to ride Formula Rossa first, as queues can exceed 90 minutes. Purchase a "Fast Track" pass for $41 (150 AED)</li>
 </ul>
 
 <h3>4. Qasr Al Watan</h3>
 <p>This working presidential palace opened to the public in 2019, offering a glimpse into UAE governance and culture. The Great Hall features a 37-meter diameter dome and intricate calligraphy, while the Qasr Al Watan Library holds over 50,000 books. The "Spirit of Collaboration" exhibition explains the UAE's diplomatic history.</p>
 <ul>
-<li><strong>Ticket Price:</strong> AED 60 (adults), AED 30 (children 4-17).</li>
+<li><strong>Ticket Price:</strong> $16 (60 AED)(adults), $8 (30 AED)(children 4-17).</li>
 <li><strong>Hours:</strong> Daily, 10:00 AM to 7:00 PM (last entry 6:00 PM).</li>
-<li><strong>How to Get There:</strong> Taxi from city center (15 minutes, AED 25-40).</li>
+<li><strong>How to Get There:</strong> Taxi from city center (15 minutes, $7 (25 AED)-40).</li>
 <li><strong>Tip:</strong> The "Palace in Motion" light and sound show at 7:30 PM is included in the ticket. Reserve a spot for the rooftop café for sunset views.</li>
 </ul>
 
 <h3>5. Yas Waterworld</h3>
 <p>This Emirati-themed water park features 45 rides, slides, and attractions, including the world's first hydromagnetic-powered rafting ride, "Bandit Bomber." The park's design is inspired by a lost pearl-diving city, with a 5-meter wave pool and a 238-meter lazy river. In 2026, a new "Pearl Diver's Challenge" obstacle course has opened.</p>
 <ul>
-<li><strong>Ticket Price:</strong> AED 295 (adults), AED 245 (children under 1.2m).</li>
+<li><strong>Ticket Price:</strong> $80 (295 AED)(adults), $67 (245 AED)(children under 1.2m).</li>
 <li><strong>Hours:</strong> Daily, 10:00 AM to 7:00 PM.</li>
-<li><strong>How to Get There:</strong> Free shuttle from Dubai (2 hours) or taxi from Abu Dhabi (20 minutes, AED 70-100).</li>
-<li><strong>Tip:</strong> Bring water shoes, as the ground can get hot. The "VIP Experience" (AED 200) includes fast-track access and a private cabana.</li>
+<li><strong>How to Get There:</strong> Free shuttle from Dubai (2 hours) or taxi from Abu Dhabi (20 minutes, $19 (70 AED)-100).</li>
+<li><strong>Tip:</strong> Bring water shoes, as the ground can get hot. The "VIP Experience" ($55 (200 AED)) includes fast-track access and a private cabana.</li>
 </ul>
 
 <h3>6. Emirates Palace Mandarin Oriental</h3>
-<p>This iconic luxury hotel is a destination in itself, with its gold-leafed domes, 1,000 Swarovski chandeliers, and a private beach. Even non-guests can visit the lobby, enjoy the famous gold flake cappuccino (AED 75), or explore the "Palace of the Nation" exhibition. The hotel's 1.3 km private beach is open to day visitors with a dining booking.</p>
+<p>This iconic luxury hotel is a destination in itself, with its gold-leafed domes, 1,000 Swarovski chandeliers, and a private beach. Even non-guests can visit the lobby, enjoy the famous gold flake cappuccino ($20 (75 AED)), or explore the "Palace of the Nation" exhibition. The hotel's 1.3 km private beach is open to day visitors with a dining booking.</p>
 <ul>
 <li><strong>Ticket Price:</strong> Free entry to lobby; cappuccino and dining costs vary.</li>
 <li><strong>Hours:</strong> Lobby open 24/7; restaurants operate lunch (12:00 PM-3:00 PM) and dinner (6:30 PM-11:00 PM).</li>
-<li><strong>How to Get There:</strong> Taxi from city center (10 minutes, AED 20-30).</li>
-<li><strong>Tip:</strong> Book afternoon tea (AED 295 per person) for a luxurious experience. The hotel's "Palace Beach" is accessible with a minimum spend of AED 250 at the poolside restaurant.</li>
+<li><strong>How to Get There:</strong> Taxi from city center (10 minutes, $5 (20 AED)-30).</li>
+<li><strong>Tip:</strong> Book afternoon tea ($80 (295 AED)per person) for a luxurious experience. The hotel's "Palace Beach" is accessible with a minimum spend of $68 (250 AED)at the poolside restaurant.</li>
 </ul>
 
 <h3>7. Corniche Beach</h3>
 <p>This public beach stretches for 8 km along the coastline, offering three distinct sections: family-only, women-only, and general. The water is crystal clear, with lifeguards and rental facilities for umbrellas and loungers. The adjacent Corniche promenade is perfect for cycling, jogging, or evening strolls with views of the city skyline.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Free entry to public areas; paid sections (AED 10-20) include facilities.</li>
+<li><strong>Ticket Price:</strong> Free entry to public areas; paid sections ($3 (10 AED)-20) include facilities.</li>
 <li><strong>Hours:</strong> Daily, 8:00 AM to sunset (paid sections close at 6:00 PM).</li>
-<li><strong>How to Get There:</strong> Bus 34 or 44 from city center, or a short taxi ride (AED 15-25).</li>
+<li><strong>How to Get There:</strong> Bus 34 or 44 from city center, or a short taxi ride ($4 (15 AED)-25).</li>
 <li><strong>Tip:</strong> Visit on a weekday to avoid crowds. The women-only section (Gate 2) is best for female travelers seeking privacy.</li>
 </ul>
 
 <h3>8. Warner Bros. World Abu Dhabi</h3>
 <p>This indoor theme park on Yas Island brings to life iconic characters from DC Comics, Looney Tunes, and Hanna-Barbera. The park is divided into six immersive zones, including Gotham City and Metropolis, with roller coasters like "Batman: Knight Flight" and family rides like "Tom & Jerry: Swiss Cheese Spin." In 2026, a new "Justice League: Battle for Metropolis" interactive dark ride has been added.</p>
 <ul>
-<li><strong>Ticket Price:</strong> AED 295 (adults), AED 245 (children under 1.2m).</li>
+<li><strong>Ticket Price:</strong> $80 (295 AED)(adults), $67 (245 AED)(children under 1.2m).</li>
 <li><strong>Hours:</strong> Daily, 11:00 AM to 8:00 PM.</li>
-<li><strong>How to Get There:</strong> Free shuttle from Dubai (1.5 hours) or taxi from Abu Dhabi (20 minutes, AED 70-100).</li>
-<li><strong>Tip:</strong> Download the park's app for real-time wait times. The "Fast Track" pass (AED 150) is worth it for popular rides.</li>
+<li><strong>How to Get There:</strong> Free shuttle from Dubai (1.5 hours) or taxi from Abu Dhabi (20 minutes, $19 (70 AED)-100).</li>
+<li><strong>Tip:</strong> Download the park's app for real-time wait times. The "Fast Track" pass ($41 (150 AED)) is worth it for popular rides.</li>
 </ul>
 
 <h3>9. Mangrove National Park</h3>
 <p>This protected area along the eastern coast of Abu Dhabi is home to over 20 species of birds, including flamingos and herons, and a dense mangrove forest. Kayaking through the narrow channels offers a serene escape from the city, with guided tours lasting 2-3 hours. In 2026, new elevated boardwalks have been added for birdwatching.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Free entry to park; kayak rentals from AED 100 (2 hours, guided).</li>
+<li><strong>Ticket Price:</strong> Free entry to park; kayak rentals from $27 (100 AED)(2 hours, guided).</li>
 <li><strong>Hours:</strong> Daily, 7:00 AM to 7:00 PM.</li>
-<li><strong>How to Get There:</strong> Taxi from city center (20 minutes, AED 40-60) to the Eastern Mangrove Lagoon entrance.</li>
+<li><strong>How to Get There:</strong> Taxi from city center (20 minutes, $11 (40 AED)-60) to the Eastern Mangrove Lagoon entrance.</li>
 <li><strong>Tip:</strong> Book a sunrise kayak tour for cooler temperatures and better wildlife sightings. Bring insect repellent and sunscreen.</li>
 </ul>
 
@@ -451,8 +474,8 @@
 <ul>
 <li><strong>Ticket Price:</strong> Free entry.</li>
 <li><strong>Hours:</strong> Daily, 8:00 AM to 6:00 PM (museum open 9:00 AM to 5:00 PM).</li>
-<li><strong>How to Get There:</strong> Drive via E66 highway (1.5 hours) or take a bus from Abu Dhabi Central Bus Station (AED 25, 2 hours).</li>
-<li><strong>Tip:</strong> Combine with a visit to Al Ain Zoo (AED 30) or Jebel Hafeet mountain for a full day trip. Wear comfortable walking shoes.</li>
+<li><strong>How to Get There:</strong> Drive via E66 highway (1.5 hours) or take a bus from Abu Dhabi Central Bus Station ($69 (252 AED)hours).</li>
+<li><strong>Tip:</strong> Combine with a visit to Al Ain Zoo ($8 (30 AED)) or Jebel Hafeet mountain for a full day trip. Wear comfortable walking shoes.</li>
 </ul>
 
 <h3>11. The Founder's Memorial</h3>
@@ -460,17 +483,17 @@
 <ul>
 <li><strong>Ticket Price:</strong> Free entry.</li>
 <li><strong>Hours:</strong> Daily, 9:00 AM to 10:00 PM.</li>
-<li><strong>How to Get There:</strong> Walk from Marina Mall (5 minutes) or taxi from city center (10 minutes, AED 20-30).</li>
+<li><strong>How to Get There:</strong> Walk from Marina Mall (5 minutes) or taxi from city center (10 minutes, $5 (20 AED)-30).</li>
 <li><strong>Tip:</strong> Visit at night when the sculpture is illuminated. The memorial is adjacent to the Corniche, making it easy to combine with a beach visit.</li>
 </ul>
 
 <h3>12. Yas Marina Circuit</h3>
-<p>Home to the Abu Dhabi Grand Prix, this Formula 1 circuit offers year-round experiences like driving a Ferrari or Aston Martin on the track (from AED 600 for 5 laps). The circuit also hosts cycling events, running tracks, and a go-karting facility. In 2026, a new "F1 Simulator Experience" has opened for virtual racing.</p>
+<p>Home to the Abu Dhabi Grand Prix, this Formula 1 circuit offers year-round experiences like driving a Ferrari or Aston Martin on the track (from $164 (600 AED)for 5 laps). The circuit also hosts cycling events, running tracks, and a go-karting facility. In 2026, a new "F1 Simulator Experience" has opened for virtual racing.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Track experiences from AED 600; go-karting from AED 100 (10 minutes).</li>
+<li><strong>Ticket Price:</strong> Track experiences from $164 (600 AED); go-karting from $27 (100 AED)(10 minutes).</li>
 <li><strong>Hours:</strong> Daily, 9:00 AM to 6:00 PM (track experiences require booking).</li>
-<li><strong>How to Get There:</strong> Free shuttle from Dubai (1.5 hours) or taxi from Abu Dhabi (20 minutes, AED 70-100).</li>
-<li><strong>Tip:</strong> Book the "Drive Your Own Car" experience (AED 300 for 3 laps) for a budget-friendly option. Check the calendar for public cycling events (free, Friday mornings).</li>
+<li><strong>How to Get There:</strong> Free shuttle from Dubai (1.5 hours) or taxi from Abu Dhabi (20 minutes, $19 (70 AED)-100).</li>
+<li><strong>Tip:</strong> Book the "Drive Your Own Car" experience ($82 (300 AED)for 3 laps) for a budget-friendly option. Check the calendar for public cycling events (free, Friday mornings).</li>
 </ul>
 
 <h3>13. Heritage Village</h3>
@@ -485,9 +508,9 @@
 <h3>14. Al Maryah Island</h3>
 <p>This financial district is also a lifestyle destination, with the luxury Galleria Mall, waterfront promenades, and fine dining restaurants. The island's "Reem Central Park" features outdoor gyms, jogging tracks, and children's play areas. In 2026, the new "Al Maryah Beach Club" has opened with a 500-meter private beach.</p>
 <ul>
-<li><strong>Ticket Price:</strong> Free entry; beach club day pass AED 100.</li>
+<li><strong>Ticket Price:</strong> Free entry; beach club day pass $27 (100 AED)</li>
 <li><strong>Hours:</strong> Mall open 10:00 AM to 10:00 PM; promenade open 24/7.</li>
-<li><strong>How to Get There:</strong> Taxi from city center (15 minutes, AED 30-50) or bus 94.</li>
+<li><strong>How to Get There:</strong> Taxi from city center (15 minutes, $8 (30 AED)-50) or bus 94.</li>
 <li><strong>Tip:</strong> The promenade is ideal for evening walks and sunset photography. Try the seafood restaurant "Buddha Bar" for Asian fusion cuisine.</li>
 </ul>
 
@@ -496,7 +519,7 @@
 <ul>
 <li><strong>Ticket Price:</strong> Free entry.</li>
 <li><strong>Hours:</strong> Tuesday to Sunday, 9:00 AM to 6:00 PM (closed Monday).</li>
-<li><strong>How to Get There:</strong> Taxi from city center (25 minutes, AED 50-70) or bus 94 to Saadiyat Island.</li>
+<li><strong>How to Get There:</strong> Taxi from city center (25 minutes, $14 (50 AED)-70) or bus 94 to Saadiyat Island.</li>
 <li><strong>Tip:</strong> Check the website for free workshops and artist talks. The terrace offers views of the Louvre Abu Dhabi dome.</li>
 </ul>
 
@@ -504,14 +527,14 @@
 
 <h3>1-Day Itinerary: Highlights Tour</h3>
 <p><strong>Morning (8:00 AM - 12:00 PM):</strong> Start at Sheikh Zayed Grand Mosque (free, 1.5 hours). Then take a taxi (15 minutes) to Qasr Al Watan (1.5 hours).</p>
-<p><strong>Lunch (12:00 PM - 1:30 PM):</strong> Eat at the Qasr Al Watan café or drive to the Corniche for beachside restaurants like "The Club" (AED 50-80 per person).</p>
+<p><strong>Lunch (12:00 PM - 1:30 PM):</strong> Eat at the Qasr Al Watan café or drive to the Corniche for beachside restaurants like "The Club" ($14 (50 AED)-80 per person).</p>
 <p><strong>Afternoon (1:30 PM - 4:30 PM):</strong> Visit Louvre Abu Dhabi (2.5 hours). Then walk to the Founder's Memorial (30 minutes).</p>
 <p><strong>Evening (5:00 PM - 8:00 PM):</strong> Head to Yas Island for Ferrari World (closes at 8:00 PM) or Warner Bros. World (2 hours). Alternatively, enjoy a sunset walk on the Corniche.</p>
-<p><strong>Dinner (8:00 PM onwards):</strong> Dine at Emirates Palace (AED 150-300 per person) or try local street food at Al Mina Market (AED 30-50).</p>
+<p><strong>Dinner (8:00 PM onwards):</strong> Dine at Emirates Palace ($41 (150 AED)-300 per person) or try local street food at Al Mina Market ($8 (30 AED)-50).</p>
 
 <h3>2-Day Itinerary: Culture and Adventure</h3>
-<p><strong>Day 1:</strong> Follow the 1-day itinerary above, but skip Yas Island. End the day with a dhow cruise dinner (AED 150-250 per person, 7:00 PM-9:00 PM).</p>
-<p><strong>Day 2 (9:00 AM - 6:00 PM):</strong> Drive to Al Ain Oasis (1.5 hours). Explore the oasis and Al Ain Zoo (AED 30). Return to Abu Dhabi for a visit to the Heritage Village (free, 1 hour). Spend the evening<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
+<p><strong>Day 1:</strong> Follow the 1-day itinerary above, but skip Yas Island. End the day with a dhow cruise dinner ($41 (150 AED)-250 per person, 7:00 PM-9:00 PM).</p>
+<p><strong>Day 2 (9:00 AM - 6:00 PM):</strong> Drive to Al Ain Oasis (1.5 hours). Explore the oasis and Al Ain Zoo ($8 (30 AED)). Return to Abu Dhabi for a visit to the Heritage Village (free, 1 hour). Spend the evening<div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
         </div>
 
         
@@ -597,6 +620,7 @@
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -625,6 +649,7 @@
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -642,8 +667,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Cairo Travel Guide 2026</title>
     <meta name="description" content="Cairo Travel Guide 2026 Cairo, the sprawling capital of Egypt, is a city of magnificent chaos and profound history. With a metropolitan population exceeding ...">
 
-    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-travel-guide.html">
+    <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/egypt/cairo-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-travel-guide.html">
 
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Cairo Travel Guide 2026">
     <meta property="og:description" content="Cairo Travel Guide 2026 Cairo, the sprawling capital of Egypt, is a city of magnificent chaos and profound history. With a metropolitan population exceeding ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/en/egypt/cairo-travel-guide.html">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/en/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/egypt/cairo-travel-guide.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/cairo.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Cairo Travel Guide 2026</div>
@@ -371,13 +395,13 @@
 <p>The primary gateway is Cairo International Airport (CAI), located about 15 kilometers northeast of the city center. It is a major hub served by EgyptAir and numerous international carriers. In 2026, a new terminal (Terminal 4) is expected to be fully operational to handle the increasing tourist traffic.</p>
 
 <ul>
-<li><strong>From New York (JFK):</strong> Direct flights (approx. 10-11 hours) with EgyptAir or Delta. Average round-trip price: $850 (≈ ₽80 750)–$1 200. (≈ ₽114 000)</li>
-<li><strong>From London (LHR):</strong> Direct flights (approx. 4-5 hours) with British Airways or EgyptAir. Average round-trip price: $400 (≈ ₽38 000)–$700. (≈ ₽66 500)</li>
-<li><strong>From Dubai (DXB):</strong> Direct flights (approx. 3.5 hours) with Emirates or EgyptAir. Average round-trip price: $350 (≈ ₽33 250)–$600. (≈ ₽57 000)</li>
-<li><strong>From Tokyo (NRT):</strong> One-stop flights (approx. 15-18 hours) via Dubai or Istanbul. Average round-trip price: $1 100 (≈ ₽104 500)–$1 600. (≈ ₽152 000)</li>
+<li><strong>From New York (JFK):</strong> Direct flights (approx. 10-11 hours) with EgyptAir or Delta. Average round-trip price: $850–$1 200</li>
+<li><strong>From London (LHR):</strong> Direct flights (approx. 4-5 hours) with British Airways or EgyptAir. Average round-trip price: $400–$700</li>
+<li><strong>From Dubai (DXB):</strong> Direct flights (approx. 3.5 hours) with Emirates or EgyptAir. Average round-trip price: $350–$600</li>
+<li><strong>From Tokyo (NRT):</strong> One-stop flights (approx. 15-18 hours) via Dubai or Istanbul. Average round-trip price: $1 100–$1 600</li>
 </ul>
 
-<p>Upon arrival, you will need to purchase a visa on arrival (see Visa & Documents section). Taxis and ride-sharing apps (Uber, Careem) are readily available from the airport. A trip to downtown Cairo costs approximately $8 (≈ ₽760)–$12 (≈ ₽1 140) (EGP 250–400).</p>
+<p>Upon arrival, you will need to purchase a visa on arrival (see Visa & Documents section). Taxis and ride-sharing apps (Uber, Careem) are readily available from the airport. A trip to downtown Cairo costs approximately $8–$12($5 (250 EGP)–400).</p>
 
 <h2>Where to Stay</h2>
 
@@ -406,57 +430,57 @@
 <td>Marriott Mena House</td>
 <td>Giza</td>
 <td>Luxury</td>
-<td>$300 (≈ ₽28 500)–$600 (≈ ₽57 000)</td>
+<td>$300–$600</td>
 </tr>
 <tr>
 <td>Sofitel Cairo Nile El Gezirah</td>
 <td>Zamalek</td>
 <td>Luxury</td>
-<td>$250 (≈ ₽23 750)–$450 (≈ ₽42 750)</td>
+<td>$250–$450</td>
 </tr>
 <tr>
 <td>Steigenberger Cecil Hotel</td>
 <td>Downtown</td>
 <td>Mid-range</td>
-<td>$80 (≈ ₽7 600)–$150 (≈ ₽14 250)</td>
+<td>$80–$150</td>
 </tr>
 <tr>
 <td>Pension Zamalek</td>
 <td>Zamalek</td>
 <td>Budget</td>
-<td>$30 (≈ ₽2 850)–$50 (≈ ₽4 750)</td>
+<td>$30–$50</td>
 </tr>
 <tr>
 <td>Dahab Hostel</td>
 <td>Downtown</td>
 <td>Hostel</td>
-<td>$10 (≈ ₽950)–$20 (≈ ₽1 900) (dorm)</td>
+<td>$10–$20(dorm)</td>
 </tr>
 </tbody>
 </table>
 
 <h2>Top 15 Attractions</h2>
 
-<p>Here are the essential sites to visit in Cairo, with accurate 2026 pricing and hours. Prices are in Egyptian Pounds (EGP) and US Dollars (USD). 1 USD ≈ 30 EGP in 2026.</p>
+<p>Here are the essential sites to visit in Cairo, with accurate 2026 pricing and hours. Prices are in Egyptian Pounds (EGP) and US Dollars (USD). 1 USD ≈$1 (30 EGP) in 2026.</p>
 
 <ol>
 <li><strong>The Pyramids of Giza & Sphinx</strong><br>
-The only surviving Wonder of the Ancient World. The Great Pyramid of Khufu is the largest. Visit early morning to avoid crowds and heat. General entry: EGP 400 ($13 (≈ ₽1 235)). Entry to the Great Pyramid interior: EGP 800 ($27 (≈ ₽2 565)). Hours: 8:00 AM – 5:00 PM daily.</li>
+The only surviving Wonder of the Ancient World. The Great Pyramid of Khufu is the largest. Visit early morning to avoid crowds and heat. General entry: $8 (400 EGP)($13). Entry to the Great Pyramid interior: $16 (800 EGP)($27). Hours: 8:00 AM – 5:00 PM daily.</li>
 
 <li><strong>Grand Egyptian Museum (GEM)</strong><br>
-The new mega-museum near the Pyramids. Houses over 100,000 artifacts, including the complete Tutankhamun collection in a single hall. General entry: EGP 1,000 ($33 (≈ ₽3 135)). Tutankhamun galleries: EGP 1,500 ($50 (≈ ₽4 750)). Hours: 9:00 AM – 7:00 PM (last entry 5:00 PM). Closed Mondays.</li>
+The new mega-museum near the Pyramids. Houses over 100,000 artifacts, including the complete Tutankhamun collection in a single hall. General entry: $20 (1 $0 (000 EGP))($33). Tutankhamun galleries: $30 (1 $10 (500 EGP))($50). Hours: 9:00 AM – 7:00 PM (last entry 5:00 PM). Closed Mondays.</li>
 
 <li><strong>Egyptian Museum (Tahrir Square)</strong><br>
-The historic museum downtown. Still holds many treasures, including the Royal Mummies Hall. Less crowded than GEM. Entry: EGP 300 ($10 (≈ ₽950)). Royal Mummies Room: EGP 500 ($17 (≈ ₽1 615)). Hours: 9:00 AM – 5:00 PM daily.</li>
+The historic museum downtown. Still holds many treasures, including the Royal Mummies Hall. Less crowded than GEM. Entry: $6 (300 EGP)($10). Royal Mummies Room: $10 (500 EGP)($17). Hours: 9:00 AM – 5:00 PM daily.</li>
 
 <li><strong>Khan el-Khalili Bazaar</strong><br>
 Cairo’s most famous souk, dating back to 1382. A labyrinth of alleys selling spices, jewelry, lanterns, and souvenirs. Haggle hard. Free entry. Hours: Most shops open 9:00 AM – late (10:00 PM). Closed on Fridays for prayer.</li>
 
 <li><strong>The Citadel of Saladin</strong><br>
-A medieval Islamic fortification with stunning views. Contains the beautiful Muhammad Ali Mosque (Alabaster Mosque). Entry: EGP 250 ($8 (≈ ₽760)). Hours: 8:00 AM – 5:00 PM daily.</li>
+A medieval Islamic fortification with stunning views. Contains the beautiful Muhammad Ali Mosque (Alabaster Mosque). Entry: $5 (250 EGP)($8). Hours: 8:00 AM – 5:00 PM daily.</li>
 
 <li><strong>Sultan Hassan Mosque & Madrasa</strong><br>
-Considered the most stunning example of Mamluk architecture. Built in 1356. Entry: EGP 100 ($3 (≈ ₽285)). Hours: 8:00 AM – 5:00 PM daily.</li>
+Considered the most stunning example of Mamluk architecture. Built in 1356. Entry: $2 (100 EGP)($3). Hours: 8:00 AM – 5:00 PM daily.</li>
 
 <li><strong>Al-Azhar Mosque</strong><br>
 One of the oldest mosques in the world, founded in 970 AD. A center of Islamic learning. Free entry. Hours: Open 24 hours, but non-Muslims should visit between 9:00 AM – 5:00 PM.</li>
@@ -465,25 +489,25 @@ One of the oldest mosques in the world, founded in 970 AD. A center of Islamic l
 The historic Christian quarter. Visit the Hanging Church (4th century), the Church of St. Sergius, and the Ben Ezra Synagogue. Free entry to churches. Hours: 9:00 AM – 4:00 PM daily.</li>
 
 <li><strong>The Nilometer on Rhoda Island</strong><br>
-An ancient structure used to measure the Nile’s flood levels. Located in the Umm Kolthoum Museum complex. Entry: EGP 80 ($2.50 (≈ ₽237)). Hours: 9:00 AM – 4:00 PM.</li>
+An ancient structure used to measure the Nile’s flood levels. Located in the Umm Kolthoum Museum complex. Entry: $2 (80 EGP)($2). Hours: 9:00 AM – 4:00 PM.</li>
 
 <li><strong>Museum of Islamic Art</strong><br>
-Houses one of the world’s finest collections of Islamic woodwork, metalwork, and ceramics. Entry: EGP 200 ($7 (≈ ₽665)). Hours: 9:00 AM – 5:00 PM. Closed Fridays.</li>
+Houses one of the world’s finest collections of Islamic woodwork, metalwork, and ceramics. Entry: $4 (200 EGP)($7). Hours: 9:00 AM – 5:00 PM. Closed Fridays.</li>
 
 <li><strong>Khan el-Khalili (Souk)</strong><br>
-Already listed, but deserves a second mention for its cultural significance. Visit the famous El Fishawy café for mint tea (EGP 30 / $1 (≈ ₽95)).</li>
+Already listed, but deserves a second mention for its cultural significance. Visit the famous El Fishawy café for mint tea ($1 (30 EGP)/ $1).</li>
 
 <li><strong>Al-Muizz Street (Sharia Al-Muizz)</strong><br>
 A pedestrianized street in Islamic Cairo, lined with historic buildings, mosques, and markets. Free to walk. Hours: Best visited in the late afternoon.</li>
 
 <li><strong>Pharaonic Village</strong><br>
-A living history museum on an island in the Nile. Recreates ancient Egyptian life. Entry: EGP 400 ($13 (≈ ₽1 235)). Hours: 9:00 AM – 5:00 PM daily.</li>
+A living history museum on an island in the Nile. Recreates ancient Egyptian life. Entry: $8 (400 EGP)($13). Hours: 9:00 AM – 5:00 PM daily.</li>
 
 <li><strong>Wadi el-Hitan (Valley of the Whales)</strong><br>
-A UNESCO World Heritage site in the Western Desert, about 150 km from Cairo. Contains fossil remains of early whales. Requires a full-day tour. Tour price: approx. $80 (≈ ₽7 600)–$120 (≈ ₽11 400) per person including transport.</li>
+A UNESCO World Heritage site in the Western Desert, about 150 km from Cairo. Contains fossil remains of early whales. Requires a full-day tour. Tour price: approx. $80–$120per person including transport.</li>
 
 <li><strong>City of the Dead (Al-Qarafa)</strong><br>
-A vast historic cemetery where people live among the tombs. A controversial but fascinating glimpse into Cairo’s unique social fabric. Best visited with a guide. Tours: approx. $30 (≈ ₽2 850) per person.</li>
+A vast historic cemetery where people live among the tombs. A controversial but fascinating glimpse into Cairo’s unique social fabric. Best visited with a guide. Tours: approx. $30per person.</li>
 </ol>
 
 <h2>Getting Around</h2>
@@ -491,11 +515,11 @@ A vast historic cemetery where people live among the tombs. A controversial but 
 <p>Cairo’s traffic is legendary for its congestion. Plan your routes carefully.</p>
 
 <ul>
-<li><strong>Metro (Cairo Metro):</strong> The fastest and cheapest way to travel. Three lines (1, 2, 3) covering most major areas. Trains run every 3-5 minutes. Fare: EGP 5–15 ($0.15 (≈ ₽14)–$0.50 (≈ ₽47)) per ride. Women-only cars are available. Hours: 5:30 AM – 12:00 AM.</li>
-<li><strong>Uber/Careem (Ride-sharing):</strong> Highly recommended. Avoids haggling and currency issues. A typical 5 km ride in the city costs EGP 40–80 ($1.30 (≈ ₽123)–$2.70 (≈ ₽256)). Available 24/7.</li>
-<li><strong>White Taxis (Taxis):</strong> Traditional taxis are cheap but require negotiating. Always agree on the price before getting in. Short trips: EGP 30–60 ($1 (≈ ₽95)–$2 (≈ ₽190)).</li>
-<li><strong>Public Buses:</strong> Very cheap (EGP 5–10 / $0.15 (≈ ₽14)–$0.30 (≈ ₽28)) but confusing, overcrowded, and not recommended for tourists.</li>
-<li><strong>Car Rental:</strong> Not recommended for first-time visitors due to chaotic traffic and lack of lane discipline. If you must, expect $30 (≈ ₽2 850)–$50 (≈ ₽4 750) per day for a small car. International Driving Permit required.</li>
+<li><strong>Metro (Cairo Metro):</strong> The fastest and cheapest way to travel. Three lines (1, 2, 3) covering most major areas. Trains run every 3-5 minutes. Fare: $0 (5 EGP)–15 ($0–$0) per ride. Women-only cars are available. Hours: 5:30 AM – 12:00 AM.</li>
+<li><strong>Uber/Careem (Ride-sharing):</strong> Highly recommended. Avoids haggling and currency issues. A typical 5 km ride in the city costs $1 (40 EGP)–80 ($1–$3). Available 24/7.</li>
+<li><strong>White Taxis (Taxis):</strong> Traditional taxis are cheap but require negotiating. Always agree on the price before getting in. Short trips: $1 (30 EGP)–60 ($1–$2).</li>
+<li><strong>Public Buses:</strong> Very cheap ($0 (5 EGP)–10 / $0–$0) but confusing, overcrowded, and not recommended for tourists.</li>
+<li><strong>Car Rental:</strong> Not recommended for first-time visitors due to chaotic traffic and lack of lane discipline. If you must, expect $30–$50per day for a small car. International Driving Permit required.</li>
 </ul>
 
 <h2>Where to Eat</h2>
@@ -504,10 +528,10 @@ A vast historic cemetery where people live among the tombs. A controversial but 
 
 <h3>Local Dishes to Try</h3>
 <ul>
-<li><strong>Koshari:</strong> A national dish of rice, lentils, pasta, chickpeas, topped with tomato sauce and crispy onions. Price: EGP 30–60 ($1 (≈ ₽95)–$2 (≈ ₽190)).</li>
-<li><strong>Ful Medames:</strong> Slow-cooked fava beans served with oil, lemon, and bread. A staple breakfast. Price: EGP 20–40 ($0.70 (≈ ₽66)–$1.30 (≈ ₽123)).</li>
-<li><strong>Ta’amiya (Egyptian Falafel):</strong> Made from fava beans, not chickpeas. Crispy and green inside. Price: EGP 10–20 ($0.30 (≈ ₽28)–$0.70 (≈ ₽66)).</li>
-<li><strong>Grilled Meats (Kofta, Shish Tawook):</strong> Available at every restaurant. Price: EGP 150–300 ($5 (≈ ₽475)–$10 (≈ ₽950)) for a full meal.</li>
+<li><strong>Koshari:</strong> A national dish of rice, lentils, pasta, chickpeas, topped with tomato sauce and crispy onions. Price: $1 (30 EGP)–60 ($1–$2).</li>
+<li><strong>Ful Medames:</strong> Slow-cooked fava beans served with oil, lemon, and bread. A staple breakfast. Price: $0 (20 EGP)–40 ($1–$1).</li>
+<li><strong>Ta’amiya (Egyptian Falafel):</strong> Made from fava beans, not chickpeas. Crispy and green inside. Price: $0 (10 EGP)–20 ($0–$1).</li>
+<li><strong>Grilled Meats (Kofta, Shish Tawook):</strong> Available at every restaurant. Price: $3 (150 EGP)–300 ($5–$10) for a full meal.</li>
 </ul>
 
 <h3>Recommended Restaurants</h3>
@@ -525,31 +549,31 @@ A vast historic cemetery where people live among the tombs. A controversial but 
 <td>Abou El Sid</td>
 <td>Zamalek</td>
 <td>Traditional Egyptian</td>
-<td>EGP 300–600 ($10 (≈ ₽950)–$20 (≈ ₽1 900))</td>
+<td>$6 (300 EGP)–600 ($10–$20)</td>
 </tr>
 <tr>
 <td>Koshari Abou Tarek</td>
 <td>Downtown</td>
 <td>Koshari</td>
-<td>EGP 50 ($1.70 (≈ ₽161))</td>
+<td>$1 (50 EGP)($2)</td>
 </tr>
 <tr>
 <td>Felfela</td>
 <td>Downtown</td>
 <td>Egyptian Street Food</td>
-<td>EGP 100–200 ($3 (≈ ₽285)–$7 (≈ ₽665))</td>
+<td>$2 (100 EGP)–200 ($3–$7)</td>
 </tr>
 <tr>
 <td>Sequoia</td>
 <td>Zamalek (Nile view)</td>
 <td>International/Lebanese</td>
-<td>EGP 600–1,200 ($20 (≈ ₽1 900)–$40 (≈ ₽3 800))</td>
+<td>$12 (600 EGP)–1,200 ($20–$40)</td>
 </tr>
 <tr>
 <td>El Fishawy Café</td>
 <td>Khan el-Khalili</td>
 <td>Tea & Snacks</td>
-<td>EGP 30–60 ($1 (≈ ₽95)–$2 (≈ ₽190))</td>
+<td>$1 (30 EGP)–60 ($1–$2)</td>
 </tr>
 </tbody>
 </table>
@@ -569,9 +593,9 @@ A vast historic cemetery where people live among the tombs. A controversial but 
 
 <p>Most nationalities (including US, UK, Canada, Australia, EU) can obtain a tourist visa on arrival at Cairo Airport.</p>
 <ul>
-<li><strong>Cost:</strong> $25 (≈ ₽2 375) USD (exact change required) for a single-entry 30-day visa.</li>
-<li><strong>Process:</strong> Upon landing, go to a bank kiosk before immigration, pay $25  (≈ ₽2 375) and receive a visa sticker. Affix it to a blank page in your passport.</li>
-<li><strong>Alternative:</strong> You can apply for an e-visa online before travel ($25 (≈ ₽2 375) + $5 (≈ ₽475) service fee). Recommended to avoid queues.</li>
+<li><strong>Cost:</strong> $25USD (exact change required) for a single-entry 30-day visa.</li>
+<li><strong>Process:</strong> Upon landing, go to a bank kiosk before immigration, pay $25and receive a visa sticker. Affix it to a blank page in your passport.</li>
+<li><strong>Alternative:</strong> You can apply for an e-visa online before travel ($25+ $5service fee). Recommended to avoid queues.</li>
 <li><strong>Passport Validity:</strong> Must be valid for at least 6 months from your date of entry.</li>
 <li><strong>Yellow Fever:</strong> Required if traveling from an endemic country.</li>
 </ul>
@@ -592,37 +616,37 @@ A vast historic cemetery where people live among the tombs. A controversial but 
 <tbody>
 <tr>
 <td><strong>Accommodation</strong></td>
-<td>$70 (≈ ₽6 650)–$140 (≈ ₽13 300)</td>
-<td>$350 (≈ ₽33 250)–$700 (≈ ₽66 500)</td>
-<td>$1 400 (≈ ₽133 000)–$3 000 (≈ ₽285 000)</td>
+<td>$70–$140</td>
+<td>$350–$700</td>
+<td>$1 400–$3 000</td>
 </tr>
 <tr>
 <td><strong>Food</strong></td>
-<td>$70 (≈ ₽6 650)–$140 (≈ ₽13 300)</td>
-<td>$200 (≈ ₽19 000)–$350 (≈ ₽33 250)</td>
-<td>$500 (≈ ₽47 500)–$1 000 (≈ ₽95 000)</td>
+<td>$70–$140</td>
+<td>$200–$350</td>
+<td>$500–$1 000</td>
 </tr>
 <tr>
 <td><strong>Transport</strong></td>
-<td>$30 (≈ ₽2 850)–$50 (≈ ₽4 750)</td>
-<td>$80 (≈ ₽7 600)–$150 (≈ ₽14 250)</td>
-<td>$200 (≈ ₽19 000)–$400 (≈ ₽38 000)</td>
+<td>$30–$50</td>
+<td>$80–$150</td>
+<td>$200–$400</td>
 </tr>
 <tr>
 <td><strong>Attractions</strong></td>
-<td>$50 (≈ ₽4 750)–$100 (≈ ₽9 500)</td>
-<td>$150 (≈ ₽14 250)–$250 (≈ ₽23 750)</td>
-<td>$300 (≈ ₽28 500)–$500 (≈ ₽47 500)</td>
+<td>$50–$100</td>
+<td>$150–$250</td>
+<td>$300–$500</td>
 </tr>
 <tr>
 <td><strong>Total (7 days)</strong></td>
-<td><strong>$220 (≈ ₽20 900)–$430 (≈ ₽40 850)</strong></td>
-<td><strong>$780 (≈ ₽74 100)–$1 450 (≈ ₽137 750)</strong></td>
-<td><strong>$2 400 (≈ ₽228 000)–$4 900 (≈ ₽465 500)</strong></td>
+<td><strong>$220–$430</strong></td>
+<td><strong>$780–$1 450</strong></td>
+<td><strong>$2 400–$4 900</strong></td>
 </tr>
 </tbody>
 </table>
-<p><em>Note: This excludes international flights. Budget travelers can survive on $30 (≈ ₽2 850)–$40 (≈ ₽3 800)/day. Mid-range travelers enjoy comfort and guided tours. Luxury includes 5-star hotels and fine dining.</em></p>
+<p><em>Note: This excludes international flights. Budget travelers can survive on $30–$40/day. Mid-range travelers enjoy comfort and guided tours. Luxury includes 5-star hotels and fine dining.</em></p>
 
 <h2>10 Travel Tips for First-Time Visitors</h2>
 
@@ -734,6 +758,7 @@ A vast historic cemetery where people live among the tombs. A controversial but 
                         <option value="uae">UAE</option>
                         <option value="indonesia">Indonesia</option>
                         <option value="china">China (Hainan)</option>
+                        <option value="maldives">Maldives</option>
                         <option value="other">Other / Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -762,6 +787,7 @@ A vast historic cemetery where people live among the tombs. A controversial but 
                 <li><a href="/en/uae/index.html">UAE</a></li>
                 <li><a href="/en/indonesia/index.html">Indonesia</a></li>
                 <li><a href="/en/china/index.html">China (Hainan)</a></li>
+                <li><a href="/en/maldives/index.html">Maldives</a></li>
             </ul>
         </div>
         <div>
@@ -779,8 +805,9 @@ A vast historic cemetery where people live among the tombs. A controversial but 
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
 
 </body>
 </html>

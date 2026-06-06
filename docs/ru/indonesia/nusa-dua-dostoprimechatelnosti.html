@@ -7,8 +7,8 @@
     <meta name="description" content="Что посмотреть в Нуса-Дуа: 15 лучших мест 2026 Нуса-Дуа — это элитный курортный район на юге Бали, известный своими роскошными отелями, белоснежными пляжами ...">
 
     <link rel="alternate" hreflang="ru" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-dostoprimechatelnosti.html">
-    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-dostoprimechatelnosti.html">
+    <link rel="alternate" hreflang="en" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-things-to-do.html">
+    <link rel="alternate" hreflang="x-default" href="https://ANTONDrakon.github.io/travel-content-site/en/indonesia/nusa-dua-things-to-do.html">
 
     
     <link rel="canonical" href="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-dostoprimechatelnosti.html">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="Что посмотреть в Нуса-Дуа: 15 лучших мест 2026">
     <meta property="og:description" content="Что посмотреть в Нуса-Дуа: 15 лучших мест 2026 Нуса-Дуа — это элитный курортный район на юге Бали, известный своими роскошными отелями, белоснежными пляжами ...">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/">
+    <meta property="og:url" content="https://ANTONDrakon.github.io/travel-content-site/ru/indonesia/nusa-dua-dostoprimechatelnosti.html">
     <meta property="og:locale" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -225,6 +225,17 @@
         .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
+        /* Back button */
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 22px; border: 1.5px solid var(--ink);
+            border-radius: 50px; color: var(--ink); font-size: 14px; font-weight: 500;
+            text-decoration: none; letter-spacing: -0.01em;
+            transition: all 0.2s; cursor: pointer; background: transparent;
+            margin-bottom: 24px;
+        }
+        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
@@ -243,6 +254,20 @@
             line-height: 38px; animation: bounce 2s infinite; cursor: pointer;
         }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+        /* Fixed action buttons */
+        .fixed-buttons {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            display: flex; flex-direction: column; gap: 8px; align-items: flex-end;
+        }
+        .fixed-btn {
+            width: 44px; height: 44px; border-radius: 50%;
+            border: 1.5px solid var(--vermillion); background: var(--bg);
+            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s; text-decoration: none;
+        }
+        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -267,13 +292,12 @@
             header { padding: 10px 12px; }
             .wordmark { font-size: 16px; }
             .nav-pill { padding: 6px 12px; font-size: 12px; }
+            .fixed-btn { width: 40px; height: 40px; font-size: 18px; }
+            .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
         img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
         img[src*="unsplash"] { min-height: 200px; }
-        img[src*="unsplash"]:not([src]):after,
-        img[src*="unsplash"][src=""],
-        img[src*="unsplash"][src="#"] {}
     </style>
 
     <script>
@@ -309,7 +333,7 @@
 <!-- NAV -->
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
-        <div></div>
+        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Назад">← Назад</a></div>
         <a href="/ru/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
             <a href="/en/indonesia/nusa-dua-things-to-do.html" class="nav-pill nav-pill-outline">EN</a>
@@ -339,7 +363,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&amp;q=80');min-height:380px;">
+<div class="hero-section" style="background-image:url('/assets/cities/nusa-dua.webp');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <div style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;">Что посмотреть в Нуса-Дуа: 15 лучших мест 2026</div>
@@ -363,15 +387,14 @@
 <p>Нуса-Дуа — это элитный курортный район на юге Бали, известный своими роскошными отелями, белоснежными пляжами и уникальными культурными достопримечательностями. В 2026 году регион продолжает привлекать путешественников, которые ищут сочетание спокойного отдыха и насыщенной экскурсионной программы. Здесь вы найдете не только пятизвездочные курорты, но и древние храмы, живописные утесы и современные культурные центры. Благодаря хорошо развитой инфраструктуре и близости к аэропорту Нгурах-Рай (всего 15 километров), Нуса-Дуа идеально подходит для первого знакомства с Бали. В этой статье мы собрали 15 лучших мест, которые стоит посетить в 2026 году, с точными ценами, часами работы и практическими советами.</p>
 
 <h2>15 лучших достопримечательностей</h2>
-<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80" alt="Attraction" loading="lazy" style="width:100%;max-height:400px;object-fit:cover;margin:16px 0;">
 
 <h3>1. Храм Пура Лухур Улувату</h3>
 <p>Расположенный на вершине 70-метрового утеса, храм Улувату является одним из шести ключевых храмов Бали, охраняющих остров от злых духов. Построенный в XI веке, он предлагает захватывающий вид на Индийский океан и знаменитые закаты. В 2026 году храм остается обязательным пунктом для посещения, особенно во время традиционного танца Кечак, который проводится каждый вечер.</p>
 <ul>
-<li><strong>Цена билета:</strong> 50 000 IDR (около 310 рублей) для взрослых.</li>
+<li><strong>Цена билета:</strong>₽300 (50 ₽0 (000 IDR)) (около 310 рублей) для взрослых.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 07:00 до 19:00.</li>
-<li><strong>Как добраться:</strong> На такси из Нуса-Дуа (30 минут, около 150 000 IDR) или на арендованном скутере.</li>
-<li><strong>Совет:</strong> Приходите за час до заката, чтобы занять хорошее место для танца Кечак (дополнительно 100 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси из Нуса-Дуа (30 минут, около₽900 (150 ₽0 (000 IDR))) или на арендованном скутере.</li>
+<li><strong>Совет:</strong> Приходите за час до заката, чтобы занять хорошее место для танца Кечак (дополнительно₽600 (100 ₽0 (000 IDR))).</li>
 </ul>
 
 <h3>2. Пляж Геринг</h3>
@@ -379,25 +402,25 @@
 <ul>
 <li><strong>Цена билета:</strong> Бесплатно.</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
-<li><strong>Как добраться:</strong> Пешком от отелей в районе BTDC (Bali Tourism Development Corporation) или на такси за 50 000 IDR.</li>
+<li><strong>Как добраться:</strong> Пешком от отелей в районе BTDC (Bali Tourism Development Corporation) или на такси за₽300 (50 ₽0 (000 IDR)).</li>
 <li><strong>Совет:</strong> Возьмите с собой маску для снорклинга — в 50 метрах от берега есть небольшие коралловые сады.</li>
 </ul>
 
 <h3>3. Культурный парк GWK (Garuda Wisnu Kencana)</h3>
 <p>Этот парк посвящен индуистской мифологии и знаменит 122-метровой статуей бога Вишну, сидящего на Гаруде. Открытый в 2018 году, GWK стал символом современного Бали. В 2026 году здесь регулярно проводятся фестивали искусств, а смотровая площадка на высоте 75 метров предлагает панорамный вид на Нуса-Дуа и океан.</p>
 <ul>
-<li><strong>Цена билета:</strong> 125 000 IDR (около 780 рублей) для взрослых.</li>
+<li><strong>Цена билета:</strong>₽750 (125 ₽0 (000 IDR)) (около 780 рублей) для взрослых.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 22:00.</li>
-<li><strong>Как добраться:</strong> На такси из центра Нуса-Дуа (20 минут, около 100 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси из центра Нуса-Дуа (20 минут, около₽600 (100 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Посетите парк вечером, чтобы увидеть световое шоу на статуе в 19:00.</li>
 </ul>
 
 <h3>4. Водный парк Waterbom Bali</h3>
 <p>Один из лучших аквапарков Азии, расположенный в 10 километрах от Нуса-Дуа в Куте. В 2026 году здесь открыты 5 новых горок, включая экстремальную "Boomerang" с углом спуска 60 градусов. Парк занимает 3,8 гектара и предлагает зоны для детей и взрослых.</p>
 <ul>
-<li><strong>Цена билета:</strong> От 450 000 IDR (около 2800 рублей) для взрослых в будни.</li>
+<li><strong>Цена билета:</strong> От₽2 700 (450 ₽0 (000 IDR)) (около 2800 рублей) для взрослых в будни.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 09:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На такси (30 минут, около 200 000 IDR) или на шаттле от отелей.</li>
+<li><strong>Как добраться:</strong> На такси (30 минут, около₽1 200 (200 ₽0 (000 IDR))) или на шаттле от отелей.</li>
 <li><strong>Совет:</strong> Покупайте билеты онлайн за 2 дня — скидка до 20%.</li>
 </ul>
 
@@ -407,15 +430,15 @@
 <li><strong>Цена билета:</strong> Бесплатно (пожертвования приветствуются).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 17:00.</li>
 <li><strong>Как добраться:</strong> Пешком от отелей BTDC (10 минут).</li>
-<li><strong>Совет:</strong> Одевайтесь скромно — саронг можно взять напрокат на входе за 10 000 IDR.</li>
+<li><strong>Совет:</strong> Одевайтесь скромно — саронг можно взять напрокат на входе за₽60 (10 ₽0 (000 IDR)).</li>
 </ul>
 
 <h3>6. Музей Пасифик</h3>
 <p>Музей Пасифик — это уникальное собрание артефактов из стран Азии и Тихоокеанского региона, включая старинные карты, текстиль и оружие. Основанный в 2006 году, он насчитывает более 2000 экспонатов. В 2026 году здесь открыта новая выставка, посвященная морским экспедициям XVII века.</p>
 <ul>
-<li><strong>Цена билета:</strong> 100 000 IDR (около 620 рублей).</li>
+<li><strong>Цена билета:</strong>₽600 (100 ₽0 (000 IDR)) (около 620 рублей).</li>
 <li><strong>Часы работы:</strong> Вторник-воскресенье с 09:00 до 17:00.</li>
-<li><strong>Как добраться:</strong> На такси от пляжа Геринг (5 минут, около 50 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси от пляжа Геринг (5 минут, около₽300 (50 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Сочетайте посещение с прогулкой по соседнему парку "Bali Collection".</li>
 </ul>
 
@@ -425,15 +448,15 @@
 <li><strong>Цена билета:</strong> Бесплатно.</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
 <li><strong>Как добраться:</strong> Пешком от любого отеля в BTDC.</li>
-<li><strong>Совет:</strong> Приходите до 09:00, чтобы занять лежак бесплатно (после 10:00 — платный прокат от 50 000 IDR).</li>
+<li><strong>Совет:</strong> Приходите до 09:00, чтобы занять лежак бесплатно (после 10:00 — платный прокат от₽300 (50 ₽0 (000 IDR))).</li>
 </ul>
 
 <h3>8. Храм Пура Лемпуянг</h3>
 <p>Расположенный в 25 километрах от Нуса-Дуа, этот храм известен как "Храм на облаках" из-за его расположения на высоте 900 метров. Построенный в XI веке, он окружен густыми джунглями и предлагает потрясающие виды на остров. В 2026 году храм популярен для утренних туров, чтобы увидеть восход солнца.</p>
 <ul>
-<li><strong>Цена билета:</strong> 75 000 IDR (около 470 рублей).</li>
+<li><strong>Цена билета:</strong>₽450 (75 ₽0 (000 IDR)) (около 470 рублей).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 06:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На такси (1 час, около 300 000 IDR) или с экскурсией.</li>
+<li><strong>Как добраться:</strong> На такси (1 час, около₽1 800 (300 ₽0 (000 IDR))) или с экскурсией.</li>
 <li><strong>Совет:</strong> Возьмите теплую одежду — на вершине температура может опускаться до 18°C.</li>
 </ul>
 
@@ -449,9 +472,9 @@
 <h3>10. Пляж Пандава</h3>
 <p>Этот скрытый пляж находится в 15 километрах от Нуса-Дуа и известен своими белыми скалами и бирюзовой водой. Доступ к нему — по крутой лестнице из 300 ступеней. В 2026 году пляж оборудован новыми кафе и зонами для кемпинга.</p>
 <ul>
-<li><strong>Цена билета:</strong> 10 000 IDR (около 60 рублей) за вход.</li>
+<li><strong>Цена билета:</strong>₽60 (10 ₽0 (000 IDR)) (около 60 рублей) за вход.</li>
 <li><strong>Часы работы:</strong> Ежедневно с 07:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На такси (30 минут, около 150 000 IDR) или на скутере.</li>
+<li><strong>Как добраться:</strong> На такси (30 минут, около₽900 (150 ₽0 (000 IDR))) или на скутере.</li>
 <li><strong>Совет:</strong> Берите воду и удобную обувь — спуск и подъем занимают 20 минут.</li>
 </ul>
 
@@ -469,32 +492,32 @@
 <ul>
 <li><strong>Цена билета:</strong> Бесплатно.</li>
 <li><strong>Часы работы:</strong> Круглосуточно.</li>
-<li><strong>Как добраться:</strong> На такси от храма Улувату (5 минут, около 30 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси от храма Улувату (5 минут, около₽180 (30 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Приходите в 17:30, чтобы поймать золотой час.</li>
 </ul>
 
 <h3>13. Парк "Mangrove Forest"</h3>
 <p>Этот мангровый лес площадью 600 гектаров находится на восточной окраине Нуса-Дуа. В 2026 году здесь проложена новая деревянная тропа длиной 2 километра, позволяющая наблюдать за птицами и обезьянами. Экосистема леса защищает побережье от эрозии.</p>
 <ul>
-<li><strong>Цена билета:</strong> 25 000 IDR (около 155 рублей).</li>
+<li><strong>Цена билета:</strong>₽150 (25 ₽0 (000 IDR)) (около 155 рублей).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 08:00 до 17:00.</li>
-<li><strong>Как добраться:</strong> На такси (15 минут, около 80 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси (15 минут, около₽480 (80 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Наденьте закрытую обувь и возьмите репеллент от комаров.</li>
 </ul>
 
 <h3>14. Пляж "Dreamland Beach"</h3>
-<p>Расположенный в 12 километрах от Нуса-Дуа, этот пляж славится своими волнами, идеальными для серфинга. В 2026 году здесь открыта новая школа серфинга с арендой досок от 100 000 IDR в час. Пляж окружен скалами, что создает уединенную атмосферу.</p>
+<p>Расположенный в 12 километрах от Нуса-Дуа, этот пляж славится своими волнами, идеальными для серфинга. В 2026 году здесь открыта новая школа серфинга с арендой досок от₽600 (100 ₽0 (000 IDR)) в час. Пляж окружен скалами, что создает уединенную атмосферу.</p>
 <ul>
-<li><strong>Цена билета:</strong> 15 000 IDR (около 90 рублей).</li>
+<li><strong>Цена билета:</strong>₽90 (15 ₽0 (000 IDR)) (около 90 рублей).</li>
 <li><strong>Часы работы:</strong> Ежедневно с 06:00 до 18:00.</li>
-<li><strong>Как добраться:</strong> На такси (25 минут, около 120 000 IDR).</li>
+<li><strong>Как добраться:</strong> На такси (25 минут, около₽720 (120 ₽0 (000 IDR))).</li>
 <li><strong>Совет:</strong> Для начинающих серферов лучшее время — утро, когда волны ниже.</li>
 </ul>
 
 <h3>15. Культурный центр "Bali Arts Centre"</h3>
-<p>Этот центр в Нуса-Дуа проводит мастер-классы по традиционным ремеслам, включая резьбу по дереву и батик. В 2026 году здесь проходят выставки современных балийских художников. Вход в галерею бесплатный, а мастер-классы стоят от 150 000 IDR.</p>
+<p>Этот центр в Нуса-Дуа проводит мастер-классы по традиционным ремеслам, включая резьбу по дереву и батик. В 2026 году здесь проходят выставки современных балийских художников. Вход в галерею бесплатный, а мастер-классы стоят от₽900 (150 ₽0 (000 IDR)).</p>
 <ul>
-<li><strong>Цена билета:</strong> Бесплатно (галерея), мастер-классы от 150 000 IDR.</li>
+<li><strong>Цена билета:</strong> Бесплатно (галерея), мастер-классы от₽900 (150 ₽0 (000 IDR)).</li>
 <li><strong>Часы работы:</strong> Вторник-суббота с 09:00 до 17:00.</li>
 <li><strong>Как добраться:</strong> Пешком от пляжа Нуса-Дуа (15 минут).</li>
 <li><strong>Совет:</strong> Запишитесь на мастер-класс заранее через сайт центра.</li>
@@ -503,7 +526,7 @@
 <h2>Маршруты на 1, 2 и 3 дня</h2>
 
 <h3>Маршрут на 1 день (7-8 часов)</h3>
-<p>Начните с утреннего посещения храма Пура Сада (30 минут). Затем отправляйтесь в Культурный парк GWK (2 часа). После обеда посетите пляж Геринг для отдыха (1 час). Завершите день в храме Улувату с танцем Кечак на закате (2,5 часа). Общее расстояние — 25 километров. Транспорт — такси (общая стоимость около 300 000 IDR).</p>
+<p>Начните с утреннего посещения храма Пура Сада (30 минут). Затем отправляйтесь в Культурный парк GWK (2 часа). После обеда посетите пляж Геринг для отдыха (1 час). Завершите день в храме Улувату с танцем Кечак на закате (2,5 часа). Общее расстояние — 25 километров. Транспорт — такси (общая стоимость около₽1 800 (300 ₽0 (000 IDR))).</p>
 
 <h3>Маршрут на 2 дня</h3>
 <p><strong>День 1:</strong> Утро — храм Улувату и смотровая площадка (3 часа). Обед в кафе рядом. После обеда — пляж Пандава (2 часа). Вечер — прогулка<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
@@ -592,6 +615,7 @@
                         <option value="uae">ОАЭ</option>
                         <option value="indonesia">Индонезия</option>
                         <option value="china">Китай (Хайнань)</option>
+                        <option value="maldives">Мальдивы</option>
                         <option value="other">Другое</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Ваши пожелания, даты, бюджет..."></textarea>
@@ -620,6 +644,7 @@
                 <li><a href="/ru/uae/index.html">ОАЭ</a></li>
                 <li><a href="/ru/indonesia/index.html">Индонезия</a></li>
                 <li><a href="/ru/china/index.html">Китай (Хайнань)</a></li>
+                <li><a href="/ru/maldives/index.html">Мальдивы</a></li>
             </ul>
         </div>
         <div>
@@ -637,8 +662,9 @@
     </div>
 </footer>
 
-<!-- SCROLL TO TOP -->
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--vermillion);background:var(--bg);color:var(--vermillion);font-size:22px;cursor:pointer;z-index:999;display:flex;align-items:center;justify-content:center;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='var(--bg)';this.style.color='var(--vermillion)'">↑</button>
+<div class="fixed-buttons">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
 
 </body>
 </html>
