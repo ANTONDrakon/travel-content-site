@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -391,123 +393,297 @@
 <h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Hotel Baraquda Pattaya (3 звезды, Центральная Паттайя)</h3>
-<div id="hc_826336" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hotel Baraquda Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Baraquda Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Baraquda Pattaya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_826336 .hc-slide');var d=document.querySelectorAll('#hc_826336 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_826336 .hc-slide');var d=document.querySelectorAll('#hc_826336 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_826336 .hc-slide');var d=document.querySelectorAll('#hc_826336 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Baraquda Pattaya &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_959901" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/hotel-baraquda-pattaya/01.webp" alt="Hotel Baraquda Pattaya — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/hotel-baraquda-pattaya/02.webp" alt="Hotel Baraquda Pattaya — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/hotel-baraquda-pattaya/03.webp" alt="Hotel Baraquda Pattaya — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Hotel Baraquda Pattaya</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽3 325</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_959901', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_959901 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_959901 .swiper-button-next', prevEl: '#swiper_959901 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Расположенный на улице Саут-Патак-роуд, Hotel Baraquda предлагает номера от ₽3 325 ($35)до ₽4 275 ($45)за ночь (в зависимости от сезона). Отель имеет 120 номеров с кондиционерами, мини-барами и спутниковым телевидением. На территории есть открытый бассейн, ресторан тайской кухни и небольшой фитнес-центр. Плюсы: близость к Walking Street (10 минут пешком), бесплатный Wi-Fi на всей территории, круглосуточная стойка регистрации. Минусы: завтрак не включён в стоимость (доплата ₽760 ($8)), шум от ночных клубов слышен в номерах, выходящих на улицу. В 2026 году отель получил оценку 7.8 на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>.</p>
 
 <h3>2. The Windows Hotel Pattaya (3 звезды, район Джомтьен)</h3>
-<div id="hc_246655" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Windows Hotel Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Windows Hotel Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Windows Hotel Pattaya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_246655 .hc-slide');var d=document.querySelectorAll('#hc_246655 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_246655 .hc-slide');var d=document.querySelectorAll('#hc_246655 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_246655 .hc-slide');var d=document.querySelectorAll('#hc_246655 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Windows Hotel Pattaya &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_57930" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/the-windows-hotel-pattaya/01.webp" alt="The Windows Hotel Pattaya — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/the-windows-hotel-pattaya/02.webp" alt="The Windows Hotel Pattaya — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/the-windows-hotel-pattaya/03.webp" alt="The Windows Hotel Pattaya — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Windows Hotel Pattaya</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽2 660</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_57930', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_57930 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_57930 .swiper-button-next', prevEl: '#swiper_57930 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот отель расположен в 300 метрах от пляжа Джомтьен, предлагая номера от ₽2 660 ($28)до ₽3 990 ($42)за ночь. В номерах — деревянные полы, сейфы и балконы с видом на город. На крыше — бассейн с шезлонгами и бар. Плюсы: тихая улица, идеально для семей с детьми, рядом 7-Eleven и кафе с местной едой. Минусы: старая мебель, слабая звукоизоляция, бассейн работает только до 19:00. Средний рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> — 7.5. В пик сезона (ноябрь-февраль) цены поднимаются до ₽4 560 ($48)</p>
 
 <h3>3. LK Royal Wing Hotel (3 звезды, Центральная Паттайя)</h3>
-<div id="hc_758557" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="LK Royal Wing Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="LK Royal Wing Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="LK Royal Wing Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_758557 .hc-slide');var d=document.querySelectorAll('#hc_758557 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_758557 .hc-slide');var d=document.querySelectorAll('#hc_758557 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_758557 .hc-slide');var d=document.querySelectorAll('#hc_758557 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">LK Royal Wing Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_736499" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/lk-royal-wing-hotel/01.webp" alt="LK Royal Wing Hotel — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/lk-royal-wing-hotel/02.webp" alt="LK Royal Wing Hotel — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/lk-royal-wing-hotel/03.webp" alt="LK Royal Wing Hotel — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">LK Royal Wing Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽2 850</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_736499', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_736499 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_736499 .swiper-button-next', prevEl: '#swiper_736499 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Небольшой отель на 50 номеров, расположенный на Секонд-роуд. Цены: от ₽2 850 ($30)до ₽4 750 ($50)за ночь. Номера оснащены кондиционерами, телевизорами и ванными комнатами с душем. Плюсы: бесплатный трансфер до пляжа, приветственный напиток, близость к торговому центру Central Festival (5 минут). Минусы: нет лифта (только лестницы), маленький бассейн (всего 6 метров), завтрак скудный (только тосты и джем). Рейтинг — 7.2. Рекомендуется для тех, кто ищет базовое жильё рядом с развлечениями.</p>
 
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Siam Bayview Pattaya (4 звезды, Центральная Паттайя)</h3>
-<div id="hc_529050" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Siam Bayview Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Siam Bayview Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Siam Bayview Pattaya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_529050 .hc-slide');var d=document.querySelectorAll('#hc_529050 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_529050 .hc-slide');var d=document.querySelectorAll('#hc_529050 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_529050 .hc-slide');var d=document.querySelectorAll('#hc_529050 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Siam Bayview Pattaya &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_553166" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/siam-bayview-pattaya/01.webp" alt="Siam Bayview Pattaya — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/siam-bayview-pattaya/02.webp" alt="Siam Bayview Pattaya — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/siam-bayview-pattaya/03.webp" alt="Siam Bayview Pattaya — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Siam Bayview Pattaya</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽6 175</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_553166', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_553166 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_553166 .swiper-button-next', prevEl: '#swiper_553166 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Отель на 250 номеров, расположенный на холме Пратамнак, с видом на Сиамский залив. Цены: от ₽6 175 ($65)до ₽11 400 ($120)за ночь. Номера — от 30 до 45 кв. м, с балконами, джакузи и мини-барами. Фишки: большой бассейн с водопадом, спа-центр с тайским массажем (от ₽3 800 ($40)за сеанс), рестораны с итальянской и японской кухней. Плюсы: бесплатный Wi-Fi (скорость до 50 Мбит/с), детский клуб, парковка. Минусы: пляжа нет (нужно спускаться к городскому пляжу), завтрак шведский стол однообразный. Рейтинг 8.4. В 2026 году отель обновил номера в стиле минимализм.</p>
 
 <h3>5. Garden Cliff Resort & Spa (4 звезды, район На-Клуа)</h3>
-<div id="hc_3083" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Garden Cliff Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Garden Cliff Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Garden Cliff Resort & Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_3083 .hc-slide');var d=document.querySelectorAll('#hc_3083 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_3083 .hc-slide');var d=document.querySelectorAll('#hc_3083 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_3083 .hc-slide');var d=document.querySelectorAll('#hc_3083 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Garden Cliff Resort & Spa &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_771478" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/garden-cliff-resort--spa/01.webp" alt="Garden Cliff Resort & Spa — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/garden-cliff-resort--spa/02.webp" alt="Garden Cliff Resort & Spa — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/garden-cliff-resort--spa/03.webp" alt="Garden Cliff Resort & Spa — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Garden Cliff Resort & Spa</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽7 600</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_771478', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_771478 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_771478 .swiper-button-next', prevEl: '#swiper_771478 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Расположенный прямо на пляже Вонг-Амат, этот отель предлагает номера от ₽7 600 ($80)до ₽13 300 ($140)за ночь. 180 номеров с частными террасами, кондиционерами и сейфами. Фишки: частный пляж с зонтиками, два бассейна (один с подогревом), фитнес-центр и спа с гидромассажем. Плюсы: тишина и спокойствие, подходит для пар, бесплатный завтрак шведский стол с фруктами. Минусы: удалён от центра (20 минут на тук-туке до Walking Street), дорогие напитки в баре (коктейли от ₽1 140 ($12)). Рейтинг 8.6. Цены в низкий сезон (май-октябрь) снижаются до ₽6 650 ($70)</p>
 
 <h3>6. Centara Life Maris Resort Pattaya (4 звезды, район Джомтьен)</h3>
-<div id="hc_830914" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Centara Life Maris Resort Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Centara Life Maris Resort Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Centara Life Maris Resort Pattaya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_830914 .hc-slide');var d=document.querySelectorAll('#hc_830914 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_830914 .hc-slide');var d=document.querySelectorAll('#hc_830914 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_830914 .hc-slide');var d=document.querySelectorAll('#hc_830914 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Centara Life Maris Resort Pattaya &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_700810" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/centara-life-maris-resort-pattaya/01.webp" alt="Centara Life Maris Resort Pattaya — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/centara-life-maris-resort-pattaya/02.webp" alt="Centara Life Maris Resort Pattaya — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/centara-life-maris-resort-pattaya/03.webp" alt="Centara Life Maris Resort Pattaya — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Centara Life Maris Resort Pattaya</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽5 225</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_700810', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_700810 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_700810 .swiper-button-next', prevEl: '#swiper_700810 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Современный отель на 200 номеров, открытый в 2023 году, но уже популярный. Цены: от ₽5 225 ($55)до ₽10 450 ($110)за ночь. Номера — от 25 кв. м, с умными телевизорами, Bluetooth-колонками и дождевыми душами. Фишки: rooftop-бассейн с панорамным видом, ко-воркинг-зона, ресторан с фьюжн-кухней. Плюсы: отличное соотношение цена-качество, свежий ремонт, близость к пляжу (400 метров). Минусы: нет собственного пляжа, завтрак платный (₽950 ($10)), шум от стройки по соседству (планируется до 2027 года). Рейтинг 8.2.</p>
 
 <h3>7. Holiday Inn Pattaya (4 звезды, Центральная Паттайя)</h3>
-<div id="hc_999438" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_999438 .hc-slide');var d=document.querySelectorAll('#hc_999438 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_999438 .hc-slide');var d=document.querySelectorAll('#hc_999438 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Pattaya &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_659776" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/holiday-inn-pattaya/01.webp" alt="Holiday Inn Pattaya — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/holiday-inn-pattaya/02.webp" alt="Holiday Inn Pattaya — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/holiday-inn-pattaya/03.webp" alt="Holiday Inn Pattaya — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Holiday Inn Pattaya</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽8 550</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_659776', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_659776 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_659776 .swiper-button-next', prevEl: '#swiper_659776 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Международный бренд на Бич-роуд, прямо напротив пляжа. Цены: от ₽8 550 ($90)до ₽14 250 ($150)за ночь. 350 номеров с видом на море или город, с кондиционерами, мини-барами и ваннами. Фишки: большой бассейн с горками, детский клуб, 3 ресторана (включая суши-бар), бизнес-центр. Плюсы: расположение в центре, рядом магазины и рестораны, бесплатный Wi-Fi. Минусы: пляж общественный (но лежаки отеля платные — ₽475 ($5)), парковка платная (₽950 ($10)в день), цены на еду в ресторане высокие (обед от ₽2 375 ($25)). Рейтинг 8.7. Рекомендуется для деловых поездок и семей.</p>
 
 <h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Royal Cliff Hotels Group (5 звезд, район Пратамнак)</h3>
-<div id="hc_588047" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Royal Cliff Hotels Group - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Royal Cliff Hotels Group - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Royal Cliff Hotels Group - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_588047 .hc-slide');var d=document.querySelectorAll('#hc_588047 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_588047 .hc-slide');var d=document.querySelectorAll('#hc_588047 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_588047 .hc-slide');var d=document.querySelectorAll('#hc_588047 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Royal Cliff Hotels Group &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_808572" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/royal-cliff-hotels-group/01.webp" alt="Royal Cliff Hotels Group — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/royal-cliff-hotels-group/02.webp" alt="Royal Cliff Hotels Group — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/royal-cliff-hotels-group/03.webp" alt="Royal Cliff Hotels Group — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Royal Cliff Hotels Group</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽17 100</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_808572', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_808572 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_808572 .swiper-button-next', prevEl: '#swiper_808572 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Комплекс из четырёх отелей на скале над морем, занимающий 64 акра. Цены: от ₽17 100 ($180)до ₽42 750 ($450)за ночь в зависимости от корпуса. Номера — от 40 кв. м, с мраморными ваннами, балконами и панорамными окнами. Особенности: частный пляж, 8 бассейнов, спа-центр с тайским и аюрведическим массажем, 6 ресторанов (включая мишленовский). Плюсы: уединённость, потрясающие виды, бесплатный шаттл до центра. Минусы: удалённость от развлечений (15 минут на такси), высокие цены на дополнительные услуги (спа от ₽9 500 ($100)). Рейтинг 9.1. В 2026 году открылся новый корпус Royal Wing с номерами-сьютами от ₽33 250 ($350)</p>
 
 <h3>9. Dusit Thani Pattaya (5 звезд, район На-Клуа)</h3>
-<div id="hc_572677" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Dusit Thani Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Dusit Thani Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Dusit Thani Pattaya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_572677 .hc-slide');var d=document.querySelectorAll('#hc_572677 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_572677 .hc-slide');var d=document.querySelectorAll('#hc_572677 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_572677 .hc-slide');var d=document.querySelectorAll('#hc_572677 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Dusit Thani Pattaya &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_247067" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/dusit-thani-pattaya/01.webp" alt="Dusit Thani Pattaya — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/dusit-thani-pattaya/02.webp" alt="Dusit Thani Pattaya — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/dusit-thani-pattaya/03.webp" alt="Dusit Thani Pattaya — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Dusit Thani Pattaya</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽19 000</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_247067', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_247067 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_247067 .swiper-button-next', prevEl: '#swiper_247067 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Легендарный отель на пляже Вонг-Амат, работающий с 1980-х годов, но полностью обновлённый. Цены: от ₽19 000 ($200)до ₽57 000 ($600)за ночь. 300 номеров в тайском стиле, с частными садами или балконами. Особенности: частный пляж длиной 500 метров, огромный бассейн с лагуной, спа с традиционными процедурами, ресторан с морепродуктами. Плюсы: идеально для романтического отдыха, тишина, высокий сервис. Минусы: дорогой ресторан (ужин от ₽4 750 ($50)), строгий дресс-код в некоторых зонах, удалённость от центра. Рейтинг 9.0. Цены в высокий сезон (декабрь-январь) достигают ₽66 500 ($700)</p>
 
 <h3>10. InterContinental Pattaya Resort (5 звезд, район Пратамнак)</h3>
-<div id="hc_238420" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="InterContinental Pattaya Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="InterContinental Pattaya Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_238420 .hc-slide');var d=document.querySelectorAll('#hc_238420 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_238420 .hc-slide');var d=document.querySelectorAll('#hc_238420 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">InterContinental Pattaya Resort &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_49425" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/intercontinental-pattaya-resort/01.webp" alt="InterContinental Pattaya Resort — Паттайя, Таиланд" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/intercontinental-pattaya-resort/02.webp" alt="InterContinental Pattaya Resort — интерьер, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/intercontinental-pattaya-resort/03.webp" alt="InterContinental Pattaya Resort — вид, Паттайя" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">InterContinental Pattaya Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Паттайя</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽23 750</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_49425', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_49425 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_49425 .swiper-button-next', prevEl: '#swiper_49425 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Роскошный курорт на холме с видом на залив, расположенный на 10 акрах тропического сада. Цены: от ₽23 750 ($250)до ₽76 000 ($800)за ночь. 156 номеров и вилл, с частными бассейнами или джакузи, смарт-управлением и премиум-мини-барами. Особенности: частный пляж, спа с хаммамом, 2 ресторана (гастрономический и тайский), бесконечный бассейн. Плюсы: эксклюзивность, консьерж-сервис, бесплатный трансфер. Минусы: очень высокие цены, минимальный срок бронирования — 2 ночи, нет детских программ. Рейтинг 9.3. В 2026 году отель получил награду World Travel Awards как лучший курорт Таиланда.</p>
 
 <h2>Как выбрать район</h2>

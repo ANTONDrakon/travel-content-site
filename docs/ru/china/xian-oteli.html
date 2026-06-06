@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,25 +392,61 @@
 <h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Xi'an Yimin Hostel (улица Бэйдацзе, 127)</h3>
-<div id="hc_404461" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Xi'an Yimin Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Xi'an Yimin Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_404461 .hc-slide');var d=document.querySelectorAll('#hc_404461 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_404461 .hc-slide');var d=document.querySelectorAll('#hc_404461 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Xi'an Yimin Hostel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_649950" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-yimin-hostel/01.webp" alt="Xi'an Yimin Hostel — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-yimin-hostel/02.webp" alt="Xi'an Yimin Hostel — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-yimin-hostel/03.webp" alt="Xi'an Yimin Hostel — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Xi'an Yimin Hostel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽3 610</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_649950', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_649950 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_649950 .swiper-button-next', prevEl: '#swiper_649950 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот хостел — настоящая находка для тех, кто хочет почувствовать дух старого Сианя. Расположен прямо у Южных ворот городской стены, так что утром вы можете выбежать на пробежку по стене (да, это реально!). Номера простые, но чистые: двухъярусные кровати, кондиционер, общая ванная. Зато общая зона — с чаем и настольными играми — становится местом встречи путешественников со всего мира. Цена: от ₽3 610 ($38)за ночь в общем номере и ₽5 225 ($55)за приватный. Плюсы: центр, дружелюбный персонал, бесплатный завтрак (рисовая каша с яйцом). Минусы: шумно по вечерам (рядом бар), слабый Wi-Fi на втором этаже.</p>
 
 <h3>2. Hanting Hotel (Xi'an Bell Tower Branch, улица Дундацзе, 45)</h3>
-<div id="hc_980328" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Hanting Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hanting Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hanting Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_980328 .hc-slide');var d=document.querySelectorAll('#hc_980328 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_980328 .hc-slide');var d=document.querySelectorAll('#hc_980328 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_980328 .hc-slide');var d=document.querySelectorAll('#hc_980328 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hanting Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_841793" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/hanting-hotel/01.webp" alt="Hanting Hotel — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/hanting-hotel/02.webp" alt="Hanting Hotel — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/hanting-hotel/03.webp" alt="Hanting Hotel — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Hanting Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽4 370</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_841793', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_841793 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_841793 .swiper-button-next', prevEl: '#swiper_841793 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Сеть Hanting — это как «Ибис» в Китае: предсказуемо, но надежно. Этот филиал — в двух шагах от Колокольной башни, так что вы будете слышать бой курантов (не пугайтесь, они не громкие). Номера компактные, с двуспальной кроватью, телевизором и чайником. Ванная — совмещенная, но вода горячая и напор отличный. Цена: ₽4 370 ($46)за стандартный номер. Плюсы: идеальное расположение, круглосуточная стойка, рядом метро. Минусы: завтрак отдельно (₽570 ($6)), нет халатов, окна выходят на шумную улицу (берите беруши).</p>
 
 <h3>3. 7 Days Inn (Xi'an Muslim Quarter, улица Хуаньчэн, 12)</h3>
@@ -417,85 +455,208 @@
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Grand Noble Hotel (улица Чжанба, 88)</h3>
-<div id="hc_242631" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Grand Noble Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Grand Noble Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Grand Noble Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_242631 .hc-slide');var d=document.querySelectorAll('#hc_242631 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_242631 .hc-slide');var d=document.querySelectorAll('#hc_242631 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_242631 .hc-slide');var d=document.querySelectorAll('#hc_242631 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grand Noble Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_568661" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/grand-noble-hotel/01.webp" alt="Grand Noble Hotel — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/grand-noble-hotel/02.webp" alt="Grand Noble Hotel — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/grand-noble-hotel/03.webp" alt="Grand Noble Hotel — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Grand Noble Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽8 455</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_568661', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_568661 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_568661 .swiper-button-next', prevEl: '#swiper_568661 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот отель — как добротный китайский сериал: не хватает звезд с неба, но все на своих местах. Номера просторные (от 30 кв.м), с коврами, письменным столом и мини-баром. Ванная — с ванной (редкость для Китая!). Завтрак — шведский стол с лапшой, пельменями и тостами. Цена: ₽8 455 ($89)за ночь. Фишка: бассейн на крыше с видом на город — идеально для вечернего купания после экскурсий. Еще есть фитнес-зал, но тренажеры староваты.</p>
 
 <h3>5. Xi'an Jiahao International Hotel (улица Наньдацзе, 56)</h3>
-<div id="hc_816086" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Xi'an Jiahao International Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Xi'an Jiahao International Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Xi'an Jiahao International Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_816086 .hc-slide');var d=document.querySelectorAll('#hc_816086 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_816086 .hc-slide');var d=document.querySelectorAll('#hc_816086 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_816086 .hc-slide');var d=document.querySelectorAll('#hc_816086 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Xi'an Jiahao International Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_278835" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-jiahao-international-hotel/01.webp" alt="Xi'an Jiahao International Hotel — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-jiahao-international-hotel/02.webp" alt="Xi'an Jiahao International Hotel — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-jiahao-international-hotel/03.webp" alt="Xi'an Jiahao International Hotel — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Xi'an Jiahao International Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽10 640</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_278835', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_278835 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_278835 .swiper-button-next', prevEl: '#swiper_278835 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Место для тех, кто ценит стиль. Оформлен в современном китайском стиле: бамбук, каллиграфия на стенах, деревянные панели. Номера — с панорамными окнами, откуда видно городскую стену. Ванная — с дождевым душем и косметикой от местного бренда. Цена: ₽10 640 ($112)за ночь. Фишка: ресторан с шоу-поваром, который готовит лапшу прямо перед вами — это шоу, а не просто ужин! Рекомендую попробовать их говядину с лапшой.</p>
 
 <h3>6. Holiday Inn Express Xi'an Bell Tower (улица Дундацзе, 120)</h3>
-<div id="hc_148350" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Express Xi'an Bell Tower - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Express Xi'an Bell Tower - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_148350 .hc-slide');var d=document.querySelectorAll('#hc_148350 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_148350 .hc-slide');var d=document.querySelectorAll('#hc_148350 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Express Xi'an Bell Tower &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_99863" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/holiday-inn-express-xian-bell-tower/01.webp" alt="Holiday Inn Express Xi'an Bell Tower — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/holiday-inn-express-xian-bell-tower/02.webp" alt="Holiday Inn Express Xi'an Bell Tower — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/holiday-inn-express-xian-bell-tower/03.webp" alt="Holiday Inn Express Xi'an Bell Tower — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Holiday Inn Express Xi'an Bell Tower</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽7 410</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_99863', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_99863 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_99863 .swiper-button-next', prevEl: '#swiper_99863 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Международная сеть, которая не подводит. Расположение — у Колокольной башни, так что вечером вы выходите и сразу попадаете в световое шоу. Номера стандартные: кровать, телевизор, чай/кофе. Завтрак включен — континентальный с китайским уклоном (рис, яйца, сосиски). Цена: ₽7 410 ($78)за ночь. Фишка: бизнес-центр с принтером (пригодится для билетов) и круглосуточный магазин в лобби. Минус: стены тонковаты — слышно соседей.</p>
 
 <h3>7. Xi'an Qujiang New Century Hotel (район Цюйцзян, улица Янта, 200)</h3>
-<div id="hc_7381" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Xi'an Qujiang New Century Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Xi'an Qujiang New Century Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Xi'an Qujiang New Century Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_7381 .hc-slide');var d=document.querySelectorAll('#hc_7381 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_7381 .hc-slide');var d=document.querySelectorAll('#hc_7381 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_7381 .hc-slide');var d=document.querySelectorAll('#hc_7381 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Xi'an Qujiang New Century Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_21431" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-qujiang-new-century-hotel/01.webp" alt="Xi'an Qujiang New Century Hotel — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-qujiang-new-century-hotel/02.webp" alt="Xi'an Qujiang New Century Hotel — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-qujiang-new-century-hotel/03.webp" alt="Xi'an Qujiang New Century Hotel — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Xi'an Qujiang New Century Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽12 825</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_21431', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_21431 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_21431 .swiper-button-next', prevEl: '#swiper_21431 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот отель — для тех, кто хочет тишины и природы. Расположен у озера Цюйцзян, с видом на парк. Номера — с балконами, где можно пить чай и смотреть на уток. Интерьер — европейский классический: тяжелые шторы, кованые кровати. Цена: ₽12 825 ($135)за ночь. Фишка: спа-центр с массажем (от ₽3 800 ($40)) и хамамом. Идеально после дня ходьбы по Терракотовой армии! Минус: далеко от центра (20 минут на такси).</p>
 
 <h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. The Westin Xi'an (улица Цыэн, 66)</h3>
-<div id="hc_997699" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Westin Xi'an - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Westin Xi'an - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Westin Xi'an - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_997699 .hc-slide');var d=document.querySelectorAll('#hc_997699 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_997699 .hc-slide');var d=document.querySelectorAll('#hc_997699 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_997699 .hc-slide');var d=document.querySelectorAll('#hc_997699 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Westin Xi'an &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_911054" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/the-westin-xian/01.webp" alt="The Westin Xi'an — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/the-westin-xian/02.webp" alt="The Westin Xi'an — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/the-westin-xian/03.webp" alt="The Westin Xi'an — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Westin Xi'an</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽17 955</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_911054', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_911054 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_911054 .swiper-button-next', prevEl: '#swiper_911054 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Роскошь, которая начинается с порога: мрамор, хрустальные люстры, аромат жасмина в лобби. Номера — от 45 кв.м, с кроватями Heavenly Bed (вы не захотите вставать), мраморными ванными и отдельной гардеробной. Вид — на городскую стену или внутренний двор с фонтанами. Цена: ₽17 955 ($189)за ночь. Особенности: три ресторана (китайский, итальянский, гриль), спа с бассейном и джакузи, а также — винный бар с видами на закат. Советую брать номер с завтраком — он королевский!</p>
 
 <h3>9. Shangri-La Xi'an (улица Цыэн, 88)</h3>
-<div id="hc_234816" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Shangri-La Xi'an - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Shangri-La Xi'an - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_234816 .hc-slide');var d=document.querySelectorAll('#hc_234816 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_234816 .hc-slide');var d=document.querySelectorAll('#hc_234816 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Shangri-La Xi'an &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_197090" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/shangri-la-xian/01.webp" alt="Shangri-La Xi'an — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/shangri-la-xian/02.webp" alt="Shangri-La Xi'an — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/shangri-la-xian/03.webp" alt="Shangri-La Xi'an — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Shangri-La Xi'an</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽21 375</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_197090', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_197090 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_197090 .swiper-button-next', prevEl: '#swiper_197090 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Это не отель, а оазис. Расположен в тихом районе, окружен садами с пагодами и прудами с карпами. Номера — в стиле «китайский шик»: шелк, резные ширмы, каллиграфия на стенах. Ванная — с отдельной ванной и душем, косметика L'Occitane. Цена: ₽21 375 ($225)за ночь. Особенности: чайная церемония по утрам (бесплатно), бассейн с подогревом, детский клуб. Идеально для пар или семей. Минус: завтрак не включен (₽3 325 ($35)), но он того стоит — более 100 блюд!</p>
 
 <h3>10. Xi'an City Wall Boutique Hotel (улица Хуаньчэн, 15)</h3>
-<div id="hc_724134" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Xi'an City Wall Boutique Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Xi'an City Wall Boutique Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Xi'an City Wall Boutique Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_724134 .hc-slide');var d=document.querySelectorAll('#hc_724134 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_724134 .hc-slide');var d=document.querySelectorAll('#hc_724134 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_724134 .hc-slide');var d=document.querySelectorAll('#hc_724134 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Xi'an City Wall Boutique Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_128528" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-city-wall-boutique-hotel/01.webp" alt="Xi'an City Wall Boutique Hotel — Сиань, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-city-wall-boutique-hotel/02.webp" alt="Xi'an City Wall Boutique Hotel — интерьер, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/xian/xian-city-wall-boutique-hotel/03.webp" alt="Xi'an City Wall Boutique Hotel — вид, Сиань" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Xi'an City Wall Boutique Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Сиань</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽26 505</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_128528', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_128528 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_128528 .swiper-button-next', prevEl: '#swiper_128528 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Мой личный фаворит среди люкса! Отель расположен прямо на городской стене — вы можете выйти из номера и сразу гулять по стене. Номера — в стиле «исторический шик»: кирпичные стены, антикварная мебель, современные удобства. Ванная — с гидромассажной ванной и видом на внутренний двор. Цена: ₽26 505 ($279)за ночь. Особенности: ресторан на крыше с панорамным видом, экскурсии на электроскутерах по стене, винный погреб. Это не просто отель — это опыт. Рекомендую бронировать за 2 месяца — места разлетаются!</p>
 
 <h2>Как выбрать район</h2>
@@ -503,13 +664,6 @@
 
 <h2>Советы по бронированию</h2>
 <p>Хотите сэкономить? Вот мои проверенные лайфхаки. Первое: бронируйте за 4-6 недель — цены на 20% ниже, чем за 2 дня. Второе: используйте агрегаторы вроде <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> или Ctrip (китайский сервис, часто дешевле на 10%). Третье: не берите завтрак в отеле — в Сиане уличная еда вкуснее и дешевле (попробуйте жареные пельмени за ₽190 ($2)). Четвертое: если путешествуете вдвоем, ищите номера с двумя кроватями — они часто дешевле двуспальных. И последнее: скачайте WeChat — через него можно бронировать отели напрямую, без комиссии. Удачных вам приключений в Сиане! Если что — пишите, я всегда рада помочь.<div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
-<div id="hc_838739" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия &bull; 2 photos</p></div>
         </div>
 
         

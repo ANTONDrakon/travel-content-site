@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -392,15 +394,32 @@
 <p>Поверьте моему опыту: бюджетный отдых на Мальдивах — это не миф. Да, придется пожертвовать видами на океан из окна, но вы получите чистую комнату, душ и, что важнее всего, возможность потратить сэкономленные деньги на экскурсии и свежайшие морепродукты. Вот три проверенных варианта, которые я рекомендую своим самым экономным клиентам.</p>
 
 <h3>1. The Hive Beach</h3>
-<div id="hc_71067" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="The Hive Beach - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="The Hive Beach - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Hive Beach - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_71067 .hc-slide');var d=document.querySelectorAll('#hc_71067 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_71067 .hc-slide');var d=document.querySelectorAll('#hc_71067 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_71067 .hc-slide');var d=document.querySelectorAll('#hc_71067 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Hive Beach &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_119221" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-hive-beach/01.webp" alt="The Hive Beach — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-hive-beach/02.webp" alt="The Hive Beach — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-hive-beach/03.webp" alt="The Hive Beach — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Hive Beach</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽4 275</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_119221', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_119221 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_119221 .swiper-button-next', prevEl: '#swiper_119221 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот отель на острове Хулхумале — настоящая находка для solo-путешественников и пар с ограниченным бюджетом. Расположен в 5 минутах от общественного пляжа, номера простые, но очень чистые. Завтрак включен — континентальный, но сытный. Я лично останавливалась здесь в свой первый приезд на Мальдивы и влюбилась в атмосферу: на крыше — лаунж-зона с видом на океан, где вечером собираются гости со всего мира.</p>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽4 275 ($45)(стандартный номер)</li>
@@ -409,13 +428,32 @@
 </ul>
 
 <h3>2. Marukab Plaza</h3>
-<div id="hc_553594" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Marukab Plaza - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Marukab Plaza - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_553594 .hc-slide');var d=document.querySelectorAll('#hc_553594 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_553594 .hc-slide');var d=document.querySelectorAll('#hc_553594 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Marukab Plaza &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_124491" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/marukab-plaza/01.webp" alt="Marukab Plaza — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/marukab-plaza/02.webp" alt="Marukab Plaza — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/marukab-plaza/03.webp" alt="Marukab Plaza — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Marukab Plaza</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽3 610</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_124491', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_124491 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_124491 .swiper-button-next', prevEl: '#swiper_124491 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Расположен прямо в центре Мале, в двух шагах от знаменитого рыбного рынка и парка Султана. Это семейный отель на 15 номеров, где каждый чувствует себя как дома. Номера небольшие, но есть кондиционер, телевизор и сейф. Мой любимый совет: попросите номер на верхнем этаже — оттуда открывается потрясающий вид на городские крыши и мечети.</p>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽3 610 ($38)(эконом-номер без окна)</li>
@@ -424,21 +462,33 @@
 </ul>
 
 <h3>3. Beehive Premier</h3>
-<div id="hc_593187" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Beehive Premier - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Beehive Premier - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_593187 .hc-slide');var d=document.querySelectorAll('#hc_593187 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_593187 .hc-slide');var d=document.querySelectorAll('#hc_593187 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Beehive Premier &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_728875" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/beehive-premier/01.webp" alt="Beehive Premier — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/beehive-premier/02.webp" alt="Beehive Premier — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/beehive-premier/03.webp" alt="Beehive Premier — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Beehive Premier</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽4 560</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_728875', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_728875 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_728875 .swiper-button-next', prevEl: '#swiper_728875 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Мой секретный вариант для тех, кто хочет сэкономить, но не готов терпеть неудобства. Beehive Premier находится на Хулхумале, в тихом районе, в 10 минутах от пляжа. Номера оформлены в современном стиле, есть мини-кухня в некоторых номерах. Я часто рекомендую его семьям с детьми — здесь есть детская кроватка и игровая зона в лобби.</p>
-<div id="hc_530580" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Beehive Premier находится на Хулхумале, в тихом районе, в 10 минутах от пляжа. Номера оформлены в современном стиле, есть мини-кухня в некоторых номерах. Я часто рекомендую его семьям с детьми — здесь есть детская кроватка и игровая зона в лобби. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Beehive Premier находится на Хулхумале, в тихом районе, в 10 минутах от пляжа. Номера оформлены в современном стиле, есть мини-кухня в некоторых номерах. Я часто рекомендую его семьям с детьми — здесь есть детская кроватка и игровая зона в лобби. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_530580 .hc-slide');var d=document.querySelectorAll('#hc_530580 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_530580 .hc-slide');var d=document.querySelectorAll('#hc_530580 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Beehive Premier находится на Хулхумале, в тихом районе, в 10 минутах от пляжа. Номера оформлены в современном стиле, есть мини-кухня в некоторых номерах. Я часто рекомендую его семьям с детьми — здесь есть детская кроватка и игровая зона в лобби. &bull; 2 photos</p></div>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽4 560 ($48)(студия с кухней)</li>
 <li><strong>Плюсы:</strong> тишина, наличие кухни, бесплатный трансфер от аэропорта</li>
@@ -450,40 +500,65 @@
 <p>Здесь начинается самое интересное. За эти деньги вы получаете не просто ночлег, а полноценный отдых с комфортом. В 2026 году в Мале открылось несколько новых отелей этого сегмента, и я просто в восторге от того, как вырос уровень сервиса. Выбирайте — и не прогадаете.</p>
 
 <h3>4. Samann Grand</h3>
-<div id="hc_128997" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Samann Grand - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Samann Grand - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Samann Grand - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_128997 .hc-slide');var d=document.querySelectorAll('#hc_128997 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_128997 .hc-slide');var d=document.querySelectorAll('#hc_128997 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_128997 .hc-slide');var d=document.querySelectorAll('#hc_128997 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Samann Grand &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_720186" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/samann-grand/01.webp" alt="Samann Grand — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/samann-grand/02.webp" alt="Samann Grand — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/samann-grand/03.webp" alt="Samann Grand — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Samann Grand</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽8 455</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_720186', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_720186 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_720186 .swiper-button-next', prevEl: '#swiper_720186 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Один из самых популярных вариантов среди моих клиентов. Samann Grand расположен на главной улице Мале, в 3 минутах от причала, откуда отходят лодки на курорты. Номера просторные, с большими кроватями и панорамными окнами. На крыше — бассейн с видом на океан, где можно искупаться после жаркого дня. Я обожаю их ресторан: подают лучший в городе бирьяни из тунца.</p>
-<div id="hc_94444" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="amann Grand расположен на главной улице Мале, в 3 минутах от причала, откуда отходят лодки на курорты. Номера просторные, с большими кроватями и панорамными окнами. На крыше — бассейн с видом на океан, где можно искупаться после жаркого дня. Я обожаю их ресторан: подают лучший в городе бирьяни из тунца. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="amann Grand расположен на главной улице Мале, в 3 минутах от причала, откуда отходят лодки на курорты. Номера просторные, с большими кроватями и панорамными окнами. На крыше — бассейн с видом на океан, где можно искупаться после жаркого дня. Я обожаю их ресторан: подают лучший в городе бирьяни из тунца. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="amann Grand расположен на главной улице Мале, в 3 минутах от причала, откуда отходят лодки на курорты. Номера просторные, с большими кроватями и панорамными окнами. На крыше — бассейн с видом на океан, где можно искупаться после жаркого дня. Я обожаю их ресторан: подают лучший в городе бирьяни из тунца. - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_94444 .hc-slide');var d=document.querySelectorAll('#hc_94444 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_94444 .hc-slide');var d=document.querySelectorAll('#hc_94444 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_94444 .hc-slide');var d=document.querySelectorAll('#hc_94444 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">amann Grand расположен на главной улице Мале, в 3 минутах от причала, откуда отходят лодки на курорты. Номера просторные, с большими кроватями и панорамными окнами. На крыше — бассейн с видом на океан, где можно искупаться после жаркого дня. Я обожаю их ресторан: подают лучший в городе бирьяни из тунца. &bull; 3 photos</p></div>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽8 455 ($89)(стандартный номер с завтраком)</li>
 <li><strong>Фишки:</strong> спа-центр с аюрведическими процедурами, бесплатный велопрокат, круглосуточный room service</li>
 </ul>
 
 <h3>5. The Somerset Hotel</h3>
-<div id="hc_894884" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Somerset Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Somerset Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Somerset Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_894884 .hc-slide');var d=document.querySelectorAll('#hc_894884 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_894884 .hc-slide');var d=document.querySelectorAll('#hc_894884 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_894884 .hc-slide');var d=document.querySelectorAll('#hc_894884 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Somerset Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_688091" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-somerset-hotel/01.webp" alt="The Somerset Hotel — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-somerset-hotel/02.webp" alt="The Somerset Hotel — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-somerset-hotel/03.webp" alt="The Somerset Hotel — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Somerset Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽10 640</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_688091', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_688091 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_688091 .swiper-button-next', prevEl: '#swiper_688091 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот отель — настоящая жемчужина для тех, кто ценит стиль. Расположен в тихом переулке, но в 5 минутах от центра. Интерьеры — смесь мальдивского колорита и современного минимализма: бамбуковая мебель, живые растения в холле, хлопковые полотенца. Мой личный фаворит — их завтрак: свежие фрукты, омлет по заказу и местные лепешки роши.</p>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽10 640 ($112)(делюкс-номер)</li>
@@ -491,45 +566,102 @@
 </ul>
 
 <h3>6. Hotel Jen Male</h3>
-<div id="hc_860584" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Jen Male - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Jen Male - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_860584 .hc-slide');var d=document.querySelectorAll('#hc_860584 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_860584 .hc-slide');var d=document.querySelectorAll('#hc_860584 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Jen Male &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_700089" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/hotel-jen-male/01.webp" alt="Hotel Jen Male — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/hotel-jen-male/02.webp" alt="Hotel Jen Male — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/hotel-jen-male/03.webp" alt="Hotel Jen Male — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Hotel Jen Male</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽12 160</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_700089', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_700089 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_700089 .swiper-button-next', prevEl: '#swiper_700089 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Сетевой отель, который удивил меня качеством. Hotel Jen — часть международной сети, но с местным колоритом. Расположен прямо у воды, из окон некоторых номеров видно, как причаливают гидросамолеты. Номера большие, с удобными рабочими столами — идеально для digital-номадов. В лобби есть коворкинг-зона с быстрым интернетом.</p>
-<div id="hc_882619" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hotel Jen — часть международной сети, но с местным колоритом. Расположен прямо у воды, из окон некоторых номеров видно, как причаливают гидросамолеты. Номера большие, с удобными рабочими столами — идеально для digital-номадов. В лобби есть коворкинг-зона с быстрым интернетом. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hotel Jen — часть международной сети, но с местным колоритом. Расположен прямо у воды, из окон некоторых номеров видно, как причаливают гидросамолеты. Номера большие, с удобными рабочими столами — идеально для digital-номадов. В лобби есть коворкинг-зона с быстрым интернетом. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_882619 .hc-slide');var d=document.querySelectorAll('#hc_882619 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_882619 .hc-slide');var d=document.querySelectorAll('#hc_882619 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hotel Jen — часть международной сети, но с местным колоритом. Расположен прямо у воды, из окон некоторых номеров видно, как причаливают гидросамолеты. Номера большие, с удобными рабочими столами — идеально для digital-номадов. В лобби есть коворкинг-зона с быстрым интернетом. &bull; 2 photos</p></div>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽12 160 ($128)(номер с видом на океан)</li>
 <li><strong>Фишки:</strong> фитнес-центр с панорамным окном, бизнес-центр, ресторан с международной кухней</li>
 </ul>
 
 <h3>7. Cinnamon Dhonveli Male</h3>
-<div id="hc_689374" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Cinnamon Dhonveli Male - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Cinnamon Dhonveli Male - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_689374 .hc-slide');var d=document.querySelectorAll('#hc_689374 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_689374 .hc-slide');var d=document.querySelectorAll('#hc_689374 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Cinnamon Dhonveli Male &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_716936" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/cinnamon-dhonveli-male/01.webp" alt="Cinnamon Dhonveli Male — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/cinnamon-dhonveli-male/02.webp" alt="Cinnamon Dhonveli Male — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/cinnamon-dhonveli-male/03.webp" alt="Cinnamon Dhonveli Male — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Cinnamon Dhonveli Male</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽13 775</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_716936', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_716936 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_716936 .swiper-button-next', prevEl: '#swiper_716936 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Самый новый отель в моем списке — открылся в конце 2025 года. Расположен на Хулхумале, прямо на берегу. Это не просто отель, а целый комплекс с собственным пляжем (редкость для Мале!), бассейном и тремя ресторанами. Я рекомендую его парам, которые хотят совместить городскую жизнь с пляжным отдыхом.</p>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽13 775 ($145)(номер с частичным видом на море)</li>
 <li><strong>Фишки:</strong> собственный песчаный пляж, водные виды спорта (каяки, снорклинг), детский клуб</li>
 </ul>
 
-<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <p>Если вы готовы платить за роскошь и безупречный сервис, Мале предложит вам варианты, которые не уступают курортным отелям. Здесь вы найдете спа-центры мирового уровня, рестораны с мишленовскими шеф-поварами и номера, от которых захватывает дух. Я подобрала три варианта, которые мои клиенты называют «лучшими в жизни».</p>
 
 <h3>8. Sheraton Maldives Full Moon Resort & Spa</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_324422" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/sheraton-maldives-full-moon-resort--spa/01.webp" alt="Sheraton Maldives Full Moon Resort & Spa — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/sheraton-maldives-full-moon-resort--spa/02.webp" alt="Sheraton Maldives Full Moon Resort & Spa — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/sheraton-maldives-full-moon-resort--spa/03.webp" alt="Sheraton Maldives Full Moon Resort & Spa — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sheraton Maldives Full Moon Resort & Spa</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽28 405</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_324422', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_324422 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_324422 .swiper-button-next', prevEl: '#swiper_324422 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Технически это не совсем Мале, а частный остров в 15 минутах на катере от столицы. Но я включаю его в список, потому что это идеальный вариант для тех, кто хочет люкс, но не хочет уезжать далеко от города. Отель занимает целый остров с белоснежным пляжем, виллами на воде и тропическими садами. Мой личный опыт: закат здесь — это что-то невероятное, особенно если смотреть с причала.</p>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽28 405 ($299)(вилла с видом на сад)</li>
@@ -537,6 +669,32 @@
 </ul>
 
 <h3>9. The Residence Male</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_512839" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-residence-male/01.webp" alt="The Residence Male — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-residence-male/02.webp" alt="The Residence Male — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/the-residence-male/03.webp" alt="The Residence Male — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Residence Male</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽32 775</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_512839', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_512839 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_512839 .swiper-button-next', prevEl: '#swiper_512839 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Бутик-отель в самом сердце Мале, который переопределяет понятие городской роскоши. Всего 12 номеров, каждый оформлен вручную мальдивскими мастерами: резные двери, шелковые шторы, ванны из мрамора. На крыше — бесконечный бассейн с видом на Индийский океан и город. Я рекомендую его медовому месяцу — здесь невероятно романтично.</p>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽32 775 ($345)(люкс с террасой)</li>
@@ -544,6 +702,32 @@
 </ul>
 
 <h3>10. OZEN Reserve Bolifushi</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_413298" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/male/ozen-reserve-bolifushi/01.webp" alt="OZEN Reserve Bolifushi — Мале, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/ozen-reserve-bolifushi/02.webp" alt="OZEN Reserve Bolifushi — интерьер, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/male/ozen-reserve-bolifushi/03.webp" alt="OZEN Reserve Bolifushi — вид, Мале" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">OZEN Reserve Bolifushi</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Мале</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽46 455</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_413298', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_413298 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_413298 .swiper-button-next', prevEl: '#swiper_413298 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Еще один островной курорт в 20 минутах от Мале. OZEN — это уровень «всё включено» премиум-класса. Здесь вы получаете не просто номер, а целый опыт: частные бассейны, мини-бары с премиальным алкоголем, спа-процедуры и даже собственный дворецкий. Я часто отправляю сюда клиентов, которые хотят отпраздновать юбилей или просто побаловать себя.</p>
 <ul>
 <li><strong>Цена за ночь:</strong> от ₽46 455 ($489)(вилла с бассейном)</li>

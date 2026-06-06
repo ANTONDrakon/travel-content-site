@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,108 +392,110 @@
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. The Bund Riverside Hostel</h3>
-<div id="hc_383731" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="The Bund Riverside Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="The Bund Riverside Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_383731 .hc-slide');var d=document.querySelectorAll('#hc_383731 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_383731 .hc-slide');var d=document.querySelectorAll('#hc_383731 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Bund Riverside Hostel &bull; 2 photos</p></div>
 <p>Nestled in a narrow lane just a 10-minute walk from the Bund, this hostel feels like a secret hideout. The staff greet you with warm smiles and maps, and the common room has a cozy vibe with vintage Shanghai posters. Dorm beds are clean, with sturdy lockers, and private rooms offer basic but comfy mattresses. I recommend grabbing a spot on the rooftop terrace at sunset—it’s a budget-friendly front-row seat to Pudong’s glittering skyline. Prices: $38/night for a dorm bed, $47/night for a private room. Pros: Incredible location, friendly atmosphere, free walking tours. Cons: Thin walls, shared bathrooms can get crowded, no elevator.</p>
 
 <h3>2. Jinjiang Inn (Nanjing Road)</h3>
-<div id="hc_200468" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Jinjiang Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Jinjiang Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_200468 .hc-slide');var d=document.querySelectorAll('#hc_200468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_200468 .hc-slide');var d=document.querySelectorAll('#hc_200468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jinjiang Inn &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_622766" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/jinjiang-inn-haikou/01.webp" alt="Jinjiang Inn Haikou — Haikou, China" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/jinjiang-inn-haikou/02.webp" alt="Jinjiang Inn Haikou — interior, Haikou" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/jinjiang-inn-haikou/03.webp" alt="Jinjiang Inn Haikou — view, Haikou" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Jinjiang Inn Haikou</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Haikou</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽3 325</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_622766', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_622766 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_622766 .swiper-button-next', prevEl: '#swiper_622766 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>This chain hotel is a lifesaver for solo travelers or backpackers. Located on a bustling street near Nanjing Road’s shopping frenzy, it’s a no-frills gem. Rooms are small but spotless, with a tiny desk and a TV that gets only Chinese channels. The bed is surprisingly firm—some love it, others miss a plush pillow. Breakfast is a simple affair of congee and steamed buns, but it fills you up. Prices: $44/night. Pros: Super central, reliable cleanliness, 24-hour front desk. Cons: No character, street noise can seep in, no gym or extras.</p>
 
 <h3>3. Shanghai Old Town Guesthouse</h3>
-<div id="hc_535312" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Shanghai Old Town Guesthouse - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Shanghai Old Town Guesthouse - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_535312 .hc-slide');var d=document.querySelectorAll('#hc_535312 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_535312 .hc-slide');var d=document.querySelectorAll('#hc_535312 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Shanghai Old Town Guesthouse &bull; 2 photos</p></div>
 <p>Tucked in the historic Old Town near the Yuyuan Garden, this guesthouse feels like stepping back in time. The building has creaky wooden floors and a tiny courtyard with a goldfish pond. Rooms are basic—a bed, a lamp, a fan—but the charm is off the charts. The owner, a retired teacher, offers homemade dumplings for breakfast. It’s not for everyone, but for travelers who crave authenticity, it’s magic. Prices: $35/night. Pros: Unique atmosphere, close to Yuyuan, very cheap. Cons: No air conditioning in some rooms, shared bathroom, no Wi-Fi in rooms.</p>
 
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. The Waterhouse at South Bund</h3>
-<div id="hc_437675" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Waterhouse at South Bund - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Waterhouse at South Bund - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Waterhouse at South Bund - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_437675 .hc-slide');var d=document.querySelectorAll('#hc_437675 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_437675 .hc-slide');var d=document.querySelectorAll('#hc_437675 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_437675 .hc-slide');var d=document.querySelectorAll('#hc_437675 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Waterhouse at South Bund &bull; 3 photos</p></div>
 <p>This boutique hotel is a converted 1930s warehouse, and it oozes industrial chic. Exposed brick walls, dark wood beams, and floor-to-ceiling windows overlooking the Huangpu River. Rooms are spacious with rainfall showers and Nespresso machines. The rooftop bar, “Above the Bund,” is a local favorite for cocktails and views. I recommend booking a river-view room—the sunrise over Pudong is worth every penny. Prices: $112/night. Highlights: Unique design, excellent restaurant, free bike rentals.</p>
-<div id="hc_855693" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="sunrise over Pudong is worth every penny. Prices: $112/night. Highlights: Unique design, excellent restaurant, free bike rentals. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="sunrise over Pudong is worth every penny. Prices: $112/night. Highlights: Unique design, excellent restaurant, free bike rentals. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_855693 .hc-slide');var d=document.querySelectorAll('#hc_855693 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_855693 .hc-slide');var d=document.querySelectorAll('#hc_855693 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">sunrise over Pudong is worth every penny. Prices: $112/night. Highlights: Unique design, excellent restaurant, free bike rentals. &bull; 2 photos</p></div>
 
 <h3>2. Holiday Inn Express (Jing’an)</h3>
-<div id="hc_605642" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Express - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Express - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_605642 .hc-slide');var d=document.querySelectorAll('#hc_605642 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_605642 .hc-slide');var d=document.querySelectorAll('#hc_605642 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Express &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_855740" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/holiday-inn-express-dongzhimen/01.webp" alt="Holiday Inn Express Dongzhimen — Beijing, China" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/holiday-inn-express-dongzhimen/02.webp" alt="Holiday Inn Express Dongzhimen — interior, Beijing" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/holiday-inn-express-dongzhimen/03.webp" alt="Holiday Inn Express Dongzhimen — view, Beijing" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Holiday Inn Express Dongzhimen</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Beijing</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽6 840</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_855740', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_855740 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_855740 .swiper-button-next', prevEl: '#swiper_855740 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>For reliability and comfort, this is my go-to for business travelers or families. Located in Jing’an, it’s close to the temple and endless dining options. Rooms are modern with crisp white linens, a work desk, and a flat-screen TV. The free breakfast buffet has both Western and Chinese options—pancakes and congee side by side. The staff speak excellent English and are quick to help with taxi bookings. Prices: $78/night. Highlights: Free Wi-Fi, gym, laundry service.</p>
 
 <h3>3. The Middle House</h3>
-<div id="hc_969390" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Middle House - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Middle House - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Middle House - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_969390 .hc-slide');var d=document.querySelectorAll('#hc_969390 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_969390 .hc-slide');var d=document.querySelectorAll('#hc_969390 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_969390 .hc-slide');var d=document.querySelectorAll('#hc_969390 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Middle House &bull; 3 photos</p></div>
 <p>This is a hidden gem in the Taikoo Hui complex, blending Italian design with Shanghai soul. Rooms are minimalist but warm—think soft gray walls, a bathtub with a view, and handmade ceramics. The pool is stunning, with a glass ceiling that lets in natural light. The restaurant, “Sui,” serves modern Shanghainese dishes I still dream about. It’s a bit pricier for mid-range, but the value is incredible. Prices: $142/night. Highlights: Pool, spa, exceptional service, art-filled lobby.</p>
 
 <h3>4. The PuLi Hotel and Spa</h3>
-<div id="hc_273956" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The PuLi Hotel and Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The PuLi Hotel and Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The PuLi Hotel and Spa - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_273956 .hc-slide');var d=document.querySelectorAll('#hc_273956 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_273956 .hc-slide');var d=document.querySelectorAll('#hc_273956 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_273956 .hc-slide');var d=document.querySelectorAll('#hc_273956 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The PuLi Hotel and Spa &bull; 3 photos</p></div>
 <p>Located in the French Concession, this hotel is an oasis of calm. The lobby has a reflecting pool and bamboo garden, and rooms feel like zen retreats with dark wood, silk accents, and heated floors. The spa is top-notch—try the bamboo massage. The concierge can arrange private tours of the Concession’s hidden lanes. It’s perfect for couples or solo travelers seeking luxury without the luxury price tag. Prices: $135/night. Highlights: Spa, garden views, free afternoon tea.</p>
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. The Peninsula Shanghai</h3>
-<div id="hc_262459" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="The Peninsula Shanghai - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The Peninsula Shanghai - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_262459 .hc-slide');var d=document.querySelectorAll('#hc_262459 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_262459 .hc-slide');var d=document.querySelectorAll('#hc_262459 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Peninsula Shanghai &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_110845" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/shanghai/the-peninsula-shanghai/01.webp" alt="The Peninsula Shanghai — Shanghai, China" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/shanghai/the-peninsula-shanghai/02.webp" alt="The Peninsula Shanghai — interior, Shanghai" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/shanghai/the-peninsula-shanghai/03.webp" alt="The Peninsula Shanghai — view, Shanghai" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Peninsula Shanghai</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Shanghai</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽42 750</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_110845', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_110845 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_110845 .swiper-button-next', prevEl: '#swiper_110845 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>This is the crown jewel of the Bund. Housed in a 1920s art deco building, the Peninsula oozes old-world glamour. Rooms are enormous with marble bathrooms, chandeliers, and windows framing Pudong’s skyline. The service is impeccable—staff remember your name and tea preference. The rooftop bar, “Sir Elly’s,” has live jazz and the best cocktails in town. I recommend the afternoon tea in the lobby; it’s a ritual. Prices: $415/night. Features: Rolls-Royce airport transfers, private cinema, spa with a pool.</p>
-<div id="hc_973704" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Peninsula oozes old-world glamour. Rooms are enormous with marble bathrooms, chandeliers, and windows framing Pudong’s skyline. The service is impeccable—staff remember your name and tea preference. The rooftop bar, “Sir Elly’s,” has live jazz and the best cocktails in town. I recommend the afternoon tea in the lobby; it’s a ritual. Prices: $415/night. Features: Rolls-Royce airport transfers, private cinema, spa with a pool. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Peninsula oozes old-world glamour. Rooms are enormous with marble bathrooms, chandeliers, and windows framing Pudong’s skyline. The service is impeccable—staff remember your name and tea preference. The rooftop bar, “Sir Elly’s,” has live jazz and the best cocktails in town. I recommend the afternoon tea in the lobby; it’s a ritual. Prices: $415/night. Features: Rolls-Royce airport transfers, private cinema, spa with a pool. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_973704 .hc-slide');var d=document.querySelectorAll('#hc_973704 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_973704 .hc-slide');var d=document.querySelectorAll('#hc_973704 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Peninsula oozes old-world glamour. Rooms are enormous with marble bathrooms, chandeliers, and windows framing Pudong’s skyline. The service is impeccable—staff remember your name and tea preference. The rooftop bar, “Sir Elly’s,” has live jazz and the best cocktails in town. I recommend the afternoon tea in the lobby; it’s a ritual. Prices: $415/night. Features: Rolls-Royce airport transfers, private cinema, spa with a pool. &bull; 2 photos</p></div>
 
 <h3>2. The Ritz-Carlton Shanghai, Pudong</h3>
 <p>Perched on the 52nd floor of the IFC Tower, this hotel is a modern marvel. Rooms are sleek with floor-to-ceiling windows, and the infinity pool on the 55th floor feels like swimming in the sky. The restaurant, “Jin Xuan,” serves dim sum that rivals Hong Kong’s best. The location is unbeatable for business travelers—connected to the IFC mall and subway. Prices: $345/night. Features: Infinity pool, Michelin-starred restaurant, butler service.</p>

@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -388,13 +390,32 @@
 <h2>Бюджетные отели (до ₽5 225 ($55)/ночь)</h2>
 
 <h3>1. Sunbeam Hostel & Beach Club</h3>
-<div id="hc_57257" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Sunbeam Hostel & Beach Club - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Sunbeam Hostel & Beach Club - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_57257 .hc-slide');var d=document.querySelectorAll('#hc_57257 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_57257 .hc-slide');var d=document.querySelectorAll('#hc_57257 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunbeam Hostel & Beach Club &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_910814" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sunbeam-hostel--beach-club/01.webp" alt="Sunbeam Hostel & Beach Club — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sunbeam-hostel--beach-club/02.webp" alt="Sunbeam Hostel & Beach Club — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sunbeam-hostel--beach-club/03.webp" alt="Sunbeam Hostel & Beach Club — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sunbeam Hostel & Beach Club</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽4 750</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_910814', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_910814 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_910814 .swiper-button-next', prevEl: '#swiper_910814 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Это мое открытие прошлого года! Небольшой хостел прямо на первой линии Северного пляжа. Номера простые, но чистые, с кондиционером и собственной террасой. Завтраки включены — свежие круассаны и кофе. Цена: <strong>₽4 750 ($50)за двухместный номер</strong> (с завтраком).</p>
 <ul>
 <li><strong>Плюсы:</strong> Расположение в 20 метрах от океана, дружелюбный персонал, бесплатный Wi-Fi.</li>
@@ -403,15 +424,32 @@
 <p>Мои туристы обычно берут здесь номер на 2-3 ночи, чтобы сэкономить на жилье и больше тратить на экскурсии. Кстати, экскурсии удобно брать на <strong>GetYourGuide</strong> — у них есть классные туры по острову со скидками.</p>
 
 <h3>2. Palm Garden Inn</h3>
-<div id="hc_993705" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Palm Garden Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Palm Garden Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Palm Garden Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_993705 .hc-slide');var d=document.querySelectorAll('#hc_993705 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_993705 .hc-slide');var d=document.querySelectorAll('#hc_993705 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_993705 .hc-slide');var d=document.querySelectorAll('#hc_993705 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Palm Garden Inn &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_122353" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/palm-garden-inn/01.webp" alt="Palm Garden Inn — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/palm-garden-inn/02.webp" alt="Palm Garden Inn — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/palm-garden-inn/03.webp" alt="Palm Garden Inn — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Palm Garden Inn</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽4 275</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_122353', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_122353 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_122353 .swiper-button-next', prevEl: '#swiper_122353 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Очаровательный гестхаус в 10 минутах от пляжа, утопающий в зелени. Владелица — местная бабушка, которая угощает всех домашним лимонадом. Номера с вентилятором и москитными сетками. Цена: <strong>₽4 275 ($45)за стандарт</strong>.</p>
 <ul>
 <li><strong>Плюсы:</strong> Очень тихо, идеально для пар, есть общая кухня.</li>
@@ -420,13 +458,32 @@
 <p>Проверено на себе: если хотите аутентичного опыта и не боитесь комаров — это ваш вариант. Для трансфера из аэропорта я пользуюсь <strong>Kiwitaxi</strong> — машина приезжает вовремя, цена фиксированная.</p>
 
 <h3>3. Coral Reef Budget Hotel</h3>
-<div id="hc_155824" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Reef Budget Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Reef Budget Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_155824 .hc-slide');var d=document.querySelectorAll('#hc_155824 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_155824 .hc-slide');var d=document.querySelectorAll('#hc_155824 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Reef Budget Hotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_933104" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/coral-reef-budget-hotel/01.webp" alt="Coral Reef Budget Hotel — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/coral-reef-budget-hotel/02.webp" alt="Coral Reef Budget Hotel — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/coral-reef-budget-hotel/03.webp" alt="Coral Reef Budget Hotel — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Coral Reef Budget Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽5 225</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_933104', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_933104 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_933104 .swiper-button-next', prevEl: '#swiper_933104 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Сетевой отельчик с базовым набором услуг. Номера маленькие, но есть все необходимое: телевизор, холодильник, сейф. Завтрак — шведский стол (яичница, тосты, соки). Цена: <strong>₽5 225 ($55)за номер с завтраком</strong>.</p>
 <ul>
 <li><strong>Плюсы:</strong> Рядом супермаркет и автобусная остановка, чистые полотенца каждый день.</li>
@@ -437,13 +494,32 @@
 <h2>Отели среднего класса (₽5 700 ($60)-170/ночь)</h2>
 
 <h3>4. Sea Breeze Resort & Spa</h3>
-<div id="hc_531106" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Sea Breeze Resort & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sea Breeze Resort & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_531106 .hc-slide');var d=document.querySelectorAll('#hc_531106 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_531106 .hc-slide');var d=document.querySelectorAll('#hc_531106 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sea Breeze Resort & Spa &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_110671" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sea-breeze-resort--spa/01.webp" alt="Sea Breeze Resort & Spa — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sea-breeze-resort--spa/02.webp" alt="Sea Breeze Resort & Spa — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sea-breeze-resort--spa/03.webp" alt="Sea Breeze Resort & Spa — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sea Breeze Resort & Spa</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽11 400</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_110671', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_110671 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_110671 .swiper-button-next', prevEl: '#swiper_110671 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Мой личный фаворит в этом сегменте! Отель на 4 звезды с собственным пляжем и двумя бассейнами. Номера просторные, с видом на океан. Есть спа-центр с массажем. Цена: <strong>₽11 400 ($120)за стандартный номер</strong> (с завтраком и ужином).</p>
 <ul>
 <li><strong>Фишки:</strong> Бесплатный йога-класс по утрам, детский клуб, вечерние шоу.</li>
@@ -452,15 +528,32 @@
 <p>Мои туристы обычно в восторге от этого места. Если бронировать заранее на <strong>Hotellook</strong>, можно найти скидки до 20%. Страховку оформляю через проверенные сервисы — всегда советую не экономить, особенно если планируете водные виды спорта.</p>
 
 <h3>5. Blue Lagoon Hotel</h3>
-<div id="hc_77897" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Blue Lagoon Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Blue Lagoon Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Blue Lagoon Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_77897 .hc-slide');var d=document.querySelectorAll('#hc_77897 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_77897 .hc-slide');var d=document.querySelectorAll('#hc_77897 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_77897 .hc-slide');var d=document.querySelectorAll('#hc_77897 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Blue Lagoon Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_26935" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/blue-lagoon-hotel/01.webp" alt="Blue Lagoon Hotel — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/blue-lagoon-hotel/02.webp" alt="Blue Lagoon Hotel — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/blue-lagoon-hotel/03.webp" alt="Blue Lagoon Hotel — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Blue Lagoon Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽9 025</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_26935', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_26935 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_26935 .swiper-button-next', prevEl: '#swiper_26935 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Стильный бутик-отель в Центральной набережной. Все номера оформлены в морском стиле, с панорамными окнами. Есть rooftop-бар с видом на закат. Цена: <strong>₽9 025 ($95)за номер</strong> (только завтрак).</p>
 <ul>
 <li><strong>Фишки:</strong> Бесплатный прокат велосипедов,每天晚上 живая музыка.</li>
@@ -469,15 +562,32 @@
 <p>Проверено на себе: закат с rooftop — это магия! Для романтического вечера рекомендую заказать столик заранее. Я ищу билеты через <strong>Aviasales</strong> — там лучшие цены на перелеты до острова.</p>
 
 <h3>6. Sunset Villa Apartments</h3>
-<div id="hc_983441" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sunset Villa Apartments - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sunset Villa Apartments - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sunset Villa Apartments - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_983441 .hc-slide');var d=document.querySelectorAll('#hc_983441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_983441 .hc-slide');var d=document.querySelectorAll('#hc_983441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_983441 .hc-slide');var d=document.querySelectorAll('#hc_983441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunset Villa Apartments &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_655878" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sunset-villa-apartments/01.webp" alt="Sunset Villa Apartments — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sunset-villa-apartments/02.webp" alt="Sunset Villa Apartments — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/sunset-villa-apartments/03.webp" alt="Sunset Villa Apartments — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sunset Villa Apartments</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽13 300</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_655878', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_655878 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_655878 .swiper-button-next', prevEl: '#swiper_655878 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Апарт-отель с кухней и гостиной зоной. Идеально для семей или компаний. Расположен в тихом районе Южного мыса, в 5 минутах от пляжа. Цена: <strong>₽13 300 ($140)за двухкомнатный апартамент</strong> (до 4 человек).</p>
 <ul>
 <li><strong>Фишки:</strong> Полностью оборудованная кухня, стиральная машина, большая терраса.</li>
@@ -486,15 +596,32 @@
 <p>Я рекомендую этот вариант для тех, кто любит готовить сам или путешествует с детьми. Для экскурсий по острову удобно брать машину напрокат — я бронирую через <strong>GetYourGuide</strong>, там есть опции с детскими креслами.</p>
 
 <h3>7. Ocean Pearl Boutique Hotel</h3>
-<div id="hc_992692" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Ocean Pearl Boutique Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Ocean Pearl Boutique Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Ocean Pearl Boutique Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_992692 .hc-slide');var d=document.querySelectorAll('#hc_992692 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_992692 .hc-slide');var d=document.querySelectorAll('#hc_992692 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_992692 .hc-slide');var d=document.querySelectorAll('#hc_992692 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ocean Pearl Boutique Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_739788" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/ocean-pearl-boutique-hotel/01.webp" alt="Ocean Pearl Boutique Hotel — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/ocean-pearl-boutique-hotel/02.webp" alt="Ocean Pearl Boutique Hotel — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/ocean-pearl-boutique-hotel/03.webp" alt="Ocean Pearl Boutique Hotel — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Ocean Pearl Boutique Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽15 675</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_739788', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_739788 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_739788 .swiper-button-next', prevEl: '#swiper_739788 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Небольшой отель на 15 номеров с индивидуальным дизайном. Каждый номер посвящен разным морским темам. Есть небольшой бассейн и джакузи. Цена: <strong>₽15 675 ($165)за номер с завтраком</strong>.</p>
 <ul>
 <li><strong>Фишки:</strong> Приветственный коктейль, бесплатный спа-доступ (сауна, хамам).</li>
@@ -502,18 +629,35 @@
 </ul>
 <p>Мои туристы обычно выбирают этот отель для медового месяца. Очень уютно и романтично. Для трансфера из аэропорта я пользуюсь <strong>Kiwitaxi</strong> — они подают машину прямо к выходу.</p>
 
-<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Люксовые отели (от ₽16 150 ($170)/ночь)</h2>
+<h2>Люксовые отели (от ₽16 150 ($170)/ночь)</h2>
 
 <h3>8. Royal Palm Beach Resort & Casino</h3>
-<div id="hc_233866" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Royal Palm Beach Resort & Casino - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Royal Palm Beach Resort & Casino - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Royal Palm Beach Resort & Casino - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_233866 .hc-slide');var d=document.querySelectorAll('#hc_233866 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_233866 .hc-slide');var d=document.querySelectorAll('#hc_233866 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_233866 .hc-slide');var d=document.querySelectorAll('#hc_233866 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Royal Palm Beach Resort & Casino &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_996391" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/royal-palm-beach-resort--casino/01.webp" alt="Royal Palm Beach Resort & Casino — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/royal-palm-beach-resort--casino/02.webp" alt="Royal Palm Beach Resort & Casino — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/royal-palm-beach-resort--casino/03.webp" alt="Royal Palm Beach Resort & Casino — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Royal Palm Beach Resort & Casino</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽23 750</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_996391', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_996391 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_996391 .swiper-button-next', prevEl: '#swiper_996391 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Пятизвездочный гигант с собственным пляжем, тремя бассейнами и казино. Номера люкс с мраморными ваннами и джакузи. Цена: <strong>₽23 750 ($250)за стандартный люкс</strong> (с завтраком, обедом и ужином по системе «все включено»).</p>
 <ul>
 <li><strong>Особенности:</strong> Бесплатный доступ в спа-центр, 5 ресторанов, ночной клуб.</li>
@@ -522,15 +666,32 @@
 <p>Проверено на себе: если хотите почувствовать себя звездой — это место для вас. Для поиска авиабилетов я ищу через <strong>Aviasales</strong> — часто находят прямые рейсы со скидками.</p>
 
 <h3>9. Serenity Cove Private Villas</h3>
-<div id="hc_457861" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Serenity Cove Private Villas - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Serenity Cove Private Villas - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Serenity Cove Private Villas - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_457861 .hc-slide');var d=document.querySelectorAll('#hc_457861 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_457861 .hc-slide');var d=document.querySelectorAll('#hc_457861 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_457861 .hc-slide');var d=document.querySelectorAll('#hc_457861 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Serenity Cove Private Villas &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_419840" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/serenity-cove-private-villas/01.webp" alt="Serenity Cove Private Villas — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/serenity-cove-private-villas/02.webp" alt="Serenity Cove Private Villas — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/serenity-cove-private-villas/03.webp" alt="Serenity Cove Private Villas — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Serenity Cove Private Villas</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽38 000</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_419840', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_419840 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_419840 .swiper-button-next', prevEl: '#swiper_419840 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Эксклюзивные виллы с частным бассейном и садом. Каждая вилла имеет своего дворецкого. Расположены на уединенном Южном мысе. Цена: <strong>₽38 000 ($400)за виллу на двоих</strong> (с завтраком и шампанским).</p>
 <ul>
 <li><strong>Особенности:</strong> Приватность, индивидуальный шеф-повар, бесплатный трансфер по острову.</li>
@@ -539,15 +700,32 @@
 <p>Я рекомендую это для пар, которые хотят полного уединения. Для экскурсий удобно бронировать через <strong>GetYourGuide</strong> — у них есть приватные туры с гидом.</p>
 
 <h3>10. Skyline Luxury Hotel & Residences</h3>
-<div id="hc_456097" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Skyline Luxury Hotel & Residences - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Skyline Luxury Hotel & Residences - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Skyline Luxury Hotel & Residences - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_456097 .hc-slide');var d=document.querySelectorAll('#hc_456097 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_456097 .hc-slide');var d=document.querySelectorAll('#hc_456097 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_456097 .hc-slide');var d=document.querySelectorAll('#hc_456097 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Skyline Luxury Hotel & Residences &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_724770" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/skyline-luxury-hotel--residences/01.webp" alt="Skyline Luxury Hotel & Residences — Курортные острова, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/skyline-luxury-hotel--residences/02.webp" alt="Skyline Luxury Hotel & Residences — интерьер, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/resort-islands/skyline-luxury-hotel--residences/03.webp" alt="Skyline Luxury Hotel & Residences — вид, Курортные острова" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Skyline Luxury Hotel & Residences</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Курортные острова</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽33 250</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_724770', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_724770 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_724770 .swiper-button-next', prevEl: '#swiper_724770 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Высотный отель с панорамным видом на океан и город. Номера от 50 кв.м, с современным дизайном. Есть infinity-бассейн на крыше. Цена: <strong>₽33 250 ($350)за номер с завтраком</strong>.</p>
 <ul>
 <li><strong>Особенности:</strong> 24-часовой консьерж, частный пляж, вертолетная площадка.</li>

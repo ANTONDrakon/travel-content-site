@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,111 +392,297 @@
 <h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Sun Tan Beach Inn</h3>
-<div id="hc_503032" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Sun Tan Beach Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sun Tan Beach Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_503032 .hc-slide');var d=document.querySelectorAll('#hc_503032 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_503032 .hc-slide');var d=document.querySelectorAll('#hc_503032 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sun Tan Beach Inn &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_215172" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/sun-tan-beach-inn/01.webp" alt="Sun Tan Beach Inn — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/sun-tan-beach-inn/02.webp" alt="Sun Tan Beach Inn — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/sun-tan-beach-inn/03.webp" alt="Sun Tan Beach Inn — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sun Tan Beach Inn</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽4 275</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_215172', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_215172 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_215172 .swiper-button-next', prevEl: '#swiper_215172 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот гестхаус — настоящая находка для соло-путешественников и пар, которые хотят сэкономить, но не потерять в уюте. Расположен в 2 минутах от пляжа Бикини-Бич, где можно купаться без ограничений. Номера простые, но чистые: кондиционер, горячая вода, мини-холодильник. Завтрак включён — местные лепёшки, фрукты и чай. Цена: ₽4 275 ($45)за ночь (с наценкой — ₽4 940 ($52)). Плюсы: дружелюбный хозяин Ахмед, который организует снорклинг-туры за полцены. Минусы: шумно по вечерам из-за близости к кафе, и Wi-Fi ловит только на веранде.</p>
 
 <h3>2. Maafushi Inn</h3>
-<div id="hc_10735" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Maafushi Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Maafushi Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Maafushi Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_10735 .hc-slide');var d=document.querySelectorAll('#hc_10735 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_10735 .hc-slide');var d=document.querySelectorAll('#hc_10735 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_10735 .hc-slide');var d=document.querySelectorAll('#hc_10735 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Maafushi Inn &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_498271" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/maafushi-inn/01.webp" alt="Maafushi Inn — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/maafushi-inn/02.webp" alt="Maafushi Inn — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/maafushi-inn/03.webp" alt="Maafushi Inn — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Maafushi Inn</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 610</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_498271', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_498271 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_498271 .swiper-button-next', prevEl: '#swiper_498271 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Один из старейших гестхаусов на острове, но в 2025 году его полностью отремонтировали. Мне нравится за атмосферу домашнего уюта: здесь есть общая терраса с гамаками и маленький сад. Номера скромные, но есть семейные варианты с двумя спальнями. Цена: ₽3 610 ($38)за ночь (с наценкой — ₽4 180 ($44)). Плюсы: очень тихое место, идеально для семей с детьми. Минусы: до пляжа идти 10 минут, а завтрак однообразный (яйца и тосты каждое утро). Зато рядом — лучший магазин сувениров!</p>
 
 <h3>3. Relax Beach Inn</h3>
-<div id="hc_144104" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Relax Beach Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Relax Beach Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_144104 .hc-slide');var d=document.querySelectorAll('#hc_144104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_144104 .hc-slide');var d=document.querySelectorAll('#hc_144104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Relax Beach Inn &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_583885" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/relax-beach-inn/01.webp" alt="Relax Beach Inn — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/relax-beach-inn/02.webp" alt="Relax Beach Inn — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/relax-beach-inn/03.webp" alt="Relax Beach Inn — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Relax Beach Inn</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 990</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_583885', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_583885 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_583885 .swiper-button-next', prevEl: '#swiper_583885 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Название говорит само за себя. Этот отельчик — для тех, кто хочет минимализм и полный релакс. Номера выходят во внутренний дворик, где растут пальмы и поют птицы. Владелец — бывший рыбак, который каждый вечер жарит туну на гриле для гостей (бесплатно, если подружиться). Цена: ₽3 990 ($42)за ночь (с наценкой — ₽4 560 ($48)). Плюсы: невероятно чисто, каждый день уборка, и есть прокат масок и ласт. Минусы: нет ресепшена, всё решается через WhatsApp, и кондиционер шумноват. Но за такие деньги — просто сказка!</p>
 
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Arena Beach Hotel</h3>
-<div id="hc_722582" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Arena Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Arena Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_722582 .hc-slide');var d=document.querySelectorAll('#hc_722582 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_722582 .hc-slide');var d=document.querySelectorAll('#hc_722582 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Arena Beach Hotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_653947" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/arena-beach-hotel/01.webp" alt="Arena Beach Hotel — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/arena-beach-hotel/02.webp" alt="Arena Beach Hotel — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/arena-beach-hotel/03.webp" alt="Arena Beach Hotel — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Arena Beach Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽9 025</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_653947', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_653947 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_653947 .swiper-button-next', prevEl: '#swiper_653947 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Мой личный фаворит среди «середнячков». Отель стоит прямо на пляжной линии, и из некоторых номеров слышен шум прибоя. В 2026 году здесь открыли новый ресторан с панорамной террасой — попробуйте их карри из креветок, это божественно! Номера просторные, с современной мебелью и большими кроватями. Цена: ₽9 025 ($95)за ночь (с наценкой — ₽10 355 ($109)). Фишки: бесплатный трансфер от причала, ежедневная йога на пляже в 7 утра и скидка 15% на дайвинг-центр. Идеально для пар, которые хотят романтику без переплаты.</p>
 
 <h3>5. Kaani Village & Spa</h3>
-<div id="hc_989717" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Kaani Village & Spa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Kaani Village & Spa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_989717 .hc-slide');var d=document.querySelectorAll('#hc_989717 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_989717 .hc-slide');var d=document.querySelectorAll('#hc_989717 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kaani Village & Spa &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_118983" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/kaani-village--spa/01.webp" alt="Kaani Village & Spa — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/kaani-village--spa/02.webp" alt="Kaani Village & Spa — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/kaani-village--spa/03.webp" alt="Kaani Village & Spa — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Kaani Village & Spa</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽11 400</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_118983', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_118983 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_118983 .swiper-button-next', prevEl: '#swiper_118983 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Если вы ищете спа-процедуры по доступной цене — вам сюда. Отель предлагает массаж, хаммам и даже аюрведические программы. Номера оформлены в мальдивском стиле: дерево, батик, плетёная мебель. Есть бассейн (редкость для Маафуши) и детский клуб. Цена: ₽11 400 ($120)за ночь (с наценкой — ₽13 110 ($138)). Фишки: по четвергам — живая музыка на ужине, и можно заказать ужин на крыше с видом на океан. Минус: Wi-Fi платный (но я всегда договариваюсь о бесплатном для своих клиентов).</p>
 
 <h3>6. White Shell Beach Inn</h3>
-<div id="hc_737462" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="White Shell Beach Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="White Shell Beach Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_737462 .hc-slide');var d=document.querySelectorAll('#hc_737462 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_737462 .hc-slide');var d=document.querySelectorAll('#hc_737462 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">White Shell Beach Inn &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_510290" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/white-shell-beach-inn/01.webp" alt="White Shell Beach Inn — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/white-shell-beach-inn/02.webp" alt="White Shell Beach Inn — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/white-shell-beach-inn/03.webp" alt="White Shell Beach Inn — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">White Shell Beach Inn</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽8 075</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_510290', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_510290 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_510290 .swiper-button-next', prevEl: '#swiper_510290 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот отель — для тех, кто ценит дизайн. Белоснежные стены, голубые акценты, инстаграмные зоны — каждый уголок просится на фото. Номера с выходом на общую террасу, где подают завтрак. Есть небольшой спортзал и библиотека. Цена: ₽8 075 ($85)за ночь (с наценкой — ₽9 310 ($98)). Фишки: бесплатный велосипед на время проживания, и каждую субботу — мастер-класс по приготовлению мальдивских блюд. Идеально для молодых пар и блогеров.</p>
 
 <h3>7. Sunrise Beach Hotel</h3>
-<div id="hc_385044" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sunrise Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Sunrise Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_385044 .hc-slide');var d=document.querySelectorAll('#hc_385044 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_385044 .hc-slide');var d=document.querySelectorAll('#hc_385044 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunrise Beach Hotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_77874" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/sunrise-beach-hotel/01.webp" alt="Sunrise Beach Hotel — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/sunrise-beach-hotel/02.webp" alt="Sunrise Beach Hotel — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/sunrise-beach-hotel/03.webp" alt="Sunrise Beach Hotel — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sunrise Beach Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽10 450</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_77874', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_77874 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_77874 .swiper-button-next', prevEl: '#swiper_77874 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Название не обманывает — отель расположен на восточной стороне острова, и вы будете просыпаться с первыми лучами солнца. Номера с балконами, откуда видно рыбацкие лодки. Владельцы — семья с тремя детьми, поэтому атмосфера очень тёплая. Цена: ₽10 450 ($110)за ночь (с наценкой — ₽12 065 ($127)). Фишки: бесплатный снорклинг-гид по утрам, и можно взять напрокат каяк. Минус: ресторан закрывается в 21:00, так что для ночных сов не подойдёт. Но завтраки — лучшие на острове!</p>
 
-<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Coco Palm Inn</h3>
-<div id="hc_310035" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Coco Palm Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coco Palm Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_310035 .hc-slide');var d=document.querySelectorAll('#hc_310035 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_310035 .hc-slide');var d=document.querySelectorAll('#hc_310035 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coco Palm Inn &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_863881" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/coco-palm-inn/01.webp" alt="Coco Palm Inn — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/coco-palm-inn/02.webp" alt="Coco Palm Inn — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/coco-palm-inn/03.webp" alt="Coco Palm Inn — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Coco Palm Inn</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽17 100</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_863881', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_863881 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_863881 .swiper-button-next', prevEl: '#swiper_863881 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Это не просто отель, а маленький курорт. Номера-люкс с отдельными джакузи, частные пляжные зоны и круглосуточный консьерж. Здесь есть свой дайв-центр, где можно получить сертификат PADI за 3 дня. Цена: ₽17 100 ($180)за ночь (с наценкой — ₽19 665 ($207)). Особенности: ресторан с мишленовским шеф-поваром (попробуйте тартар из лобстера), и спа с океанским видом. Идеально для медового месяца или юбилея. Я рекомендую бронировать номер с выходом на бассейн — это стоит каждой копейки.</p>
 
 <h3>9. Island Luxury Retreat</h3>
-<div id="hc_395349" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Island Luxury Retreat - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Island Luxury Retreat - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Island Luxury Retreat - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_395349 .hc-slide');var d=document.querySelectorAll('#hc_395349 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_395349 .hc-slide');var d=document.querySelectorAll('#hc_395349 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_395349 .hc-slide');var d=document.querySelectorAll('#hc_395349 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Island Luxury Retreat &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_433980" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/island-luxury-retreat/01.webp" alt="Island Luxury Retreat — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/island-luxury-retreat/02.webp" alt="Island Luxury Retreat — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/island-luxury-retreat/03.webp" alt="Island Luxury Retreat — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Island Luxury Retreat</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽23 750</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_433980', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_433980 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_433980 .swiper-button-next', prevEl: '#swiper_433980 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Самый новый отель на острове (открылся в конце 2025 года). Всё здесь дышит роскошью: мраморные полы, дизайнерская мебель, смарт-панели управления. Есть частный пляж с белым песком и шезлонгами. Цена: ₽23 750 ($250)за ночь (с наценкой — ₽27 360 ($288)). Особенности: вертолётный трансфер из Мале (дополнительно ₽47 500 ($500)), винный погреб с 200 сортами и персональный батлер. Для тех, кто хочет почувствовать себя звездой. Минус: очень дорогой ресторан (ужин на двоих — от ₽14 250 ($150)).</p>
 
 <h3>10. Ocean Breeze Villa</h3>
-<div id="hc_10275" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Ocean Breeze Villa - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Ocean Breeze Villa - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_10275 .hc-slide');var d=document.querySelectorAll('#hc_10275 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_10275 .hc-slide');var d=document.querySelectorAll('#hc_10275 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ocean Breeze Villa &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_400975" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/ocean-breeze-villa/01.webp" alt="Ocean Breeze Villa — Маафуши, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/ocean-breeze-villa/02.webp" alt="Ocean Breeze Villa — интерьер, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/maafushi/ocean-breeze-villa/03.webp" alt="Ocean Breeze Villa — вид, Маафуши" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Ocean Breeze Villa</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Маафуши</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽28 500</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_400975', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_400975 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_400975 .swiper-button-next', prevEl: '#swiper_400975 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Эти виллы — для тех, кто хочет уединения. Расположены на самой южной оконечности острова, вдали от шума. Каждая вилла имеет свой бассейн и террасу с видом на лагуну. Интерьер — смесь мальдивского колорита и современного минимализма. Цена: ₽28 500 ($300)за ночь (с наценкой — ₽32 775 ($345)). Особенности: приватный повар (готовит по вашему меню), каяки и сап-борды бесплатно, и ежедневный круиз на закате. Идеально для пар, которые хотят полной приватности. Я обожаю это место за тишину и звёздное небо.</p>
 
 <h2>Как выбрать район</h2>

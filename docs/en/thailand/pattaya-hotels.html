@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,15 +392,6 @@
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. The Bed Hotel Pattaya</h3>
-<div id="hc_230982" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Bed Hotel Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Bed Hotel Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Bed Hotel Pattaya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_230982 .hc-slide');var d=document.querySelectorAll('#hc_230982 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_230982 .hc-slide');var d=document.querySelectorAll('#hc_230982 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_230982 .hc-slide');var d=document.querySelectorAll('#hc_230982 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Bed Hotel Pattaya &bull; 3 photos</p></div>
 <p>Located on Soi Buakhao, a 10-minute walk from Central Festival Pattaya Beach, The Bed Hotel is a modern 4-story property with 82 rooms. It opened in 2022 and maintains a 4.3-star rating on <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a>. Rooms are compact (16–20 m²) but feature smart TVs, rain showers, and free high-speed Wi-Fi. The rooftop pool is small but offers sunset views over the city.</p>
 <p><strong>Price in 2026:</strong> $28–$38per night for a standard double. Breakfast not included.</p>
 <ul>
@@ -407,21 +400,7 @@
 </ul>
 
 <h3>2. Siam View Hotel</h3>
-<div id="hc_345480" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Siam View Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Siam View Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_345480 .hc-slide');var d=document.querySelectorAll('#hc_345480 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_345480 .hc-slide');var d=document.querySelectorAll('#hc_345480 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Siam View Hotel &bull; 2 photos</p></div>
 <p>A long-standing favorite on Soi 10, Siam View Hotel offers 120 rooms across 8 floors, with a direct view of Pattaya Bay from its upper floors. It’s a 3-minute walk to the beach and 5 minutes to Walking Street. Rooms are basic but spacious (25–30 m²) with tiled floors, air conditioning, and small balconies. The hotel has a large outdoor pool and a restaurant serving Thai and Western dishes.</p>
-<div id="hc_935265" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="w Hotel offers 120 rooms across 8 floors, with a direct view of Pattaya Bay from its upper floors. It’s a 3-minute walk to the beach and 5 minutes to Walking Street. Rooms are basic but spacious - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="w Hotel offers 120 rooms across 8 floors, with a direct view of Pattaya Bay from its upper floors. It’s a 3-minute walk to the beach and 5 minutes to Walking Street. Rooms are basic but spacious - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_935265 .hc-slide');var d=document.querySelectorAll('#hc_935265 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_935265 .hc-slide');var d=document.querySelectorAll('#hc_935265 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">w Hotel offers 120 rooms across 8 floors, with a direct view of Pattaya Bay from its upper floors. It’s a 3-minute walk to the beach and 5 minutes to Walking Street. Rooms are basic but spacious &bull; 2 photos</p></div>
 <p><strong>Price in 2026:</strong> $32–$45per night for a sea-view double. Breakfast included.</p>
 <ul>
 <li><strong>Pros:</strong> Great sea views, friendly staff, large pool, close to nightlife but quiet at night.</li>
@@ -429,15 +408,6 @@
 </ul>
 
 <h3>3. LK Royal Suite</h3>
-<div id="hc_584057" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="LK Royal Suite - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="LK Royal Suite - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="LK Royal Suite - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_584057 .hc-slide');var d=document.querySelectorAll('#hc_584057 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_584057 .hc-slide');var d=document.querySelectorAll('#hc_584057 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_584057 .hc-slide');var d=document.querySelectorAll('#hc_584057 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">LK Royal Suite &bull; 3 photos</p></div>
 <p>In the quieter LK Metro area, LK Royal Suite is a 7-story hotel with 98 rooms, popular with repeat visitors. It offers a mix of studio and one-bedroom suites (30–40 m²) with kitchenettes and separate living areas. The property includes a rooftop pool, a small gym, and a lobby bar. It’s a 15-minute walk to the beach but surrounded by local restaurants and massage shops.</p>
 <p><strong>Price in 2026:</strong> $38–$48per night for a studio suite. Breakfast optional for $8</p>
 <ul>
@@ -448,36 +418,13 @@
 <h2>Mid-Range Hotels ($50–150/night)</h2>
 
 <h3>4. Amari Pattaya</h3>
-<div id="hc_703555" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Amari Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Amari Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_703555 .hc-slide');var d=document.querySelectorAll('#hc_703555 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_703555 .hc-slide');var d=document.querySelectorAll('#hc_703555 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amari Pattaya &bull; 2 photos</p></div>
 <p>Perched on Pattaya’s northern headland, Amari Pattaya is a 4-star resort with 223 rooms, including 40 suites. It underwent a major renovation in 2024, updating all rooms with contemporary Thai décor and smart technology. Facilities include three pools (one infinity-edge), a full-service spa, four restaurants, and direct beach access via a private walkway. The hotel is a 10-minute drive from Central Pattaya and 15 minutes from Walking Street.</p>
-<div id="hc_86432" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Amari Pattaya is a 4-star resort with 223 rooms, including 40 suites. It underwent a major renovation in 2024, updating all rooms with contemporary Thai décor and smart technology. Facilities include three pools - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Amari Pattaya is a 4-star resort with 223 rooms, including 40 suites. It underwent a major renovation in 2024, updating all rooms with contemporary Thai décor and smart technology. Facilities include three pools - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_86432 .hc-slide');var d=document.querySelectorAll('#hc_86432 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_86432 .hc-slide');var d=document.querySelectorAll('#hc_86432 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Amari Pattaya is a 4-star resort with 223 rooms, including 40 suites. It underwent a major renovation in 2024, updating all rooms with contemporary Thai décor and smart technology. Facilities include three pools &bull; 2 photos</p></div>
 <p><strong>Price in 2026:</strong> $85–$120per night for a deluxe sea-view room. Breakfast included.</p>
 <ul>
 <li><strong>Highlights:</strong> Stunning sunset views from the infinity pool, excellent breakfast buffet (Thai, Japanese, Western), free shuttle to city center, kids’ club.</li>
 </ul>
 
 <h3>5. Centara Grand Mirage Beach Resort Pattaya</h3>
-<div id="hc_899252" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Centara Grand Mirage Beach Resort Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Centara Grand Mirage Beach Resort Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Centara Grand Mirage Beach Resort Pattaya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_899252 .hc-slide');var d=document.querySelectorAll('#hc_899252 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_899252 .hc-slide');var d=document.querySelectorAll('#hc_899252 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_899252 .hc-slide');var d=document.querySelectorAll('#hc_899252 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Centara Grand Mirage Beach Resort Pattaya &bull; 3 photos</p></div>
 <p>Located on North Pattaya Beach, this massive 555-room resort is designed as a “Lost World” theme with a water park featuring 10 slides, a lazy river, and a wave pool. Rooms are spacious (32–45 m²) with modern furnishings and balconies. The resort has 7 restaurants, a spa, and a fitness center. It’s a 5-minute walk to Terminal 21 shopping mall and 10 minutes to the beach.</p>
 <p><strong>Price in 2026:</strong> $95–$140per night for a deluxe garden-view room. Breakfast included.</p>
 <ul>
@@ -485,38 +432,13 @@
 </ul>
 
 <h3>6. Hilton Pattaya</h3>
-<div id="hc_21484" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hilton Pattaya - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hilton Pattaya - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hilton Pattaya - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_21484 .hc-slide');var d=document.querySelectorAll('#hc_21484 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_21484 .hc-slide');var d=document.querySelectorAll('#hc_21484 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_21484 .hc-slide');var d=document.querySelectorAll('#hc_21484 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hilton Pattaya &bull; 3 photos</p></div>
 <p>A landmark on Central Pattaya Beach, the Hilton occupies floors 15–32 of the CentralFestival complex. It offers 300 rooms and suites with floor-to-ceiling windows overlooking the bay. The hotel features an iconic outdoor pool with a glass edge, a world-class spa, and three restaurants including the renowned Edge. It’s directly connected to the shopping mall and a 2-minute walk to the beach.</p>
-<div id="hc_739676" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hilton occupies floors 15–32 of the CentralFestival complex. It offers 300 rooms and suites with floor-to-ceiling windows overlooking the bay. The hotel features an iconic outdoor pool with a glass edge, a world-class spa, and three restaurants including the renowned Edge. It’s directly connected to the shopping mall and a 2-minute walk to the beach. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hilton occupies floors 15–32 of the CentralFestival complex. It offers 300 rooms and suites with floor-to-ceiling windows overlooking the bay. The hotel features an iconic outdoor pool with a glass edge, a world-class spa, and three restaurants including the renowned Edge. It’s directly connected to the shopping mall and a 2-minute walk to the beach. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hilton occupies floors 15–32 of the CentralFestival complex. It offers 300 rooms and suites with floor-to-ceiling windows overlooking the bay. The hotel features an iconic outdoor pool with a glass edge, a world-class spa, and three restaurants including the renowned Edge. It’s directly connected to the shopping mall and a 2-minute walk to the beach. - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_739676 .hc-slide');var d=document.querySelectorAll('#hc_739676 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_739676 .hc-slide');var d=document.querySelectorAll('#hc_739676 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_739676 .hc-slide');var d=document.querySelectorAll('#hc_739676 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hilton occupies floors 15–32 of the CentralFestival complex. It offers 300 rooms and suites with floor-to-ceiling windows overlooking the bay. The hotel features an iconic outdoor pool with a glass edge, a world-class spa, and three restaurants including the renowned Edge. It’s directly connected to the shopping mall and a 2-minute walk to the beach. &bull; 3 photos</p></div>
 <p><strong>Price in 2026:</strong> $110–$150per night for a deluxe city-view room. Breakfast not included (add $25).</p>
 <ul>
 <li><strong>Highlights:</strong> Prime location above the mall, spectacular pool with bay views, excellent service, great for couples and business travelers, rooftop bar.</li>
 </ul>
 
 <h3>7. Pullman Pattaya Hotel G</h3>
-<div id="hc_940885" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Pullman Pattaya Hotel G - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Pullman Pattaya Hotel G - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_940885 .hc-slide');var d=document.querySelectorAll('#hc_940885 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_940885 .hc-slide');var d=document.querySelectorAll('#hc_940885 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pullman Pattaya Hotel G &bull; 2 photos</p></div>
 <p>Set on Pratumnak Hill, the Pullman Pattaya Hotel G is a 5-star resort with 352 rooms and suites, all with private balconies. It opened in 2020 and has become a favorite for its modern design, large lagoon-style pool, and private beach club. Facilities include a fitness center, spa, three restaurants, and a kids’ club. The hotel is a 5-minute drive to Walking Street but feels secluded.</p>
 <p><strong>Price in 2026:</strong> $100–$145per night for a deluxe ocean-view room. Breakfast included.</p>
 <ul>
@@ -526,6 +448,32 @@
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>8. Royal Cliff Hotels Group</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_808572" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/royal-cliff-hotels-group/01.webp" alt="Royal Cliff Hotels Group — Pattaya, Thailand" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/royal-cliff-hotels-group/02.webp" alt="Royal Cliff Hotels Group — interior, Pattaya" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/royal-cliff-hotels-group/03.webp" alt="Royal Cliff Hotels Group — view, Pattaya" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Royal Cliff Hotels Group</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Pattaya</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽17 100</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_808572', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_808572 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_808572 .swiper-button-next', prevEl: '#swiper_808572 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>This iconic complex on Pratumnak Hill comprises four separate hotels (Royal Cliff Beach Hotel, Royal Wing, Ocean Wing, and Royal Cliff Garden Wing) with over 1,000 rooms total. The flagship Royal Wing offers 54 suites with butler service, private pools, and panoramic ocean views. Facilities include 8 restaurants, 8 pools, a spa, tennis courts, and a private beach. The complex has hosted international dignitaries and won multiple awards.</p>
 <p><strong>Price in 2026:</strong> $180–$400per night for a Royal Wing suite. Breakfast included.</p>
 <ul>
@@ -533,6 +481,32 @@
 </ul>
 
 <h3>9. InterContinental Pattaya Resort</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_49425" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/intercontinental-pattaya-resort/01.webp" alt="InterContinental Pattaya Resort — Pattaya, Thailand" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/intercontinental-pattaya-resort/02.webp" alt="InterContinental Pattaya Resort — interior, Pattaya" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/thailand/pattaya/intercontinental-pattaya-resort/03.webp" alt="InterContinental Pattaya Resort — view, Pattaya" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">InterContinental Pattaya Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Pattaya</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽23 750</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_49425', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_49425 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_49425 .swiper-button-next', prevEl: '#swiper_49425 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Nestled on a private beach in Naklua, the InterContinental Pattaya Resort offers 156 rooms and suites in a low-rise tropical setting. Rooms are luxurious (45–60 m²) with Thai silk accents, marble bathrooms, and private terraces. The resort features a large free-form pool, a spa with hydrotherapy, four restaurants, and a kids’ club. It’s a 15-minute drive from Central Pattaya, ensuring peace and privacy.</p>
 <p><strong>Price in 2026:</strong> $200–$350per night for a deluxe ocean-view room. Breakfast included.</p>
 <ul>

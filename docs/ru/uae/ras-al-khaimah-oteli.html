@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,15 +392,32 @@
 <h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Citymax Hotel Ras Al Khaimah</h3>
-<div id="hc_825316" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Citymax Hotel Ras Al Khaimah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Citymax Hotel Ras Al Khaimah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Citymax Hotel Ras Al Khaimah - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_825316 .hc-slide');var d=document.querySelectorAll('#hc_825316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_825316 .hc-slide');var d=document.querySelectorAll('#hc_825316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_825316 .hc-slide');var d=document.querySelectorAll('#hc_825316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Citymax Hotel Ras Al Khaimah &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_861058" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/citymax-hotel-ras-al-khaimah/01.webp" alt="Citymax Hotel Ras Al Khaimah — Рас-эль-Хайма, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/citymax-hotel-ras-al-khaimah/02.webp" alt="Citymax Hotel Ras Al Khaimah — интерьер, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/citymax-hotel-ras-al-khaimah/03.webp" alt="Citymax Hotel Ras Al Khaimah — вид, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Citymax Hotel Ras Al Khaimah</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Рас-эль-Хайма</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 610</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_861058', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_861058 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_861058 .swiper-button-next', prevEl: '#swiper_861058 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Современный трехзвездочный отель, расположенный в деловом центре Рас-эль-Хаймы, в 15 минутах езды от пляжа Аль-Хамра. Открыт в 2023 году, насчитывает 120 номеров. Отель ориентирован на деловых путешественников и экономных туристов, предлагает круглосуточную стойку регистрации, бесплатный Wi-Fi и парковку.</p>
 <p><strong>Цены:</strong> От ₽3 610 ($38)до ₽4 560 ($48)за ночь в стандартном номере (завтрак не включен, ₽760 ($8)дополнительно).</p>
 <table>
@@ -409,15 +428,32 @@
 </table>
 
 <h3>2. RAK Hotel Apartments</h3>
-<div id="hc_647044" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="RAK Hotel Apartments - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="RAK Hotel Apartments - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="RAK Hotel Apartments - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_647044 .hc-slide');var d=document.querySelectorAll('#hc_647044 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_647044 .hc-slide');var d=document.querySelectorAll('#hc_647044 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_647044 .hc-slide');var d=document.querySelectorAll('#hc_647044 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">RAK Hotel Apartments &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_694886" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rak-hotel-apartments/01.webp" alt="RAK Hotel Apartments — Рас-эль-Хайма, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rak-hotel-apartments/02.webp" alt="RAK Hotel Apartments — интерьер, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rak-hotel-apartments/03.webp" alt="RAK Hotel Apartments — вид, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">RAK Hotel Apartments</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Рас-эль-Хайма</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 325</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_694886', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_694886 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_694886 .swiper-button-next', prevEl: '#swiper_694886 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Апарт-отель в районе Аль-Нахиль, предлагающий студии и однокомнатные апартаменты с мини-кухней. Идеален для семей с детьми или длительного проживания. Здание 2018 года постройки, но регулярно обновляется. На территории есть небольшой тренажерный зал и прачечная.</p>
 <p><strong>Цены:</strong> От ₽3 325 ($35)до ₽4 750 ($50)за ночь за студию (мини-кухня, холодильник, плита).</p>
 <table>
@@ -428,15 +464,32 @@
 </table>
 
 <h3>3. Al Hamra Hotel</h3>
-<div id="hc_649488" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Al Hamra Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Al Hamra Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Al Hamra Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_649488 .hc-slide');var d=document.querySelectorAll('#hc_649488 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_649488 .hc-slide');var d=document.querySelectorAll('#hc_649488 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_649488 .hc-slide');var d=document.querySelectorAll('#hc_649488 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Al Hamra Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_956419" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/al-hamra-hotel/01.webp" alt="Al Hamra Hotel — Рас-эль-Хайма, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/al-hamra-hotel/02.webp" alt="Al Hamra Hotel — интерьер, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/al-hamra-hotel/03.webp" alt="Al Hamra Hotel — вид, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Al Hamra Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Рас-эль-Хайма</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 990</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_956419', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_956419 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_956419 .swiper-button-next', prevEl: '#swiper_956419 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Один из старейших отелей эмирата (открыт в 1990-х), расположенный прямо на пляже Аль-Хамра. После реновации 2024 года номера обновлены, но фасад и инфраструктура остались в стиле ретро. Отель популярен среди рыбаков и любителей спокойного отдыха.</p>
 <p><strong>Цены:</strong> От ₽3 990 ($42)до ₽4 750 ($50)за ночь с завтраком.</p>
 <table>
@@ -449,62 +502,99 @@
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. DoubleTree by Hilton Resort & Spa Marjan Island</h3>
-<div id="hc_33865" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="DoubleTree by Hilton Resort & Spa Marjan Island - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="DoubleTree by Hilton Resort & Spa Marjan Island - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="DoubleTree by Hilton Resort & Spa Marjan Island - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_33865 .hc-slide');var d=document.querySelectorAll('#hc_33865 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_33865 .hc-slide');var d=document.querySelectorAll('#hc_33865 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_33865 .hc-slide');var d=document.querySelectorAll('#hc_33865 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">DoubleTree by Hilton Resort & Spa Marjan Island &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_175697" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/doubletree-by-hilton-resort--spa-marjan-island/01.webp" alt="DoubleTree by Hilton Resort & Spa Marjan Island — Рас-эль-Хайма, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/doubletree-by-hilton-resort--spa-marjan-island/02.webp" alt="DoubleTree by Hilton Resort & Spa Marjan Island — интерьер, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/doubletree-by-hilton-resort--spa-marjan-island/03.webp" alt="DoubleTree by Hilton Resort & Spa Marjan Island — вид, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">DoubleTree by Hilton Resort & Spa Marjan Island</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Рас-эль-Хайма</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽7 600</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_175697', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_175697 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_175697 .swiper-button-next', prevEl: '#swiper_175697 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Четырехзвездочный курорт на острове Марджан, открытый в 2022 году. 250 номеров с балконами и видом на море или лагуну. Отель предлагает три бассейна, спа-центр, фитнес-зал и несколько ресторанов. Популярен среди семей и пар.</p>
 <p><strong>Цены:</strong> От ₽7 600 ($80)до ₽11 400 ($120)за ночь (стандартный номер с завтраком).</p>
 <p><strong>Фишки:</strong> Бесплатный доступ в аквапарк на территории (для гостей отеля), фирменное печенье DoubleTree на заселении, вечерние шоу по пятницам.</p>
 
 <h3>5. Rixos Bab Al Bahr</h3>
-<div id="hc_455100" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Rixos Bab Al Bahr - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Rixos Bab Al Bahr - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_455100 .hc-slide');var d=document.querySelectorAll('#hc_455100 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_455100 .hc-slide');var d=document.querySelectorAll('#hc_455100 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rixos Bab Al Bahr &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_692722" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rixos-bab-al-bahr/01.webp" alt="Rixos Bab Al Bahr — Рас-эль-Хайма, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rixos-bab-al-bahr/02.webp" alt="Rixos Bab Al Bahr — интерьер, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rixos-bab-al-bahr/03.webp" alt="Rixos Bab Al Bahr — вид, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Rixos Bab Al Bahr</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Рас-эль-Хайма</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽10 450</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_692722', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_692722 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_692722 .swiper-button-next', prevEl: '#swiper_692722 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Курортный отель сети Rixos, расположенный на полуострове Аль-Марьян. 500 номеров, включая сьюты с джакузи. Отель известен своей системой Ultra All Inclusive (все включено с алкоголем) и большим пляжем с белым песком. Подходит для тех, кто хочет отдыхать без забот.</p>
-<div id="hc_610373" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Rixos, расположенный на полуострове Аль-Марьян. 500 номеров, включая сьюты с джакузи. Отель известен своей системой Ultra All Inclusive - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Rixos, расположенный на полуострове Аль-Марьян. 500 номеров, включая сьюты с джакузи. Отель известен своей системой Ultra All Inclusive - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_610373 .hc-slide');var d=document.querySelectorAll('#hc_610373 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_610373 .hc-slide');var d=document.querySelectorAll('#hc_610373 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rixos, расположенный на полуострове Аль-Марьян. 500 номеров, включая сьюты с джакузи. Отель известен своей системой Ultra All Inclusive &bull; 2 photos</p></div>
 <p><strong>Цены:</strong> От ₽10 450 ($110)до ₽14 250 ($150)за ночь (Ultra All Inclusive).</p>
 <p><strong>Фишки:</strong> 7 ресторанов и 5 баров, включая турецкий ресторан с живой музыкой, ежедневные анимационные программы для детей и взрослых, частный пляж длиной 800 метров.</p>
 
 <h3>6. The Ritz-Carlton Ras Al Khaimah, Al Wadi Desert</h3>
-<div id="hc_373485" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton Ras Al Khaimah, Al Wadi Desert - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton Ras Al Khaimah, Al Wadi Desert - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton Ras Al Khaimah, Al Wadi Desert - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_373485 .hc-slide');var d=document.querySelectorAll('#hc_373485 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_373485 .hc-slide');var d=document.querySelectorAll('#hc_373485 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_373485 .hc-slide');var d=document.querySelectorAll('#hc_373485 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton Ras Al Khaimah, Al Wadi Desert &bull; 3 photos</p></div>
 <p><strong>Описание:</strong> Уникальный отель в пустыне Аль-Вади, в 30 минутах от центра эмирата. 100 вилл в стиле бедуинских шатров, каждая с частным бассейном. Отель предлагает экскурсии по пустыне, наблюдение за звездами и соколиную охоту. Несмотря на категорию люкс, цены в низкий сезон (лето) опускаются до среднего сегмента.</p>
 <p><strong>Цены:</strong> От ₽12 350 ($130)до ₽14 250 ($150)за ночь (в летние месяцы, без питания).</p>
 <p><strong>Фишки:</strong> Спа-центр с традиционными арабскими процедурами, организованные туры на джипах по дюнам, возможность увидеть газелей и ориксов на территории отеля.</p>
 
 <h3>7. Hilton Ras Al Khaimah Beach Resort</h3>
-<div id="hc_476723" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hilton Ras Al Khaimah Beach Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hilton Ras Al Khaimah Beach Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hilton Ras Al Khaimah Beach Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_476723 .hc-slide');var d=document.querySelectorAll('#hc_476723 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_476723 .hc-slide');var d=document.querySelectorAll('#hc_476723 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_476723 .hc-slide');var d=document.querySelectorAll('#hc_476723 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hilton Ras Al Khaimah Beach Resort &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_711471" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/hilton-ras-al-khaimah-beach-resort/01.webp" alt="Hilton Ras Al Khaimah Beach Resort — Рас-эль-Хайма, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/hilton-ras-al-khaimah-beach-resort/02.webp" alt="Hilton Ras Al Khaimah Beach Resort — интерьер, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/hilton-ras-al-khaimah-beach-resort/03.webp" alt="Hilton Ras Al Khaimah Beach Resort — вид, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Hilton Ras Al Khaimah Beach Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Рас-эль-Хайма</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽6 650</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_711471', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_711471 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_711471 .swiper-button-next', prevEl: '#swiper_711471 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Крупный курорт на острове Марджан, открытый в 2021 году. 350 номеров, два бассейна, спа-центр и четыре ресторана. Отель имеет собственный пляж с шезлонгами и зонтами. Подходит для деловых поездок и семейного отдыха.</p>
 <p><strong>Цены:</strong> От ₽6 650 ($70)до ₽9 500 ($100)за ночь (с завтраком).</p>
 <p><strong>Фишки:</strong> Бесплатный шаттл до торгового центра Manar Mall, бизнес-центр с конференц-залами, аквааэробика и йога на пляже по выходным.</p>
@@ -512,27 +602,63 @@
 <h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Waldorf Astoria Ras Al Khaimah</h3>
-<div id="hc_3100" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Waldorf Astoria Ras Al Khaimah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Waldorf Astoria Ras Al Khaimah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_3100 .hc-slide');var d=document.querySelectorAll('#hc_3100 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_3100 .hc-slide');var d=document.querySelectorAll('#hc_3100 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Waldorf Astoria Ras Al Khaimah &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_492005" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/waldorf-astoria-ras-al-khaimah/01.webp" alt="Waldorf Astoria Ras Al Khaimah — Рас-эль-Хайма, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/waldorf-astoria-ras-al-khaimah/02.webp" alt="Waldorf Astoria Ras Al Khaimah — интерьер, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/waldorf-astoria-ras-al-khaimah/03.webp" alt="Waldorf Astoria Ras Al Khaimah — вид, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Waldorf Astoria Ras Al Khaimah</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Рас-эль-Хайма</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽19 000</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_492005', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_492005 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_492005 .swiper-button-next', prevEl: '#swiper_492005 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Пятизвездочный отель на острове Марджан, один из самых престижных в эмирате. 350 номеров и сьютов, оформленных в классическом стиле с элементами арабского декора. Отель предлагает частный пляж, спа-центр площадью 2000 кв. м, 5 ресторанов и 2 бассейна. Известен своим сервисом «консьерж 24/7».</p>
 <p><strong>Цены:</strong> От ₽19 000 ($200)до ₽47 500 ($500)за ночь (стандартный номер, завтрак включен).</p>
 <p><strong>Особенности:</strong> Ресторан La Petite Maison с французской кухней (шеф-повар из Лиона), частные кабинки на пляже с обслуживанием, доступ в спа-зону с хаммамом и сауной (для гостей отеля — бесплатно).</p>
 
 <h3>9. Anantara Mina Al Arab Ras Al Khaimah Resort</h3>
-<div id="hc_758057" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Anantara Mina Al Arab Ras Al Khaimah Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Anantara Mina Al Arab Ras Al Khaimah Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Anantara Mina Al Arab Ras Al Khaimah Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_758057 .hc-slide');var d=document.querySelectorAll('#hc_758057 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_758057 .hc-slide');var d=document.querySelectorAll('#hc_758057 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_758057 .hc-slide');var d=document.querySelectorAll('#hc_758057 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Anantara Mina Al Arab Ras Al Khaimah Resort &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_755173" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/anantara-mina-al-arab-ras-al-khaimah-resort/01.webp" alt="Anantara Mina Al Arab Ras Al Khaimah Resort — Рас-эль-Хайма, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/anantara-mina-al-arab-ras-al-khaimah-resort/02.webp" alt="Anantara Mina Al Arab Ras Al Khaimah Resort — интерьер, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/anantara-mina-al-arab-ras-al-khaimah-resort/03.webp" alt="Anantara Mina Al Arab Ras Al Khaimah Resort — вид, Рас-эль-Хайма" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Anantara Mina Al Arab Ras Al Khaimah Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Рас-эль-Хайма</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽28 500</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_755173', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_755173 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_755173 .swiper-button-next', prevEl: '#swiper_755173 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Роскошный курорт, расположенный на собственном острове в лагуне Мина Аль-Араб. Открыт в 2023 году, насчитывает 150 вилл и номеров, включая виллы на воде с панорамными окнами. Отель ориентирован на уединенный отдых и романтические поездки.</p>
 <p><strong>Цены:</strong> От ₽28 500 ($300)до ₽66 500 ($700)за ночь (вилла с бассейном, завтрак включен).</p>
 <p><strong>Особенности:</strong> Ресторан на воде с видом на залив, экскурсии на каяках и лодках по мангровым лесам, спа-ритуалы с использованием местных трав и масел, частный причал для яхт.</p>

@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,13 +392,32 @@
 <h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Haikou Backpacker Hostel</h3>
-<div id="hc_998372" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Haikou Backpacker Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&q=80" alt="Haikou Backpacker Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_998372 .hc-slide');var d=document.querySelectorAll('#hc_998372 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_998372 .hc-slide');var d=document.querySelectorAll('#hc_998372 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Haikou Backpacker Hostel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_580337" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/haikou-backpacker-hostel/01.webp" alt="Haikou Backpacker Hostel — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/haikou-backpacker-hostel/02.webp" alt="Haikou Backpacker Hostel — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/haikou-backpacker-hostel/03.webp" alt="Haikou Backpacker Hostel — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Haikou Backpacker Hostel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽2 660</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_580337', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_580337 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_580337 .swiper-button-next', prevEl: '#swiper_580337 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот хостел — настоящая находка для тех, кто хочет сэкономить, но не потерять в атмосфере. Расположен в самом сердце старого города, в двух шагах от знаменитой улицы Qilou. Номера простые, но чистые, есть общая кухня и зона отдыха с настольными играми. Я часто советую его молодым путешественникам и соло-туристам — здесь легко познакомиться с другими гостями.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽2 660 ($28)за ночь (двухместный номер с общим душем)</li>
@@ -405,13 +426,32 @@
 </ul>
 
 <h3>2. Jinjiang Inn Haikou</h3>
-<div id="hc_328653" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Jinjiang Inn Haikou - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Jinjiang Inn Haikou - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_328653 .hc-slide');var d=document.querySelectorAll('#hc_328653 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_328653 .hc-slide');var d=document.querySelectorAll('#hc_328653 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jinjiang Inn Haikou &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_622766" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/jinjiang-inn-haikou/01.webp" alt="Jinjiang Inn Haikou — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/jinjiang-inn-haikou/02.webp" alt="Jinjiang Inn Haikou — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/jinjiang-inn-haikou/03.webp" alt="Jinjiang Inn Haikou — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Jinjiang Inn Haikou</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽3 325</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_622766', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_622766 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_622766 .swiper-button-next', prevEl: '#swiper_622766 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Сетевой отель китайской сети, который держит планку «чисто, дёшево и предсказуемо». Номера небольшие, но функциональные: есть всё необходимое — кровать, телевизор, чайник, душ. Рядом — остановка автобуса и несколько магазинов с фруктами. Я рекомендую его для тех, кто приезжает в командировку или просто переночевать перед рейсом.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽3 325 ($35)за ночь (стандартный двухместный номер)</li>
@@ -420,13 +460,32 @@
 </ul>
 
 <h3>3. Haiyi Holiday Hotel</h3>
-<div id="hc_790724" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Haiyi Holiday Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Haiyi Holiday Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_790724 .hc-slide');var d=document.querySelectorAll('#hc_790724 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_790724 .hc-slide');var d=document.querySelectorAll('#hc_790724 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Haiyi Holiday Hotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_543235" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/haiyi-holiday-hotel/01.webp" alt="Haiyi Holiday Hotel — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/haiyi-holiday-hotel/02.webp" alt="Haiyi Holiday Hotel — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/haiyi-holiday-hotel/03.webp" alt="Haiyi Holiday Hotel — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Haiyi Holiday Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽3 990</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_543235', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_543235 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_543235 .swiper-button-next', prevEl: '#swiper_543235 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Маленький семейный отельчик с очень тёплой атмосферой. Хозяйка говорит немного по-английски и всегда готова помочь с маршрутом. Номера оформлены в светлых тонах, есть балконы с видом на городские крыши. Мне особенно нравится их домашний ресторанчик — готовят невероятно вкусные морепродукты.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽3 990 ($42)за ночь (номер с балконом)</li>
@@ -437,13 +496,32 @@
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Haikou Marriott Hotel</h3>
-<div id="hc_909562" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Haikou Marriott Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Haikou Marriott Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_909562 .hc-slide');var d=document.querySelectorAll('#hc_909562 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_909562 .hc-slide');var d=document.querySelectorAll('#hc_909562 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Haikou Marriott Hotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_48276" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/haikou-marriott-hotel/01.webp" alt="Haikou Marriott Hotel — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/haikou-marriott-hotel/02.webp" alt="Haikou Marriott Hotel — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/haikou-marriott-hotel/03.webp" alt="Haikou Marriott Hotel — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Haikou Marriott Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽8 455</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_48276', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_48276 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_48276 .swiper-button-next', prevEl: '#swiper_48276 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Один из моих любимых отелей в этой категории. Расположен прямо на первой линии пляжа Холидей-Бич — выходишь из лобби и через минуту уже стоишь босиком на песке. Номера просторные, с панорамными окнами и современной мебелью. Есть большой бассейн с подогревом и спа-центр. Я рекомендую брать номер с завтраком — шведский стол здесь просто шикарный, с огромным выбором выпечки и свежих фруктов.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽8 455 ($89)за ночь (стандартный номер с завтраком)</li>
@@ -451,13 +529,32 @@
 </ul>
 
 <h3>5. Grand Metropark Haikou</h3>
-<div id="hc_627737" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Grand Metropark Haikou - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Grand Metropark Haikou - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_627737 .hc-slide');var d=document.querySelectorAll('#hc_627737 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_627737 .hc-slide');var d=document.querySelectorAll('#hc_627737 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Grand Metropark Haikou &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_353955" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/grand-metropark-haikou/01.webp" alt="Grand Metropark Haikou — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/grand-metropark-haikou/02.webp" alt="Grand Metropark Haikou — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/grand-metropark-haikou/03.webp" alt="Grand Metropark Haikou — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Grand Metropark Haikou</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽6 840</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_353955', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_353955 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_353955 .swiper-button-next', prevEl: '#swiper_353955 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Отель в колониальном стиле, который напоминает мне старые фотографии Шанхая 30-х годов. Расположен в деловом центре, рядом с торговыми центрами и ресторанами. Номера оформлены с элементами китайской классики — резные деревянные панели, шёлковые подушки. Идеальный выбор для тех, кто совмещает отдых с шопингом.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽6 840 ($72)за ночь (deluxe номер)</li>
@@ -465,13 +562,32 @@
 </ul>
 
 <h3>6. Holiday Inn Haikou</h3>
-<div id="hc_556982" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Haikou - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Haikou - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_556982 .hc-slide');var d=document.querySelectorAll('#hc_556982 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_556982 .hc-slide');var d=document.querySelectorAll('#hc_556982 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Haikou &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_285863" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/holiday-inn-haikou/01.webp" alt="Holiday Inn Haikou — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/holiday-inn-haikou/02.webp" alt="Holiday Inn Haikou — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/holiday-inn-haikou/03.webp" alt="Holiday Inn Haikou — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Holiday Inn Haikou</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽5 985</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_285863', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_285863 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_285863 .swiper-button-next', prevEl: '#swiper_285863 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Надёжный вариант от всемирно известной сети. Отель расположен чуть в стороне от туристических троп, но рядом есть станция метро и автобусная остановка. Номера стандартные, но очень комфортные: хорошая звукоизоляция, удобные кровати, мощный кондиционер. Я часто селю здесь семьи с детьми — есть игровая комната и детское меню.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽5 985 ($63)за ночь (номер с двумя кроватями)</li>
@@ -479,13 +595,32 @@
 </ul>
 
 <h3>7. Yalong Bay Vista Resort</h3>
-<div id="hc_138195" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Yalong Bay Vista Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Yalong Bay Vista Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_138195 .hc-slide');var d=document.querySelectorAll('#hc_138195 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_138195 .hc-slide');var d=document.querySelectorAll('#hc_138195 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Yalong Bay Vista Resort &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_948362" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/yalong-bay-vista-resort/01.webp" alt="Yalong Bay Vista Resort — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/yalong-bay-vista-resort/02.webp" alt="Yalong Bay Vista Resort — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/yalong-bay-vista-resort/03.webp" alt="Yalong Bay Vista Resort — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Yalong Bay Vista Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽9 310</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_948362', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_948362 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_948362 .swiper-button-next', prevEl: '#swiper_948362 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Небольшой бутик-отель с уникальным дизайном — каждый номер оформлен в стиле разных стран мира. Есть и японский татами, и французский прованс, и даже африканское сафари. Расположен в тихом районе, в 15 минутах езды от центра. Очень романтичное место — я рекомендую его парам.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽9 310 ($98)за ночь (тематический номер)</li>
@@ -495,15 +630,32 @@
 <h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. The Ritz-Carlton Haikou</h3>
-<div id="hc_69024" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The Ritz-Carlton Haikou - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="The Ritz-Carlton Haikou - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Ritz-Carlton Haikou - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_69024 .hc-slide');var d=document.querySelectorAll('#hc_69024 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_69024 .hc-slide');var d=document.querySelectorAll('#hc_69024 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_69024 .hc-slide');var d=document.querySelectorAll('#hc_69024 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Ritz-Carlton Haikou &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_374719" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/the-ritz-carlton-haikou/01.webp" alt="The Ritz-Carlton Haikou — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/the-ritz-carlton-haikou/02.webp" alt="The Ritz-Carlton Haikou — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/the-ritz-carlton-haikou/03.webp" alt="The Ritz-Carlton Haikou — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Ritz-Carlton Haikou</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽20 900</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_374719', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_374719 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_374719 .swiper-button-next', prevEl: '#swiper_374719 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Это настоящий дворец на берегу океана. Всё здесь дышит роскошью: от мраморных полов в лобби до личных батлеров на этажах. Номера огромные — даже стандартный «люкс» площадью больше 60 квадратных метров. Из окон открывается захватывающий вид на Южно-Китайское море. Спа-центр занимает целый этаж, а ресторан с мишленовским шеф-поваром подаёт такие деликатесы, что я до сих пор вспоминаю их вкус.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽20 900 ($220)за ночь (номер с видом на море)</li>
@@ -511,13 +663,32 @@
 </ul>
 
 <h3>9. Wanda Vista Haikou</h3>
-<div id="hc_312072" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Wanda Vista Haikou - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Wanda Vista Haikou - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_312072 .hc-slide');var d=document.querySelectorAll('#hc_312072 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_312072 .hc-slide');var d=document.querySelectorAll('#hc_312072 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Wanda Vista Haikou &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_202085" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/wanda-vista-haikou/01.webp" alt="Wanda Vista Haikou — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/wanda-vista-haikou/02.webp" alt="Wanda Vista Haikou — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/wanda-vista-haikou/03.webp" alt="Wanda Vista Haikou — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Wanda Vista Haikou</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽17 575</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_202085', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_202085 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_202085 .swiper-button-next', prevEl: '#swiper_202085 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Современный отель с футуристическим дизайном. Фасад здания напоминает гигантскую волну, а внутри — сплошные линии и стекло. Номера оснащены по последнему слову техники: голосовое управление, умные зеркала, автоматические шторы. Отель находится прямо на берегу, и из каждого номера слышен шум прибоя. Я обожаю их бесконечный бассейн на крыше — он кажется сливающимся с океаном.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽17 575 ($185)за ночь (premium номер)</li>
@@ -525,13 +696,32 @@
 </ul>
 
 <h3>10. Banyan Tree Haikou</h3>
-<div id="hc_713491" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Banyan Tree Haikou - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Banyan Tree Haikou - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_713491 .hc-slide');var d=document.querySelectorAll('#hc_713491 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_713491 .hc-slide');var d=document.querySelectorAll('#hc_713491 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Banyan Tree Haikou &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_420019" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/haikou/banyan-tree-haikou/01.webp" alt="Banyan Tree Haikou — Хайкоу, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/banyan-tree-haikou/02.webp" alt="Banyan Tree Haikou — интерьер, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/haikou/banyan-tree-haikou/03.webp" alt="Banyan Tree Haikou — вид, Хайкоу" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Banyan Tree Haikou</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хайкоу</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽24 700</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_420019', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_420019 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_420019 .swiper-button-next', prevEl: '#swiper_420019 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Отель для тех, кто ценит уединение и восточную философию. Территория утопает в тропической зелени, каждый номер — это отдельная вилла с собственным бассейном и садом. Здесь царит атмосфера абсолютного спокойствия: ни музыки, ни шума, только пение птиц и шелест пальм. Спа-процедуры проводятся с использованием традиционных китайских трав, а йога на рассвете — это отдельный ритуал.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽24 700 ($260)за ночь (вилла с бассейном)</li>

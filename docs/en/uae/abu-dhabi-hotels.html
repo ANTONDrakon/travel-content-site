@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -388,121 +390,141 @@
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Premier Inn Abu Dhabi Capital Centre</h3>
-<div id="hc_450586" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Premier Inn Abu Dhabi Capital Centre &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_102411" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/premier-inn-abu-dhabi-capital-centre/01.webp" alt="Premier Inn Abu Dhabi Capital Centre — Abu Dhabi, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/premier-inn-abu-dhabi-capital-centre/02.webp" alt="Premier Inn Abu Dhabi Capital Centre — interior, Abu Dhabi" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/premier-inn-abu-dhabi-capital-centre/03.webp" alt="Premier Inn Abu Dhabi Capital Centre — view, Abu Dhabi" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Premier Inn Abu Dhabi Capital Centre</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Abu Dhabi</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_102411', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_102411 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_102411 .swiper-button-next', prevEl: '#swiper_102411 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Located directly opposite the Abu Dhabi National Exhibition Centre (ADNEC), this 352-room property offers the most consistent budget experience in the city. Standard double rooms in 2026 average $42per night, including complimentary Wi-Fi and a continental breakfast. The hotel features a small outdoor pool, a 24-hour fitness center, and a restaurant serving international buffet meals starting at $15The primary advantage is its proximity to ADNEC and the Al Wahda Mall, which is a 5-minute taxi ride away. A notable con is the lack of beach access; the nearest public beach is 6 kilometers away. The hotel is also situated on a busy main road, so rooms facing the street can experience traffic noise, especially during weekday mornings.</p>
 
 <h3>2. Ibis Abu Dhabi Gate</h3>
-<div id="hc_428767" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ibis Abu Dhabi Gate - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ibis Abu Dhabi Gate - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ibis Abu Dhabi Gate - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ibis Abu Dhabi Gate &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_930627" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/ibis-abu-dhabi-gate/01.webp" alt="Ibis Abu Dhabi Gate — Abu Dhabi, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/ibis-abu-dhabi-gate/02.webp" alt="Ibis Abu Dhabi Gate — interior, Abu Dhabi" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/ibis-abu-dhabi-gate/03.webp" alt="Ibis Abu Dhabi Gate — view, Abu Dhabi" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Ibis Abu Dhabi Gate</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Abu Dhabi</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_930627', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_930627 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_930627 .swiper-button-next', prevEl: '#swiper_930627 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Part of the Accor group, this 288-room hotel sits near the Abu Dhabi Gate, close to the border with Dubai, making it ideal for travelers transiting between the two emirates. Nightly rates in 2026 start at $38for a standard room. The hotel provides a free shuttle bus to the city center three times daily, though the journey takes 25 minutes. Amenities include a rooftop swimming pool, a business center, and a 24-hour convenience store. The major pro is the extremely low price and the free parking for rental car users. The con is its isolated location—there are no restaurants or shops within walking distance, and the nearest metro station is 3 kilometers away. The hotel’s decor is functional but dated, with furnishings from the 2015 renovation showing wear.</p>
 
 <h3>3. Holiday Inn Express Abu Dhabi Yas Island</h3>
-<div id="hc_333869" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Express Abu Dhabi Yas Island - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Express Abu Dhabi Yas Island - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_333869 .hc-slide');var d=document.querySelectorAll('#hc_333869 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_333869 .hc-slide');var d=document.querySelectorAll('#hc_333869 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Express Abu Dhabi Yas Island &bull; 2 photos</p></div>
 <p>Despite being on Yas Island, this 208-room property maintains budget-friendly rates averaging $48per night. It is 1.5 kilometers from the Yas Marina Circuit and 2 kilometers from Ferrari World. The hotel offers a complimentary breakfast buffet with hot items, a small gym, and a business center. The standout feature is the free shuttle to Yas Waterworld and the Warner Bros. World theme park. However, guests report that the rooms are compact (22 square meters) and that the pool is small and often crowded. Noise from the nearby Formula 1 track can be an issue during race weekends (December), when rates double. This is the best budget option for theme park visitors but not for those seeking a quiet, beachfront stay.</p>
 
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. Riu Palace Abu Dhabi</h3>
-<div id="hc_328846" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Riu Palace Abu Dhabi - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Riu Palace Abu Dhabi - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Riu Palace Abu Dhabi - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_328846 .hc-slide');var d=document.querySelectorAll('#hc_328846 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_328846 .hc-slide');var d=document.querySelectorAll('#hc_328846 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_328846 .hc-slide');var d=document.querySelectorAll('#hc_328846 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Riu Palace Abu Dhabi &bull; 3 photos</p></div>
 <p>This all-inclusive resort on the Corniche offers exceptional value for mid-range travelers. Standard sea-view rooms in 2026 cost $120per night, which includes all meals, drinks (including alcohol), and non-motorized water sports. The hotel features three pools, a private beach area, and six restaurants serving cuisine from Spanish to Asian. The highlight is the 24-hour all-inclusive policy, rare for this price point. The main drawback is the large size (500 rooms), which can lead to long waits at buffets during peak hours. The location is 4 kilometers from the city center, requiring taxis for sightseeing.</p>
 
 <h3>2. Centro Yas Island by Rotana</h3>
-<div id="hc_892806" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Centro Yas Island by Rotana - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Centro Yas Island by Rotana - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Centro Yas Island by Rotana - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_892806 .hc-slide');var d=document.querySelectorAll('#hc_892806 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_892806 .hc-slide');var d=document.querySelectorAll('#hc_892806 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_892806 .hc-slide');var d=document.querySelectorAll('#hc_892806 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Centro Yas Island by Rotana &bull; 3 photos</p></div>
 <p>A 423-room hotel geared toward business and leisure travelers, with rates averaging $95per night. The hotel is connected to the Yas Island shopping mall and is a 10-minute walk from the Yas Marina. Rooms are modern with floor-to-ceiling windows and smart TVs. The highlight is the rooftop infinity pool with views of the Formula 1 track. The hotel also offers a free shuttle to the Abu Dhabi airport (5 kilometers away). The downside is that the pool closes at 8 PM, and the on-site restaurant is expensive for dinner, with mains averaging $30Parking is free, but spaces are limited.</p>
 
 <h3>3. Hilton Abu Dhabi Yas Island</h3>
-<div id="hc_460265" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hilton Abu Dhabi Yas Island - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hilton Abu Dhabi Yas Island - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hilton Abu Dhabi Yas Island - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_460265 .hc-slide');var d=document.querySelectorAll('#hc_460265 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_460265 .hc-slide');var d=document.querySelectorAll('#hc_460265 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_460265 .hc-slide');var d=document.querySelectorAll('#hc_460265 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hilton Abu Dhabi Yas Island &bull; 3 photos</p></div>
 <p>This 550-room hotel sits directly on Yas Beach, offering private access to a 1.2-kilometer stretch of sand. Nightly rates in 2026 range from $110to $145The hotel features a large lagoon pool, a spa with 12 treatment rooms, and four dining venues, including a seafood restaurant on the beach. The highlight is the family-friendly atmosphere, with a kids’ club and daily activities like kayaking and paddleboarding included. The con is that the beach can get crowded during weekends (Friday and Saturday), and the hotel charges $20per day for valet parking. The location is excellent for Yas Island attractions but 20 minutes from downtown Abu Dhabi.</p>
 
 <h3>4. Park Rotana Abu Dhabi</h3>
-<div id="hc_41405" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Park Rotana Abu Dhabi - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Park Rotana Abu Dhabi - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Park Rotana Abu Dhabi - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_41405 .hc-slide');var d=document.querySelectorAll('#hc_41405 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_41405 .hc-slide');var d=document.querySelectorAll('#hc_41405 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_41405 .hc-slide');var d=document.querySelectorAll('#hc_41405 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Park Rotana Abu Dhabi &bull; 3 photos</p></div>
 <p>Located in the Khalifa Park area, this 298-room hotel offers a balance of comfort and convenience. Standard rooms cost $85per night, with suites starting at $130The hotel has a large outdoor pool, a tennis court, and a 24-hour fitness center. The highlight is the free shuttle to the Sheikh Zayed Grand Mosque (5 minutes away) and the Abu Dhabi Mall. The hotel’s restaurant, “Bella,” serves Italian cuisine with pasta dishes under $20The main con is that the hotel is 3 kilometers from the nearest beach, and the surrounding area is mostly residential with limited dining options. The decor is slightly dated, with carpets showing signs of wear in hallways.</p>
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Emirates Palace Mandarin Oriental</h3>
-<div id="hc_490565" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Emirates Palace Mandarin Oriental - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Emirates Palace Mandarin Oriental - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_490565 .hc-slide');var d=document.querySelectorAll('#hc_490565 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_490565 .hc-slide');var d=document.querySelectorAll('#hc_490565 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Emirates Palace Mandarin Oriental &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_611217" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/emirates-palace-mandarin-oriental/01.webp" alt="Emirates Palace Mandarin Oriental — Abu Dhabi, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/emirates-palace-mandarin-oriental/02.webp" alt="Emirates Palace Mandarin Oriental — interior, Abu Dhabi" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/emirates-palace-mandarin-oriental/03.webp" alt="Emirates Palace Mandarin Oriental — view, Abu Dhabi" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Emirates Palace Mandarin Oriental</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Abu Dhabi</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_611217', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_611217 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_611217 .swiper-button-next', prevEl: '#swiper_611217 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>This iconic 394-room property on a 1.3-kilometer private beach remains Abu Dhabi’s most recognizable luxury hotel. In 2026, standard rooms start at $450per night, with suites exceeding $1 200The hotel features a 1.5-kilometer-long pool, 14 restaurants and bars, a 2,500-square-meter spa, and a private marina. The highlight is the gold-leaf interior and the 24-carat gold vending machine in the lobby. Guests receive complimentary access to the Talise Spa and a personal butler for every suite. The con is the immense scale—walking from the lobby to a room can take 10 minutes, and the dining prices are extreme, with afternoon tea costing $120per person. The hotel is 15 kilometers from the city center, requiring taxis for most excursions.</p>
 
 <h3>2. The St. Regis Saadiyat Island Resort</h3>
-<div id="hc_12786" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="The St. Regis Saadiyat Island Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The St. Regis Saadiyat Island Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_12786 .hc-slide');var d=document.querySelectorAll('#hc_12786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_12786 .hc-slide');var d=document.querySelectorAll('#hc_12786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The St. Regis Saadiyat Island Resort &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_799944" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/the-st-regis-saadiyat-island-resort/01.webp" alt="The St. Regis Saadiyat Island Resort — Abu Dhabi, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/the-st-regis-saadiyat-island-resort/02.webp" alt="The St. Regis Saadiyat Island Resort — interior, Abu Dhabi" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/the-st-regis-saadiyat-island-resort/03.webp" alt="The St. Regis Saadiyat Island Resort — view, Abu Dhabi" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The St. Regis Saadiyat Island Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Abu Dhabi</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_799944', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_799944 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_799944 .swiper-button-next', prevEl: '#swiper_799944 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Set on Saadiyat Island’s pristine beach, this 377-room resort offers direct access to the Saadiyat Beach Golf Club and is a 5-minute drive from the Louvre Abu Dhabi. Rates in 2026 range from $350to $800per night. The resort features a 50-meter infinity pool, a 1,500-square-meter spa with hammam treatments, and five restaurants, including a Michelin-starred Japanese venue. The highlight is the butler service, available 24/7 for all guests, including unpacking and packing services. The con is the isolated location—there are no shops or restaurants within walking distance, and taxi fares to downtown Abu Dhabi average $25each way. The resort also charges a $50daily resort fee for beach chairs and umbrellas.</p>
 
 <h3>3. Four Seasons Hotel Abu Dhabi at Al Maryah Island</h3>
-<div id="hc_841721" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Four Seasons Hotel Abu Dhabi at Al Maryah Island - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Four Seasons Hotel Abu Dhabi at Al Maryah Island - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Four Seasons Hotel Abu Dhabi at Al Maryah Island - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_841721 .hc-slide');var d=document.querySelectorAll('#hc_841721 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_841721 .hc-slide');var d=document.querySelectorAll('#hc_841721 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_841721 .hc-slide');var d=document.querySelectorAll('#hc_841721 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Four Seasons Hotel Abu Dhabi at Al Maryah Island &bull; 3 photos</p></div>
 <p>This 200-room hotel sits on Al Maryah Island, Abu Dhabi’s financial district, offering skyline views of the city. Standard rooms start at $280per night, with executive suites at $600The hotel features a 44-meter lap pool, a 1,000-square-meter spa, and four restaurants, including a rooftop bar with panoramic views. The highlight is the direct access to the Galleria Mall, Abu Dhabi’s premier luxury shopping destination, and the free shuttle to the city center. The con is that the beach is artificial and small (100 meters), and the area is primarily business-oriented, with limited nightlife within walking distance. The hotel’s design is modern and minimalist, which some guests find less cozy than traditional luxury properties.</p>
 
 <h2>How to Choose the Right Area</h2>

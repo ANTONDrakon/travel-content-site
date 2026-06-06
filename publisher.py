@@ -422,7 +422,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     from config.destinations import DESTINATIONS
     from agents.seo_optimizer import get_url_slug, build_seo_meta, generate_schema_article, generate_schema_faq, generate_faq
     from config.prompts import CONTENT_TYPES
-    from agents.image_injector import inject_hotel_images, inject_attraction_images
+    from agents.image_injector import inject_hotel_carousels, inject_attraction_images
 
     country = DESTINATIONS.get(country_slug)
     if not country:
@@ -448,7 +448,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
 
     body = article_data.get("body", "")
     if content_type == "hotels":
-        body = inject_hotel_images(body)
+        body = inject_hotel_carousels(body, country_slug, city_slug, lang)
     if content_type == "attractions":
         body = inject_attraction_images(body)
 

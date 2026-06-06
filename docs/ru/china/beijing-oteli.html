@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -392,26 +394,64 @@
 <p>Для тех, кто хочет сэкономить, но не потерять в качестве, Пекин предлагает отличные варианты. Я всегда говорю: бюджетно — не значит скучно. Вот три отеля, которые я проверила лично и могу рекомендовать с чистой совестью.</p>
 
 <h3>1. Beijing Downtown Travelotel</h3>
-<div id="hc_394351" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Beijing Downtown Travelotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Beijing Downtown Travelotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_394351 .hc-slide');var d=document.querySelectorAll('#hc_394351 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_394351 .hc-slide');var d=document.querySelectorAll('#hc_394351 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Beijing Downtown Travelotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_360355" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/beijing-downtown-travelotel/01.webp" alt="Beijing Downtown Travelotel — Пекин, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/beijing-downtown-travelotel/02.webp" alt="Beijing Downtown Travelotel — интерьер, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/beijing-downtown-travelotel/03.webp" alt="Beijing Downtown Travelotel — вид, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Beijing Downtown Travelotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Пекин</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽4 275</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_360355', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_360355 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_360355 .swiper-button-next', prevEl: '#swiper_360355 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот отель — настоящая находка для экономных путешественников. Расположен в самом сердце района Дунчэн, в двух шагах от станции метро "Дунсы". Номера маленькие, но чистые, с базовым набором: кровать, кондиционер, душ и чайник. Завтрак — скромный, но сытный: рисовая каша, яйца и булочки. Цена: от <strong>₽4 275 ($45)</strong> за ночь (с учетом моей наценки — реально около ₽3 705 ($39)). Плюсы: идеальное расположение для экскурсий, дружелюбный персонал, есть камера хранения. Минусы: тонкие стены (слышно соседей), нет фитнес-зала, и Wi-Fi иногда "плавает". Но для ночевки — отличный вариант.</p>
 
 <h3>2. 161 Wangfujing Hostel</h3>
 <p>Не пугайтесь слова "хостел" — это скорее гостевой дом с душой. Находится прямо на пешеходной улице Ванфуцзинь, где круглосуточно кипит жизнь. Номера — от общих дортуаров до частных с удобствами. Я рекомендую брать приватный — он стоит около <strong>₽4 560 ($48)</strong> за ночь. Плюсы: нереальная атмосфера старого Пекина, бесплатный чай и печенье в лобби, можно арендовать велосипед. Минусы: шумно до полуночи (тусовки рядом), душ общий в некоторых номерах, и кондиционер работает не круглосуточно. Зато вы почувствуете дух настоящего хутуна!</p>
 
 <h3>3. Zizhu Hotel (Purple Bamboo)</h3>
-<div id="hc_770957" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Zizhu Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Zizhu Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_770957 .hc-slide');var d=document.querySelectorAll('#hc_770957 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_770957 .hc-slide');var d=document.querySelectorAll('#hc_770957 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Zizhu Hotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_584620" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/zizhu-hotel/01.webp" alt="Zizhu Hotel — Пекин, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/zizhu-hotel/02.webp" alt="Zizhu Hotel — интерьер, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/zizhu-hotel/03.webp" alt="Zizhu Hotel — вид, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Zizhu Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Пекин</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 990</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_584620', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_584620 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_584620 .swiper-button-next', prevEl: '#swiper_584620 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Тихий отель в районе Хайдянь, рядом с Пекинским университетом. Идеален для тех, кто ценит покой. Номера просторнее, чем в центре, есть даже небольшие балконы. Цена: от <strong>₽3 990 ($42)</strong> за ночь. Плюсы: рядом парк Цзычжу, очень тихо, отличный китайский ресторанчик на первом этаже. Минусы: далеко от центра (30 минут на метро), вокруг мало развлечений, и персонал почти не говорит по-английски. Но если вы приехали работать или учиться — это рай.</p>
 
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
@@ -419,52 +459,119 @@
 <p>Золотая середина, где комфорт сочетается с разумной ценой. В этой категории я собрала четыре отеля, которые лично опробовала с друзьями. Каждый из них имеет свою "фишку", которая делает поездку особенной.</p>
 
 <h3>1. Novotel Beijing Peace</h3>
-<div id="hc_968628" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Novotel Beijing Peace - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Novotel Beijing Peace - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_968628 .hc-slide');var d=document.querySelectorAll('#hc_968628 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_968628 .hc-slide');var d=document.querySelectorAll('#hc_968628 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Novotel Beijing Peace &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_934890" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/novotel-beijing-peace/01.webp" alt="Novotel Beijing Peace — Пекин, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/novotel-beijing-peace/02.webp" alt="Novotel Beijing Peace — интерьер, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/novotel-beijing-peace/03.webp" alt="Novotel Beijing Peace — вид, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Novotel Beijing Peace</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Пекин</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽9 310</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_934890', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_934890 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_934890 .swiper-button-next', prevEl: '#swiper_934890 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Расположен на площади Ванфуцзинь, в двух минутах от метро. Номера современные, с панорамными окнами и отличной звукоизоляцией. Цена: от <strong>₽9 310 ($98)</strong> за ночь. Фишка: потрясающий завтрак "шведский стол" с европейскими и азиатскими блюдами — я обожаю их воки с лапшой! Плюсы: бассейн, тренажерный зал, бизнес-центр. Минусы: завтрак не включен в базовый тариф, и вокруг дорогие рестораны. Но для деловой поездки или романтического уикенда — идеально.</p>
 
 <h3>2. Holiday Inn Express Dongzhimen</h3>
-<div id="hc_210194" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Express Dongzhimen - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Express Dongzhimen - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_210194 .hc-slide');var d=document.querySelectorAll('#hc_210194 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_210194 .hc-slide');var d=document.querySelectorAll('#hc_210194 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Express Dongzhimen &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_855740" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/holiday-inn-express-dongzhimen/01.webp" alt="Holiday Inn Express Dongzhimen — Пекин, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/holiday-inn-express-dongzhimen/02.webp" alt="Holiday Inn Express Dongzhimen — интерьер, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/holiday-inn-express-dongzhimen/03.webp" alt="Holiday Inn Express Dongzhimen — вид, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Holiday Inn Express Dongzhimen</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Пекин</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽6 840</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_855740', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_855740 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_855740 .swiper-button-next', prevEl: '#swiper_855740 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Сеть Holiday Inn — это всегда предсказуемое качество. Этот филиал находится у станции метро "Дунчжимэнь", откуда легко добраться до аэропорта. Номера компактные, но продуманные: есть сейф, чайная станция, удобные кровати. Цена: от <strong>₽6 840 ($72)</strong> за ночь. Фишка: бесплатный завтрак (континентальный) и круглосуточная стойка регистрации. Плюсы: близко к ночным рынкам и барам, чистый и уютный. Минусы: нет бассейна, интерьер немного "сетевой" и скучный. Но для практичных путешественников — то, что надо.</p>
-<div id="hc_901627" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn — это всегда предсказуемое качество. Этот филиал находится у станции метро "Дунчжимэнь", откуда легко добраться до аэропорта. Номера компактные, но продуманные: есть сейф, чайная станция, удобные кровати. Цена: от - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn — это всегда предсказуемое качество. Этот филиал находится у станции метро "Дунчжимэнь", откуда легко добраться до аэропорта. Номера компактные, но продуманные: есть сейф, чайная станция, удобные кровати. Цена: от - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_901627 .hc-slide');var d=document.querySelectorAll('#hc_901627 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_901627 .hc-slide');var d=document.querySelectorAll('#hc_901627 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn — это всегда предсказуемое качество. Этот филиал находится у станции метро "Дунчжимэнь", откуда легко добраться до аэропорта. Номера компактные, но продуманные: есть сейф, чайная станция, удобные кровати. Цена: от &bull; 2 photos</p></div>
 
 <h3>3. The Emperor Beijing Forbidden City</h3>
-<div id="hc_654468" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="The Emperor Beijing Forbidden City - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="The Emperor Beijing Forbidden City - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="The Emperor Beijing Forbidden City - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_654468 .hc-slide');var d=document.querySelectorAll('#hc_654468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_654468 .hc-slide');var d=document.querySelectorAll('#hc_654468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_654468 .hc-slide');var d=document.querySelectorAll('#hc_654468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Emperor Beijing Forbidden City &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_546110" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/the-emperor-beijing-forbidden-city/01.webp" alt="The Emperor Beijing Forbidden City — Пекин, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/the-emperor-beijing-forbidden-city/02.webp" alt="The Emperor Beijing Forbidden City — интерьер, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/the-emperor-beijing-forbidden-city/03.webp" alt="The Emperor Beijing Forbidden City — вид, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Emperor Beijing Forbidden City</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Пекин</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽12 825</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_546110', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_546110 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_546110 .swiper-button-next', prevEl: '#swiper_546110 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>О, этот отель — моя слабость! Бутик-отель в стиле "шик-минимализм" прямо у Запретного города. Номера с элементами традиционного китайского декора: шелковые подушки, резные ширмы. Цена: от <strong>₽12 825 ($135)</strong> за ночь. Фишка: терраса на крыше с видом на императорский дворец — там можно пить утренний кофе или вечернее вино. Плюсы: уникальная атмосфера, внимательный персонал, бесплатный велнес-центр. Минусы: дорогой ресторан (обед от ₽2 850 ($30)), и вокруг много туристов. Но ради вида на Запретный город — стоит каждого юаня!</p>
 
 <h3>4. Beijing Marriott Hotel City Wall</h3>
-<div id="hc_37833" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Beijing Marriott Hotel City Wall - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Beijing Marriott Hotel City Wall - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_37833 .hc-slide');var d=document.querySelectorAll('#hc_37833 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_37833 .hc-slide');var d=document.querySelectorAll('#hc_37833 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Beijing Marriott Hotel City Wall &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_926820" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/beijing-marriott-hotel-city-wall/01.webp" alt="Beijing Marriott Hotel City Wall — Пекин, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/beijing-marriott-hotel-city-wall/02.webp" alt="Beijing Marriott Hotel City Wall — интерьер, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/beijing-marriott-hotel-city-wall/03.webp" alt="Beijing Marriott Hotel City Wall — вид, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Beijing Marriott Hotel City Wall</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Пекин</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽11 210</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_926820', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_926820 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_926820 .swiper-button-next', prevEl: '#swiper_926820 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Марриотт — это классика. Расположен у южных ворот городской стены, рядом с парком Таожань. Номера просторные, с коврами и большими ваннами. Цена: от <strong>₽11 210 ($118)</strong> за ночь. Фишка: спа-центр с традиционным китайским массажем — после экскурсий это спасение! Плюсы: отличный фитнес, два ресторана (китайский и итальянский), детская комната. Минусы: до центра 15 минут на такси, и Wi-Fi в номерах слабоват. Но для семей с детьми — идеальный вариант.</p>
 
 <h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
@@ -472,37 +579,64 @@
 <p>Если вы хотите почувствовать себя императором или императрицей, Пекин предложит вам отели, которые перевернут представление о роскоши. Я выбрала три, которые оставили у меня неизгладимое впечатление.</p>
 
 <h3>1. The Peninsula Beijing</h3>
-<div id="hc_592516" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="The Peninsula Beijing - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The Peninsula Beijing - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_592516 .hc-slide');var d=document.querySelectorAll('#hc_592516 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_592516 .hc-slide');var d=document.querySelectorAll('#hc_592516 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Peninsula Beijing &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_862266" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/the-peninsula-beijing/01.webp" alt="The Peninsula Beijing — Пекин, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/the-peninsula-beijing/02.webp" alt="The Peninsula Beijing — интерьер, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/the-peninsula-beijing/03.webp" alt="The Peninsula Beijing — вид, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The Peninsula Beijing</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Пекин</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽30 400</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_862266', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_862266 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_862266 .swiper-button-next', prevEl: '#swiper_862266 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Это легенда. Расположен в самом центре, на улице Ванфуцзинь. Номера — это апартаменты: мраморные ванны, отдельные гостиные, умные системы управления. Цена: от <strong>₽30 400 ($320)</strong> за ночь. Особенности: личный дворецкий, парк из 12 лимузинов (включая Rolls-Royce), и ресторан с двумя звездами Мишлен. Я обожаю их чайную церемонию — это искусство! Плюсы: безупречный сервис, спа-центр с хаммамом, историческая атмосфера. Минусы: цена кусается, и вокруг слишком людно. Но если есть возможность — это must-visit.</p>
 
 <h3>2. The Ritz-Carlton Beijing, Financial Street</h3>
-<div id="hc_226050" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Ritz-Carlton Beijing, Financial Street - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Ritz-Carlton Beijing, Financial Street - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ritz-Carlton Beijing, Financial Street - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_226050 .hc-slide');var d=document.querySelectorAll('#hc_226050 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_226050 .hc-slide');var d=document.querySelectorAll('#hc_226050 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_226050 .hc-slide');var d=document.querySelectorAll('#hc_226050 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ritz-Carlton Beijing, Financial Street &bull; 3 photos</p></div>
 <p>Отель для деловой элиты, но и туристам здесь рады. Находится в деловом районе, но до центра 10 минут на такси. Номера — от 50 кв.м, с панорамными видами на город. Цена: от <strong>₽26 600 ($280)</strong> за ночь. Особенности: ресторан с живой музыкой, лаунж-зона с камином, бассейн с подогревом. Плюсы: консьерж-сервис организует любую экскурсию, отличный завтрак с шампанским. Минусы: вокруг офисы, а не достопримечательности, и ужин в ресторане — от ₽9 500 ($100)Но для тех, кто ценит приватность — идеально.</p>
 
 <h3>3. Aman Summer Palace</h3>
-<div id="hc_384780" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Aman Summer Palace - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Aman Summer Palace - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Aman Summer Palace - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_384780 .hc-slide');var d=document.querySelectorAll('#hc_384780 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_384780 .hc-slide');var d=document.querySelectorAll('#hc_384780 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_384780 .hc-slide');var d=document.querySelectorAll('#hc_384780 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Aman Summer Palace &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_355242" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/china/beijing/aman-summer-palace/01.webp" alt="Aman Summer Palace — Пекин, Китай" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/aman-summer-palace/02.webp" alt="Aman Summer Palace — интерьер, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/china/beijing/aman-summer-palace/03.webp" alt="Aman Summer Palace — вид, Пекин" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Aman Summer Palace</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Пекин</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽42 750</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_355242', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_355242 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_355242 .swiper-button-next', prevEl: '#swiper_355242 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Это не отель, а сказка. Расположен прямо на территории Летнего дворца — вы просыпаетесь с видом на императорские сады. Цена: от <strong>₽42 750 ($450)</strong> за ночь. Особенности: номера в традиционном китайском стиле с современными удобствами, частный гид по дворцу, йога-сессии на рассвете. Плюсы: абсолютная тишина, уникальная архитектура, персонал помнит ваши предпочтения. Минусы: очень дорого (ужин от ₽14 250 ($150)), и до центра далеко (40 минут на такси). Но для романтического побега или медового месяца — лучше не придумаешь.</p>
 
 <h2>Как выбрать район</h2>

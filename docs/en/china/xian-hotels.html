@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -403,13 +405,6 @@
 
 <ul>
 <li><strong>Jinjiang Inn (Bell Tower Branch)</strong>: A reliable mid-range chain with a prime spot near the Bell Tower. Rooms are modern with crisp white linens and blackout curtains—great for jet-lagged travelers. The breakfast buffet includes both Chinese congee and Western toast. <em>Price: $68/night</em>. Highlights: Rooftop terrace with Bell Tower views, free bike rentals, 24-hour laundry service.</li>
-<div id="hc_200468" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Jinjiang Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Jinjiang Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_200468 .hc-slide');var d=document.querySelectorAll('#hc_200468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_200468 .hc-slide');var d=document.querySelectorAll('#hc_200468 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jinjiang Inn &bull; 2 photos</p></div>
 <li><strong>Xi'an Huaqing Palace Hotel (Qujiang New District)</strong>: This hotel blends Tang dynasty architecture with modern amenities. The lobby has a miniature replica of the Giant Wild Goose Pagoda, and the rooms feature silk bed runners. It's a 10-minute walk to the pagoda and the Tang Paradise theme park. <em>Price: $95/night</em>. Highlights: Indoor pool, traditional tea ceremony every afternoon, free shuttle to Terracotta Army (book ahead).</li>
 <li><strong>Hanting Hotel (Muslim Quarter)</strong>: Don't be fooled by the chain name—this branch is special. It's housed in a renovated courtyard house, with exposed brick walls and a small garden where you can sip tea. Rooms are compact but cozy, with heated toilet seats (a luxury I never knew I needed). <em>Price: $78/night</em>. Highlights: Free guided walk through the Muslim Quarter at 6 PM, complimentary snacks in the lobby, rooftop washing line for clothes.</li>
 <li><strong>Xi'an City Wall Boutique Hotel (South Gate Area)</strong>: A hidden gem just inside the South Gate. Each room is uniquely decorated with local art—my favorite has a mural of the Terracotta Warriors. The staff are incredibly helpful; they booked me a last-minute ticket to the Shaanxi History Museum when it was sold out online. <em>Price: $112/night</em>. Highlights: Free bicycle rentals to cycle the City Wall, rooftop bar with craft beers, complimentary airport pickup (for stays of 3+ nights).</li>
@@ -422,13 +417,6 @@
 <ul>
 <li><strong>The Westin Xi'an (Qujiang New District)</strong>: This is where I send clients who want "wow" factor. The lobby has a massive chandelier inspired by the Silk Road, and the rooms have floor-to-ceiling windows overlooking the pagoda. The Heavenly Bed is no joke—I slept 10 hours straight. <em>Price: $195/night</em>. Features: Full-service spa with traditional Chinese treatments, indoor heated pool, three restaurants including a Michelin-starred Cantonese spot, free shuttle to major attractions.</li>
 <li><strong>Sofitel Xi'an on Renmin Square (City Wall Area)</strong>: A French-Chinese fusion that works beautifully. The building is a restored 1950s Soviet-era structure, but the interiors are sleek and modern. The breakfast buffet is legendary—I'm still dreaming of the handmade noodles station. <em>Price: $225/night</em>. Features: Rooftop bar with live jazz, fitness center with personal trainers, butler service for suites, complimentary champagne at check-in.</li>
-<div id="hc_377464" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80" alt="Sofitel Xi'an on Renmin Square - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sofitel Xi'an on Renmin Square - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_377464 .hc-slide');var d=document.querySelectorAll('#hc_377464 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_377464 .hc-slide');var d=document.querySelectorAll('#hc_377464 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sofitel Xi'an on Renmin Square &bull; 2 photos</p></div>
 <li><strong>Xi'an Jinding Hotel (Bell Tower Area)</strong>: This is the ultimate splurge for history buffs. The hotel is built on the site of a Tang dynasty palace, and the design incorporates artifacts from the era. My room had a replica Tang dynasty mirror and a calligraphy set. The concierge arranged a private after-hours tour of the Terracotta Army—worth every penny. <em>Price: $280/night</em>. Features: Private museum on-site, traditional Chinese garden, cooking class for biangbiang noodles, limousine airport transfer, personal shopper for local crafts.</li>
 </ul>
 
@@ -457,13 +445,6 @@
 </ul>
 
 <p>There you have it—my top 10 hotels in Xi'an for 2026, from budget to luxury. Remember, the best hotel is the one that fits your style and budget. Whether you're cycling the City Wall at dawn or slurping noodles in the Muslim Quarter at midnight, Xi'an will steal your heart. Safe travels, and don't forget to send me a postcard!</p><div class="affiliate-banner"><p>Don't forget travel insurance!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a></div>
-<div id="hc_949785" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="surance! - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="surance! - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_949785 .hc-slide');var d=document.querySelectorAll('#hc_949785 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_949785 .hc-slide');var d=document.querySelectorAll('#hc_949785 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">surance! &bull; 2 photos</p></div>
         </div>
 
         

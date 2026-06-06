@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,109 +392,271 @@
 <h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Solymar Hotel (район Саккала)</h3>
-<div id="hc_248677" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Solymar Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Solymar Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_248677 .hc-slide');var d=document.querySelectorAll('#hc_248677 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_248677 .hc-slide');var d=document.querySelectorAll('#hc_248677 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Solymar Hotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_746795" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/solymar-hotel/01.webp" alt="Solymar Hotel — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/solymar-hotel/02.webp" alt="Solymar Hotel — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/solymar-hotel/03.webp" alt="Solymar Hotel — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Solymar Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 325</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_746795', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_746795 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_746795 .swiper-button-next', prevEl: '#swiper_746795 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽3 325 ($35)–45 за ночь на двоих (завтрак включён). Отель расположен в 100 метрах от пляжа, имеет собственный бассейн с подогревом и небольшой спа-центр. Номера простые, но чистые, с кондиционером и мини-холодильником. Плюсы: близость к главному променаду Хургады (Sheraton Road), где сосредоточены рестораны и клубы; дружелюбный персонал; бесплатный Wi-Fi. Минусы: старая мебель в номерах, шум с улицы до 2 часов ночи, завтрак однообразный (омлет, тосты, джем). Рекомендуется молодым путешественникам, которые планируют активно проводить время вне отеля.</p>
-<div id="hc_264087" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Sheraton Road), где сосредоточены рестораны и клубы; дружелюбный персонал; бесплатный Wi-Fi. Минусы: старая мебель в номерах, шум с улицы до 2 часов ночи, завтрак однообразный - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sheraton Road), где сосредоточены рестораны и клубы; дружелюбный персонал; бесплатный Wi-Fi. Минусы: старая мебель в номерах, шум с улицы до 2 часов ночи, завтрак однообразный - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_264087 .hc-slide');var d=document.querySelectorAll('#hc_264087 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_264087 .hc-slide');var d=document.querySelectorAll('#hc_264087 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sheraton Road), где сосредоточены рестораны и клубы; дружелюбный персонал; бесплатный Wi-Fi. Минусы: старая мебель в номерах, шум с улицы до 2 часов ночи, завтрак однообразный &bull; 2 photos</p></div>
 
 <h3>2. Coral Beach Hotel (район Дахара)</h3>
-<div id="hc_224427" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_224427 .hc-slide');var d=document.querySelectorAll('#hc_224427 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_224427 .hc-slide');var d=document.querySelectorAll('#hc_224427 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Beach Hotel &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_498233" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/coral-beach-hotel/01.webp" alt="Coral Beach Hotel — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/coral-beach-hotel/02.webp" alt="Coral Beach Hotel — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/coral-beach-hotel/03.webp" alt="Coral Beach Hotel — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Coral Beach Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽2 660</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_498233', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_498233 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_498233 .swiper-button-next', prevEl: '#swiper_498233 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽2 660 ($28)–38 за ночь на двоих (без питания). Этот отель — настоящая находка для бюджетных туристов. Он находится прямо на набережной Дахары, в 5 минутах от старого порта и рыбного рынка. Номера выходят окнами на море, но кондиционеры гудят. Плюсы: аутентичная атмосфера, возможность готовить в общей кухне, невероятные закаты с балкона. Минусы: отсутствие бассейна, очень тонкие стены (слышно соседей), нестабильная горячая вода. Идеальный вариант для соло-путешественников и пар, ценящих локальный колорит.</p>
 
 <h3>3. Sea & Sand Hotel (район Эль-Гуна, эконом-сегмент)</h3>
-<div id="hc_627104" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Sea & Sand Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Sea & Sand Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Sea & Sand Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_627104 .hc-slide');var d=document.querySelectorAll('#hc_627104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_627104 .hc-slide');var d=document.querySelectorAll('#hc_627104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_627104 .hc-slide');var d=document.querySelectorAll('#hc_627104 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sea & Sand Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_202671" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/sea--sand-hotel/01.webp" alt="Sea & Sand Hotel — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/sea--sand-hotel/02.webp" alt="Sea & Sand Hotel — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/sea--sand-hotel/03.webp" alt="Sea & Sand Hotel — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sea & Sand Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽4 275</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_202671', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_202671 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_202671 .swiper-button-next', prevEl: '#swiper_202671 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽4 275 ($45)–50 за ночь на двоих (полупансион). Расположен на острове Эль-Гуна, в 15 минутах от центра. Отель предлагает базовые номера с видом на лагуну. Плюсы: тихий район, собственный пирс для снорклинга, включённый трансфер до пляжа. Минусы: удалённость от развлечений (до ресторанов 20 минут пешком по мосту), устаревший ремонт в ванных комнатах. Подойдёт для тех, кто ищет спокойный отдых и готов жертвовать комфортом ради экономии.</p>
 
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Steigenberger Resort El Gouna (район Эль-Гуна)</h3>
-<div id="hc_241417" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Steigenberger Resort El Gouna - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Steigenberger Resort El Gouna - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_241417 .hc-slide');var d=document.querySelectorAll('#hc_241417 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_241417 .hc-slide');var d=document.querySelectorAll('#hc_241417 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Steigenberger Resort El Gouna &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_701936" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/steigenberger-resort-el-gouna/01.webp" alt="Steigenberger Resort El Gouna — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/steigenberger-resort-el-gouna/02.webp" alt="Steigenberger Resort El Gouna — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/steigenberger-resort-el-gouna/03.webp" alt="Steigenberger Resort El Gouna — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Steigenberger Resort El Gouna</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽9 500</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_701936', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_701936 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_701936 .swiper-button-next', prevEl: '#swiper_701936 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽9 500 ($100)–130 за ночь на двоих (завтрак). Этот курортный отель 5* считается одним из лучших в своём сегменте. Он расположен на частном острове, соединённом с материком мостом. Фишки: три бассейна с морской водой, собственный пляж с белым песком, спа-центр с хаммамом и джакузи, три ресторана (итальянский, азиатский, морепродукты). Номера просторные (от 35 м²), с балконами и видом на лагуну. Из минусов — высокие цены на дополнительные услуги (массаж от ₽5 700 ($60)) и необходимость брать такси до центра Эль-Гуны (₽475 ($5)). Отличный выбор для пар и семей с детьми.</p>
 
 <h3>5. Jaz Aquamarine Resort (район Саккала)</h3>
-<div id="hc_172746" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Jaz Aquamarine Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Jaz Aquamarine Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_172746 .hc-slide');var d=document.querySelectorAll('#hc_172746 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_172746 .hc-slide');var d=document.querySelectorAll('#hc_172746 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jaz Aquamarine Resort &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_584355" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/jaz-aquamarine-resort/01.webp" alt="Jaz Aquamarine Resort — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/jaz-aquamarine-resort/02.webp" alt="Jaz Aquamarine Resort — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/jaz-aquamarine-resort/03.webp" alt="Jaz Aquamarine Resort — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Jaz Aquamarine Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽7 600</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_584355', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_584355 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_584355 .swiper-button-next', prevEl: '#swiper_584355 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽7 600 ($80)–110 за ночь на двоих (всё включено). Один из самых популярных отелей сети Jaz, работающий по системе «ультра всё включено». Территория огромная (12 гектаров), включает аквапарк с 10 горками, 5 бассейнов, собственный пляж и 7 ресторанов. Фишки: бесплатный доступ в спа-центр (сауна, паровая баня), вечерние шоу-программы, мини-клуб для детей. Номера современные, с кафельной плиткой и большой ванной. Минусы: в сезон многолюдно, еда в основном адаптирована под европейцев (мало острых блюд). Идеально для семейного отдыха.</p>
-<div id="hc_740931" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Jaz, работающий по системе «ультра всё включено». Территория огромная - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Jaz, работающий по системе «ультра всё включено». Территория огромная - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_740931 .hc-slide');var d=document.querySelectorAll('#hc_740931 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_740931 .hc-slide');var d=document.querySelectorAll('#hc_740931 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jaz, работающий по системе «ультра всё включено». Территория огромная &bull; 2 photos</p></div>
 
 <h3>6. Pickalbatros Palace Resort (район Саккала)</h3>
-<div id="hc_684576" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Pickalbatros Palace Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Pickalbatros Palace Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_684576 .hc-slide');var d=document.querySelectorAll('#hc_684576 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_684576 .hc-slide');var d=document.querySelectorAll('#hc_684576 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Pickalbatros Palace Resort &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_584196" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/pickalbatros-palace-resort/01.webp" alt="Pickalbatros Palace Resort — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/pickalbatros-palace-resort/02.webp" alt="Pickalbatros Palace Resort — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/pickalbatros-palace-resort/03.webp" alt="Pickalbatros Palace Resort — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Pickalbatros Palace Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽8 550</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_584196', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_584196 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_584196 .swiper-button-next', prevEl: '#swiper_584196 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽8 550 ($90)–120 за ночь на двоих (всё включено). Этот отель славится своей территорией — она утопает в зелени, есть искусственный водопад и пруды с рыбами. Фишки: 4 ресторана (включая японский), большой аквапарк, поле для мини-гольфа, анимация для взрослых и детей. Номера стильные, в средиземноморском стиле, с кондиционерами и сейфами. Пляж песчаный, с пологим входом в море. Минусы: удалённость от города (до центра 15 минут на такси), Wi-Fi платный в номерах (бесплатный только в лобби). Рекомендуется для тех, кто не планирует покидать отель.</p>
 
 <h3>7. Sunrise Holidays Resort (район Эль-Гуна)</h3>
-<div id="hc_548014" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sunrise Holidays Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Sunrise Holidays Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_548014 .hc-slide');var d=document.querySelectorAll('#hc_548014 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_548014 .hc-slide');var d=document.querySelectorAll('#hc_548014 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunrise Holidays Resort &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_906842" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/sunrise-holidays-resort/01.webp" alt="Sunrise Holidays Resort — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/sunrise-holidays-resort/02.webp" alt="Sunrise Holidays Resort — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/sunrise-holidays-resort/03.webp" alt="Sunrise Holidays Resort — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sunrise Holidays Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽6 650</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_906842', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_906842 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_906842 .swiper-button-next', prevEl: '#swiper_906842 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽6 650 ($70)–95 за ночь на двоих (полупансион). Отель расположен прямо на пляже, в тихой части Эль-Гуны. Фишки: собственный дайв-центр (обучение от ₽3 800 ($40)), теннисный корт, яхтенная школа. Номера просторные, с кухонным уголком (микроволновка, чайник). Плюсы: идеально для активного отдыха — рядом поля для гольфа и велосипедные дорожки. Минусы: ресторан работает только на завтрак и ужин, обед нужно заказывать отдельно; анимация слабая. Подойдёт для пар и групп друзей, увлекающихся водными видами спорта.</p>
 
 <h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Oberoi Sahl Hasheesh (район Сахл-Хашиш)</h3>
-<div id="hc_698140" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Oberoi Sahl Hasheesh - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Oberoi Sahl Hasheesh - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_698140 .hc-slide');var d=document.querySelectorAll('#hc_698140 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_698140 .hc-slide');var d=document.querySelectorAll('#hc_698140 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Oberoi Sahl Hasheesh &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_424559" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/oberoi-sahl-hasheesh/01.webp" alt="Oberoi Sahl Hasheesh — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/oberoi-sahl-hasheesh/02.webp" alt="Oberoi Sahl Hasheesh — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/oberoi-sahl-hasheesh/03.webp" alt="Oberoi Sahl Hasheesh — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Oberoi Sahl Hasheesh</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽23 750</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_424559', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_424559 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_424559 .swiper-button-next', prevEl: '#swiper_424559 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽23 750 ($250)–350 за ночь на двоих (завтрак). Этот отель — эталон роскоши на Красном море. Он расположен в 30 км от аэропорта, на частной территории с 800-метровым пляжем. Особенности: все номера — это виллы или люксы с частными бассейнами, мраморными ваннами и видом на море. Инфраструктура включает три ресторана авторской кухни, спа-центр с аюрведическими процедурами, йога-павильон и 18-луночное поле для гольфа. Из уникального — экскурсия на остров Умм-Гамаль на частной яхте. Минусы: очень высокая цена на дополнительные услуги (ужин в ресторане от ₽9 500 ($100)на человека), удалённость от города. Идеален для медового месяца или уединённого отдыха.</p>
 
 <h3>9. The Westin Resort & Spa, Hurghada (район Саккала)</h3>
 <p>Средняя цена: ₽17 100 ($180)–240 за ночь на двоих (завтрак). Отель международной сети Marriott, расположенный на первой береговой линии. Особенности: три бассейна (один с подогревом), спа-центр с 10 кабинетами, фитнес-центр с панорамным видом, ресторан с блюдами из морепродуктов. Номера — от 40 м², с кроватями Heavenly Bed, дождевыми душами и балконами. Плюсы: профессиональный консьерж-сервис, близость к дайв-центрам (5 минут пешком). Минусы: пляж узкий, в сезон занят лежаками; нет анимации. Подойдёт для деловых путешественников и пар, ценящих качество.</p>
 
 <h3>10. Rixos Premium Seagate (район Эль-Гуна)</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_465483" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/rixos-premium-seagate/01.webp" alt="Rixos Premium Seagate — Хургада, Египет" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/rixos-premium-seagate/02.webp" alt="Rixos Premium Seagate — интерьер, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/egypt/hurghada/rixos-premium-seagate/03.webp" alt="Rixos Premium Seagate — вид, Хургада" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Rixos Premium Seagate</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Хургада</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽19 000</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_465483', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_465483 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_465483 .swiper-button-next', prevEl: '#swiper_465483 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Средняя цена: ₽19 000 ($200)–300 за ночь на двоих (всё включено ультра). Этот курорт — один из самых дорогих в Хургаде, работающий по концепции «всё включено премиум». Особенности: 7 ресторанов (включая турецкий, итальянский, суши-бар), 5 бассейнов, аквапарк, частный пляж с пирсом, спа-центр с турецкой баней и сауной. Номера роскошные — с коврами, халатами, мини-баром (бесплатно пополняется). Из уникального — вечеринки на пляже с диджеями, бесплатный трансфер в центр Эль-Гуны. Минусы: высокий уровень шума в вечернее время, много туристов из России и Европы. Идеален для тех, кто хочет получить максимум удовольствия без лишних трат.</p>
 
 <h2>Как выбрать район</h2>

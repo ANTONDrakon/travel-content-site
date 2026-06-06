@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -392,13 +394,32 @@
 <p>Даже с ограниченным бюджетом в Дигуре можно жить комфортно. Я проверила лично: эти три варианта — настоящие жемчужины для экономных путешественников. Главное — не ждите пятизвездочного сервиса, но базовые удобства и гостеприимство здесь на высоте.</p>
 
 <h3>1. Guesthouse Lika</h3>
-<div id="hc_397247" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Guesthouse Lika - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Guesthouse Lika - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_397247 .hc-slide');var d=document.querySelectorAll('#hc_397247 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_397247 .hc-slide');var d=document.querySelectorAll('#hc_397247 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Guesthouse Lika &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_481748" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/maldives/dhigurah/guesthouse-lika/01.webp" alt="Guesthouse Lika — Дигура, Мальдивы" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/dhigurah/guesthouse-lika/02.webp" alt="Guesthouse Lika — интерьер, Дигура" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/maldives/dhigurah/guesthouse-lika/03.webp" alt="Guesthouse Lika — вид, Дигура" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Guesthouse Lika</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Дигура</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽3 800</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_481748', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_481748 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_481748 .swiper-button-next', prevEl: '#swiper_481748 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот семейный гостевой дом — моя тайная любовь. Хозяйка Лика встречает гостей с таким теплом, будто вы ее давние родственники. Номера простые, но чистые: деревянная мебель, свежее белье, вид на горы. Завтрак включен — домашний сыр, свежий лаваш, варенье из инжира. Я рекомендую этот вариант одиночкам и парам, которые планируют много гулять, а в номере только спать.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽3 800 ($40)за ночь (двухместный номер)</li>
@@ -441,13 +462,6 @@
 </ul>
 
 <h3>3. Apartment Complex "Sea Breeze"</h3>
-<div id="hc_312944" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Sea Breeze" - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Sea Breeze" - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_312944 .hc-slide');var d=document.querySelectorAll('#hc_312944 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_312944 .hc-slide');var d=document.querySelectorAll('#hc_312944 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sea Breeze" &bull; 2 photos</p></div>
 <p>Апартаменты с кухней — спасение для семей и длительных поездок. Здесь есть студии и двухкомнатные номера с полностью оборудованной кухней (плита, холодильник, посуда). Комплекс находится в тихом районе, в 10 минутах от центра. Я рекомендую его тем, кто любит готовить самим или экономить на ресторанах.</p>
 <ul>
 <li><strong>Цена:</strong> от ₽6 175 ($65)за студию, от ₽9 025 ($95)за двухкомнатный</li>
@@ -461,7 +475,7 @@
 <li><strong>Фишки:</strong> терраса с баром, фитнес-зал, прокат велосипедов бесплатно</li>
 </ul>
 
-<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p><h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
+<h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <p>Если вы хотите почувствовать себя королем или королевой, Дигура предлагает варианты, которые не уступают европейским курортам. Я выбирала те, где каждая деталь продумана до мелочей: от халатов из египетского хлопка до приватных трансферов. Готовьте кошелек — эти отели стоят каждого цента.</p>
 
@@ -513,13 +527,6 @@
 <p>И главный совет: не экономьте на расположении. Лучше заплатить чуть больше за отель у моря, чем тратить время и деньги на такси. Я сама попадалась на эту удочку в первый раз — сняла дешевый вариант в 3 км от пляжа, и каждый день бесилась из-за транспорта. Теперь только проверенные места!</p>
 
 <p>Дигура ждет вас — с ее теплым морем, гостеприимными людьми и незабываемыми закатами. Надеюсь, моя подборка поможет вам выбрать идеальный отель. Если остались вопросы — пишите, я всегда рада помочь. Счастливого пути!</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
-<div id="hc_838739" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия &bull; 2 photos</p></div>
         </div>
 
         

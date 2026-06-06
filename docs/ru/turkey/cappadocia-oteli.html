@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -394,123 +396,276 @@
 <p>Плюсы: идеальное расположение (рядом с музеем под открытым небом), дружелюбный персонал, говорящий на английском и русском, бесплатная парковка. Минусы: стены тонкие, слышимость соседей высокая, нет бассейна, завтрак подают только с 8:00 утра.</p>
 
 <h3>2. Stone House Cappadocia</h3>
-<div id="hc_434053" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Stone House Cappadocia - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Stone House Cappadocia - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Stone House Cappadocia - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_434053 .hc-slide');var d=document.querySelectorAll('#hc_434053 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_434053 .hc-slide');var d=document.querySelectorAll('#hc_434053 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_434053 .hc-slide');var d=document.querySelectorAll('#hc_434053 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Stone House Cappadocia &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_427780" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/stone-house-cappadocia/01.webp" alt="Stone House Cappadocia — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/stone-house-cappadocia/02.webp" alt="Stone House Cappadocia — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/stone-house-cappadocia/03.webp" alt="Stone House Cappadocia — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Stone House Cappadocia</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽2 850</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_427780', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_427780 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_427780 .swiper-button-next', prevEl: '#swiper_427780 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Этот отель в деревне Ортахисар предлагает 8 номеров в отреставрированном каменном здании 18 века. Цена — от ₽2 850 ($30)/ночь за двухместный номер с общим душем и туалетом на этаже. Номера с собственной ванной стоят от ₽4 275 ($45)/ночь. Отель славится своей террасой с видом на Ортахисарскую крепость.</p>
 <p>Плюсы: очень низкая цена, аутентичная атмосфера, возможность приготовить чай на общей кухне, бесплатный трансфер от автовокзала. Минусы: удаленность от центра Гёреме (4 км), нет кондиционеров (только вентиляторы), горячая вода может заканчиваться вечером.</p>
 
 <h3>3. Flintstone Cave House</h3>
-<div id="hc_186418" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Flintstone Cave House - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Flintstone Cave House - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Flintstone Cave House - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_186418 .hc-slide');var d=document.querySelectorAll('#hc_186418 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_186418 .hc-slide');var d=document.querySelectorAll('#hc_186418 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_186418 .hc-slide');var d=document.querySelectorAll('#hc_186418 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Flintstone Cave House &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_660098" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/flintstone-cave-house/01.webp" alt="Flintstone Cave House — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/flintstone-cave-house/02.webp" alt="Flintstone Cave House — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/flintstone-cave-house/03.webp" alt="Flintstone Cave House — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Flintstone Cave House</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 800</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_660098', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_660098 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_660098 .swiper-button-next', prevEl: '#swiper_660098 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Бюджетный пещерный отель в Учхисаре, в 1,5 км от знаменитой смотровой площадки. Двухместный номер в пещере стоит ₽3 800 ($40)/ночь. Отель имеет 6 номеров, каждый с уникальной формой скалы. Владелец — местный гид, предлагающий бесплатные пешие экскурсии по долине.</p>
 <p>Плюсы: настоящий пещерный опыт, тишина и покой, бесплатный чай и кофе в течение дня, возможность заказать ужин за ₽950 ($10)Минусы: слабый Wi-Fi, нет телевизора, зимой в номерах прохладно (работают обогреватели).</p>
 
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>4. Sultan Cave Suites</h3>
-<div id="hc_727908" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sultan Cave Suites - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sultan Cave Suites - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sultan Cave Suites - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_727908 .hc-slide');var d=document.querySelectorAll('#hc_727908 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_727908 .hc-slide');var d=document.querySelectorAll('#hc_727908 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_727908 .hc-slide');var d=document.querySelectorAll('#hc_727908 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sultan Cave Suites &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_207752" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/sultan-cave-suites/01.webp" alt="Sultan Cave Suites — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/sultan-cave-suites/02.webp" alt="Sultan Cave Suites — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/sultan-cave-suites/03.webp" alt="Sultan Cave Suites — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Sultan Cave Suites</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽9 025</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_207752', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_207752 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_207752 .swiper-button-next', prevEl: '#swiper_207752 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Один из самых фотографируемых отелей Каппадокии, расположенный на холме в Гёреме. Известен своей террасой, где каждое утро взлетают десятки воздушных шаров, создавая идеальный кадр. Стандартный двухместный номер стоит от ₽9 025 ($95)/ночь, номер-люкс с джакузи — от ₽12 350 ($130)/ночь. Отель насчитывает 25 номеров, включая 10 пещерных. Завтрак включен и подается на террасе до 10:30.</p>
 <p>Фишки: бесплатный прокат велосипедов, ежедневная дегустация местного вина в 18:00, возможность забронировать полет на шаре прямо на стойке регистрации со скидкой 10%. Рейтинг на <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking.com</a> — 9.1.</p>
 
 <h3>5. Mithra Cave Hotel</h3>
-<div id="hc_677674" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Mithra Cave Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Mithra Cave Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Mithra Cave Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_677674 .hc-slide');var d=document.querySelectorAll('#hc_677674 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_677674 .hc-slide');var d=document.querySelectorAll('#hc_677674 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_677674 .hc-slide');var d=document.querySelectorAll('#hc_677674 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Mithra Cave Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_859096" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/mithra-cave-hotel/01.webp" alt="Mithra Cave Hotel — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/mithra-cave-hotel/02.webp" alt="Mithra Cave Hotel — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/mithra-cave-hotel/03.webp" alt="Mithra Cave Hotel — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Mithra Cave Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽7 600</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_859096', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_859096 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_859096 .swiper-button-next', prevEl: '#swiper_859096 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Находится в Гёреме, в 300 метрах от Sultan Cave Suites, но с более спокойной атмосферой. Цены начинаются от ₽7 600 ($80)/ночь за стандартный номер и ₽10 450 ($110)за номер с видом на долину. Отель имеет 18 номеров, все в скале, с каменными стенами и сводчатыми потолками. В 2025 году отель прошел полную реновацию систем отопления и водоснабжения.</p>
 <p>Фишки: большой сад с фруктовыми деревьями, бесплатный трансфер до аэропорта Кайсери (при бронировании от 3 ночей), спа-центр с турецкой баней за ₽1 900 ($20)Идеален для пар, ищущих романтику.</p>
 
 <h3>6. Heaven Cave House</h3>
-<div id="hc_268707" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Heaven Cave House - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Heaven Cave House - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Heaven Cave House - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_268707 .hc-slide');var d=document.querySelectorAll('#hc_268707 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_268707 .hc-slide');var d=document.querySelectorAll('#hc_268707 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_268707 .hc-slide');var d=document.querySelectorAll('#hc_268707 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Heaven Cave House &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_300795" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/heaven-cave-house/01.webp" alt="Heaven Cave House — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/heaven-cave-house/02.webp" alt="Heaven Cave House — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/heaven-cave-house/03.webp" alt="Heaven Cave House — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Heaven Cave House</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽6 650</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_300795', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_300795 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_300795 .swiper-button-next', prevEl: '#swiper_300795 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Бутик-отель на 7 номеров в тихом районе Учхисар, в 500 метрах от замка. Цена: ₽6 650 ($70)/ночь за двухместный номер и ₽9 500 ($100)за люкс с отдельным входом. Отель принадлежит семье, которая живет на первом этаже, что создает атмосферу домашнего уюта. Все номера имеют оригинальные скальные стены и современную сантехнику.</p>
 <p>Фишки: хозяйка Мерием готовит традиционный турецкий завтрак с домашними лепешками и вареньем, бесплатный чай в любое время, возможность участвовать в мастер-классе по приготовлению гёзлеме (₽1 425 ($15)). Подходит для одиночных путешественников.</p>
 
 <h3>7. Cappadocia Caves Hotel</h3>
-<div id="hc_941314" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Cappadocia Caves Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Cappadocia Caves Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Cappadocia Caves Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_941314 .hc-slide');var d=document.querySelectorAll('#hc_941314 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_941314 .hc-slide');var d=document.querySelectorAll('#hc_941314 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_941314 .hc-slide');var d=document.querySelectorAll('#hc_941314 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Cappadocia Caves Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_791641" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/cappadocia-caves-hotel/01.webp" alt="Cappadocia Caves Hotel — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/cappadocia-caves-hotel/02.webp" alt="Cappadocia Caves Hotel — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/cappadocia-caves-hotel/03.webp" alt="Cappadocia Caves Hotel — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Cappadocia Caves Hotel</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽5 225</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_791641', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_791641 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_791641 .swiper-button-next', prevEl: '#swiper_791641 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Расположен в Юргюпе, в 5 км от центра Гёреме, что обеспечивает более низкие цены и аутентичность. Стандартный номер — ₽5 225 ($55)/ночь, пещерный люкс — ₽8 075 ($85)/ночь. Отель имеет 14 номеров, большой открытый бассейн (работает с мая по сентябрь) и собственный виноградник. Вид на долину Гюльшехир — один из лучших в регионе.</p>
 <p>Фишки: бесплатная дегустация домашнего вина, бесплатный велосипед, трансфер до Гёреме за ₽475 ($5)Минус — нет ресторана на территории, только завтрак. Отличный выбор для тех, кто арендует машину.</p>
 
 <h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>8. Museum Hotel Cappadocia</h3>
-<div id="hc_743509" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Museum Hotel Cappadocia - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Museum Hotel Cappadocia - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Museum Hotel Cappadocia - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_743509 .hc-slide');var d=document.querySelectorAll('#hc_743509 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_743509 .hc-slide');var d=document.querySelectorAll('#hc_743509 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_743509 .hc-slide');var d=document.querySelectorAll('#hc_743509 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Museum Hotel Cappadocia &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_361869" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/museum-hotel-cappadocia/01.webp" alt="Museum Hotel Cappadocia — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/museum-hotel-cappadocia/02.webp" alt="Museum Hotel Cappadocia — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/museum-hotel-cappadocia/03.webp" alt="Museum Hotel Cappadocia — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Museum Hotel Cappadocia</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽33 250</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_361869', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_361869 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_361869 .swiper-button-next', prevEl: '#swiper_361869 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Первый и единственный отель в Каппадокии, входящий в ассоциацию Leading Hotels of the World. Расположен в Учхисаре, на вершине холма. Цены начинаются от ₽33 250 ($350)/ночь за стандартный номер и достигают ₽114 000 ($1 200)за президентский люкс. Отель построен на месте древнего монастыря, многие артефакты выставлены в лобби. Имеет 30 номеров, включая 10 с частными бассейнами.</p>
 <p>Особенности: собственный виноградник и винный погреб с более чем 200 сортами, ресторан Lil'a с мишленовским шеф-поваром, спа-центр с хаммамом 16 века, бесконечный бассейн с подогревом, с которого открывается панорама на всю долину. В стоимость включен завтрак, трансфер из аэропорта и приветственное шампанское. Рейтинг — 9.7.</p>
 
 <h3>9. Argos in Cappadocia</h3>
-<div id="hc_485166" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Argos in Cappadocia - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Argos in Cappadocia - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Argos in Cappadocia - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_485166 .hc-slide');var d=document.querySelectorAll('#hc_485166 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_485166 .hc-slide');var d=document.querySelectorAll('#hc_485166 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_485166 .hc-slide');var d=document.querySelectorAll('#hc_485166 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Argos in Cappadocia &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_866624" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/argos-in-cappadocia/01.webp" alt="Argos in Cappadocia — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/argos-in-cappadocia/02.webp" alt="Argos in Cappadocia — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/argos-in-cappadocia/03.webp" alt="Argos in Cappadocia — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Argos in Cappadocia</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽26 600</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_866624', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_866624 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_866624 .swiper-button-next', prevEl: '#swiper_866624 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Отель, вырезанный в скалах на склоне холма в Учхисаре, предлагает 53 номера и люкса, каждый с уникальным дизайном. Минимальная цена — ₽26 600 ($280)/ночь. Отель известен своим рестораном Seki, который подает блюда из местных продуктов, и спа-центром с крытым бассейном. В 2024 году отель получил награду World Travel Awards как лучший бутик-отель Турции.</p>
 <p>Особенности: частная смотровая площадка для запуска воздушных шаров, библиотека с камином, кулинарные классы, винные туры по собственным погребам. Для гостей доступен бесплатный шаттл в Гёреме каждые 30 минут. Идеален для медовых месяцев.</p>
 
 <h3>10. Kayakapi Premium Caves</h3>
-<div id="hc_592222" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Kayakapi Premium Caves - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="Kayakapi Premium Caves - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Kayakapi Premium Caves - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_592222 .hc-slide');var d=document.querySelectorAll('#hc_592222 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_592222 .hc-slide');var d=document.querySelectorAll('#hc_592222 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_592222 .hc-slide');var d=document.querySelectorAll('#hc_592222 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Kayakapi Premium Caves &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_592628" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/kayakapi-premium-caves/01.webp" alt="Kayakapi Premium Caves — Каппадокия, Турция" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/kayakapi-premium-caves/02.webp" alt="Kayakapi Premium Caves — интерьер, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/turkey/cappadocia/kayakapi-premium-caves/03.webp" alt="Kayakapi Premium Caves — вид, Каппадокия" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Kayakapi Premium Caves</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Каппадокия</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">от ₽19 000</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_592628', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_592628 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_592628 .swiper-button-next', prevEl: '#swiper_592628 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Уникальный отель, расположенный в историческом районе Каякапы в Учхисаре, который был восстановлен из древнего греческого поселения. Цены от ₽19 000 ($200)/ночь за стандартный пещерный номер до ₽80 750 ($850)за виллу с тремя спальнями. Отель занимает территорию 40 000 кв. м и включает 65 номеров, 5 ресторанов, спа-центр площадью 1500 кв. м и открытый бассейн.</p>
 <p>Особенности: в стоимость включен полный пансион (завтрак, обед, ужин) в ресторане "Kaya", бесплатный доступ к хаммаму и сауне, экскурсия по исторической части отеля с гидом. Отель имеет собственный органический сад, откуда поставляются овощи и фрукты. Подходит для больших семей и групп.</p>
 
@@ -522,13 +677,6 @@
 <h2>Советы по бронированию</h2>
 <p>Чтобы сэкономить на проживании в Каппадокии, бронируйте отели за 3-4 месяца до поездки, особенно на высокий сезон (май-сентябрь). Самые низкие цены — в январе и феврале, когда туристов в 4 раза меньше. Используйте сайты-агрегаторы, такие как <a href="https://tp.media/click?shmarker=736226&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking" target="_blank" rel="nofollow sponsored" class="partner-link">Booking</a>.com (наиболее широкий выбор, бесплатная отмена), <a href="https://tp.media/click?shmarker=736226&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda" target="_blank" rel="nofollow sponsored" class="partner-link">Agoda</a> (часто дает скидки для азиатских туристов) и Expedia (пакеты отель+авиабилет). Для люксовых отелей выгодно бронировать напрямую через сайт отеля — часто предлагают ранний заезд или улучшение номера.</p>
 <p>Лучшие сервисы для поиска: Hotels.com (каждые 10 ночей — одна бесплатная), Trivago (сравнение цен), Airbnb (для аренды целых домов, особенно в Юргюпе). Обязательно читайте отзывы на Google Maps и TripAdvisor — они часто содержат актуальные фото и информацию о шуме или ремонте. Если вы путешествуете в высокий сезон, рассмотрите отели в Ортахисаре или Юргюпе — они на 20-30% дешевле, чем в Гёреме, при том же уровне сервиса. И последний совет: всегда проверяйте, включен ли завтрак в стоимость — в Каппадокии это может сэкономить до ₽1 425 ($15)на человека в день.</p><div class="affiliate-banner"><p>Не забудьте оформить страховку для путешествия!</p><a href="https://tp.media/click?shmarker=736226&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=travel_insurance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a></div>
-<div id="hc_838739" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_838739 .hc-slide');var d=document.querySelectorAll('#hc_838739 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">surance" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия &bull; 2 photos</p></div>
         </div>
 
         

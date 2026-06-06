@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,15 +392,6 @@
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Sunny Days Hotel</h3>
-<div id="hc_957943" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Sunny Days Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Sunny Days Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Sunny Days Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_957943 .hc-slide');var d=document.querySelectorAll('#hc_957943 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_957943 .hc-slide');var d=document.querySelectorAll('#hc_957943 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_957943 .hc-slide');var d=document.querySelectorAll('#hc_957943 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sunny Days Hotel &bull; 3 photos</p></div>
 <p><strong>Location:</strong> Ad-Dahar, 200 meters from the beach.<br>
 <strong>Price:</strong> $35–$45/night (standard double room, breakfast included).<br>
 <strong>Description:</strong> A no-frills 3-star property with 120 rooms, built in 2018 and renovated in 2024. Rooms are clean, with air conditioning, private bathrooms, and satellite TV. The hotel has a small pool, a sun terrace, and a basic restaurant serving Egyptian and international dishes.<br>
@@ -406,15 +399,6 @@
 <strong>Cons:</strong> No direct beach access, pool is small (10x5 meters), street noise can be loud, Wi-Fi is slow (2 Mbps).</p>
 
 <h3>2. Bedouin Oasis Inn</h3>
-<div id="hc_290089" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Bedouin Oasis Inn - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Bedouin Oasis Inn - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Bedouin Oasis Inn - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_290089 .hc-slide');var d=document.querySelectorAll('#hc_290089 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_290089 .hc-slide');var d=document.querySelectorAll('#hc_290089 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_290089 .hc-slide');var d=document.querySelectorAll('#hc_290089 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Bedouin Oasis Inn &bull; 3 photos</p></div>
 <p><strong>Location:</strong> Sekalla, 500 meters from the marina.<br>
 <strong>Price:</strong> $28–$38/night (double room, no breakfast).<br>
 <strong>Description:</strong> A family-run 2-star guesthouse with 18 rooms, offering a rooftop terrace with Red Sea views. Rooms are basic but spotless, with tiled floors, ceiling fans, and shared bathrooms in the cheapest options. The inn provides a free shuttle to the public beach (2 km away).<br>
@@ -422,13 +406,6 @@
 <strong>Cons:</strong> No pool, no restaurant, shared bathrooms in budget rooms, no air conditioning in older rooms (only fans), limited parking.</p>
 
 <h3>3. Coral Beach Hostel</h3>
-<div id="hc_129912" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Coral Beach Hostel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Coral Beach Hostel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_129912 .hc-slide');var d=document.querySelectorAll('#hc_129912 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_129912 .hc-slide');var d=document.querySelectorAll('#hc_129912 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Coral Beach Hostel &bull; 2 photos</p></div>
 <p><strong>Location:</strong> Ad-Dahar, 100 meters from the bus station.<br>
 <strong>Price:</strong> $12–$18/night (dorm bed) or $30–$40/night (private room).<br>
 <strong>Description:</strong> A budget hostel with 40 beds in mixed dorms and 10 private rooms. Opened in 2022, it features a communal kitchen, a lounge area, and a rooftop bar. The hostel organizes daily snorkeling trips to Giftun Island ($20extra).<br>
@@ -438,60 +415,24 @@
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>4. Sea Garden Resort</h3>
-<div id="hc_852356" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Sea Garden Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Sea Garden Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Sea Garden Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_852356 .hc-slide');var d=document.querySelectorAll('#hc_852356 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_852356 .hc-slide');var d=document.querySelectorAll('#hc_852356 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_852356 .hc-slide');var d=document.querySelectorAll('#hc_852356 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Sea Garden Resort &bull; 3 photos</p></div>
 <p><strong>Location:</strong> Sekalla, directly on the beach.<br>
 <strong>Price:</strong> $65–$95/night (all-inclusive, double room).<br>
 <strong>Description:</strong> A 4-star resort with 280 rooms, set within 10 acres of tropical gardens. Features include three swimming pools (one heated in winter), a private sandy beach, five restaurants (Egyptian, Italian, Asian), and a spa with hammam. Rooms are modern with balconies, minibars, and flat-screen TVs. The resort offers free snorkeling gear and kayaks.<br>
 <strong>Highlights:</strong> Beachfront access, multiple pools, all-inclusive includes alcoholic drinks (local brands), family-friendly with kids' club, free Wi-Fi (10 Mbps).</p>
 
 <h3>5. Blue Paradise Hotel</h3>
-<div id="hc_556099" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Blue Paradise Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Blue Paradise Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Blue Paradise Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_556099 .hc-slide');var d=document.querySelectorAll('#hc_556099 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_556099 .hc-slide');var d=document.querySelectorAll('#hc_556099 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_556099 .hc-slide');var d=document.querySelectorAll('#hc_556099 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Blue Paradise Hotel &bull; 3 photos</p></div>
 <p><strong>Location:</strong> El Gouna, 25 km north of Hurghada center.<br>
 <strong>Price:</strong> $80–$120/night (half-board, double room).<br>
 <strong>Description:</strong> A boutique 4-star hotel with 60 rooms, overlooking the El Gouna lagoon. Rooms are designed in Nubian style, with hand-painted furniture and private terraces. The hotel has a large infinity pool, a dive center (PADI certified), and a seafood restaurant. It is a 10-minute walk from the El Gouna Marina.<br>
 <strong>Highlights:</strong> Quiet location, lagoon views, excellent diving packages ($40per dive), free shuttle to El Gouna beach, free yoga classes on weekends.</p>
 
 <h3>6. Royal Beach Hotel</h3>
-<div id="hc_435441" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Royal Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Royal Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Royal Beach Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_435441 .hc-slide');var d=document.querySelectorAll('#hc_435441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_435441 .hc-slide');var d=document.querySelectorAll('#hc_435441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_435441 .hc-slide');var d=document.querySelectorAll('#hc_435441 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Royal Beach Hotel &bull; 3 photos</p></div>
 <p><strong>Location:</strong> Village Road, 1 km from the airport.<br>
 <strong>Price:</strong> $55–$85/night (bed and breakfast, double room).<br>
 <strong>Description:</strong> A 3-star hotel with 150 rooms, recently renovated in 2025. It offers a large outdoor pool, a gym, and a buffet restaurant. Rooms are simple but comfortable, with tiled floors, air conditioning, and satellite TV. The hotel is a 5-minute drive from the public beach.<br>
 <strong>Highlights:</strong> Proximity to airport (free shuttle), large pool (25 meters), good value for families, free parking, 24-hour reception.</p>
 
 <h3>7. Red Sea Oasis Resort</h3>
-<div id="hc_532847" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Red Sea Oasis Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Red Sea Oasis Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="Red Sea Oasis Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_532847 .hc-slide');var d=document.querySelectorAll('#hc_532847 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_532847 .hc-slide');var d=document.querySelectorAll('#hc_532847 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_532847 .hc-slide');var d=document.querySelectorAll('#hc_532847 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Red Sea Oasis Resort &bull; 3 photos</p></div>
 <p><strong>Location:</strong> Sekalla, 300 meters from the marina.<br>
 <strong>Price:</strong> $90–$140/night (all-inclusive, double room).<br>
 <strong>Description:</strong> A 4-star resort with 200 rooms, featuring a water park with four slides, a lazy river, and a children's pool. The resort has three restaurants (including a steakhouse), a beach club with sunbeds, and a dive center. Rooms have sea views from balconies, with modern amenities like USB ports and smart TVs.<br>
@@ -500,41 +441,18 @@
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>8. Steigenberger Al Dau Beach Hotel</h3>
-<div id="hc_882853" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Steigenberger Al Dau Beach Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Steigenberger Al Dau Beach Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_882853 .hc-slide');var d=document.querySelectorAll('#hc_882853 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_882853 .hc-slide');var d=document.querySelectorAll('#hc_882853 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Steigenberger Al Dau Beach Hotel &bull; 2 photos</p></div>
 <p><strong>Location:</strong> El Gouna, private beach.<br>
 <strong>Price:</strong> $180–$300/night (all-inclusive, double room).<br>
 <strong>Description:</strong> A 5-star resort with 400 rooms, set on a 1.5 km private beach. Features include five pools (one saltwater), a 1,200 sqm spa, eight restaurants (including a Michelin-starred chef’s table), and a golf course nearby. Rooms are spacious (40 sqm minimum) with marble bathrooms, Nespresso machines, and Egyptian cotton linens. The resort has a dedicated kids' club and a water sports center offering jet skis, parasailing, and kite surfing.<br>
 <strong>Features:</strong> Private beach, multiple fine-dining options, full-service spa, free non-motorized water sports, 24-hour butler service in suites.</p>
 
 <h3>9. The Oberoi Sahl Hasheesh</h3>
-<div id="hc_996364" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The Oberoi Sahl Hasheesh - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="The Oberoi Sahl Hasheesh - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_996364 .hc-slide');var d=document.querySelectorAll('#hc_996364 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_996364 .hc-slide');var d=document.querySelectorAll('#hc_996364 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Oberoi Sahl Hasheesh &bull; 2 photos</p></div>
 <p><strong>Location:</strong> Sahl Hasheesh Bay, 18 km south of Hurghada.<br>
 <strong>Price:</strong> $250–$500/night (room only, double).<br>
 <strong>Description:</strong> A luxury 5-star resort with 134 rooms and villas, built in a Moorish-architectural style. The resort sits on a 2 km private beach, with a stunning infinity pool overlooking the Red Sea. Rooms are elegantly furnished, with private gardens or pools in villas, and feature bathtubs, walk-in closets, and outdoor showers. The spa offers Ayurvedic treatments, and the two restaurants serve Mediterranean and Asian cuisine. The resort is known for its silence and exclusivity, with no loud entertainment.<br>
 <strong>Features:</strong> Private villa options, infinity pool, world-class spa, no children under 12 in certain areas, free scuba diving lessons.</p>
 
 <h3>10. Hilton Hurghada Plaza</h3>
-<div id="hc_685383" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hilton Hurghada Plaza - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hilton Hurghada Plaza - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hilton Hurghada Plaza - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_685383 .hc-slide');var d=document.querySelectorAll('#hc_685383 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_685383 .hc-slide');var d=document.querySelectorAll('#hc_685383 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_685383 .hc-slide');var d=document.querySelectorAll('#hc_685383 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hilton Hurghada Plaza &bull; 3 photos</p></div>
 <p><strong>Location:</strong> Sekalla, on the marina.<br>
 <strong>Price:</strong> $160–$220/night (all-inclusive, double room).<br>
 <strong>Description:</strong> A 5-star hotel with 320 rooms, connected to the Hurghada Marina. It features a large lagoon-style pool, a private beach, six restaurants (including a sushi bar), and a fitness center. Rooms are modern, with floor-to-ceiling windows, work desks, and premium bedding. The hotel has a casino, a nightclub, and a conference center. It is a 10-minute drive from the airport.<br>

@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,15 +392,32 @@
 <h2>Бюджетные отели (до ₽4 750 ($50)/ночь)</h2>
 
 <h3>1. Premier Inn Abu Dhabi Capital Centre</h3>
-<div id="hc_450586" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Premier Inn Abu Dhabi Capital Centre - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_450586 .hc-slide');var d=document.querySelectorAll('#hc_450586 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Premier Inn Abu Dhabi Capital Centre &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_102411" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/premier-inn-abu-dhabi-capital-centre/01.webp" alt="Premier Inn Abu Dhabi Capital Centre — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/premier-inn-abu-dhabi-capital-centre/02.webp" alt="Premier Inn Abu Dhabi Capital Centre — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/premier-inn-abu-dhabi-capital-centre/03.webp" alt="Premier Inn Abu Dhabi Capital Centre — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Premier Inn Abu Dhabi Capital Centre</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_102411', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_102411 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_102411 .swiper-button-next', prevEl: '#swiper_102411 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Этот отель расположен в деловом районе, рядом с Национальным выставочным центром (ADNEC). Номера чистые, функциональные, с кондиционером и телевизором с плоским экраном. В отеле есть круглосуточная стойка регистрации, бесплатный Wi-Fi и небольшой фитнес-зал. Завтрак — шведский стол, включен в стоимость.</p>
 <p><strong>Цены:</strong> от 38 долларов за ночь в стандартном двухместном номере.</p>
 <ul>
@@ -407,15 +426,32 @@
 </ul>
 
 <h3>2. Ibis Abu Dhabi Gate</h3>
-<div id="hc_428767" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ibis Abu Dhabi Gate - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ibis Abu Dhabi Gate - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ibis Abu Dhabi Gate - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_428767 .hc-slide');var d=document.querySelectorAll('#hc_428767 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ibis Abu Dhabi Gate &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_930627" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/ibis-abu-dhabi-gate/01.webp" alt="Ibis Abu Dhabi Gate — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/ibis-abu-dhabi-gate/02.webp" alt="Ibis Abu Dhabi Gate — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/ibis-abu-dhabi-gate/03.webp" alt="Ibis Abu Dhabi Gate — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Ibis Abu Dhabi Gate</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_930627', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_930627 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_930627 .swiper-button-next', prevEl: '#swiper_930627 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Часть международной сети Ibis, этот отель предлагает стандартизированный сервис и чистоту. Номера компактные, но продуманные: есть письменный стол, сейф, чайник. Ресторан отеля подает блюда интернациональной кухни. На территории есть круглосуточный мини-маркет.</p>
 <p><strong>Цены:</strong> от 35 долларов за ночь.</p>
 <ul>
@@ -424,15 +460,32 @@
 </ul>
 
 <h3>3. City Seasons Suites</h3>
-<div id="hc_430234" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="City Seasons Suites - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="City Seasons Suites - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="City Seasons Suites - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_430234 .hc-slide');var d=document.querySelectorAll('#hc_430234 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_430234 .hc-slide');var d=document.querySelectorAll('#hc_430234 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_430234 .hc-slide');var d=document.querySelectorAll('#hc_430234 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">City Seasons Suites &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_708326" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/city-seasons-suites/01.webp" alt="City Seasons Suites — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/city-seasons-suites/02.webp" alt="City Seasons Suites — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/city-seasons-suites/03.webp" alt="City Seasons Suites — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">City Seasons Suites</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_708326', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_708326 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_708326 .swiper-button-next', prevEl: '#swiper_708326 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Апарт-отель, расположенный в центре города, на улице Хамдан. Номера представляют собой студии с мини-кухней (плита, микроволновка, холодильник). Идеальный вариант для длительного проживания или для тех, кто предпочитает готовить самостоятельно. В здании есть тренажерный зал и сауна.</p>
 <p><strong>Цены:</strong> от 48 долларов за ночь за студию.</p>
 <ul>
@@ -443,15 +496,32 @@
 <h2>Отели среднего класса (₽4 750 ($50)-150/ночь)</h2>
 
 <h3>1. Centro Capital Centre by Rotana</h3>
-<div id="hc_893398" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Centro Capital Centre by Rotana - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Centro Capital Centre by Rotana - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Centro Capital Centre by Rotana - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_893398 .hc-slide');var d=document.querySelectorAll('#hc_893398 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_893398 .hc-slide');var d=document.querySelectorAll('#hc_893398 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_893398 .hc-slide');var d=document.querySelectorAll('#hc_893398 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Centro Capital Centre by Rotana &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_380078" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/centro-capital-centre-by-rotana/01.webp" alt="Centro Capital Centre by Rotana — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/centro-capital-centre-by-rotana/02.webp" alt="Centro Capital Centre by Rotana — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/centro-capital-centre-by-rotana/03.webp" alt="Centro Capital Centre by Rotana — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Centro Capital Centre by Rotana</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_380078', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_380078 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_380078 .swiper-button-next', prevEl: '#swiper_380078 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Современный отель от сети Rotana, известной своим высоким уровнем сервиса. Номера оформлены в минималистичном стиле, оснащены системой умного дома. В отеле есть открытый бассейн, фитнес-центр и ресторан с панорамным видом. Расположение рядом с ADNEC делает его популярным среди бизнес-туристов.</p>
 <p><strong>Цены:</strong> от 65 долларов за ночь.</p>
 <ul>
@@ -459,13 +529,32 @@
 </ul>
 
 <h3>2. Novotel Abu Dhabi Al Bustan</h3>
-<div id="hc_754210" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Novotel Abu Dhabi Al Bustan - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Novotel Abu Dhabi Al Bustan - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_754210 .hc-slide');var d=document.querySelectorAll('#hc_754210 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_754210 .hc-slide');var d=document.querySelectorAll('#hc_754210 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Novotel Abu Dhabi Al Bustan &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_895228" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/novotel-abu-dhabi-al-bustan/01.webp" alt="Novotel Abu Dhabi Al Bustan — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/novotel-abu-dhabi-al-bustan/02.webp" alt="Novotel Abu Dhabi Al Bustan — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/novotel-abu-dhabi-al-bustan/03.webp" alt="Novotel Abu Dhabi Al Bustan — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Novotel Abu Dhabi Al Bustan</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_895228', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_895228 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_895228 .swiper-button-next', prevEl: '#swiper_895228 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Этот отель расположен в тихом районе, в окружении садов. Номера просторные, с балконами, выходящими на бассейн или город. В отеле есть спа-центр с хаммамом, несколько ресторанов (включая итальянский и азиатский) и детский клуб.</p>
 <p><strong>Цены:</strong> от 80 долларов за ночь.</p>
 <ul>
@@ -473,13 +562,32 @@
 </ul>
 
 <h3>3. Holiday Inn Abu Dhabi Downtown</h3>
-<div id="hc_510686" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Holiday Inn Abu Dhabi Downtown - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800&q=80" alt="Holiday Inn Abu Dhabi Downtown - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_510686 .hc-slide');var d=document.querySelectorAll('#hc_510686 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_510686 .hc-slide');var d=document.querySelectorAll('#hc_510686 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Holiday Inn Abu Dhabi Downtown &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_808862" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/holiday-inn-abu-dhabi-downtown/01.webp" alt="Holiday Inn Abu Dhabi Downtown — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/holiday-inn-abu-dhabi-downtown/02.webp" alt="Holiday Inn Abu Dhabi Downtown — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/holiday-inn-abu-dhabi-downtown/03.webp" alt="Holiday Inn Abu Dhabi Downtown — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Holiday Inn Abu Dhabi Downtown</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_808862', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_808862 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_808862 .swiper-button-next', prevEl: '#swiper_808862 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Отель международной сети, расположенный на главной улице города. Номера классические, с ковровым покрытием и деревянной мебелью. В отеле есть бизнес-центр, фитнес-зал и ресторан, специализирующийся на блюдах местной кухни.</p>
 <p><strong>Цены:</strong> от 55 долларов за ночь.</p>
 <ul>
@@ -487,15 +595,32 @@
 </ul>
 
 <h3>4. Aloft Abu Dhabi</h3>
-<div id="hc_61190" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Aloft Abu Dhabi - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Aloft Abu Dhabi - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Aloft Abu Dhabi - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_61190 .hc-slide');var d=document.querySelectorAll('#hc_61190 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_61190 .hc-slide');var d=document.querySelectorAll('#hc_61190 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_61190 .hc-slide');var d=document.querySelectorAll('#hc_61190 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Aloft Abu Dhabi &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_577292" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/aloft-abu-dhabi/01.webp" alt="Aloft Abu Dhabi — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/aloft-abu-dhabi/02.webp" alt="Aloft Abu Dhabi — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/aloft-abu-dhabi/03.webp" alt="Aloft Abu Dhabi — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Aloft Abu Dhabi</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_577292', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_577292 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_577292 .swiper-button-next', prevEl: '#swiper_577292 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Стильный отель на острове Аль-Марья, ориентированный на молодежь и деловых путешественников. Интерьеры яркие, с элементами современного искусства. В номерах — огромные кровати, душевые кабины с тропическим душем и панорамные окна.</p>
 <p><strong>Цены:</strong> от 90 долларов за ночь.</p>
 <ul>
@@ -505,13 +630,32 @@
 <h2>Люксовые отели (от ₽14 250 ($150)/ночь)</h2>
 
 <h3>1. Emirates Palace Mandarin Oriental</h3>
-<div id="hc_490565" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Emirates Palace Mandarin Oriental - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="Emirates Palace Mandarin Oriental - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_490565 .hc-slide');var d=document.querySelectorAll('#hc_490565 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_490565 .hc-slide');var d=document.querySelectorAll('#hc_490565 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Emirates Palace Mandarin Oriental &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_611217" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/emirates-palace-mandarin-oriental/01.webp" alt="Emirates Palace Mandarin Oriental — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/emirates-palace-mandarin-oriental/02.webp" alt="Emirates Palace Mandarin Oriental — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/emirates-palace-mandarin-oriental/03.webp" alt="Emirates Palace Mandarin Oriental — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Emirates Palace Mandarin Oriental</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_611217', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_611217 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_611217 .swiper-button-next', prevEl: '#swiper_611217 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Один из самых знаковых отелей Абу-Даби, расположенный на частном пляже длиной 1,3 километра. Архитектура в арабском стиле с золотыми куполами и мраморными полами. Номера площадью от 55 квадратных метров оснащены мраморными ванными комнатами и индивидуальным консьерж-сервисом. На территории отеля находится 14 ресторанов и баров, включая знаменитый ресторан Hakkasan.</p>
 <p><strong>Цены:</strong> от 450 долларов за ночь.</p>
 <ul>
@@ -519,13 +663,32 @@
 </ul>
 
 <h3>2. The St. Regis Saadiyat Island Resort</h3>
-<div id="hc_12786" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="The St. Regis Saadiyat Island Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80" alt="The St. Regis Saadiyat Island Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_12786 .hc-slide');var d=document.querySelectorAll('#hc_12786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_12786 .hc-slide');var d=document.querySelectorAll('#hc_12786 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The St. Regis Saadiyat Island Resort &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_799944" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/the-st-regis-saadiyat-island-resort/01.webp" alt="The St. Regis Saadiyat Island Resort — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/the-st-regis-saadiyat-island-resort/02.webp" alt="The St. Regis Saadiyat Island Resort — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/the-st-regis-saadiyat-island-resort/03.webp" alt="The St. Regis Saadiyat Island Resort — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">The St. Regis Saadiyat Island Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_799944', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_799944 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_799944 .swiper-button-next', prevEl: '#swiper_799944 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Курорт на острове Саадият, рядом с Лувром Абу-Даби. Отель спроектирован так, чтобы гармонировать с природным ландшафтом. Номера оформлены в спокойных бежевых тонах, с видом на океан или мангровые заросли. В отеле есть 4 бассейна, поле для гольфа на 18 лунок и спа-центр.</p>
 <p><strong>Цены:</strong> от 350 долларов за ночь.</p>
 <ul>
@@ -533,15 +696,32 @@
 </ul>
 
 <h3>3. Qasr Al Sarab Desert Resort by Anantara</h3>
-<div id="hc_206533" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Qasr Al Sarab Desert Resort by Anantara - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Qasr Al Sarab Desert Resort by Anantara - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="Qasr Al Sarab Desert Resort by Anantara - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_206533 .hc-slide');var d=document.querySelectorAll('#hc_206533 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_206533 .hc-slide');var d=document.querySelectorAll('#hc_206533 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_206533 .hc-slide');var d=document.querySelectorAll('#hc_206533 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Qasr Al Sarab Desert Resort by Anantara &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_307491" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/qasr-al-sarab-desert-resort-by-anantara/01.webp" alt="Qasr Al Sarab Desert Resort by Anantara — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/qasr-al-sarab-desert-resort-by-anantara/02.webp" alt="Qasr Al Sarab Desert Resort by Anantara — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/qasr-al-sarab-desert-resort-by-anantara/03.webp" alt="Qasr Al Sarab Desert Resort by Anantara — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Qasr Al Sarab Desert Resort by Anantara</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_307491', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_307491 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_307491 .swiper-button-next', prevEl: '#swiper_307491 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p><strong>Описание:</strong> Уникальный отель, расположенный в пустыне Руб-эль-Хали, в 200 километрах от города. Номера выполнены в стиле бедуинской крепости, с террасами, выходящими на бескрайние пески. Гостям предлагают сафари на джипах, верховую езду на верблюдах и ужины под звездами.</p>
 <p><strong>Цены:</strong> от 600 долларов за ночь.</p>
 <ul>
@@ -551,17 +731,121 @@
 <h2>Как выбрать район</h2>
 
 <h3>Для пляжного отдыха</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_404189" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/--/01.webp" alt="Для пляжного отдыха — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/--/02.webp" alt="Для пляжного отдыха — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/--/03.webp" alt="Для пляжного отдыха — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Для пляжного отдыха</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_404189', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_404189 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_404189 .swiper-button-next', prevEl: '#swiper_404189 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Выбирайте остров Саадият (Saadiyat Island) или остров Яс (Yas Island). Саадият предлагает чистые общественные пляжи и доступ к культурным объектам, таким как Лувр. Яс — это центр развлечений: аквапарк Yas Waterworld, парк Ferrari World и пляжный клуб Yas Beach. Отели здесь, как правило, выше среднего класса, но есть и бюджетные варианты на материке с трансфером до пляжа.</p>
 
 <h3>Для экскурсий и культуры</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_121424" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/---/01.webp" alt="Для экскурсий и культуры — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/---/02.webp" alt="Для экскурсий и культуры — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/---/03.webp" alt="Для экскурсий и культуры — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Для экскурсий и культуры</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_121424', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_121424 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_121424 .swiper-button-next', prevEl: '#swiper_121424 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Останавливайтесь в центре города (район Корниш) или на острове Аль-Марья. Отсюда легко добраться до Большой мечети шейха Зайда, Qasr Al Watan (президентский дворец) и Heritage Village. В центре много бюджетных и среднебюджетных отелей, а также апартаментов.</p>
 
 <h3>Для ночной жизни</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_127500" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/--/01.webp" alt="Для ночной жизни — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/--/02.webp" alt="Для ночной жизни — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/--/03.webp" alt="Для ночной жизни — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Для ночной жизни</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_127500', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_127500 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_127500 .swiper-button-next', prevEl: '#swiper_127500 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Лучший выбор — остров Яс (Yas Island) и район Аль-Раха-Бич (Al Raha Beach). Здесь сосредоточены ночные клубы, лаунж-бары и рестораны мирового уровня. Отели на Яс-Айленде, такие как W Abu Dhabi или Yas Viceroy, предлагают живую музыку и вечеринки до утра. Для более спокойной ночной жизни подойдет Корниш, где есть кафе и прогулочные зоны.</p>
 
 <h2>Советы по бронированию</h2>
 
 <h3>Как сэкономить</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_424966" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/-/01.webp" alt="Как сэкономить — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/-/02.webp" alt="Как сэкономить — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/-/03.webp" alt="Как сэкономить — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Как сэкономить</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_424966', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_424966 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_424966 .swiper-button-next', prevEl: '#swiper_424966 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <ul>
 <li><strong>Бронируйте заранее:</strong> За 3-4 месяца до поездки цены на отели в Абу-Даби могут быть на 30-40% ниже, чем при бронировании за 2 недели.</li>
 <li><strong>Выбирайте низкий сезон:</strong> С июня по сентябрь стоимость проживания падает до 50%. Учитывайте, что температура воздуха в этот период достигает 45°C, но все достопримечательности работают с кондиционерами.</li>
@@ -570,6 +854,32 @@
 </ul>
 
 <h3>Когда бронировать</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_571835" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/-/01.webp" alt="Когда бронировать — Абу-Даби, ОАЭ" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/-/02.webp" alt="Когда бронировать — интерьер, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/abu-dhabi/-/03.webp" alt="Когда бронировать — вид, Абу-Даби" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Когда бронировать</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Абу-Даби</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_571835', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_571835 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_571835 .swiper-button-next', prevEl: '#swiper_571835 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Лучшее время для бронирования — январь-февраль (для поездки в ноябре-апреле) или август-сентябрь (для поездки в низкий сезон). В период крупных событий, таких как Гран-при Абу-Даби (декабрь) или выставка IDEX (февраль), цены взлетают в 2-3 раза. Рекомендуется бронировать за 6 месяцев, если вы планируете посетить эти мероприятия.</p>
 
 <h3>Лучшие сервисы для бронирования</h3>

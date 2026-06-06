@@ -46,6 +46,8 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
@@ -390,121 +392,193 @@
 <h2>Budget Hotels (under $50/night)</h2>
 
 <h3>1. Citymax Hotel Ras Al Khaimah</h3>
-<div id="hc_825316" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Citymax Hotel Ras Al Khaimah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Citymax Hotel Ras Al Khaimah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Citymax Hotel Ras Al Khaimah - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_825316 .hc-slide');var d=document.querySelectorAll('#hc_825316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_825316 .hc-slide');var d=document.querySelectorAll('#hc_825316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_825316 .hc-slide');var d=document.querySelectorAll('#hc_825316 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Citymax Hotel Ras Al Khaimah &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_861058" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/citymax-hotel-ras-al-khaimah/01.webp" alt="Citymax Hotel Ras Al Khaimah — Ras Al Khaimah, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/citymax-hotel-ras-al-khaimah/02.webp" alt="Citymax Hotel Ras Al Khaimah — interior, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/citymax-hotel-ras-al-khaimah/03.webp" alt="Citymax Hotel Ras Al Khaimah — view, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Citymax Hotel Ras Al Khaimah</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Ras Al Khaimah</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 610</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_861058', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_861058 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_861058 .swiper-button-next', prevEl: '#swiper_861058 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Located on the main Al Dhait Road, Citymax is a reliable budget chain offering 120 compact but spotless rooms. Rates start at $35per night for a standard double, including complimentary Wi-Fi and access to a small rooftop pool. The hotel is a 10-minute drive from Al Hamra Mall and 15 minutes from the Corniche beach. Pros: Excellent value for money, 24-hour reception, and a decent on-site café serving affordable meals. Cons: No beach access, rooms are small with minimal storage, and the surrounding area is commercial with limited walkable attractions.</p>
 
 <h3>2. RAK Hotel (formerly Ras Al Khaimah Hotel)</h3>
-<div id="hc_343322" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="RAK Hotel - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="RAK Hotel - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="RAK Hotel - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_343322 .hc-slide');var d=document.querySelectorAll('#hc_343322 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_343322 .hc-slide');var d=document.querySelectorAll('#hc_343322 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_343322 .hc-slide');var d=document.querySelectorAll('#hc_343322 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">RAK Hotel &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_694886" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rak-hotel-apartments/01.webp" alt="RAK Hotel Apartments — Ras Al Khaimah, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rak-hotel-apartments/02.webp" alt="RAK Hotel Apartments — interior, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rak-hotel-apartments/03.webp" alt="RAK Hotel Apartments — view, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">RAK Hotel Apartments</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Ras Al Khaimah</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽3 325</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_694886', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_694886 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_694886 .swiper-button-next', prevEl: '#swiper_694886 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>A historic property dating back to the 1980s, this hotel in the city center offers 90 rooms with traditional Arabian décor. Prices hover around $40per night, including a basic breakfast buffet. The hotel features a large outdoor pool, a small spa, and a restaurant serving Emirati and Indian cuisine. It is a five-minute walk from the National Museum and the old souk. Pros: Prime location for sightseeing, generous breakfast, and helpful staff who provide local tips. Cons: The building shows its age with worn carpets and outdated bathrooms, and noise from the busy street can be an issue in front-facing rooms.</p>
 
 <h3>3. Ibis Styles Ras Al Khaimah</h3>
-<div id="hc_435176" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Ibis Styles Ras Al Khaimah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Ibis Styles Ras Al Khaimah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Ibis Styles Ras Al Khaimah - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_435176 .hc-slide');var d=document.querySelectorAll('#hc_435176 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_435176 .hc-slide');var d=document.querySelectorAll('#hc_435176 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_435176 .hc-slide');var d=document.querySelectorAll('#hc_435176 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Ibis Styles Ras Al Khaimah &bull; 3 photos</p></div>
 <p>This modern budget property, opened in 2023, sits in the Al Jazirah Al Hamra district, near the historic abandoned village. Rates start at $30per night for a double room, with a vibrant, colorful design appealing to younger travelers. Amenities include a small fitness center, free parking, and a co-working space. The hotel is a 20-minute drive from the beach but close to several supermarkets and fast-food outlets. Pros: Extremely affordable, clean and contemporary rooms, and excellent Wi-Fi for digital nomads. Cons: Remote location requires a car, no pool or restaurant on-site, and the neighborhood feels unfinished with ongoing construction nearby.</p>
-<div id="hc_283416" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Jazirah Al Hamra district, near the historic abandoned village. Rates start at $30per night for a double room, with a vibrant, colorful design appealing to younger travelers. Amenities include a small fitness center, free parking, and a co-working space. The hotel is a 20-minute drive from the beach but close to several supermarkets and fast-food outlets. Pros: Extremely affordable, clean and contemporary rooms, and excellent Wi-Fi for digital nomads. Cons: Remote location requires a car, no pool or restaurant on-site, and the neighborhood feels unfinished with ongoing construction nearby. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80" alt="Jazirah Al Hamra district, near the historic abandoned village. Rates start at $30per night for a double room, with a vibrant, colorful design appealing to younger travelers. Amenities include a small fitness center, free parking, and a co-working space. The hotel is a 20-minute drive from the beach but close to several supermarkets and fast-food outlets. Pros: Extremely affordable, clean and contemporary rooms, and excellent Wi-Fi for digital nomads. Cons: Remote location requires a car, no pool or restaurant on-site, and the neighborhood feels unfinished with ongoing construction nearby. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_283416 .hc-slide');var d=document.querySelectorAll('#hc_283416 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_283416 .hc-slide');var d=document.querySelectorAll('#hc_283416 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Jazirah Al Hamra district, near the historic abandoned village. Rates start at $30per night for a double room, with a vibrant, colorful design appealing to younger travelers. Amenities include a small fitness center, free parking, and a co-working space. The hotel is a 20-minute drive from the beach but close to several supermarkets and fast-food outlets. Pros: Extremely affordable, clean and contemporary rooms, and excellent Wi-Fi for digital nomads. Cons: Remote location requires a car, no pool or restaurant on-site, and the neighborhood feels unfinished with ongoing construction nearby. &bull; 2 photos</p></div>
 
 <h2>Mid-Range Hotels ($50-150/night)</h2>
 
 <h3>1. DoubleTree by Hilton Resort & Spa Marjan Island</h3>
-<div id="hc_33865" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="DoubleTree by Hilton Resort & Spa Marjan Island - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="DoubleTree by Hilton Resort & Spa Marjan Island - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="DoubleTree by Hilton Resort & Spa Marjan Island - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_33865 .hc-slide');var d=document.querySelectorAll('#hc_33865 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_33865 .hc-slide');var d=document.querySelectorAll('#hc_33865 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_33865 .hc-slide');var d=document.querySelectorAll('#hc_33865 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">DoubleTree by Hilton Resort & Spa Marjan Island &bull; 3 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_175697" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/doubletree-by-hilton-resort--spa-marjan-island/01.webp" alt="DoubleTree by Hilton Resort & Spa Marjan Island — Ras Al Khaimah, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/doubletree-by-hilton-resort--spa-marjan-island/02.webp" alt="DoubleTree by Hilton Resort & Spa Marjan Island — interior, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/doubletree-by-hilton-resort--spa-marjan-island/03.webp" alt="DoubleTree by Hilton Resort & Spa Marjan Island — view, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">DoubleTree by Hilton Resort & Spa Marjan Island</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Ras Al Khaimah</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽7 600</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_175697', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_175697 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_175697 .swiper-button-next', prevEl: '#swiper_175697 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>Set on the man-made Al Marjan Island, this 4-star resort offers 242 rooms and suites with direct beach access. Prices range from $90to $130per night, depending on the season. Guests enjoy a large infinity pool, a full-service spa, and three restaurants including a seafood grill. The hotel’s location provides stunning sunset views over the Arabian Gulf. Highlights: The signature warm cookie welcome, spacious rooms with balconies, and a complimentary shuttle to the Al Hamra Mall. Families appreciate the kids’ club and shallow children’s pool.</p>
 
 <h3>2. Hilton Garden Inn Ras Al Khaimah</h3>
-<div id="hc_49024" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hilton Garden Inn Ras Al Khaimah - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hilton Garden Inn Ras Al Khaimah - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hilton Garden Inn Ras Al Khaimah - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_49024 .hc-slide');var d=document.querySelectorAll('#hc_49024 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_49024 .hc-slide');var d=document.querySelectorAll('#hc_49024 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_49024 .hc-slide');var d=document.querySelectorAll('#hc_49024 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hilton Garden Inn Ras Al Khaimah &bull; 3 photos</p></div>
 <p>Located in the Al Jazirah Al Hamra district, this 2022-built hotel offers 150 rooms with modern furnishings and a business-friendly vibe. Rates range from $70to $100per night, including a cooked-to-order breakfast. The hotel features a rooftop pool, a 24-hour fitness center, and a lobby bar. It is a 15-minute drive from the Corniche and 10 minutes from the RAK Exhibition Centre. Highlights: Consistent Hilton quality, soundproofed rooms, and a well-equipped business center. The on-site restaurant serves international buffets with live cooking stations.</p>
-<div id="hc_54118" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="Hilton quality, soundproofed rooms, and a well-equipped business center. The on-site restaurant serves international buffets with live cooking stations. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80" alt="Hilton quality, soundproofed rooms, and a well-equipped business center. The on-site restaurant serves international buffets with live cooking stations. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Hilton quality, soundproofed rooms, and a well-equipped business center. The on-site restaurant serves international buffets with live cooking stations. - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_54118 .hc-slide');var d=document.querySelectorAll('#hc_54118 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_54118 .hc-slide');var d=document.querySelectorAll('#hc_54118 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_54118 .hc-slide');var d=document.querySelectorAll('#hc_54118 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Hilton quality, soundproofed rooms, and a well-equipped business center. The on-site restaurant serves international buffets with live cooking stations. &bull; 3 photos</p></div>
 
 <h3>3. The Cove Rotana Resort</h3>
-<div id="hc_933941" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="The Cove Rotana Resort - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="The Cove Rotana Resort - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80" alt="The Cove Rotana Resort - 3" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_933941 .hc-slide');var d=document.querySelectorAll('#hc_933941 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_933941 .hc-slide');var d=document.querySelectorAll('#hc_933941 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-<button onclick="var s=document.querySelectorAll('#hc_933941 .hc-slide');var d=document.querySelectorAll('#hc_933941 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==2?'block':'none';d[j].style.background=j==2?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 3"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">The Cove Rotana Resort &bull; 3 photos</p></div>
 <p>This 5-star property on Al Marjan Island offers a more intimate experience with 198 rooms and villas. Mid-range rates are achievable at $110to $140per night for a standard room, especially during shoulder seasons. The resort boasts a private beach, a large lagoon pool, and five dining venues including a Lebanese restaurant. Guests can use the free-form pool that winds through landscaped gardens. Highlights: Exceptional service from Rotana’s trained staff, a dedicated adults-only pool, and complimentary kayaking and paddleboarding equipment. The resort’s spa offers traditional hammam treatments.</p>
 
 <h3>4. Rixos Bab Al Bahr</h3>
-<div id="hc_455100" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Rixos Bab Al Bahr - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Rixos Bab Al Bahr - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_455100 .hc-slide');var d=document.querySelectorAll('#hc_455100 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_455100 .hc-slide');var d=document.querySelectorAll('#hc_455100 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rixos Bab Al Bahr &bull; 2 photos</p></div>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_692722" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rixos-bab-al-bahr/01.webp" alt="Rixos Bab Al Bahr — Ras Al Khaimah, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rixos-bab-al-bahr/02.webp" alt="Rixos Bab Al Bahr — interior, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/rixos-bab-al-bahr/03.webp" alt="Rixos Bab Al Bahr — view, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Rixos Bab Al Bahr</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Ras Al Khaimah</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽10 450</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_692722', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_692722 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_692722 .swiper-button-next', prevEl: '#swiper_692722 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>A massive all-inclusive resort on Al Marjan Island, Rixos offers 694 rooms and suites. While often categorized as luxury, standard room rates can drop to $120per night during off-peak periods. The resort features a 500-meter private beach, 10 restaurants, a water park, and a nightclub. Guests have access to the adjacent Rixos Premium’s facilities. Highlights: All-inclusive packages cover premium drinks and à la carte dining, making it excellent value for families. The water park includes slides and a lazy river, while the evening entertainment ranges from live music to fire shows.</p>
-<div id="hc_526536" class="hotel-carousel" style="position:relative;margin:16px 0;border-radius:12px;overflow:hidden;background:var(--bg);">
-<div class="hc-slide" style="display:block;"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80" alt="Rixos offers 694 rooms and suites. While often categorized as luxury, standard room rates can drop to $120per night during off-peak periods. The resort features a 500-meter private beach, 10 restaurants, a water park, and a nightclub. Guests have access to the adjacent Rixos Premium’s facilities. Highlights: All-inclusive packages cover premium drinks and à la carte dining, making it excellent value for families. The water park includes slides and a lazy river, while the evening entertainment ranges from live music to fire shows. - 1" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div class="hc-slide" style="display:none;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Rixos offers 694 rooms and suites. While often categorized as luxury, standard room rates can drop to $120per night during off-peak periods. The resort features a 500-meter private beach, 10 restaurants, a water park, and a nightclub. Guests have access to the adjacent Rixos Premium’s facilities. Highlights: All-inclusive packages cover premium drinks and à la carte dining, making it excellent value for families. The water park includes slides and a lazy river, while the evening entertainment ranges from live music to fire shows. - 2" loading="lazy" style="width:100%;max-height:420px;object-fit:cover;display:block;"></div>
-<div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
-<button onclick="var s=document.querySelectorAll('#hc_526536 .hc-slide');var d=document.querySelectorAll('#hc_526536 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==0?'block':'none';d[j].style.background=j==0?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:var(--vermillion);border:none;cursor:pointer;padding:0;" aria-label="Photo 1"></button>
-<button onclick="var s=document.querySelectorAll('#hc_526536 .hc-slide');var d=document.querySelectorAll('#hc_526536 .hc-dot');for(var j=0;j<s.length;j++){s[j].style.display=j==1?'block':'none';d[j].style.background=j==1?'var(--vermillion)':'rgba(255,255,255,0.6)'}" class="hc-dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.6);border:none;cursor:pointer;padding:0;" aria-label="Photo 2"></button>
-</div><p style="font-size:12px;color:var(--meta);margin:8px 0 0 12px;">Rixos offers 694 rooms and suites. While often categorized as luxury, standard room rates can drop to $120per night during off-peak periods. The resort features a 500-meter private beach, 10 restaurants, a water park, and a nightclub. Guests have access to the adjacent Rixos Premium’s facilities. Highlights: All-inclusive packages cover premium drinks and à la carte dining, making it excellent value for families. The water park includes slides and a lazy river, while the evening entertainment ranges from live music to fire shows. &bull; 2 photos</p></div>
 
 <h2>Luxury Hotels ($150+/night)</h2>
 
 <h3>1. Waldorf Astoria Ras Al Khaimah</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_492005" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/waldorf-astoria-ras-al-khaimah/01.webp" alt="Waldorf Astoria Ras Al Khaimah — Ras Al Khaimah, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/waldorf-astoria-ras-al-khaimah/02.webp" alt="Waldorf Astoria Ras Al Khaimah — interior, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/waldorf-astoria-ras-al-khaimah/03.webp" alt="Waldorf Astoria Ras Al Khaimah — view, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Waldorf Astoria Ras Al Khaimah</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Ras Al Khaimah</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽19 000</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_492005', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_492005 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_492005 .swiper-button-next', prevEl: '#swiper_492005 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>This iconic 5-star resort on the Corniche is the pinnacle of luxury in the emirate. Rates start at $250per night for a standard room and can exceed $800for a suite. The property features 347 rooms and villas, all with marble bathrooms and panoramic sea views. Amenities include a 1.2-kilometer private beach, a 2,000-square-meter spa with a hydrotherapy pool, and six restaurants including the Michelin-starred Marjan. The hotel’s golf course, designed by Greg Norman, is a highlight for enthusiasts. The infinity pool overlooks the Arabian Gulf, and butler service is available for all suites. The resort’s lush gardens and traditional Arabian architecture create a serene, exclusive atmosphere.</p>
 
 <h3>2. InterContinental Ras Al Khaimah Mina Al Arab Resort & Spa</h3>
 <p>Opened in 2023 on the Mina Al Arab development, this resort offers 351 rooms and villas, with rates from $180to $350per night. The property is set on a natural lagoon with a private marina and a 500-meter beach. Rooms feature floor-to-ceiling windows and outdoor rain showers. The resort has five pools, a kids’ club, and a spa with a Moroccan hammam. Dining options include a seafood restaurant on the pier and a rooftop bar with views of the mangroves. The marina offers boat rentals and fishing trips. The resort’s eco-friendly design incorporates native plants and energy-efficient systems.</p>
 
 <h3>3. Anantara Mina Al Arab Ras Al Khaimah Resort</h3>
+<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+<div id="swiper_755173" class="swiper hotel-swiper" style="position:relative;">
+<div class="swiper-wrapper">
+<div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/anantara-mina-al-arab-ras-al-khaimah-resort/01.webp" alt="Anantara Mina Al Arab Ras Al Khaimah Resort — Ras Al Khaimah, UAE" loading="eager" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/anantara-mina-al-arab-ras-al-khaimah-resort/02.webp" alt="Anantara Mina Al Arab Ras Al Khaimah Resort — interior, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div><div class="swiper-slide"><img src="/assets/hotels/uae/ras-al-khaimah/anantara-mina-al-arab-ras-al-khaimah-resort/03.webp" alt="Anantara Mina Al Arab Ras Al Khaimah Resort — view, Ras Al Khaimah" loading="lazy" style="width:100%;height:420px;object-fit:cover;border-radius:12px;"></div>
+</div>
+<div class="swiper-pagination" style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;"></div>
+<div class="swiper-button-prev" style="color:#fff;left:10px;"></div>
+<div class="swiper-button-next" style="color:#fff;right:10px;"></div>
+</div>
+<div style="padding:18px 20px;">
+<h4 style="font-size:17px;font-weight:700;margin:0 0 4px 0;color:var(--ink);">Anantara Mina Al Arab Ras Al Khaimah Resort</h4>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+<span style="font-size:13px;color:var(--meta);">📍 Ras Al Khaimah</span><span style="font-size:14px;font-weight:600;color:var(--vermillion);">₽28 500</span></div></div></div>
+<script>
+(function(){
+var s = new Swiper('#swiper_755173', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '#swiper_755173 .swiper-pagination', clickable: true },
+    navigation: { nextEl: '#swiper_755173 .swiper-button-next', prevEl: '#swiper_755173 .swiper-button-prev' },
+    lazy: { loadPrevNext: true },
+});
+})();
+</script>
 <p>This exclusive resort, also on Mina Al Arab, offers 174 rooms and overwater villas. Rates start at $220per night for a garden view room and climb to $600for a villa. The resort is known for its Thai-inspired architecture and lush tropical landscaping. Features include a 1.5-kilometer private beach, a lagoon pool with a swim-up bar, and a spa offering traditional Thai massages. The resort’s restaurant, The Beach House, serves fresh seafood and grilled meats. Guests can explore the mangroves by kayak or join a guided nature walk. The overwater villas have glass floor panels and direct lagoon access. The resort provides a complimentary shuttle to the Al Hamra Mall and the RAK Golf Club.</p>
 
 <h2>How to Choose the Right Area</h2>
