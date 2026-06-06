@@ -124,8 +124,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; gap: 20px; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -187,6 +187,15 @@
             padding: 1px 4px; transition: all 0.2s;
         }
         .partner-link:hover { background: var(--vermillion); color: #fff; border-radius: 4px; }
+
+        /* City buttons */
+        .city-btn {
+            display: inline-block; padding: 8px 16px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 13px; font-weight: 500;
+            text-decoration: none; transition: all 0.2s; white-space: nowrap;
+        }
+        .city-btn:hover { background: var(--vermillion); color: #fff; }
 
         /* Agent block */
         .agent-block {
@@ -390,110 +399,120 @@
         <h2>Города и курорты Турция</h2>
         <div class="cards-grid" style="margin-top:40px;">
             
-            <a href="/ru/turkey/istanbul-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&amp;q=80" alt="Стамбул" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Стамбул</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Город на двух континентах: дворцы, мечети, базары. Культурная столица страны.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/turkey/istanbul-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Стамбул</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Город на двух континентах: дворцы, мечети, базары. Культурная столица страны.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/turkey/istanbul-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/turkey/istanbul-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/turkey/istanbul-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/turkey/istanbul-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/turkey/istanbul-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/turkey/istanbul-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/turkey/istanbul-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/turkey/istanbul-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/turkey/istanbul-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/turkey/istanbul-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/turkey/antalya-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://youtravel.me/upload/medialibrary/73c/g4ldxc78rw7lit49arn32dfdexy36p78.jpg" alt="Анталья" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Анталья</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Средиземноморский курорт: пляжи, All Inclusive, Старый город. Универсальный выбор.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/turkey/antalya-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Анталья</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Средиземноморский курорт: пляжи, All Inclusive, Старый город. Универсальный выбор.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/turkey/antalya-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/turkey/antalya-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/turkey/antalya-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/turkey/antalya-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/turkey/antalya-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/turkey/antalya-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/turkey/antalya-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/turkey/antalya-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/turkey/antalya-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/turkey/antalya-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/turkey/alanya-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1597074866923-dc0589150358?w=800&amp;q=80" alt="Аланья" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Аланья</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Бюджетный курорт с крепостью и пляжем Клеопатры. Отличный сервис за разумные деньги.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/turkey/alanya-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Аланья</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Бюджетный курорт с крепостью и пляжем Клеопатры. Отличный сервис за разумные деньги.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/turkey/alanya-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/turkey/alanya-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/turkey/alanya-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/turkey/alanya-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/turkey/alanya-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/turkey/alanya-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/turkey/alanya-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/turkey/alanya-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/turkey/alanya-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/turkey/alanya-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/turkey/bodrum-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://avatars.mds.yandex.net/i?id=01074de7a85624d1ae3164b00d594852_l-5319522-images-thumbs&amp;n=13" alt="Бодрум" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Бодрум</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Эгейский курорт европейского стиля: марина, белые дома, ночная жизнь.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/turkey/bodrum-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Бодрум</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Эгейский курорт европейского стиля: марина, белые дома, ночная жизнь.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/turkey/bodrum-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/turkey/bodrum-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/turkey/bodrum-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/turkey/bodrum-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/turkey/bodrum-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/turkey/bodrum-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/turkey/bodrum-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/turkey/bodrum-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/turkey/bodrum-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/turkey/bodrum-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/turkey/cappadocia-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/173895/RfFySz3wO2UvbxBAH17Q.jpg" alt="Каппадокия" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Каппадокия</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Лунный пейзаж, воздушные шары, пещерные отели. Уникальный регион.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/turkey/cappadocia-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Каппадокия</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Лунный пейзаж, воздушные шары, пещерные отели. Уникальный регион.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/turkey/cappadocia-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/turkey/cappadocia-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/turkey/cappadocia-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/turkey/cappadocia-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/turkey/cappadocia-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/turkey/cappadocia-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/turkey/cappadocia-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/turkey/cappadocia-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/turkey/cappadocia-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/turkey/cappadocia-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
         </div>
     </div>

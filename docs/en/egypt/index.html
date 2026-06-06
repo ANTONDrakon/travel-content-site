@@ -124,8 +124,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; gap: 20px; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -187,6 +187,15 @@
             padding: 1px 4px; transition: all 0.2s;
         }
         .partner-link:hover { background: var(--vermillion); color: #fff; border-radius: 4px; }
+
+        /* City buttons */
+        .city-btn {
+            display: inline-block; padding: 8px 16px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 13px; font-weight: 500;
+            text-decoration: none; transition: all 0.2s; white-space: nowrap;
+        }
+        .city-btn:hover { background: var(--vermillion); color: #fff; }
 
         /* Agent block */
         .agent-block {
@@ -384,110 +393,120 @@
         <h2>Cities &amp; Resorts of Egypt</h2>
         <div class="cards-grid" style="margin-top:40px;">
             
-            <a href="/en/egypt/sharm-el-sheikh-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Sharm_El_Sheikh_-_panoramio_%2811%29.jpg" alt="Sharm El Sheikh" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Sharm El Sheikh</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Diving capital of the Red Sea. Corals, fish, Ras Mohammed Reserve.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/egypt/sharm-el-sheikh-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Sharm El Sheikh</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Diving capital of the Red Sea. Corals, fish, Ras Mohammed Reserve.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/egypt/sharm-el-sheikh-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/egypt/sharm-el-sheikh-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/egypt/sharm-el-sheikh-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/egypt/sharm-el-sheikh-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/egypt/sharm-el-sheikh-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/egypt/sharm-el-sheikh-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/egypt/sharm-el-sheikh-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/egypt/sharm-el-sheikh-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/egypt/sharm-el-sheikh-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/egypt/sharm-el-sheikh-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/en/egypt/hurghada-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://avatars.mds.yandex.net/get-altay/14296560/2a000001925220f1ecd9241e93837a93b267/orig" alt="Hurghada" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Hurghada</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Egypt&#39;s most affordable resort. Beach vacation, diving, excursions.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/egypt/hurghada-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Hurghada</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Egypt&#39;s most affordable resort. Beach vacation, diving, excursions.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/egypt/hurghada-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/egypt/hurghada-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/egypt/hurghada-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/egypt/hurghada-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/egypt/hurghada-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/egypt/hurghada-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/egypt/hurghada-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/egypt/hurghada-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/egypt/hurghada-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/egypt/hurghada-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/en/egypt/cairo-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&amp;q=80" alt="Cairo" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Cairo</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Megacity by the pyramids. Giza, Egyptian Museum, Khan El Khalili.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/egypt/cairo-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Cairo</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Megacity by the pyramids. Giza, Egyptian Museum, Khan El Khalili.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/egypt/cairo-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/egypt/cairo-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/egypt/cairo-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/egypt/cairo-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/egypt/cairo-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/egypt/cairo-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/egypt/cairo-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/egypt/cairo-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/egypt/cairo-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/egypt/cairo-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/en/egypt/luxor-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://hurghadaexcurs.com/wp-content/uploads/2024/05/EXCURSION_TO_LUXOR_2_DAYS_INDIVIDUALLY_FROM_HURGHADA_main.jpg" alt="Luxor" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Luxor</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Ancient Thebes: Valley of Kings, Karnak Temple. Open-air museum.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/egypt/luxor-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Luxor</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Ancient Thebes: Valley of Kings, Karnak Temple. Open-air museum.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/egypt/luxor-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/egypt/luxor-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/egypt/luxor-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/egypt/luxor-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/egypt/luxor-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/egypt/luxor-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/egypt/luxor-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/egypt/luxor-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/egypt/luxor-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/egypt/luxor-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/en/egypt/marsa-alam-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&amp;q=80" alt="Marsa Alam" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Marsa Alam</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Secluded diving paradise in the south. Dugongs, pristine reefs.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/egypt/marsa-alam-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Marsa Alam</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Secluded diving paradise in the south. Dugongs, pristine reefs.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/egypt/marsa-alam-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/egypt/marsa-alam-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/egypt/marsa-alam-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/egypt/marsa-alam-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/egypt/marsa-alam-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/egypt/marsa-alam-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/egypt/marsa-alam-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/egypt/marsa-alam-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/egypt/marsa-alam-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/egypt/marsa-alam-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
         </div>
     </div>

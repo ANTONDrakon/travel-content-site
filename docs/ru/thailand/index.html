@@ -124,8 +124,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; gap: 20px; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -187,6 +187,15 @@
             padding: 1px 4px; transition: all 0.2s;
         }
         .partner-link:hover { background: var(--vermillion); color: #fff; border-radius: 4px; }
+
+        /* City buttons */
+        .city-btn {
+            display: inline-block; padding: 8px 16px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 13px; font-weight: 500;
+            text-decoration: none; transition: all 0.2s; white-space: nowrap;
+        }
+        .city-btn:hover { background: var(--vermillion); color: #fff; }
 
         /* Agent block */
         .agent-block {
@@ -384,110 +393,120 @@
         <h2>Города и курорты Таиланд</h2>
         <div class="cards-grid" style="margin-top:40px;">
             
-            <a href="/ru/thailand/bangkok-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&amp;q=80" alt="Бангкок" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Бангкок</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Мегаполис контрастов: храмы, небоскрёбы, стритфуд. Ворота в Юго-Восточную Азию.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/thailand/bangkok-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Бангкок</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Мегаполис контрастов: храмы, небоскрёбы, стритфуд. Ворота в Юго-Восточную Азию.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/thailand/bangkok-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/thailand/bangkok-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/thailand/bangkok-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/thailand/bangkok-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/thailand/bangkok-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/thailand/bangkok-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/thailand/bangkok-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/thailand/bangkok-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/thailand/bangkok-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/thailand/bangkok-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/thailand/phuket-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&amp;q=80" alt="Пхукет" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Пхукет</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Крупнейший остров Таиланда: пляжи, дайвинг, ночная жизнь.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/thailand/phuket-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Пхукет</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Крупнейший остров Таиланда: пляжи, дайвинг, ночная жизнь.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/thailand/phuket-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/thailand/phuket-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/thailand/phuket-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/thailand/phuket-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/thailand/phuket-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/thailand/phuket-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/thailand/phuket-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/thailand/phuket-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/thailand/phuket-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/thailand/phuket-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/thailand/pattaya-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&amp;q=80" alt="Паттайя" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Паттайя</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Курортный город с активной ночной жизнью. Бюджетно, весело, близко к Бангкоку.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/thailand/pattaya-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Паттайя</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Курортный город с активной ночной жизнью. Бюджетно, весело, близко к Бангкоку.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/thailand/pattaya-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/thailand/pattaya-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/thailand/pattaya-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/thailand/pattaya-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/thailand/pattaya-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/thailand/pattaya-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/thailand/pattaya-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/thailand/pattaya-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/thailand/pattaya-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/thailand/pattaya-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/thailand/koh-samui-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?w=800&amp;q=80" alt="Самуи" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Самуи</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Остров с кокосовыми рощами и спа. Спокойный, семейный, живописный.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/thailand/koh-samui-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Самуи</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Остров с кокосовыми рощами и спа. Спокойный, семейный, живописный.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/thailand/koh-samui-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/thailand/koh-samui-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/thailand/koh-samui-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/thailand/koh-samui-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/thailand/koh-samui-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/thailand/koh-samui-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/thailand/koh-samui-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/thailand/koh-samui-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/thailand/koh-samui-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/thailand/koh-samui-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/thailand/krabi-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&amp;q=80" alt="Краби" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Краби</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Провинция с карстовыми скалами и изумрудным морем. Для любителей природы.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/thailand/krabi-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Краби</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Провинция с карстовыми скалами и изумрудным морем. Для любителей природы.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/thailand/krabi-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/thailand/krabi-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/thailand/krabi-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/thailand/krabi-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/thailand/krabi-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/thailand/krabi-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/thailand/krabi-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/thailand/krabi-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/thailand/krabi-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/thailand/krabi-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
         </div>
     </div>

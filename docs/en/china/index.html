@@ -124,8 +124,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; gap: 20px; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -187,6 +187,15 @@
             padding: 1px 4px; transition: all 0.2s;
         }
         .partner-link:hover { background: var(--vermillion); color: #fff; border-radius: 4px; }
+
+        /* City buttons */
+        .city-btn {
+            display: inline-block; padding: 8px 16px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 13px; font-weight: 500;
+            text-decoration: none; transition: all 0.2s; white-space: nowrap;
+        }
+        .city-btn:hover { background: var(--vermillion); color: #fff; }
 
         /* Agent block */
         .agent-block {
@@ -384,110 +393,120 @@
         <h2>Cities &amp; Resorts of China</h2>
         <div class="cards-grid" style="margin-top:40px;">
             
-            <a href="/en/china/sanya-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://avatars.mds.yandex.net/get-altay/6322664/2a000001907e422c5f8766638ecbd3745e61/orig" alt="Sanya (Hainan)" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Sanya (Hainan)</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Hainan&#39;s tropical paradise: palms, beaches, bays. China&#39;s Hawaii.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/china/sanya-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Sanya (Hainan)</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Hainan&#39;s tropical paradise: palms, beaches, bays. China&#39;s Hawaii.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/china/sanya-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/china/sanya-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/china/sanya-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/china/sanya-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/china/sanya-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/china/sanya-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/china/sanya-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/china/sanya-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/china/sanya-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/china/sanya-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/en/china/haikou-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://russian.cgtn.com/news/2025-09-30/1972981899919007745/b0142e6b-dec8-41a1-b227-e290b3f07083.png" alt="Haikou (Hainan)" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Haikou (Hainan)</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Hainan&#39;s capital: colonial architecture, volcanic parks, spa.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/china/haikou-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Haikou (Hainan)</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Hainan&#39;s capital: colonial architecture, volcanic parks, spa.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/china/haikou-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/china/haikou-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/china/haikou-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/china/haikou-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/china/haikou-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/china/haikou-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/china/haikou-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/china/haikou-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/china/haikou-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/china/haikou-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/en/china/beijing-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&amp;q=80" alt="Beijing" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Beijing</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Great capital: Forbidden City, Great Wall, hutongs.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/china/beijing-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Beijing</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Great capital: Forbidden City, Great Wall, hutongs.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/china/beijing-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/china/beijing-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/china/beijing-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/china/beijing-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/china/beijing-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/china/beijing-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/china/beijing-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/china/beijing-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/china/beijing-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/china/beijing-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/en/china/shanghai-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=800&amp;q=80" alt="Shanghai" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Shanghai</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Futuristic megacity: Bund waterfront, Pudong skyscrapers.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/china/shanghai-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Shanghai</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Futuristic megacity: Bund waterfront, Pudong skyscrapers.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/china/shanghai-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/china/shanghai-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/china/shanghai-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/china/shanghai-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/china/shanghai-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/china/shanghai-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/china/shanghai-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/china/shanghai-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/china/shanghai-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/china/shanghai-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/en/china/xian-travel-guide.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&amp;q=80" alt="Xi&#39;an" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Xi&#39;an</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Ancient capital: Terracotta Army, Muslim Quarter, city wall.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/en/china/xian-travel-guide.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Xi&#39;an</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Ancient capital: Terracotta Army, Muslim Quarter, city wall.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/en/china/xian-travel-guide.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Travel Guide</a>
+                    <a href="/en/china/xian-travel-guide.html" class="city-btn">📖 Travel Guide</a>
                     
-                    <a href="/en/china/xian-hotels.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Hotels</a>
+                    <a href="/en/china/xian-hotels.html" class="city-btn">🏨 Hotels</a>
                     
-                    <a href="/en/china/xian-cheap-flights.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Flights</a>
+                    <a href="/en/china/xian-cheap-flights.html" class="city-btn">✈️ Flights</a>
                     
-                    <a href="/en/china/xian-things-to-do.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Attractions</a>
+                    <a href="/en/china/xian-things-to-do.html" class="city-btn">🏛 Attractions</a>
                     
-                    <a href="/en/china/xian-best-time-to-visit.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Seasons &amp; Weather</a>
+                    <a href="/en/china/xian-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
         </div>
     </div>

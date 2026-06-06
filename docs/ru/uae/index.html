@@ -124,8 +124,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; gap: 20px; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -187,6 +187,15 @@
             padding: 1px 4px; transition: all 0.2s;
         }
         .partner-link:hover { background: var(--vermillion); color: #fff; border-radius: 4px; }
+
+        /* City buttons */
+        .city-btn {
+            display: inline-block; padding: 8px 16px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 13px; font-weight: 500;
+            text-decoration: none; transition: all 0.2s; white-space: nowrap;
+        }
+        .city-btn:hover { background: var(--vermillion); color: #fff; }
 
         /* Agent block */
         .agent-block {
@@ -384,110 +393,120 @@
         <h2>Города и курорты ОАЭ</h2>
         <div class="cards-grid" style="margin-top:40px;">
             
-            <a href="/ru/uae/dubai-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&amp;q=80" alt="Дубай" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Дубай</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Город будущего: небоскрёбы, шопинг, развлечения. Самый популярный эмират.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/uae/dubai-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Дубай</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Город будущего: небоскрёбы, шопинг, развлечения. Самый популярный эмират.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/uae/dubai-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/uae/dubai-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/uae/dubai-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/uae/dubai-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/uae/dubai-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/uae/dubai-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/uae/dubai-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/uae/dubai-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/uae/dubai-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/uae/dubai-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/uae/abu-dhabi-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://ic.pics.livejournal.com/pantv/14908973/12182338/12182338_original.jpg" alt="Абу-Даби" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Абу-Даби</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Столица ОАЭ: культура, Лувр, мечеть шейха Зайда. Спокойный и респектабельный.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/uae/abu-dhabi-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Абу-Даби</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Столица ОАЭ: культура, Лувр, мечеть шейха Зайда. Спокойный и респектабельный.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/uae/abu-dhabi-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/uae/abu-dhabi-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/uae/abu-dhabi-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/uae/abu-dhabi-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/uae/abu-dhabi-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/uae/abu-dhabi-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/uae/abu-dhabi-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/uae/abu-dhabi-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/uae/abu-dhabi-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/uae/abu-dhabi-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/uae/sharjah-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://i.pinimg.com/originals/b9/a2/23/b9a223075cf4d19a0c15c66dfaedac01.jpg" alt="Шарджа" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Шарджа</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Культурная столица: музеи, heritage-районы. Самый строгий, но бюджетный.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/uae/sharjah-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Шарджа</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Культурная столица: музеи, heritage-районы. Самый строгий, но бюджетный.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/uae/sharjah-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/uae/sharjah-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/uae/sharjah-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/uae/sharjah-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/uae/sharjah-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/uae/sharjah-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/uae/sharjah-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/uae/sharjah-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/uae/sharjah-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/uae/sharjah-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/uae/ras-al-khaimah-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://fs.tonkosti.ru/sized/c800x800/8d/ut/8dutekrq5hwc0kwgw4gs4wooc.jpg" alt="Рас-эль-Хайма" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Рас-эль-Хайма</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Природа и приключения: гора Джебель-Джейс, мангровые заросли, уединение.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/uae/ras-al-khaimah-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Рас-эль-Хайма</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Природа и приключения: гора Джебель-Джейс, мангровые заросли, уединение.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/uae/ras-al-khaimah-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/uae/ras-al-khaimah-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/uae/ras-al-khaimah-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/uae/ras-al-khaimah-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/uae/ras-al-khaimah-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/uae/ras-al-khaimah-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/uae/ras-al-khaimah-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/uae/ras-al-khaimah-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/uae/ras-al-khaimah-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/uae/ras-al-khaimah-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/uae/fujairah-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://fs.tonkosti.ru/tonkosti/table_img/g142/9d9d/266410251.jpg" alt="Фуджейра" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Фуджейра</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Единственный эмират на Индийском океане. Дайвинг, снорклинг, горы Хаджар.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/uae/fujairah-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Фуджейра</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Единственный эмират на Индийском океане. Дайвинг, снорклинг, горы Хаджар.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/uae/fujairah-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/uae/fujairah-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/uae/fujairah-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/uae/fujairah-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/uae/fujairah-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/uae/fujairah-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/uae/fujairah-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/uae/fujairah-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/uae/fujairah-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/uae/fujairah-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
         </div>
     </div>

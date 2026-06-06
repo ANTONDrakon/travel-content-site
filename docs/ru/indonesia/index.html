@@ -124,8 +124,8 @@
         .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
 
         /* Cards grid */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; } }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+        @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; gap: 20px; } }
 
         .destination-card {
             background: #fff; overflow: hidden;
@@ -187,6 +187,15 @@
             padding: 1px 4px; transition: all 0.2s;
         }
         .partner-link:hover { background: var(--vermillion); color: #fff; border-radius: 4px; }
+
+        /* City buttons */
+        .city-btn {
+            display: inline-block; padding: 8px 16px;
+            border: 1.5px solid var(--vermillion); border-radius: 14px;
+            color: var(--vermillion); font-size: 13px; font-weight: 500;
+            text-decoration: none; transition: all 0.2s; white-space: nowrap;
+        }
+        .city-btn:hover { background: var(--vermillion); color: #fff; }
 
         /* Agent block */
         .agent-block {
@@ -384,110 +393,120 @@
         <h2>Города и курорты Индонезия</h2>
         <div class="cards-grid" style="margin-top:40px;">
             
-            <a href="/ru/indonesia/ubud-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&amp;q=80" alt="Убуд" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Убуд</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Духовное сердце Бали: рисовые террасы, йога, храмы. Для творческих натур.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/indonesia/ubud-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Убуд</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Духовное сердце Бали: рисовые террасы, йога, храмы. Для творческих натур.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/indonesia/ubud-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/indonesia/ubud-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/indonesia/ubud-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/indonesia/ubud-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/indonesia/ubud-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/indonesia/ubud-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/indonesia/ubud-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/indonesia/ubud-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/indonesia/ubud-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/indonesia/ubud-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/indonesia/kuta-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&amp;q=80" alt="Кута" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Кута</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Пляжный и серф-центр Бали. Бюджетно, шумно, весело.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/indonesia/kuta-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Кута</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Пляжный и серф-центр Бали. Бюджетно, шумно, весело.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/indonesia/kuta-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/indonesia/kuta-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/indonesia/kuta-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/indonesia/kuta-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/indonesia/kuta-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/indonesia/kuta-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/indonesia/kuta-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/indonesia/kuta-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/indonesia/kuta-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/indonesia/kuta-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/indonesia/seminyak-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&amp;q=80" alt="Семиньяк" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Семиньяк</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Богемный район Бали: модные кафе, бутики, закатные бары.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/indonesia/seminyak-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Семиньяк</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Богемный район Бали: модные кафе, бутики, закатные бары.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/indonesia/seminyak-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/indonesia/seminyak-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/indonesia/seminyak-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/indonesia/seminyak-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/indonesia/seminyak-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/indonesia/seminyak-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/indonesia/seminyak-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/indonesia/seminyak-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/indonesia/seminyak-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/indonesia/seminyak-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/indonesia/canggu-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800&amp;q=80" alt="Чангу" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Чангу</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Хипстерский серф-район Бали: кофе, бассейны, коворкинги.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/indonesia/canggu-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Чангу</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Хипстерский серф-район Бали: кофе, бассейны, коворкинги.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/indonesia/canggu-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/indonesia/canggu-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/indonesia/canggu-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/indonesia/canggu-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/indonesia/canggu-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/indonesia/canggu-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/indonesia/canggu-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/indonesia/canggu-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/indonesia/canggu-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/indonesia/canggu-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
-            <a href="/ru/indonesia/nusa-dua-putevoditel.html" class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);">
+            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="https://images.unsplash.com/photo-1573790387438-4da905039392?w=800&amp;q=80" alt="Нуса-Дуа" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;">
-                    <h3>Нуса-Дуа</h3>
-                    <p style="font-size:14px;color:var(--meta);margin:8px 0 12px;line-height:1.5;">Элитный анклав Бали: люксовые курорты, гольф, белый песок.</p>
-                    <div style="margin-top:8px;">
+                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
+                    <a href="/ru/indonesia/nusa-dua-putevoditel.html" style="text-decoration:none;color:inherit;">
+                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Нуса-Дуа</h3>
+                    </a>
+                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Элитный анклав Бали: люксовые курорты, гольф, белый песок.</p>
+                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     
-                    <a href="/ru/indonesia/nusa-dua-putevoditel.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">📖 Путеводитель</a>
+                    <a href="/ru/indonesia/nusa-dua-putevoditel.html" class="city-btn">📖 Путеводитель</a>
                     
-                    <a href="/ru/indonesia/nusa-dua-oteli.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏨 Отели</a>
+                    <a href="/ru/indonesia/nusa-dua-oteli.html" class="city-btn">🏨 Отели</a>
                     
-                    <a href="/ru/indonesia/nusa-dua-aviabilety.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">✈️ Авиабилеты</a>
+                    <a href="/ru/indonesia/nusa-dua-aviabilety.html" class="city-btn">✈️ Авиабилеты</a>
                     
-                    <a href="/ru/indonesia/nusa-dua-dostoprimechatelnosti.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">🏛 Достопримечательности</a>
+                    <a href="/ru/indonesia/nusa-dua-dostoprimechatelnosti.html" class="city-btn">🏛 Достопримечательности</a>
                     
-                    <a href="/ru/indonesia/nusa-dua-kogda-luchshe-ekhat.html" style="display:inline-block;padding:6px 14px;margin:3px 4px;border:1.5px solid var(--vermillion);border-radius:14px;font-size:13px;color:var(--vermillion);text-decoration:none;font-weight:500;transition:all 0.2s;" onmouseover="this.style.background='var(--vermillion)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--vermillion)'">☀️ Сезоны и погода</a>
+                    <a href="/ru/indonesia/nusa-dua-kogda-luchshe-ekhat.html" class="city-btn">☀️ Сезоны и погода</a>
                     
                     </div>
                 </div>
-            </a>
+            </div>
             
         </div>
     </div>
