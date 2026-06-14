@@ -97,7 +97,7 @@
         <div style="background:#fff;padding:28px;border-radius:16px;border-top:3px solid var(--vermillion);">
             <div style="font-size:32px;margin-bottom:8px;">{{ emoji }}</div>
             <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;">{{ title }}</h3>
-            <p style="font-size:15px;color:var(--vermillion);font-weight:600;margin-bottom:10px;">{{ temp }}</p>
+            <p style="font-size:15px;color:var(--teal);font-weight:600;margin-bottom:10px;">{{ temp }}</p>
             <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">{{ desc }}</p>
         </div>
         {% endfor %}
@@ -141,6 +141,12 @@
         {% endif %}
     </div>
 </section>
+<!-- BOOST CTA for China -->
+<div style="max-width:800px;margin:20px auto 0;padding:24px;background:var(--bg);border-radius:16px;text-align:center;">
+    <p style="font-size:15px;font-weight:600;color:var(--ink);margin-bottom:12px;">{{ "Too complicated? We handle everything for you." if lang == "en" else "Сложно? Мы всё сделаем за вас." }}</p>
+    <p style="font-size:13px;color:var(--meta);margin-bottom:16px;">{{ "QR codes, documents, hotel booking — just tell us your dates." if lang == "en" else "QR-коды, документы, бронь отеля — назовите даты." }}</p>
+    <a href="#agent" class="btn-cta" style="font-size:14px;padding:12px 28px;">{{ "Get help from Valentina →" if lang == "en" else "Помощь Валентины →" }}</a>
+</div>
 {% endif %}
 
 {% if country.slug == "maldives" %}
@@ -179,6 +185,12 @@
         {% endif %}
     </div>
 </section>
+<!-- BOOST CTA for Maldives -->
+<div style="max-width:800px;margin:-40px auto 60px;padding:24px;background:var(--bg);border-radius:16px;text-align:center;">
+    <p style="font-size:15px;font-weight:600;color:var(--ink);margin-bottom:12px;">{{ "Need help with IMUGA or booking?" if lang == "en" else "Нужна помощь с IMUGA или бронью?" }}</p>
+    <p style="font-size:13px;color:var(--meta);margin-bottom:16px;">{{ "We handle forms, transfers, hotels — just share your dates." if lang == "en" else "Заполним формы, организуем трансфер, подберём отель." }}</p>
+    <a href="#agent" class="btn-cta" style="font-size:14px;padding:12px 28px;">{{ "Get help from Valentina →" if lang == "en" else "Помощь Валентины →" }}</a>
+</div>
 {% endif %}
 
 <!-- PRACTICAL -->
@@ -238,27 +250,33 @@
     </div>
 </section>
 
-<!-- TRUST BLOCK -->
+<!-- AGENT CTA -->
 <section class="section" id="agent" style="scroll-margin-top:80px;">
-    <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;padding:48px;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
-        <div style="text-align:center;margin-bottom:28px;">
-            <div style="font-size:48px;margin-bottom:12px;">✈️</div>
-            <h2 style="font-size:24px;font-weight:700;margin-bottom:4px;text-align:center;">{{ "TravelHub — Expert Guides" if lang == "en" else "TravelHub — эксперт по travel" }}</h2>
-            <p style="font-size:15px;color:var(--meta);text-align:center;">{{ "350+ guides • honest prices • 16+ partners" if lang == "en" else "350+ гайдов • честные цены • 16+ партнёров" }}</p>
-        </div>
-        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;">
-            {{ "We share honest guides and lifehacks — how to save on flights, find the best hotels, and stay connected with eSIM. All prices are approximate estimates based on typical market rates — always check current prices on partner booking sites. Need help planning? Contact us and we'll help arrange your perfect trip." if lang == "en" else "Мы делимся честными гайдами и лайфхаками — как сэкономить на билетах, найти лучший отель и оставаться на связи с eSIM. Все цены ориентировочные — всегда проверяйте актуальные на сайтах партнёров. Нужна помощь в организации? Свяжитесь с нами — поможем спланировать идеальную поездку." }}
-        </p>
-        <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
-                <input type="tel" name="phone" placeholder="{{ 'Phone *' if lang == 'en' else 'Телефон *' }}" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+    <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+            <div style="padding:40px;">
+                <img src="{{ root }}/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Valentina" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--teal);margin-bottom:12px;">
+                <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;color:var(--ink);">{{ "Valentina Turkova" if lang == "en" else "Валентина Туркова" }}</h3>
+                <p style="font-size:14px;color:var(--meta);margin-bottom:16px;">{{ "Personal travel expert" if lang == "en" else "Персональный travel-эксперт" }}</p>
+                <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
+                    <li style="font-size:14px;color:var(--charcoal);">✅ {{ "Hotel selection & booking" if lang == "en" else "Подбор и бронь отелей" }}</li>
+                    <li style="font-size:14px;color:var(--charcoal);">✅ {{ "Full trip itinerary" if lang == "en" else "Полный маршрут" }}</li>
+                    <li style="font-size:14px;color:var(--charcoal);">✅ {{ "Visa, QR codes, eSIM" if lang == "en" else "Виза, QR-коды, eSIM" }}</li>
+                    <li style="font-size:14px;color:var(--charcoal);">✅ {{ "24/7 support during trip" if lang == "en" else "Поддержка 24/7" }}</li>
+                </ul>
             </div>
-            <textarea name="message" rows="2" placeholder="{{ 'Destination, dates, budget...' if lang == 'en' else 'Куда, даты, бюджет...' }}" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;"></textarea>
-            <input type="hidden" name="destination" value="{{ cname_nom }}">
-            <input type="hidden" name="_subject" value="{{ 'Tour request: ' + cname_nom if lang == 'en' else 'Заявка на тур в ' + cname_nom }} | TravelHub">
-            <button type="submit" class="btn-cta" style="margin-top:12px;cursor:pointer;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</button>
-        </form>
+            <div style="background:var(--bg);padding:40px;">
+                <h4 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--ink);">{{ "Need help planning?" if lang == "en" else "Нужна помощь?" }}</h4>
+                <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
+                    <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;">
+                    <input type="tel" name="phone" placeholder="{{ 'Phone *' if lang == 'en' else 'Телефон *' }}" required style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;">
+                    <textarea name="message" rows="2" placeholder="{{ 'Dates, budget, wishes...' if lang == 'en' else 'Даты, бюджет, пожелания...' }}" style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;"></textarea>
+                    <input type="hidden" name="destination" value="{{ cname_nom }}">
+                    <input type="hidden" name="_subject" value="{{ 'Trip request: ' + cname_nom if lang == 'en' else 'Заявка: ' + cname_nom }}">
+                    <button type="submit" class="btn-cta" style="margin-top:8px;cursor:pointer;width:100%;font-size:14px;padding:12px;">{{ "Get help from Valentina →" if lang == "en" else "Помощь Валентины →" }}</button>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 
