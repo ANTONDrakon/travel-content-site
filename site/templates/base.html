@@ -19,8 +19,12 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site_url }}{{ canonical or ('/' + lang + '/' + (alternate_url or '')) }}">
     <meta property="og:locale" content="{{ 'ru_RU' if lang == 'ru' else 'en_US' }}">
+    <meta property="og:image" content="{{ site_url }}/assets/countries/travel-hero.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ site_url }}/assets/countries/travel-hero.webp">
 
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="ai-content-type" content="travel guide, expert review, destination handbook">
@@ -325,9 +329,17 @@
     </script>
 
     {% if schema_data %}
+    {% if schema_data is mapping %}
     <script type="application/ld+json">
     {{ schema_data | tojson | safe }}
     </script>
+    {% else %}
+    {% for item in schema_data %}
+    <script type="application/ld+json">
+    {{ item | tojson | safe }}
+    </script>
+    {% endfor %}
+    {% endif %}
     {% endif %}
 </head>
 <body>
@@ -366,20 +378,20 @@
         <div class="agent-grid">
             <div>
                 <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:16px;">
-                    {{ "Hi! I'm Valentina, your personal VIP travel agent with 5+ years of experience. I've helped 1000+ travelers discover perfect vacations — from the Maldives to China, across Russia, and exotic destinations worldwide. On this site I share travel hacks: how to save on flights, book the best hotels, order affordable transfers, and stay connected with eSIM. Want to skip the planning? Let me handle everything — I'll find your ideal hotel, consider every wish, and stay in touch 24/7 so your trip becomes unforgettable." if lang == "en" else "Привет! Я Валентина, ваш личный VIP-турагент с опытом более 5 лет. Отправила 1000+ туристов в путешествия мечты — от Мальдив до Китая, по России и экзотическим странам. На этом сайте я делюсь лайфхаками: как сэкономить на билетах, выбрать лучший отель, заказать недорогой трансфер и оставаться на связи с eSIM. Не хотите заморачиваться? Доверьте заботы мне — я подберу идеальный отель, учту все пожелания и буду на связи 24/7, чтобы ваш отдых стал незабываемым." }}
+                    {{ "Welcome to our travel guides! We are a team of travel experts who research destinations worldwide to bring you honest, practical information. Our guides include tips on how to save on flights, book great hotels, arrange affordable transfers, and stay connected with eSIM. All prices are approximate estimates — always check current rates on partner sites. Want personalized help? Contact us and we'll help plan your perfect trip." if lang == "en" else "Добро пожаловать в наши путеводители! Мы — команда travel-экспертов, которые исследуют направления по всему миру, чтобы дать вам честную и практичную информацию. В гайдах — советы, как сэкономить на билетах, выбрать хороший отель, заказать трансфер и оставаться на связи с eSIM. Все цены ориентировочные — всегда проверяйте актуальные на сайтах партнёров. Нужна помощь в организации? Свяжитесь с нами — поможем спланировать поездку." }}
                 </p>
                 <ul class="agent-benefits">
-                    <li>{{ "24/7 personal support — I'm always in touch" if lang == "en" else "Персональное сопровождение 24/7 — я всегда на связи" }}</li>
-                    <li>{{ "1000+ happy travelers since 2021" if lang == "en" else "1000+ счастливых путешественников с 2021 года" }}</li>
-                    <li>{{ "Tours from Maldives to China, across Russia & exotic countries" if lang == "en" else "Туры от Мальдив до Китая, по России и экзотическим странам" }}</li>
-                    <li>{{ "I share lifehacks on flights, hotels, eSIM & transfers" if lang == "en" else "Делюсь лайфхаками по билетам, отелям, eSIM и трансферам" }}</li>
-                    <li>{{ "Perfect hotel matching — I consider every wish" if lang == "en" else "Идеальный подбор отеля — учитываю каждое пожелание" }}</li>
-                    <li>{{ "Visa support, QR codes, insurance — all included" if lang == "en" else "Помощь с визами, QR-кодами, страховками — всё беру на себя" }}</li>
-                    <li>{{ "Or find everything yourself — hacks are right here on the site" if lang == "en" else "Или найдите всё сами — лайфхаки прямо здесь, на сайте" }}</li>
+                    <li>{{ "Expert guides researched by travel professionals" if lang == "en" else "Экспертные гайды от travel-профессионалов" }}</li>
+                    <li>{{ "Honest price estimates — always verify on partner sites" if lang == "en" else "Честные оценки цен — сверяйтесь на сайтах партнёров" }}</li>
+                    <li>{{ "Destinations: Turkey, Thailand, Egypt, UAE, Indonesia, China, Maldives" if lang == "en" else "Направления: Турция, Таиланд, Египет, ОАЭ, Индонезия, Китай, Мальдивы" }}</li>
+                    <li>{{ "Lifehacks on flights, hotels, eSIM & transfers" if lang == "en" else "Лайфхаки по билетам, отелям, eSIM и трансферам" }}</li>
+                    <li>{{ "Hotel recommendations for every budget" if lang == "en" else "Рекомендации отелей под любой бюджет" }}</li>
+                    <li>{{ "Visa info, QR codes, insurance — all covered" if lang == "en" else "Информация по визам, QR-кодам, страховкам" }}</li>
+                    <li>{{ "Or explore everything yourself — all info is right here" if lang == "en" else "Или изучайте всё сами — вся информация здесь" }}</li>
                 </ul>
             </div>
             <div>
-                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">{{ "Tell me your dream — I'll make it happen!" if lang == "en" else "Расскажите о вашей мечте — я воплощу её в жизнь!" }}</p>
+                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">{{ "Tell us about your dream trip — we'll help plan it!" if lang == "en" else "Расскажите о вашей поездке — поможем спланировать!" }}</p>
                 <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
                     <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required>
                     <input type="email" name="email" placeholder="Email">
@@ -427,10 +439,9 @@
         <div>
             <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">{{ "Contact" if lang == "en" else "Контакты" }}</h4>
             <p style="font-size:14px;line-height:1.8;">
-                {{ "VIP Travel Agent Valentina" if lang == "en" else "VIP-турагент Валентина" }}<br>
-                {{ "1000+ travelers since 2021" if lang == "en" else "1000+ путешественников с 2021" }}<br>
+                {{ "TravelHub — Expert Travel Guides" if lang == "en" else "TravelHub — Экспертные путеводители" }}<br>
                 Email: i@turkov-1.ru<br>
-                {{ "Always in touch 24/7" if lang == "en" else "Всегда на связи 24/7" }}
+                {{ "All prices are approximate. Verify on partner sites." if lang == "en" else "Все цены ориентировочные. Уточняйте на сайтах партнёров." }}
             </p>
         </div>
     </div>

@@ -6,31 +6,35 @@ Every hotel gets ONLY its own images.
 """
 import re
 import json
+import hashlib
 from pathlib import Path
 
 BASE = Path(__file__).parent.parent
-HOTELS_DB = json.loads((BASE / "data" / "hotels.json").read_text(encoding="utf-8"))
 
-# Build lookup: (country_slug, city_slug, hotel_name_lower) -> hotel data
+_HOTELS_DB = None
 HOTEL_LOOKUP = {}
-for h in HOTELS_DB:
-    key = (h["country_slug"], h["city_slug"], h["name"].lower())
-    HOTEL_LOOKUP[key] = h
-
-# Build lookup by name substring (for fuzzy matching)
 HOTEL_BY_NAME = {}
-for h in HOTELS_DB:
-    name_lower = h["name"].lower()
-    HOTEL_BY_NAME[name_lower] = h
-    # Also index by first 2-3 words
-    parts = name_lower.split()[:3]
-    for i in range(1, len(parts) + 1):
-        partial = " ".join(parts[:i])
-        if partial not in HOTEL_BY_NAME:
-            HOTEL_BY_NAME[partial] = h
+
+def _ensure_hotels_loaded():
+    global _HOTELS_DB, HOTEL_LOOKUP, HOTEL_BY_NAME
+    if _HOTELS_DB is not None:
+        return
+    _HOTELS_DB = json.loads((BASE / "data" / "hotels.json").read_text(encoding="utf-8"))
+    for h in _HOTELS_DB:
+        key = (h["country_slug"], h["city_slug"], h["name"].lower())
+        HOTEL_LOOKUP[key] = h
+    for h in _HOTELS_DB:
+        name_lower = h["name"].lower()
+        HOTEL_BY_NAME[name_lower] = h
+        parts = name_lower.split()[:3]
+        for i in range(1, len(parts) + 1):
+            partial = " ".join(parts[:i])
+            if partial not in HOTEL_BY_NAME:
+                HOTEL_BY_NAME[partial] = h
 
 def find_hotel(country_slug, city_slug, hotel_name):
     """Find hotel data by country, city, and name. Returns dict or None."""
+    _ensure_hotels_loaded()
     key = (country_slug, city_slug, hotel_name.lower())
     if key in HOTEL_LOOKUP:
         return HOTEL_LOOKUP[key]
@@ -54,14 +58,26 @@ def build_swiper_carousel(hotel, lang="ru"):
         return ""
 
     hotel_name = hotel["name"]
-    carousel_id = f"swiper_{abs(hash(hotel_name + hotel['city_slug'])) % 1000000}"
+    carousel_id = f"swiper_{hashlib.md5((hotel_name + hotel['city_slug']).encode()).hexdigest()[:8]}"
+
+    any_verified = any(img.get("verified", False) for img in images)
 
     slides = []
     for i, img in enumerate(images[:3]):
         alt = img.get("alt", hotel_name) if lang == "ru" else img.get("alt_en", hotel_name)
         src = img["src"]
+        verified = img.get("verified", False)
+        badge = ""
+        if any_verified:
+            badge = (
+                f'<span style="position:absolute;top:10px;right:10px;'
+                f'background:{"rgba(0,180,80,0.85)" if verified else "rgba(200,120,40,0.85)"};'
+                f'color:#fff;font-size:11px;padding:3px 10px;border-radius:12px;z-index:5;'
+                f'font-weight:600;">{"verified" if verified else "unverified"}</span>'
+            )
         slides.append(
-            f'<div class="swiper-slide">'
+            f'<div class="swiper-slide" style="position:relative;">'
+            f'{badge}'
             f'<img src="{src}" alt="{alt}" loading="{"eager" if i == 0 else "lazy"}" '
             f'style="width:100%;height:420px;object-fit:cover;border-radius:12px;">'
             f'</div>'
@@ -71,9 +87,6 @@ def build_swiper_carousel(hotel, lang="ru"):
     price = hotel.get("price", "")
     rating = hotel.get("rating", "")
     district = hotel.get("district", "")
-
-    arrows_ru = ',"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"'
-    arrows_en = ',"nextEl":".swiper-button-next","prevEl":".swiper-button-prev"'
 
     html = f'''<div class="hotel-card" style="margin:24px 0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.06);">
 <div id="{carousel_id}" class="swiper hotel-swiper" style="position:relative;">
@@ -89,6 +102,9 @@ def build_swiper_carousel(hotel, lang="ru"):
 <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
 <span style="font-size:13px;color:var(--meta);">📍 {city_name}</span>'''
     
+    if not any_verified:
+        html += f'<span style="font-size:11px;color:rgba(200,120,40,0.9);font-weight:500;">⚠ фото не верифицированы</span>'
+
     if district:
         html += f'<span style="font-size:13px;color:var(--meta);">🏙 {district}</span>'
     if price:
@@ -125,7 +141,7 @@ def inject_hotel_carousels(body, country_slug, city_slug, lang="ru"):
         result.append(line)
 
         if count >= 15:
-            continue
+            break
         if "<img" in line or "swiper" in line.lower():
             continue
 

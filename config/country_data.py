@@ -1,3 +1,16 @@
+AGENT_PHOTO = "/assets/agent/photo_2026-06-06_00-51-06.webp"
+AGENT_PHOTOS = [
+    "/assets/agent/photo_2026-06-06_00-51-06.webp",
+    "/assets/agent/photo_2026-06-06_00-51-10.webp",
+    "/assets/agent/photo_2026-06-06_00-51-17.webp",
+    "/assets/agent/photo_2026-06-06_00-51-44.webp",
+    "/assets/agent/photo_2026-06-06_00-51-49.webp",
+    "/assets/agent/photo_2026-06-06_00-51-53.webp",
+    "/assets/agent/photo_2026-06-06_00-51-58.webp",
+    "/assets/agent/photo_2026-06-06_00-52-01.webp",
+    "/assets/agent/photo_2026-06-06_00-52-05.webp",
+]
+
 COUNTRY_DATA = {
     "turkey": {
         "hero_subtitle_ru": "Древняя история, лазурное побережье и восточное гостеприимство. От шумных базаров Стамбула до воздушных шаров Каппадокии.",
@@ -602,8 +615,8 @@ AGENT_PHOTOS = [
     "/assets/agent/photo_2026-06-06_00-52-05.webp",
 ]
 
-AGENT_NAME = "Туркова Валентина"
-AGENT_NAME_EN = "Valentina Turkova"
+AGENT_NAME = "TravelHub Experts"
+AGENT_NAME_EN = "TravelHub Experts"
 AGENT_EMAIL = "i@turkov-1.ru"
-AGENT_DESC_RU = "Ваш личный VIP-турагент. Более 5 лет опыта. Отправила 1000+ туристов от Мальдив до Китая. Делюсь лайфхаками: как сэкономить на билетах, отелях, трансферах и eSIM. Могу взять все заботы на себя — подобрать тур, забронировать, быть на связи 24/7."
-AGENT_DESC_EN = "Your personal VIP travel agent. 5+ years experience. 1000+ tourists sent from Maldives to China. I share travel hacks on flights, hotels, transfers & eSIM. Or let me handle everything — I'll find the perfect trip and stay connected 24/7."
+AGENT_DESC_RU = "Команда TravelHub. Мы исследуем направления по всему миру и делимся честными гайдами. Помогаем путешественникам экономить на билетах, выбирать лучшие отели и уверенно планировать поездки. Все цены ориентировочные — всегда сверяйтесь с сайтами партнёров. Нужна помощь? Свяжитесь с нами — поможем организовать идеальный отдых."
+AGENT_DESC_EN = "TravelHub team: We research destinations worldwide and share honest travel guides. We help travelers save on flights, choose the best hotels, and plan confidently. All prices are approximate — always check rates on partner sites. Need help? Contact us — we'll help you plan the perfect trip."

@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-DOCS = Path(__file__).parent / "docs"
+DOCS = Path(__file__).parent.parent / "docs"
 
 def check_links(path):
     issues = []

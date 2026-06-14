@@ -23,13 +23,6 @@ DESTINATIONS = {
                 "airport_codes": ["AYT"],
                 "lat": 36.8969, "lon": 30.7133,
             },
-            "alanya": {
-                "name_ru": "Аланья",
-                "name_en": "Alanya",
-                "slug": "alanya",
-                "airport_codes": ["GZP"],
-                "lat": 36.5440, "lon": 31.9954,
-            },
             "bodrum": {
                 "name_ru": "Бодрум",
                 "name_en": "Bodrum",

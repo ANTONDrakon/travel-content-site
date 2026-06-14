@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-DOCS = Path(__file__).parent / "docs"
+DOCS = Path(__file__).parent.parent / "docs"
 
 def check_seo(path):
     issues = []
@@ -41,18 +41,22 @@ def check_seo(path):
 def run():
     print("\n=== COPY SEO AGENT ===\n")
     total = 0
-    for f in DOCS.rglob("*putevoditel*.html"):
-        issues = check_seo(f)
-        if issues:
-            rel = f.relative_to(DOCS)
-            print(f"\n[{rel}]")
-            for i in issues: print(f"  {i}"); total += 1
-    for f in DOCS.rglob("*travel-guide*.html"):
-        issues = check_seo(f)
-        if issues:
-            rel = f.relative_to(DOCS)
-            print(f"\n[{rel}]")
-            for i in issues: print(f"  {i}"); total += 1
+    patterns = ["*putevoditel*", "*travel-guide*", "*oteli*", "*hotels*",
+                "*aviabilety*", "*cheap-flights*", "*dostoprimechatelnosti*",
+                "*things-to-do*", "*kogda-luchshe-ekhat*", "*best-time-to-visit*"]
+    seen = set()
+    for pat in patterns:
+        for f in DOCS.rglob(pat):
+            if f.suffix != ".html" or f in seen:
+                continue
+            seen.add(f)
+            issues = check_seo(f)
+            if issues:
+                rel = f.relative_to(DOCS)
+                print(f"\n[{rel}]")
+                for i in issues:
+                    print(f"  {i}")
+                    total += 1
     print(f"\nTotal SEO issues: {total}")
     return total
 

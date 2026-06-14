@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-DOCS = Path(__file__).parent / "docs"
+DOCS = Path(__file__).parent.parent / "docs"
 
 CITY_KEYWORDS = {
     "istanbul": ["istanbul", "стамбул", "мечеть", "босфор", "султанахмет"],
@@ -25,15 +25,6 @@ def check_image_context(path):
     for alt in imgs:
         if "Unsplash" in alt or "Photo" in alt or "photo" in alt:
             issues.append(f"MISMATCH_ALT: generic alt text '{alt[:60]}'")
-    
-    rel_path = str(path.relative_to(DOCS)).lower()
-    for city, keywords in CITY_KEYWORDS.items():
-        if city in rel_path:
-            for kw in keywords:
-                if kw.lower() in rel_path:
-                    break
-            else:
-                pass
     
     return issues
 

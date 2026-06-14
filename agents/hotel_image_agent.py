@@ -491,7 +491,9 @@ HOSTEL_PHOTOS = [
 
 
 class HotelPhotoAgent:
-    """Agent that finds and manages hotel photos with carousel generation."""
+    """Agent that finds and manages hotel photos with carousel generation.
+    Uses HotelPhotoFetcher as primary backend for real photos.
+    """
 
     def __init__(self, cache_dir: Optional[Path] = None):
         self.cache_dir = cache_dir or ASSETS_DIR
@@ -514,35 +516,52 @@ class HotelPhotoAgent:
     def _cache_key(self, name: str) -> str:
         return hashlib.md5(name.lower().strip().encode()).hexdigest()[:12]
 
-    def find_photos(self, hotel_name: str, max_photos: int = 3) -> list:
+    def find_photos(self, hotel_name: str, max_photos: int = 3,
+                    city_slug: str = "", country_slug: str = "") -> list:
         """
         Find photo URLs for a hotel. Returns list of dicts:
-        [{"url": "...", "source": "chain_db"|"category"|"unsplash", "verified": True|False}, ...]
-        """
-        photos = []
-        name_lower = hotel_name.lower().strip()
+        [{"url": "...", "source": "...", "verified": True|False, "brand": "..."}, ...]
 
-        # STEP 1: Check known chain database
+        Priority:
+        1. HotelPhotoFetcher (real photos from Hotellook / official sources)
+        2. Chain database (branded Unsplash, marked unverified)
+        3. Category fallback (clearly marked unverified)
+        """
+        name_lower = hotel_name.lower().strip()
+        photos = []
+
+        # STEP 1: Try HotelPhotoFetcher for real photos
+        if city_slug and country_slug:
+            try:
+                from agents.hotel_photo_fetcher import HotelPhotoFetcher
+                fetcher = HotelPhotoFetcher()
+                result = fetcher.find_photos(hotel_name, city_slug, country_slug, max_photos)
+                if result["photos"]:
+                    photos = result["photos"]
+                    if any(p.get("verified") for p in photos):
+                        self.verified.add(hotel_name)
+                        return photos[:max_photos]
+            except Exception:
+                pass
+
+        # STEP 2: Check known chain database (legacy, marked unverified)
         for brand, urls in CHAIN_PHOTOS.items():
             if brand.lower() in name_lower:
                 for url in urls[:max_photos]:
-                    photos.append({"url": url, "source": "chain_db", "verified": True, "brand": brand})
-                self.verified.add(hotel_name)
+                    photos.append({"url": url, "source": "chain_db", "verified": False, "brand": brand})
                 return photos[:max_photos]
 
-        # STEP 2: Check cache
+        # STEP 3: Check cache
         key = self._cache_key(hotel_name)
         if key in self.cache:
             cached = self.cache[key]
             if isinstance(cached, list) and cached:
-                self.verified.add(hotel_name)
                 return cached[:max_photos]
 
-        # STEP 3: Category-based fallback with sampling
+        # STEP 4: Category-based fallback (verified=False)
         photos = self._categorize_fallback(hotel_name, max_photos)
         self.missing.add(hotel_name)
 
-        # Cache the result
         self.cache[key] = photos
         self._save_cache()
 
@@ -631,7 +650,7 @@ class HotelPhotoAgent:
         if not photos:
             return ""
 
-        carousel_id = f"hc_{abs(hash(hotel_name)) % 1000000}"
+        carousel_id = f"hc_{hashlib.md5(hotel_name.encode()).hexdigest()[:8]}"
         html_parts = [
             f'<div id="{carousel_id}" class="hotel-carousel" '
             f'style="position:relative;margin:20px 0;border-radius:14px;overflow:hidden;background:var(--bg);box-shadow:0 2px 12px rgba(0,0,0,0.08);">'
@@ -643,8 +662,13 @@ class HotelPhotoAgent:
             verified_badge = ""
             if photo.get("verified"):
                 verified_badge = (
-                    f'<span style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.6);color:#fff;'
+                    f'<span style="position:absolute;top:8px;right:8px;background:rgba(0,180,80,0.85);color:#fff;'
                     f'font-size:10px;padding:2px 8px;border-radius:10px;">verified</span>'
+                )
+            else:
+                verified_badge = (
+                    f'<span style="position:absolute;top:8px;right:8px;background:rgba(200,120,40,0.85);color:#fff;'
+                    f'font-size:10px;padding:2px 8px;border-radius:10px;">unverified</span>'
                 )
             html_parts.append(
                 f'<div class="hotel-carousel-slide" style="display:{display};">'

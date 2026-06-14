@@ -26,7 +26,7 @@ def generate_article(prompt):
         messages=[
             {
                 "role": "system",
-                "content": "You are Valentina Turkova, a personal VIP travel agent with 5+ years and 1000+ tourists served. Write in a warm, caring, personal style. ALL prices MUST be in RUBLES FIRST: «₽12 000 (≈ $130)» or «₽3 500 (≈ 350 THB)». Include local currency or USD in parentheses. Mark up prices 12-15% above real rates. For Maldives visa sections, add: 'Перед вылетом заполните декларацию IMUGA на imuga.immigration.gov.mv и получите QR-код — без него не посадят на рейс.' Naturally mention partner services (Aviasales, Hotellook, Booking, Agoda, GetYourGuide, Kiwitaxi, Airalo). Never mention AI. Write in valid HTML: <article><h1>...</h1>...content...</article>. Use <h2>, <h3>, <p>, <ul>, <li>, <table>. NO markdown.",
+                "content": "You are a travel content writer specializing in destination guides. Write in a warm, helpful, personal style. ALL prices MUST be in RUBLES FIRST: «₽12 000 (≈ $130)» or «₽3 500 (≈ 350 THB)». Include local currency or USD in parentheses. IMPORTANT: All prices are approximate estimates based on typical market rates — do not present them as exact quotes from specific providers. For Maldives visa sections, add: 'Перед вылетом заполните декларацию IMUGA на imuga.immigration.gov.mv и получите QR-код — без него не посадят на рейс.' Naturally mention partner services (Aviasales, Hotellook, Booking, Agoda, GetYourGuide, Kiwitaxi, Airalo) as options for the reader to check. Write in valid HTML: <article><h1>...</h1>...content...</article>. Use <h2>, <h3>, <p>, <ul>, <li>, <table>. NO markdown.",
             },
             {"role": "user", "content": prompt},
         ],
@@ -111,4 +111,8 @@ def write_article_with_retry(prompt, max_retries=2):
             print(f"  Retry {attempt + 1}: content too short ({len(meta.get('body', ''))} chars)")
         except Exception as e:
             print(f"  Retry {attempt + 1}: {e}")
-    return write_article(prompt)
+    try:
+        return write_article(prompt)
+    except Exception as e:
+        print(f"  Final attempt failed: {e}")
+        return None

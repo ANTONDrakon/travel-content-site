@@ -15,6 +15,7 @@ def replace_placeholders(body, city_name_en, lang):
         "{flights_placeholder}": AFFILIATE_HTML["flights_en" if lang == "en" else "flights"].format(
             url=flights_link(destination=city_name_en.upper()[:3]), city=city_name_en
         ),
+        # TODO: use actual IATA codes from cities.json instead of first 3 chars
         "{tours_placeholder}": AFFILIATE_HTML["tours_en" if lang == "en" else "tours"].format(
             url=tours_link(city_name_en), city=city_name_en
         ),

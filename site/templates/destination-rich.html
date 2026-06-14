@@ -23,8 +23,8 @@
             <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Find a Tour →" if lang == "en" else "Подобрать тур →" }}</a>
             {% if data %}
             <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);padding:8px 16px;border-radius:50px;">
-                <img src="{{ agent_photo }}" alt="Валентина" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
-                <span style="color:#fff;font-size:14px;font-weight:500;">{{ "Valentina Turkova" if lang == "en" else "Туркова Валентина" }}<br><span style="font-size:12px;opacity:0.8;">{{ "Expert Travel Agent" if lang == "en" else "Турагент-эксперт" }}</span></span>
+                <img src="{{ agent_photo }}" alt="TravelHub Expert" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
+                <span style="color:#fff;font-size:14px;font-weight:500;">{{ "TravelHub Expert" if lang == "en" else "TravelHub — эксперт" }}<br><span style="font-size:12px;opacity:0.8;">{{ "Travel Guide Team" if lang == "en" else "Команда travel-гидов" }}</span></span>
             </div>
             {% endif %}
         </div>
@@ -95,9 +95,46 @@
 {% endif %}
 </section>
 
-{% if country.slug == "maldives" and lang == "ru" %}
+{% if country.slug == "china" %}
 <section class="section" style="background:#fff;max-width:100%;">
     <div style="max-width:800px;margin:0 auto;">
+        {% if lang == "ru" %}
+        <h2 style="text-align:left;">{{ "How to Get a QR Code for China" if lang == "en" else "Как получить QR-код для Китая" }}</h2>
+        <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
+            <p><strong>Пошаговая инструкция:</strong></p>
+            <ol style="padding-left:20px;">
+                <li>Установите <strong>WeChat</strong> или <strong>Alipay</strong> на смартфон</li>
+                <li>Зарегистрируйтесь по номеру телефона — российский номер подходит (SMS приходит)</li>
+                <li>В WeChat найдите мини-программу "Health Kit", заполните данные</li>
+                <li>По прилёте в Китай покажите QR-код на паспортном контроле</li>
+                <li>QR-код нужно обновлять ежедневно — приложение напомнит</li>
+                <li>Сохраните скриншот QR-кода на телефоне (на случай отсутствия интернета)</li>
+                <li><strong>Важно:</strong> без QR-кода не пустят в общественные места, рестораны, ТЦ</li>
+            </ol>
+        </div>
+        {% else %}
+        <h2 style="text-align:left;">How to Get a QR Code for China</h2>
+        <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
+            <p><strong>Step-by-step guide:</strong></p>
+            <ol style="padding-left:20px;">
+                <li>Install <strong>WeChat</strong> or <strong>Alipay</strong> on your smartphone</li>
+                <li>Register with your phone number — your Russian number works (SMS will arrive)</li>
+                <li>In WeChat: search for "Health Kit" mini-program, fill out your data</li>
+                <li>Upon arrival in China, show the QR code at passport control</li>
+                <li>QR code must be updated daily — the app will remind you</li>
+                <li>Keep a screenshot of the QR code on your phone (in case of no internet)</li>
+                <li><strong>Important:</strong> without a QR code, you will not be allowed into public places, restaurants, or shopping malls</li>
+            </ol>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+{% if country.slug == "maldives" %}
+<section class="section" style="background:#fff;max-width:100%;">
+    <div style="max-width:800px;margin:0 auto;">
+        {% if lang == "ru" %}
         <h2 style="text-align:left;">📱 Как заполнить декларацию и получить QR-код для Мальдив</h2>
         <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
             <p><strong>Пошаговая инструкция:</strong></p>
@@ -109,9 +146,25 @@
                 <li>QR-код нужно показать на паспортном контроле по прилёте</li>
                 <li>Также заполните форму на выезд за 96 часов до обратного рейса</li>
                 <li><strong>Важно:</strong> без заполненной IMUGA вас не посадят на рейс в Мальдивы</li>
-                <li>Если не получается заполнить самостоятельно — я помогаю своим туристам с оформлением</li>
+                <li>Если не получается заполнить самостоятельно — обратитесь к нашему турагенту, мы поможем с оформлением</li>
             </ol>
         </div>
+        {% else %}
+        <h2 style="text-align:left;">📱 IMUGA Declaration & QR Code for Maldives</h2>
+        <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
+            <p><strong>Step-by-step guide:</strong></p>
+            <ol style="padding-left:20px;">
+                <li>Fill out the IMUGA form at <strong>imuga.immigration.gov.mv</strong> within 96 hours before departure</li>
+                <li>Enter your passport details, flight info, and accommodation address in Maldives</li>
+                <li>Upload a photo of your passport and a selfie</li>
+                <li>You will receive a <strong>QR code</strong> — save a screenshot on your phone</li>
+                <li>Show the QR code at passport control upon arrival</li>
+                <li>Also fill out the departure form within 96 hours before your return flight</li>
+                <li><strong>Important:</strong> without a completed IMUGA, you will not be allowed to board your flight to Maldives</li>
+                <li>If you need help filling it out — our travel agent can assist you with the process</li>
+            </ol>
+        </div>
+        {% endif %}
     </div>
 </section>
 {% endif %}
@@ -179,16 +232,16 @@
         <div style="display:flex;align-items:center;gap:24px;margin-bottom:28px;flex-wrap:wrap;">
             <div class="agent-carousel" style="width:160px;height:160px;border-radius:50%;overflow:hidden;border:3px solid var(--vermillion);position:relative;flex-shrink:0;">
                 {% for photo in agent_photos %}
-                <img src="{{ photo }}" alt="Valentina" class="agent-carousel-img" loading="{{ 'eager' if loop.first else 'lazy' }}" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:{{ '1' if loop.first else '0' }};transition:opacity 0.8s;">
+                <img src="{{ photo }}" alt="TravelHub Expert" class="agent-carousel-img" loading="{{ 'eager' if loop.first else 'lazy' }}" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:{{ '1' if loop.first else '0' }};transition:opacity 0.8s;">
                 {% endfor %}
             </div>
             <div>
-                <h2 style="font-size:24px;font-weight:700;margin-bottom:4px;text-align:left;">{{ "Valentina Turkova" if lang == "en" else "Туркова Валентина" }}</h2>
-                <p style="font-size:15px;color:var(--meta);">{{ "Personal VIP travel agent • 1000+ travelers since 2021" if lang == "en" else "Личный VIP-турагент • 1000+ путешественников с 2021" }}</p>
+                <h2 style="font-size:24px;font-weight:700;margin-bottom:4px;text-align:left;">{{ "TravelHub Guides" if lang == "en" else "TravelHub — путеводители" }}</h2>
+                <p style="font-size:15px;color:var(--meta);">{{ "Expert travel guides • prices are approximate" if lang == "en" else "Экспертные путеводители • цены ориентировочные" }}</p>
             </div>
         </div>
         <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;">
-            {{ "I share honest guides and lifehacks — how to save on flights, find the best hotels, and stay connected with eSIM. All prices are approximate. Want to skip the planning? Tell me your wish — I'll handle every detail and stay in touch 24/7." if lang == "en" else "Я делюсь честными гайдами и лайфхаками — как сэкономить на билетах, найти лучший отель и оставаться на связи с eSIM. Все цены ориентировочные. Не хотите планировать сами? Расскажите о ваших пожеланиях — я всё организую и буду на связи 24/7, а вы просто наслаждайтесь." }}
+            {{ "We share honest guides and lifehacks — how to save on flights, find the best hotels, and stay connected with eSIM. All prices are approximate estimates based on typical market rates — always check current prices on partner booking sites. Need help planning? Contact us and we'll help arrange your perfect trip." if lang == "en" else "Мы делимся честными гайдами и лайфхаками — как сэкономить на билетах, найти лучший отель и оставаться на связи с eSIM. Все цены ориентировочные — всегда проверяйте актуальные на сайтах партнёров. Нужна помощь в организации? Свяжитесь с нами — поможем спланировать идеальную поездку." }}
         </p>
         <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">

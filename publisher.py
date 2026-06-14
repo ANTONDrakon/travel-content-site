@@ -3,13 +3,12 @@ import re
 import json
 from pathlib import Path
 
-MARKER = "736226"
+MARKER = os.getenv("TRAVELPAYOUTS_MARKER", "736226")
 
 SERVICES = [
     ("Aviasales", f"https://tp.media/click?shmarker={MARKER}&promo_id=3770&source_type=link&type=click&campaign_id=100&trs=aviasales"),
     ("Hotellook", f"https://tp.media/click?shmarker={MARKER}&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=hotellook"),
     ("Booking.com", f"https://tp.media/click?shmarker={MARKER}&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking"),
-    ("Booking", f"https://tp.media/click?shmarker={MARKER}&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking"),
     ("Agoda", f"https://tp.media/click?shmarker={MARKER}&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda"),
     ("GetYourGuide", f"https://tp.media/click?shmarker={MARKER}&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide"),
     ("Viator", f"https://tp.media/click?shmarker={MARKER}&promo_id=3775&source_type=link&type=click&campaign_id=107&trs=viator"),
@@ -34,8 +33,39 @@ def linkify_services(body):
             body = pattern.sub(replacement, body, count=1)
     return body
 
-# June 2026 approximate exchange rates (to RUB)
-RATES_TO_RUB = {"$": 95, "€": 103, "₺": 3.5, "฿": 2.7, "¥": 13.3, "AED": 25.9, "EGP": 1.9, "IDR": 0.006, "MVR": 6.2}
+# Exchange rates to RUB — auto-fetched from API, with fallback defaults
+DEFAULT_RATES = {"$": 95, "€": 103, "₺": 3.5, "฿": 2.7, "¥": 13.3, "AED": 25.9, "EGP": 1.9, "IDR": 0.006, "MVR": 6.2}
+
+def _fetch_exchange_rates():
+    """Fetch live exchange rates to RUB from free API. Falls back to defaults."""
+    import urllib.request, json as _json
+    try:
+        # Try open.er-api.com (free, no key required)
+        url = "https://api.exchangerate-api.com/v4/latest/USD"
+        req = urllib.request.Request(url, headers={"User-Agent": "TravelHub/1.0"})
+        resp = urllib.request.urlopen(req, timeout=10)
+        data = _json.loads(resp.read().decode())
+        usd_base = data.get("rates", {})
+        # Get RUB per USD
+        rub_per_usd = usd_base.get("RUB", DEFAULT_RATES["$"])
+        rates = {
+            "$": rub_per_usd,
+            "€": rub_per_usd / usd_base.get("EUR", 0.92) if usd_base.get("EUR") else DEFAULT_RATES["€"],
+            "₺": rub_per_usd / usd_base.get("TRY", 31.0) if usd_base.get("TRY") else DEFAULT_RATES["₺"],
+            "฿": rub_per_usd / usd_base.get("THB", 35.0) if usd_base.get("THB") else DEFAULT_RATES["฿"],
+            "¥": rub_per_usd / usd_base.get("CNY", 7.2) if usd_base.get("CNY") else DEFAULT_RATES["¥"],
+            "AED": rub_per_usd / usd_base.get("AED", 3.67) if usd_base.get("AED") else DEFAULT_RATES["AED"],
+            "EGP": rub_per_usd / usd_base.get("EGP", 30.0) if usd_base.get("EGP") else DEFAULT_RATES["EGP"],
+            "IDR": rub_per_usd / usd_base.get("IDR", 16000.0) if usd_base.get("IDR") else DEFAULT_RATES["IDR"],
+            "MVR": rub_per_usd / usd_base.get("MVR", 15.42) if usd_base.get("MVR") else DEFAULT_RATES["MVR"],
+        }
+        print(f"  Exchange rates fetched live: $1 = {rub_per_usd} RUB")
+        return rates
+    except Exception as e:
+        print(f"  Warning: could not fetch live rates ({e}), using defaults")
+        return dict(DEFAULT_RATES)
+
+RATES_TO_RUB = _fetch_exchange_rates()
 
 def _clean_amount(s):
     return s.strip().replace(",", "").replace(" ", "")
@@ -68,7 +98,7 @@ def convert_prices_to_rub(body, lang="ru"):
 
         # Only convert if NOT already in a (parentheses) — skip pre-converted
         for sym in ["$", "€", "₺", "฿", "¥"]:
-            escaped = "\\" + sym if sym in "₺฿¥" else sym
+            escaped = re.escape(sym)
             body = re.sub(r'(?<![\(\d])' + escaped + r'(\d[\d,.]*(?:\s*\d{3})*)', _ru_convert, body)
 
         # AED/EGP/IDR/MVR with number + code format
@@ -108,7 +138,7 @@ def convert_prices_to_rub(body, lang="ru"):
                 return m.group(0)
 
         for sym in ["$", "€", "₺", "฿", "¥"]:
-            escaped = "\\" + sym if sym in "₺฿¥" else sym
+            escaped = re.escape(sym)
             # For EN, skip $ if already in parentheses (pre-converted)
             if sym == "$":
                 body = re.sub(r'(?<![\(\d])' + escaped + r'(\d[\d,.]*(?:\s*\d{3})*)', lambda m: _en_convert(m) if "₽" not in m.group(0) else m.group(0), body)
@@ -130,16 +160,127 @@ def convert_prices_to_rub(body, lang="ru"):
 
     return body
 
-def inject_maldives_qr(body, country_slug):
+def inject_disclaimer(body, lang="ru"):
+    """Add price disclaimer at the end of article body."""
+    if lang == "ru":
+        notice = '<div class="partner-block" style="margin-top:40px;"><h4>⚠️ Важно: о ценах</h4><p style="font-size:14px;color:var(--charcoal);line-height:1.7;">Все цены в статье являются <strong>ориентировочными</strong> и основаны на средних рыночных данных. Актуальные цены всегда проверяйте на сайтах партнёров (Aviasales, Hotellook, Booking, Agoda и др.). Курсы валют обновляются автоматически, но могут отличаться от курсов вашего банка.</p></div>'
+    else:
+        notice = '<div class="partner-block" style="margin-top:40px;"><h4>⚠️ Important: About Prices</h4><p style="font-size:14px;color:var(--charcoal);line-height:1.7;">All prices in this article are <strong>approximate estimates</strong> based on typical market rates. Always check current prices on partner booking sites (Aviasales, Hotellook, Booking, Agoda, etc.). Exchange rates are updated automatically but may differ from your bank\'s rates.</p></div>'
+    return body + notice
+
+def inject_photo_disclaimer(body, lang="ru"):
+    """Add photo disclaimer after the first image block."""
+    if lang == "ru":
+        notice = '<p style="font-size:12px;color:var(--meta);margin-top:-16px;margin-bottom:24px;font-style:italic;">📷 Изображения отелей носят иллюстративный характер и могут не соответствовать фактическому виду отеля.</p>'
+    else:
+        notice = '<p style="font-size:12px;color:var(--meta);margin-top:-16px;margin-bottom:24px;font-style:italic;">📷 Hotel images are for illustration purposes only and may not reflect the actual property.</p>'
+    # Insert after first </figure> or <img> tag
+    body = re.sub(r'(<(?:figure|img)[^>]*>)', r'\1' + notice, body, count=1)
+    return body
+
+def inject_maldives_qr(body, country_slug, lang="ru"):
     if country_slug != "maldives":
         return body
-    qr_text = '<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — я помогаю своим туристам с оформлением.</p>'
+    if lang == "ru":
+        qr_text = '<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — обратитесь к нашему турагенту, мы поможем с оформлением.</p>'
+    else:
+        qr_text = '<p><strong>📱 Important:</strong> Before flying to Maldives, fill out the IMUGA declaration at <strong>imuga.immigration.gov.mv</strong> and get a QR code — without it you will not be allowed to board your flight. If you need help, contact our travel agent for assistance with the process.</p>'
     visa_pattern = re.compile(r'(<h2[^>]*>.*?(?:виза|visa|документ|document).*?</h2>.*?)(<h2)', re.IGNORECASE | re.DOTALL)
     match = visa_pattern.search(body)
     if match:
         insert_pos = match.end(1)
         body = body[:insert_pos] + qr_text + body[insert_pos:]
     return body
+
+def sanitize_agent_references(body):
+    """Remove remaining first-person agent persona references from AI-generated content."""
+    body = re.sub(r'Я, Валентина Туркова[ ,]+', 'Я, ваш гид, ', body)
+    body = re.sub(r'я, Валентина Туркова[ ,]+', 'я, ваш гид, ', body)
+    body = re.sub(r'Валентина Туркова', 'ваш гид', body)
+    body = re.sub(r'я Валентина[ ,]+', 'я ', body)
+    body = re.sub(r'"Valentina, [^"]*"', '"Traveler, "', body)
+    body = re.sub(r'Валентина[,\s]+(?!Туркова)', 'гид ', body)
+    body = re.sub(r'Valentina Turkova', 'your guide', body)
+    body = re.sub(r"I'm Valentina[,\s]+", "I'm ", body)
+    body = re.sub(r'my tourists', 'travelers', body, flags=re.IGNORECASE)
+    body = re.sub(r'my travelers', 'travelers', body, flags=re.IGNORECASE)
+    # Remove common first-person impersonation patterns
+    body = re.sub(r'я отправила более? \d+', 'мы отправили более', body, flags=re.IGNORECASE)
+    body = re.sub(r'я отправил[ао]? \d+', 'мы отправили', body, flags=re.IGNORECASE)
+    body = re.sub(r'за \d+ лет работы агентом', 'по опыту нашей команды', body)
+    body = re.sub(r'мои туристы', 'наши путешественники', body)
+    body = re.sub(r'моих туристов', 'наших путешественников', body)
+    body = re.sub(r'моим туристам', 'нашим путешественникам', body)
+    body = re.sub(r'моя особая любовь', 'особое место', body)
+    body = re.sub(r'моя наценка', 'наценка', body, flags=re.IGNORECASE)
+    body = re.sub(r'моей наценк', 'наценк', body, flags=re.IGNORECASE)
+    body = re.sub(r'\[моя наценка[^\]]*\]', '', body)
+    body = re.sub(r'\(с моей наценкой[^)]*\)', '', body)
+    body = re.sub(r'\(с учётом моей наценки[^)]*\)', '', body)
+    body = re.sub(r'мои клиенты', 'наши клиенты', body)
+    body = re.sub(r'моих клиентов', 'наших клиентов', body)
+    body = re.sub(r'своими туристами', 'путешественниками', body)
+    body = re.sub(r'своих туристов', 'путешественников', body)
+    body = re.sub(r'I\'ve sent dozens of travelers', 'Many travelers have', body)
+    body = re.sub(r'I\'ve sent dozens', 'Many have', body)
+    body = re.sub(r"I've sent dozens", 'Many have', body)
+    body = re.sub(r"I'm about to spill all my secrets", "here are some tips", body)
+    body = re.sub(r"spill all my secrets", "share some tips", body)
+    body = re.sub(r'my clients', 'travelers', body)
+    body = re.sub(r'my secret', 'a tip', body, flags=re.IGNORECASE)
+    body = re.sub(r'my special', 'a special', body, flags=re.IGNORECASE)
+    return body
+
+
+# ─── Editor enhancements (migrated from editor_agent.py) ───
+
+def _editor_enhance_body(body, lang="ru"):
+    """Apply editorial enhancements: diversify templates, break long sentences."""
+    import random
+    
+    if lang == "ru":
+        why_patterns = [
+            (r'\bПочему стоит поехать именно сейчас\?', 'Стоит ли ехать прямо сейчас?'),
+            (r'\bПочему стоит поехать именно в 2026 году\?', 'Чем хорош 2026 год для поездки?'),
+            (r'\bПочему стоит поехать\?', 'В чём главные причины поехать?'),
+            (r'\bПочему стоит поехать сюда\?', 'Что делает это место особенным?'),
+        ]
+        for pattern, replacement in why_patterns:
+            body = re.sub(pattern, replacement, body)
+    
+    if lang == "en":
+        en_why_patterns = [
+            (r'\bWhy visit \w+ in 2026\?', 'What makes this a great destination in 2026?'),
+            (r'\bWhy visit in 2026\?', 'Why is 2026 the year to visit?'),
+            (r'\bWhy visit \w+\?', 'What draws travelers here?'),
+        ]
+        for pattern, replacement in en_why_patterns:
+            body = re.sub(pattern, replacement, body)
+    
+    long_sentence_patterns = [
+        (r'(Вы сможете [^.]{60,}?), (а\s+\w+)', r'\1. \2'),
+        (r'(Здесь каждый найдет что-то свое: [^.]{50,}?), (а\s+\w+)', r'\1. \2'),
+        (r'(you can [^.]{60,}?), (and\s+\w+)', r'\1. \2'),
+        (r'(You can [^.]{60,}?), (and\s+\w+)', r'\1. \2'),
+    ]
+    for pattern, replacement in long_sentence_patterns:
+        body = re.sub(pattern, replacement, body)
+    
+    sensory_ru = {
+        'никогда не спит': ['живёт полной жизнью', 'пульсирует энергией', 'никогда не затихает'],
+        'предлагает путешественникам': ['дарит гостям', 'открывает перед путешественниками'],
+    }
+    sensory_en = {
+        'is a city of superlatives': ['is a destination that defies expectations', 'sets new standards at every turn'],
+        'offers an unparalleled': ['delivers an unmatched', 'provides a world-class'],
+    }
+    sensory_map = sensory_ru if lang == "ru" else sensory_en
+    for old, alts in sensory_map.items():
+        random.seed(hash(body) % 10000)
+        body = body.replace(old, random.choice(alts), 1)
+    
+    return body
+
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -454,7 +595,11 @@ def build_article_page(country_slug, city_slug, content_type, lang):
 
     body = linkify_services(body)
     body = convert_prices_to_rub(body, lang)
-    body = inject_maldives_qr(body, country_slug)
+    body = sanitize_agent_references(body)
+    body = _editor_enhance_body(body, lang)
+    body = inject_disclaimer(body, lang)
+    body = inject_photo_disclaimer(body, lang)
+    body = inject_maldives_qr(body, country_slug, lang)
 
     import re as _re
     body = _re.sub(r'<h1[^>]*>.*?</h1>\s*', '', body, count=1)

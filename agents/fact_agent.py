@@ -1,11 +1,11 @@
 from pathlib import Path
 import json, re
 
-DOCS = Path(__file__).parent / "docs"
+DOCS = Path(__file__).parent.parent / "docs"
 
 KNOWN_FACTS = {
     "turkey": {"visa": "безвизовый до 90 дней", "currency": "турецкая лира (TRY)", "airports": ["IST", "SAW", "AYT"]},
-    "thailand": {"visa": "безвизовый до 30 дней", "currency": "тайский бат (THB)", "airports": ["BKK", "HKT"]},
+    "thailand": {"visa": "безвизовый до 60 дней (с 2024)", "currency": "тайский бат (THB)", "airports": ["BKK", "HKT"]},
     "egypt": {"visa": "виза по прибытии $25", "currency": "египетский фунт (EGP)", "airports": ["SSH", "HRG", "CAI"]},
     "uae": {"visa": "безвизовый до 90 дней", "currency": "дирхам ОАЭ (AED)", "airports": ["DXB", "AUH"]},
     "indonesia": {"visa": "виза по прибытии", "currency": "индонезийская рупия (IDR)", "airports": ["DPS"]},
@@ -19,6 +19,8 @@ SUSPICIOUS_PATTERNS = [
     (r"входит в топ-\d", "Рейтинг без источника"),
     (r"самый (?:лучший|популярный|большой|красивый)", "Субъективная оценка без подтверждения"),
     (r"гарантированно|100% гаранти|наверняка", "Гарантия без оснований"),
+    (r"я (?:лично|сам(?:а)?)\s+(?:проверил|посетил|был)", "Первое лицо — возможно AI-имитация личного опыта"),
+    (r"точная цена|именно столько|ровно", "Утверждение точности цены без источника"),
 ]
 
 def check_article(path):
@@ -42,24 +44,22 @@ def check_article(path):
 def run():
     print("\n=== FACT AGENT ===\n")
     total_issues = 0
-    for f in DOCS.rglob("*putevoditel*.html"):
-        issues = check_article(f)
-        if issues:
-            rel = f.relative_to(DOCS)
-            print(f"\n[{rel}]")
-            for i in issues:
-                print(f"  {i}")
-                total_issues += 1
-    
-    for f in DOCS.rglob("*travel-guide*.html"):
-        issues = check_article(f)
-        if issues:
-            rel = f.relative_to(DOCS)
-            print(f"\n[{rel}]")
-            for i in issues:
-                print(f"  {i}")
-                total_issues += 1
-    
+    patterns = ["*putevoditel*", "*travel-guide*", "*oteli*", "*hotels*",
+                "*aviabilety*", "*cheap-flights*", "*dostoprimechatelnosti*",
+                "*things-to-do*", "*kogda-luchshe-ekhat*", "*best-time-to-visit*"]
+    seen = set()
+    for pat in patterns:
+        for f in DOCS.rglob(pat):
+            if f.suffix != ".html" or f in seen:
+                continue
+            seen.add(f)
+            issues = check_article(f)
+            if issues:
+                rel = f.relative_to(DOCS)
+                print(f"\n[{rel}]")
+                for i in issues:
+                    print(f"  {i}")
+                    total_issues += 1
     print(f"\nTotal issues: {total_issues}")
     return total_issues
 
