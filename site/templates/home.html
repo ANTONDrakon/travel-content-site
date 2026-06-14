@@ -12,12 +12,11 @@
 {% block content %}
 
 <!-- HERO -->
-<div class="hero-section" style="background-image:url('{{ root }}/assets/countries/travel-hero.webp');">
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>{{ "Your Dream Trip Starts Here" if lang == "en" else "Ваше путешествие начинается здесь" }}</h1>
-        <p>{{ "Expert guides for 35 cities across 7 countries. Hotels, flights, attractions — everything you need for the perfect trip in 2026." if lang == "en" else "Экспертные гайды по 35 городам в 7 странах. Отели, билеты, достопримечательности — всё для идеального путешествия в 2026." }}</p>
-        <div class="scroll-arrow" onclick="document.querySelector('#destinations').scrollIntoView({behavior:'smooth'})">↓</div>
+        <p>{{ "35 cities • 7 countries • Expert travel guides 2026" if lang == "en" else "35 городов • 7 стран • Экспертные путеводители 2026" }}</p>
     </div>
 </div>
 
@@ -56,9 +55,7 @@
                 ("✈️", "Flights" if lang == "en" else "Авиабилеты", "Cheap tickets, dates & hacks" if lang == "en" else "Дешёвые билеты, даты и лайфхаки"),
                 ("🏛", "Attractions" if lang == "en" else "Достопримечательности", "Must-see places with prices" if lang == "en" else "Главные места с ценами"),
                 ("☀️", "Seasons" if lang == "en" else "Сезоны", "Weather & best time to visit" if lang == "en" else "Погода и лучшее время"),
-                ("🛡", "Insurance" if lang == "en" else "Страховка", "Full coverage from $5" if lang == "en" else "Полное покрытие от 500₽"),
-                ("🎯", "Tours" if lang == "en" else "Туры", "Ready packages with flights" if lang == "en" else "Готовые пакеты с перелётом"),
-                ("💬", "Support 24/7" if lang == "en" else "Поддержка 24/7", "Travel experts" if lang == "en" else "Тревел-эксперты"),
+                ("💬", "24/7 Support" if lang == "en" else "Поддержка 24/7", "Travel experts help plan your trip" if lang == "en" else "Поможем спланировать поездку"),
             ] %}
             {% for emoji, title, desc in features %}
             <div style="text-align:center;padding:24px 12px;">
@@ -108,7 +105,7 @@
         <p style="font-size:18px;color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;">
             {{ "Our travel experts help organize your dream trip — from visas to check-in. Check our guides for 35 cities across 7 countries. Save with partner booking links, or contact us for personalized help." if lang == "en" else "Наши travel-эксперты помогут организовать путешествие мечты — от виз до заселения. Изучайте гайды по 35 городам в 7 странах. Экономьте по партнёрским ссылкам или свяжитесь с нами для личной консультации." }}
         </p>
-        <a href="#agent-form" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Contact Us →" if lang == "en" else "Связаться с нами →" }}</a>
+        <a href="#agent-form" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
     </div>
 </section>
 

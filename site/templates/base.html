@@ -392,11 +392,11 @@
                 </ul>
             </div>
             <div>
-                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">{{ "Tell us about your dream trip — we'll help plan it!" if lang == "en" else "Расскажите о вашей поездке — поможем спланировать!" }}</p>
+                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">{{ "Plan your perfect trip — we'll handle the details" if lang == "en" else "Спланируйте идеальную поездку — мы поможем с деталями" }}</p>
                 <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
                     <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required>
                     <input type="email" name="email" placeholder="Email">
-                    <input type="tel" name="phone" placeholder="{{ 'Phone (WhatsApp/Telegram/MAX) *' if lang == 'en' else 'Телефон (WhatsApp/Telegram/MAX) *' }}" required>
+                    <input type="tel" name="phone" placeholder="{{ 'Phone (WhatsApp/Telegram) *' if lang == 'en' else 'Телефон (WhatsApp/Telegram) *' }}" required>
                     <select name="destination">
                         <option value="">{{ "Preferred destination" if lang == "en" else "Желаемое направление" }}</option>
                         <option value="turkey">{{ "Turkey" if lang == "en" else "Турция" }}</option>
@@ -406,12 +406,12 @@
                         <option value="indonesia">{{ "Indonesia" if lang == "en" else "Индонезия" }}</option>
                         <option value="china">{{ "China (Hainan)" if lang == "en" else "Китай (Хайнань)" }}</option>
                         <option value="maldives">{{ "Maldives" if lang == "en" else "Мальдивы" }}</option>
-                        <option value="other">{{ "Other / Другое" if lang == "en" else "Другое" }}</option>
+                        <option value="other">{{ "Other" if lang == "en" else "Другое" }}</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="{{ 'Your wishes, dates, budget...' if lang == 'en' else 'Ваши пожелания, даты, бюджет...' }}"></textarea>
                     <input type="hidden" name="_subject" value="{{ 'Tour request from TravelHub' if lang == 'en' else 'Заявка на тур с TravelHub' }}">
                     <input type="hidden" name="_replyto" value="i@turkov-1.ru">
-                    <button type="submit" class="btn-cta">{{ "Send request →" if lang == "en" else "Отправить заявку →" }}</button>
+                    <button type="submit" class="btn-cta">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</button>
                 </form>
             </div>
         </div>
