@@ -12,7 +12,7 @@
 {% block content %}
 
 <!-- HERO -->
-<div class="hero-section" style="background-image:url('/assets/countries/travel-hero.webp');">
+<div class="hero-section" style="background-image:url('{{ root }}/assets/countries/travel-hero.webp');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>{{ "Your Dream Trip Starts Here" if lang == "en" else "Ваше путешествие начинается здесь" }}</h1>
@@ -26,7 +26,7 @@
     <h2>{{ "Choose Your Destination" if lang == "en" else "Выберите направление" }}</h2>
     <div class="cards-grid">
         {% for country in countries %}
-        <a href="/{{ lang }}/{{ country.slug }}/index.html" class="destination-card">
+        <a href="{{ root }}/{{ lang }}/{{ country.slug }}/index.html" class="destination-card">
             <img src="{{ country.image }}" alt="{{ country.name_en }}" class="card-img" loading="lazy">
             <div class="card-body">
                 <h3>{{ country.name_en if lang == "en" else country.name_ru }}</h3>

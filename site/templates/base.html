@@ -348,10 +348,10 @@
 <header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
         <div>{% if not hide_back %}<a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="{{ 'Back' if lang == 'en' else 'Назад' }}">← {{ 'Back' if lang == 'en' else 'Назад' }}</a>{% endif %}</div>
-        <a href="/{{ lang }}/index.html" class="wordmark">TravelHub</a>
+        <a href="{{ root }}/{{ lang }}/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
-            <a href="/en/{% block en_alt %}{% endblock %}" class="nav-pill nav-pill-outline">EN</a>
-            <a href="/ru/{% block ru_alt %}{% endblock %}" class="nav-pill nav-pill-outline">RU</a>
+            <a href="{{ root }}/en/{% block en_alt %}{% endblock %}" class="nav-pill nav-pill-outline">EN</a>
+            <a href="{{ root }}/ru/{% block ru_alt %}{% endblock %}" class="nav-pill nav-pill-outline">RU</a>
         </div>
     </div>
 </header>
@@ -427,13 +427,13 @@
         <div>
             <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">{{ "Destinations" if lang == "en" else "Направления" }}</h4>
             <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
-                <li><a href="/{{ lang }}/turkey/index.html">{{ "Turkey" if lang == "en" else "Турция" }}</a></li>
-                <li><a href="/{{ lang }}/thailand/index.html">{{ "Thailand" if lang == "en" else "Таиланд" }}</a></li>
-                <li><a href="/{{ lang }}/egypt/index.html">{{ "Egypt" if lang == "en" else "Египет" }}</a></li>
-                <li><a href="/{{ lang }}/uae/index.html">{{ "UAE" if lang == "en" else "ОАЭ" }}</a></li>
-                <li><a href="/{{ lang }}/indonesia/index.html">{{ "Indonesia" if lang == "en" else "Индонезия" }}</a></li>
-                <li><a href="/{{ lang }}/china/index.html">{{ "China (Hainan)" if lang == "en" else "Китай (Хайнань)" }}</a></li>
-                <li><a href="/{{ lang }}/maldives/index.html">{{ "Maldives" if lang == "en" else "Мальдивы" }}</a></li>
+                <li><a href="{{ root }}/{{ lang }}/turkey/index.html">{{ "Turkey" if lang == "en" else "Турция" }}</a></li>
+                <li><a href="{{ root }}/{{ lang }}/thailand/index.html">{{ "Thailand" if lang == "en" else "Таиланд" }}</a></li>
+                <li><a href="{{ root }}/{{ lang }}/egypt/index.html">{{ "Egypt" if lang == "en" else "Египет" }}</a></li>
+                <li><a href="{{ root }}/{{ lang }}/uae/index.html">{{ "UAE" if lang == "en" else "ОАЭ" }}</a></li>
+                <li><a href="{{ root }}/{{ lang }}/indonesia/index.html">{{ "Indonesia" if lang == "en" else "Индонезия" }}</a></li>
+                <li><a href="{{ root }}/{{ lang }}/china/index.html">{{ "China (Hainan)" if lang == "en" else "Китай (Хайнань)" }}</a></li>
+                <li><a href="{{ root }}/{{ lang }}/maldives/index.html">{{ "Maldives" if lang == "en" else "Мальдивы" }}</a></li>
             </ul>
         </div>
         <div>

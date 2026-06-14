@@ -59,13 +59,13 @@
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
                 <img src="{{ city_data.image }}" alt="{{ city_data.name_en if lang == 'en' else city_data.name_ru }}" class="card-img" loading="lazy" style="height:220px;">
                 <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
-                    <a href="/{{ lang }}/{{ country.slug }}/{{ city_data.articles[0].url }}.html" style="text-decoration:none;color:inherit;">
+                    <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city_data.articles[0].url }}.html" style="text-decoration:none;color:inherit;">
                         <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">{{ city_data.name_en if lang == "en" else city_data.name_ru }}</h3>
                     </a>
                     {% if city_data.desc %}<p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">{{ city_data.desc }}</p>{% endif %}
                     <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
                     {% for a in city_data.articles %}
-                    <a href="/{{ lang }}/{{ country.slug }}/{{ a.url }}.html" class="city-btn">{{ a.icon }} {{ a.label }}</a>
+                    <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ a.url }}.html" class="city-btn">{{ a.icon }} {{ a.label }}</a>
                     {% endfor %}
                     </div>
                 </div>

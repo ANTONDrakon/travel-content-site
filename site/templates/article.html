@@ -51,7 +51,7 @@
             </h2>
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
                 {% for rel in related %}
-                <a href="/{{ lang }}/{{ rel.url }}" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
+                <a href="{{ root }}/{{ lang }}/{{ rel.url }}" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
                     <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">{{ rel.type }}</span>
                     <p style="font-weight:600;font-size:15px;margin-top:6px;">{{ rel.title }}</p>
                 </a>

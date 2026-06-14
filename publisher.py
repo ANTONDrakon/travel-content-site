@@ -296,6 +296,9 @@ env = Environment(
     autoescape=select_autoescape(["html", "xml"]),
 )
 env.globals["site_url"] = os.getenv("SITE_URL", "https://antondrakon.github.io/travel-content-site")
+from urllib.parse import urlparse as _urlparse
+_env_root = _urlparse(os.getenv("SITE_URL", "https://antondrakon.github.io/travel-content-site")).path.rstrip("/")
+env.globals["root"] = _env_root
 env.globals["formspree_id"] = "xnjyjnnd"
 env.globals["enumerate"] = enumerate
 
@@ -358,11 +361,17 @@ def load_json(path):
 
 
 def get_city_image(city_slug):
-    return CITY_IMAGES.get(city_slug, "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80")
+    path = CITY_IMAGES.get(city_slug, "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80")
+    if path.startswith("/") and _env_root:
+        return _env_root + path
+    return path
 
 
 def get_country_image(country_slug):
-    return COUNTRY_IMAGES.get(country_slug, "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80")
+    path = COUNTRY_IMAGES.get(country_slug, "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80")
+    if path.startswith("/") and _env_root:
+        return _env_root + path
+    return path
 
 
 def get_country_emoji(slug):
