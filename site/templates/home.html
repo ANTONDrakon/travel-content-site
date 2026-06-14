@@ -12,31 +12,63 @@
 {% block content %}
 
 <!-- HERO -->
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80');">
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80');min-height:560px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>{{ "Your Dream Trip Starts Here" if lang == "en" else "Ваше путешествие начинается здесь" }}</h1>
         <p>{{ "35 cities • 7 countries • Expert travel guides 2026" if lang == "en" else "35 городов • 7 стран • Экспертные путеводители 2026" }}</p>
+        <div style="display:flex;gap:16px;justify-content:center;margin-top:32px;flex-wrap:wrap;">
+            <a href="#agent-form" class="btn-cta" style="font-size:17px;padding:16px 40px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
+            <a href="#destinations" class="nav-pill nav-pill-solid" style="font-size:16px;padding:14px 36px;background:rgba(255,255,255,0.2);color:#fff;border:2px solid rgba(255,255,255,0.5);">{{ "Browse guides" if lang == "en" else "Выбрать страну" }}</a>
+        </div>
     </div>
 </div>
 
-<!-- DESTINATIONS -->
+<!-- AGENT PROMO — сразу под hero -->
+<section class="section" id="agent-form" style="padding-top:60px;padding-bottom:60px;">
+    <div style="max-width:800px;margin:0 auto;background:#fff;border-radius:20px;padding:48px;box-shadow:0 4px 40px rgba(0,0,0,0.06);text-align:center;">
+        <div style="font-size:48px;margin-bottom:16px;">✈️</div>
+        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">{{ "Need help planning your trip?" if lang == "en" else "Нужна помощь с планированием?" }}</h2>
+        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto;">
+            {{ "Tell us your wishes — we'll help with visas, transfers, eSIM and find the best hotels. All prices are approximate. Check current rates on partner sites." if lang == "en" else "Расскажите о пожеланиях — поможем с визами, трансферами, eSIM и подбором отелей. Цены ориентировочные — сверяйтесь с партнёрами." }}
+        </p>
+        <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST" style="max-width:500px;margin:0 auto;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+                <input type="tel" name="phone" placeholder="{{ 'Phone *' if lang == 'en' else 'Телефон *' }}" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+            </div>
+            <select name="destination" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;">
+                <option value="">{{ "Preferred destination" if lang == "en" else "Желаемое направление" }}</option>
+                <option value="turkey">{{ "Turkey" if lang == "en" else "Турция" }}</option>
+                <option value="thailand">{{ "Thailand" if lang == "en" else "Таиланд" }}</option>
+                <option value="egypt">{{ "Egypt" if lang == "en" else "Египет" }}</option>
+                <option value="uae">{{ "UAE" if lang == "en" else "ОАЭ" }}</option>
+                <option value="indonesia">{{ "Indonesia" if lang == "en" else "Индонезия" }}</option>
+                <option value="china">{{ "China (Hainan)" if lang == "en" else "Китай (Хайнань)" }}</option>
+                <option value="maldives">{{ "Maldives" if lang == "en" else "Мальдивы" }}</option>
+                <option value="other">{{ "Other" if lang == "en" else "Другое" }}</option>
+            </select>
+            <textarea name="message" rows="2" placeholder="{{ 'Your wishes, dates, budget...' if lang == 'en' else 'Пожелания, даты, бюджет...' }}" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;"></textarea>
+            <input type="hidden" name="_subject" value="{{ 'Trip request from TravelHub' if lang == 'en' else 'Заявка на поездку с TravelHub' }}">
+            <button type="submit" class="btn-cta" style="margin-top:16px;cursor:pointer;width:100%;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</button>
+        </form>
+    </div>
+</section>
+
+<!-- DESTINATIONS — все 7 стран -->
 <section id="destinations" class="section">
-    <h2>{{ "Choose Your Destination" if lang == "en" else "Выберите направление" }}</h2>
+    <h2>{{ "Explore Destinations" if lang == "en" else "Все направления" }}</h2>
     <div class="cards-grid">
         {% for country in countries %}
-        <a href="{{ root }}/{{ lang }}/{{ country.slug }}/index.html" class="destination-card">
-            <img src="{{ country.image }}" alt="{{ country.name_en }}" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>{{ country.name_en if lang == "en" else country.name_ru }}</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    {{ country.cities_count }} {{ "cities" if lang == "en" else "городов" }}
-                    &bull; {{ country.guides_count }} {{ "guides" if lang == "en" else "гайда" }}
-                </p>
-                <div class="card-cities">
-                    {% for city_slug, city in country.cities.items() %}
-                    <span>{{ city.name_en if lang == "en" else city.name_ru }}</span>
-                    {% endfor %}
+        <a href="{{ root }}/{{ lang }}/{{ country.slug }}/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="{{ country.image }}" alt="{{ country.name_en }}" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">{{ country.name_en if lang == "en" else country.name_ru }}</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        {{ country.cities_count }} {{ "cities" if lang == "en" else "городов" }}
+                        &bull; {{ country.guides_count }} {{ "guides" if lang == "en" else "гайда" }}
+                    </p>
                 </div>
             </div>
         </a>
@@ -50,7 +82,7 @@
         <h2>{{ "Everything You Need for Travel" if lang == "en" else "Всё для путешествия" }}</h2>
         <div class="cards-grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px;">
             {% set features = [
-                ("📖", "Travel Guides" if lang == "en" else "Путеводители", "Complete city handbooks with local tips" if lang == "en" else "Полные гайды с советами местных"),
+                ("📖", "Travel Guides" if lang == "en" else "Путеводители", "Complete city handbooks with local tips" if lang == "en" else "Полные гайды с советами"),
                 ("🏨", "Hotels" if lang == "en" else "Отели", "Best picks for every budget" if lang == "en" else "Лучшие варианты под любой бюджет"),
                 ("✈️", "Flights" if lang == "en" else "Авиабилеты", "Cheap tickets, dates & hacks" if lang == "en" else "Дешёвые билеты, даты и лайфхаки"),
                 ("🏛", "Attractions" if lang == "en" else "Достопримечательности", "Must-see places with prices" if lang == "en" else "Главные места с ценами"),
@@ -65,47 +97,6 @@
             </div>
             {% endfor %}
         </div>
-    </div>
-</section>
-
-<!-- TRUST -->
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:1000px;margin:0 auto;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:32px;text-align:center;">
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">🌍</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">{{ "7 Countries" if lang == "en" else "7 стран" }}</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">{{ "Expert guides for 35 cities" if lang == "en" else "Экспертные гайды по 35 городам" }}</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">💰</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">{{ "Best Deals" if lang == "en" else "Лучшие цены" }}</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">{{ "Compare 16+ travel partners" if lang == "en" else "Сравнение 16+ партнёров" }}</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">📖</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">{{ "350+ Guides" if lang == "en" else "350+ гайдов" }}</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">{{ "Honest prices & seasonal tips" if lang == "en" else "Честные цены и советы" }}</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">💬</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">{{ "24/7 Help" if lang == "en" else "Помощь 24/7" }}</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">{{ "Visa, transfer & eSIM support" if lang == "en" else "Виза, трансфер, eSIM" }}</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- AGENT PROMO -->
-<section class="section">
-    <div style="background:var(--ink);color:#fff;padding:48px;text-align:center;">
-        <h2 style="color:#fff;font-size:36px;font-weight:700;letter-spacing:-0.03em;margin-bottom:16px;">
-            {{ "Don't want to plan alone?" if lang == "en" else "Не хотите планировать сами?" }}
-        </h2>
-        <p style="font-size:18px;color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;">
-            {{ "Our travel experts help organize your dream trip — from visas to check-in. Check our guides for 35 cities across 7 countries. Save with partner booking links, or contact us for personalized help." if lang == "en" else "Наши travel-эксперты помогут организовать путешествие мечты — от виз до заселения. Изучайте гайды по 35 городам в 7 странах. Экономьте по партнёрским ссылкам или свяжитесь с нами для личной консультации." }}
-        </p>
-        <a href="#agent-form" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
     </div>
 </section>
 

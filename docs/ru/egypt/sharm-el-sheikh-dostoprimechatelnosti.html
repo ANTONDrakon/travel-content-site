@@ -305,6 +305,22 @@
 
         img { background: linear-gradient(135deg, #e8e0d6 0%, #f8f5f0 100%); }
         img[src*="unsplash"] { min-height: 200px; }
+    
+        /* Sticky mobile CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #fff;
+            padding: 12px 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .sticky-cta { display: block; }
+        }
     </style>
 
     <script>
@@ -652,6 +668,11 @@
 
 <div class="fixed-buttons">
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
+
+
+<div class="sticky-cta">
+    <a href="#agent-form" class="btn-cta" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">Спланировать поездку</a>
 </div>
 
 </body>

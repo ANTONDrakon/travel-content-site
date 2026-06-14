@@ -305,6 +305,22 @@
 
         img { background: linear-gradient(135deg, #e8e0d6 0%, #f8f5f0 100%); }
         img[src*="unsplash"] { min-height: 200px; }
+    
+        /* Sticky mobile CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #fff;
+            padding: 12px 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .sticky-cta { display: block; }
+        }
     </style>
 
     <script>
@@ -350,183 +366,141 @@
 
 
 <!-- HERO -->
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80');">
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80');min-height:560px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Your Dream Trip Starts Here</h1>
         <p>35 cities • 7 countries • Expert travel guides 2026</p>
+        <div style="display:flex;gap:16px;justify-content:center;margin-top:32px;flex-wrap:wrap;">
+            <a href="#agent-form" class="btn-cta" style="font-size:17px;padding:16px 40px;">Plan my trip →</a>
+            <a href="#destinations" class="nav-pill nav-pill-solid" style="font-size:16px;padding:14px 36px;background:rgba(255,255,255,0.2);color:#fff;border:2px solid rgba(255,255,255,0.5);">Browse guides</a>
+        </div>
     </div>
 </div>
 
-<!-- DESTINATIONS -->
+<!-- AGENT PROMO — сразу под hero -->
+<section class="section" id="agent-form" style="padding-top:60px;padding-bottom:60px;">
+    <div style="max-width:800px;margin:0 auto;background:#fff;border-radius:20px;padding:48px;box-shadow:0 4px 40px rgba(0,0,0,0.06);text-align:center;">
+        <div style="font-size:48px;margin-bottom:16px;">✈️</div>
+        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">Need help planning your trip?</h2>
+        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto;">
+            Tell us your wishes — we&#39;ll help with visas, transfers, eSIM and find the best hotels. All prices are approximate. Check current rates on partner sites.
+        </p>
+        <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST" style="max-width:500px;margin:0 auto;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <input type="text" name="name" placeholder="Your name *" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+                <input type="tel" name="phone" placeholder="Phone *" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+            </div>
+            <select name="destination" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;">
+                <option value="">Preferred destination</option>
+                <option value="turkey">Turkey</option>
+                <option value="thailand">Thailand</option>
+                <option value="egypt">Egypt</option>
+                <option value="uae">UAE</option>
+                <option value="indonesia">Indonesia</option>
+                <option value="china">China (Hainan)</option>
+                <option value="maldives">Maldives</option>
+                <option value="other">Other</option>
+            </select>
+            <textarea name="message" rows="2" placeholder="Your wishes, dates, budget..." style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;"></textarea>
+            <input type="hidden" name="_subject" value="Trip request from TravelHub">
+            <button type="submit" class="btn-cta" style="margin-top:16px;cursor:pointer;width:100%;">Plan my trip →</button>
+        </form>
+    </div>
+</section>
+
+<!-- DESTINATIONS — все 7 стран -->
 <section id="destinations" class="section">
-    <h2>Choose Your Destination</h2>
+    <h2>Explore Destinations</h2>
     <div class="cards-grid">
         
-        <a href="/travel-content-site/en/turkey/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&amp;q=80" alt="Turkey" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Turkey</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    4 cities
-                    &bull; 20 guides
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Istanbul</span>
-                    
-                    <span>Antalya</span>
-                    
-                    <span>Bodrum</span>
-                    
-                    <span>Cappadocia</span>
-                    
+        <a href="/travel-content-site/en/turkey/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&amp;q=80" alt="Turkey" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Turkey</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        4 cities
+                        &bull; 20 guides
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/en/thailand/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&amp;q=80" alt="Thailand" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Thailand</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 cities
-                    &bull; 25 guides
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Bangkok</span>
-                    
-                    <span>Phuket</span>
-                    
-                    <span>Pattaya</span>
-                    
-                    <span>Koh Samui</span>
-                    
-                    <span>Krabi</span>
-                    
+        <a href="/travel-content-site/en/thailand/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&amp;q=80" alt="Thailand" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Thailand</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 cities
+                        &bull; 25 guides
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/en/egypt/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&amp;q=80" alt="Egypt" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Egypt</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 cities
-                    &bull; 25 guides
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Sharm El Sheikh</span>
-                    
-                    <span>Hurghada</span>
-                    
-                    <span>Cairo</span>
-                    
-                    <span>Luxor</span>
-                    
-                    <span>Marsa Alam</span>
-                    
+        <a href="/travel-content-site/en/egypt/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&amp;q=80" alt="Egypt" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Egypt</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 cities
+                        &bull; 25 guides
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/en/uae/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&amp;q=80" alt="UAE" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>UAE</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 cities
-                    &bull; 25 guides
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Dubai</span>
-                    
-                    <span>Abu Dhabi</span>
-                    
-                    <span>Sharjah</span>
-                    
-                    <span>Ras Al Khaimah</span>
-                    
-                    <span>Fujairah</span>
-                    
+        <a href="/travel-content-site/en/uae/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&amp;q=80" alt="UAE" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">UAE</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 cities
+                        &bull; 25 guides
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/en/indonesia/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&amp;q=80" alt="Indonesia" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Indonesia</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 cities
-                    &bull; 25 guides
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Ubud</span>
-                    
-                    <span>Kuta</span>
-                    
-                    <span>Seminyak</span>
-                    
-                    <span>Canggu</span>
-                    
-                    <span>Nusa Dua</span>
-                    
+        <a href="/travel-content-site/en/indonesia/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&amp;q=80" alt="Indonesia" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Indonesia</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 cities
+                        &bull; 25 guides
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/en/china/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&amp;q=80" alt="China" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>China</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 cities
-                    &bull; 25 guides
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Sanya</span>
-                    
-                    <span>Haikou</span>
-                    
-                    <span>Beijing</span>
-                    
-                    <span>Shanghai</span>
-                    
-                    <span>Xi&#39;an</span>
-                    
+        <a href="/travel-content-site/en/china/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&amp;q=80" alt="China" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">China</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 cities
+                        &bull; 25 guides
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/en/maldives/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&amp;q=80" alt="Maldives" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Maldives</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    6 cities
-                    &bull; 30 guides
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Male</span>
-                    
-                    <span>Maafushi</span>
-                    
-                    <span>Hulhumale</span>
-                    
-                    <span>Thulusdhoo</span>
-                    
-                    <span>Dhigurah</span>
-                    
-                    <span>Resort Islands</span>
-                    
+        <a href="/travel-content-site/en/maldives/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&amp;q=80" alt="Maldives" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Maldives</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        6 cities
+                        &bull; 30 guides
+                    </p>
                 </div>
             </div>
         </a>
@@ -578,47 +552,6 @@
             </div>
             
         </div>
-    </div>
-</section>
-
-<!-- TRUST -->
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:1000px;margin:0 auto;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:32px;text-align:center;">
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">🌍</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">7 Countries</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">Expert guides for 35 cities</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">💰</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">Best Deals</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">Compare 16+ travel partners</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">📖</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">350+ Guides</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">Honest prices &amp; seasonal tips</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">💬</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">24/7 Help</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">Visa, transfer &amp; eSIM support</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- AGENT PROMO -->
-<section class="section">
-    <div style="background:var(--ink);color:#fff;padding:48px;text-align:center;">
-        <h2 style="color:#fff;font-size:36px;font-weight:700;letter-spacing:-0.03em;margin-bottom:16px;">
-            Don&#39;t want to plan alone?
-        </h2>
-        <p style="font-size:18px;color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;">
-            Our travel experts help organize your dream trip — from visas to check-in. Check our guides for 35 cities across 7 countries. Save with partner booking links, or contact us for personalized help.
-        </p>
-        <a href="#agent-form" class="btn-cta" style="font-size:16px;padding:14px 36px;">Plan my trip →</a>
     </div>
 </section>
 
@@ -706,6 +639,11 @@
 
 <div class="fixed-buttons">
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
+
+
+<div class="sticky-cta">
+    <a href="#agent-form" class="btn-cta" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">Plan my trip</a>
 </div>
 
 </body>

@@ -305,6 +305,22 @@
 
         img { background: linear-gradient(135deg, #e8e0d6 0%, #f8f5f0 100%); }
         img[src*="unsplash"] { min-height: 200px; }
+    
+        /* Sticky mobile CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #fff;
+            padding: 12px 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .sticky-cta { display: block; }
+        }
     </style>
 
     <script>
@@ -545,6 +561,18 @@
     </div>
 </section>
 
+
+<!-- IN-PAGE CTA -->
+<section class="section" style="padding:60px 24px;background:var(--bg);">
+    <div style="max-width:700px;margin:0 auto;text-align:center;">
+        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">Need help planning?</h2>
+        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;">
+            Our travel experts can help with visas, transfers, hotel booking &amp; itinerary. All prices are approximate.
+        </p>
+        <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">Plan my trip →</a>
+    </div>
+</section>
+
 <!-- SEASONS -->
 <section class="section">
     <h2>Best Time to Visit UAE</h2>
@@ -746,7 +774,7 @@
 </section>
 
 <!-- TRUST BLOCK -->
-<section class="section" id="agent">
+<section class="section" id="agent" style="scroll-margin-top:80px;">
     <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;padding:48px;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
         <div style="text-align:center;margin-bottom:28px;">
             <div style="font-size:48px;margin-bottom:12px;">✈️</div>
@@ -853,6 +881,11 @@
 
 <div class="fixed-buttons">
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
+
+
+<div class="sticky-cta">
+    <a href="#agent-form" class="btn-cta" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">Plan my trip</a>
 </div>
 
 </body>

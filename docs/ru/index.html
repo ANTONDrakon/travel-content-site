@@ -305,6 +305,22 @@
 
         img { background: linear-gradient(135deg, #e8e0d6 0%, #f8f5f0 100%); }
         img[src*="unsplash"] { min-height: 200px; }
+    
+        /* Sticky mobile CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #fff;
+            padding: 12px 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .sticky-cta { display: block; }
+        }
     </style>
 
     <script>
@@ -350,183 +366,141 @@
 
 
 <!-- HERO -->
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80');">
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80');min-height:560px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>Ваше путешествие начинается здесь</h1>
         <p>35 городов • 7 стран • Экспертные путеводители 2026</p>
+        <div style="display:flex;gap:16px;justify-content:center;margin-top:32px;flex-wrap:wrap;">
+            <a href="#agent-form" class="btn-cta" style="font-size:17px;padding:16px 40px;">Спланировать поездку →</a>
+            <a href="#destinations" class="nav-pill nav-pill-solid" style="font-size:16px;padding:14px 36px;background:rgba(255,255,255,0.2);color:#fff;border:2px solid rgba(255,255,255,0.5);">Выбрать страну</a>
+        </div>
     </div>
 </div>
 
-<!-- DESTINATIONS -->
+<!-- AGENT PROMO — сразу под hero -->
+<section class="section" id="agent-form" style="padding-top:60px;padding-bottom:60px;">
+    <div style="max-width:800px;margin:0 auto;background:#fff;border-radius:20px;padding:48px;box-shadow:0 4px 40px rgba(0,0,0,0.06);text-align:center;">
+        <div style="font-size:48px;margin-bottom:16px;">✈️</div>
+        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">Нужна помощь с планированием?</h2>
+        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto;">
+            Расскажите о пожеланиях — поможем с визами, трансферами, eSIM и подбором отелей. Цены ориентировочные — сверяйтесь с партнёрами.
+        </p>
+        <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST" style="max-width:500px;margin:0 auto;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <input type="text" name="name" placeholder="Ваше имя *" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+                <input type="tel" name="phone" placeholder="Телефон *" required style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;">
+            </div>
+            <select name="destination" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;">
+                <option value="">Желаемое направление</option>
+                <option value="turkey">Турция</option>
+                <option value="thailand">Таиланд</option>
+                <option value="egypt">Египет</option>
+                <option value="uae">ОАЭ</option>
+                <option value="indonesia">Индонезия</option>
+                <option value="china">Китай (Хайнань)</option>
+                <option value="maldives">Мальдивы</option>
+                <option value="other">Другое</option>
+            </select>
+            <textarea name="message" rows="2" placeholder="Пожелания, даты, бюджет..." style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;"></textarea>
+            <input type="hidden" name="_subject" value="Заявка на поездку с TravelHub">
+            <button type="submit" class="btn-cta" style="margin-top:16px;cursor:pointer;width:100%;">Спланировать поездку →</button>
+        </form>
+    </div>
+</section>
+
+<!-- DESTINATIONS — все 7 стран -->
 <section id="destinations" class="section">
-    <h2>Выберите направление</h2>
+    <h2>Все направления</h2>
     <div class="cards-grid">
         
-        <a href="/travel-content-site/ru/turkey/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&amp;q=80" alt="Turkey" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Турция</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    4 городов
-                    &bull; 20 гайда
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Стамбул</span>
-                    
-                    <span>Анталья</span>
-                    
-                    <span>Бодрум</span>
-                    
-                    <span>Каппадокия</span>
-                    
+        <a href="/travel-content-site/ru/turkey/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&amp;q=80" alt="Turkey" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Турция</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        4 городов
+                        &bull; 20 гайда
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/ru/thailand/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&amp;q=80" alt="Thailand" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Таиланд</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 городов
-                    &bull; 25 гайда
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Бангкок</span>
-                    
-                    <span>Пхукет</span>
-                    
-                    <span>Паттайя</span>
-                    
-                    <span>Самуи</span>
-                    
-                    <span>Краби</span>
-                    
+        <a href="/travel-content-site/ru/thailand/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&amp;q=80" alt="Thailand" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Таиланд</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 городов
+                        &bull; 25 гайда
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/ru/egypt/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&amp;q=80" alt="Egypt" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Египет</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 городов
-                    &bull; 25 гайда
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Шарм-эль-Шейх</span>
-                    
-                    <span>Хургада</span>
-                    
-                    <span>Каир</span>
-                    
-                    <span>Луксор</span>
-                    
-                    <span>Марса-Алам</span>
-                    
+        <a href="/travel-content-site/ru/egypt/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&amp;q=80" alt="Egypt" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Египет</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 городов
+                        &bull; 25 гайда
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/ru/uae/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&amp;q=80" alt="UAE" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>ОАЭ</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 городов
-                    &bull; 25 гайда
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Дубай</span>
-                    
-                    <span>Абу-Даби</span>
-                    
-                    <span>Шарджа</span>
-                    
-                    <span>Рас-эль-Хайма</span>
-                    
-                    <span>Фуджейра</span>
-                    
+        <a href="/travel-content-site/ru/uae/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&amp;q=80" alt="UAE" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">ОАЭ</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 городов
+                        &bull; 25 гайда
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/ru/indonesia/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&amp;q=80" alt="Indonesia" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Индонезия</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 городов
-                    &bull; 25 гайда
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Убуд</span>
-                    
-                    <span>Кута</span>
-                    
-                    <span>Семиньяк</span>
-                    
-                    <span>Чангу</span>
-                    
-                    <span>Нуса-Дуа</span>
-                    
+        <a href="/travel-content-site/ru/indonesia/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&amp;q=80" alt="Indonesia" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Индонезия</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 городов
+                        &bull; 25 гайда
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/ru/china/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&amp;q=80" alt="China" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Китай</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    5 городов
-                    &bull; 25 гайда
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Санья</span>
-                    
-                    <span>Хайкоу</span>
-                    
-                    <span>Пекин</span>
-                    
-                    <span>Шанхай</span>
-                    
-                    <span>Сиань</span>
-                    
+        <a href="/travel-content-site/ru/china/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&amp;q=80" alt="China" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Китай</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        5 городов
+                        &bull; 25 гайда
+                    </p>
                 </div>
             </div>
         </a>
         
-        <a href="/travel-content-site/ru/maldives/index.html" class="destination-card">
-            <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&amp;q=80" alt="Maldives" class="card-img" loading="lazy">
-            <div class="card-body">
-                <h3>Мальдивы</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:8px;">
-                    6 городов
-                    &bull; 30 гайда
-                </p>
-                <div class="card-cities">
-                    
-                    <span>Мале</span>
-                    
-                    <span>Маафуши</span>
-                    
-                    <span>Хулхумале</span>
-                    
-                    <span>Тулусду</span>
-                    
-                    <span>Дигура</span>
-                    
-                    <span>Курортные острова</span>
-                    
+        <a href="/travel-content-site/ru/maldives/index.html" class="destination-card" style="position:relative;">
+            <div style="position:relative;overflow:hidden;">
+                <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&amp;q=80" alt="Maldives" class="card-img" loading="lazy" style="height:240px;width:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 20px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                    <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">Мальдивы</h3>
+                    <p style="color:rgba(255,255,255,0.8);font-size:14px;margin:4px 0 0;">
+                        6 городов
+                        &bull; 30 гайда
+                    </p>
                 </div>
             </div>
         </a>
@@ -544,7 +518,7 @@
             <div style="text-align:center;padding:24px 12px;">
                 <div style="font-size:36px;margin-bottom:12px;">📖</div>
                 <h3 style="font-size:16px;font-weight:600;margin-bottom:6px;color:var(--ink);">Путеводители</h3>
-                <p style="font-size:13px;color:var(--meta);line-height:1.5;">Полные гайды с советами местных</p>
+                <p style="font-size:13px;color:var(--meta);line-height:1.5;">Полные гайды с советами</p>
             </div>
             
             <div style="text-align:center;padding:24px 12px;">
@@ -578,47 +552,6 @@
             </div>
             
         </div>
-    </div>
-</section>
-
-<!-- TRUST -->
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:1000px;margin:0 auto;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:32px;text-align:center;">
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">🌍</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">7 стран</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">Экспертные гайды по 35 городам</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">💰</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">Лучшие цены</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">Сравнение 16+ партнёров</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">📖</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">350+ гайдов</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">Честные цены и советы</p>
-            </div>
-            <div>
-                <div style="font-size:40px;margin-bottom:12px;">💬</div>
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;color:var(--ink);">Помощь 24/7</h3>
-                <p style="font-size:14px;color:var(--meta);line-height:1.6;">Виза, трансфер, eSIM</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- AGENT PROMO -->
-<section class="section">
-    <div style="background:var(--ink);color:#fff;padding:48px;text-align:center;">
-        <h2 style="color:#fff;font-size:36px;font-weight:700;letter-spacing:-0.03em;margin-bottom:16px;">
-            Не хотите планировать сами?
-        </h2>
-        <p style="font-size:18px;color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;">
-            Наши travel-эксперты помогут организовать путешествие мечты — от виз до заселения. Изучайте гайды по 35 городам в 7 странах. Экономьте по партнёрским ссылкам или свяжитесь с нами для личной консультации.
-        </p>
-        <a href="#agent-form" class="btn-cta" style="font-size:16px;padding:14px 36px;">Спланировать поездку →</a>
     </div>
 </section>
 
@@ -706,6 +639,11 @@
 
 <div class="fixed-buttons">
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Наверх" title="Наверх">↑</button>
+</div>
+
+
+<div class="sticky-cta">
+    <a href="#agent-form" class="btn-cta" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">Спланировать поездку</a>
 </div>
 
 </body>
