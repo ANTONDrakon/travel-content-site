@@ -56,14 +56,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,480;14..32,520;14..32,600;14..32,700;14..32,800&display=swap');
 
         :root {
-            --bg: #fcf0f3;
-            --ink: #1a1a1a;
-            --charcoal: #333333;
-            --vermillion: #ed2e38;
-            --violet: #4d49fc;
-            --border: #1a1a1a;
-            --meta: #595959;
-            --frame: #e8d5da;
+            --bg: #f8f5f0;
+            --ink: #2d2416;
+            --charcoal: #4a4540;
+            --teal: #0d7c66;
+            --copper: #c97d4b;
+            --border: #d9cfc0;
+            --meta: #8a7e72;
+            --frame: #e8e0d6;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -83,32 +83,32 @@
             text-decoration: none;
         }
         .nav-pill-solid { background: var(--ink); color: #fff; }
-        .nav-pill-solid:hover { background: var(--vermillion); }
+        .nav-pill-solid:hover { background: var(--teal); }
         .nav-pill-outline { border: 1.5px solid var(--border); color: var(--ink); }
-        .nav-pill-outline:hover { border-color: var(--vermillion); color: var(--vermillion); }
+        .nav-pill-outline:hover { border-color: var(--teal); color: var(--teal); }
 
         /* Wordmark */
-        .wordmark { font-weight: 700; font-size: 18px; color: var(--vermillion); text-decoration: none; letter-spacing: -0.02em; }
+        .wordmark { font-weight: 700; font-size: 18px; color: var(--teal); text-decoration: none; letter-spacing: -0.02em; }
 
         /* Outlined vermillion button */
         .btn-outline {
             display: inline-block; padding: 10px 28px;
-            border: 1.5px solid var(--vermillion); border-radius: 14px;
-            color: var(--vermillion); font-size: 14px; font-weight: 520;
+            border: 1.5px solid var(--teal); border-radius: 14px;
+            color: var(--teal); font-size: 14px; font-weight: 520;
             text-decoration: none; letter-spacing: -0.01em;
             transition: all 0.2s; background: transparent;
         }
-        .btn-outline:hover { background: var(--vermillion); color: #fff; }
+        .btn-outline:hover { background: var(--teal); color: #fff; }
 
         /* Solid violet CTA */
         .btn-cta {
             display: inline-block; padding: 12px 28px;
-            background: var(--violet); border-radius: 8px;
+            background: var(--copper); border-radius: 8px;
             color: #fff; font-size: 14px; font-weight: 520;
             text-decoration: none; letter-spacing: -0.01em;
             transition: all 0.2s; border: none;
         }
-        .btn-cta:hover { background: #3b37e0; transform: translateY(-1px); }
+        .btn-cta:hover { background: #b0683a; transform: translateY(-1px); }
 
         /* Hero */
         .hero-section {
@@ -118,25 +118,26 @@
         }
         .hero-overlay {
             position: absolute; inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 100%);
         }
         .hero-content { position: relative; text-align: center; padding: 0 24px; max-width: 800px; }
         .hero-content h1 {
-            font-size: clamp(36px, 8vw, 72px); font-weight: 700;
-            line-height: 1.05; letter-spacing: -0.035em; color: #fff;
+            font-size: clamp(40px, 8vw, 76px); font-weight: 700;
+            line-height: 1.05; letter-spacing: -0.04em; color: #fff;
+            text-shadow: 0 2px 40px rgba(0,0,0,0.3);
         }
-        .hero-content p { font-size: 18px; color: rgba(255,255,255,0.85); margin-top: 16px; line-height: 1.5; }
+        .hero-content p { font-size: 20px; color: rgba(255,255,255,0.9); margin-top: 20px; line-height: 1.6; max-width: 650px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 30px rgba(0,0,0,0.2); }
 
         /* Section */
-        .section { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
-        .section h2 { font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 48px; text-align: center; }
+        .section { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { font-size: 38px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 44px; text-align: center; color: var(--ink); }
 
         /* Cards grid */
         .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
         @media (max-width: 768px) { .cards-grid { grid-template-columns: 1fr; gap: 20px; } }
 
         .destination-card {
-            background: #fff; overflow: hidden;
+            background: #fff; overflow: hidden; border-radius: 16px;
             transition: transform 0.25s; text-decoration: none; color: inherit;
             display: flex; flex-direction: column;
         }
@@ -145,15 +146,15 @@
             width: 100%; height: 220px; object-fit: cover; display: block; flex-shrink: 0;
         }
         .destination-card .card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
-        .destination-card .card-body h3 { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; color: var(--ink); }
+        .destination-card .card-body h3 { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; color: var(--ink); }
         .destination-card .card-body .card-cities { font-size: 13px; color: var(--meta); letter-spacing: -0.005em; display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; padding-top: 12px; }
         .destination-card .card-body .card-cities span { background: var(--bg); color: var(--charcoal); padding: 4px 10px; border-radius: 4px; }
 
         /* Article content */
         .article-layout { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-        .article-body h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.025em; margin: 48px 0 16px; color: var(--ink); text-align: left; }
+        .article-body h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.025em; margin: 56px 0 20px; color: var(--ink); text-align: left; }
         .article-body h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 32px 0 12px; color: var(--charcoal); text-align: left; }
-        .article-body p { font-size: 18px; line-height: 1.8; color: var(--charcoal); margin-bottom: 22px; }
+        .article-body p { font-size: 18px; line-height: 1.9; color: var(--charcoal); margin-bottom: 24px; }
         .article-body ul, .article-body ol { margin: 16px 0 24px 20px; }
         .article-body li { font-size: 17px; line-height: 1.7; color: var(--charcoal); margin-bottom: 10px; }
         .article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
@@ -164,57 +165,57 @@
         /* Affiliate block */
         .affiliate-block {
             background: #fff; padding: 20px 28px; margin: 28px 0;
-            border-left: 3px solid var(--vermillion);
+            border-left: 3px solid var(--teal);
         }
         .affiliate-block a {
-            display: inline-block; padding: 10px 24px; border: 1.5px solid var(--vermillion);
-            border-radius: 14px; color: var(--vermillion); font-size: 14px; font-weight: 520;
+            display: inline-block; padding: 10px 24px; border: 1.5px solid var(--teal);
+            border-radius: 14px; color: var(--teal); font-size: 14px; font-weight: 520;
             text-decoration: none; margin: 6px 8px 6px 0; transition: all 0.2s;
         }
-        .affiliate-block a:hover { background: var(--vermillion); color: #fff; }
+        .affiliate-block a:hover { background: var(--teal); color: #fff; }
 
         /* Partner buttons */
         .partner-btn {
             display: inline-block; padding: 10px 20px;
-            border: 1.5px solid var(--vermillion); border-radius: 14px;
-            color: var(--vermillion); font-size: 14px; font-weight: 520;
+            border: 1.5px solid var(--teal); border-radius: 14px;
+            color: var(--teal); font-size: 14px; font-weight: 520;
             text-decoration: none; margin: 6px 8px 6px 0;
             transition: all 0.2s; background: transparent;
         }
-        .partner-btn:hover { background: var(--vermillion); color: #fff; }
+        .partner-btn:hover { background: var(--teal); color: #fff; }
         .partner-block {
             background: #fff; padding: 24px; margin: 32px 0;
-            border-radius: 16px; border-left: 4px solid var(--vermillion);
+            border-radius: 16px; border-left: 4px solid var(--teal);
         }
         .partner-block h4 { font-size: 17px; font-weight: 700; margin-bottom: 12px; color: var(--ink); }
 
         /* Partner inline links */
         .partner-link {
-            color: var(--vermillion); font-weight: 600;
-            text-decoration: none; border-bottom: 2px dotted var(--vermillion);
+            color: var(--teal); font-weight: 600;
+            text-decoration: none; border-bottom: 2px dotted var(--teal);
             padding: 1px 4px; transition: all 0.2s;
         }
-        .partner-link:hover { background: var(--vermillion); color: #fff; border-radius: 4px; }
+        .partner-link:hover { background: var(--teal); color: #fff; border-radius: 4px; }
 
         /* City buttons */
         .city-btn {
             display: inline-block; padding: 8px 16px;
-            border: 1.5px solid var(--vermillion); border-radius: 14px;
-            color: var(--vermillion); font-size: 13px; font-weight: 500;
+            border: 1.5px solid var(--teal); border-radius: 14px;
+            color: var(--teal); font-size: 13px; font-weight: 500;
             text-decoration: none; transition: all 0.2s; white-space: nowrap;
         }
-        .city-btn:hover { background: var(--vermillion); color: #fff; }
+        .city-btn:hover { background: var(--teal); color: #fff; }
 
         /* Agent block */
         .agent-block {
             background: #fff; padding: 40px; margin: 60px 0;
-            border-top: 4px solid var(--vermillion);
+            border-top: 4px solid var(--teal);
         }
         .agent-block h2 { font-size: 28px; text-align: left; margin-bottom: 20px; }
         .agent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
         .agent-benefits { list-style: none; padding: 0; }
         .agent-benefits li { padding: 8px 0; padding-left: 24px; position: relative; font-size: 15px; color: var(--charcoal); }
-        .agent-benefits li::before { content: '✓'; position: absolute; left: 0; color: var(--vermillion); font-weight: 700; }
+        .agent-benefits li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
 
         /* Contact form */
         .contact-form { display: flex; flex-direction: column; gap: 14px; }
@@ -223,12 +224,12 @@
             font-size: 15px; font-family: 'Inter', sans-serif; color: var(--ink);
             width: 100%;
         }
-        .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--vermillion); outline-offset: -2px; }
+        .contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--teal); outline-offset: -2px; }
         .contact-form button { align-self: flex-start; cursor: pointer; }
 
         /* Breadcrumbs */
         .breadcrumbs { padding: 16px 0; font-size: 13px; color: var(--meta); max-width: 800px; margin: 0 auto; }
-        .breadcrumbs a { color: var(--vermillion); text-decoration: none; }
+        .breadcrumbs a { color: var(--teal); text-decoration: none; }
         .breadcrumbs a:hover { text-decoration: underline; }
 
         /* Back button */
@@ -240,12 +241,12 @@
             transition: all 0.2s; cursor: pointer; background: transparent;
             margin-bottom: 24px;
         }
-        .back-btn:hover { border-color: var(--vermillion); color: var(--vermillion); }
+        .back-btn:hover { border-color: var(--teal); color: var(--teal); }
 
         /* Footer */
         .site-footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 60px 24px; margin-top: 80px; }
         .site-footer a { color: #fff; text-decoration: none; }
-        .site-footer a:hover { color: var(--vermillion); }
+        .site-footer a:hover { color: var(--teal); }
 
         /* FAQ */
         .faq details { background: #fff; padding: 20px 24px; margin-bottom: 8px; }
@@ -268,12 +269,12 @@
         }
         .fixed-btn {
             width: 44px; height: 44px; border-radius: 50%;
-            border: 1.5px solid var(--vermillion); background: var(--bg);
-            color: var(--vermillion); font-size: 22px; cursor: pointer;
+            border: 1.5px solid var(--teal); background: var(--bg);
+            color: var(--teal); font-size: 22px; cursor: pointer;
             display: flex; align-items: center; justify-content: center;
             transition: all 0.2s; text-decoration: none;
         }
-        .fixed-btn:hover { background: var(--vermillion); color: #fff; }
+        .fixed-btn:hover { background: var(--teal); color: #fff; }
 
         @media (max-width: 768px) {
             .agent-grid { grid-template-columns: 1fr; }
@@ -302,7 +303,7 @@
             .breadcrumbs { padding: 12px 12px 0; font-size: 12px; }
         }
 
-        img { background: linear-gradient(135deg, #e8d5da 0%, #fcf0f3 100%); }
+        img { background: linear-gradient(135deg, #e8e0d6 0%, #f8f5f0 100%); }
         img[src*="unsplash"] { min-height: 200px; }
     </style>
 
@@ -381,7 +382,7 @@
 
 
 
-<div class="hero-section" style="background-image:url('/travel-content-site/assets/cities/thulusdhoo.webp');min-height:380px;">
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&amp;q=80');min-height:380px;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1 style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;margin:0;">Thulusdhoo Travel Guide 2026</h1>
