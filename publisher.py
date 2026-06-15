@@ -543,6 +543,15 @@ def build_destination_page(country_slug, lang):
 
     template = env.get_template("destination-rich.html")
 
+    og_images = {
+        "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
+        "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
+        "egypt": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&q=80",
+        "uae": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
+        "indonesia": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&q=80",
+        "china": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&q=80",
+        "maldives": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
+    }
     html = template.render(
         lang=lang,
         country=country,
@@ -560,6 +569,7 @@ def build_destination_page(country_slug, lang):
             {"label": country["name_en"] if lang == "en" else country["name_ru"],
              "url": f"/{lang}/{country_slug}/index.html"},
         ],
+        og_image=og_images.get(country_slug, ""),
     )
 
     out = OUTPUT_DIR / lang / country_slug / "index.html"

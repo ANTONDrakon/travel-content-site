@@ -8,7 +8,7 @@
 
     <link rel="alternate" hreflang="ru" href="https://antondrakon.github.io/travel-content-site/ru/uae/dubai-oteli.html">
     <link rel="alternate" hreflang="en" href="https://antondrakon.github.io/travel-content-site/en/uae/dubai-hotels.html">
-    <link rel="alternate" hreflang="x-default" href="https://antondrakon.github.io/travel-content-site/en/uae/dubai-hotels.html">
+    <link rel="alternate" hreflang="x-default" href="https://antondrakon.github.io/travel-content-site/ru/uae/dubai-oteli.html">
 
     
     <link rel="canonical" href="https://antondrakon.github.io/travel-content-site/en/uae/dubai-hotels.html">
@@ -326,8 +326,9 @@
     window.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('img').forEach(function(img) {
             img.addEventListener('error', function() {
-                this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400"><rect fill="#fcf0f3" width="800" height="400"/><text fill="#ed2e38" font-family="sans-serif" font-size="20" text-anchor="middle" x="400" y="200">📷 ' + (this.alt || 'Photo') + '</text></svg>');
+                this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500"><rect fill="#e8e0d6" width="800" height="500"/><text fill="#8a7e72" font-family="sans-serif" font-size="18" text-anchor="middle" x="400" y="260">' + (this.alt || 'Image') + '</text></svg>');
                 this.style.objectFit = 'contain';
+                this.style.background = '#e8e0d6';
             });
         });
         var carousels = document.querySelectorAll('.agent-carousel');
@@ -365,7 +366,7 @@
 <body>
 
 <!-- NAV -->
-<header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
+<header style="position:sticky;top:0;left:0;right:0;z-index:100;padding:12px 24px;background:var(--bg);border-bottom:1px solid var(--frame);">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
         <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/travel-content-site/en/index.html" class="wordmark">TravelHub</a>

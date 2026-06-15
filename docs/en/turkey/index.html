@@ -8,7 +8,7 @@
 
     <link rel="alternate" hreflang="ru" href="https://antondrakon.github.io/travel-content-site/ru/turkey/index.html">
     <link rel="alternate" hreflang="en" href="https://antondrakon.github.io/travel-content-site/en/turkey/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://antondrakon.github.io/travel-content-site/en/turkey/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://antondrakon.github.io/travel-content-site/ru/turkey/index.html">
 
     
     <link rel="canonical" href="https://antondrakon.github.io/travel-content-site/en/turkey/index.html">
@@ -19,7 +19,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://antondrakon.github.io/travel-content-site/en/turkey/index.html">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://antondrakon.github.io/travel-content-site/assets/countries/travel-hero.webp">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&amp;q=80">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -326,8 +326,9 @@
     window.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('img').forEach(function(img) {
             img.addEventListener('error', function() {
-                this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400"><rect fill="#fcf0f3" width="800" height="400"/><text fill="#ed2e38" font-family="sans-serif" font-size="20" text-anchor="middle" x="400" y="200">📷 ' + (this.alt || 'Photo') + '</text></svg>');
+                this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500"><rect fill="#e8e0d6" width="800" height="500"/><text fill="#8a7e72" font-family="sans-serif" font-size="18" text-anchor="middle" x="400" y="260">' + (this.alt || 'Image') + '</text></svg>');
                 this.style.objectFit = 'contain';
+                this.style.background = '#e8e0d6';
             });
         });
         var carousels = document.querySelectorAll('.agent-carousel');
@@ -349,7 +350,7 @@
 <body>
 
 <!-- NAV -->
-<header style="position:absolute;top:0;left:0;right:0;z-index:100;padding:16px 24px;">
+<header style="position:sticky;top:0;left:0;right:0;z-index:100;padding:12px 24px;background:var(--bg);border-bottom:1px solid var(--frame);">
     <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
         <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
         <a href="/travel-content-site/en/index.html" class="wordmark">TravelHub</a>
@@ -448,94 +449,66 @@
         <div class="cards-grid" style="margin-top:40px;">
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&amp;q=80" alt="Istanbul" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
-                    <a href="/travel-content-site/en/turkey/istanbul-travel-guide.html" style="text-decoration:none;color:inherit;">
-                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Istanbul</h3>
-                    </a>
-                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">City on two continents: palaces, mosques, bazaars. Cultural capital.</p>
-                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
-                    
-                    <a href="/travel-content-site/en/turkey/istanbul-travel-guide.html" class="city-btn">📖 Travel Guide</a>
-                    
-                    <a href="/travel-content-site/en/turkey/istanbul-hotels.html" class="city-btn">🏨 Hotels</a>
-                    
-                    <a href="/travel-content-site/en/turkey/istanbul-cheap-flights.html" class="city-btn">✈️ Flights</a>
-                    
-                    <a href="/travel-content-site/en/turkey/istanbul-things-to-do.html" class="city-btn">🏛 Attractions</a>
-                    
-                    <a href="/travel-content-site/en/turkey/istanbul-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
-                    
+                <div style="position:relative;">
+                    <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&amp;q=80" alt="Istanbul" class="card-img" loading="lazy" style="height:220px;width:100%;object-fit:cover;">
+                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.6));">
+                        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;">
+                            <h3 style="color:#fff;font-size:22px;font-weight:700;margin:0;">Istanbul</h3>
+                            <p style="color:rgba(255,255,255,0.8);font-size:13px;margin:4px 0 0;">City on two continents: palaces, mosques, bazaars. Cultural capital.</p>
+                        </div>
                     </div>
+                </div>
+                <div class="card-body" style="padding:16px;display:flex;gap:8px;">
+                    <a href="/travel-content-site/en/turkey/istanbul-travel-guide.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Open guide</a>
+                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Book with Valentina</a>
                 </div>
             </div>
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://images.unsplash.com/photo-1591994843349-f415f2e6e1a0?w=800&amp;q=80" alt="Antalya" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
-                    <a href="/travel-content-site/en/turkey/antalya-travel-guide.html" style="text-decoration:none;color:inherit;">
-                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Antalya</h3>
-                    </a>
-                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Mediterranean resort: beaches, All Inclusive, Old Town. Universal choice.</p>
-                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
-                    
-                    <a href="/travel-content-site/en/turkey/antalya-travel-guide.html" class="city-btn">📖 Travel Guide</a>
-                    
-                    <a href="/travel-content-site/en/turkey/antalya-hotels.html" class="city-btn">🏨 Hotels</a>
-                    
-                    <a href="/travel-content-site/en/turkey/antalya-cheap-flights.html" class="city-btn">✈️ Flights</a>
-                    
-                    <a href="/travel-content-site/en/turkey/antalya-things-to-do.html" class="city-btn">🏛 Attractions</a>
-                    
-                    <a href="/travel-content-site/en/turkey/antalya-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
-                    
+                <div style="position:relative;">
+                    <img src="https://images.unsplash.com/photo-1591994843349-f415f2e6e1a0?w=800&amp;q=80" alt="Antalya" class="card-img" loading="lazy" style="height:220px;width:100%;object-fit:cover;">
+                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.6));">
+                        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;">
+                            <h3 style="color:#fff;font-size:22px;font-weight:700;margin:0;">Antalya</h3>
+                            <p style="color:rgba(255,255,255,0.8);font-size:13px;margin:4px 0 0;">Mediterranean resort: beaches, All Inclusive, Old Town. Universal choice.</p>
+                        </div>
                     </div>
+                </div>
+                <div class="card-body" style="padding:16px;display:flex;gap:8px;">
+                    <a href="/travel-content-site/en/turkey/antalya-travel-guide.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Open guide</a>
+                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Book with Valentina</a>
                 </div>
             </div>
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://images.unsplash.com/photo-1591994843349-f415f2e6e1a0?w=800&amp;q=80" alt="Bodrum" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
-                    <a href="/travel-content-site/en/turkey/bodrum-travel-guide.html" style="text-decoration:none;color:inherit;">
-                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Bodrum</h3>
-                    </a>
-                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Aegean resort with European flair: marina, white houses, nightlife.</p>
-                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
-                    
-                    <a href="/travel-content-site/en/turkey/bodrum-travel-guide.html" class="city-btn">📖 Travel Guide</a>
-                    
-                    <a href="/travel-content-site/en/turkey/bodrum-hotels.html" class="city-btn">🏨 Hotels</a>
-                    
-                    <a href="/travel-content-site/en/turkey/bodrum-cheap-flights.html" class="city-btn">✈️ Flights</a>
-                    
-                    <a href="/travel-content-site/en/turkey/bodrum-things-to-do.html" class="city-btn">🏛 Attractions</a>
-                    
-                    <a href="/travel-content-site/en/turkey/bodrum-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
-                    
+                <div style="position:relative;">
+                    <img src="https://images.unsplash.com/photo-1591994843349-f415f2e6e1a0?w=800&amp;q=80" alt="Bodrum" class="card-img" loading="lazy" style="height:220px;width:100%;object-fit:cover;">
+                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.6));">
+                        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;">
+                            <h3 style="color:#fff;font-size:22px;font-weight:700;margin:0;">Bodrum</h3>
+                            <p style="color:rgba(255,255,255,0.8);font-size:13px;margin:4px 0 0;">Aegean resort with European flair: marina, white houses, nightlife.</p>
+                        </div>
                     </div>
+                </div>
+                <div class="card-body" style="padding:16px;display:flex;gap:8px;">
+                    <a href="/travel-content-site/en/turkey/bodrum-travel-guide.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Open guide</a>
+                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Book with Valentina</a>
                 </div>
             </div>
             
             <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <img src="https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?w=800&amp;q=80" alt="Cappadocia" class="card-img" loading="lazy" style="height:220px;">
-                <div class="card-body" style="padding:24px;flex:1;display:flex;flex-direction:column;">
-                    <a href="/travel-content-site/en/turkey/cappadocia-travel-guide.html" style="text-decoration:none;color:inherit;">
-                        <h3 style="font-size:22px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink);">Cappadocia</h3>
-                    </a>
-                    <p style="font-size:14px;color:var(--meta);margin-bottom:14px;line-height:1.5;">Lunar landscape, balloons, cave hotels. Unique region of Turkey.</p>
-                    <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;">
-                    
-                    <a href="/travel-content-site/en/turkey/cappadocia-travel-guide.html" class="city-btn">📖 Travel Guide</a>
-                    
-                    <a href="/travel-content-site/en/turkey/cappadocia-hotels.html" class="city-btn">🏨 Hotels</a>
-                    
-                    <a href="/travel-content-site/en/turkey/cappadocia-cheap-flights.html" class="city-btn">✈️ Flights</a>
-                    
-                    <a href="/travel-content-site/en/turkey/cappadocia-things-to-do.html" class="city-btn">🏛 Attractions</a>
-                    
-                    <a href="/travel-content-site/en/turkey/cappadocia-best-time-to-visit.html" class="city-btn">☀️ Seasons &amp; Weather</a>
-                    
+                <div style="position:relative;">
+                    <img src="https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?w=800&amp;q=80" alt="Cappadocia" class="card-img" loading="lazy" style="height:220px;width:100%;object-fit:cover;">
+                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.6));">
+                        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;">
+                            <h3 style="color:#fff;font-size:22px;font-weight:700;margin:0;">Cappadocia</h3>
+                            <p style="color:rgba(255,255,255,0.8);font-size:13px;margin:4px 0 0;">Lunar landscape, balloons, cave hotels. Unique region of Turkey.</p>
+                        </div>
                     </div>
+                </div>
+                <div class="card-body" style="padding:16px;display:flex;gap:8px;">
+                    <a href="/travel-content-site/en/turkey/cappadocia-travel-guide.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Open guide</a>
+                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Book with Valentina</a>
                 </div>
             </div>
             
