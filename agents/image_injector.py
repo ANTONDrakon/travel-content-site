@@ -108,11 +108,16 @@ def build_swiper_carousel(hotel, lang="ru"):
     if district:
         html += f'<span style="font-size:13px;color:var(--meta);">🏙 {district}</span>'
     if price:
-        html += f'<span style="font-size:14px;font-weight:600;color:var(--vermillion);">{price}</span>'
+        html += f'<span style="font-size:15px;font-weight:700;color:var(--teal);">{price}</span>'
     if rating:
         html += f'<span style="font-size:13px;color:#f39c12;">⭐ {rating}</span>'
 
-    html += f'''</div></div></div>
+    html += f'''</div>
+<div style="display:flex;gap:8px;margin-top:12px;">
+<a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_{hotel_name.lower().replace(' ', '_')}" target="_blank" rel="nofollow sponsored" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Check price</a>
+<a href="#agent-form" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Ask expert</a>
+</div>
+</div></div>
 <script>
 (function(){{
 var s = new Swiper('#{carousel_id}', {{
