@@ -19,12 +19,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site_url }}{{ canonical or ('/' + lang + '/' + (alternate_url or '')) }}">
     <meta property="og:locale" content="{{ 'ru_RU' if lang == 'ru' else 'en_US' }}">
-    <meta property="og:image" content="{{ site_url }}/assets/countries/travel-hero.webp">
+    <meta property="og:image" content="{% if og_image is defined and og_image %}{{ og_image }}{% else %}{{ site_url }}/assets/countries/travel-hero.webp{% endif %}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ site_url }}/assets/countries/travel-hero.webp">
 
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="ai-content-type" content="travel guide, expert review, destination handbook">
@@ -367,8 +366,8 @@
         <div>{% if not hide_back %}<a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="{{ 'Back' if lang == 'en' else 'Назад' }}">← {{ 'Back' if lang == 'en' else 'Назад' }}</a>{% endif %}</div>
         <a href="{{ root }}/{{ lang }}/index.html" class="wordmark">TravelHub</a>
         <div style="display:flex;gap:8px;">
-            {% if lang == "en" %}<a href="{{ root }}/en/{% block en_alt %}{% endblock %}" class="nav-pill nav-pill-solid" style="padding:8px 14px;font-size:14px;font-weight:600;">🇬🇧 EN</a>{% else %}<a href="{{ root }}/en/{% block en_alt %}{% endblock %}" class="nav-pill nav-pill-outline" style="padding:8px 14px;font-size:14px;">🇬🇧 EN</a>{% endif %}
-            {% if lang == "ru" %}<a href="{{ root }}/ru/{% block ru_alt %}{% endblock %}" class="nav-pill nav-pill-solid" style="padding:8px 14px;font-size:14px;font-weight:600;">🇷🇺 RU</a>{% else %}<a href="{{ root }}/ru/{% block ru_alt %}{% endblock %}" class="nav-pill nav-pill-outline" style="padding:8px 14px;font-size:14px;">🇷🇺 RU</a>{% endif %}
+            <a href="{{ root }}/en/{{ self.en_alt() }}" class="nav-pill {% if lang == 'en' %}nav-pill-solid{% else %}nav-pill-outline{% endif %}" style="padding:8px 14px;font-size:14px;{% if lang == 'en' %}font-weight:600;{% endif %}">🇬🇧 EN</a>
+            <a href="{{ root }}/ru/{{ self.ru_alt() }}" class="nav-pill {% if lang == 'ru' %}nav-pill-solid{% else %}nav-pill-outline{% endif %}" style="padding:8px 14px;font-size:14px;{% if lang == 'ru' %}font-weight:600;{% endif %}">🇷🇺 RU</a>
         </div>
     </div>
 </header>
