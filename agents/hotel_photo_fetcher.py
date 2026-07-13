@@ -273,7 +273,8 @@ class HotelPhotoFetcher:
             return None
 
     def find_photos(self, hotel_name: str, city_slug: str,
-                    country_slug: str, max_photos: int = 3) -> dict:
+                    country_slug: str, max_photos: int = 3,
+                    hotel_slug: str = "") -> dict:
         ck = self._cache_key(hotel_name, city_slug)
         if ck in self.cache:
             cached = self.cache[ck]
@@ -310,8 +311,9 @@ class HotelPhotoFetcher:
             self._save_cache()
             return {"photos": result_photos, "cache_key": ck, "from_cache": False}
 
+        lookup_slug = hotel_slug if hotel_slug else hotel_name.lower().replace(' ', '-')
         hotel_id = self.sources_db.get("hotellook_ids", {}).get(
-            f"{country_slug}/{city_slug}/{hotel_name.lower().replace(' ', '-')}"
+            f"{country_slug}/{city_slug}/{lookup_slug}"
         )
         if hotel_id and str(hotel_id).strip():
             hotel_id = str(hotel_id).strip()
@@ -355,7 +357,7 @@ class HotelPhotoFetcher:
         country_slug = hotel_entry["country_slug"]
         city_slug = hotel_entry["city_slug"]
 
-        result = self.find_photos(name, city_slug, country_slug, max_photos)
+        result = self.find_photos(name, city_slug, country_slug, max_photos, hotel_slug=slug)
         photos = result["photos"]
 
         downloaded = []

@@ -178,14 +178,29 @@ def inject_photo_disclaimer(body, lang="ru"):
     body = re.sub(r'(<(?:figure|img)[^>]*>)', r'\1' + notice, body, count=1)
     return body
 
+def inject_china_entry_info(body, country_slug, lang="ru"):
+    if country_slug != "china":
+        return body
+    if lang == "ru":
+        qr_text = '<p><strong>📱 Важно для Китая:</strong> Для въезда в Китай cầnзуется QR-код здоровья (WeChat или Alipay). Заполните декларацию здоровья за 24 часа до вылета. Также потребуется загранпаспорт с визой (оформляется через туроператора). Для Хайнаня — безвизовый въезд до 30 дней через туроператора.</p>'
+    else:
+        qr_text = '<p><strong>📱 Important for China:</strong> A health QR code (via WeChat or Alipay) is required for entry. Fill out the health declaration within 24 hours before departure. A passport with visa is required (processed via tour operator). Hainan: visa-free entry for up to 30 days via tour operator.</p>'
+    visa_pattern = re.compile(r'(<h[23][^>]*>.*?(?:виза|visa|документ|document|правила въезда|entry rules).*?</h[23]>.*?)(<h[23])', re.IGNORECASE | re.DOTALL)
+    match = visa_pattern.search(body)
+    if match:
+        insert_pos = match.end(1)
+        body = body[:insert_pos] + qr_text + body[insert_pos:]
+    return body
+
+
 def inject_maldives_qr(body, country_slug, lang="ru"):
     if country_slug != "maldives":
         return body
     if lang == "ru":
-        qr_text = '<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Если не хотите разбираться самостоятельно — обратитесь к нашему турагенту, мы поможем с оформлением.</p>'
+        qr_text = '<p><strong>📱 Важно:</strong> Перед вылетом на Мальдивы заполните декларацию IMUGA на сайте <strong>imuga.immigration.gov.mv</strong> и получите QR-код — без него вас не посадят на рейс. Виза по прибытии — бесплатно, до 30 дней. Если не хотите разбираться самостоятельно — обратитесь к нашему турагенту, мы поможем с оформлением.</p>'
     else:
-        qr_text = '<p><strong>📱 Important:</strong> Before flying to Maldives, fill out the IMUGA declaration at <strong>imuga.immigration.gov.mv</strong> and get a QR code — without it you will not be allowed to board your flight. If you need help, contact our travel agent for assistance with the process.</p>'
-    visa_pattern = re.compile(r'(<h2[^>]*>.*?(?:виза|visa|документ|document).*?</h2>.*?)(<h2)', re.IGNORECASE | re.DOTALL)
+        qr_text = '<p><strong>📱 Important:</strong> Before flying to Maldives, fill out the IMUGA declaration at <strong>imuga.immigration.gov.mv</strong> and get a QR code — without it you will not be allowed to board your flight. Free visa on arrival for up to 30 days. If you need help, contact our travel agent for assistance with the process.</p>'
+    visa_pattern = re.compile(r'(<h[23][^>]*>.*?(?:виза|visa|документ|document).*?</h[23]>.*?)(<h[23])', re.IGNORECASE | re.DOTALL)
     match = visa_pattern.search(body)
     if match:
         insert_pos = match.end(1)
@@ -193,42 +208,36 @@ def inject_maldives_qr(body, country_slug, lang="ru"):
     return body
 
 def sanitize_agent_references(body):
-    """Remove remaining first-person agent persona references from AI-generated content."""
-    body = re.sub(r'Я, Валентина Туркова[ ,]+', 'Я, ваш гид, ', body)
-    body = re.sub(r'я, Валентина Туркова[ ,]+', 'я, ваш гид, ', body)
-    body = re.sub(r'Валентина Туркова', 'ваш гид', body)
-    body = re.sub(r'я Валентина[ ,]+', 'я ', body)
-    body = re.sub(r'"Valentina, [^"]*"', '"Traveler, "', body)
-    body = re.sub(r'Валентина[,\s]+(?!Туркова)', 'гид ', body)
-    body = re.sub(r'Valentina Turkova', 'your guide', body)
-    body = re.sub(r"I'm Valentina[,\s]+", "I'm ", body)
-    body = re.sub(r'my tourists', 'travelers', body, flags=re.IGNORECASE)
-    body = re.sub(r'my travelers', 'travelers', body, flags=re.IGNORECASE)
-    # Remove common first-person impersonation patterns
+    """Clean up AI-generated persona artifacts while preserving the Valentina Turkova brand.
+
+    Valentina Turkova is a real travel agent — keep her name.
+    Only fix obviously fake AI-persona patterns.
+    """
+    # Fix fake first-person claims (AI over-claims)
     body = re.sub(r'я отправила более? \d+', 'мы отправили более', body, flags=re.IGNORECASE)
     body = re.sub(r'я отправил[ао]? \d+', 'мы отправили', body, flags=re.IGNORECASE)
     body = re.sub(r'за \d+ лет работы агентом', 'по опыту нашей команды', body)
+
+    # Fix possessive patterns that sound AI-generated
     body = re.sub(r'мои туристы', 'наши путешественники', body)
     body = re.sub(r'моих туристов', 'наших путешественников', body)
     body = re.sub(r'моим туристам', 'нашим путешественникам', body)
-    body = re.sub(r'моя особая любовь', 'особое место', body)
-    body = re.sub(r'моя наценка', 'наценка', body, flags=re.IGNORECASE)
-    body = re.sub(r'моей наценк', 'наценк', body, flags=re.IGNORECASE)
-    body = re.sub(r'\[моя наценка[^\]]*\]', '', body)
-    body = re.sub(r'\(с моей наценкой[^)]*\)', '', body)
-    body = re.sub(r'\(с учётом моей наценки[^)]*\)', '', body)
     body = re.sub(r'мои клиенты', 'наши клиенты', body)
     body = re.sub(r'моих клиентов', 'наших клиентов', body)
     body = re.sub(r'своими туристами', 'путешественниками', body)
     body = re.sub(r'своих туристов', 'путешественников', body)
-    body = re.sub(r'I\'ve sent dozens of travelers', 'Many travelers have', body)
-    body = re.sub(r'I\'ve sent dozens', 'Many have', body)
-    body = re.sub(r"I've sent dozens", 'Many have', body)
+
+    # Remove onca markup artifacts
+    body = re.sub(r'моя особая любовь', 'особое место', body)
+    body = re.sub(r'\[моя наценка[^\]]*\]', '', body)
+    body = re.sub(r'\(с моей наценкой[^)]*\)', '', body)
+    body = re.sub(r'\(с учётом моей наценки[^)]*\)', '', body)
+
+    # English AI-persona fixes
     body = re.sub(r"I'm about to spill all my secrets", "here are some tips", body)
     body = re.sub(r"spill all my secrets", "share some tips", body)
-    body = re.sub(r'my clients', 'travelers', body)
     body = re.sub(r'my secret', 'a tip', body, flags=re.IGNORECASE)
-    body = re.sub(r'my special', 'a special', body, flags=re.IGNORECASE)
+
     return body
 
 
@@ -619,6 +628,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     body = inject_disclaimer(body, lang)
     body = inject_photo_disclaimer(body, lang)
     body = inject_maldives_qr(body, country_slug, lang)
+    body = inject_china_entry_info(body, country_slug, lang)
 
     import re as _re
     body = _re.sub(r'<h1[^>]*>.*?</h1>\s*', '', body, count=1)

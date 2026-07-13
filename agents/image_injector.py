@@ -145,8 +145,6 @@ def inject_hotel_carousels(body, country_slug, city_slug, lang="ru"):
     for line in lines:
         result.append(line)
 
-        if count >= 15:
-            break
         if "<img" in line or "swiper" in line.lower():
             continue
 

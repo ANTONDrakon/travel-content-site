@@ -5,17 +5,27 @@ def replace_placeholders(body, city_name_en, lang):
         hotels_link, flights_link, tours_link, insurance_link,
         AFFILIATE_HTML, PLACEHOLDERS,
     )
+    from config.destinations import DESTINATIONS
 
     city_slug = city_name_en.lower().replace(" ", "-")
+
+    # Look up proper IATA airport code for the city
+    destination_code = city_name_en.upper()[:3]
+    for country in DESTINATIONS.values():
+        for c_slug, city_data in country.get("cities", {}).items():
+            if city_data.get("name_en", "").lower() == city_name_en.lower():
+                codes = city_data.get("airport_codes", [])
+                if codes:
+                    destination_code = codes[0]
+                break
 
     replacements = {
         "{hotels_placeholder}": AFFILIATE_HTML["hotels_en" if lang == "en" else "hotels"].format(
             url=hotels_link(city_slug), city=city_name_en
         ),
         "{flights_placeholder}": AFFILIATE_HTML["flights_en" if lang == "en" else "flights"].format(
-            url=flights_link(destination=city_name_en.upper()[:3]), city=city_name_en
+            url=flights_link(destination=destination_code), city=city_name_en
         ),
-        # TODO: use actual IATA codes from cities.json instead of first 3 chars
         "{tours_placeholder}": AFFILIATE_HTML["tours_en" if lang == "en" else "tours"].format(
             url=tours_link(city_name_en), city=city_name_en
         ),

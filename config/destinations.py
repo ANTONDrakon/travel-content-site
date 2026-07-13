@@ -280,8 +280,8 @@ DESTINATIONS = {
         "name_en": "Maldives",
         "slug": "maldives",
         "currency": "MVR",
-        "visa_ru": "безвизовый въезд до 90 дней для граждан РФ. Бесплатная виза по прибытии.",
-        "visa_en": "visa-free entry up to 90 days for Russian citizens. Free visa on arrival.",
+        "visa_ru": "безвизовый въезд до 30 дней для граждан РФ. Бесплатная виза по прибытии.",
+        "visa_en": "visa-free entry up to 30 days for Russian citizens. Free visa on arrival.",
         "airport_code": "MLE",
         "cities": {
             "male": {
