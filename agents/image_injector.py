@@ -52,19 +52,28 @@ def find_hotel(country_slug, city_slug, hotel_name):
     return None
 
 def build_swiper_carousel(hotel, lang="ru"):
-    """Build Swiper.js carousel HTML for a hotel."""
+    """Build Swiper.js carousel HTML for a hotel with SEO-optimized images."""
     images = hotel.get("images", [])
     if not images:
         return ""
 
     hotel_name = hotel["name"]
+    city_name = hotel.get("city_name_ru", hotel["city_slug"]) if lang == "ru" else hotel.get("city_name_en", hotel["city_slug"])
+    country_name = hotel.get("country_slug", "").title()
     carousel_id = f"swiper_{hashlib.md5((hotel_name + hotel['city_slug']).encode()).hexdigest()[:8]}"
 
     any_verified = any(img.get("verified", False) for img in images)
 
+    # SEO-optimized alt text for each photo
+    alt_texts = [
+        f"{hotel_name} — {city_name}, {country_name}. Фото отеля" if lang == "ru" else f"{hotel_name} in {city_name}, {country_name}. Hotel photo",
+        f"{hotel_name} — номер и interior в {city_name}" if lang == "ru" else f"{hotel_name} — room interior in {city_name}",
+        f"{hotel_name} — вид на территорию {city_name}" if lang == "ru" else f"{hotel_name} — grounds and amenities in {city_name}",
+    ]
+
     slides = []
     for i, img in enumerate(images[:3]):
-        alt = img.get("alt", hotel_name) if lang == "ru" else img.get("alt_en", hotel_name)
+        alt = alt_texts[i] if i < len(alt_texts) else alt_texts[0]
         src = img["src"]
         verified = img.get("verified", False)
         badge = ""
@@ -78,7 +87,9 @@ def build_swiper_carousel(hotel, lang="ru"):
         slides.append(
             f'<div class="swiper-slide" style="position:relative;">'
             f'{badge}'
-            f'<img src="{src}" alt="{alt}" loading="{"eager" if i == 0 else "lazy"}" '
+            f'<img src="{src}" alt="{alt}" title="{hotel_name} — {city_name}" '
+            f'loading="{"eager" if i == 0 else "lazy"}" '
+            f'width="800" height="420" '
             f'style="width:100%;height:420px;object-fit:cover;border-radius:12px;">'
             f'</div>'
         )

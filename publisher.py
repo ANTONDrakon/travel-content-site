@@ -691,6 +691,40 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     schema_breadcrumbs = generate_schema_breadcrumbs(breadcrumbs)
     schema_data = [schema_article, schema_faq, schema_breadcrumbs]
 
+    # Add hotel-specific structured data for AI search engines
+    if content_type == "hotels":
+        from agents.image_injector import find_hotel
+        hotels_schema = []
+        hotel_count = 0
+        for line in body.split("\n"):
+            import re as _re
+            m = _re.search(r'<h3[^>]*>\s*(?:\d+\.\s*)?(?P<name>[A-ZА-Я][A-Za-zА-Яа-я\s&\-\'\.]{4,80}?)\s*(?:\([^)]*\))?\s*</h3>', line, _re.IGNORECASE)
+            if m:
+                hotel_name = m.group("name").strip()
+                hotel = find_hotel(country_slug, city_slug, hotel_name)
+                if hotel:
+                    images = hotel.get("images", [])[:3]
+                    schema_hotel = {
+                        "@context": "https://schema.org",
+                        "@type": "LodgingBusiness",
+                        "name": hotel_name,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": city_name,
+                            "addressCountry": country_name,
+                        },
+                        "image": [f"https://antondrakon.github.io{img['src']}" for img in images if img.get("src")],
+                        "description": hotel.get("description", ""),
+                        "priceRange": hotel.get("price", ""),
+                        "telephone": "",
+                    }
+                    hotels_schema.append(schema_hotel)
+                    hotel_count += 1
+                    if hotel_count >= 10:
+                        break
+        if hotels_schema:
+            schema_data.append({"@context": "https://schema.org", "@graph": hotels_schema})
+
     related = []
     for ct_slug, ct_info in CONTENT_TYPES.items():
         if ct_slug != content_type:
