@@ -238,6 +238,21 @@ def sanitize_agent_references(body):
     body = re.sub(r"spill all my secrets", "share some tips", body)
     body = re.sub(r'my secret', 'a tip', body, flags=re.IGNORECASE)
 
+    # Fix "Я, Валентина" and "I'm Valentina" patterns in article body
+    body = re.sub(r'Я,\s*Валентина[^.]*?,\s*', '', body)
+    body = re.sub(r'я,\s*Валентина[^.]*?,\s*', '', body)
+    body = re.sub(r"I'm Valentina[^.]*?,\s*", "", body)
+    body = re.sub(r"I, Valentina[^.]*?,\s*", "", body)
+
+    # Fix "С любовью к приключениям, Валентина" sign-offs
+    body = re.sub(r'С любовью к приключениям,?\s*Валентина\.?\s*[^<]*', '', body)
+    body = re.sub(r'С любовью,?\s*Валентина\.?\s*[^<]*', '', body)
+    body = re.sub(r'With love,?\s*Valentina\.?\s*[^<]*', '', body)
+
+    # Fix "Валентина, ты гений" and similar quotes
+    body = re.sub(r'«Валентина,?[^»]*»', '', body)
+    body = re.sub(r'"Valentina[^"]*"', '', body)
+
     return body
 
 

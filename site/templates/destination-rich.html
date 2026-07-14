@@ -68,7 +68,7 @@
                 </div>
                 <div class="card-body" style="padding:16px;display:flex;gap:8px;">
                     <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city_data.articles[0].url }}.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">{{ "Open guide" if lang == "en" else "Гайд" }}</a>
-                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">{{ "Book with Valentina" if lang == "en" else "Валентине" }}</a>
+                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">{{ "Get a tour quote" if lang == "en" else "Подбор тура" }}</a>
                 </div>
             </div>
             {% endfor %}
@@ -146,7 +146,7 @@
 <div style="max-width:800px;margin:20px auto 0;padding:24px;background:var(--bg);border-radius:16px;text-align:center;">
     <p style="font-size:15px;font-weight:600;color:var(--ink);margin-bottom:12px;">{{ "Too complicated? We handle everything for you." if lang == "en" else "Сложно? Мы всё сделаем за вас." }}</p>
     <p style="font-size:13px;color:var(--meta);margin-bottom:16px;">{{ "QR codes, documents, hotel booking — just tell us your dates." if lang == "en" else "QR-коды, документы, бронь отеля — назовите даты." }}</p>
-    <a href="#agent" class="btn-cta" style="font-size:14px;padding:12px 28px;">{{ "Get help from Valentina →" if lang == "en" else "Помощь Валентины →" }}</a>
+    <a href="#agent" class="btn-cta" style="font-size:14px;padding:12px 28px;">{{ "Get help →" if lang == "en" else "Помощь эксперта →" }}</a>
 </div>
 {% endif %}
 
@@ -190,7 +190,7 @@
 <div style="max-width:800px;margin:-40px auto 60px;padding:24px;background:var(--bg);border-radius:16px;text-align:center;">
     <p style="font-size:15px;font-weight:600;color:var(--ink);margin-bottom:12px;">{{ "Need help with IMUGA or booking?" if lang == "en" else "Нужна помощь с IMUGA или бронью?" }}</p>
     <p style="font-size:13px;color:var(--meta);margin-bottom:16px;">{{ "We handle forms, transfers, hotels — just share your dates." if lang == "en" else "Заполним формы, организуем трансфер, подберём отель." }}</p>
-    <a href="#agent" class="btn-cta" style="font-size:14px;padding:12px 28px;">{{ "Get help from Valentina →" if lang == "en" else "Помощь Валентины →" }}</a>
+    <a href="#agent" class="btn-cta" style="font-size:14px;padding:12px 28px;">{{ "Get help →" if lang == "en" else "Помощь эксперта →" }}</a>
 </div>
 {% endif %}
 
@@ -256,8 +256,8 @@
     <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
             <div style="padding:40px;">
-                <img src="{{ root }}/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Valentina" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--teal);margin-bottom:12px;">
-                <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;color:var(--ink);">{{ "Valentina Turkova" if lang == "en" else "Валентина Туркова" }}</h3>
+                <img src="{{ root }}/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Travel Expert" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--teal);margin-bottom:12px;">
+                <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;color:var(--ink);">{{ "Your Travel Expert" if lang == "en" else "Ваш travel-эксперт" }}</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:16px;">{{ "Personal travel expert" if lang == "en" else "Персональный travel-эксперт" }}</p>
                 <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
                     <li style="font-size:14px;color:var(--charcoal);">✅ {{ "Hotel selection & booking" if lang == "en" else "Подбор и бронь отелей" }}</li>
@@ -274,7 +274,7 @@
                     <textarea name="message" rows="2" placeholder="{{ 'Dates, budget, wishes...' if lang == 'en' else 'Даты, бюджет, пожелания...' }}" style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;"></textarea>
                     <input type="hidden" name="destination" value="{{ cname_nom }}">
                     <input type="hidden" name="_subject" value="{{ 'Trip request: ' + cname_nom if lang == 'en' else 'Заявка: ' + cname_nom }}">
-                    <button type="submit" class="btn-cta" style="margin-top:8px;cursor:pointer;width:100%;font-size:14px;padding:12px;">{{ "Get help from Valentina →" if lang == "en" else "Помощь Валентины →" }}</button>
+                    <button type="submit" class="btn-cta" style="margin-top:8px;cursor:pointer;width:100%;font-size:14px;padding:12px;">{{ "Get help →" if lang == "en" else "Отправить заявку →" }}</button>
                 </form>
             </div>
         </div>
