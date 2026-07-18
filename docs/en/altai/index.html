@@ -251,190 +251,257 @@
 <main id="main-content">
 
 
-<!-- HERO -->
-<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&amp;q=80');min-height:600px;">
-    <div class="hero-overlay"></div>
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO — Country page
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&amp;q=80');">
     <div class="hero-content">
-        <h1>Vacation in Altai 2026</h1>
-        <p>A unique destination for those who want to rediscover Russia.</p>
-        <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px;flex-wrap:wrap;">
-            <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">Plan my trip →</a>
-            
-            <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);padding:8px 16px;border-radius:50px;">
-                <img src="/assets/agent/photo_2026-06-06_00-51-06.webp" alt="TravelHub Expert" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;" loading="lazy">
-                <span style="color:#fff;font-size:14px;font-weight:500;">TravelHub Expert<br><span style="font-size:12px;opacity:0.8;">Travel Guide Team</span></span>
-            </div>
-            
+        <p class="section-eyebrow" style="color:rgba(255,255,255,0.7);">Travel Guide</p>
+        <h1 class="display-l">Vacation in Altai 2026</h1>
+        <p class="hero-subtitle" style="max-width:600px;">A unique destination for those who want to rediscover Russia.</p>
+        <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
+            <a href="#agent" class="btn btn-white btn-lg">Plan my trip</a>
+            <a href="#cities" class="btn btn-white btn-lg" style="background:rgba(255,255,255,0.1);">Cities</a>
         </div>
-    </div>
-</div>
-
-<!-- WHY Altai -->
-<section class="section">
-    <h2>Why Travelers Choose Altai</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px;">
-        
-        
-        
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:4px solid var(--teal);">
-            <div style="font-size:36px;margin-bottom:12px;">🏔</div>
-            <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">Nature</h3>
-            <p style="font-size:15px;color:var(--charcoal);line-height:1.65;">Unique landscapes and ecosystems.</p>
-        </div>
-        
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:4px solid var(--teal);">
-            <div style="font-size:36px;margin-bottom:12px;">💰</div>
-            <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">Affordability</h3>
-            <p style="font-size:15px;color:var(--charcoal);line-height:1.65;">Budget vacation without visas.</p>
-        </div>
-        
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:4px solid var(--teal);">
-            <div style="font-size:36px;margin-bottom:12px;">👨‍👩‍👧</div>
-            <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">Family-Friendly</h3>
-            <p style="font-size:15px;color:var(--charcoal);line-height:1.65;">Safe and comfortable.</p>
-        </div>
-        
-        
     </div>
 </section>
 
-<!-- CITIES -->
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:1200px;margin:0 auto;">
-        <h2>Cities &amp; Resorts of Altai</h2>
-        <div class="cards-grid" style="margin-top:40px;">
+<!-- ═══════════════════════════════════════════════════════════════
+     QUICK FACTS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section-sm" style="background:var(--bg);">
+    <div class="container">
+        <div class="quick-facts">
             
-            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <div style="position:relative;">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&amp;q=80" alt="Gorno-Altaysk" class="card-img" loading="lazy" style="height:220px;width:100%;object-fit:cover;">
-                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.6));">
-                        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;">
-                            <h3 style="color:#fff;font-size:22px;font-weight:700;margin:0;">Gorno-Altaysk</h3>
-                            <p style="color:rgba(255,255,255,0.8);font-size:13px;margin:4px 0 0;">Mountain capital of Altai: nature, rivers, peaks.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body" style="padding:16px;display:flex;gap:8px;">
-                    <a href="/travel-content-site/en/altai/gorno-altaysk-travel-guide.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Open guide</a>
-                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Get a tour quote</a>
-                </div>
+            
+            
+            <div class="quick-fact reveal">
+                <div style="font-size:28px;margin-bottom:var(--sp-2);">🏔</div>
+                <div class="quick-fact-value">Nature</div>
+                <div class="quick-fact-label">Unique landscapes and ecosystems.</div>
             </div>
             
-            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <div style="position:relative;">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&amp;q=80" alt="Chemal" class="card-img" loading="lazy" style="height:220px;width:100%;object-fit:cover;">
-                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.6));">
-                        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;">
-                            <h3 style="color:#fff;font-size:22px;font-weight:700;margin:0;">Chemal</h3>
-                            <p style="color:rgba(255,255,255,0.8);font-size:13px;margin:4px 0 0;">Scenic Chemal gorge: Akkem waterfall, bridges.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body" style="padding:16px;display:flex;gap:8px;">
-                    <a href="/travel-content-site/en/altai/chemyal-travel-guide.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Open guide</a>
-                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Get a tour quote</a>
-                </div>
+            <div class="quick-fact reveal">
+                <div style="font-size:28px;margin-bottom:var(--sp-2);">💰</div>
+                <div class="quick-fact-value">Affordability</div>
+                <div class="quick-fact-label">Budget vacation without visas.</div>
             </div>
             
-            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <div style="position:relative;">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&amp;q=80" alt="Akkem" class="card-img" loading="lazy" style="height:220px;width:100%;object-fit:cover;">
-                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.6));">
-                        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;">
-                            <h3 style="color:#fff;font-size:22px;font-weight:700;margin:0;">Akkem</h3>
-                            <p style="color:rgba(255,255,255,0.8);font-size:13px;margin:4px 0 0;">Camp at the foot of Belukha: trekking, mountain lakes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body" style="padding:16px;display:flex;gap:8px;">
-                    <a href="/travel-content-site/en/altai/akkem-travel-guide.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Open guide</a>
-                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Get a tour quote</a>
-                </div>
+            <div class="quick-fact reveal">
+                <div style="font-size:28px;margin-bottom:var(--sp-2);">👨‍👩‍👧</div>
+                <div class="quick-fact-value">Family-Friendly</div>
+                <div class="quick-fact-label">Safe and comfortable.</div>
             </div>
+            
             
         </div>
     </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════════════
+     WHY CHOOSE — Advantages grid
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">Advantages</p>
+            <h2>Why travelers choose Altai</h2>
+        </div>
+        <div class="grid grid-3">
+            
+            
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-8);">
+                    <div style="font-size:40px;margin-bottom:var(--sp-4);">🏔</div>
+                    <h3 class="h4" style="margin-bottom:var(--sp-2);">Nature</h3>
+                    <p class="body-s" style="color:var(--text-secondary);">Unique landscapes and ecosystems.</p>
+                </div>
+            </div>
+            
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-8);">
+                    <div style="font-size:40px;margin-bottom:var(--sp-4);">💰</div>
+                    <h3 class="h4" style="margin-bottom:var(--sp-2);">Affordability</h3>
+                    <p class="body-s" style="color:var(--text-secondary);">Budget vacation without visas.</p>
+                </div>
+            </div>
+            
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-8);">
+                    <div style="font-size:40px;margin-bottom:var(--sp-4);">👨‍👩‍👧</div>
+                    <h3 class="h4" style="margin-bottom:var(--sp-2);">Family-Friendly</h3>
+                    <p class="body-s" style="color:var(--text-secondary);">Safe and comfortable.</p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
 
-<!-- IN-PAGE CTA -->
-<section class="section" style="padding:60px 24px;background:var(--bg);">
-    <div style="max-width:700px;margin:0 auto;text-align:center;">
-        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">Need help planning?</h2>
-        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;">
-            Our travel experts can help with visas, transfers, hotel booking &amp; itinerary. All prices are approximate.
+<!-- ═══════════════════════════════════════════════════════════════
+     WEATHER — Best time to visit
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">Weather</p>
+            <h2>Best time to visit Altai</h2>
+        </div>
+        
+        
+        <div class="grid grid-4" style="gap:var(--sp-4);">
+            
+            <div class="weather-card reveal" style="background:var(--card);box-shadow:var(--shadow-sm);">
+                <div style="font-size:32px;margin-bottom:var(--sp-2);">☀️</div>
+                <div class="month">Summer</div>
+                <div class="temp">+15–30°C</div>
+                <p class="body-s" style="margin-top:var(--sp-2);">Main season. Beaches, hiking.</p>
+            </div>
+            
+            <div class="weather-card reveal" style="background:var(--card);box-shadow:var(--shadow-sm);">
+                <div style="font-size:32px;margin-bottom:var(--sp-2);">❄️</div>
+                <div class="month">Winter</div>
+                <div class="temp">-5–+5°C</div>
+                <p class="body-s" style="margin-top:var(--sp-2);">Skiing, ice skating.</p>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CITIES — Main cities grid
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);" id="cities">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">Cities</p>
+            <h2>Cities &amp; resorts of Altai</h2>
+            <p>Choose a city for your trip.</p>
+        </div>
+        <div class="grid grid-4">
+            
+            <a href="/travel-content-site/en/altai/gorno-altaysk-travel-guide.html" class="card city-card reveal">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&amp;q=80" alt="Gorno-Altaysk" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Gorno-Altaysk</h4>
+                    <p class="card-desc">Mountain capital of Altai: nature, rivers, peaks.</p>
+                    <div class="card-meta" style="margin-top:var(--sp-3);">
+                        <span class="badge badge-accent" style="font-size:11px;">Guide</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="/travel-content-site/en/altai/chemyal-travel-guide.html" class="card city-card reveal">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&amp;q=80" alt="Chemal" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Chemal</h4>
+                    <p class="card-desc">Scenic Chemal gorge: Akkem waterfall, bridges.</p>
+                    <div class="card-meta" style="margin-top:var(--sp-3);">
+                        <span class="badge badge-accent" style="font-size:11px;">Guide</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="/travel-content-site/en/altai/akkem-travel-guide.html" class="card city-card reveal">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&amp;q=80" alt="Akkem" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Akkem</h4>
+                    <p class="card-desc">Camp at the foot of Belukha: trekking, mountain lakes.</p>
+                    <div class="card-meta" style="margin-top:var(--sp-3);">
+                        <span class="badge badge-accent" style="font-size:11px;">Guide</span>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PRACTICAL INFO
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">Information</p>
+            <h2>Practical information</h2>
+        </div>
+        
+        
+        <div class="grid grid-3" style="gap:var(--sp-4);">
+            
+            
+            
+            
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-6);">
+                    <h4 style="font-size:16px;font-weight:600;margin-bottom:var(--sp-2);">🛂 Visa</h4>
+                    <p class="body-s" style="color:var(--text-secondary);">Russian internal passport.</p>
+                </div>
+            </div>
+            
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-6);">
+                    <h4 style="font-size:16px;font-weight:600;margin-bottom:var(--sp-2);">💱 Currency</h4>
+                    <p class="body-s" style="color:var(--text-secondary);">Ruble.</p>
+                </div>
+            </div>
+            
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-6);">
+                    <h4 style="font-size:16px;font-weight:600;margin-bottom:var(--sp-2);">🗣 Language</h4>
+                    <p class="body-s" style="color:var(--text-secondary);">Russian.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CTA — Mid-page
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section-sm" style="background:var(--surface);">
+    <div class="container" style="text-align:center;max-width:700px;">
+        <h2 style="margin-bottom:var(--sp-3);">Need help?</h2>
+        <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-6);">
+            Our experts will help with visas, transfers, hotels, and itinerary. All prices are estimates.
         </p>
-        <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">Plan my trip →</a>
+        <a href="#agent" class="btn btn-accent btn-lg">Plan my trip</a>
     </div>
 </section>
 
-<!-- SEASONS -->
-<section class="section">
-    <h2>Best Time to Visit Altai</h2>
-    
-    
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;">
-        
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:3px solid var(--teal);">
-            <div style="font-size:32px;margin-bottom:8px;">☀️</div>
-            <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;">Summer</h3>
-            <p style="font-size:15px;color:var(--teal);font-weight:600;margin-bottom:10px;">+15–30°C</p>
-            <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">Main season. Beaches, hiking.</p>
+<!-- ═══════════════════════════════════════════════════════════════
+     CHINA / MALDIVES — Special instructions
+     ═══════════════════════════════════════════════════════════════ -->
+
+
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FAQ with Schema
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">FAQ</p>
+            <h2>Frequently Asked Questions</h2>
         </div>
         
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:3px solid var(--teal);">
-            <div style="font-size:32px;margin-bottom:8px;">❄️</div>
-            <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;">Winter</h3>
-            <p style="font-size:15px;color:var(--teal);font-weight:600;margin-bottom:10px;">-5–+5°C</p>
-            <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">Skiing, ice skating.</p>
-        </div>
         
-    </div>
-    
-</section>
-
-
-
-
-
-<!-- PRACTICAL -->
-<section class="section">
-    <h2>Practical Information</h2>
-    
-    
-    
-    
-    
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:40px;">
-        
-        <div style="background:#fff;padding:24px;border-radius:16px;">
-            <h4 style="font-size:16px;font-weight:700;margin-bottom:8px;">🛂 Visa</h4>
-            <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">Russian internal passport.</p>
-        </div>
-        
-        <div style="background:#fff;padding:24px;border-radius:16px;">
-            <h4 style="font-size:16px;font-weight:700;margin-bottom:8px;">💱 Currency</h4>
-            <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">Ruble.</p>
-        </div>
-        
-        <div style="background:#fff;padding:24px;border-radius:16px;">
-            <h4 style="font-size:16px;font-weight:700;margin-bottom:8px;">🗣 Language</h4>
-            <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">Russian.</p>
-        </div>
-        
-    </div>
-    
-</section>
-
-<!-- FAQ with Schema -->
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:900px;margin:0 auto;">
-        <h2>Frequently Asked Questions</h2>
-        
-        
-        <div class="faq" style="margin-top:40px;">
+        <div class="faq-list">
             
-            <details style="margin-bottom:4px;">
+            <details class="faq-item reveal">
                 <summary>When to go?</summary>
                 <p>Summer is the main season.</p>
             </details>
@@ -462,40 +529,46 @@
     </div>
 </section>
 
-<!-- AGENT CTA -->
-<section class="section" id="agent" style="scroll-margin-top:80px;">
-    <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
-            <div style="padding:40px;">
-                <img src="/travel-content-site/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Travel Expert" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--teal);margin-bottom:12px;" loading="lazy">
-                <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;color:var(--ink);">Your Travel Expert</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:16px;">Personal travel expert</p>
-                <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
-                    <li style="font-size:14px;color:var(--charcoal);">✅ Hotel selection &amp; booking</li>
-                    <li style="font-size:14px;color:var(--charcoal);">✅ Full trip itinerary</li>
-                    <li style="font-size:14px;color:var(--charcoal);">✅ Visa, QR codes, eSIM</li>
-                    <li style="font-size:14px;color:var(--charcoal);">✅ 24/7 support during trip</li>
-                </ul>
-            </div>
-            <div style="background:var(--bg);padding:40px;">
-                <h4 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--ink);">Need help planning?</h4>
-                <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="Your name *" required style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;">
-                    <input type="tel" name="phone" placeholder="Phone *" required style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;">
-                    <textarea name="message" rows="2" placeholder="Dates, budget, wishes..." style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;"></textarea>
-                    <input type="hidden" name="destination" value="Altai">
-                    <input type="hidden" name="_subject" value="Trip request: Altai">
-                    
-                    <div class="g-recaptcha" data-sitekey="6LdPLACEHOLDER_HERE" data-size="compact"></div>
-                    
-                    <button type="submit" class="btn-cta" style="margin-top:8px;cursor:pointer;width:100%;font-size:14px;padding:12px;">Get help →</button>
-                </form>
+<!-- ═══════════════════════════════════════════════════════════════
+     AGENT FORM
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" id="agent" style="background:var(--bg);scroll-margin-top:80px;">
+    <div class="container">
+        <div class="agent-block reveal">
+            <h2>Need help planning?</h2>
+            <div class="agent-grid">
+                <div>
+                    <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">
+                        Tell us your wishes — we&#39;ll help with visas, transfers, eSIM and hotels.
+                    </p>
+                    <ul class="agent-benefits">
+                        <li>Hotel selection &amp; booking</li>
+                        <li>Full trip itinerary</li>
+                        <li>Visa, QR codes, eSIM</li>
+                        <li>24/7 support</li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="form" action="https://formspree.io/f/xnjyjnnd" method="POST">
+                        <input type="text" name="name" placeholder="Name *" required>
+                        <input type="tel" name="phone" placeholder="Phone *" required>
+                        <textarea name="message" rows="2" placeholder="Dates, budget, wishes..."></textarea>
+                        <input type="hidden" name="destination" value="Altai">
+                        <input type="hidden" name="_subject" value="Request: Altai">
+                        
+                        <div class="g-recaptcha" data-sitekey="6LdPLACEHOLDER_HERE" data-size="normal"></div>
+                        
+                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">Send request →</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Breadcrumb Schema -->
+<!-- ═══════════════════════════════════════════════════════════════
+     Breadcrumb Schema
+     ═══════════════════════════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

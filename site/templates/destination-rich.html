@@ -20,217 +20,262 @@
 
 {% block content %}
 
-<!-- HERO -->
-<div class="hero-section" style="background-image:url('{{ hero_image }}');min-height:600px;">
-    <div class="hero-overlay"></div>
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO — Country page
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hero" style="background-image:url('{{ hero_image }}');">
     <div class="hero-content">
-        <h1>{{ prep }}{{ cname_prep }} 2026</h1>
-        <p>{{ data.hero_subtitle_en if lang == "en" and data.hero_subtitle_en else data.hero_subtitle_ru if data.hero_subtitle_ru else '' }}</p>
-        <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px;flex-wrap:wrap;">
-            <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
-            {% if data %}
-            <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);padding:8px 16px;border-radius:50px;">
-                <img src="{{ agent_photo }}" alt="TravelHub Expert" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;" loading="lazy">
-                <span style="color:#fff;font-size:14px;font-weight:500;">{{ "TravelHub Expert" if lang == "en" else "TravelHub — эксперт" }}<br><span style="font-size:12px;opacity:0.8;">{{ "Travel Guide Team" if lang == "en" else "Команда travel-гидов" }}</span></span>
+        <p class="section-eyebrow" style="color:rgba(255,255,255,0.7);">{{ "Путеводитель" if lang == "ru" else "Travel Guide" }}</p>
+        <h1 class="display-l">{{ prep }}{{ cname_prep }} 2026</h1>
+        <p class="hero-subtitle" style="max-width:600px;">{{ data.hero_subtitle_en if lang == "en" and data.hero_subtitle_en else data.hero_subtitle_ru if data.hero_subtitle_ru else '' }}</p>
+        <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
+            <a href="#agent" class="btn btn-white btn-lg">{{ "Спланировать поездку" if lang == "ru" else "Plan my trip" }}</a>
+            <a href="#cities" class="btn btn-white btn-lg" style="background:rgba(255,255,255,0.1);">{{ "Города" if lang == "ru" else "Cities" }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     QUICK FACTS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section-sm" style="background:var(--bg);">
+    <div class="container">
+        <div class="quick-facts">
+            {% set adv = data.advantages_en if lang == "en" else data.advantages_ru %}
+            {% if data and adv %}
+            {% for emoji, title, desc in adv[:4] %}
+            <div class="quick-fact reveal">
+                <div style="font-size:28px;margin-bottom:var(--sp-2);">{{ emoji }}</div>
+                <div class="quick-fact-value">{{ title }}</div>
+                <div class="quick-fact-label">{{ desc[:50] }}{% if desc|length > 50 %}...{% endif %}</div>
             </div>
+            {% endfor %}
             {% endif %}
         </div>
     </div>
-</div>
+</section>
 
-<!-- WHY {{ cname_nom }} -->
-<section class="section">
-    <h2>{{ "Why Travelers Choose " if lang == "en" else "Почему туристы выбирают " }}{{ cname_nom }}</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px;">
-        {% set adv = data.advantages_en if lang == "en" else data.advantages_ru %}
-        {% if data and adv %}
-        {% for emoji, title, desc in adv %}
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:4px solid var(--teal);">
-            <div style="font-size:36px;margin-bottom:12px;">{{ emoji }}</div>
-            <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">{{ title }}</h3>
-            <p style="font-size:15px;color:var(--charcoal);line-height:1.65;">{{ desc }}</p>
+<!-- ═══════════════════════════════════════════════════════════════
+     WHY CHOOSE — Advantages grid
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Преимущества" if lang == "ru" else "Advantages" }}</p>
+            <h2>{{ "Почему туристы выбирают " if lang == "ru" else "Why travelers choose " }}{{ cname_nom }}</h2>
         </div>
-        {% endfor %}
+        <div class="grid grid-3">
+            {% if data and adv %}
+            {% for emoji, title, desc in adv %}
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-8);">
+                    <div style="font-size:40px;margin-bottom:var(--sp-4);">{{ emoji }}</div>
+                    <h3 class="h4" style="margin-bottom:var(--sp-2);">{{ title }}</h3>
+                    <p class="body-s" style="color:var(--text-secondary);">{{ desc }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p style="color:var(--text-muted);">{{ "Данные уточняются." if lang == "ru" else "Data is being updated." }}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WEATHER — Best time to visit
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Погода" if lang == "ru" else "Weather" }}</p>
+            <h2>{{ "Когда лучше ехать в " if lang == "ru" else "Best time to visit " }}{{ cname_prep }}</h2>
+        </div>
+        {% set seas = data.seasons_en if lang == "en" else data.seasons_ru %}
+        {% if data and seas %}
+        <div class="grid grid-4" style="gap:var(--sp-4);">
+            {% for emoji, title, temp, desc in seas %}
+            <div class="weather-card reveal" style="background:var(--card);box-shadow:var(--shadow-sm);">
+                <div style="font-size:32px;margin-bottom:var(--sp-2);">{{ emoji }}</div>
+                <div class="month">{{ title }}</div>
+                <div class="temp">{{ temp }}</div>
+                <p class="body-s" style="margin-top:var(--sp-2);">{{ desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
         {% else %}
-        <p style="color:var(--meta);">{{ "Data is being updated." if lang == "en" else "Данные уточняются." }}</p>
+        <p style="color:var(--text-muted);">{{ "Данные по сезонам уточняются." if lang == "ru" else "Season data is being updated." }}</p>
         {% endif %}
     </div>
 </section>
 
-<!-- CITIES -->
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:1200px;margin:0 auto;">
-        <h2>{{ "Cities & Resorts of " if lang == "en" else "Города и курорты " }}{{ cname_nom }}</h2>
-        <div class="cards-grid" style="margin-top:40px;">
+<!-- ═══════════════════════════════════════════════════════════════
+     CITIES — Main cities grid
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);" id="cities">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Города" if lang == "ru" else "Cities" }}</p>
+            <h2>{{ "Города и курорты " if lang == "ru" else "Cities & resorts of " }}{{ cname_nom }}</h2>
+            <p>{{ "Выберите город для путешествия." if lang == "ru" else "Choose a city for your trip." }}</p>
+        </div>
+        <div class="grid grid-4">
             {% for city_slug, city_data in cities.items() %}
-            <div class="destination-card" style="border-radius:16px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.06);display:flex;flex-direction:column;">
-                <div style="position:relative;">
-                    <img src="{{ city_data.image }}" alt="{{ city_data.name_en if lang == 'en' else city_data.name_ru }}" class="card-img" loading="lazy" style="height:220px;width:100%;object-fit:cover;">
-                    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.6));">
-                        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px;">
-                            <h3 style="color:#fff;font-size:22px;font-weight:700;margin:0;">{{ city_data.name_en if lang == "en" else city_data.name_ru }}</h3>
-                            {% if city_data.desc %}<p style="color:rgba(255,255,255,0.8);font-size:13px;margin:4px 0 0;">{{ city_data.desc[:80] }}</p>{% endif %}
-                        </div>
+            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city_data.articles[0].url }}.html" class="card city-card reveal">
+                <div class="card-img">
+                    <img src="{{ city_data.image }}" alt="{{ city_data.name_en if lang == 'en' else city_data.name_ru }}" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ city_data.name_en if lang == "en" else city_data.name_ru }}</h4>
+                    {% if city_data.desc %}<p class="card-desc">{{ city_data.desc[:60] }}{% if city_data.desc|length > 60 %}...{% endif %}</p>{% endif %}
+                    <div class="card-meta" style="margin-top:var(--sp-3);">
+                        <span class="badge badge-accent" style="font-size:11px;">{{ "Гайд" if lang == "ru" else "Guide" }}</span>
                     </div>
                 </div>
-                <div class="card-body" style="padding:16px;display:flex;gap:8px;">
-                    <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city_data.articles[0].url }}.html" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">{{ "Open guide" if lang == "en" else "Гайд" }}</a>
-                    <a href="#agent" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">{{ "Get a tour quote" if lang == "en" else "Подбор тура" }}</a>
-                </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
     </div>
 </section>
 
-
-<!-- IN-PAGE CTA -->
-<section class="section" style="padding:60px 24px;background:var(--bg);">
-    <div style="max-width:700px;margin:0 auto;text-align:center;">
-        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">{{ "Need help planning?" if lang == "en" else "Нужна помощь?" }}</h2>
-        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;">
-            {{ "Our travel experts can help with visas, transfers, hotel booking & itinerary. All prices are approximate." if lang == "en" else "Наши эксперты помогут с визами, трансферами, отелями и маршрутом. Цены ориентировочные." }}
-        </p>
-        <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
-    </div>
-</section>
-
-<!-- SEASONS -->
-<section class="section">
-    <h2>{{ "Best Time to Visit " if lang == "en" else "Когда лучше ехать в " }}{{ cname_prep }}</h2>
-    {% set seas = data.seasons_en if lang == "en" else data.seasons_ru %}
-    {% if data and seas %}
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;">
-        {% for emoji, title, temp, desc in seas %}
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:3px solid var(--teal);">
-            <div style="font-size:32px;margin-bottom:8px;">{{ emoji }}</div>
-            <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;">{{ title }}</h3>
-            <p style="font-size:15px;color:var(--teal);font-weight:600;margin-bottom:10px;">{{ temp }}</p>
-            <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">{{ desc }}</p>
+<!-- ═══════════════════════════════════════════════════════════════
+     PRACTICAL INFO
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Информация" if lang == "ru" else "Information" }}</p>
+            <h2>{{ "Практическая информация" if lang == "ru" else "Practical information" }}</h2>
         </div>
-        {% endfor %}
-    </div>
-    {% else %}
-    <p style="color:var(--meta);">{{ "Season data is being updated." if lang == "en" else "Данные по сезонам уточняются." }}</p>
-{% endif %}
-</section>
-
-{% if country.slug == "china" %}
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:800px;margin:0 auto;">
-        {% if lang == "ru" %}
-        <h2 style="text-align:left;">{{ "How to Get a QR Code for China" if lang == "en" else "Как получить QR-код для Китая" }}</h2>
-        <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
-            <p><strong>Пошаговая инструкция:</strong></p>
-            <ol style="padding-left:20px;">
-                <li>Установите <strong>WeChat</strong> или <strong>Alipay</strong> на смартфон</li>
-                <li>Зарегистрируйтесь по номеру телефона — российский номер подходит (SMS приходит)</li>
-                <li>В WeChat найдите мини-программу "Health Kit", заполните данные</li>
-                <li>По прилёте в Китай покажите QR-код на паспортном контроле</li>
-                <li>QR-код нужно обновлять ежедневно — приложение напомнит</li>
-                <li>Сохраните скриншот QR-кода на телефоне (на случай отсутствия интернета)</li>
-                <li><strong>Важно:</strong> без QR-кода не пустят в общественные места, рестораны, ТЦ</li>
-            </ol>
-        </div>
-        {% else %}
-        <h2 style="text-align:left;">How to Get a QR Code for China</h2>
-        <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
-            <p><strong>Step-by-step guide:</strong></p>
-            <ol style="padding-left:20px;">
-                <li>Install <strong>WeChat</strong> or <strong>Alipay</strong> on your smartphone</li>
-                <li>Register with your phone number — your Russian number works (SMS will arrive)</li>
-                <li>In WeChat: search for "Health Kit" mini-program, fill out your data</li>
-                <li>Upon arrival in China, show the QR code at passport control</li>
-                <li>QR code must be updated daily — the app will remind you</li>
-                <li>Keep a screenshot of the QR code on your phone (in case of no internet)</li>
-                <li><strong>Important:</strong> without a QR code, you will not be allowed into public places, restaurants, or shopping malls</li>
-            </ol>
+        {% set prac = data.practical_en if lang == "en" else data.practical_ru %}
+        {% if data and prac %}
+        <div class="grid grid-3" style="gap:var(--sp-4);">
+            {% if lang == "en" %}
+            {% set labels = {"visa":"🛂 Visa","currency":"💱 Currency","language":"🗣 Language","transport":"🚌 Transport","safety":"🛡 Safety","internet":"📶 Internet & SIM"} %}
+            {% else %}
+            {% set labels = {"visa":"🛂 Виза","currency":"💱 Валюта","language":"🗣 Язык","transport":"🚌 Транспорт","safety":"🛡 Безопасность","internet":"📶 Связь и интернет"} %}
+            {% endif %}
+            {% for key, value in prac.items() %}
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-6);">
+                    <h4 style="font-size:16px;font-weight:600;margin-bottom:var(--sp-2);">{{ labels.get(key, key) }}</h4>
+                    <p class="body-s" style="color:var(--text-secondary);">{{ value }}</p>
+                </div>
+            </div>
+            {% endfor %}
         </div>
         {% endif %}
     </div>
 </section>
-<!-- BOOST CTA for China -->
-<div style="max-width:800px;margin:20px auto 0;padding:24px;background:var(--bg);border-radius:16px;text-align:center;">
-    <p style="font-size:15px;font-weight:600;color:var(--ink);margin-bottom:12px;">{{ "Too complicated? We handle everything for you." if lang == "en" else "Сложно? Мы всё сделаем за вас." }}</p>
-    <p style="font-size:13px;color:var(--meta);margin-bottom:16px;">{{ "QR codes, documents, hotel booking — just tell us your dates." if lang == "en" else "QR-коды, документы, бронь отеля — назовите даты." }}</p>
-    <a href="#agent" class="btn-cta" style="font-size:14px;padding:12px 28px;">{{ "Get help →" if lang == "en" else "Помощь эксперта →" }}</a>
-</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CTA — Mid-page
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section-sm" style="background:var(--surface);">
+    <div class="container" style="text-align:center;max-width:700px;">
+        <h2 style="margin-bottom:var(--sp-3);">{{ "Нужна помощь?" if lang == "ru" else "Need help?" }}</h2>
+        <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-6);">
+            {{ "Наши эксперты помогут с визами, трансферами, отелями и маршрутом. Цены ориентировочные." if lang == "ru" else "Our experts will help with visas, transfers, hotels, and itinerary. All prices are estimates." }}
+        </p>
+        <a href="#agent" class="btn btn-accent btn-lg">{{ "Спланировать поездку" if lang == "ru" else "Plan my trip" }}</a>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CHINA / MALDIVES — Special instructions
+     ═══════════════════════════════════════════════════════════════ -->
+{% if country.slug == "china" %}
+<section class="section" style="background:var(--bg);">
+    <div class="container" style="max-width:800px;">
+        <div class="section-header" style="text-align:left;">
+            <h2>{{ "Как получить QR-код для Китая" if lang == "ru" else "How to Get a QR Code for China" }}</h2>
+        </div>
+        <div class="article-body">
+            {% if lang == "ru" %}
+            <p><strong>Пошаговая инструкция:</strong></p>
+            <ol>
+                <li>Установите <strong>WeChat</strong> или <strong>Alipay</strong> на смартфон</li>
+                <li>Зарегистрируйтесь по номеру телефона — российский номер подходит</li>
+                <li>В WeChat найдите мини-программу "Health Kit", заполните данные</li>
+                <li>По прилёте в Китай покажите QR-код на паспортном контроле</li>
+                <li>QR-код нужно обновлять ежедневно</li>
+                <li>Сохраните скриншот QR-кода на телефоне</li>
+                <li><strong>Важно:</strong> без QR-кода не пустят в общественные места</li>
+            </ol>
+            {% else %}
+            <p><strong>Step-by-step guide:</strong></p>
+            <ol>
+                <li>Install <strong>WeChat</strong> or <strong>Alipay</strong> on your smartphone</li>
+                <li>Register with your phone number — Russian number works</li>
+                <li>In WeChat: search for "Health Kit" mini-program</li>
+                <li>Upon arrival, show the QR code at passport control</li>
+                <li>QR code must be updated daily</li>
+                <li>Keep a screenshot of the QR code</li>
+                <li><strong>Important:</strong> without a QR code, you won't enter public places</li>
+            </ol>
+            {% endif %}
+        </div>
+        <div style="text-align:center;margin-top:var(--sp-6);padding:var(--sp-6);background:var(--surface);border-radius:var(--radius-lg);">
+            <p class="body-m" style="font-weight:600;margin-bottom:var(--sp-3);">{{ "Сложно? Мы всё сделаем за вас." if lang == "ru" else "Too complicated? We handle everything for you." }}</p>
+            <a href="#agent" class="btn btn-accent btn-md">{{ "Помощь эксперта" if lang == "ru" else "Get help" }}</a>
+        </div>
+    </div>
+</section>
 {% endif %}
 
 {% if country.slug == "maldives" %}
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:800px;margin:0 auto;">
-        {% if lang == "ru" %}
-        <h2 style="text-align:left;">📱 Как заполнить декларацию и получить QR-код для Мальдив</h2>
-        <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
+<section class="section" style="background:var(--bg);">
+    <div class="container" style="max-width:800px;">
+        <div class="section-header" style="text-align:left;">
+            <h2>{{ "Как заполнить декларацию IMUGA" if lang == "ru" else "IMUGA Declaration & QR Code" }}</h2>
+        </div>
+        <div class="article-body">
+            {% if lang == "ru" %}
             <p><strong>Пошаговая инструкция:</strong></p>
-            <ol style="padding-left:20px;">
-                <li>За 96 часов до вылета заполните форму IMUGA на сайте <strong>imuga.immigration.gov.mv</strong></li>
-                <li>Укажите данные загранпаспорта, рейс, адрес проживания на Мальдивах</li>
-                <li>Загрузите фото паспорта и себя (селфи)</li>
-                <li>После заполнения вы получите <strong>QR-код</strong> — сохраните скриншот на телефон</li>
-                <li>QR-код нужно показать на паспортном контроле по прилёте</li>
-                <li>Также заполните форму на выезд за 96 часов до обратного рейса</li>
-                <li><strong>Важно:</strong> без заполненной IMUGA вас не посадят на рейс в Мальдивы</li>
-                <li>Если не получается заполнить самостоятельно — обратитесь к нашему турагенту, мы поможем с оформлением</li>
+            <ol>
+                <li>За 96 часов до вылета заполните форму на <strong>imuga.immigration.gov.mv</strong></li>
+                <li>Укажите данные загранпаспорта, рейс, адрес проживания</li>
+                <li>Загрузите фото паспорта и селфи</li>
+                <li>Получите <strong>QR-код</strong> — сохраните скриншот</li>
+                <li>Покажите QR-код на паспортном контроле</li>
+                <li>Заполните форму на выезд за 96 часов до обратного рейса</li>
+                <li><strong>Важно:</strong> без IMUGA не посадят на рейс</li>
             </ol>
-        </div>
-        {% else %}
-        <h2 style="text-align:left;">📱 IMUGA Declaration & QR Code for Maldives</h2>
-        <div style="font-size:16px;line-height:1.8;color:var(--charcoal);">
+            {% else %}
             <p><strong>Step-by-step guide:</strong></p>
-            <ol style="padding-left:20px;">
-                <li>Fill out the IMUGA form at <strong>imuga.immigration.gov.mv</strong> within 96 hours before departure</li>
-                <li>Enter your passport details, flight info, and accommodation address in Maldives</li>
-                <li>Upload a photo of your passport and a selfie</li>
-                <li>You will receive a <strong>QR code</strong> — save a screenshot on your phone</li>
-                <li>Show the QR code at passport control upon arrival</li>
-                <li>Also fill out the departure form within 96 hours before your return flight</li>
-                <li><strong>Important:</strong> without a completed IMUGA, you will not be allowed to board your flight to Maldives</li>
-                <li>If you need help filling it out — our travel agent can assist you with the process</li>
+            <ol>
+                <li>Fill out the IMUGA form at <strong>imuga.immigration.gov.mv</strong> within 96 hours</li>
+                <li>Enter passport details, flight info, accommodation</li>
+                <li>Upload passport photo and selfie</li>
+                <li>Get a <strong>QR code</strong> — save a screenshot</li>
+                <li>Show QR code at passport control</li>
+                <li>Fill out departure form 96 hours before return</li>
+                <li><strong>Important:</strong> without IMUGA, you won't board</li>
             </ol>
+            {% endif %}
         </div>
-        {% endif %}
+        <div style="text-align:center;margin-top:var(--sp-6);padding:var(--sp-6);background:var(--surface);border-radius:var(--radius-lg);">
+            <p class="body-m" style="font-weight:600;margin-bottom:var(--sp-3);">{{ "Нужна помощь с IMUGA или бронью?" if lang == "ru" else "Need help with IMUGA or booking?" }}</p>
+            <a href="#agent" class="btn btn-accent btn-md">{{ "Помощь эксперта" if lang == "ru" else "Get help" }}</a>
+        </div>
     </div>
 </section>
-<!-- BOOST CTA for Maldives -->
-<div style="max-width:800px;margin:-40px auto 60px;padding:24px;background:var(--bg);border-radius:16px;text-align:center;">
-    <p style="font-size:15px;font-weight:600;color:var(--ink);margin-bottom:12px;">{{ "Need help with IMUGA or booking?" if lang == "en" else "Нужна помощь с IMUGA или бронью?" }}</p>
-    <p style="font-size:13px;color:var(--meta);margin-bottom:16px;">{{ "We handle forms, transfers, hotels — just share your dates." if lang == "en" else "Заполним формы, организуем трансфер, подберём отель." }}</p>
-    <a href="#agent" class="btn-cta" style="font-size:14px;padding:12px 28px;">{{ "Get help →" if lang == "en" else "Помощь эксперта →" }}</a>
-</div>
 {% endif %}
 
-<!-- PRACTICAL -->
-<section class="section">
-    <h2>{{ "Practical Information" if lang == "en" else "Практическая информация" }}</h2>
-    {% set prac = data.practical_en if lang == "en" else data.practical_ru %}
-    {% if data and prac %}
-    {% if lang == "en" %}
-    {% set labels = {"visa":"🛂 Visa","currency":"💱 Currency","language":"🗣 Language","transport":"🚌 Transport","safety":"🛡 Safety","internet":"📶 Internet & SIM"} %}
-    {% else %}
-    {% set labels = {"visa":"🛂 Виза","currency":"💱 Валюта","language":"🗣 Язык","transport":"🚌 Транспорт","safety":"🛡 Безопасность","internet":"📶 Связь и интернет"} %}
-    {% endif %}
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:40px;">
-        {% for key, value in prac.items() %}
-        <div style="background:#fff;padding:24px;border-radius:16px;">
-            <h4 style="font-size:16px;font-weight:700;margin-bottom:8px;">{{ labels.get(key, key) }}</h4>
-            <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">{{ value }}</p>
+<!-- ═══════════════════════════════════════════════════════════════
+     FAQ with Schema
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">FAQ</p>
+            <h2>{{ "Часто задаваемые вопросы" if lang == "ru" else "Frequently Asked Questions" }}</h2>
         </div>
-        {% endfor %}
-    </div>
-    {% endif %}
-</section>
-
-<!-- FAQ with Schema -->
-<section class="section" style="background:#fff;max-width:100%;">
-    <div style="max-width:900px;margin:0 auto;">
-        <h2>{{ "Frequently Asked Questions" if lang == "en" else "Часто задаваемые вопросы" }}</h2>
         {% set faqs = data.faq_en if lang == "en" else data.faq_ru %}
         {% if data and faqs %}
-        <div class="faq" style="margin-top:40px;">
+        <div class="faq-list">
             {% for q, a in faqs %}
-            <details style="margin-bottom:4px;">
+            <details class="faq-item reveal">
                 <summary>{{ q }}</summary>
                 <p>{{ a }}</p>
             </details>
@@ -258,40 +303,46 @@
     </div>
 </section>
 
-<!-- AGENT CTA -->
-<section class="section" id="agent" style="scroll-margin-top:80px;">
-    <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
-            <div style="padding:40px;">
-                <img src="{{ root }}/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Travel Expert" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--teal);margin-bottom:12px;" loading="lazy">
-                <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;color:var(--ink);">{{ "Your Travel Expert" if lang == "en" else "Ваш travel-эксперт" }}</h3>
-                <p style="font-size:14px;color:var(--meta);margin-bottom:16px;">{{ "Personal travel expert" if lang == "en" else "Персональный travel-эксперт" }}</p>
-                <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
-                    <li style="font-size:14px;color:var(--charcoal);">✅ {{ "Hotel selection & booking" if lang == "en" else "Подбор и бронь отелей" }}</li>
-                    <li style="font-size:14px;color:var(--charcoal);">✅ {{ "Full trip itinerary" if lang == "en" else "Полный маршрут" }}</li>
-                    <li style="font-size:14px;color:var(--charcoal);">✅ {{ "Visa, QR codes, eSIM" if lang == "en" else "Виза, QR-коды, eSIM" }}</li>
-                    <li style="font-size:14px;color:var(--charcoal);">✅ {{ "24/7 support during trip" if lang == "en" else "Поддержка 24/7" }}</li>
-                </ul>
-            </div>
-            <div style="background:var(--bg);padding:40px;">
-                <h4 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--ink);">{{ "Need help planning?" if lang == "en" else "Нужна помощь?" }}</h4>
-                <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
-                    <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;">
-                    <input type="tel" name="phone" placeholder="{{ 'Phone *' if lang == 'en' else 'Телефон *' }}" required style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;">
-                    <textarea name="message" rows="2" placeholder="{{ 'Dates, budget, wishes...' if lang == 'en' else 'Даты, бюджет, пожелания...' }}" style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;"></textarea>
-                    <input type="hidden" name="destination" value="{{ cname_nom }}">
-                    <input type="hidden" name="_subject" value="{{ 'Trip request: ' + cname_nom if lang == 'en' else 'Заявка: ' + cname_nom }}">
-                    {% if recaptcha_site_key %}
-                    <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="compact"></div>
-                    {% endif %}
-                    <button type="submit" class="btn-cta" style="margin-top:8px;cursor:pointer;width:100%;font-size:14px;padding:12px;">{{ "Get help →" if lang == "en" else "Отправить заявку →" }}</button>
-                </form>
+<!-- ═══════════════════════════════════════════════════════════════
+     AGENT FORM
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" id="agent" style="background:var(--bg);scroll-margin-top:80px;">
+    <div class="container">
+        <div class="agent-block reveal">
+            <h2>{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h2>
+            <div class="agent-grid">
+                <div>
+                    <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">
+                        {{ "Расскажите о пожеланиях — поможем с визами, трансферами, eSIM и подбором отелей." if lang == "ru" else "Tell us your wishes — we'll help with visas, transfers, eSIM and hotels." }}
+                    </p>
+                    <ul class="agent-benefits">
+                        <li>{{ "Подбор и бронь отелей" if lang == "ru" else "Hotel selection & booking" }}</li>
+                        <li>{{ "Полный маршрут" if lang == "ru" else "Full trip itinerary" }}</li>
+                        <li>{{ "Виза, QR-коды, eSIM" if lang == "ru" else "Visa, QR codes, eSIM" }}</li>
+                        <li>{{ "Поддержка 24/7" if lang == "ru" else "24/7 support" }}</li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
+                        <input type="text" name="name" placeholder="{{ 'Имя *' if lang == 'ru' else 'Name *' }}" required>
+                        <input type="tel" name="phone" placeholder="{{ 'Телефон *' if lang == 'ru' else 'Phone *' }}" required>
+                        <textarea name="message" rows="2" placeholder="{{ 'Даты, бюджет, пожелания...' if lang == 'ru' else 'Dates, budget, wishes...' }}"></textarea>
+                        <input type="hidden" name="destination" value="{{ cname_nom }}">
+                        <input type="hidden" name="_subject" value="{{ 'Заявка: ' + cname_nom if lang == 'ru' else 'Request: ' + cname_nom }}">
+                        {% if recaptcha_site_key %}
+                        <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
+                        {% endif %}
+                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">{{ "Отправить заявку →" if lang == "ru" else "Send request →" }}</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Breadcrumb Schema -->
+<!-- ═══════════════════════════════════════════════════════════════
+     Breadcrumb Schema
+     ═══════════════════════════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
