@@ -23,28 +23,34 @@
 
 {% block content %}
 
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO — Article hero
+     ═══════════════════════════════════════════════════════════════ -->
 {% if hero_image %}
-<div class="hero-section" style="background-image:url('{{ hero_image }}');min-height:380px;">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1 style="font-size:clamp(36px,8vw,72px);font-weight:700;line-height:1.05;letter-spacing:-0.035em;color:#fff;margin:0;">{{ article.h1 }}</h1>
+<section class="hero" style="background-image:url('{{ hero_image }}');min-height:50vh;">
+    <div class="hero-content" style="max-width:800px;">
+        <p class="section-eyebrow" style="color:rgba(255,255,255,0.7);">{{ "Экспертный гайд" if lang == "ru" else "Expert guide" }}</p>
+        <h1 style="color:#fff;font-size:clamp(32px,5vw,52px);">{{ article.h1 }}</h1>
     </div>
-</div>
+</section>
 {% endif %}
 
-<div class="section" style="padding-top:{{ '40px' if hero_image else '100px' }};">
+<!-- ═══════════════════════════════════════════════════════════════
+     ARTICLE META
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section-sm" style="background:var(--bg);{{ 'padding-top:40px;' if hero_image else '' }}">
     <div class="article-layout">
-        <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
-            <span>{{ "Updated: " + date_display_en if lang == "en" else "Обновлено: " + date_display_ru }}</span>
-            <span>&bull;</span>
-            <span>{{ "Expert guide" if lang == "en" else "Экспертный гайд" }}</span>
-            <span>&bull;</span>
-            <span>⏱ {{ "5 min read" if lang == "en" else "5 мин чтения" }}</span>
+        <div style="display:flex;gap:var(--sp-4);font-size:14px;color:var(--text-muted);margin-bottom:var(--sp-10);">
+            <span>{{ "Обновлено: " + date_display_ru if lang == "ru" else "Updated: " + date_display_en }}</span>
+            <span>·</span>
+            <span>{{ "Экспертный гайд" if lang == "ru" else "Expert guide" }}</span>
+            <span>·</span>
+            <span>⏱ {{ "5 мин чтения" if lang == "ru" else "5 min read" }}</span>
         </div>
 
-        <!-- Table of Contents -->
+        <!-- ═══════════════ TABLE OF CONTENTS ═══════════════ -->
         <div class="toc" id="toc">
-            <h3>{{ "Table of Contents" if lang == "en" else "Содержание" }}</h3>
+            <h3>{{ "Содержание" if lang == "ru" else "Table of Contents" }}</h3>
             <ul>
                 {% for section in article.body.split('<h2') %}
                     {% if loop.index > 1 %}
@@ -58,40 +64,50 @@
             </ul>
         </div>
 
+        <!-- ═══════════════ ARTICLE CONTENT ═══════════════ -->
         <div class="article-body">
             {{ article.body | safe }}
         </div>
 
+        <!-- ═══════════════ FAQ ═══════════════ -->
         {% if faq %}
-        <div class="faq" style="margin-top:60px;">
-            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
-                {{ "FAQ" if lang == "en" else "Часто задаваемые вопросы" }}
-            </h2>
-            {% for q, a in faq %}
-            <details>
-                <summary>{{ q }}</summary>
-                <p>{{ a }}</p>
-            </details>
-            {% endfor %}
+        <div style="margin-top:var(--sp-16);">
+            <h2 style="margin-bottom:var(--sp-6);">{{ "Часто задаваемые вопросы" if lang == "ru" else "Frequently Asked Questions" }}</h2>
+            <div class="faq-list">
+                {% for q, a in faq %}
+                <details class="faq-item">
+                    <summary>{{ q }}</summary>
+                    <p>{{ a }}</p>
+                </details>
+                {% endfor %}
+            </div>
         </div>
         {% endif %}
 
+        <!-- ═══════════════ RELATED ARTICLES ═══════════════ -->
         {% if related %}
-        <div style="margin-top:60px;">
-            <h2 style="font-size:28px;font-weight:700;letter-spacing:-0.025em;margin-bottom:24px;text-align:left;">
-                {{ "Related Articles" if lang == "en" else "Похожие статьи" }}
-            </h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+        <div style="margin-top:var(--sp-16);">
+            <h2 style="margin-bottom:var(--sp-6);">{{ "Похожие статьи" if lang == "ru" else "Related Articles" }}</h2>
+            <div class="grid grid-3" style="gap:var(--sp-4);">
                 {% for rel in related %}
-                <a href="{{ root }}/{{ lang }}/{{ rel.url }}" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
-                    <span style="font-size:13px;color:var(--teal);text-transform:uppercase;letter-spacing:0.03em;">{{ rel.type }}</span>
-                    <p style="font-weight:600;font-size:15px;margin-top:6px;">{{ rel.title }}</p>
+                <a href="{{ root }}/{{ lang }}/{{ rel.url }}" class="card">
+                    <div class="card-body" style="padding:var(--sp-5);">
+                        <span class="label" style="color:var(--accent);">{{ rel.type }}</span>
+                        <h4 class="card-title" style="margin-top:var(--sp-2);font-size:16px;">{{ rel.title }}</h4>
+                    </div>
                 </a>
                 {% endfor %}
             </div>
         </div>
         {% endif %}
+
+        <!-- ═══════════════ CTA ═══════════════ -->
+        <div style="margin-top:var(--sp-16);padding:var(--sp-10);background:var(--surface);border-radius:var(--radius-xl);text-align:center;">
+            <h3 style="margin-bottom:var(--sp-3);">{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h3>
+            <p class="body-m" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">{{ "Наши эксперты помогут с визами, отелями и маршрутом." if lang == "ru" else "Our experts will help with visas, hotels, and itinerary." }}</p>
+            <a href="#agent-form" class="btn btn-accent btn-lg">{{ "Спланировать поездку" if lang == "ru" else "Plan my trip" }}</a>
+        </div>
     </div>
-</div>
+</section>
 
 {% endblock %}
