@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0d7c66">
+    <meta name="theme-color" content="#0c2340">
     <link rel="icon" type="image/svg+xml" href="/travel-content-site/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-    
-    <!-- Preload critical resources -->
+
     <link rel="preload" href="/travel-content-site/assets/styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
-    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+
     <title>Kazan Travel Guide 2026</title>
     <meta name="description" content="Kazan Travel Guide 2026 Welcome to Kazan, the captivating capital of Tatarstan, where the ancient Silk Road whispers through the streets and modern Russia da...">
 
     <link rel="alternate" hreflang="ru" href="https://antondrakon.github.io/travel-content-site/ru/russia/kazan-putevoditel.html">
     <link rel="alternate" hreflang="en" href="https://antondrakon.github.io/travel-content-site/en/russia/kazan-travel-guide.html">
     <link rel="alternate" hreflang="x-default" href="https://antondrakon.github.io/travel-content-site/en/russia/kazan-travel-guide.html">
-
-    
     <link rel="canonical" href="https://antondrakon.github.io/travel-content-site/en/russia/kazan-travel-guide.html">
-    
 
     <meta property="og:title" content="Kazan Travel Guide 2026">
     <meta property="og:description" content="Kazan Travel Guide 2026 Welcome to Kazan, the captivating capital of Tatarstan, where the ancient Silk Road whispers through the streets and modern Russia da...">
@@ -69,10 +65,7 @@
         "contactType": "customer service",
         "availableLanguage": ["Russian", "English"]
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Worldwide"
-      },
+      "areaServed": { "@type": "Place", "name": "Worldwide" },
       "knowsAbout": ["Travel", "Hotels", "Flights", "Tourism", "Travel Guides"]
     }
     </script>
@@ -98,10 +91,10 @@
     <link rel="stylesheet" href="/travel-content-site/assets/tailwind.css">
     <link rel="stylesheet" href="/travel-content-site/assets/styles.css">
 
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="TravelHub RSS (English)" href="https://antondrakon.github.io/travel-content-site/feed-en.xml">
+    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
 
-    <!-- Analytics -->
     
     <script src="/travel-content-site/assets/analytics.js" defer></script>
     <script src="/travel-content-site/assets/perf-monitor.js" defer></script>
@@ -113,32 +106,25 @@
     </script>
     
 
-    
-    <!-- reCAPTCHA v2 for form spam protection -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
-
     <script>
     window.addEventListener('DOMContentLoaded', function() {
         // Image error fallback
         document.querySelectorAll('img').forEach(function(img) {
             img.addEventListener('error', function() {
-                this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500"><rect fill="#e8e0d6" width="800" height="500"/><text fill="#8a7e72" font-family="sans-serif" font-size="18" text-anchor="middle" x="400" y="260">' + (this.alt || 'Image') + '</text></svg>');
+                this.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500"><rect fill="#e2e8f0" width="800" height="500"/><text fill="#94a3b8" font-family="sans-serif" font-size="18" text-anchor="middle" x="400" y="260">' + (this.alt || 'Image') + '</text></svg>');
                 this.style.objectFit = 'contain';
-                this.style.background = '#e8e0d6';
+                this.style.background = '#f1f5f9';
             });
         });
 
-        // Lazy loading with Intersection Observer
+        // Lazy loading with fade-in
         var lazyImages = document.querySelectorAll('img[loading="lazy"]');
         if ('IntersectionObserver' in window && lazyImages.length > 0) {
             var imageObserver = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
                         var img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                        }
+                        if (img.dataset.src) { img.src = img.dataset.src; }
                         img.classList.add('loaded');
                         imageObserver.unobserve(img);
                     }
@@ -149,70 +135,118 @@
             lazyImages.forEach(function(img) { img.classList.add('loaded'); });
         }
 
-        // Agent carousel
-        var carousels = document.querySelectorAll('.agent-carousel');
-        carousels.forEach(function(carousel) {
-            var imgs = carousel.querySelectorAll('.agent-carousel-img');
-            if (imgs.length < 2) return;
-            var current = 0;
-            setInterval(function() {
-                imgs[current].style.opacity = '0';
-                current = (current + 1) % imgs.length;
-                imgs[current].style.opacity = '1';
-            }, 3000);
-        });
+        // Fade-in on scroll
+        var fadeElements = document.querySelectorAll('.fade-in, .slide-up');
+        if ('IntersectionObserver' in window) {
+            var fadeObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        fadeObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '50px' });
+            fadeElements.forEach(function(el) { fadeObserver.observe(el); });
+        } else {
+            fadeElements.forEach(function(el) { el.classList.add('visible'); });
+        }
+
+        // Header scroll effect
+        var header = document.querySelector('.site-header');
+        if (header) {
+            window.addEventListener('scroll', function() {
+                header.classList.toggle('scrolled', window.scrollY > 10);
+            });
+        }
+
+        // Search functionality
+        var searchInput = document.getElementById('hero-search');
+        if (searchInput) {
+            var countries = [
+                {name: 'Turkey', slug: 'turkey', name_ru: 'Турция'},
+                {name: 'Thailand', slug: 'thailand', name_ru: 'Таиланд'},
+                {name: 'Egypt', slug: 'egypt', name_ru: 'Египет'},
+                {name: 'Maldives', slug: 'maldives', name_ru: 'Мальдивы'},
+                {name: 'UAE', slug: 'uae', name_ru: 'ОАЭ'},
+                {name: 'Indonesia', slug: 'indonesia', name_ru: 'Индонезия'},
+                {name: 'China', slug: 'china', name_ru: 'Китай'},
+                {name: 'Georgia', slug: 'georgia', name_ru: 'Грузия'},
+                {name: 'Vietnam', slug: 'vietnam', name_ru: 'Вьетнам'},
+                {name: 'Sri Lanka', slug: 'sri-lanka', name_ru: 'Шри-Ланка'},
+                {name: 'Montenegro', slug: 'montenegro', name_ru: 'Черногория'},
+                {name: 'Cyprus', slug: 'cyprus', name_ru: 'Кипр'},
+                {name: 'Oman', slug: 'oman', name_ru: 'Оман'},
+                {name: 'Russia', slug: 'russia', name_ru: 'Россия'},
+                {name: 'Baikal', slug: 'baikal', name_ru: 'Байкал'},
+                {name: 'Altai', slug: 'altai', name_ru: 'Алтай'},
+                {name: 'Karelia', slug: 'karelia', name_ru: 'Карелия'},
+                {name: 'Dagestan', slug: 'dagestan', name_ru: 'Дагестан'},
+                {name: 'Kamchatka', slug: 'kamchatka', name_ru: 'Камчатка'},
+                {name: 'Istanbul', slug: 'turkey', name_ru: 'Стамбул'},
+                {name: 'Bangkok', slug: 'thailand', name_ru: 'Бангкок'},
+                {name: 'Dubai', slug: 'uae', name_ru: 'Дубай'},
+                {name: 'Phuket', slug: 'thailand', name_ru: 'Пхукет'},
+                {name: 'Cairo', slug: 'egypt', name_ru: 'Каир'},
+                {name: 'Sochi', slug: 'russia', name_ru: 'Сочи'},
+                {name: 'Moscow', slug: 'russia', name_ru: 'Москва'}
+            ];
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    var q = this.value.toLowerCase().trim();
+                    var found = countries.find(function(c) {
+                        return c.name.toLowerCase().includes(q) || c.name_ru.toLowerCase().includes(q);
+                    });
+                    if (found) {
+                        window.location.href = '/travel-content-site/en/' + found.slug + '/index.html';
+                    }
+                }
+            });
+        }
     });
     </script>
 
     
     
     
-    <script type="application/ld+json">
-    {"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "TravelHub"}, "dateModified": "2026-07-18", "datePublished": "2026-07-18", "description": "Kazan Travel Guide 2026 Welcome to Kazan, the captivating capital of Tatarstan, where the ancient Silk Road whispers through the streets and modern Russia da...", "headline": "Kazan Travel Guide 2026", "mainEntityOfPage": {"@id": "/en/russia/kazan-travel-guide.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "TravelHub"}}
-    </script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Organization", "name": "TravelHub"}, "dateModified": "2026-07-18", "datePublished": "2026-07-18", "description": "Kazan Travel Guide 2026 Welcome to Kazan, the captivating capital of Tatarstan, where the ancient Silk Road whispers through the streets and modern Russia da...", "headline": "Kazan Travel Guide 2026", "mainEntityOfPage": {"@id": "/en/russia/kazan-travel-guide.html", "@type": "WebPage"}, "publisher": {"@type": "Organization", "name": "TravelHub"}}</script>
     
-    <script type="application/ld+json">
-    {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "For a full experience of Kazan, we recommend 4-7 days. This covers major attractions, local cuisine, and relaxation."}, "name": "How many days do I need in Kazan?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Average weekly budget: from $500 per person excluding flights. Budget option from $300, comfort from $800."}, "name": "What\u0027s the budget for a trip to Kazan?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "No, Russian citizens need only an internal passport."}, "name": "Do I need a visa for Kazan?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Best time depends on the season \u2014 check our seasons guide for detailed weather and price information by month."}, "name": "When is the best time to visit Kazan?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Kazan is a popular tourist destination. Travel is safe with standard precautions."}, "name": "Is Kazan safe?"}]}
-    </script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "For a full experience of Kazan, we recommend 4-7 days. This covers major attractions, local cuisine, and relaxation."}, "name": "How many days do I need in Kazan?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Average weekly budget: from $500 per person excluding flights. Budget option from $300, comfort from $800."}, "name": "What\u0027s the budget for a trip to Kazan?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "No, Russian citizens need only an internal passport."}, "name": "Do I need a visa for Kazan?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Best time depends on the season \u2014 check our seasons guide for detailed weather and price information by month."}, "name": "When is the best time to visit Kazan?"}, {"@type": "Question", "acceptedAnswer": {"@type": "Answer", "text": "Kazan is a popular tourist destination. Travel is safe with standard precautions."}, "name": "Is Kazan safe?"}]}</script>
     
-    <script type="application/ld+json">
-    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "/en/index.html", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "/en/russia/index.html", "name": "Russia", "position": 2}, {"@type": "ListItem", "item": "/en/russia/kazan-travel-guide.html", "name": "Kazan", "position": 3}]}
-    </script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "/en/index.html", "name": "Home", "position": 1}, {"@type": "ListItem", "item": "/en/russia/index.html", "name": "Russia", "position": 2}, {"@type": "ListItem", "item": "/en/russia/kazan-travel-guide.html", "name": "Kazan", "position": 3}]}</script>
     
     
     
 </head>
 <body>
 
-<!-- Skip to content for accessibility -->
-<a href="#main-content" style="position:absolute;top:-100px;left:0;background:var(--teal);color:#fff;padding:8px 16px;z-index:9999;font-size:14px;text-decoration:none;border-radius:0 0 8px 0;" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to content</a>
+<!-- Skip to content -->
+<a href="#main-content" class="skip-link">Skip to content</a>
 
-<!-- NAV -->
-<header style="position:sticky;top:0;left:0;right:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--frame);">
-    <!-- Reading progress bar -->
-    <div id="reading-progress" style="position:absolute;bottom:0;left:0;height:3px;background:var(--teal);transition:width 0.1s;width:0;z-index:10;"></div>
-    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;">
-        <div><a href="javascript:history.back()" class="nav-pill nav-pill-outline" style="font-size:13px;" aria-label="Back">← Back</a></div>
-        <a href="/travel-content-site/en/index.html" class="wordmark">TravelHub</a>
-        <div style="display:flex;gap:8px;align-items:center;">
-            <a href="/travel-content-site/en/russia/kazan-travel-guide.html" class="nav-pill nav-pill-solid" style="padding:8px 14px;font-size:14px;font-weight:600;">🇬🇧 EN</a>
-            <a href="/travel-content-site/ru/russia/kazan-putevoditel.html" class="nav-pill nav-pill-outline" style="padding:8px 14px;font-size:14px;">🇷🇺 RU</a>
-            <!-- Hamburger menu button (mobile only) -->
-            <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:8px;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 12h18M3 6h18M3 18h18"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobile-menu" style="display:none;background:var(--bg);border-top:1px solid var(--frame);padding:16px 24px;">
-        <nav style="display:flex;flex-direction:column;gap:12px;">
-            <a href="/travel-content-site/en/index.html" class="nav-pill nav-pill-outline" style="justify-content:center;">Home</a>
-            <a href="/travel-content-site/en/about.html" class="nav-pill nav-pill-outline" style="justify-content:center;">About</a>
-            <a href="/travel-content-site/en/contacts.html" class="nav-pill nav-pill-outline" style="justify-content:center;">Contacts</a>
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/travel-content-site/en/index.html" class="logo">
+            <span class="logo-icon">✈</span>
+            TravelHub
+        </a>
+        <nav class="nav-links">
+            <a href="/travel-content-site/en/index.html" class="nav-link">Home</a>
+            <a href="/travel-content-site/en/about.html" class="nav-link">About</a>
+            <a href="/travel-content-site/en/contacts.html" class="nav-link">Contacts</a>
+            <a href="/travel-content-site/en/russia/kazan-travel-guide.html" class="lang-switch active">EN</a>
+            <a href="/travel-content-site/ru/russia/kazan-putevoditel.html" class="lang-switch ">RU</a>
         </nav>
+        <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
     </div>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="/travel-content-site/en/index.html">Home</a>
+        <a href="/travel-content-site/en/about.html">About</a>
+        <a href="/travel-content-site/en/contacts.html">Contacts</a>
+        <a href="/travel-content-site/en/russia/kazan-travel-guide.html">English</a>
+        <a href="/travel-content-site/ru/russia/kazan-putevoditel.html">Русский</a>
+    </nav>
 </header>
 
 
@@ -495,7 +529,7 @@
 
 <!-- AGENT BLOCK -->
 
-<section class="section" id="agent-form">
+<section class="section">
     <div class="agent-block">
         <h2>Need help planning your trip?</h2>
         <div class="agent-grid">
@@ -506,11 +540,8 @@
                 <ul class="agent-benefits">
                     <li>Expert guides researched by travel professionals</li>
                     <li>Honest price estimates — always verify on partner sites</li>
-                    <li>Destinations: Russia, Turkey, Thailand, Egypt, UAE, Indonesia, China, Maldives, Sri Lanka, Georgia, Vietnam, Montenegro, Cyprus, Oman, and more</li>
+                    <li>Destinations worldwide</li>
                     <li>Lifehacks on flights, hotels, eSIM &amp; transfers</li>
-                    <li>Hotel recommendations for every budget</li>
-                    <li>Visa info, QR codes, insurance — all covered</li>
-                    <li>Or explore everything yourself — all info is right here</li>
                 </ul>
             </div>
             <div>
@@ -521,54 +552,50 @@
                     <input type="tel" name="phone" placeholder="Phone *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
-                        <optgroup label="Russia">
-                            
-                            <option value="russia">Russia</option>
-                            
-                            <option value="baikal">Lake Baikal</option>
-                            
-                            <option value="altai">Altai</option>
-                            
-                            <option value="karelia">Karelia</option>
-                            
-                            <option value="dagestan">Dagestan</option>
-                            
-                            <option value="kamchatka">Kamchatka</option>
-                            
-                            <option value="mineral-vody">Caucasian Mineral Waters</option>
-                            
-                            <option value="vladivostok">Vladivostok</option>
-                            
-                        </optgroup>
-                        <optgroup label="International">
-                            
-                            <option value="turkey">Turkey</option>
-                            
-                            <option value="thailand">Thailand</option>
-                            
-                            <option value="egypt">Egypt</option>
-                            
-                            <option value="uae">UAE</option>
-                            
-                            <option value="indonesia">Indonesia</option>
-                            
-                            <option value="china">China</option>
-                            
-                            <option value="maldives">Maldives</option>
-                            
-                            <option value="sri-lanka">Sri Lanka</option>
-                            
-                            <option value="montenegro">Montenegro</option>
-                            
-                            <option value="vietnam">Vietnam</option>
-                            
-                            <option value="georgia">Georgia</option>
-                            
-                            <option value="cyprus">Cyprus</option>
-                            
-                            <option value="oman">Oman</option>
-                            
-                        </optgroup>
+                        
+                        <option value="russia">Russia</option>
+                        
+                        <option value="baikal">Lake Baikal</option>
+                        
+                        <option value="altai">Altai</option>
+                        
+                        <option value="karelia">Karelia</option>
+                        
+                        <option value="dagestan">Dagestan</option>
+                        
+                        <option value="kamchatka">Kamchatka</option>
+                        
+                        <option value="mineral-vody">Caucasian Mineral Waters</option>
+                        
+                        <option value="vladivostok">Vladivostok</option>
+                        
+                        
+                        <option value="turkey">Turkey</option>
+                        
+                        <option value="thailand">Thailand</option>
+                        
+                        <option value="egypt">Egypt</option>
+                        
+                        <option value="uae">UAE</option>
+                        
+                        <option value="indonesia">Indonesia</option>
+                        
+                        <option value="china">China</option>
+                        
+                        <option value="maldives">Maldives</option>
+                        
+                        <option value="sri-lanka">Sri Lanka</option>
+                        
+                        <option value="montenegro">Montenegro</option>
+                        
+                        <option value="vietnam">Vietnam</option>
+                        
+                        <option value="georgia">Georgia</option>
+                        
+                        <option value="cyprus">Cyprus</option>
+                        
+                        <option value="oman">Oman</option>
+                        
                         <option value="other">Other</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="Your wishes, dates, budget..."></textarea>
@@ -577,7 +604,7 @@
                     
                     <div class="g-recaptcha" data-sitekey="6LdPLACEHOLDER_HERE" data-size="normal"></div>
                     
-                    <button type="submit" class="btn-cta">Get help →</button>
+                    <button type="submit" class="btn btn-primary">Get help →</button>
                 </form>
             </div>
         </div>
@@ -585,15 +612,33 @@
 </section>
 
 
+<!-- NEWSLETTER -->
+
+<section class="section" style="padding-bottom:0;">
+    <div class="newsletter-section">
+        <h3>Subscribe to travel tips</h3>
+        <p>Get the best deals, travel guides, and insider tips. No spam, unsubscribe anytime.</p>
+        <form action="https://your-form-id.marketing-brevo.com" method="POST" target="_blank" class="newsletter-form">
+            <input type="email" name="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
 <footer class="site-footer">
-    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;">
-        <div>
-            <div class="wordmark" style="margin-bottom:12px;">TravelHub</div>
-            <p style="font-size:14px;line-height:1.6;">Your trusted travel guide: hotels, flights, attractions, and expert tips for the best destinations.</p>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="/travel-content-site/en/index.html" class="logo">
+                <span class="logo-icon">✈</span>
+                TravelHub
+            </a>
+            <p>Your trusted travel guide: hotels, flights, attractions, and expert tips for the best destinations.</p>
         </div>
-        <div>
-            <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Destinations</h4>
-            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
+        <div class="footer-col">
+            <h4>Destinations</h4>
+            <ul>
                 
                 <li><a href="/travel-content-site/en/russia/index.html">Russia</a></li>
                 
@@ -639,59 +684,44 @@
                 
             </ul>
         </div>
-        <div>
-            <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">Contact</h4>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/travel-content-site/en/about.html">About us</a></li>
+                <li><a href="/travel-content-site/en/contacts.html">Contacts</a></li>
+                <li><a href="https://antondrakon.github.io/travel-content-site/feed-en.xml">RSS</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
             <p style="font-size:14px;line-height:1.8;">
-                TravelHub — Expert Travel Guides<br>
                 Email: <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a><br>
-                <a href="/travel-content-site/en/about.html" style="font-size:13px;">About us</a> ·
-                <a href="/travel-content-site/en/contacts.html" style="font-size:13px;">Contacts</a><br>
                 All prices are approximate. Verify on partner sites.
             </p>
         </div>
     </div>
-
-    <!-- NEWSLETTER -->
-    
-    <div style="max-width:1200px;margin:0 auto;padding:40px 0 0;">
-        <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:32px;text-align:center;">
-            <h4 style="color:#fff;font-size:18px;font-weight:700;margin-bottom:8px;">
-                Subscribe to travel tips
-            </h4>
-            <p style="color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:16px;">
-                Get the best deals, travel guides, and insider tips. No spam, unsubscribe anytime.
-            </p>
-            <form action="https://your-form-id.marketing-brevo.com" method="POST" target="_blank" style="display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto;align-items:center;">
-                <div style="display:flex;gap:8px;width:100%;">
-                    <input type="email" name="email" placeholder="Your email" required style="flex:1;padding:12px 16px;border-radius:8px;border:none;font-size:14px;font-family:Inter,sans-serif;">
-                    <button type="submit" style="background:var(--copper);color:#fff;padding:12px 24px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;">
-                        Subscribe
-                    </button>
-                </div>
-                
-                <div class="g-recaptcha" data-sitekey="6LdPLACEHOLDER_HERE" data-size="compact" data-theme="dark"></div>
-                
-            </form>
-        </div>
-    </div>
-    
-
-    <div style="max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:13px;">
-        &copy; 2026 TravelHub. All rights reserved.
+    <div class="footer-bottom">
+        <span>&copy; 2026 TravelHub. All rights reserved.</span>
     </div>
 </footer>
 
+<!-- Fixed buttons -->
 <div class="fixed-buttons">
     <div class="messenger-btn" id="messenger-btn">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/></svg>
         <div class="messenger-tooltip">
-            <p><strong>Напишите Валентине в Макс</strong></p>
-            <div class="msg-text" id="prefilled-msg">Здравствуйте, Валентина! Интересует тур. Подскажите цены?</div>
-            <button class="copy-btn" onclick="copyMsg()">Скопировать текст</button>
-            <a href="https://max.vk.com/" target="_blank" class="copy-btn" style="display:inline-block;margin-top:6px;text-decoration:none;background:#0077FF;text-align:center;">Открыть Макс</a>
+            <p><strong>Write to us in MAX</strong></p>
+            <div class="msg-text" id="prefilled-msg">Hello! I&#39;m interested in a tour. Can you help?</div>
+            <button class="copy-btn" onclick="copyMsg()">Copy text</button>
+            <a href="https://max.vk.com/" target="_blank" class="copy-btn" style="display:inline-block;margin-top:6px;text-decoration:none;background:#0077FF;text-align:center;">Open MAX</a>
         </div>
     </div>
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
+</div>
+
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta">
+    <a href="#agent-form" class="btn btn-primary" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">Plan my trip →</a>
 </div>
 
 <script>
@@ -699,96 +729,20 @@ function copyMsg() {
     var el = document.getElementById('prefilled-msg');
     var btn = el.nextElementSibling;
     navigator.clipboard.writeText(el.textContent).then(function() {
-        btn.textContent = 'Скопировано!';
+        btn.textContent = 'Copied!';
         btn.classList.add('copied');
-        setTimeout(function() { btn.textContent = 'Скопировать текст'; btn.classList.remove('copied'); }, 2000);
+        setTimeout(function() { btn.textContent = 'Copy text'; btn.classList.remove('copied'); }, 2000);
     });
 }
-
-// Mobile menu toggle
-function toggleMobileMenu() {
-    var menu = document.getElementById('mobile-menu');
-    if (menu.style.display === 'none' || menu.style.display === '') {
-        menu.style.display = 'block';
-    } else {
-        menu.style.display = 'none';
-    }
-}
-
-// Show hamburger on mobile
-function checkMobileMenu() {
-    var hamburger = document.querySelector('.hamburger-btn');
-    if (hamburger) {
-        if (window.innerWidth <= 768) {
-            hamburger.style.display = 'flex';
-        } else {
-            hamburger.style.display = 'none';
-            var menu = document.getElementById('mobile-menu');
-            if (menu) menu.style.display = 'none';
-        }
-    }
-}
-window.addEventListener('resize', checkMobileMenu);
-window.addEventListener('load', checkMobileMenu);
-
-// Reading progress bar
-function initReadingProgress() {
-    var progressBar = document.getElementById('reading-progress');
-    if (!progressBar) return;
-    
-    window.addEventListener('scroll', function() {
-        var scrollTop = window.scrollY;
-        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        var progress = (scrollTop / docHeight) * 100;
-        progressBar.style.width = Math.min(progress, 100) + '%';
-    });
-}
-window.addEventListener('load', initReadingProgress);
-
-// Form success message
-document.addEventListener('DOMContentLoaded', function() {
-    var forms = document.querySelectorAll('form[action*="formspree"]');
-    forms.forEach(function(form) {
-        form.addEventListener('submit', function(e) {
-            var submitBtn = form.querySelector('button[type="submit"]');
-            if (submitBtn) {
-                submitBtn.textContent = '...';
-                submitBtn.disabled = true;
-            }
-        });
-    });
-    
-    // Check if redirected from successful form submission
-    if (window.location.search.includes('formspree=success')) {
-        var successMsg = document.createElement('div');
-        successMsg.className = 'form-success';
-        successMsg.innerHTML = 'Thank you! We will contact you soon.';
-        
-        var forms = document.querySelectorAll('form[action*="formspree"]');
-        if (forms.length > 0) {
-            forms[0].parentNode.insertBefore(successMsg, forms[0]);
-            forms[0].style.display = 'none';
-        }
-    }
-});
 </script>
 
-
-<div class="sticky-cta">
-    <a href="#agent-form" class="btn-cta" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">Plan my trip →</a>
-</div>
-
-<!-- Service Worker Registration -->
+<!-- Service Worker -->
 <script>
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/travel-content-site/sw.js')
-            .then(function(registration) {
-                console.log('SW registered:', registration.scope);
-            })
-            .catch(function(error) {
-                console.log('SW registration failed:', error);
-            });
+            .then(function(r) { console.log('SW registered'); })
+            .catch(function(e) { console.log('SW failed', e); });
     });
 }
 </script>
