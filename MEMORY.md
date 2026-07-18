@@ -127,3 +127,24 @@ python main.py all  # generate + build
 ## Дата последнего обновления
 
 2026-07-18
+
+---
+
+## Статус деплоя
+
+**Сайт задеплоен на GitHub Pages:**
+https://antondrakon.github.io/travel-content-site
+
+- 648 HTML файлов (минифицированы, -15.6%)
+- 878 URL в sitemap (RU + EN)
+- 800 RSS записей (RU + EN)
+- 24 seasonal pages (12 месяцев x 2 языка)
+- 6 comparison pages (3 сравнения x 2 языка)
+- 21 страна, ~80 городов
+- 5 типов контента на 2 языка
+
+**Для активации дополнительных функций настройте .env:**
+- `RECAPTCHA_SITE_KEY` — для защиты форм
+- `BREVO_FORM_URL` — для email-рассылки
+- `YANDEX_METRIKA_ID` — для аналитики
+- `GOOGLE_ANALYTICS_ID` — для GA4

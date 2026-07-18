@@ -116,11 +116,16 @@
         <p style="color:rgba(255,255,255,0.85);font-size:16px;margin-bottom:24px;">
             {{ "Subscribe to our newsletter. Best destinations, exclusive deals, and insider tips. No spam." if lang == "en" else "Подпишитесь на рассылку. Лучшие направления, эксклюзивные скидки и советы. Без спама." }}
         </p>
-        <form action="{{ brevo_form_url }}" method="POST" target="_blank" style="display:flex;gap:8px;max-width:450px;margin:0 auto;">
-            <input type="email" name="email" placeholder="{{ 'Your email' if lang == 'en' else 'Ваш email' }}" required style="flex:1;padding:14px 18px;border-radius:10px;border:none;font-size:15px;font-family:Inter,sans-serif;">
-            <button type="submit" style="background:var(--copper);color:#fff;padding:14px 28px;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap;">
-                {{ "Subscribe" if lang == "en" else "Подписаться" }}
-            </button>
+        <form action="{{ brevo_form_url }}" method="POST" target="_blank" style="display:flex;flex-direction:column;gap:12px;max-width:450px;margin:0 auto;align-items:center;">
+            <div style="display:flex;gap:8px;width:100%;">
+                <input type="email" name="email" placeholder="{{ 'Your email' if lang == 'en' else 'Ваш email' }}" required style="flex:1;padding:14px 18px;border-radius:10px;border:none;font-size:15px;font-family:Inter,sans-serif;">
+                <button type="submit" style="background:var(--copper);color:#fff;padding:14px 28px;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap;">
+                    {{ "Subscribe" if lang == "en" else "Подписаться" }}
+                </button>
+            </div>
+            {% if recaptcha_site_key %}
+            <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="compact"></div>
+            {% endif %}
         </form>
     </div>
 </section>
