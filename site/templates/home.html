@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block title %}{{ "TravelHub — Expert Travel Guides 2026" if lang == "en" else "TravelHub — Экспертные путеводители 2026" }}{% endblock %}
-{% block meta_description %}{{ "Expert travel guides for 50+ cities across 20 countries. Hotels, cheap flights, top attractions. Russia, Turkey, Thailand, Egypt, UAE, and more." if lang == "en" else "Экспертные гайды по 50+ городам в 20 странах. Отели, дешёвые билеты, топ достопримечательностей. Россия, Турция, Таиланд, Египет, ОАЭ и др." }}{% endblock %}
+{% block title %}{{ "TravelHub — Travel Guides 2026" if lang == "en" else "TravelHub — Путеводители 2026" }}{% endblock %}
+{% block meta_description %}{{ "Expert travel guides for 50+ cities across 20 countries. Hotels, flights, attractions." if lang == "en" else "Экспертные путеводители по 50+ городам в 20 странах. Отели, билеты, достопримечательности." }}{% endblock %}
 
 {% block en_alt %}index.html{% endblock %}
 {% block ru_alt %}index.html{% endblock %}
@@ -11,123 +11,244 @@
 
 {% block content %}
 
-<!-- HERO -->
-<div class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80');">
+<!-- ═══════════════ HERO — Apple-style ═══════════════ -->
+<div class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85');">
     <div class="hero-content">
-        <div class="hero-badge">✨ {{ "Trusted by 10,000+ travelers" if lang == "en" else "Нам доверяют 10 000+ путешественников" }}</div>
-        <h1>{{ "Discover Your Next Adventure" if lang == "en" else "Найдите своё следующее путешествие" }}</h1>
-        <p class="hero-subtitle">{{ "Expert guides, honest prices, and personalized trip planning for destinations worldwide." if lang == "en" else "Экспертные гайды, честные цены и персональное планирование поездок по всему миру." }}</p>
+        <h1>{{ "Путешествуйте осознанно" if lang == "ru" else "Travel with purpose" }}</h1>
+        <p class="hero-subtitle">{{ "Полные путеводители, советы, маршруты и лучшие места для отдыха по всему миру." if lang == "ru" else "Complete guides, tips, routes, and the best places to stay around the world." }}</p>
 
         <div class="hero-search">
-            <input type="text" id="hero-search" placeholder="{{ 'Where do you want to go? Try "Thailand" or "Мальдивы"...' if lang == 'en' else 'Куда хотите поехать? Попробуйте "Thailand" или "Мальдивы"...' }}">
+            <input type="text" id="hero-search" placeholder="{{ '🔍  Куда хотите поехать?' if lang == 'ru' else '🔍  Where do you want to go?' }}">
             <button type="button" onclick="var q=document.getElementById('hero-search').value; if(q)document.getElementById('hero-search').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter'}))">
-                {{ "Search" if lang == "en" else "Найти" }}
+                {{ "Найти" if lang == "ru" else "Search" }}
             </button>
         </div>
 
-        <div class="hero-quick-links">
+        <div class="hero-pills">
             {% set popular = [
-                ("🇹🇷", "Turkey", "Турция", "turkey"),
-                ("🇹🇭", "Thailand", "Таиланд", "thailand"),
-                ("🇲🇻", "Maldives", "Мальдивы", "maldives"),
-                ("🇪🇬", "Egypt", "Египет", "egypt"),
-                ("🇦🇪", "UAE", "ОАЭ", "uae"),
-                ("🇷🇺", "Russia", "Россия", "russia"),
-                ("🇬🇪", "Georgia", "Грузия", "georgia"),
-                ("🇻🇳", "Vietnam", "Вьетнам", "vietnam")
+                ("🇹🇭", "Таиланд", "Thailand", "thailand"),
+                ("🇹🇷", "Турция", "Turkey", "turkey"),
+                ("🇻🇳", "Вьетнам", "Vietnam", "vietnam"),
+                ("🇦🇪", "ОАЭ", "UAE", "uae"),
+                ("🇪🇬", "Египет", "Egypt", "egypt"),
+                ("🇷🇺", "Россия", "Russia", "russia"),
+                ("🇲🇻", "Мальдивы", "Maldives", "maldives"),
+                ("🇬🇪", "Грузия", "Georgia", "georgia")
             ] %}
-            {% for emoji, en, ru, slug in popular %}
-            <a href="{{ root }}/{{ lang }}/{{ slug }}/index.html" class="hero-quick-link">
-                {{ emoji }} {{ en if lang == "en" else ru }}
+            {% for emoji, ru, en, slug in popular %}
+            <a href="{{ root }}/{{ lang }}/{{ slug }}/index.html" class="hero-pill">
+                {{ emoji }} {{ ru if lang == "ru" else en }}
             </a>
             {% endfor %}
         </div>
     </div>
 </div>
 
-<!-- POPULAR COUNTRIES -->
-<section class="section">
-    <div class="section-header">
-        <div class="section-label">🌍 {{ "Popular Destinations" if lang == "en" else "Популярные направления" }}</div>
-        <h2>{{ "Explore the World" if lang == "en" else "Исследуйте мир" }}</h2>
-        <p>{{ "From tropical beaches to mountain adventures — find your perfect destination." if lang == "en" else "От тропических пляжей до горных приключений — найдите идеальное направление." }}</p>
-    </div>
-    <div class="cards-grid">
-        {% for country in countries %}
-        <a href="{{ root }}/{{ lang }}/{{ country.slug }}/index.html" class="card fade-in" style="--i:{{ loop.index0 }}">
-            <div class="card-img-wrap">
-                <img src="{{ country.image }}" alt="{{ country.name_en if lang == 'en' else country.name_ru }}" loading="lazy">
-                <span class="badge badge-popular">🔥 {{ "Popular" if lang == "en" else "Популярно" }}</span>
-            </div>
-            <div class="card-body">
-                <h3>{{ country.emoji }} {{ country.name_en if lang == "en" else country.name_ru }}</h3>
-                <p class="card-desc">{{ country.cities_count }} {{ "cities" if lang == "en" else "городов" }} · {{ country.guides_count }} {{ "guides" if lang == "en" else "гайдов" }}</p>
-                <div class="card-cta">
-                    {{ "Explore" if lang == "en" else "Смотреть" }} →
-                </div>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
-</section>
-
-<!-- FEATURES -->
-<section class="section" style="background:var(--white);max-width:100%;">
-    <div style="max-width:var(--container);margin:0 auto;">
+<!-- ═══════════════ COUNTRIES — Big cards ═══════════════ -->
+<section class="section" style="background:var(--white);">
+    <div class="section-narrow">
         <div class="section-header">
-            <div class="section-label">✨ {{ "Why TravelHub" if lang == "en" else "Почему TravelHub" }}</div>
-            <h2>{{ "Everything You Need for Travel" if lang == "en" else "Всё для путешествия" }}</h2>
+            <p class="section-eyebrow">{{ "Направления" if lang == "ru" else "Destinations" }}</p>
+            <h2>{{ "Выберите страну" if lang == "ru" else "Choose a country" }}</h2>
+            <p>{{ "Большие карточки с лучшими направлениями для путешествий." if lang == "ru" else "Large cards with the best travel destinations." }}</p>
         </div>
-        <div class="features-grid">
-            {% set features = [
-                ("📖", "Travel Guides" if lang == "en" else "Путеводители", "Complete city handbooks with local tips" if lang == "en" else "Полные гайды с советами"),
-                ("🏨", "Hotels" if lang == "en" else "Отели", "Best picks for every budget" if lang == "en" else "Лучшие варианты под любой бюджет"),
-                ("✈️", "Flights" if lang == "en" else "Авиабилеты", "Cheap tickets, dates & hacks" if lang == "en" else "Дешёвые билеты, даты и лайфхаки"),
-                ("🏛", "Attractions" if lang == "en" else "Достопримечательности", "Must-see places with prices" if lang == "en" else "Главные места с ценами"),
-                ("☀️", "Seasons" if lang == "en" else "Сезоны", "Weather & best time to visit" if lang == "en" else "Погода и лучшее время"),
-                ("💬", "24/7 Support" if lang == "en" else "Поддержка 24/7", "Travel experts help plan your trip" if lang == "en" else "Поможем спланировать поездку")
-            ] %}
-            {% for emoji, title, desc in features %}
-            <div class="feature-card fade-in" style="--i:{{ loop.index0 }}">
-                <div class="feature-icon">{{ emoji }}</div>
-                <h4>{{ title }}</h4>
-                <p>{{ desc }}</p>
-            </div>
+        <div class="countries-grid">
+            {% for country in countries %}
+            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/index.html" class="country-card reveal">
+                <img src="{{ country.image }}" alt="{{ country.name_en if lang == 'en' else country.name_ru }}" loading="lazy">
+                <div class="country-card-body">
+                    <h3>{{ country.name_en if lang == "en" else country.name_ru }}</h3>
+                    <span class="count">{{ country.cities_count }} {{ "городов" if lang == "ru" else "cities" }} · {{ country.guides_count }} {{ "гайдов" if lang == "ru" else "guides" }}</span>
+                    <div class="arrow">→</div>
+                </div>
+            </a>
             {% endfor %}
         </div>
     </div>
 </section>
 
-<!-- AGENT FORM -->
-<section class="section" id="agent-form" style="padding-top:60px;padding-bottom:60px;">
-    <div style="max-width:800px;margin:0 auto;background:var(--white);border-radius:var(--radius-xl);padding:48px;box-shadow:var(--shadow-lg);text-align:center;">
-        <div style="font-size:48px;margin-bottom:16px;">✈️</div>
-        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">{{ "Need help planning your trip?" if lang == "en" else "Нужна помощь с планированием?" }}</h2>
-        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;max-width:600px;margin-left:auto;margin-right:auto;">
-            {{ "Tell us your wishes — we'll help with visas, transfers, eSIM and find the best hotels." if lang == "en" else "Расскажите о пожеланиях — поможем с визами, трансферами, eSIM и подбором отелей." }}
-        </p>
-        <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST" style="max-width:500px;margin:0 auto;">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required>
-                <input type="tel" name="phone" placeholder="{{ 'Phone *' if lang == 'en' else 'Телефон *' }}" required>
+<!-- ═══════════════ CITIES — Compact cards ═══════════════ -->
+<section class="section" style="background:var(--gray);">
+    <div class="section-narrow">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Города" if lang == "ru" else "Cities" }}</p>
+            <h2>{{ "Популярные города" if lang == "ru" else "Popular cities" }}</h2>
+            <p>{{ "Красивые карточки с лучшими местами для отдыха." if lang == "ru" else "Beautiful cards with the best places to stay." }}</p>
+        </div>
+        <div class="cities-grid">
+            {% set top_cities = [
+                ("istanbul", "turkey", "Стамбул", "Istanbul", "Город на двух континентах", "City on two continents", "⭐⭐⭐⭐⭐"),
+                ("bangkok", "thailand", "Бангкок", "Bangkok", "Мегаполис контрастов", "Megacity of contrasts", "⭐⭐⭐⭐⭐"),
+                ("phuket", "thailand", "Пхукет", "Phuket", "Лучшие пляжи Таиланда", "Thailand's best beaches", "⭐⭐⭐⭐⭐"),
+                ("dubai", "uae", "Дубай", "Dubai", "Город будущего", "City of the future", "⭐⭐⭐⭐⭐"),
+                ("maldives", "maldives", "Мальдивы", "Maldives", "Рай на земле", "Paradise on earth", "⭐⭐⭐⭐⭐"),
+                ("sochi", "russia", "Сочи", "Sochi", "Курортное сердце Черноморья", "Black Sea resort heart", "⭐⭐⭐⭐⭐"),
+                ("tbilisi", "georgia", "Тбилиси", "Tbilisi", "Древняя столица Грузии", "Ancient Georgian capital", "⭐⭐⭐⭐⭐"),
+                ("hanoi", "vietnam", "Ханой", "Hanoi", "Столица Вьетнама", "Capital of Vietnam", "⭐⭐⭐⭐⭐")
+            ] %}
+            {% for city_slug, country_slug, name_ru, name_en, desc_ru, desc_en, stars in top_cities %}
+            <a href="{{ root }}/{{ lang }}/{{ country_slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="city-card reveal">
+                <div class="city-card-img">
+                    <img src="https://images.unsplash.com/photo-{{ ['1524231757912-21f4fe3a7200','1508009603885-50cf7c579365','1589394815804-964ed0be2eb5','1512453979798-5ea266f8880c','1573843981267-be1999ff37cd','1548636800-4abe7e58658e','1565008576549-57569a49371d','1528127269322-539801943592'][loop.index0] }}?w=600&q=80" alt="{{ name_en }}" loading="lazy">
+                </div>
+                <div class="city-card-body">
+                    <h4>{{ name_ru if lang == "ru" else name_en }}</h4>
+                    <p class="desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
+                    <div class="stars">{{ stars }}</div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ COLLECTIONS — Horizontal scroll ═══════════════ -->
+<section class="section" style="background:var(--white);">
+    <div class="section-narrow">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Подборки" if lang == "ru" else "Collections" }}</p>
+            <h2>{{ "Что вам интересно?" if lang == "ru" else "What interests you?" }}</h2>
+        </div>
+        <div class="collections-scroll">
+            {% set collections = [
+                ("🏖", "Лучшие пляжи", "Best Beaches", "/ru/seasonal/july.html"),
+                ("🏨", "Лучшие курорты", "Best Resorts", "/ru/compare/maldives-vs-sri-lanka.html"),
+                ("⛷", "Горнолыжные курорты", "Ski Resorts", "/ru/seasonal/january.html"),
+                ("👨‍👩‍👧", "Отдых с детьми", "Family Travel", "/ru/seasonal/june.html"),
+                ("💑", "Романтический отдых", "Romantic Trips", "/ru/compare/maldives-vs-sri-lanka.html"),
+                ("💰", "Бюджетный отдых", "Budget Travel", "/ru/seasonal/october.html"),
+                ("🌍", "Экскурсии", "Sightseeing", "/ru/seasonal/may.html"),
+                ("🍜", "Гастрономия", "Food & Dining", "/ru/turkey/index.html")
+            ] %}
+            {% for emoji, title_ru, title_en, url in collections %}
+            <a href="{{ root }}{{ url }}" class="collection-card reveal">
+                <div class="icon">{{ emoji }}</div>
+                <h4>{{ title_ru if lang == "ru" else title_en }}</h4>
+                <p>{{ "Подборка лучших направлений" if lang == "ru" else "Curated collection of top destinations" }}</p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ LATEST ARTICLES — Medium-style ═══════════════ -->
+<section class="section" style="background:var(--gray);">
+    <div class="section-narrow">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Статьи" if lang == "ru" else "Articles" }}</p>
+            <h2>{{ "Последние путеводители" if lang == "ru" else "Latest guides" }}</h2>
+            <p>{{ "Подробные гайды с советами, ценами и маршрутами." if lang == "ru" else "Detailed guides with tips, prices, and routes." }}</p>
+        </div>
+        <div class="articles-grid">
+            {% set articles = [
+                ("turkey", "istanbul", "guide", "🇹🇷", "Путеводитель", "Travel Guide", "Стамбул: полный путеводитель 2026", "Istanbul: Complete Travel Guide 2026", "Город на двух континентах — дворцы, мечети, базары и лучшие рестораны.", "City on two continents — palaces, mosques, bazaars, and top restaurants.", "Июль 2026", "July 2026", "8 мин", "8 min"),
+                ("thailand", "phuket", "guide", "🇹🇭", "Путеводитель", "Travel Guide", "Пхукет: лучшие пляжи и курорты", "Phuket: Best Beaches and Resorts", "Остров с бирюзовым морем, тропическими лесами и ночными рынками.", "Island with turquoise sea, tropical forests, and night markets.", "Июнь 2026", "June 2026", "7 мин", "7 min"),
+                ("maldives", "male", "guide", "🇲🇻", "Путеводитель", "Travel Guide", "Мальдивы: как выбрать остров", "Maldives: How to Choose an Island", "Бюджетные локальные острова vs курорты. Полное сравнение.", "Budget local islands vs resorts. Full comparison.", "Июль 2026", "July 2026", "10 мин", "10 min")
+            ] %}
+            {% for c_slug, city, ct, emoji, cat_ru, cat_en, title_ru, title_en, desc_ru, desc_en, date_ru, date_en, time_ru, time_en in articles %}
+            <a href="{{ root }}/{{ lang }}/{{ c_slug }}/{{ city }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="article-card reveal">
+                <div class="article-card-img">
+                    <img src="https://images.unsplash.com/photo-{{ ['1524231757912-21f4fe3a7200','1589394815804-964ed0be2eb5','1573843981267-be1999ff37cd'][loop.index0] }}?w=800&q=80" alt="{{ title_en }}" loading="lazy">
+                </div>
+                <div class="article-card-body">
+                    <div class="category">{{ emoji }} {{ cat_ru if lang == "ru" else cat_en }}</div>
+                    <h4>{{ title_ru if lang == "ru" else title_en }}</h4>
+                    <p class="excerpt">{{ desc_ru if lang == "ru" else desc_en }}</p>
+                    <div class="meta">
+                        <span>{{ date_ru if lang == "ru" else date_en }}</span>
+                        <span>·</span>
+                        <span>⏱ {{ time_ru if lang == "ru" else time_en }}</span>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ AGENT FORM ═══════════════ -->
+<section class="section" style="background:var(--white);">
+    <div class="section-narrow">
+        <div class="agent-block reveal" id="agent-form">
+            <h2>{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h2>
+            <div class="agent-grid">
+                <div>
+                    <p style="font-size:17px;color:var(--text-secondary);line-height:1.7;margin-bottom:20px;">
+                        {{ "Расскажите о пожеланиях — поможем с визами, трансферами, eSIM и подбором отелей. Все цены ориентировочные." if lang == "ru" else "Tell us your wishes — we'll help with visas, transfers, eSIM and hotels. All prices are estimates." }}
+                    </p>
+                    <ul class="agent-benefits">
+                        <li>{{ "Экспертные гайды" if lang == "ru" else "Expert guides" }}</li>
+                        <li>{{ "Честные оценки цен" if lang == "ru" else "Honest price estimates" }}</li>
+                        <li>{{ "21 страна, 80+ городов" if lang == "ru" else "21 countries, 80+ cities" }}</li>
+                        <li>{{ "Поддержка 24/7" if lang == "ru" else "24/7 support" }}</li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                            <input type="text" name="name" placeholder="{{ 'Имя *' if lang == 'ru' else 'Name *' }}" required>
+                            <input type="tel" name="phone" placeholder="{{ 'Телефон *' if lang == 'ru' else 'Phone *' }}" required>
+                        </div>
+                        <select name="destination">
+                            <option value="">{{ "Направление" if lang == "ru" else "Destination" }}</option>
+                            {% for d in russia_destinations %}
+                            <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
+                            {% endfor %}
+                            {% for d in international_destinations %}
+                            <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
+                            {% endfor %}
+                        </select>
+                        <textarea name="message" rows="2" placeholder="{{ 'Пожелания, даты, бюджет...' if lang == 'ru' else 'Wishes, dates, budget...' }}"></textarea>
+                        <input type="hidden" name="_subject" value="{{ 'Заявка с TravelHub' if lang == 'ru' else 'Request from TravelHub' }}">
+                        {% if recaptcha_site_key %}
+                        <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
+                        {% endif %}
+                        <button type="submit" class="btn btn-accent" style="width:100%;">{{ "Отправить заявку →" if lang == "ru" else "Send request →" }}</button>
+                    </form>
+                </div>
             </div>
-            <select name="destination">
-                <option value="">{{ "Preferred destination" if lang == "en" else "Желаемое направление" }}</option>
-                {% for d in russia_destinations %}
-                <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
-                {% endfor %}
-                {% for d in international_destinations %}
-                <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
-                {% endfor %}
-                <option value="other">{{ "Other" if lang == "en" else "Другое" }}</option>
-            </select>
-            <textarea name="message" rows="2" placeholder="{{ 'Your wishes, dates, budget...' if lang == 'en' else 'Пожелания, даты, бюджет...' }}"></textarea>
-            <input type="hidden" name="_subject" value="{{ 'Trip request from TravelHub' if lang == 'en' else 'Заявка на поездку с TravelHub' }}">
-            {% if recaptcha_site_key %}
-            <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="section" style="background:var(--gray);">
+    <div class="section-narrow">
+        <div class="section-header">
+            <p class="section-eyebrow">FAQ</p>
+            <h2>{{ "Частые вопросы" if lang == "ru" else "Frequently Asked Questions" }}</h2>
+        </div>
+        <div class="faq-list">
+            {% if lang == "ru" %}
+            <details class="faq-item reveal"><summary>Сколько стоят путеводители?</summary><p>Все путеводители на сайте бесплатны. Мы зарабатываем через партнёрские ссылки — это бесплатно для вас.</p></details>
+            <details class="faq-item reveal"><summary>Как забронировать отель дешевле?</summary><p>Бронируйте за 2-3 месяца до поездки. Сравнивайте цены на Hotellook и Booking.com. В низкий сезон цены ниже на 30-50%.</p></details>
+            <details class="faq-item reveal"><summary>Нужна ли виза?</summary><p>Зависит от направления. Многие страны доступны без визы для граждан РФ. Подробности в путеводителе по каждой стране.</p></details>
+            <details class="faq-item reveal"><summary>Как получить помощь с планированием?</summary><p>Оставьте заявку на сайте или напишите нам. Наши эксперты помогут с визами, отелями, трансферами и маршрутом.</p></details>
+            <details class="faq-item reveal"><summary>Как вы зарабатываете?</summary><p>Мы получаем небольшую комиссию, когда вы бронируете через наши партнёрские ссылки. Это бесплатно для вас и не влияет на цену.</p></details>
+            {% else %}
+            <details class="faq-item reveal"><summary>Are the travel guides free?</summary><p>Yes, all guides on the site are free. We earn through affiliate partnerships — this costs you nothing extra.</p></details>
+            <details class="faq-item reveal"><summary>How to book hotels cheaper?</summary><p>Book 2-3 months ahead. Compare prices on Hotellook and Booking.com. Low season prices are 30-50% lower.</p></details>
+            <details class="faq-item reveal"><summary>Do I need a visa?</summary><p>It depends on the destination. Many countries are visa-free for Russian citizens. Check the guide for each country.</p></details>
+            <details class="faq-item reveal"><summary>How to get help with planning?</summary><p>Leave a request on the site or contact us. Our experts will help with visas, hotels, transfers, and itinerary.</p></details>
+            <details class="faq-item reveal"><summary>How do you make money?</summary><p>We earn a small commission when you book through our affiliate links. This costs you nothing extra and doesn't affect the price.</p></details>
             {% endif %}
-            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</button>
-        </form>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════ NEWSLETTER ═══════════════ -->
+<section class="section" style="background:var(--white);padding-bottom:0;">
+    <div class="section-narrow">
+        {% if brevo_form_url %}
+        <div class="newsletter-block reveal">
+            <h3>{{ "Подпишитесь на советы путешественника" if lang == "ru" else "Subscribe to travel tips" }}</h3>
+            <p>{{ "Лучшие предложения, путеводители и советы. Без спама, отписка в один клик." if lang == "ru" else "Best deals, guides, and tips. No spam, unsubscribe anytime." }}</p>
+            <form action="{{ brevo_form_url }}" method="POST" target="_blank" class="newsletter-form">
+                <input type="email" name="email" placeholder="{{ 'Ваш email' if lang == 'ru' else 'Your email' }}" required>
+                <button type="submit">{{ "Подписаться" if lang == "ru" else "Subscribe" }}</button>
+            </form>
+        </div>
+        {% endif %}
     </div>
 </section>
 

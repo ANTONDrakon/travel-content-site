@@ -130,6 +130,26 @@ python main.py all  # generate + build
 
 ---
 
+## Редизайн
+
+**Статус:** Premium travel дизайн выполнен
+
+### Что обновлено
+- **CSS-система** — новая палитра (navy, ocean, teal, coral), 5-уровневые тени, анимации
+- **Header** — sticky с blur (backdrop-filter: blur(20px))
+- **Hero** — полноширинный с поиском и быстрыми ссылками на страны
+- **Карточки** — hover zoom, бейджи (Popular, Seasonal, New, Budget)
+- **Анимации** — fade-in при прокрутке, slide-up, hover effects
+- **Mobile** — hamburger меню, sticky CTA, адаптивная сетка
+- **Footer** — 4-колоночная сетка с навигацией
+
+### Файлы
+- `site/assets/styles.css` — полная переработка (~600 строк)
+- `site/templates/base.html` — новый header/footer
+- `site/templates/home.html` — hero с поиском, карточки стран
+
+---
+
 ## Статус деплоя
 
 **Сайт задеплоен на GitHub Pages:**
