@@ -147,10 +147,10 @@
         }
 
         // Header scroll effect
-        var header = document.querySelector('.site-header');
+        var header = document.querySelector('.header');
         if (header) {
             window.addEventListener('scroll', function() {
-                header.classList.toggle('scrolled', window.scrollY > 10);
+                header.classList.toggle('solid', window.scrollY > 10);
             });
         }
 
@@ -208,18 +208,18 @@
 <a href="#main-content" class="skip-link">К содержимому</a>
 
 <!-- HEADER -->
-<header class="site-header">
+<header class="header">
     <div class="header-inner">
         <a href="/travel-content-site/ru/index.html" class="logo">
             <span class="logo-icon">✈</span>
             TravelHub
         </a>
-        <nav class="nav-links">
+        <nav class="nav">
             <a href="/travel-content-site/ru/index.html" class="nav-link">Главная</a>
             <a href="/travel-content-site/ru/about.html" class="nav-link">О нас</a>
             <a href="/travel-content-site/ru/contacts.html" class="nav-link">Контакты</a>
-            <a href="/travel-content-site/en/compare/thailand-vs-vietnam.html" class="lang-switch ">EN</a>
-            <a href="/travel-content-site/ru/compare/thailand-vs-vietnam.html" class="lang-switch active">RU</a>
+            <a href="/travel-content-site/en/compare/thailand-vs-vietnam.html" class="lang-btn ">EN</a>
+            <a href="/travel-content-site/ru/compare/thailand-vs-vietnam.html" class="lang-btn active">RU</a>
         </nav>
         <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>

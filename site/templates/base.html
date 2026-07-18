@@ -147,10 +147,10 @@
         }
 
         // Header scroll effect
-        var header = document.querySelector('.site-header');
+        var header = document.querySelector('.header');
         if (header) {
             window.addEventListener('scroll', function() {
-                header.classList.toggle('scrolled', window.scrollY > 10);
+                header.classList.toggle('solid', window.scrollY > 10);
             });
         }
 
@@ -216,18 +216,18 @@
 <a href="#main-content" class="skip-link">{{ "Skip to content" if lang == "en" else "К содержимому" }}</a>
 
 <!-- HEADER -->
-<header class="site-header">
+<header class="header">
     <div class="header-inner">
         <a href="{{ root }}/{{ lang }}/index.html" class="logo">
             <span class="logo-icon">✈</span>
             TravelHub
         </a>
-        <nav class="nav-links">
+        <nav class="nav">
             <a href="{{ root }}/{{ lang }}/index.html" class="nav-link">{{ "Home" if lang == "en" else "Главная" }}</a>
             <a href="{{ root }}/{{ lang }}/about.html" class="nav-link">{{ "About" if lang == "en" else "О нас" }}</a>
             <a href="{{ root }}/{{ lang }}/contacts.html" class="nav-link">{{ "Contacts" if lang == "en" else "Контакты" }}</a>
-            <a href="{{ root }}/en/{{ self.en_alt() }}" class="lang-switch {% if lang == 'en' %}active{% endif %}">EN</a>
-            <a href="{{ root }}/ru/{{ self.ru_alt() }}" class="lang-switch {% if lang == 'ru' %}active{% endif %}">RU</a>
+            <a href="{{ root }}/en/{{ self.en_alt() }}" class="lang-btn {% if lang == 'en' %}active{% endif %}">EN</a>
+            <a href="{{ root }}/ru/{{ self.ru_alt() }}" class="lang-btn {% if lang == 'ru' %}active{% endif %}">RU</a>
         </nav>
         <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
@@ -243,7 +243,7 @@
 </header>
 
 {% if breadcrumbs %}
-<div class="breadcrumbs" style="padding-top:80px;">
+<div class="breadcrumbs" style="padding-top:96px;">
     {% for bc in breadcrumbs %}
         {% if not loop.last %}
             <a href="{{ bc.url }}">{{ bc.label }}</a> /

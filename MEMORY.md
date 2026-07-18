@@ -1,170 +1,158 @@
 # MEMORY.md — Журнал проекта TravelHub
 
-## Общая цель проекта
+## ЭТАП 1: АУДИТ UI/UX
 
-Автоматическая система генерации туристического контента с SEO-оптимизацией и партнёрскими ссылками Travelpayouts. Двуязычный (RU + EN) статический сайт для GitHub Pages / Netlify.
+### Найденные проблемы
 
----
+#### 1. CSS-система
+| Проблема | Влияние | Исправление |
+|----------|---------|-------------|
+| Неполная палитра (5 цветов вместо 16) | Нет success/warning/danger/hover/active/disabled | Расширить до полной палитры |
+| Нет spacing system | Случайные отступы | Создать 4-128px шкалу |
+| Нет компонента Button | Разные размеры кнопок | Единый компонент sm/md/lg |
+| Нет компонента Card | Разные стили карточек | Единый компонент card |
+| Container 1120px | Слишком узкий для 1440px дизайна | Расширить до 1280px |
+| Header 52px | Слишком маленький | Увеличить до 72px |
 
-## Статус задач
+#### 2. Шаблоны
+| Проблема | Влияние | Исправление |
+|----------|---------|-------------|
+| destination-rich.html: inline стили | Неочищенный код | Перенести в CSS |
+| article.html: нет hero overlay | Плохая читаемость | Добавить overlay |
+| seasonal.html: nav-pill устарел | Сломанные стили | Обновить |
+| comparison.html: старые CSS-переменные | --teal вместо --blue | Обновить |
 
-| Приоритет | Всего | Исполнено | Остаток |
-|-----------|-------|-----------|---------|
-| P0 | 7 | 7 | 0 |
-| P1 | 9 | 9 | 0 |
-| P2 | 9 | 9 | 0 |
-| P3 | 9 | 9 | 0 |
-| **Итого** | **34** | **34** | **0** |
+#### 3. Типографика
+| Проблема | Влияние | Исправление |
+|----------|---------|-------------|
+| H1 64px на мобильных | Слишком большой | clamp() |
+| Body 18px везде | Нет иерархии | Body L/M/S |
+| Caption 15px | Маленький | Обновить |
 
----
-
-## Выполнено (сводка за все сессии)
-
-### P0 — Критические
-1. robots.txt — исправлен регистр URL
-2. Schema.org — даты динамические (date.today())
-3. 404 страница — создана
-4. article.html — published_time/modified_time динамические
-5. publisher.py — lazy loading для exchange rates
-6. publisher.py — bare except заменены на конкретные
-7. publisher.py — опечатка "cănзуется" → "требуется"
-
-### P1 — Важные
-8. reCAPTCHA v2 добавлена на все 4 формы
-9. CITY_IMAGES — добавлены все ~80 городов
-10. og_images — добавлены все 21 страна
-11. base.html footer — все 22 направления
-12. contacts.html — WhatsApp, исправлена Telegram
-13. Sticky CTA — настроен через sticky_cta_target
-14. hreflang — проверено, корректен
-15. Breadcrumb Schema — добавлен для country pages
-
-### P2 — Средние
-16. Copyright — динамический (current_year)
-17. Redirect page — canonical + noindex
-18. Copy-paste — централизованный DESTINATIONS_LIST
-19. FAQ — динамический с данными из COUNTRY_DATA
-20. CSS вынесен в styles.css
-21. Analytics.js создан
-22. Service Worker создан
-23. Favicon добавлен
-
-### P3 — Низкие
-24. RSS-фид — rss_generator.py (RU + EN)
-25. Seasonal pages — 12 месяцев x 2 языка = 24 страницы
-26. Error handling — load_json() с обработкой ошибок
-27. Сравнение направлений — comparison_generator.py (3 сравнения x 2 языка = 6 страниц)
-28. Email-подписка — Brevo интеграция, форма в footer и homepage
+#### 4. Сетка
+| Проблема | Влияние | Исправление |
+|----------|---------|-------------|
+| 12 колонок нет | Не-standard | 12-колоночная сетка |
+| Gutter 24px | Ок | Сохранить |
+| Tablet 8 колонок | Нет | Добавить |
 
 ---
 
-## Оставшиеся задачи
+## ЭТАП 2: ДИЗАЙН-СИСТЕМА
 
-Все P0, P1, P2 и P3 задачи выполнены.
-
-### Возможные улучшения (не в приоритете)
-- Добавить больше сравнений направлений
-- Расширить seasonal pages более детальными данными
-- Добавить больше городов в CONTENT_TYPES
-- Интеграция с Яндекс.Метрикой (нужен ID)
-- Добавить更多 страниц сравнений
-
----
-
-## Ключевые файлы
-
-| Файл | Назначение |
-|------|------------|
-| `main.py` | CLI: generate, build, all, list |
-| `publisher.py` | Сборка HTML (Jinja2, ~1100 строк) |
-| `sitemap_generator.py` | Генерация sitemap.xml |
-| `rss_generator.py` | Генерация RSS 2.0 |
-| `seasonal_generator.py` | Генерация seasonal pages |
-| `comparison_generator.py` | Генерация comparison pages |
-| `config/destinations.py` | 21 страна, ~80 городов |
-| `config/country_data.py` | Подробные данные по странам |
-| `config/prompts.py` | Промпты для AI |
-| `config/affiliates.py` | Партнёрские ссылки |
-| `agents/seo_optimizer.py` | SEO, Schema.org, FAQ |
-| `agents/content_writer.py` | DeepSeek API |
-| `agents/image_injector.py` | Фото отелей |
-| `site/templates/` | Jinja2 шаблоны |
-
----
-
-## Переменные окружения (.env)
-
+### Палитра (16 цветов)
 ```
-DEEPSEEK_API_KEY=sk-...
-DEEPSEEK_MODEL=deepseek-chat
-DEEPSEEK_BASE_URL=https://api.deepseek.com
-TRAVELPAYOUTS_MARKER=736226
-SITE_URL=https://antondrakon.github.io/travel-content-site
-RECAPTCHA_SITE_KEY=...  # Для форм
-ANALYTICS_ENABLED=true
-YANDEX_METRIKA_ID=...
-GOOGLE_ANALYTICS_ID=G-...
+--primary: #0c2340      (navy)
+--secondary: #1a5276    (ocean)
+--accent: #0891b2       (teal)
+--success: #10b981      (green)
+--warning: #f59e0b      (amber)
+--danger: #ef4444       (red)
+--bg: #ffffff            (white)
+--surface: #f8fafc      (light gray)
+--card: #ffffff          (card bg)
+--border: #e2e8f0       (border)
+--muted: #94a3b8        (muted text)
+--text: #0f172a         (primary text)
+--text-secondary: #475569 (secondary text)
+--text-muted: #94a3b8   (muted text)
+--hover: #f1f5f9        (hover bg)
+--active: #e2e8f0       (active bg)
+--disabled: #cbd5e1     (disabled)
 ```
 
----
+### Типографика
+```
+Display XL: 72px / 700 / -0.04em / 1.0
+Display L: 56px / 700 / -0.035em / 1.05
+H1: 48px / 700 / -0.03em / 1.1
+H2: 36px / 700 / -0.025em / 1.15
+H3: 28px / 600 / -0.02em / 1.2
+H4: 22px / 600 / -0.015em / 1.3
+Body L: 18px / 400 / 1.6
+Body M: 16px / 400 / 1.6
+Body S: 14px / 400 / 1.5
+Caption: 12px / 500 / 1.4
+Label: 11px / 600 / 1.3 / 0.06em
+Button: 15px / 600 / 1.0
+```
 
-## Команды
+### Сетка
+```
+Desktop: 1440px / Content: 1280px / 12 cols / Gutter: 24px
+Tablet: 8 cols
+Mobile: 4 cols
+```
 
-```bash
-# Генерация контента
-python main.py generate --country turkey --lang both
-python main.py generate --lang both  # всё
+### Spacing
+```
+4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128
+```
 
-# Сборка сайта
-python main.py build  # HTML + Tailwind + sitemap + RSS + seasonal + comparisons
+### Radius
+```
+sm: 8px / md: 12px / lg: 16px / xl: 20px / 2xl: 24px / 3xl: 32px / full: 9999px
+```
 
-# Полная сборка
-python main.py all  # generate + build
+### Shadows
+```
+sm: 0 1px 2px rgba(0,0,0,0.05)
+md: 0 4px 6px -1px rgba(0,0,0,0.07)
+lg: 0 10px 15px -3px rgba(0,0,0,0.08)
+xl: 0 20px 25px -5px rgba(0,0,0,0.1)
+```
+
+### Buttons
+```
+sm: h32 / 12px / radius 8px
+md: h40 / 14px / radius 10px
+lg: h48 / 16px / radius 12px
+xl: h56 / 18px / radius 14px
 ```
 
 ---
 
-## Дата последнего обновления
+## ЭТАП 3: ПЛАН РЕАЛИЗАЦИИ
 
-2026-07-18
+### Этап 3.1: Design System CSS
+- Расширить палитру до 16 цветов
+- Добавить spacing, radius, shadow system
+- Создать компоненты: Button, Card, Badge, Tag
+- Обновить типографику
+
+### Этап 3.2: Base Template
+- Header 72px + blur
+- Footer multi-column
+- Newsletter
+
+### Этап 3.3: Home Page
+- Hero 70-80vh + search
+- Country cards (large)
+- City cards (compact)
+- Collections (scroll)
+- Articles (Medium-style)
+- FAQ
+- Newsletter
+
+### Этап 3.4: Country Page
+- Hero + info
+- Weather
+- Cities
+- Articles
+- FAQ
+
+### Этап 3.5: Article Page
+- Hero
+- TOC
+- Content
+- Related
+- FAQ
+
+### Этап 3.6: Mobile Optimization
+- 4-column grid
+- Touch targets
+- Sticky CTA
 
 ---
 
-## Редизайн
-
-**Статус:** Premium travel дизайн выполнен
-
-### Что обновлено
-- **CSS-система** — новая палитра (navy, ocean, teal, coral), 5-уровневые тени, анимации
-- **Header** — sticky с blur (backdrop-filter: blur(20px))
-- **Hero** — полноширинный с поиском и быстрыми ссылками на страны
-- **Карточки** — hover zoom, бейджи (Popular, Seasonal, New, Budget)
-- **Анимации** — fade-in при прокрутке, slide-up, hover effects
-- **Mobile** — hamburger меню, sticky CTA, адаптивная сетка
-- **Footer** — 4-колоночная сетка с навигацией
-
-### Файлы
-- `site/assets/styles.css` — полная переработка (~600 строк)
-- `site/templates/base.html` — новый header/footer
-- `site/templates/home.html` — hero с поиском, карточки стран
-
----
-
-## Статус деплоя
-
-**Сайт задеплоен на GitHub Pages:**
-https://antondrakon.github.io/travel-content-site
-
-- 648 HTML файлов (минифицированы, -15.6%)
-- 878 URL в sitemap (RU + EN)
-- 800 RSS записей (RU + EN)
-- 24 seasonal pages (12 месяцев x 2 языка)
-- 6 comparison pages (3 сравнения x 2 языка)
-- 21 страна, ~80 городов
-- 5 типов контента на 2 языка
-
-**Для активации дополнительных функций настройте .env:**
-- `RECAPTCHA_SITE_KEY` — для защиты форм
-- `BREVO_FORM_URL` — для email-рассылки
-- `YANDEX_METRIKA_ID` — для аналитики
-- `GOOGLE_ANALYTICS_ID` — для GA4
+## Дата: 2026-07-18
