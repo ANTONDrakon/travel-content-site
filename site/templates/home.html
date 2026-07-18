@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block title %}{{ "TravelHub — Travel Guides 2026" if lang == "en" else "TravelHub — Путеводители 2026" }}{% endblock %}
-{% block meta_description %}{{ "Expert travel guides for 50+ cities across 20 countries. Hotels, flights, attractions." if lang == "en" else "Экспертные путеводители по 50+ городам в 20 странах. Отели, билеты, достопримечательности." }}{% endblock %}
+{% block title %}{{ "TravelHub — Путеводители 2026" if lang == "ru" else "TravelHub — Travel Guides 2026" }}{% endblock %}
+{% block meta_description %}{{ "Экспертные путеводители по 50+ городам в 20 странах. Отели, билеты, достопримечательности." if lang == "ru" else "Expert travel guides for 50+ cities across 20 countries. Hotels, flights, attractions." }}{% endblock %}
 
 {% block en_alt %}index.html{% endblock %}
 {% block ru_alt %}index.html{% endblock %}
@@ -11,14 +11,16 @@
 
 {% block content %}
 
-<!-- ═══════════════ HERO — Apple-style ═══════════════ -->
-<div class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85');">
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO — 75vh, Apple-style, emotional
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85');">
     <div class="hero-content">
-        <h1>{{ "Путешествуйте осознанно" if lang == "ru" else "Travel with purpose" }}</h1>
+        <h1 class="display-l">{{ "Путешествуйте осознанно" if lang == "ru" else "Travel with purpose" }}</h1>
         <p class="hero-subtitle">{{ "Полные путеводители, советы, маршруты и лучшие места для отдыха по всему миру." if lang == "ru" else "Complete guides, tips, routes, and the best places to stay around the world." }}</p>
 
         <div class="hero-search">
-            <input type="text" id="hero-search" placeholder="{{ '🔍  Куда хотите поехать?' if lang == 'ru' else '🔍  Where do you want to go?' }}">
+            <input type="text" id="hero-search" placeholder="{{ 'Куда хотите поехать?' if lang == 'ru' else 'Where do you want to go?' }}">
             <button type="button" onclick="var q=document.getElementById('hero-search').value; if(q)document.getElementById('hero-search').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter'}))">
                 {{ "Найти" if lang == "ru" else "Search" }}
             </button>
@@ -42,24 +44,25 @@
             {% endfor %}
         </div>
     </div>
-</div>
+</section>
 
-<!-- ═══════════════ COUNTRIES — Big cards ═══════════════ -->
-<section class="section" style="background:var(--white);">
-    <div class="section-narrow">
+<!-- ═══════════════════════════════════════════════════════════════
+     COUNTRIES — Large editorial cards
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg);">
+    <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Направления" if lang == "ru" else "Destinations" }}</p>
             <h2>{{ "Выберите страну" if lang == "ru" else "Choose a country" }}</h2>
-            <p>{{ "Большие карточки с лучшими направлениями для путешествий." if lang == "ru" else "Large cards with the best travel destinations." }}</p>
+            <p>{{ "Откройте для себя лучшие направления для путешествий по всему миру." if lang == "ru" else "Discover the best travel destinations around the world." }}</p>
         </div>
-        <div class="countries-grid">
+        <div class="grid grid-3">
             {% for country in countries %}
             <a href="{{ root }}/{{ lang }}/{{ country.slug }}/index.html" class="country-card reveal">
                 <img src="{{ country.image }}" alt="{{ country.name_en if lang == 'en' else country.name_ru }}" loading="lazy">
                 <div class="country-card-body">
                     <h3>{{ country.name_en if lang == "en" else country.name_ru }}</h3>
                     <span class="count">{{ country.cities_count }} {{ "городов" if lang == "ru" else "cities" }} · {{ country.guides_count }} {{ "гайдов" if lang == "ru" else "guides" }}</span>
-                    <div class="arrow">→</div>
                 </div>
             </a>
             {% endfor %}
@@ -67,15 +70,17 @@
     </div>
 </section>
 
-<!-- ═══════════════ CITIES — Compact cards ═══════════════ -->
-<section class="section" style="background:var(--gray);">
-    <div class="section-narrow">
+<!-- ═══════════════════════════════════════════════════════════════
+     CITIES — Compact cards with ratings
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);">
+    <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Города" if lang == "ru" else "Cities" }}</p>
             <h2>{{ "Популярные города" if lang == "ru" else "Popular cities" }}</h2>
             <p>{{ "Красивые карточки с лучшими местами для отдыха." if lang == "ru" else "Beautiful cards with the best places to stay." }}</p>
         </div>
-        <div class="cities-grid">
+        <div class="grid grid-4">
             {% set top_cities = [
                 ("istanbul", "turkey", "Стамбул", "Istanbul", "Город на двух континентах", "City on two continents", "⭐⭐⭐⭐⭐"),
                 ("bangkok", "thailand", "Бангкок", "Bangkok", "Мегаполис контрастов", "Megacity of contrasts", "⭐⭐⭐⭐⭐"),
@@ -87,14 +92,14 @@
                 ("hanoi", "vietnam", "Ханой", "Hanoi", "Столица Вьетнама", "Capital of Vietnam", "⭐⭐⭐⭐⭐")
             ] %}
             {% for city_slug, country_slug, name_ru, name_en, desc_ru, desc_en, stars in top_cities %}
-            <a href="{{ root }}/{{ lang }}/{{ country_slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="city-card reveal">
-                <div class="city-card-img">
+            <a href="{{ root }}/{{ lang }}/{{ country_slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card city-card reveal">
+                <div class="card-img">
                     <img src="https://images.unsplash.com/photo-{{ ['1524231757912-21f4fe3a7200','1508009603885-50cf7c579365','1589394815804-964ed0be2eb5','1512453979798-5ea266f8880c','1573843981267-be1999ff37cd','1548636800-4abe7e58658e','1565008576549-57569a49371d','1528127269322-539801943592'][loop.index0] }}?w=600&q=80" alt="{{ name_en }}" loading="lazy">
                 </div>
-                <div class="city-card-body">
-                    <h4>{{ name_ru if lang == "ru" else name_en }}</h4>
-                    <p class="desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
-                    <div class="stars">{{ stars }}</div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ name_ru if lang == "ru" else name_en }}</h4>
+                    <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
+                    <div class="card-meta">{{ stars }}</div>
                 </div>
             </a>
             {% endfor %}
@@ -102,9 +107,46 @@
     </div>
 </section>
 
-<!-- ═══════════════ COLLECTIONS — Horizontal scroll ═══════════════ -->
-<section class="section" style="background:var(--white);">
-    <div class="section-narrow">
+<!-- ═══════════════════════════════════════════════════════════════
+     SEASONAL — Where to go now
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Сейчас" if lang == "ru" else "Now" }}</p>
+            <h2>{{ "Куда поехать сейчас" if lang == "ru" else "Where to go now" }}</h2>
+            <p>{{ "Лучшие направления для путешествий в текущем сезоне." if lang == "ru" else "Best destinations for this season." }}</p>
+        </div>
+        <div class="grid grid-3">
+            {% set seasonal = [
+                ("🇹🇭", "Таиланд", "Thailand", "thailand", "+28-32°C", "Высокий сезон", "Peak season"),
+                ("🇲🇻", "Мальдивы", "Maldives", "maldives", "+27-30°C", "Сухой сезон", "Dry season"),
+                ("🇦🇪", "ОАЭ", "UAE", "uae", "+22-28°C", "Идеальная погода", "Perfect weather"),
+                ("🇬🇪", "Грузия", "Georgia", "georgia", "+25-35°C", "Лето в горах", "Mountain summer"),
+                ("🇲🇪", "Черногория", "Montenegro", "montenegro", "+28-35°C", "Пляжный сезон", "Beach season"),
+                ("🇻🇳", "Вьетнам", "Vietnam", "vietnam", "+28-33°C", "Юг: сухо", "South: dry")
+            ] %}
+            {% for emoji, name_ru, name_en, slug, temp, desc_ru, desc_en in seasonal %}
+            <a href="{{ root }}/{{ lang }}/{{ slug }}/index.html" class="card reveal">
+                <div class="card-img" style="position:relative;">
+                    <img src="{{ countries|selectattr('slug','equalto',slug)|map(attribute='image')|first }}" alt="{{ name_en }}" loading="lazy">
+                    <span class="badge badge-accent" style="position:absolute;top:12px;right:12px;">{{ temp }}</span>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ emoji }} {{ name_ru if lang == "ru" else name_en }}</h4>
+                    <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     COLLECTIONS — Editorial scroll
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);">
+    <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Подборки" if lang == "ru" else "Collections" }}</p>
             <h2>{{ "Что вам интересно?" if lang == "ru" else "What interests you?" }}</h2>
@@ -131,30 +173,32 @@
     </div>
 </section>
 
-<!-- ═══════════════ LATEST ARTICLES — Medium-style ═══════════════ -->
-<section class="section" style="background:var(--gray);">
-    <div class="section-narrow">
+<!-- ═══════════════════════════════════════════════════════════════
+     ARTICLES — Medium-style editorial cards
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg);">
+    <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Статьи" if lang == "ru" else "Articles" }}</p>
             <h2>{{ "Последние путеводители" if lang == "ru" else "Latest guides" }}</h2>
             <p>{{ "Подробные гайды с советами, ценами и маршрутами." if lang == "ru" else "Detailed guides with tips, prices, and routes." }}</p>
         </div>
-        <div class="articles-grid">
+        <div class="grid grid-3">
             {% set articles = [
                 ("turkey", "istanbul", "guide", "🇹🇷", "Путеводитель", "Travel Guide", "Стамбул: полный путеводитель 2026", "Istanbul: Complete Travel Guide 2026", "Город на двух континентах — дворцы, мечети, базары и лучшие рестораны.", "City on two continents — palaces, mosques, bazaars, and top restaurants.", "Июль 2026", "July 2026", "8 мин", "8 min"),
                 ("thailand", "phuket", "guide", "🇹🇭", "Путеводитель", "Travel Guide", "Пхукет: лучшие пляжи и курорты", "Phuket: Best Beaches and Resorts", "Остров с бирюзовым морем, тропическими лесами и ночными рынками.", "Island with turquoise sea, tropical forests, and night markets.", "Июнь 2026", "June 2026", "7 мин", "7 min"),
                 ("maldives", "male", "guide", "🇲🇻", "Путеводитель", "Travel Guide", "Мальдивы: как выбрать остров", "Maldives: How to Choose an Island", "Бюджетные локальные острова vs курорты. Полное сравнение.", "Budget local islands vs resorts. Full comparison.", "Июль 2026", "July 2026", "10 мин", "10 min")
             ] %}
             {% for c_slug, city, ct, emoji, cat_ru, cat_en, title_ru, title_en, desc_ru, desc_en, date_ru, date_en, time_ru, time_en in articles %}
-            <a href="{{ root }}/{{ lang }}/{{ c_slug }}/{{ city }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="article-card reveal">
-                <div class="article-card-img">
+            <a href="{{ root }}/{{ lang }}/{{ c_slug }}/{{ city }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card reveal">
+                <div class="card-img">
                     <img src="https://images.unsplash.com/photo-{{ ['1524231757912-21f4fe3a7200','1589394815804-964ed0be2eb5','1573843981267-be1999ff37cd'][loop.index0] }}?w=800&q=80" alt="{{ title_en }}" loading="lazy">
                 </div>
-                <div class="article-card-body">
-                    <div class="category">{{ emoji }} {{ cat_ru if lang == "ru" else cat_en }}</div>
-                    <h4>{{ title_ru if lang == "ru" else title_en }}</h4>
-                    <p class="excerpt">{{ desc_ru if lang == "ru" else desc_en }}</p>
-                    <div class="meta">
+                <div class="card-body">
+                    <span class="label" style="color:var(--accent);">{{ emoji }} {{ cat_ru if lang == "ru" else cat_en }}</span>
+                    <h4 class="card-title" style="margin-top:var(--sp-2);">{{ title_ru if lang == "ru" else title_en }}</h4>
+                    <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
+                    <div class="card-meta">
                         <span>{{ date_ru if lang == "ru" else date_en }}</span>
                         <span>·</span>
                         <span>⏱ {{ time_ru if lang == "ru" else time_en }}</span>
@@ -166,14 +210,16 @@
     </div>
 </section>
 
-<!-- ═══════════════ AGENT FORM ═══════════════ -->
-<section class="section" style="background:var(--white);">
-    <div class="section-narrow">
+<!-- ═══════════════════════════════════════════════════════════════
+     AGENT FORM
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--surface);">
+    <div class="container">
         <div class="agent-block reveal" id="agent-form">
             <h2>{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h2>
             <div class="agent-grid">
                 <div>
-                    <p style="font-size:17px;color:var(--text-secondary);line-height:1.7;margin-bottom:20px;">
+                    <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">
                         {{ "Расскажите о пожеланиях — поможем с визами, трансферами, eSIM и подбором отелей. Все цены ориентировочные." if lang == "ru" else "Tell us your wishes — we'll help with visas, transfers, eSIM and hotels. All prices are estimates." }}
                     </p>
                     <ul class="agent-benefits">
@@ -184,8 +230,8 @@
                     </ul>
                 </div>
                 <div>
-                    <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                    <form class="form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
+                        <div class="grid grid-2" style="gap:var(--sp-3);">
                             <input type="text" name="name" placeholder="{{ 'Имя *' if lang == 'ru' else 'Name *' }}" required>
                             <input type="tel" name="phone" placeholder="{{ 'Телефон *' if lang == 'ru' else 'Phone *' }}" required>
                         </div>
@@ -203,7 +249,7 @@
                         {% if recaptcha_site_key %}
                         <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
                         {% endif %}
-                        <button type="submit" class="btn btn-accent" style="width:100%;">{{ "Отправить заявку →" if lang == "ru" else "Send request →" }}</button>
+                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">{{ "Отправить заявку →" if lang == "ru" else "Send request →" }}</button>
                     </form>
                 </div>
             </div>
@@ -211,9 +257,11 @@
     </div>
 </section>
 
-<!-- ═══════════════ FAQ ═══════════════ -->
-<section class="section" style="background:var(--gray);">
-    <div class="section-narrow">
+<!-- ═══════════════════════════════════════════════════════════════
+     FAQ
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg);">
+    <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">FAQ</p>
             <h2>{{ "Частые вопросы" if lang == "ru" else "Frequently Asked Questions" }}</h2>
@@ -236,11 +284,13 @@
     </div>
 </section>
 
-<!-- ═══════════════ NEWSLETTER ═══════════════ -->
-<section class="section" style="background:var(--white);padding-bottom:0;">
-    <div class="section-narrow">
-        {% if brevo_form_url %}
-        <div class="newsletter-block reveal">
+<!-- ═══════════════════════════════════════════════════════════════
+     NEWSLETTER
+     ═══════════════════════════════════════════════════════════════ -->
+{% if brevo_form_url %}
+<section class="section" style="background:var(--surface);padding-bottom:0;">
+    <div class="container">
+        <div class="newsletter reveal">
             <h3>{{ "Подпишитесь на советы путешественника" if lang == "ru" else "Subscribe to travel tips" }}</h3>
             <p>{{ "Лучшие предложения, путеводители и советы. Без спама, отписка в один клик." if lang == "ru" else "Best deals, guides, and tips. No spam, unsubscribe anytime." }}</p>
             <form action="{{ brevo_form_url }}" method="POST" target="_blank" class="newsletter-form">
@@ -248,8 +298,8 @@
                 <button type="submit">{{ "Подписаться" if lang == "ru" else "Subscribe" }}</button>
             </form>
         </div>
-        {% endif %}
     </div>
 </section>
+{% endif %}
 
 {% endblock %}
