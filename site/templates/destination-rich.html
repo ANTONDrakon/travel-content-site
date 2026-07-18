@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% set sticky_cta_target = "agent" %}
 {% set cname_prep = country.name_en if lang == "en" else country.name_ru_prepositional %}
 {% set cname_nom = country.name_en if lang == "en" else country.name_ru %}
 {% set prep = "Vacation in " if lang == "en" else ("Отдых на " if country.slug == "maldives" else "Отдых в ") %}
@@ -280,6 +281,9 @@
                     <textarea name="message" rows="2" placeholder="{{ 'Dates, budget, wishes...' if lang == 'en' else 'Даты, бюджет, пожелания...' }}" style="background:#fff;border:none;padding:12px 14px;border-radius:10px;font-size:14px;font-family:Inter,sans-serif;"></textarea>
                     <input type="hidden" name="destination" value="{{ cname_nom }}">
                     <input type="hidden" name="_subject" value="{{ 'Trip request: ' + cname_nom if lang == 'en' else 'Заявка: ' + cname_nom }}">
+                    {% if recaptcha_site_key %}
+                    <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="compact"></div>
+                    {% endif %}
                     <button type="submit" class="btn-cta" style="margin-top:8px;cursor:pointer;width:100%;font-size:14px;padding:12px;">{{ "Get help →" if lang == "en" else "Отправить заявку →" }}</button>
                 </form>
             </div>

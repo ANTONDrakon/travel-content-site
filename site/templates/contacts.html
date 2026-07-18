@@ -37,6 +37,9 @@
                 </select>
                 <textarea name="message" rows="4" placeholder="{{ 'Your message...' if lang == 'en' else 'Ваше сообщение...' }}" required></textarea>
                 <input type="hidden" name="_subject" value="{{ 'Message from TravelHub Contacts' if lang == 'en' else 'Сообщение с Contacts TravelHub' }}">
+                {% if recaptcha_site_key %}
+                <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
+                {% endif %}
                 <button type="submit" class="btn-cta">{{ "Send Message →" if lang == "en" else "Отправить →" }}</button>
             </form>
         </div>
@@ -57,17 +60,25 @@
                 <div style="background:#fff;padding:24px;border-radius:16px;">
                     <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">💬 Telegram</h3>
                     <p style="font-size:15px;color:var(--charcoal);">
-                        <a href="https://t.me/" target="_blank" style="color:var(--teal);text-decoration:none;">@TravelHub</a>
+                        <a href="https://t.me/" target="_blank" style="color:var(--teal);text-decoration:none;">@turkov_1</a>
                     </p>
                     <p style="font-size:13px;color:var(--meta);margin-top:4px;">{{ "Quick replies" if lang == "en" else "Быстрые ответы" }}</p>
                 </div>
 
                 <div style="background:#fff;padding:24px;border-radius:16px;">
-                    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">📱 MAX</h3>
+                    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">📱 MAX (VK)</h3>
                     <p style="font-size:15px;color:var(--charcoal);">
-                        <a href="https://max.vk.com/" target="_blank" style="color:var(--teal);text-decoration:none;">Написать в Макс</a>
+                        <a href="https://max.vk.com/" target="_blank" style="color:var(--teal);text-decoration:none;">{{ "Write in MAX" if lang == "en" else "Написать в Макс" }}</a>
                     </p>
                     <p style="font-size:13px;color:var(--meta);margin-top:4px;">{{ "For Russian users" if lang == "en" else "Для пользователей из России" }}</p>
+                </div>
+
+                <div style="background:#fff;padding:24px;border-radius:16px;">
+                    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">📱 WhatsApp</h3>
+                    <p style="font-size:15px;color:var(--charcoal);">
+                        <a href="https://wa.me/" target="_blank" style="color:var(--teal);text-decoration:none;">{{ "Write in WhatsApp" if lang == "en" else "Написать в WhatsApp" }}</a>
+                    </p>
+                    <p style="font-size:13px;color:var(--meta);margin-top:4px;">{{ "For international users" if lang == "en" else "Для международных пользователей" }}</p>
                 </div>
 
                 <div style="background:#fff;padding:24px;border-radius:16px;">

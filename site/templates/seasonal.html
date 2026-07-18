@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% set hide_back = True %}
+{% block title %}{{ title }}{% endblock %}
+{% block meta_description %}{{ meta_description }}{% endblock %}
+{% set canonical = "/" + lang + "/seasonal/" + month_slug + ".html" %}
+{% set ru_alternate_url = "seasonal/" + month_slug + ".html" %}
+{% set en_alternate_url = "seasonal/" + month_slug + ".html" %}
+{% block en_alt %}seasonal/{{ month_slug }}.html{% endblock %}
+{% block ru_alt %}seasonal/{{ month_slug }}.html{% endblock %}
+{% set sticky_cta_target = "agent-form" %}
+
+{% block og_title %}{{ title }}{% endblock %}
+{% block og_description %}{{ meta_description }}{% endblock %}
+{% block og_image_alt %}{{ title }}{% endblock %}
+{% block twitter_title %}{{ title }}{% endblock %}
+{% block twitter_description %}{{ meta_description }}{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="hero-section" style="background-image:url('{{ hero_image }}');min-height:400px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 style="font-size:clamp(32px,6vw,56px);">{{ title }}</h1>
+        <p style="font-size:18px;color:rgba(255,255,255,0.9);margin-top:16px;">{{ subtitle }}</p>
+    </div>
+</div>
+
+<!-- MONTH NAVIGATION -->
+<section class="section" style="padding:40px 24px;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;">
+        {% for m in months_nav %}
+        <a href="{{ root }}/{{ lang }}/seasonal/{{ m.slug }}.html" class="nav-pill {% if m.slug == month_slug %}nav-pill-solid{% else %}nav-pill-outline{% endif %}" style="font-size:13px;padding:8px 16px;">
+            {{ m.emoji }} {{ m.name_en if lang == "en" else m.name_ru }}
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- RECOMMENDED DESTINATIONS -->
+<section class="section">
+    <h2>{{ "Best Destinations in " + month_name_en if lang == "en" else "Лучшие направления в " + month_name_ru }}</h2>
+    <div class="cards-grid" style="margin-top:40px;">
+        {% for dest in destinations %}
+        <a href="{{ root }}/{{ lang }}/{{ dest.slug }}/index.html" class="destination-card" style="text-decoration:none;">
+            <div style="position:relative;">
+                <img src="{{ dest.image }}" alt="{{ dest.name_en if lang == 'en' else dest.name_ru }}" class="card-img" loading="lazy" style="height:200px;width:100%;object-fit:cover;">
+                <div style="position:absolute;top:12px;right:12px;background:rgba(0,124,102,0.9);color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;">
+                    {{ dest.temp }}
+                </div>
+            </div>
+            <div class="card-body" style="padding:20px;">
+                <h3 style="font-size:20px;font-weight:700;margin-bottom:8px;color:var(--ink);">
+                    {{ dest.emoji }} {{ dest.name_en if lang == "en" else dest.name_ru }}
+                </h3>
+                <p style="font-size:14px;color:var(--charcoal);line-height:1.6;">
+                    {{ dest.description_en if lang == "en" else dest.description_ru }}
+                </p>
+                <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+                    <span style="font-size:12px;color:var(--teal);background:var(--bg);padding:4px 10px;border-radius:8px;">
+                        {{ "From " + dest.budget_en if lang == "en" else "От " + dest.budget_ru }}
+                    </span>
+                    {% if dest.highlights %}
+                    {% for h in dest.highlights[:2] %}
+                    <span style="font-size:12px;color:var(--meta);background:var(--bg);padding:4px 10px;border-radius:8px;">
+                        {{ h }}
+                    </span>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- TIPS -->
+<section class="section" style="background:#fff;max-width:100%;">
+    <div style="max-width:800px;margin:0 auto;">
+        <h2>{{ "Travel Tips for " + month_name_en if lang == "en" else "Советы для поездки в " + month_name_ru }}</h2>
+        <div class="article-body" style="margin-top:24px;">
+            {{ tips | safe }}
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="padding:60px 24px;background:var(--bg);">
+    <div style="max-width:700px;margin:0 auto;text-align:center;">
+        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">
+            {{ "Need help planning?" if lang == "en" else "Нужна помощь с планированием?" }}
+        </h2>
+        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;">
+            {{ "Our travel experts can help you choose the perfect destination and plan your trip." if lang == "en" else "Наши эксперты помогут выбрать идеальное направление и спланировать поездку." }}
+        </p>
+        <a href="#agent-form" class="btn-cta" style="font-size:16px;padding:14px 36px;">
+            {{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}
+        </a>
+    </div>
+</section>
+
+{% endblock %}

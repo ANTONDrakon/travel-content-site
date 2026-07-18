@@ -124,7 +124,31 @@ def build_site():
     build_all()
     from sitemap_generator import build_all_sitemaps
     build_all_sitemaps()
-    
+
+    # Generate RSS feeds
+    print("\nGenerating RSS feeds...")
+    try:
+        from rss_generator import build_all_feeds
+        build_all_feeds()
+    except Exception as e:
+        print(f"  Warning: RSS generation failed: {e}")
+
+    # Generate seasonal pages
+    print("\nGenerating seasonal pages...")
+    try:
+        from seasonal_generator import build_all_seasonal
+        build_all_seasonal()
+    except Exception as e:
+        print(f"  Warning: Seasonal pages generation failed: {e}")
+
+    # Generate comparison pages
+    print("\nGenerating comparison pages...")
+    try:
+        from comparison_generator import build_all_comparisons
+        build_all_comparisons()
+    except Exception as e:
+        print(f"  Warning: Comparison pages generation failed: {e}")
+
     # Optimize images
     print("\nOptimizing images...")
     try:

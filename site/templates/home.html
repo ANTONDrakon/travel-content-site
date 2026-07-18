@@ -40,32 +40,22 @@
             <select name="destination" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;">
                 <option value="">{{ "Preferred destination" if lang == "en" else "Желаемое направление" }}</option>
                 <optgroup label="{{ 'Russia' if lang == 'en' else 'Россия' }}">
-                    <option value="russia">{{ "Russia" if lang == "en" else "Россия" }}</option>
-                    <option value="baikal">{{ "Lake Baikal" if lang == "en" else "Байкал" }}</option>
-                    <option value="altai">{{ "Altai" if lang == "en" else "Алтай" }}</option>
-                    <option value="karelia">{{ "Karelia" if lang == "en" else "Карелия" }}</option>
-                    <option value="dagestan">{{ "Dagestan" if lang == "en" else "Дагестан" }}</option>
-                    <option value="kamchatka">{{ "Kamchatka" if lang == "en" else "Камчатка" }}</option>
+                    {% for d in russia_destinations %}
+                    <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
+                    {% endfor %}
                 </optgroup>
                 <optgroup label="{{ 'International' if lang == 'en' else 'Зарубежные' }}">
-                    <option value="turkey">{{ "Turkey" if lang == "en" else "Турция" }}</option>
-                    <option value="thailand">{{ "Thailand" if lang == "en" else "Таиланд" }}</option>
-                    <option value="egypt">{{ "Egypt" if lang == "en" else "Египет" }}</option>
-                    <option value="uae">{{ "UAE" if lang == "en" else "ОАЭ" }}</option>
-                    <option value="indonesia">{{ "Indonesia" if lang == "en" else "Индонезия" }}</option>
-                    <option value="china">{{ "China" if lang == "en" else "Китай" }}</option>
-                    <option value="maldives">{{ "Maldives" if lang == "en" else "Мальдивы" }}</option>
-                    <option value="sri-lanka">{{ "Sri Lanka" if lang == "en" else "Шри-Ланка" }}</option>
-                    <option value="georgia">{{ "Georgia" if lang == "en" else "Грузия" }}</option>
-                    <option value="vietnam">{{ "Vietnam" if lang == "en" else "Вьетнам" }}</option>
-                    <option value="montenegro">{{ "Montenegro" if lang == "en" else "Черногория" }}</option>
-                    <option value="cyprus">{{ "Cyprus" if lang == "en" else "Кипр" }}</option>
-                    <option value="oman">{{ "Oman" if lang == "en" else "Оман" }}</option>
+                    {% for d in international_destinations %}
+                    <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
+                    {% endfor %}
                 </optgroup>
                 <option value="other">{{ "Other" if lang == "en" else "Другое" }}</option>
             </select>
             <textarea name="message" rows="2" placeholder="{{ 'Your wishes, dates, budget...' if lang == 'en' else 'Пожелания, даты, бюджет...' }}" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;"></textarea>
             <input type="hidden" name="_subject" value="{{ 'Trip request from TravelHub' if lang == 'en' else 'Заявка на поездку с TravelHub' }}">
+            {% if recaptcha_site_key %}
+            <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal" style="margin-top:12px;"></div>
+            {% endif %}
             <button type="submit" class="btn-cta" style="margin-top:16px;cursor:pointer;width:100%;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</button>
         </form>
     </div>
@@ -115,5 +105,25 @@
         </div>
     </div>
 </section>
+
+<!-- NEWSLETTER -->
+{% if brevo_form_url %}
+<section class="section" style="background:var(--teal);max-width:100%;padding:60px 24px;">
+    <div style="max-width:600px;margin:0 auto;text-align:center;">
+        <h2 style="color:#fff;font-size:28px;font-weight:700;margin-bottom:12px;">
+            {{ "Get travel tips & deals" if lang == "en" else "Советы и скидки для путешественников" }}
+        </h2>
+        <p style="color:rgba(255,255,255,0.85);font-size:16px;margin-bottom:24px;">
+            {{ "Subscribe to our newsletter. Best destinations, exclusive deals, and insider tips. No spam." if lang == "en" else "Подпишитесь на рассылку. Лучшие направления, эксклюзивные скидки и советы. Без спама." }}
+        </p>
+        <form action="{{ brevo_form_url }}" method="POST" target="_blank" style="display:flex;gap:8px;max-width:450px;margin:0 auto;">
+            <input type="email" name="email" placeholder="{{ 'Your email' if lang == 'en' else 'Ваш email' }}" required style="flex:1;padding:14px 18px;border-radius:10px;border:none;font-size:15px;font-family:Inter,sans-serif;">
+            <button type="submit" style="background:var(--copper);color:#fff;padding:14px 28px;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap;">
+                {{ "Subscribe" if lang == "en" else "Подписаться" }}
+            </button>
+        </form>
+    </div>
+</section>
+{% endif %}
 
 {% endblock %}

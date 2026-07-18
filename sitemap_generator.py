@@ -40,6 +40,17 @@ def generate_lang_sitemap(lang):
     lines.append(f"  <url><loc>{SITE_URL}/{lang}/about.html</loc><priority>0.7</priority><lastmod>{TODAY}</lastmod></url>")
     lines.append(f"  <url><loc>{SITE_URL}/{lang}/contacts.html</loc><priority>0.7</priority><lastmod>{TODAY}</lastmod></url>")
 
+    # Seasonal pages
+    months = ["january", "february", "march", "april", "may", "june",
+              "july", "august", "september", "october", "november", "december"]
+    for month in months:
+        lines.append(f"  <url><loc>{SITE_URL}/{lang}/seasonal/{month}.html</loc><priority>0.8</priority><lastmod>{TODAY}</lastmod></url>")
+
+    # Comparison pages
+    comparisons = ["turkey-vs-egypt", "thailand-vs-vietnam", "maldives-vs-sri-lanka"]
+    for comp in comparisons:
+        lines.append(f"  <url><loc>{SITE_URL}/{lang}/compare/{comp}.html</loc><priority>0.8</priority><lastmod>{TODAY}</lastmod></url>")
+
     for country_slug, country in DESTINATIONS.items():
         lines.append(f"  <url><loc>{SITE_URL}/{lang}/{country_slug}/index.html</loc><priority>0.9</priority><lastmod>{TODAY}</lastmod></url>")
 

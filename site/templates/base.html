@@ -92,7 +92,10 @@
 
     <link rel="stylesheet" href="{{ root }}/assets/tailwind.css">
     <link rel="stylesheet" href="{{ root }}/assets/styles.css">
-    
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="{{ 'TravelHub RSS (' + ('Russian' if lang == 'ru' else 'English') + ')' }}" href="{{ site_url }}/feed-{{ lang }}.xml">
+
     <!-- Analytics -->
     {% if analytics_enabled %}
     <script src="{{ root }}/assets/analytics.js" defer></script>
@@ -104,7 +107,12 @@
         }
     </script>
     {% endif %}
-    
+
+    {% if recaptcha_site_key %}
+    <!-- reCAPTCHA v2 for form spam protection -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    {% endif %}
+
     <script>
     window.addEventListener('DOMContentLoaded', function() {
         // Image error fallback
@@ -216,7 +224,7 @@
 
 <!-- AGENT BLOCK -->
 {% if not hide_agent %}
-<section class="section">
+<section class="section" id="agent-form">
     <div class="agent-block">
         <h2>{{ "Need help planning your trip?" if lang == "en" else "Нужна помощь в организации путешествия?" }}</h2>
         <div class="agent-grid">
@@ -243,33 +251,23 @@
                     <select name="destination">
                         <option value="">{{ "Preferred destination" if lang == "en" else "Желаемое направление" }}</option>
                         <optgroup label="{{ 'Russia' if lang == 'en' else 'Россия' }}">
-                            <option value="russia">{{ "Russia" if lang == "en" else "Россия" }}</option>
-                            <option value="baikal">{{ "Lake Baikal" if lang == "en" else "Байкал" }}</option>
-                            <option value="altai">{{ "Altai" if lang == "en" else "Алтай" }}</option>
-                            <option value="karelia">{{ "Karelia" if lang == "en" else "Карелия" }}</option>
-                            <option value="dagestan">{{ "Dagestan" if lang == "en" else "Дагестан" }}</option>
-                            <option value="kamchatka">{{ "Kamchatka" if lang == "en" else "Камчатка" }}</option>
+                            {% for d in russia_destinations %}
+                            <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
+                            {% endfor %}
                         </optgroup>
                         <optgroup label="{{ 'International' if lang == 'en' else 'Зарубежные' }}">
-                            <option value="turkey">{{ "Turkey" if lang == "en" else "Турция" }}</option>
-                            <option value="thailand">{{ "Thailand" if lang == "en" else "Таиланд" }}</option>
-                            <option value="egypt">{{ "Egypt" if lang == "en" else "Египет" }}</option>
-                            <option value="uae">{{ "UAE" if lang == "en" else "ОАЭ" }}</option>
-                            <option value="indonesia">{{ "Indonesia" if lang == "en" else "Индонезия" }}</option>
-                            <option value="china">{{ "China (Hainan)" if lang == "en" else "Китай (Хайнань)" }}</option>
-                            <option value="maldives">{{ "Maldives" if lang == "en" else "Мальдивы" }}</option>
-                            <option value="sri-lanka">{{ "Sri Lanka" if lang == "en" else "Шри-Ланка" }}</option>
-                            <option value="georgia">{{ "Georgia" if lang == "en" else "Грузия" }}</option>
-                            <option value="vietnam">{{ "Vietnam" if lang == "en" else "Вьетнам" }}</option>
-                            <option value="montenegro">{{ "Montenegro" if lang == "en" else "Черногория" }}</option>
-                            <option value="cyprus">{{ "Cyprus" if lang == "en" else "Кипр" }}</option>
-                            <option value="oman">{{ "Oman" if lang == "en" else "Оман" }}</option>
+                            {% for d in international_destinations %}
+                            <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
+                            {% endfor %}
                         </optgroup>
                         <option value="other">{{ "Other" if lang == "en" else "Другое" }}</option>
                     </select>
                     <textarea name="message" rows="3" placeholder="{{ 'Your wishes, dates, budget...' if lang == 'en' else 'Ваши пожелания, даты, бюджет...' }}"></textarea>
                     <input type="hidden" name="_subject" value="{{ 'Tour request from TravelHub' if lang == 'en' else 'Заявка на тур с TravelHub' }}">
                     <input type="hidden" name="_replyto" value="i@turkov-1.ru">
+                    {% if recaptcha_site_key %}
+                    <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
+                    {% endif %}
                     <button type="submit" class="btn-cta">{{ "Get help →" if lang == "en" else "Отправить заявку →" }}</button>
                 </form>
             </div>
@@ -287,19 +285,9 @@
         <div>
             <h4 style="color:#fff;font-size:14px;font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em;">{{ "Destinations" if lang == "en" else "Направления" }}</h4>
             <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
-                <li><a href="{{ root }}/{{ lang }}/russia/index.html">{{ "Russia" if lang == "en" else "Россия" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/baikal/index.html">{{ "Lake Baikal" if lang == "en" else "Байкал" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/altai/index.html">{{ "Altai" if lang == "en" else "Алтай" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/karelia/index.html">{{ "Karelia" if lang == "en" else "Карелия" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/dagestan/index.html">{{ "Dagestan" if lang == "en" else "Дагестан" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/kamchatka/index.html">{{ "Kamchatka" if lang == "en" else "Камчатка" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/turkey/index.html">{{ "Turkey" if lang == "en" else "Турция" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/thailand/index.html">{{ "Thailand" if lang == "en" else "Таиланд" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/egypt/index.html">{{ "Egypt" if lang == "en" else "Египет" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/uae/index.html">{{ "UAE" if lang == "en" else "ОАЭ" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/indonesia/index.html">{{ "Indonesia" if lang == "en" else "Индонезия" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/china/index.html">{{ "China" if lang == "en" else "Китай" }}</a></li>
-                <li><a href="{{ root }}/{{ lang }}/maldives/index.html">{{ "Maldives" if lang == "en" else "Мальдивы" }}</a></li>
+                {% for d in destinations_list %}
+                <li><a href="{{ root }}/{{ lang }}/{{ d.slug }}/index.html">{{ d.name_en if lang == "en" else d.name_ru }}</a></li>
+                {% endfor %}
             </ul>
         </div>
         <div>
@@ -313,8 +301,29 @@
             </p>
         </div>
     </div>
+
+    <!-- NEWSLETTER -->
+    {% if brevo_form_url %}
+    <div style="max-width:1200px;margin:0 auto;padding:40px 0 0;">
+        <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:32px;text-align:center;">
+            <h4 style="color:#fff;font-size:18px;font-weight:700;margin-bottom:8px;">
+                {{ "Subscribe to travel tips" if lang == "en" else "Подпишитесь на советы путешественника" }}
+            </h4>
+            <p style="color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:16px;">
+                {{ "Get the best deals, travel guides, and insider tips. No spam, unsubscribe anytime." if lang == "en" else "Лучшие предложения, путеводители и советы. Без спама, отписка в один клик." }}
+            </p>
+            <form action="{{ brevo_form_url }}" method="POST" target="_blank" style="display:flex;gap:8px;max-width:400px;margin:0 auto;">
+                <input type="email" name="email" placeholder="{{ 'Your email' if lang == 'en' else 'Ваш email' }}" required style="flex:1;padding:12px 16px;border-radius:8px;border:none;font-size:14px;font-family:Inter,sans-serif;">
+                <button type="submit" style="background:var(--copper);color:#fff;padding:12px 24px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;">
+                    {{ "Subscribe" if lang == "en" else "Подписаться" }}
+                </button>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+
     <div style="max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:13px;">
-        &copy; 2026 TravelHub. {{ "All rights reserved." if lang == "en" else "Все права защищены." }}
+        &copy; {{ current_year }} TravelHub. {{ "All rights reserved." if lang == "en" else "Все права защищены." }}
     </div>
 </footer>
 
@@ -412,7 +421,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <div class="sticky-cta">
-    <a href="#agent-form" class="btn-cta" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
+    <a href="#{{ sticky_cta_target or 'agent-form' }}" class="btn-cta" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
 </div>
 
 <!-- Service Worker Registration -->

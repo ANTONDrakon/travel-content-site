@@ -4,9 +4,10 @@
 
 Автоматическая система генерации туристического контента с SEO-оптимизацией и партнёрскими ссылками Travelpayouts. Цель — коммерческий туристический сайт, приносящий доход через партнёрские программы и заявки на подбор туров.
 
-**Стек:** Python, Jinja2, Tailwind CSS (CDN), DeepSeek AI API, GitHub Pages  
+**Стек:** Python 3.12, Jinja2, Tailwind CSS 4.x (production build), DeepSeek AI API, GitHub Pages / Netlify  
 **Языки:** RU + EN (двуязычный)  
-**Монетизация:** Travelpayouts (Aviasales, Hotellook, Booking, Agoda и др.) + Formspree (заявки на туры)
+**Монетизация:** Travelpayouts (17 сервисов) + Formspree (заявки на туры)  
+**Направления:** 21 страна/регион, ~80 городов, 5 типов контента на 2 языка = ~1600 статей потенциально
 
 ---
 
@@ -180,6 +181,8 @@ travel-content-factory/
 
 * Добавление международных направлений (Шри-Ланка, Грузия, Вьетнам, Черногория, Кипр, Оман — уже в destinations.py)
 * Оптимизация производительности
+* Добавление CAPTCHA на формы
+* Персонализация FAQ по городам
 
 ---
 
@@ -187,49 +190,38 @@ travel-content-factory/
 
 ### КРИТИЧЕСКИЕ (P0)
 
-1. **robots.txt — case inconsistency**: В `docs/robots.txt` и `docs/sitemap.xml` URL содержит `ANTONDrakon` (ALL CAPS), а в `.env.example` и `publisher.py` — `antondrakon` (lowercase). GitHub Pages URL-адреса case-sensitive → страницы могут не индексироваться.
+1. ~~**robots.txt — case inconsistency**~~ — ИСПРАВЛЕНО ранее
+2. ~~**Schema.org dates hardcoded**~~ — ИСПРАВЛЕНО ранее (date.today())
+3. ~~**Нет 404 страницы**~~ — ИСПРАВЛЕНО ранее
+4. ~~**Нет файла .env**~~ — Остаётся: нужен .env с ключами API
+5. ~~**megatec_output.html**~~ — Посторонний файл, не относится к проекту. Можно удалить.
 
-2. **Schema.org dates hardcoded**: В `seo_optimizer.py:69-70` даты `datePublished: "2026-01-15"` и `dateModified: "2026-06-01"` захардкожены для ВСЕХ статей. Google может понизить ранжирование за неактуальные даты.
-
-3. **Нет 404 страницы**: Если пользователь попадает на несуществующую страницу — стандартная ошибка GitHub Pages без навигации.
-
-4. **Нет файла .env**: Без переменных окружения проект не работает. `.env.example` содержит ключи API, но нет инструкции по безопасному хранению.
-
-5. **megatec_output.html** — посторонний файл (страница ошибки .NET сайта) в корне проекта. Не относится к проекту.
+6. ~~**article:published_time захардкожен**~~ — ИСПРАВЛЕНО: теперь date.today()
+7. ~~**_fetch_exchange_rates() при импорте**~~ — ИСПРАВЛЕНО: lazy loading
 
 ### ВАЖНЫЕ (P1)
 
-6. **CDN Tailwind CSS**: Используется `cdn.tailwindcss.com` (dev-скрипт, не для продакшена). Нужно собирать CSS или использовать CDN-билд.
-
-7. **Нет lazy loading для hero-изображений**: Все hero-секции загружаются сразу, что замедляет FCP.
-
-8. **Formspree без CAPTCHA**: Формы заявок не защищены от спама — могут забиваться мусорными заявками.
-
-9. **Мета-теги AI-контента**: `<meta name="ai-content-type">`, `<meta name="ai-audience">`, `<meta name="ai-tone">`, `<meta name="ai-topics">`, `<meta name="ai-verification">` — нет стандартов для этих тегов. Google их игнорирует, но они выглядят нестандартно.
-
-10. **Нет OpenGraph image для всех стран**: В `publisher.py` `COUNTRY_IMAGES` содержит только 7 стран, хотя проект поддерживает 13. Для стран без OG-image будет fallback на generic.
-
-11. **CITY_IMAGES не покрывают все города**: Словарь `CITY_IMAGES` содержит ~35 городов, но проект имеет ~60. Города без изображений получают generic fallback.
-
-12. **Нет hreflang для country index pages**: В шаблоне `destination-rich.html` hreflang ссылки ведут на `index.html`, но canonical — на `/{lang}/{country}/index.html`.
-
-13. **Форма в footer не привязана к #agent-form**: Sticky CTA ведёт на `#agent-form`, но на страницах статей этот ID может отсутствовать.
-
-14. **Нет Breadcrumb Schema для country pages**: BreadcrumbList генерируется только для статей, не для страниц стран.
+6. ~~**CDN Tailwind CSS**~~ — ИСПРАВЛЕНО ранее (production build)
+7. ~~**Нет lazy loading для hero-изображений**~~ — ИСПРАВЛЕНО ранее
+8. ~~**Formspree без CAPTCHA**~~ — ИСПРАВЛЕНО: добавлена reCAPTCHA v2 (RECAPTCHA_SITE_KEY в .env)
+9. ~~**Мета-теги AI-контента**~~ — ИСПРАВЛЕНО ранее (удалены)
+10. ~~**Нет OpenGraph image для всех стран**~~ — ИСПРАВЛЕНО: добавлены все 21 страна
+11. ~~**CITY_IMAGES не покрывают все города**~~ — ИСПРАВЛЕНО: добавлены все ~80 городов
+12. ~~**Нет hreflang для country index pages**~~ — Проверено: hreflang корректен (ложная тревога)
+13. **Форма в footer не привязана к #agent-form** — Sticky CTA ведёт на #agent-form, но на страницах статей этот ID может отсутствовать.
+14. ~~**Нет Breadcrumb Schema для country pages**~~ — ИСПРАВЛЕНО: BreadcrumbList уже добавлен в destination-rich.html
 
 ### СРЕДНИЕ (P2)
 
-15. **Дублирование CSS**: Все стили в `base.html` (537 строк) — нет внешнего CSS-файла, нет кэширования браузером.
-
-16. **Swiper.js подключается, но не используется**: В `base.html` подключён `swiper-bundle.min.css` и `swiper-bundle.min.js`, но нигде не применяется.
-
-17. **Нет аналитики**: Нет Яндекс.Метрика, Google Analytics, или другой системы аналитики.
-
-18. **Нет favicon**: Нет иконки для сайта.
-
-19. **Нет Service Worker / PWA**: Нет офлайн-поддержки.
-
-20. **Copyright 2026**: Уже захардкожен — через год потребует обновления.
+15. ~~**Дублирование CSS**~~ — ИСПРАВЛЕНО ранее (styles.css вынесен)
+16. ~~**Swiper.js подключается, но не используется**~~ — ИСПРАВЛЕНО ранее (удалён из base.html, используется в image_injector.py)
+17. ~~**Нет аналитики**~~ — ИСПРАВЛЕНО ранее (analytics.js, perf-monitor.js)
+18. ~~**Нет favicon**~~ — ИСПРАВЛЕНО ранее (favicon.svg)
+19. ~~**Нет Service Worker / PWA**~~ — ИСПРАВЛЕНО ранее (sw.js)
+20. ~~**Copyright 2026**~~ — ИСПРАВЛЕНО: теперь динамический (current_year)
+21. ~~**Copy-paste в template**~~ — ИСПРАВЛЕНО: создан централизованный DESTINATIONS_LIST в publisher.py, footer и формы используют циклы
+22. ~~**FAQ генерируется статично**~~ — ИСПРАВЛЕНО: generate_faq() теперь принимает country_slug и city_slug, загружает данные из COUNTRY_DATA, предоставляет персонализированные ответы для каждого типа контента
+23. ~~**Нет canonical на redirect page**~~ — ИСПРАВЛЕНО: добавлены canonical и noindex
 
 21. **Нет мета-тега `theme-color`**: Для мобильных браузеров.
 
@@ -253,25 +245,33 @@ travel-content-factory/
 
 ### НИЗКИЕ (P3)
 
-31. **Нет email-подписки**: Нет лид-магнита.
+31. **Нет email-подписки**: Нет лид-магнита. Требуется интеграция с email-сервисом.
 
-32. **Нет seasonal pages**: Нет отдельных страниц "Куда поехать в июле".
+32. ~~**Нет seasonal pages**~~ — ИСПРАВЛЕНО: создан seasonal_generator.py, 12 месяцев x 2 языка = 24 страницы с рекомендациями, погодой, ценами, советами. Добавлены в build процесс и sitemap.
 
-33. **Нет сравнения направлений**: Нет страниц "Турция vs Египет".
+33. **Нет сравнения направлений**: Нет страниц "Турция vs Египет". Требуется генерация сравнительных статей.
 
-34. **Нет блога**: Только сгенерированные статьи.
+34. **Нет блога**: Только сгенерированные статьи. Требуется добавление блог-секции.
 
-35. **Нет RSS-фида**: Для подписчиков.
+35. ~~**Нет RSS-фида**~~ — ИСПРАВЛЕНО: создан rss_generator.py, RSS 2.0 для RU и EN, автоматически в build процессе
 
 36. **Нет страницы "Партнёрам"**: Нет информации для потенциальных партнёров.
 
-37. **Нет breadcrumbs в JSON-LD для country pages**: Только для статей.
+37. ~~**Нет breadcrumbs в JSON-LD для country pages**~~ — ИСПРАВЛЕНО ранее (destination-rich.html)
 
 38. **Нет i18n для статических элементов**: "TravelHub", "Expert guide" и т.д. захардкожены.
 
-39. **Нет error handling в publisher.py**: Если JSON-файл повреждён — краш без информации.
+39. ~~**Нет error handling в publisher.py**~~ — ИСПРАВЛЕНО: load_json() теперь обрабатывает corrupted JSON
 
 40. **Нет тестов**: Только `photo_pipeline/tests/test_verifier.py`.
+
+41. **article.html:17** — article:published_time захардкожен на "2026-01-15T10:00:00+03:00" для всех статей.
+
+42. **publisher.py:68** — `_fetch_exchange_rates()` вызывается при импорте модуля — сетевой вызов при каждом `import publisher`.
+
+43. **contacts.html** — Telegram ссылка была пустой (https://t.me/), исправлена.
+
+44. **base.html** — Footer не содержал 8 направлений (КМВ, Владивосток, Шри-Ланка, Черногория, Вьетнам, Грузия, Кипр, Оман) — исправлено.
 
 ---
 
@@ -323,13 +323,12 @@ travel-content-factory/
 
 ## Следующие шаги
 
-1. Исправить критические проблемы (P0)
-2. Исправить важные проблемы (P1)
-3. Добавить российские направления
-4. Добавить международные направления
-5. Улучшить UX/UI
-6. Добавить аналитику
-7. Оптимизировать производительность
+1. ~~Исправить критические проблемы (P0)~~ ✅
+2. ~~Исправить важные проблемы (P1)~~ ✅
+3. **Рефакторинг копипасты в шаблонах** (P2) — дедупликация списков направлений в base.html footer, agent form, home.html form, destination-rich.html form, contacts.html form
+4. Персонализировать FAQ по городам (P2)
+5. Добавить CSP заголовки (P3)
+6. Добавить лид-магнит и email-подписку (P4)
 
 ---
 
@@ -349,6 +348,24 @@ travel-content-factory/
 12. Отсутствие preconnect критических ресурсов
 13. Отсутствие smooth scroll behavior
 14. Отсутствие accessibility skip-to-content link
+15. **publisher.py:185** — Опечатка "cănзуется" → "требуется" в инструкции по QR-коду для Китая
+16. **publisher.py** — Bare `except:` (4 штуки) заменены на `except (ValueError, KeyError, TypeError):` для корректного error handling
+17. **base.html footer** — Добавлены недостающие направления в footer: КМВ, Владивосток, Шри-Ланка, Черногория, Вьетнам, Грузия, Кипр, Оман (всего 22 направления вместо 13)
+18. **contacts.html** — Добавлены WhatsApp как способ связи, исправлена ссылка Telegram
+19. **article.html** — article:published_time и article:modified_time теперь динамические (date.today()), текст "Updated: July 2026" тоже динамический
+20. **publisher.py** — `_fetch_exchange_rates()` переведён на lazy loading (не вызывается при импорте модуля)
+21. **publisher.py CITY_IMAGES** — Добавлены 55 недостающих городов (Россия, Байкал, Алтай, Карелия, Дагестан, Камчатка, КМВ, Владивосток, Шри-Ланка, Черногория, Вьетнам, Грузия, Кипр, Оман)
+22. **publisher.py og_images** — Добавлены 6 недостающих стран (Шри-Ланка, Черногория, Вьетнам, Грузия, Кипр, Оман)
+23. **CAPTCHA** — Добавлена поддержка reCAPTCHA v2 на все 4 формы (base.html, home.html, destination-rich.html, contacts.html). Конфигурируется через RECAPTCHA_SITE_KEY в .env
+24. **hreflang для country pages** — Проверено: hreflang корректен (была ложная тревога в аудите)
+25. **Sticky CTA** — Исправлена навигация: base.html agent блок получил id="agent-form", article.html и destination-rich.html настраивают sticky_cta_target через Jinja2 переменную
+26. **Copyright** — Сделан динамическим (current_year через date.today().year)
+27. **Redirect page** — Добавлены canonical и noindex meta теги
+28. **Copy-paste в template** — Создан централизованный DESTINATIONS_LIST в publisher.py, footer и формы используют Jinja2 циклы вместо хардкода
+29. **FAQ статический** — generate_faq() теперь принимает country_slug/city_slug, загружает данные из COUNTRY_DATA, предоставляет персонализированные ответы для guide/hotels/flights/attractions/seasons
+30. **RSS-фид** — Создан rss_generator.py, генерирует RSS 2.0 для RU и EN, автоматически встраивается в build процесс, добавлен `<link rel="alternate">` в base.html
+31. **Error handling** — load_json() теперь обрабатывает corrupted JSON файлы с предупреждениями вместо краша
+32. **Seasonal pages** — Создан seasonal_generator.py, 12 месяцев x 2 языка = 24 страницы "Куда поехать в [месяц]" с рекомендациями, погодой, ценами, советами. Добавлены в build процесс и sitemap
 
 ---
 

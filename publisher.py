@@ -65,7 +65,13 @@ def _fetch_exchange_rates():
         print(f"  Warning: could not fetch live rates ({e}), using defaults")
         return dict(DEFAULT_RATES)
 
-RATES_TO_RUB = _fetch_exchange_rates()
+RATES_TO_RUB = None  # Lazy-loaded on first use
+
+def _get_rates():
+    global RATES_TO_RUB
+    if RATES_TO_RUB is None:
+        RATES_TO_RUB = _fetch_exchange_rates()
+    return RATES_TO_RUB
 
 def _clean_amount(s):
     return s.strip().replace(",", "").replace(" ", "")
@@ -75,11 +81,12 @@ def convert_prices_to_rub(body, lang="ru"):
     Skips already-converted patterns (those already containing both currencies)."""
     if lang == "ru":
         # RU: RUB main + (local in parentheses)
+        rates = _get_rates()
         def _ru_convert(m):
             amt = _clean_amount(m.group(1))
             sym = m.group(0)[0]
             try:
-                rate = RATES_TO_RUB.get(sym, 1)
+                rate = rates.get(sym, 1)
                 rub = int(float(amt) * rate)
                 if sym == "$":
                     return f"₽{rub:,} (${amt})".replace(",", " ")
@@ -93,7 +100,7 @@ def convert_prices_to_rub(body, lang="ru"):
                     return f"₽{rub:,} ({amt} ¥)".replace(",", " ")
                 else:
                     return f"₽{rub:,} ({amt} {sym})".replace(",", " ")
-            except:
+            except (ValueError, KeyError, TypeError):
                 return m.group(0)
 
         # Only convert if NOT already in a (parentheses) — skip pre-converted
@@ -107,20 +114,21 @@ def convert_prices_to_rub(body, lang="ru"):
                 def _f(m):
                     amt = _clean_amount(m.group(1))
                     try:
-                        rub = int(float(amt) * RATES_TO_RUB.get(c, 1))
+                        rub = int(float(amt) * rates.get(c, 1))
                         return f"₽{rub:,} ({amt} {si})".replace(",", " ")
-                    except:
+                    except (ValueError, KeyError, TypeError):
                         return m.group(0)
                 return _f
             body = re.sub(r'(?<![\(\d])(\d[\d,.]*(?:\s*\d{3})*)\s*' + code, _make_conv(code, sym_icon), body)
     else:
         # EN: USD main + (local in parentheses)
-        usd_rate = RATES_TO_RUB["$"]
+        rates = _get_rates()
+        usd_rate = rates["$"]
         def _en_convert(m):
             amt = _clean_amount(m.group(1))
             sym = m.group(0)[0]
             try:
-                rub = float(amt) * RATES_TO_RUB.get(sym, 1)
+                rub = float(amt) * rates.get(sym, 1)
                 usd = rub / usd_rate
                 if sym == "$":
                     return f"${amt}"
@@ -134,7 +142,7 @@ def convert_prices_to_rub(body, lang="ru"):
                     return f"${usd:,.0f} ({amt} ¥)".replace(",", " ")
                 else:
                     return f"${usd:,.0f} ({amt} {sym})".replace(",", " ")
-            except:
+            except (ValueError, KeyError, TypeError):
                 return m.group(0)
 
         for sym in ["$", "€", "₺", "฿", "¥"]:
@@ -150,10 +158,10 @@ def convert_prices_to_rub(body, lang="ru"):
                 def _f(m):
                     amt = _clean_amount(m.group(1))
                     try:
-                        rub = float(amt) * RATES_TO_RUB.get(c, 1)
+                        rub = float(amt) * rates.get(c, 1)
                         usd = rub / usd_rate
                         return f"${usd:,.0f} ({amt} {si})".replace(",", " ")
-                    except:
+                    except (ValueError, KeyError, TypeError):
                         return m.group(0)
                 return _f
             body = re.sub(r'(?<![\(\d])(\d[\d,.]*(?:\s*\d{3})*)\s*' + code, _make_en_conv(code, sym_icon), body)
@@ -182,7 +190,7 @@ def inject_china_entry_info(body, country_slug, lang="ru"):
     if country_slug != "china":
         return body
     if lang == "ru":
-        qr_text = '<p><strong>📱 Важно для Китая:</strong> Для въезда в Китай cầnзуется QR-код здоровья (WeChat или Alipay). Заполните декларацию здоровья за 24 часа до вылета. Также потребуется загранпаспорт с визой (оформляется через туроператора). Для Хайнаня — безвизовый въезд до 30 дней через туроператора.</p>'
+        qr_text = '<p><strong>📱 Важно для Китая:</strong> Для въезда в Китай требуется QR-код здоровья (WeChat или Alipay). Заполните декларацию здоровья за 24 часа до вылета. Также потребуется загранпаспорт с визой (оформляется через туроператора). Для Хайнаня — безвизовый въезд до 30 дней через туроператора.</p>'
     else:
         qr_text = '<p><strong>📱 Important for China:</strong> A health QR code (via WeChat or Alipay) is required for entry. Fill out the health declaration within 24 hours before departure. A passport with visa is required (processed via tour operator). Hainan: visa-free entry for up to 30 days via tour operator.</p>'
     visa_pattern = re.compile(r'(<h[23][^>]*>.*?(?:виза|visa|документ|document|правила въезда|entry rules).*?</h[23]>.*?)(<h[23])', re.IGNORECASE | re.DOTALL)
@@ -331,6 +339,49 @@ env.globals["analytics_enabled"] = os.getenv("ANALYTICS_ENABLED", "true").lower(
 env.globals["yandex_metrika_id"] = os.getenv("YANDEX_METRIKA_ID", None)
 env.globals["google_analytics_id"] = os.getenv("GOOGLE_ANALYTICS_ID", None)
 
+# reCAPTCHA configuration (spam protection for forms)
+env.globals["recaptcha_site_key"] = os.getenv("RECAPTCHA_SITE_KEY", None)
+
+# Brevo newsletter configuration
+# Get your form URL from Brevo > Contacts > Forms > Create a form
+env.globals["brevo_form_url"] = os.getenv("BREVO_FORM_URL", None)
+
+# Dynamic copyright year
+from datetime import date
+env.globals["current_year"] = str(date.today().year)
+
+# Centralized destinations list for forms, footer, and navigation
+# Single source of truth — used in base.html, home.html, and all templates
+DESTINATIONS_LIST = [
+    # Russia
+    {"slug": "russia", "name_ru": "Россия", "name_en": "Russia", "group": "russia"},
+    {"slug": "baikal", "name_ru": "Байкал", "name_en": "Lake Baikal", "group": "russia"},
+    {"slug": "altai", "name_ru": "Алтай", "name_en": "Altai", "group": "russia"},
+    {"slug": "karelia", "name_ru": "Карелия", "name_en": "Karelia", "group": "russia"},
+    {"slug": "dagestan", "name_ru": "Дагестан", "name_en": "Dagestan", "group": "russia"},
+    {"slug": "kamchatka", "name_ru": "Камчатка", "name_en": "Kamchatka", "group": "russia"},
+    {"slug": "mineral-vody", "name_ru": "Кавказские Минеральные Воды", "name_en": "Caucasian Mineral Waters", "group": "russia"},
+    {"slug": "vladivostok", "name_ru": "Владивосток", "name_en": "Vladivostok", "group": "russia"},
+    # International
+    {"slug": "turkey", "name_ru": "Турция", "name_en": "Turkey", "group": "international"},
+    {"slug": "thailand", "name_ru": "Таиланд", "name_en": "Thailand", "group": "international"},
+    {"slug": "egypt", "name_ru": "Египет", "name_en": "Egypt", "group": "international"},
+    {"slug": "uae", "name_ru": "ОАЭ", "name_en": "UAE", "group": "international"},
+    {"slug": "indonesia", "name_ru": "Индонезия", "name_en": "Indonesia", "group": "international"},
+    {"slug": "china", "name_ru": "Китай", "name_en": "China", "group": "international"},
+    {"slug": "maldives", "name_ru": "Мальдивы", "name_en": "Maldives", "group": "international"},
+    {"slug": "sri-lanka", "name_ru": "Шри-Ланка", "name_en": "Sri Lanka", "group": "international"},
+    {"slug": "montenegro", "name_ru": "Черногория", "name_en": "Montenegro", "group": "international"},
+    {"slug": "vietnam", "name_ru": "Вьетнам", "name_en": "Vietnam", "group": "international"},
+    {"slug": "georgia", "name_ru": "Грузия", "name_en": "Georgia", "group": "international"},
+    {"slug": "cyprus", "name_ru": "Кипр", "name_en": "Cyprus", "group": "international"},
+    {"slug": "oman", "name_ru": "Оман", "name_en": "Oman", "group": "international"},
+]
+
+env.globals["destinations_list"] = DESTINATIONS_LIST
+env.globals["russia_destinations"] = [d for d in DESTINATIONS_LIST if d["group"] == "russia"]
+env.globals["international_destinations"] = [d for d in DESTINATIONS_LIST if d["group"] == "international"]
+
 
 COUNTRY_IMAGES = {
     "russia": "https://images.unsplash.com/photo-1513326738677-b964603b136d?w=1200&q=80",
@@ -357,50 +408,122 @@ COUNTRY_IMAGES = {
 }
 
 CITY_IMAGES = {
+    # Turkey
     "istanbul": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
     "antalya": "https://images.unsplash.com/photo-1591994843349-f415f2e6e1a0?w=800&q=80",
     "bodrum": "https://images.unsplash.com/photo-1591994843349-f415f2e6e1a0?w=800&q=80",
     "cappadocia": "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?w=800&q=80",
-    "alanya": "https://images.unsplash.com/photo-1591994843349-f415f2e6e1a0?w=800&q=80",
+    # Thailand
     "bangkok": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80",
     "phuket": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80",
     "pattaya": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80",
     "koh-samui": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80",
     "krabi": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80",
+    # Egypt
     "sharm-el-sheikh": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800&q=80",
     "hurghada": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800&q=80",
     "cairo": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
     "luxor": "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=800&q=80",
     "marsa-alam": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800&q=80",
+    # UAE
     "dubai": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
     "abu-dhabi": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
     "sharjah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
     "ras-al-khaimah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
     "fujairah": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+    # Indonesia
     "ubud": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
     "kuta": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
     "seminyak": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
     "canggu": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
     "nusa-dua": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+    # China
     "sanya": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
     "haikou": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
     "beijing": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
     "shanghai": "https://images.unsplash.com/photo-1546412414-e1885e5109b5?w=800&q=80",
     "xian": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
+    # Maldives
     "male": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
     "maafushi": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
     "hulhumale": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
     "thulusdhoo": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
     "dhigurah": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
     "resort-islands": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80",
+    # Sri Lanka
+    "colombo": "https://images.unsplash.com/photo-1586526399017-e6d8cd50e1f7?w=800&q=80",
+    "bentota": "https://images.unsplash.com/photo-1586526399017-e6d8cd50e1f7?w=800&q=80",
+    "unawatuna": "https://images.unsplash.com/photo-1586526399017-e6d8cd50e1f7?w=800&q=80",
+    "sigiriya": "https://images.unsplash.com/photo-1586526399017-e6d8cd50e1f7?w=800&q=80",
+    # Montenegro
+    "budva": "https://images.unsplash.com/photo-1555990793-da11153b2473?w=800&q=80",
+    "kotor": "https://images.unsplash.com/photo-1555990793-da11153b2473?w=800&q=80",
+    "tivat": "https://images.unsplash.com/photo-1555990793-da11153b2473?w=800&q=80",
+    "herceg-novi": "https://images.unsplash.com/photo-1555990793-da11153b2473?w=800&q=80",
+    # Vietnam
+    "da-nang": "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80",
+    "phu-quoc": "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80",
+    "nha-trang": "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80",
+    "hanoi": "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=80",
+    # Georgia
+    "tbilisi": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
+    "batumi": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
+    "kutaisi": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
+    # Cyprus
+    "limassol": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
+    "ayia-napa": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
+    "paphos": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
+    # Oman
+    "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
+    "salalah": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
+    "musandam": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
+    # Russia
+    "moscow": "https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80",
+    "saint-petersburg": "https://images.unsplash.com/photo-1556610930-e515011324f3?w=800&q=80",
+    "sochi": "https://images.unsplash.com/photo-1548636800-4abe7e58658e?w=800&q=80",
+    "kaliningrad": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+    "kazan": "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=800&q=80",
+    # Baikal
+    "irkutsk": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=800&q=80",
+    "listvyanka": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=800&q=80",
+    "olkhon": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=800&q=80",
+    # Altai
+    "gorno-altaysk": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "chemyal": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "akkem": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    # Karelia
+    "petrozavodsk": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80",
+    "sortavala": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80",
+    "kizhi": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80",
+    # Dagestan
+    "makhachkala": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?w=800&q=80",
+    "derbent": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?w=800&q=80",
+    "kizlyar": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?w=800&q=80",
+    # Kamchatka
+    "petropavlovsk-kamchatsky": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "paratunka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    # Mineral Waters
+    "pyatigorsk": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "kislovodsk": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    "essentuki": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    # Vladivostok
+    "vladivostok-city": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=800&q=80",
+    "russky-island": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=800&q=80",
 }
 
 
 def load_json(path):
     if not path.exists():
         return {}
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"  Warning: Corrupted JSON file {path.name}: {e}")
+        return {}
+    except Exception as e:
+        print(f"  Warning: Could not read {path.name}: {e}")
+        return {}
 
 
 def get_city_image(city_slug):
@@ -755,10 +878,16 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         "indonesia": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&q=80",
         "china": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&q=80",
         "maldives": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
+        "sri-lanka": "https://images.unsplash.com/photo-1586526399017-e6d8cd50e1f7?w=1200&q=80",
+        "montenegro": "https://images.unsplash.com/photo-1555990793-da11153b2473?w=1200&q=80",
+        "vietnam": "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80",
+        "georgia": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=80",
+        "cyprus": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
+        "oman": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1200&q=80",
     }
     seo["og_image"] = _og_map.get(country_slug, f"{os.getenv('SITE_URL', 'https://antondrakon.github.io/travel-content-site')}/assets/countries/travel-hero.webp")
 
-    faq_data = generate_faq(city_name, content_type, lang)
+    faq_data = generate_faq(city_name, content_type, lang, country_slug=country_slug, city_slug=city_slug)
 
     alt_url = f"{country_slug}/{content_type_slug}.html"
     en_alt_slug = get_url_slug(content_type, city_slug, "en")
@@ -826,6 +955,25 @@ def build_article_page(country_slug, city_slug, content_type, lang):
 
     hero_image = get_city_image(city_slug)
 
+    # Dynamic dates for article meta
+    from datetime import date
+    today = date.today()
+    month_names_ru = {
+        1: "январь", 2: "февраль", 3: "март", 4: "апрель",
+        5: "май", 6: "июнь", 7: "июль", 8: "август",
+        9: "сентябрь", 10: "октябрь", 11: "ноябрь", 12: "декабрь",
+    }
+    month_names_en = {
+        1: "January", 2: "February", 3: "March", 4: "April",
+        5: "May", 6: "June", 7: "July", 8: "August",
+        9: "September", 10: "October", 11: "November", 12: "December",
+    }
+    month_ru = month_names_ru[today.month]
+    month_en = month_names_en[today.month]
+    date_iso = today.isoformat()
+    date_display_ru = f"{month_ru} {today.year}"
+    date_display_en = f"{month_en} {today.year}"
+
     template = env.get_template("article.html")
     html = template.render(
         lang=lang,
@@ -845,6 +993,10 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         alternate_url=alt_url,
         hero_image=hero_image,
         og_image=seo.get("og_image", ""),
+        date_published=date_iso,
+        date_modified=date_iso,
+        date_display_ru=date_display_ru,
+        date_display_en=date_display_en,
     )
 
     out = OUTPUT_DIR / lang / country_slug / f"{content_type_slug}.html"
@@ -857,6 +1009,8 @@ def build_index_redirect():
     html = """<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta http-equiv="refresh" content="0;url=/en/index.html">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="/en/index.html">
 <title>TravelHub</title><script>window.location.href="/en/index.html";</script></head>
 <body><p>Redirecting to <a href="/en/index.html">TravelHub</a>...</p></body></html>"""
     (OUTPUT_DIR / "index.html").write_text(html, encoding="utf-8")

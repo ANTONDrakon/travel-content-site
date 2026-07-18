@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% set hide_back = True %}
+{% block title %}{{ title }}{% endblock %}
+{% block meta_description %}{{ meta_description }}{% endblock %}
+{% set canonical = "/" + lang + "/compare/" + slug + ".html" %}
+{% set ru_alternate_url = "compare/" + slug + ".html" %}
+{% set en_alternate_url = "compare/" + slug + ".html" %}
+{% block en_alt %}compare/{{ slug }}.html{% endblock %}
+{% block ru_alt %}compare/{{ slug }}.html{% endblock %}
+{% set sticky_cta_target = "agent-form" %}
+
+{% block og_title %}{{ title }}{% endblock %}
+{% block og_description %}{{ meta_description }}{% endblock %}
+{% block og_image_alt %}{{ title }}{% endblock %}
+{% block twitter_title %}{{ title }}{% endblock %}
+{% block twitter_description %}{{ meta_description }}{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="hero-section" style="background-image:url('{{ hero_image }}');min-height:400px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 style="font-size:clamp(28px,5vw,48px);">{{ title }}</h1>
+        <p style="font-size:18px;color:rgba(255,255,255,0.9);margin-top:16px;">{{ subtitle }}</p>
+    </div>
+</div>
+
+<!-- QUICK COMPARISON TABLE -->
+<section class="section">
+    <h2>{{ "Quick Comparison" if lang == "en" else "Сравнение" }}</h2>
+    <div style="overflow-x:auto;margin-top:24px;">
+        <table style="width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;">
+            <thead>
+                <tr style="background:var(--teal);color:#fff;">
+                    <th style="padding:16px 20px;text-align:left;font-size:15px;">{{ "Parameter" if lang == "en" else "Параметр" }}</th>
+                    <th style="padding:16px 20px;text-align:center;font-size:15px;">{{ dest1.name_en if lang == "en" else dest1.name_ru }}</th>
+                    <th style="padding:16px 20px;text-align:center;font-size:15px;">{{ dest2.name_en if lang == "en" else dest2.name_ru }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in comparison_rows %}
+                <tr style="border-bottom:1px solid var(--frame);">
+                    <td style="padding:14px 20px;font-weight:600;color:var(--ink);">{{ row.label }}</td>
+                    <td style="padding:14px 20px;text-align:center;color:var(--charcoal);">{{ row.value1 }}</td>
+                    <td style="padding:14px 20px;text-align:center;color:var(--charcoal);">{{ row.value2 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- DESTINATIONS SIDE BY SIDE -->
+<section class="section" style="background:#fff;max-width:100%;">
+    <div style="max-width:1200px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+            <!-- Destination 1 -->
+            <div>
+                <a href="{{ root }}/{{ lang }}/{{ dest1.slug }}/index.html" style="text-decoration:none;">
+                    <div style="position:relative;border-radius:16px;overflow:hidden;margin-bottom:20px;">
+                        <img src="{{ dest1.image }}" alt="{{ dest1.name_en if lang == 'en' else dest1.name_ru }}" style="width:100%;height:240px;object-fit:cover;" loading="lazy">
+                        <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                            <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">{{ dest1.emoji }} {{ dest1.name_en if lang == "en" else dest1.name_ru }}</h3>
+                        </div>
+                    </div>
+                </a>
+                <h3 style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--ink);">
+                    {{ "Advantages" if lang == "en" else "Преимущества" }}
+                </h3>
+                <ul style="list-style:none;padding:0;">
+                    {% for adv in dest1.advantages %}
+                    <li style="padding:8px 0;padding-left:24px;position:relative;font-size:15px;color:var(--charcoal);">
+                        <span style="position:absolute;left:0;color:var(--teal);">✓</span>
+                        {{ adv }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Destination 2 -->
+            <div>
+                <a href="{{ root }}/{{ lang }}/{{ dest2.slug }}/index.html" style="text-decoration:none;">
+                    <div style="position:relative;border-radius:16px;overflow:hidden;margin-bottom:20px;">
+                        <img src="{{ dest2.image }}" alt="{{ dest2.name_en if lang == 'en' else dest2.name_ru }}" style="width:100%;height:240px;object-fit:cover;" loading="lazy">
+                        <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,0.7));">
+                            <h3 style="color:#fff;font-size:24px;font-weight:700;margin:0;">{{ dest2.emoji }} {{ dest2.name_en if lang == "en" else dest2.name_ru }}</h3>
+                        </div>
+                    </div>
+                </a>
+                <h3 style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--ink);">
+                    {{ "Advantages" if lang == "en" else "Преимущества" }}
+                </h3>
+                <ul style="list-style:none;padding:0;">
+                    {% for adv in dest2.advantages %}
+                    <li style="padding:8px 0;padding-left:24px;position:relative;font-size:15px;color:var(--charcoal);">
+                        <span style="position:absolute;left:0;color:var(--teal);">✓</span>
+                        {{ adv }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VERDICT -->
+<section class="section">
+    <h2>{{ "Our Verdict" if lang == "en" else "Наш вердикт" }}</h2>
+    <div style="max-width:800px;margin:24px auto 0;background:#fff;padding:32px;border-radius:16px;border-top:4px solid var(--teal);">
+        <div class="article-body">
+            {{ verdict | safe }}
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="padding:60px 24px;background:var(--bg);">
+    <div style="max-width:700px;margin:0 auto;text-align:center;">
+        <h2 style="font-size:28px;font-weight:700;margin-bottom:12px;color:var(--ink);">
+            {{ "Can't decide?" if lang == "en" else "Не можете определиться?" }}
+        </h2>
+        <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:24px;">
+            {{ "Our travel experts will help you choose the perfect destination based on your preferences and budget." if lang == "en" else "Наши эксперты помогут выбрать идеальное направление с учётом ваших предпочтений и бюджета." }}
+        </p>
+        <a href="#agent-form" class="btn-cta" style="font-size:16px;padding:14px 36px;">
+            {{ "Get personalized advice →" if lang == "en" else "Получить консультацию →" }}
+        </a>
+    </div>
+</section>
+
+{% endblock %}

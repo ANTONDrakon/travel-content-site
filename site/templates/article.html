@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% set sticky_cta_target = "agent-form" %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block meta_description %}{{ article.meta_description }}{% endblock %}
 
@@ -14,8 +15,8 @@
 {% block twitter_description %}{{ article.meta_description }}{% endblock %}
 
 {% block article_meta %}
-<meta property="article:published_time" content="2026-01-15T10:00:00+03:00">
-<meta property="article:modified_time" content="2026-07-17T10:00:00+03:00">
+<meta property="article:published_time" content="{{ date_published }}T10:00:00+03:00">
+<meta property="article:modified_time" content="{{ date_modified }}T10:00:00+03:00">
 <meta property="article:section" content="{{ content_type }}">
 <meta property="article:author" content="TravelHub">
 {% endblock %}
@@ -34,7 +35,7 @@
 <div class="section" style="padding-top:{{ '40px' if hero_image else '100px' }};">
     <div class="article-layout">
         <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
-            <span>{{ "Updated: July 2026" if lang == "en" else "Обновлено: июль 2026" }}</span>
+            <span>{{ "Updated: " + date_display_en if lang == "en" else "Обновлено: " + date_display_ru }}</span>
             <span>&bull;</span>
             <span>{{ "Expert guide" if lang == "en" else "Экспертный гайд" }}</span>
             <span>&bull;</span>
