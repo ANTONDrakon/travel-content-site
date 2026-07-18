@@ -60,15 +60,17 @@ def build_breadcrumbs(country, city, content_type, lang):
 
 
 def generate_schema_article(meta, city_name, country_name, url, lang):
+    from datetime import date
+    today = date.today().isoformat()
     return {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": meta.get("h1", meta.get("title", "")),
         "description": meta.get("meta_description", ""),
-        "author": {"@type": "Organization", "name": "Travel Guide Hub"},
-        "datePublished": "2026-01-15",
-        "dateModified": "2026-06-01",
-        "publisher": {"@type": "Organization", "name": "Travel Guide Hub"},
+        "author": {"@type": "Organization", "name": "TravelHub"},
+        "datePublished": today,
+        "dateModified": today,
+        "publisher": {"@type": "Organization", "name": "TravelHub"},
         "mainEntityOfPage": {"@type": "WebPage", "@id": url},
     }
 

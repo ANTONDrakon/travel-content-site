@@ -18,24 +18,52 @@ travel-content-factory/
 ├── publisher.py         # Сборка HTML-сайта (Jinja2)
 ├── sitemap_generator.py # Генерация sitemap.xml
 ├── config/
-│   ├── destinations.py  # 5 стран, 25 городов
+│   ├── destinations.py  # 21 страна/регион, ~80 городов
 │   ├── prompts.py       # Промпты (RU + EN)
-│   └── affiliates.py    # Партнёрские ссылки Travelpayouts
+│   ├── affiliates.py    # Партнёрские ссылки Travelpayouts
+│   └── country_data.py  # Подробные данные по странам
 ├── agents/
 │   ├── content_writer.py    # DeepSeek API
 │   ├── seo_optimizer.py     # SEO-метаданные
-│   └── affiliate_matcher.py # Вставка партнёрок
+│   ├── affiliate_matcher.py # Вставка партнёрок
+│   └── image_injector.py    # Инъекция фото отелей
 ├── site/templates/      # Jinja2-шаблоны
 ├── content/             # Сгенерированные статьи (JSON)
 └── docs/                # Готовый сайт для GitHub Pages
 ```
+
+## Направления
+
+### Россия (приоритет)
+- **Москва**, **Санкт-Петербург**, **Сочи**, **Калининград**, **Казань**
+- **Байкал** (Иркутск, Листвянка, Ольхон)
+- **Алтай** (Горно-Алтайск, Чемал, Аккем)
+- **Карелия** (Петрозаводск, Сортавала, Кижи)
+- **Дагестан** (Махачкала, Дербент, Кизляр)
+- **Камчатка** (Петропавловск-Камчатский, Паратунка)
+- **Кавказские Минеральные Воды** (Пятигорск, Кисловодск, Ессентуки)
+- **Владивосток** (Владивосток, Русский остров)
+
+### Зарубежные
+- **Турция** (Стамбул, Анталья, Бодрум, Каппадокия)
+- **Таиланд** (Бангкок, Пхукет, Паттайя, Самуи, Краби)
+- **Египет** (Шарм-эль-Шейх, Хургада, Каир, Луксор, Марса-Алам)
+- **ОАЭ** (Дубай, Абу-Даби, Шарджа, Рас-эль-Хайма, Фуджейра)
+- **Индонезия** (Убуд, Кута, Семиньяк, Чангу, Нуса-Дуа)
+- **Китай** (Санья, Хайкоу, Пекин, Шанхай, Сиань)
+- **Мальдивы** (Мале, Маафуши, Хулхумале и др.)
+- **Шри-Ланка**, **Черногория**, **Вьетнам**, **Грузия**, **Кипр**, **Оман**
 
 ## Быстрый старт
 
 ### 1. Установка
 
 ```bash
+# Python зависимости
 pip install -r requirements.txt
+
+# Node.js зависимости (для Tailwind CSS)
+npm install
 ```
 
 ### 2. Настройка
@@ -62,14 +90,19 @@ python main.py generate --country turkey --city istanbul --lang both
 # Сгенерировать все статьи для Турции (5 городов × 5 типов × 2 языка = 50 статей)
 python main.py generate --country turkey --lang both
 
-# Сгенерировать ВСЁ (5 стран × 5 городов × 5 типов × 2 языка = 250 статей)
+# Сгенерировать ВСЁ (21 регион × ~80 городов × 5 типов × 2 языка)
 python main.py generate --lang both
 ```
 
 ### 4. Сборка сайта
 
 ```bash
+# Полная сборка (Tailwind CSS + HTML страницы)
 python main.py build
+
+# Или отдельно:
+npm run tailwind:build   # Собрать Tailwind CSS
+python publisher.py      # Собрать HTML страницы
 ```
 
 Сайт будет собран в папку `docs/`.
@@ -87,8 +120,16 @@ python main.py build
 | `python main.py list` | Показать все направления |
 | `python main.py generate --country turkey --lang both` | Сгенерировать контент для страны |
 | `python main.py generate --country turkey --city istanbul --type guide --lang ru` | Одна статья |
-| `python main.py build` | Собрать сайт |
+| `python main.py build` | Собрать сайт (включая Tailwind CSS) |
 | `python main.py all` | Сгенерировать ВСЁ + собрать сайт |
+| `npm run tailwind:build` | Собрать Tailwind CSS (production) |
+| `npm run tailwind:watch` | Watch-режим для разработки |
+
+## Структура CSS
+
+- `site/assets/input.css` — входной файл для Tailwind CSS
+- `site/assets/styles.css` — кастомные стили (компоненты, анимации)
+- `docs/assets/tailwind.css` — собранный Tailwind CSS (минифицированный, ~10KB)
 
 ## Монетизация
 
@@ -97,6 +138,33 @@ python main.py build
 - Авиабилеты — Aviasales (комиссия 2-4%)
 - Туры — Level.Travel (комиссия 3-5%)
 - Страховки — Cherehapa (комиссия 10-15%)
+
+## Аналитика
+
+### Настройка
+
+Добавь в `.env` файл:
+
+```
+ANALYTICS_ENABLED=true
+YANDEX_METRIKA_ID=ваш_идентификатор
+GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+```
+
+### Что отслеживается
+
+- **Просмотры страниц** — автоматически
+- **Клики по партнёрским ссылкам** — автоматически
+- **Отправка форм** — автоматически
+- **Прокрутка страницы** — 25%, 50%, 75%, 100%
+- **Время на странице** — при уходе
+- **Core Web Vitals** — FCP, LCP, CLS, TTFB, FID
+
+### Инструменты
+
+- **Яндекс.Метрика**: https://metrika.yandex.ru
+- **Google Analytics**: https://analytics.google.com
+- **Google Search Console**: https://search.google.com/search-console
 
 ## План развития
 

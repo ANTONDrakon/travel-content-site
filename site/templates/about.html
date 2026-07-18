@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% set hide_back = True %}
+{% block title %}{{ "About Us — TravelHub" if lang == "en" else "О нас — TravelHub" }}{% endblock %}
+{% block meta_description %}{{ "TravelHub: team of travel experts creating honest, practical guides for destinations worldwide. Learn about our mission and values." if lang == "en" else "TravelHub: команда travel-экспертов, создающих честные и практичные путеводители. Узнайте о нашей миссии и ценностях." }}{% endblock %}
+{% set canonical = "/" + lang + "/about.html" %}
+{% set ru_alternate_url = "about.html" %}
+{% set en_alternate_url = "about.html" %}
+{% block en_alt %}about.html{% endblock %}
+{% block ru_alt %}about.html{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=80');min-height:360px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 style="font-size:clamp(32px,6vw,56px);">{{ "About TravelHub" if lang == "en" else "О TravelHub" }}</h1>
+    </div>
+</div>
+
+<section class="section">
+    <div class="article-layout">
+        <div class="article-body">
+            {% if lang == "en" %}
+            <h2>Our Mission</h2>
+            <p>TravelHub exists to help travelers make informed decisions. We research destinations, compare prices, and share honest, practical information — so you can plan your perfect trip without the overwhelm.</p>
+
+            <h2>What We Do</h2>
+            <ul>
+                <li><strong>Research destinations worldwide</strong> — from popular resorts to hidden gems</li>
+                <li><strong>Write honest guides</strong> — with real prices, practical tips, and personal recommendations</li>
+                <li><strong>Compare booking options</strong> — to help you find the best deals on hotels, flights, and tours</li>
+                <li><strong>Provide expert support</strong> — our travel agents can help plan your trip from start to finish</li>
+            </ul>
+
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Honesty</strong> — We never recommend something we wouldn't use ourselves. All prices are approximate estimates — always verify on partner sites.</li>
+                <li><strong>Usefulness</strong> — Every guide is written to answer the questions travelers actually have.</li>
+                <li><strong>Transparency</strong> — We clearly label partner links. We earn a commission when you book through them, at no extra cost to you.</li>
+                <li><strong>Quality</strong> — We research every destination personally and update our guides regularly.</li>
+            </ul>
+
+            <h2>How We Fund TravelHub</h2>
+            <p>TravelHub is free for users. We earn revenue through affiliate partnerships with booking platforms like Aviasales, Hotellook, Booking.com, and others. When you book through our links, we receive a small commission — this helps us keep the site running and create more guides.</p>
+            <p>We <strong>never</strong> let affiliate revenue influence our recommendations. Our guides are written based on research, not commission rates.</p>
+
+            <h2>Contact Us</h2>
+            <p>Have questions, suggestions, or want to collaborate? Reach out via:</p>
+            <ul>
+                <li>Email: <a href="mailto:i@turkov-1.ru" style="color:var(--teal);">i@turkov-1.ru</a></li>
+                <li>Travel planning: <a href="{{ root }}/{{ lang }}/contacts.html" style="color:var(--teal);">Contact form</a></li>
+            </ul>
+            {% else %}
+            <h2>Наша миссия</h2>
+            <p>TravelHub помогает путешественникам принимать обоснованные решения. Мы исследуем направления, сравниваем цены и делимся честной, практичной информацией — чтобы вы могли спланировать идеальную поездку без стресса.</p>
+
+            <h2>Что мы делаем</h2>
+            <ul>
+                <li><strong>Исследуем направления по всему миру</strong> — от популярных курортов до скрытых жемчужин</li>
+                <li><strong>Пишем честные гайды</strong> — с реальными ценами, практичными советами и личными рекомендациями</li>
+                <li><strong>Сравниваем варианты бронирования</strong> — чтобы помочь найти лучшие цены на отели, билеты и туры</li>
+                <li><strong>Предоставляем экспертную поддержку</strong> — наши travel-агенты помогут спланировать поездку от начала до конца</li>
+            </ul>
+
+            <h2>Наши ценности</h2>
+            <ul>
+                <li><strong>Честность</strong> — Мы не рекомендуем то, что не использовали бы сами. Все цены ориентировочные — всегда сверяйтесь с сайтами партнёров.</li>
+                <li><strong>Полезность</strong> — Каждый гайд написан, чтобы ответить на вопросы, которые действительно важны путешественникам.</li>
+                <li><strong>Прозрачность</strong> — Мы явно помечаем партнёрские ссылки. Мы получаем комиссию, когда вы бронируете через нас — это бесплатно для вас.</li>
+                <li><strong>Качество</strong> — Мы исследуем каждое направление лично и регулярно обновляем гайды.</li>
+            </ul>
+
+            <h2>Как мы финансируем TravelHub</h2>
+            <p>TravelHub бесплатен для пользователей. Мы зарабатываем через партнёрские программы с площадками бронирования: Aviasales, Hotellook, Booking.com и другими. Когда вы бронируете через наши ссылки, мы получаем небольшую комиссию — это помогает поддерживать сайт и создавать больше гайдов.</p>
+            <p>Мы <strong>никогда</strong> не позволяем партнёрскому доходу влиять на наши рекомендации. Наши гайды написаны на основе исследований, а не комиссий.</p>
+
+            <h2>Свяжитесь с нами</h2>
+            <p>Есть вопросы, предложения или хотите сотрудничать? Напишите нам:</p>
+            <ul>
+                <li>Email: <a href="mailto:i@turkov-1.ru" style="color:var(--teal);">i@turkov-1.ru</a></li>
+                <li>Планирование поездки: <a href="{{ root }}/{{ lang }}/contacts.html" style="color:var(--teal);">Форма обратной связи</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

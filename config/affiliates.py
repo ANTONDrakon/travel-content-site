@@ -40,14 +40,14 @@ def insurance_link():
     )
 
 AFFILIATE_HTML = {
-    "hotels": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Найти отели в {city} на Hotellook</a>',
-    "hotels_en": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="affiliate-link">🔍 Find hotels in {city} on Hotellook</a>',
-    "flights": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="affiliate-link">✈️ Найти дешёвые билеты в {city} на Aviasales</a>',
-    "flights_en": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="affiliate-link">✈️ Find cheap flights to {city} on Aviasales</a>',
-    "tours": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="affiliate-link">🏝 Подобрать тур в {city}</a>',
-    "tours_en": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="affiliate-link">🏝 Book a tour to {city}</a>',
-    "insurance": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Оформить страховку для путешествия</a>',
-    "insurance_en": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="affiliate-link">🛡 Get travel insurance</a>',
+    "hotels": '<div class="affiliate-block"><p>Проверьте актуальные цены на Hotellook:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">сравнить цены на отели в {city}</a></div>',
+    "hotels_en": '<div class="affiliate-block"><p>Check real-time prices on Hotellook:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">compare hotel prices in {city}</a></div>',
+    "flights": '<div class="affiliate-block"><p>Сравните цены на авиабилеты:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">посмотреть билеты в {city}</a></div>',
+    "flights_en": '<div class="affiliate-block"><p>Compare flight prices:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">check flights to {city}</a></div>',
+    "tours": '<div class="affiliate-block"><p>Подберите тур с лучшими ценами:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">подобрать тур в {city}</a></div>',
+    "tours_en": '<div class="affiliate-block"><p>Find the best tour deals:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">find tours to {city}</a></div>',
+    "insurance": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">оформить страховку</a>',
+    "insurance_en": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">get travel insurance</a>',
 }
 
 PLACEHOLDERS = {

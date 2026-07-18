@@ -78,11 +78,14 @@ def build_swiper_carousel(hotel, lang="ru"):
         verified = img.get("verified", False)
         badge = ""
         if any_verified:
+            badge_text = "✓ верифицировано" if lang == "ru" else "✓ verified"
+            if not verified:
+                badge_text = "⚠ фото не верифицированы" if lang == "ru" else "⚠ unverified"
             badge = (
                 f'<span style="position:absolute;top:10px;right:10px;'
                 f'background:{"rgba(0,180,80,0.85)" if verified else "rgba(200,120,40,0.85)"};'
                 f'color:#fff;font-size:11px;padding:3px 10px;border-radius:12px;z-index:5;'
-                f'font-weight:600;">{"verified" if verified else "unverified"}</span>'
+                f'font-weight:600;">{badge_text}</span>'
             )
         slides.append(
             f'<div class="swiper-slide" style="position:relative;">'
@@ -123,10 +126,12 @@ def build_swiper_carousel(hotel, lang="ru"):
     if rating:
         html += f'<span style="font-size:13px;color:#f39c12;">⭐ {rating}</span>'
 
+    btn_check = "Проверить цену" if lang == "ru" else "Check price"
+    btn_ask = "Спросить эксперта" if lang == "ru" else "Ask expert"
     html += f'''</div>
 <div style="display:flex;gap:8px;margin-top:12px;">
-<a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_{hotel_name.lower().replace(' ', '_')}" target="_blank" rel="nofollow sponsored" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">Check price</a>
-<a href="#agent-form" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">Ask expert</a>
+<a href="https://tp.media/click?shmarker=736226&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=search_hotels_{hotel_name.lower().replace(' ', '_')}" target="_blank" rel="nofollow sponsored" class="partner-btn" style="flex:1;text-align:center;padding:10px;font-size:13px;">{btn_check}</a>
+<a href="#agent-form" class="btn-cta" style="flex:1;text-align:center;padding:10px;font-size:13px;">{btn_ask}</a>
 </div>
 </div></div>
 <script>

@@ -7,6 +7,19 @@
 {% set ru_alternate_url = ru_alt_url %}
 {% set en_alternate_url = en_alt_url %}
 
+{% block og_title %}{{ article.title }}{% endblock %}
+{% block og_description %}{{ article.meta_description }}{% endblock %}
+{% block og_image_alt %}{{ article.h1 }}{% endblock %}
+{% block twitter_title %}{{ article.title }}{% endblock %}
+{% block twitter_description %}{{ article.meta_description }}{% endblock %}
+
+{% block article_meta %}
+<meta property="article:published_time" content="2026-01-15T10:00:00+03:00">
+<meta property="article:modified_time" content="2026-07-17T10:00:00+03:00">
+<meta property="article:section" content="{{ content_type }}">
+<meta property="article:author" content="TravelHub">
+{% endblock %}
+
 {% block content %}
 
 {% if hero_image %}
@@ -21,9 +34,27 @@
 <div class="section" style="padding-top:{{ '40px' if hero_image else '100px' }};">
     <div class="article-layout">
         <div style="display:flex;gap:16px;font-size:13px;color:var(--meta);margin-bottom:40px;">
-            <span>{{ "Updated: June 2026" if lang == "en" else "Обновлено: июнь 2026" }}</span>
+            <span>{{ "Updated: July 2026" if lang == "en" else "Обновлено: июль 2026" }}</span>
             <span>&bull;</span>
             <span>{{ "Expert guide" if lang == "en" else "Экспертный гайд" }}</span>
+            <span>&bull;</span>
+            <span>⏱ {{ "5 min read" if lang == "en" else "5 мин чтения" }}</span>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc" id="toc">
+            <h3>{{ "Table of Contents" if lang == "en" else "Содержание" }}</h3>
+            <ul>
+                {% for section in article.body.split('<h2') %}
+                    {% if loop.index > 1 %}
+                    <li>
+                        <a href="#section-{{ loop.index }}">
+                            {{ section.split('</h2>')[0].split('>')[-1] }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         </div>
 
         <div class="article-body">
@@ -52,7 +83,7 @@
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
                 {% for rel in related %}
                 <a href="{{ root }}/{{ lang }}/{{ rel.url }}" style="background:#fff;padding:20px;text-decoration:none;color:var(--ink);display:block;">
-                    <span style="font-size:13px;color:var(--vermillion);text-transform:uppercase;letter-spacing:0.03em;">{{ rel.type }}</span>
+                    <span style="font-size:13px;color:var(--teal);text-transform:uppercase;letter-spacing:0.03em;">{{ rel.type }}</span>
                     <p style="font-weight:600;font-size:15px;margin-top:6px;">{{ rel.title }}</p>
                 </a>
                 {% endfor %}

@@ -1,0 +1,31 @@
+{
+  "name": "travel-content-factory",
+  "version": "1.0.0",
+  "description": "Автоматическая система генерации туристического контента с SEO-оптимизацией и партнёрскими ссылками.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "tailwind:build": "npx @tailwindcss/cli -i site/assets/input.css -o docs/assets/tailwind.css --minify",
+    "tailwind:watch": "npx @tailwindcss/cli -i site/assets/input.css -o docs/assets/tailwind.css --watch",
+    "build:css": "npm run tailwind:build",
+    "build:site": "python publisher.py",
+    "build:all": "npm run build:css && npm run build:site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANTONDrakon/travel-content-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ANTONDrakon/travel-content-site/issues"
+  },
+  "homepage": "https://github.com/ANTONDrakon/travel-content-site#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}

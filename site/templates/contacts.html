@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% set hide_back = True %}
+{% block title %}{{ "Contacts — TravelHub" if lang == "en" else "Контакты — TravelHub" }}{% endblock %}
+{% block meta_description %}{{ "Contact TravelHub: travel planning, partnerships, feedback. We respond within 24 hours." if lang == "en" else "Свяжитесь с TravelHub: планирование поездок, партнёрство, обратная связь. Отвечаем в течение 24 часов." }}{% endblock %}
+{% set canonical = "/" + lang + "/contacts.html" %}
+{% set ru_alternate_url = "contacts.html" %}
+{% set en_alternate_url = "contacts.html" %}
+{% block en_alt %}contacts.html{% endblock %}
+{% block ru_alt %}contacts.html{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="hero-section" style="background-image:url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80');min-height:300px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 style="font-size:clamp(32px,6vw,56px);">{{ "Contact Us" if lang == "en" else "Контакты" }}</h1>
+    </div>
+</div>
+
+<section class="section">
+    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+
+        <!-- Contact Form -->
+        <div>
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:20px;text-align:left;">{{ "Send a Message" if lang == "en" else "Написать нам" }}</h2>
+            <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
+                <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required>
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="phone" placeholder="{{ 'Phone *' if lang == 'en' else 'Телефон *' }}" required>
+                <select name="destination">
+                    <option value="">{{ "Subject" if lang == "en" else "Тема" }}</option>
+                    <option value="trip">{{ "Trip planning" if lang == "en" else "Планирование поездки" }}</option>
+                    <option value="partnership">{{ "Partnership" if lang == "en" else "Партнёрство" }}</option>
+                    <option value="feedback">{{ "Feedback" if lang == "en" else "Обратная связь" }}</option>
+                    <option value="other">{{ "Other" if lang == "en" else "Другое" }}</option>
+                </select>
+                <textarea name="message" rows="4" placeholder="{{ 'Your message...' if lang == 'en' else 'Ваше сообщение...' }}" required></textarea>
+                <input type="hidden" name="_subject" value="{{ 'Message from TravelHub Contacts' if lang == 'en' else 'Сообщение с Contacts TravelHub' }}">
+                <button type="submit" class="btn-cta">{{ "Send Message →" if lang == "en" else "Отправить →" }}</button>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+            <h2 style="font-size:24px;font-weight:700;margin-bottom:20px;text-align:left;">{{ "How to Reach Us" if lang == "en" else "Как связаться" }}</h2>
+
+            <div style="display:flex;flex-direction:column;gap:20px;">
+                <div style="background:#fff;padding:24px;border-radius:16px;">
+                    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">📧 Email</h3>
+                    <p style="font-size:15px;color:var(--charcoal);">
+                        <a href="mailto:i@turkov-1.ru" style="color:var(--teal);text-decoration:none;">i@turkov-1.ru</a>
+                    </p>
+                    <p style="font-size:13px;color:var(--meta);margin-top:4px;">{{ "Response within 24 hours" if lang == "en" else "Отвечаем в течение 24 часов" }}</p>
+                </div>
+
+                <div style="background:#fff;padding:24px;border-radius:16px;">
+                    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">💬 Telegram</h3>
+                    <p style="font-size:15px;color:var(--charcoal);">
+                        <a href="https://t.me/" target="_blank" style="color:var(--teal);text-decoration:none;">@TravelHub</a>
+                    </p>
+                    <p style="font-size:13px;color:var(--meta);margin-top:4px;">{{ "Quick replies" if lang == "en" else "Быстрые ответы" }}</p>
+                </div>
+
+                <div style="background:#fff;padding:24px;border-radius:16px;">
+                    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">📱 MAX</h3>
+                    <p style="font-size:15px;color:var(--charcoal);">
+                        <a href="https://max.vk.com/" target="_blank" style="color:var(--teal);text-decoration:none;">Написать в Макс</a>
+                    </p>
+                    <p style="font-size:13px;color:var(--meta);margin-top:4px;">{{ "For Russian users" if lang == "en" else "Для пользователей из России" }}</p>
+                </div>
+
+                <div style="background:#fff;padding:24px;border-radius:16px;">
+                    <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">🕐 Working Hours</h3>
+                    <p style="font-size:15px;color:var(--charcoal);">
+                        {{ "Mon–Sat: 9:00–21:00 (Moscow time)" if lang == "en" else "Пн–Сб: 9:00–21:00 (МСК)" }}
+                    </p>
+                    <p style="font-size:13px;color:var(--meta);margin-top:4px;">{{ "Emergency support 24/7 for active clients" if lang == "en" else "Экстренная поддержка 24/7 для активных клиентов" }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:#fff;max-width:100%;">
+    <div style="max-width:700px;margin:0 auto;">
+        <h2>{{ "Frequently Asked Questions" if lang == "en" else "Часто задаваемые вопросы" }}</h2>
+        <div class="faq" style="margin-top:32px;">
+            {% if lang == "en" %}
+            <details><summary>How much does trip planning cost?</summary><p>Trip planning consultation is free. We earn through partner commissions when you book hotels, flights, or tours through our links.</p></details>
+            <details><summary>Do you work with tour operators?</summary><p>Yes, we partner with major Russian tour operators. Contact us for package tour options.</p></details>
+            <details><summary>Can I get a refund?</summary><p>Refund policies depend on the booking platform. Contact the platform directly for refund requests.</p></details>
+            <details><summary>How quickly do you respond?</summary><p>We respond within 24 hours on working days. For urgent matters, reach us via Telegram.</p></details>
+            {% else %}
+            <details><summary>Сколько стоит планирование поездки?</summary><p>Консультация по планированию бесплатна. Мы зарабатываем через партнёрские комиссии, когда вы бронируете отели, билеты или туры через наши ссылки.</p></details>
+            <details><summary>Вы работаете с туроператорами?</summary><p>Да, мы сотрудничаем с крупными российскими туроператорами. Свяжитесь с нами для вариантов пакетных туров.</p></details>
+            <details><summary>Можно ли получить возврат?</summary><p>Политика возврата зависит от площадки бронирования. Обратитесь напрямую к площадке для запроса возврата.</p></details>
+            <details><summary>Как быстро вы отвечаете?</summary><p>Мы отвечаем в течение 24 часов в рабочие дни. Срочные вопросы — через Telegram.</p></details>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import date
 
 OUTPUT_DIR = Path(__file__).parent / "docs"
-SITE_URL = os.getenv("SITE_URL", "https://YOUR_USERNAME.github.io/travel-content-site")
+SITE_URL = os.getenv("SITE_URL", "https://antondrakon.github.io/travel-content-site")
 
 TODAY = date.today().strftime("%Y-%m-%d")
 
@@ -37,6 +37,8 @@ def generate_lang_sitemap(lang):
     }
 
     lines.append(f"  <url><loc>{SITE_URL}/{lang}/index.html</loc><priority>1.0</priority><lastmod>{TODAY}</lastmod></url>")
+    lines.append(f"  <url><loc>{SITE_URL}/{lang}/about.html</loc><priority>0.7</priority><lastmod>{TODAY}</lastmod></url>")
+    lines.append(f"  <url><loc>{SITE_URL}/{lang}/contacts.html</loc><priority>0.7</priority><lastmod>{TODAY}</lastmod></url>")
 
     for country_slug, country in DESTINATIONS.items():
         lines.append(f"  <url><loc>{SITE_URL}/{lang}/{country_slug}/index.html</loc><priority>0.9</priority><lastmod>{TODAY}</lastmod></url>")

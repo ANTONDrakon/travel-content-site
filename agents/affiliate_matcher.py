@@ -40,11 +40,20 @@ def replace_placeholders(body, city_name_en, lang):
 def inject_insurance_block(body, lang):
     from config.affiliates import insurance_link, AFFILIATE_HTML
     insurance_html = AFFILIATE_HTML["insurance_en" if lang == "en" else "insurance"].format(url=insurance_link())
-    insurance_block = f'<div class="affiliate-banner"><p>{"Don\'t forget travel insurance!" if lang == "en" else "Не забудьте оформить страховку для путешествия!"}</p>{insurance_html}</div>'
+    insurance_block = f'\n<div class="affiliate-block"><p>{"Don\'t forget travel insurance!" if lang == "en" else "Не забудьте оформить страховку для путешествия!"}</p>{insurance_html}</div>\n'
 
-    close_article = body.rfind("</article>")
-    if close_article != -1:
-        body = body[:close_article] + insurance_block + body[close_article:]
+    # Find safe insertion point: after the last </p> or </h2> in the second half of body
+    # This avoids breaking mid-paragraph text
+    last_h2 = body.rfind("</h2>")
+    last_p = body.rfind("</p>")
+    insert_after = max(last_h2, last_p)
+
+    if insert_after != -1 and insert_after > len(body) // 2:
+        close_bracket = body.find(">", insert_after)
+        if close_bracket != -1:
+            body = body[:close_bracket + 1] + insurance_block + body[close_bracket + 1:]
+        else:
+            body = body[:insert_after] + insurance_block + body[insert_after:]
     else:
         body += insurance_block
     return body

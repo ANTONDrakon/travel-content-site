@@ -124,6 +124,14 @@ def build_site():
     build_all()
     from sitemap_generator import build_all_sitemaps
     build_all_sitemaps()
+    
+    # Optimize images
+    print("\nOptimizing images...")
+    try:
+        from optimize_images import main as optimize_main
+        optimize_main()
+    except Exception as e:
+        print(f"  Warning: Image optimization failed: {e}")
 
 
 def main():

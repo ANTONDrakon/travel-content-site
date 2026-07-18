@@ -1,0 +1,23 @@
+
+/* Responsive image loading */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+img[loading="lazy"].loaded,
+img[loading="lazy"]:not([data-src]) {
+    opacity: 1;
+}
+
+/* Image placeholder gradient */
+img {
+    background: linear-gradient(135deg, #e8e0d6 0%, #f8f5f0 100%);
+    min-height: 100px;
+}
+
+/* Hero background optimization */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

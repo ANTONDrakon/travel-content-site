@@ -11,6 +11,12 @@
 {% set en_alternate_url = country.slug + "/index.html" %}
 {% set canonical = "/" + lang + "/" + country.slug + "/index.html" %}
 
+{% block og_title %}{{ prep }}{{ cname_prep }} 2026 — {{ "Complete Guide | TravelHub" if lang == "en" else "полный путеводитель | TravelHub" }}{% endblock %}
+{% block og_description %}{{ prep }}{{ cname_prep }} 2026: {{ "best resorts, hotels, prices, seasons, attractions. Full guide." if lang == "en" else "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд." }}{% endblock %}
+{% block og_image_alt %}{{ cname_nom }} travel guide{% endblock %}
+{% block twitter_title %}{{ prep }}{{ cname_prep }} 2026 — TravelHub{% endblock %}
+{% block twitter_description %}{{ prep }}{{ cname_prep }} 2026: {{ "best resorts, hotels, prices, seasons, attractions." if lang == "en" else "лучшие курорты, отели, цены, сезоны, достопримечательности." }}{% endblock %}
+
 {% block content %}
 
 <!-- HERO -->
@@ -23,7 +29,7 @@
             <a href="#agent" class="btn-cta" style="font-size:16px;padding:14px 36px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
             {% if data %}
             <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);padding:8px 16px;border-radius:50px;">
-                <img src="{{ agent_photo }}" alt="TravelHub Expert" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;">
+                <img src="{{ agent_photo }}" alt="TravelHub Expert" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #fff;" loading="lazy">
                 <span style="color:#fff;font-size:14px;font-weight:500;">{{ "TravelHub Expert" if lang == "en" else "TravelHub — эксперт" }}<br><span style="font-size:12px;opacity:0.8;">{{ "Travel Guide Team" if lang == "en" else "Команда travel-гидов" }}</span></span>
             </div>
             {% endif %}
@@ -38,7 +44,7 @@
         {% set adv = data.advantages_en if lang == "en" else data.advantages_ru %}
         {% if data and adv %}
         {% for emoji, title, desc in adv %}
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:4px solid var(--vermillion);">
+        <div style="background:#fff;padding:28px;border-radius:16px;border-top:4px solid var(--teal);">
             <div style="font-size:36px;margin-bottom:12px;">{{ emoji }}</div>
             <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;color:var(--ink);">{{ title }}</h3>
             <p style="font-size:15px;color:var(--charcoal);line-height:1.65;">{{ desc }}</p>
@@ -95,7 +101,7 @@
     {% if data and seas %}
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;">
         {% for emoji, title, temp, desc in seas %}
-        <div style="background:#fff;padding:28px;border-radius:16px;border-top:3px solid var(--vermillion);">
+        <div style="background:#fff;padding:28px;border-radius:16px;border-top:3px solid var(--teal);">
             <div style="font-size:32px;margin-bottom:8px;">{{ emoji }}</div>
             <h3 style="font-size:17px;font-weight:700;margin-bottom:6px;">{{ title }}</h3>
             <p style="font-size:15px;color:var(--teal);font-weight:600;margin-bottom:10px;">{{ temp }}</p>
@@ -256,7 +262,7 @@
     <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,0.06);">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
             <div style="padding:40px;">
-                <img src="{{ root }}/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Travel Expert" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--teal);margin-bottom:12px;">
+                <img src="{{ root }}/assets/agent/photo_2026-06-06_00-51-06.webp" alt="Travel Expert" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid var(--teal);margin-bottom:12px;" loading="lazy">
                 <h3 style="font-size:20px;font-weight:700;margin-bottom:4px;color:var(--ink);">{{ "Your Travel Expert" if lang == "en" else "Ваш travel-эксперт" }}</h3>
                 <p style="font-size:14px;color:var(--meta);margin-bottom:16px;">{{ "Personal travel expert" if lang == "en" else "Персональный travel-эксперт" }}</p>
                 <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;">
@@ -280,5 +286,27 @@
         </div>
     </div>
 </section>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ 'Home' if lang == 'en' else 'Главная' }}",
+      "item": "{{ site_url }}/{{ lang }}/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ cname_nom }}",
+      "item": "{{ site_url }}/{{ lang }}/{{ country.slug }}/index.html"
+    }
+  ]
+}
+</script>
 
 {% endblock %}

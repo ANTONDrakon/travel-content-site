@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ "TravelHub — Expert Travel Guides 2026" if lang == "en" else "TravelHub — Экспертные путеводители 2026" }}{% endblock %}
-{% block meta_description %}{{ "Expert travel guides for 35 cities across 7 countries. Hotels, cheap flights, top attractions. Turkey, Thailand, Egypt, UAE, Indonesia, China, Maldives." if lang == "en" else "Экспертные гайды по 35 городам в 7 странах. Отели, дешёвые билеты, топ достопримечательностей. Турция, Таиланд, Египет, ОАЭ, Индонезия, Китай, Мальдивы." }}{% endblock %}
+{% block meta_description %}{{ "Expert travel guides for 50+ cities across 20 countries. Hotels, cheap flights, top attractions. Russia, Turkey, Thailand, Egypt, UAE, and more." if lang == "en" else "Экспертные гайды по 50+ городам в 20 странах. Отели, дешёвые билеты, топ достопримечательностей. Россия, Турция, Таиланд, Египет, ОАЭ и др." }}{% endblock %}
 
 {% block en_alt %}index.html{% endblock %}
 {% block ru_alt %}index.html{% endblock %}
@@ -16,7 +16,7 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>{{ "Your Dream Trip Starts Here" if lang == "en" else "Ваше путешествие начинается здесь" }}</h1>
-        <p>{{ "35 cities • 7 countries • Expert travel guides 2026" if lang == "en" else "35 городов • 7 стран • Экспертные путеводители 2026" }}</p>
+        <p>{{ "50+ cities • 20 countries • Expert travel guides 2026" if lang == "en" else "50+ городов • 20 стран • Экспертные путеводители 2026" }}</p>
         <div style="display:flex;gap:16px;justify-content:center;margin-top:32px;flex-wrap:wrap;">
             <a href="#agent-form" class="btn-cta" style="font-size:17px;padding:16px 40px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
             <a href="#destinations" class="nav-pill nav-pill-solid" style="font-size:16px;padding:14px 36px;background:rgba(255,255,255,0.2);color:#fff;border:2px solid rgba(255,255,255,0.5);">{{ "Browse guides" if lang == "en" else "Выбрать страну" }}</a>
@@ -39,13 +39,29 @@
             </div>
             <select name="destination" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;">
                 <option value="">{{ "Preferred destination" if lang == "en" else "Желаемое направление" }}</option>
-                <option value="turkey">{{ "Turkey" if lang == "en" else "Турция" }}</option>
-                <option value="thailand">{{ "Thailand" if lang == "en" else "Таиланд" }}</option>
-                <option value="egypt">{{ "Egypt" if lang == "en" else "Египет" }}</option>
-                <option value="uae">{{ "UAE" if lang == "en" else "ОАЭ" }}</option>
-                <option value="indonesia">{{ "Indonesia" if lang == "en" else "Индонезия" }}</option>
-                <option value="china">{{ "China (Hainan)" if lang == "en" else "Китай (Хайнань)" }}</option>
-                <option value="maldives">{{ "Maldives" if lang == "en" else "Мальдивы" }}</option>
+                <optgroup label="{{ 'Russia' if lang == 'en' else 'Россия' }}">
+                    <option value="russia">{{ "Russia" if lang == "en" else "Россия" }}</option>
+                    <option value="baikal">{{ "Lake Baikal" if lang == "en" else "Байкал" }}</option>
+                    <option value="altai">{{ "Altai" if lang == "en" else "Алтай" }}</option>
+                    <option value="karelia">{{ "Karelia" if lang == "en" else "Карелия" }}</option>
+                    <option value="dagestan">{{ "Dagestan" if lang == "en" else "Дагестан" }}</option>
+                    <option value="kamchatka">{{ "Kamchatka" if lang == "en" else "Камчатка" }}</option>
+                </optgroup>
+                <optgroup label="{{ 'International' if lang == 'en' else 'Зарубежные' }}">
+                    <option value="turkey">{{ "Turkey" if lang == "en" else "Турция" }}</option>
+                    <option value="thailand">{{ "Thailand" if lang == "en" else "Таиланд" }}</option>
+                    <option value="egypt">{{ "Egypt" if lang == "en" else "Египет" }}</option>
+                    <option value="uae">{{ "UAE" if lang == "en" else "ОАЭ" }}</option>
+                    <option value="indonesia">{{ "Indonesia" if lang == "en" else "Индонезия" }}</option>
+                    <option value="china">{{ "China" if lang == "en" else "Китай" }}</option>
+                    <option value="maldives">{{ "Maldives" if lang == "en" else "Мальдивы" }}</option>
+                    <option value="sri-lanka">{{ "Sri Lanka" if lang == "en" else "Шри-Ланка" }}</option>
+                    <option value="georgia">{{ "Georgia" if lang == "en" else "Грузия" }}</option>
+                    <option value="vietnam">{{ "Vietnam" if lang == "en" else "Вьетнам" }}</option>
+                    <option value="montenegro">{{ "Montenegro" if lang == "en" else "Черногория" }}</option>
+                    <option value="cyprus">{{ "Cyprus" if lang == "en" else "Кипр" }}</option>
+                    <option value="oman">{{ "Oman" if lang == "en" else "Оман" }}</option>
+                </optgroup>
                 <option value="other">{{ "Other" if lang == "en" else "Другое" }}</option>
             </select>
             <textarea name="message" rows="2" placeholder="{{ 'Your wishes, dates, budget...' if lang == 'en' else 'Пожелания, даты, бюджет...' }}" style="background:var(--bg);border:none;padding:14px 16px;border-radius:12px;font-size:15px;font-family:Inter,sans-serif;width:100%;margin-top:12px;"></textarea>

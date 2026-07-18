@@ -326,8 +326,21 @@ env.globals["root"] = _env_root
 env.globals["formspree_id"] = "xnjyjnnd"
 env.globals["enumerate"] = enumerate
 
+# Analytics configuration
+env.globals["analytics_enabled"] = os.getenv("ANALYTICS_ENABLED", "true").lower() == "true"
+env.globals["yandex_metrika_id"] = os.getenv("YANDEX_METRIKA_ID", None)
+env.globals["google_analytics_id"] = os.getenv("GOOGLE_ANALYTICS_ID", None)
+
 
 COUNTRY_IMAGES = {
+    "russia": "https://images.unsplash.com/photo-1513326738677-b964603b136d?w=1200&q=80",
+    "baikal": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=1200&q=80",
+    "altai": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+    "karelia": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&q=80",
+    "dagestan": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?w=1200&q=80",
+    "kamchatka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
+    "mineral-vody": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
+    "vladivostok": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=80",
     "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
     "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
     "egypt": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&q=80",
@@ -335,6 +348,12 @@ COUNTRY_IMAGES = {
     "indonesia": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&q=80",
     "china": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&q=80",
     "maldives": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
+    "sri-lanka": "https://images.unsplash.com/photo-1586526399017-e6d8cd50e1f7?w=1200&q=80",
+    "montenegro": "https://images.unsplash.com/photo-1555990793-da11153b2473?w=1200&q=80",
+    "vietnam": "https://images.unsplash.com/photo-1528127269322-539801943592?w=1200&q=80",
+    "georgia": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=80",
+    "cyprus": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
+    "oman": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1200&q=80",
 }
 
 CITY_IMAGES = {
@@ -400,8 +419,12 @@ def get_country_image(country_slug):
 
 def get_country_emoji(slug):
     emojis = {
+        "russia": "🇷🇺", "baikal": "💎", "altai": "🏔", "karelia": "🌲",
+        "dagestan": "⛰️", "kamchatka": "🌋", "mineral-vody": "♨️", "vladivostok": "⚓",
         "turkey": "🇹🇷", "thailand": "🇹🇭", "egypt": "🇪🇬",
         "uae": "🇦🇪", "indonesia": "🇮🇩", "china": "🇨🇳", "maldives": "🇲🇻",
+        "sri-lanka": "🇱🇰", "montenegro": "🇲🇪", "vietnam": "🇻🇳",
+        "georgia": "🇬🇪", "cyprus": "🇨🇾", "oman": "🇴🇲",
     }
     return emojis.get(slug, "🌍")
 
@@ -559,6 +582,56 @@ def build_destination_page(country_slug, lang):
         "hulhumale_en": "Artificial island: wide beaches, new airport, modern.",
         "thulusdhoo_en": "Surf island: waves, coconut factory, authentic island life.",
         "dhigurah_en": "Long sandbank island: whale sharks, diving, total seclusion.",
+        # Russian destinations
+        "moscow": "Столица России: Кремль, Красная площадь, Третьяковка. Сердце страны.",
+        "saint-petersburg": "Северная Венеция: Эрмитаж, белые ночи, дворцы и разводные мосты.",
+        "sochi": "Курортное сердце Черноморья: пляжи, Олимпиада, Красная Поляна.",
+        "kaliningrad": "Русская Европа: янтарь, форты, балтийские пляжи.",
+        "kazan": "Столица Татарстана: Кремль, мечеть Кул-Шариф, восточный колорит.",
+        "irkutsk": "Врата к Байкалу: деревянные дома, озёра, тайга.",
+        "listvyanka": "Посёлок на берегу Байкала: музей озера, промысел, свежая рыба.",
+        "olkhon": "Остров в сердце Байкала: шаманские места, скалы, пляжи.",
+        "gorno-altaysk": "Горная столица Алтая: природа, горы, реки.",
+        "chemyal": "Живописное ущелье на Чемале: Аккемский водопад, мосты.",
+        "akkem": "Лагерь у подножия Белухи: треккинг, горные озёра.",
+        "petrozavodsk": "Столица Карелии: озёра, национальные парки, традиции.",
+        "sortavala": "Город у Ладожского озера: крепость, парки, острова.",
+        "kizhi": "Остров-музей: Преображенская церковь, деревянное зодчество.",
+        "makhachkala": "Столица Дагестана: горы, базары, гостеприимство.",
+        "derbent": "Древнейший город России: Нарын-кала, старый город.",
+        "kizlyar": "Ворота Дагестана: виноделие, казачья культура.",
+        "petropavlovsk-kamchatsky": "Столица Камчатки: вулканы, гейзеры, медведи.",
+        "paratunka": "Курорт с горячими источниками: термальные ванны.",
+        "pyatigorsk": "Столица КМВ: серные источники, Лермонтовские места.",
+        "kislovodsk": "Город-курорт: Нарзанная галерея, долина роз.",
+        "essentuki": "Минеральные воды: питьевые источники, парки.",
+        "vladivostok-city": "Порт на Тихом океане: мосты, бухты, Азиатско-Тихоокеанская конференция.",
+        "russky-island": "Остров у Владивостока: мост, пляжи, парки.",
+        # English
+        "moscow_en": "Capital of Russia: Kremlin, Red Square, Tretyakov Gallery. Heart of the country.",
+        "saint-petersburg_en": "Northern Venice: Hermitage, White Nights, palaces and drawbridges.",
+        "sochi_en": "Black Sea resort: beaches, Olympics, Krasnaya Polyana skiing.",
+        "kaliningrad_en": "Russian Europe: amber, forts, Baltic beaches.",
+        "kazan_en": "Capital of Tatarstan: Kremlin, Kul-Sharif mosque, Eastern flair.",
+        "irkutsk_en": "Gateway to Baikal: wooden houses, lakes, taiga.",
+        "listvyanka_en": "Village on Lake Baikal: museum, fishing, fresh omul.",
+        "olkhon_en": "Island in the heart of Baikal: shamanic sites, cliffs, beaches.",
+        "gorno-altaysk_en": "Mountain capital of Altai: nature, rivers, peaks.",
+        "chemyal_en": "Scenic Chemal gorge: Akkem waterfall, bridges.",
+        "akkem_en": "Camp at the foot of Belukha: trekking, mountain lakes.",
+        "petrozavodsk_en": "Capital of Karelia: lakes, national parks, traditions.",
+        "sortavala_en": "City by Lake Ladoga: fortress, parks, islands.",
+        "kizhi_en": "Museum island: Transfiguration Church, wooden architecture.",
+        "makhachkala_en": "Capital of Dagestan: mountains, bazaars, hospitality.",
+        "derbent_en": "Russia's oldest city: Naryn-Kala fortress, old town.",
+        "kizlyar_en": "Gateway to Dagestan: winemaking, Cossack culture.",
+        "petropavlovsk-kamchatsky_en": "Capital of Kamchatka: volcanoes, geysers, bears.",
+        "paratunka_en": "Resort with hot springs: thermal baths.",
+        "pyatigorsk_en": "Capital of Caucasian Mineral Waters: sulfur springs, Lermontov heritage.",
+        "kislovodsk_en": "Spa city: Narzan gallery, rose valley.",
+        "essentuki_en": "Mineral waters: drinking springs, parks.",
+        "vladivostok-city_en": "Port on the Pacific: bridges, bays, APEC venue.",
+        "russky-island_en": "Island near Vladivostok: bridge, beaches, parks.",
     }
 
     for city_slug in cities_with_images:
@@ -568,6 +641,14 @@ def build_destination_page(country_slug, lang):
     template = env.get_template("destination-rich.html")
 
     og_images = {
+        "russia": "https://images.unsplash.com/photo-1513326738677-b964603b136d?w=1200&q=80",
+        "baikal": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=1200&q=80",
+        "altai": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+        "karelia": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&q=80",
+        "dagestan": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?w=1200&q=80",
+        "kamchatka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
+        "mineral-vody": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
+        "vladivostok": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=80",
         "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
         "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
         "egypt": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&q=80",
@@ -659,6 +740,14 @@ def build_article_page(country_slug, city_slug, content_type, lang):
 
     # Country-specific OG image
     _og_map = {
+        "russia": "https://images.unsplash.com/photo-1513326738677-b964603b136d?w=1200&q=80",
+        "baikal": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=1200&q=80",
+        "altai": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+        "karelia": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&q=80",
+        "dagestan": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?w=1200&q=80",
+        "kamchatka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
+        "mineral-vody": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
+        "vladivostok": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=80",
         "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
         "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
         "egypt": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&q=80",
@@ -773,9 +862,52 @@ def build_index_redirect():
     (OUTPUT_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
+def build_about_page(lang):
+    template = env.get_template("about.html")
+    html = template.render(lang=lang, breadcrumbs=[
+        {"label": "Home" if lang == "en" else "Главная", "url": f"/{lang}/index.html"},
+        {"label": "About" if lang == "en" else "О нас", "url": f"/{lang}/about.html"},
+    ])
+    out = OUTPUT_DIR / lang / "about.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(html, encoding="utf-8")
+    print(f"  Built: {out}")
+
+
+def build_contacts_page(lang):
+    template = env.get_template("contacts.html")
+    html = template.render(lang=lang, breadcrumbs=[
+        {"label": "Home" if lang == "en" else "Главная", "url": f"/{lang}/index.html"},
+        {"label": "Contacts" if lang == "en" else "Контакты", "url": f"/{lang}/contacts.html"},
+    ])
+    out = OUTPUT_DIR / lang / "contacts.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(html, encoding="utf-8")
+    print(f"  Built: {out}")
+
+
 def build_all():
     print("\n=== Building site ===\n")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Build Tailwind CSS
+    print("Building Tailwind CSS...")
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["npm", "run", "tailwind:build"],
+            cwd=str(Path(__file__).parent),
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+        if result.returncode == 0:
+            print("  Tailwind CSS built successfully")
+        else:
+            print(f"  Warning: Tailwind build failed: {result.stderr}")
+    except Exception as e:
+        print(f"  Warning: Could not build Tailwind CSS: {e}")
+        print("  Using existing CSS file")
 
     from config.destinations import DESTINATIONS
     from config.prompts import CONTENT_TYPES
@@ -783,6 +915,10 @@ def build_all():
     for lang in ["ru", "en"]:
         print(f"\n[{lang.upper()}] Building home page...")
         build_home_page(lang)
+        print(f"\n[{lang.upper()}] Building about page...")
+        build_about_page(lang)
+        print(f"\n[{lang.upper()}] Building contacts page...")
+        build_contacts_page(lang)
 
     for country_slug in DESTINATIONS:
         for lang in ["ru", "en"]:
@@ -793,6 +929,19 @@ def build_all():
                     build_article_page(country_slug, city_slug, ct_slug, lang)
 
     build_index_redirect()
+    
+    # Minify HTML files
+    print("\nMinifying HTML files...")
+    try:
+        from minify_html import minify_directory
+        results = minify_directory(OUTPUT_DIR, ['.html'])
+        total_original = sum(r.get('original_size', 0) for r in results)
+        total_minified = sum(r.get('minified_size', 0) for r in results)
+        reduction = round((1 - total_minified / total_original) * 100, 1) if total_original > 0 else 0
+        print(f"  Minified {len(results)} files: {total_original:,} → {total_minified:,} bytes ({reduction}% reduction)")
+    except Exception as e:
+        print(f"  Warning: HTML minification failed: {e}")
+    
     print("\n=== Site built ===\n")
 
 
