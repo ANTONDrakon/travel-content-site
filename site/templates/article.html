@@ -69,6 +69,13 @@
             {{ article.body | safe }}
         </div>
 
+        <!-- ═══════════════ TRAVEL ASSISTANCE CARD ═══════════════ -->
+        {% if travel_assist %}
+        <div style="margin-top:var(--sp-10);">
+            {{ travel_assist | safe }}
+        </div>
+        {% endif %}
+
         <!-- ═══════════════ FAQ ═══════════════ -->
         {% if faq %}
         <div style="margin-top:var(--sp-16);">

@@ -806,6 +806,100 @@ def build_destination_page(country_slug, lang):
     print(f"  Built: {out}")
 
 
+def _build_travel_assist_card(content_type, city_name, lang, country_slug):
+    """Generate Travel Assistance Card HTML based on article content type.
+    Uses affiliate links from config/affiliates.py."""
+    from config.affiliates import hotels_link, flights_link, tours_link, insurance_link
+
+    city_slug = city_name.lower().replace(" ", "-")
+
+    # Get airport code for flights
+    from config.destinations import DESTINATIONS
+    destination_code = "MOW"
+    country = DESTINATIONS.get(country_slug, {})
+    for c_slug, city_data in country.get("cities", {}).items():
+        if city_data.get("name_en", "").lower() == city_name.lower():
+            codes = city_data.get("airport_codes", [])
+            if codes:
+                destination_code = codes[0]
+            break
+
+    if lang == "ru":
+        title = "Помощь с планированием поездки"
+        desc = "Если вы планируете поездку в этот регион, вы можете самостоятельно сравнить предложения у проверенных сервисов или оставить заявку на индивидуальный подбор тура."
+        btn_tour = "Подобрать тур"
+        btn_compare = "Сравнить предложения"
+        note = "Ссылки ведут на проверенные сервисы с актуальными ценами."
+    else:
+        title = "Help planning your trip"
+        desc = "If you're planning a trip to this region, you can compare offers from trusted services or leave a request for personalized tour selection."
+        btn_tour = "Plan a trip"
+        btn_compare = "Compare offers"
+        note = "Links lead to trusted services with current prices."
+
+    # Choose relevant services based on content type
+    buttons = []
+
+    if content_type in ("guide", "hotels"):
+        buttons.append(("🏨 " + ("Забронировать отель" if lang == "ru" else "Book a hotel"),
+                        hotels_link(city_slug)))
+        buttons.append(("✈ " + ("Найти авиабилеты" if lang == "ru" else "Find flights"),
+                        flights_link(destination=destination_code)))
+        buttons.append(("🚕 " + ("Заказать трансфер" if lang == "ru" else "Book transfer"),
+                        "https://tp.media/click?shmarker=736226&promo_id=3782&source_type=link&type=click&campaign_id=112&trs=kiwitaxi"))
+        buttons.append(("📱 " + ("Купить eSIM" if lang == "ru" else "Get eSIM"),
+                        "https://tp.media/click?shmarker=736226&promo_id=3803&source_type=link&type=click&campaign_id=118&trs=airalo"))
+
+    elif content_type == "flights":
+        buttons.append(("✈ " + ("Найти авиабилеты" if lang == "ru" else "Find flights"),
+                        flights_link(destination=destination_code)))
+        buttons.append(("🏨 " + ("Забронировать отель" if lang == "ru" else "Book a hotel"),
+                        hotels_link(city_slug)))
+        buttons.append(("🚌 " + ("Сравнить рейсы" if lang == "ru" else "Compare routes"),
+                        "https://tp.media/click?shmarker=736226&promo_id=3799&source_type=link&type=click&campaign_id=114&trs=kiwicom"))
+
+    elif content_type == "attractions":
+        buttons.append(("🎟 " + ("Забронировать экскурсии" if lang == "ru" else "Book excursions"),
+                        "https://tp.media/click?shmarker=736226&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide"))
+        buttons.append(("🏨 " + ("Забронировать отель" if lang == "ru" else "Book a hotel"),
+                        hotels_link(city_slug)))
+        buttons.append(("🚕 " + ("Заказать трансфер" if lang == "ru" else "Book transfer"),
+                        "https://tp.media/click?shmarker=736226&promo_id=3782&source_type=link&type=click&campaign_id=112&trs=kiwitaxi"))
+
+    elif content_type == "seasons":
+        buttons.append(("🏨 " + ("Забронировать отель" if lang == "ru" else "Book a hotel"),
+                        hotels_link(city_slug)))
+        buttons.append(("✈ " + ("Найти авиабилеты" if lang == "ru" else "Find flights"),
+                        flights_link(destination=destination_code)))
+        buttons.append(("🗺 " + ("Подобрать тур" if lang == "ru" else "Find a tour"),
+                        tours_link(city_name)))
+
+    # Always add tour request button
+    buttons.append(("🎯 " + btn_tour, "#agent-form"))
+
+    # Build HTML
+    actions_html = ""
+    for label, url in buttons:
+        if url.startswith("#"):
+            actions_html += f'<a href="{url}" class="travel-assist-btn travel-assist-btn-primary">{label}</a>\n'
+        else:
+            actions_html += f'<a href="{url}" target="_blank" rel="nofollow sponsored" class="travel-assist-btn travel-assist-btn-outline">{label}</a>\n'
+
+    card_html = f'''<div class="travel-assist">
+    <div class="travel-assist-header">
+        <div class="travel-assist-icon">✈️</div>
+        <div class="travel-assist-title">{title}</div>
+    </div>
+    <p class="travel-assist-desc">{desc}</p>
+    <div class="travel-assist-actions">
+        {actions_html}
+    </div>
+    <p class="travel-assist-note">{note}</p>
+</div>'''
+
+    return card_html
+
+
 def build_article_page(country_slug, city_slug, content_type, lang):
     from config.destinations import DESTINATIONS
     from agents.seo_optimizer import get_url_slug, build_seo_meta, generate_schema_article, generate_schema_faq, generate_faq
@@ -974,6 +1068,9 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     date_display_ru = f"{month_ru} {today.year}"
     date_display_en = f"{month_en} {today.year}"
 
+    # Generate Travel Assistance Card
+    travel_assist = _build_travel_assist_card(content_type, city_name, lang, country_slug)
+
     template = env.get_template("article.html")
     html = template.render(
         lang=lang,
@@ -997,6 +1094,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         date_modified=date_iso,
         date_display_ru=date_display_ru,
         date_display_en=date_display_en,
+        travel_assist=travel_assist,
     )
 
     out = OUTPUT_DIR / lang / country_slug / f"{content_type_slug}.html"
