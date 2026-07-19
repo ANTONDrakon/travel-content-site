@@ -395,9 +395,10 @@ def verify_names(country_slug, body):
     if not dest:
         return issues
 
-    for city_slug, city in dest.get("cities", {}).items():
-        name_ru = city.get("name_ru", "")
-        name_en = city.get("name_en", "")
+    for region in dest.get("regions", {}).values():
+        for city_slug, city in region.get("cities", {}).items():
+            name_ru = city.get("name_ru", "")
+            name_en = city.get("name_en", "")
 
         # Check if city name appears (case-insensitive)
         if name_en.lower() not in body.lower() and name_ru.lower() not in body.lower():

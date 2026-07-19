@@ -349,7 +349,6 @@ DESTINATIONS_LIST = [
     {"slug": "mineral-vody", "name_ru": "Кавказские Минеральные Воды", "name_en": "Caucasian Mineral Waters", "group": "russia"},
     {"slug": "kavkaz", "name_ru": "Кавказ", "name_en": "Caucasus", "group": "russia"},
     {"slug": "kaliningrad", "name_ru": "Калининград", "name_en": "Kaliningrad", "group": "russia"},
-    {"slug": "kamchatka", "name_ru": "Камчатка", "name_en": "Kamchatka", "group": "russia"},
     {"slug": "vladivostok", "name_ru": "Владивосток", "name_en": "Vladivostok", "group": "russia"},
     # International
     {"slug": "turkey", "name_ru": "Турция", "name_en": "Turkey", "group": "international"},
@@ -382,7 +381,6 @@ COUNTRY_IMAGES = {
     "mineral-vody": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
     "kavkaz": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
     "kaliningrad": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80",
-    "kamchatka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
     "vladivostok": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=80",
     "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
     "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
@@ -509,9 +507,6 @@ CITY_IMAGES = {
     "kaliningrad-city": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
     "zelenogradsk": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
     "svetlogorsk": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
-    # Kamchatka
-    "petropavlovsk-kamchatsky": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
-    "paratunka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
 }
 
 
@@ -545,14 +540,24 @@ def get_country_image(country_slug):
 
 def get_country_emoji(slug):
     emojis = {
-        "russia": "🇷🇺", "baikal": "💎", "altai": "🏔", "karelia": "🌲",
-        "dagestan": "⛰️", "kamchatka": "🌋", "mineral-vody": "♨️", "vladivostok": "⚓",
-        "turkey": "🇹🇷", "thailand": "🇹🇭", "egypt": "🇪🇬",
+        "russia": "🇷🇺", "turkey": "🇹🇷", "thailand": "🇹🇭", "egypt": "🇪🇬",
         "uae": "🇦🇪", "indonesia": "🇮🇩", "china": "🇨🇳", "maldives": "🇲🇻",
         "sri-lanka": "🇱🇰", "montenegro": "🇲🇪", "vietnam": "🇻🇳",
         "georgia": "🇬🇪", "cyprus": "🇨🇾", "oman": "🇴🇲",
     }
     return emojis.get(slug, "🌍")
+
+
+def find_city_region(country_slug, city_slug):
+    """Find which region a city belongs to. Returns (region_slug, region) or (None, None)."""
+    from config.destinations import DESTINATIONS
+    country = DESTINATIONS.get(country_slug)
+    if not country:
+        return None, None
+    for region_slug, region in country.get("regions", {}).items():
+        if city_slug in region.get("cities", {}):
+            return region_slug, region
+    return None, None
 
 
 def build_home_page(lang):
@@ -731,6 +736,73 @@ def build_destination_page(country_slug, lang):
     print(f"  Built: {out}")
 
 
+def build_region_page(country_slug, region_slug, lang):
+    """Build a page for a region showing its cities."""
+    from config.destinations import DESTINATIONS
+    from config.country_data import COUNTRY_DATA
+
+    country = DESTINATIONS.get(country_slug)
+    if not country:
+        return
+
+    region = country.get("regions", {}).get(region_slug)
+    if not region:
+        return
+
+    cname_nom = country["name_en"] if lang == "en" else country["name_ru"]
+    rname = region["name_en"] if lang == "en" else region["name_ru"]
+
+    # Build city cards
+    cities_data = []
+    for city_slug, city in region.get("cities", {}).items():
+        article_count = 5  # 5 content types per city
+        cities_data.append({
+            "name": city["name_en"] if lang == "en" else city["name_ru"],
+            "slug": city_slug,
+            "image": get_city_image(city_slug),
+            "has_articles": True,
+            "article_count": article_count,
+        })
+
+    # Build facts (from country advantages, first 4)
+    country_data = COUNTRY_DATA.get(country_slug, {})
+    adv = country_data.get("advantages_en" if lang == "en" else "advantages_ru", [])
+    facts = adv[:4] if adv else []
+
+    # Build FAQs from country data
+    faqs = country_data.get("faq_en" if lang == "en" else "faq_ru", [])
+
+    # Region description
+    description = f"{rname} — {cname_nom}. " + (
+        f"{len(region.get('cities', {}))} городов и курортов." if lang == "ru"
+        else f"{len(region.get('cities', {}))} cities and resorts."
+    )
+
+    template = env.get_template("region.html")
+    html = template.render(
+        lang=lang,
+        country=country,
+        region=region,
+        rname=rname,
+        hero_image=get_country_image(country_slug),
+        description=description,
+        facts=facts,
+        cities=cities_data,
+        faqs=faqs,
+        alternate_url=f"{country_slug}/{region_slug}/index.html",
+        breadcrumbs=[
+            {"label": "Home" if lang == "en" else "Главная", "url": f"/{lang}/index.html"},
+            {"label": cname_nom, "url": f"/{lang}/{country_slug}/index.html"},
+            {"label": rname, "url": f"/{lang}/{country_slug}/{region_slug}/index.html"},
+        ],
+    )
+
+    out = OUTPUT_DIR / lang / country_slug / region_slug / "index.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(html, encoding="utf-8")
+    print(f"  Built: {out}")
+
+
 def _build_travel_assist_card(content_type, city_name, lang, country_slug):
     """Generate Travel Assistance Card HTML based on article content type."""
     from config.affiliates import hotels_link, flights_link, tours_link
@@ -885,11 +957,19 @@ def build_article_page(country_slug, city_slug, content_type, lang):
 
     city_name_for_breadcrumb = city["name_ru"] if lang == "ru" else city["name_en"]
 
+    # Find region for breadcrumbs
+    region_slug, region = find_city_region(country_slug, city_slug)
+    region_name = ""
+    if region:
+        region_name = region["name_ru"] if lang == "ru" else region["name_en"]
+
     breadcrumbs = [
         {"label": "Home" if lang == "en" else "Главная", "url": f"/{lang}/index.html"},
         {"label": country_name, "url": f"/{lang}/{country_slug}/index.html"},
-        {"label": city_name_for_breadcrumb, "url": f"/{lang}/{country_slug}/{content_type_slug}.html"},
     ]
+    if region_slug:
+        breadcrumbs.append({"label": region_name, "url": f"/{lang}/{country_slug}/{region_slug}/index.html"})
+    breadcrumbs.append({"label": city_name_for_breadcrumb, "url": f"/{lang}/{country_slug}/{content_type_slug}.html"})
 
     from agents.seo_optimizer import generate_schema_breadcrumbs
     schema_breadcrumbs = generate_schema_breadcrumbs(breadcrumbs)
@@ -1068,8 +1148,11 @@ def build_all():
         for lang in ["ru", "en"]:
             print(f"\n[{lang.upper()}] Building {country_slug}...")
             build_destination_page(country_slug, lang)
-            # Build articles for all cities in all regions
+            # Build region pages
             regions = DESTINATIONS[country_slug].get("regions", {})
+            for r_slug in regions:
+                build_region_page(country_slug, r_slug, lang)
+            # Build articles for all cities in all regions
             for region in regions.values():
                 for city_slug in region.get("cities", {}):
                     for ct_slug in CONTENT_TYPES:

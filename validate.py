@@ -46,16 +46,18 @@ def check_broken_imgs():
     all_slugs = set()
     for cs, country in DESTINATIONS.items():
         all_slugs.add(cs)
-        for city_slug in country["cities"]:
-            all_slugs.add(city_slug)
+        for region in country.get("regions", {}).values():
+            for city_slug in region.get("cities", {}):
+                all_slugs.add(city_slug)
 
     missing = []
     for cs in DESTINATIONS:
         if cs not in COUNTRY_IMAGES:
             missing.append(f"  MISSING country image: {cs}")
-        for city_slug in DESTINATIONS[cs]["cities"]:
-            if city_slug not in CITY_IMAGES:
-                missing.append(f"  MISSING city image: {city_slug}")
+        for region in DESTINATIONS[cs].get("regions", {}).values():
+            for city_slug in region.get("cities", {}):
+                if city_slug not in CITY_IMAGES:
+                    missing.append(f"  MISSING city image: {city_slug}")
 
     if missing:
         print("\n=== Missing Images ===\n" + "\n".join(missing))

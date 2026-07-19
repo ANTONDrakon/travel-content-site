@@ -83,6 +83,12 @@ def generate_article(country_slug, city_slug, content_type, lang):
 
     city = destination["cities"].get(city_slug)
     if not city:
+        # Try finding city in regions
+        for region in destination.get("regions", {}).values():
+            city = region.get("cities", {}).get(city_slug)
+            if city:
+                break
+    if not city:
         print(f"  Unknown city: {city_slug}")
         return None
 
@@ -127,12 +133,18 @@ def generate_country(country_slug, langs):
         print(f"Unknown country: {country_slug}")
         return
 
+    # Count cities across regions
+    all_city_slugs = []
+    for region in destination.get("regions", {}).values():
+        for cslug in region.get("cities", {}):
+            all_city_slugs.append(cslug)
+
     print(f"\n{'='*60}")
     print(f"Country: {destination['name_ru']} / {destination['name_en']}")
-    print(f"Cities: {len(destination['cities'])}")
+    print(f"Cities: {len(all_city_slugs)}")
     print(f"{'='*60}")
 
-    for city_slug in destination["cities"]:
+    for city_slug in all_city_slugs:
         generate_city(country_slug, city_slug, langs)
 
 
@@ -217,8 +229,10 @@ def main():
         print("\nAvailable destinations:\n")
         for slug, dest in DESTINATIONS.items():
             print(f"  {slug} — {dest['name_ru']} / {dest['name_en']}")
-            for cslug, city in dest["cities"].items():
-                print(f"    {cslug} — {city['name_ru']} / {city['name_en']}")
+            for rslug, region in dest.get("regions", {}).items():
+                print(f"    [{rslug}] {region['name_ru']} / {region['name_en']}")
+                for cslug, city in region.get("cities", {}).items():
+                    print(f"      {cslug} — {city['name_ru']} / {city['name_en']}")
         return
 
     elif args.command == "generate":

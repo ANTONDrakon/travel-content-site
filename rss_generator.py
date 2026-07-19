@@ -20,34 +20,35 @@ def generate_rss(lang="en"):
     items = []
 
     for country_slug, country in DESTINATIONS.items():
-        for city_slug, city_data in country["cities"].items():
-            for ct_slug, ct_info in CONTENT_TYPES.items():
-                page_slug = get_url_slug(ct_slug, city_slug, lang)
-                url = f"{SITE_URL}/{lang}/{country_slug}/{page_slug}.html"
+        for region in country.get("regions", {}).values():
+            for city_slug, city_data in region.get("cities", {}).items():
+                for ct_slug, ct_info in CONTENT_TYPES.items():
+                    page_slug = get_url_slug(ct_slug, city_slug, lang)
+                    url = f"{SITE_URL}/{lang}/{country_slug}/{page_slug}.html"
 
-                city_name = city_data["name_en"] if lang == "en" else city_data["name_ru"]
-                country_name = country["name_en"] if lang == "en" else country["name_ru"]
-                category = ct_info["category_en"] if lang == "en" else ct_info["category_ru"]
+                    city_name = city_data["name_en"] if lang == "en" else city_data["name_ru"]
+                    country_name = country["name_en"] if lang == "en" else country["name_ru"]
+                    category = ct_info["category_en"] if lang == "en" else ct_info["category_ru"]
 
-                title_templates = {
-                    "guide": {"en": f"{city_name} Travel Guide 2026", "ru": f"Путеводитель по {city_name} 2026"},
-                    "hotels": {"en": f"Best Hotels in {city_name} 2026", "ru": f"Лучшие отели {city_name} 2026"},
-                    "flights": {"en": f"Cheap Flights to {city_name} 2026", "ru": f"Дешёвые билеты в {city_name} 2026"},
-                    "attractions": {"en": f"Top Things to Do in {city_name} 2026", "ru": f"Топ мест {city_name} 2026"},
-                    "seasons": {"en": f"Best Time to Visit {city_name} 2026", "ru": f"Когда ехать в {city_name} 2026"},
-                }
+                    title_templates = {
+                        "guide": {"en": f"{city_name} Travel Guide 2026", "ru": f"Путеводитель по {city_name} 2026"},
+                        "hotels": {"en": f"Best Hotels in {city_name} 2026", "ru": f"Лучшие отели {city_name} 2026"},
+                        "flights": {"en": f"Cheap Flights to {city_name} 2026", "ru": f"Дешёвые билеты в {city_name} 2026"},
+                        "attractions": {"en": f"Top Things to Do in {city_name} 2026", "ru": f"Топ мест {city_name} 2026"},
+                        "seasons": {"en": f"Best Time to Visit {city_name} 2026", "ru": f"Когда ехать в {city_name} 2026"},
+                    }
 
-                title = title_templates.get(ct_slug, {}).get(lang, f"{city_name} {category} 2026")
-                description = f"{category}: {city_name}, {country_name}. {title}"
+                    title = title_templates.get(ct_slug, {}).get(lang, f"{city_name} {category} 2026")
+                    description = f"{category}: {city_name}, {country_name}. {title}"
 
-                items.append({
-                    "title": title,
-                    "link": url,
-                    "description": description,
-                    "pubDate": TODAY,
-                    "category": category,
-                    "guid": url,
-                })
+                    items.append({
+                        "title": title,
+                        "link": url,
+                        "description": description,
+                        "pubDate": TODAY,
+                        "category": category,
+                        "guid": url,
+                    })
 
     # Build RSS XML
     lines = ['<?xml version="1.0" encoding="UTF-8"?>']

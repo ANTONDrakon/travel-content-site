@@ -1112,19 +1112,6 @@ COUNTRY_DATA = {
     },
 }
 
-AGENT_PHOTO = "/assets/agent/photo_2026-06-06_00-51-06.webp"
-AGENT_PHOTOS = [
-    "/assets/agent/photo_2026-06-06_00-51-06.webp",
-    "/assets/agent/photo_2026-06-06_00-51-10.webp",
-    "/assets/agent/photo_2026-06-06_00-51-17.webp",
-    "/assets/agent/photo_2026-06-06_00-51-44.webp",
-    "/assets/agent/photo_2026-06-06_00-51-49.webp",
-    "/assets/agent/photo_2026-06-06_00-51-53.webp",
-    "/assets/agent/photo_2026-06-06_00-51-58.webp",
-    "/assets/agent/photo_2026-06-06_00-52-01.webp",
-    "/assets/agent/photo_2026-06-06_00-52-05.webp",
-]
-
 AGENT_NAME = "TravelHub Experts"
 AGENT_NAME_EN = "TravelHub Experts"
 AGENT_EMAIL = "i@turkov-1.ru"

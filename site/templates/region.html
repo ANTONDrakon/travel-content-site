@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% set cname_prep = country.name_en if lang == "en" else country.name_ru_prepositional %}
+{% set cname_nom = country.name_en if lang == "en" else country.name_ru %}
+{% set rname = region.name_en if lang == "en" else region.name_ru %}
+{% block title %}{{ rname }} {{ "— полный путеводитель 2026" if lang == "ru" else "— travel guide 2026" }} | TravelHub{% endblock %}
+{% block meta_description %}{{ rname }}: {{ "города, курорты, достопримечательности, советы." if lang == "ru" else "cities, resorts, attractions, tips." }}{% endblock %}
+
+{% block en_alt %}{{ country.slug }}/{{ region.slug }}/index.html{% endblock %}
+{% block ru_alt %}{{ country.slug }}/{{ region.slug }}/index.html{% endblock %}
+{% set canonical = "/" + lang + "/" + country.slug + "/" + region.slug + "/index.html" %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero" style="background-image:url('{{ hero_image }}');">
+    <div class="hero-content">
+        <p class="section-eyebrow" style="color:rgba(255,255,255,0.7);">{{ cname_nom }}</p>
+        <h1 class="display-l">{{ rname }}</h1>
+        <p class="hero-subtitle" style="max-width:600px;">{{ description }}</p>
+        <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
+            <a href="#cities" class="btn btn-white btn-lg">{{ "Города" if lang == "ru" else "Cities" }}</a>
+            <a href="#agent" class="btn btn-white btn-lg" style="background:rgba(255,255,255,0.1);">{{ "Помощь с планированием" if lang == "ru" else "Get help planning" }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- QUICK FACTS -->
+<section class="section-sm" style="background:var(--bg);">
+    <div class="container">
+        <div class="quick-facts">
+            {% if facts %}
+            {% for emoji, title, desc in facts[:4] %}
+            <div class="quick-fact reveal">
+                <div style="font-size:28px;margin-bottom:var(--sp-2);">{{ emoji }}</div>
+                <div class="quick-fact-value">{{ title }}</div>
+                <div class="quick-fact-label">{{ desc[:50] }}{% if desc|length > 50 %}...{% endif %}</div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- CITIES -->
+<section class="section" style="background:var(--surface);" id="cities">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Города" if lang == "ru" else "Cities" }}</p>
+            <h2>{{ "Города региона " if lang == "ru" else "Cities in " }}{{ rname }}</h2>
+            <p>{{ "Подробные путеводители по каждому городу." if lang == "ru" else "Detailed guides for each city." }}</p>
+        </div>
+        <div class="grid grid-3">
+            {% for city in cities %}
+            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city.slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card reveal">
+                <div class="card-img">
+                    <img src="{{ city.image }}" alt="{{ city.name }}" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ city.name }}</h4>
+                    <div class="card-meta" style="margin-top:var(--sp-3);display:flex;gap:var(--sp-2);flex-wrap:wrap;">
+                        <span class="badge badge-accent" style="font-size:11px;">{{ "Путеводитель" if lang == "ru" else "Guide" }}</span>
+                        {% if city.has_articles %}
+                        <span class="badge" style="font-size:11px;background:var(--bg);color:var(--text-secondary);">{{ city.article_count }} {{ "статей" if lang == "ru" else "articles" }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm" style="background:var(--bg);">
+    <div class="container" style="text-align:center;max-width:700px;">
+        <h2 style="margin-bottom:var(--sp-3);">{{ "Не знаете, с чего начать?" if lang == "ru" else "Not sure where to start?" }}</h2>
+        <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-6);">
+            {{ "Расскажите о ваших пожеланиях — мы подберём идеальный маршрут по " + cname_prep + "." if lang == "ru" else "Tell us your preferences — we'll create the perfect itinerary for " + cname_prep + "." }}
+        </p>
+        <a href="#agent" class="btn btn-accent btn-lg">{{ "Получить подборку →" if lang == "ru" else "Get recommendations →" }}</a>
+    </div>
+</section>
+
+<!-- FAQ -->
+{% if faqs %}
+<section class="section" style="background:var(--surface);">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">FAQ</p>
+            <h2>{{ "Часто задаваемые вопросы" if lang == "ru" else "Frequently Asked Questions" }}</h2>
+        </div>
+        <div class="faq-list">
+            {% for q, a in faqs %}
+            <details class="faq-item reveal">
+                <summary>{{ q }}</summary>
+                <p>{{ a }}</p>
+            </details>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- AGENT FORM -->
+<section class="section" id="agent" style="background:var(--bg);scroll-margin-top:80px;">
+    <div class="container">
+        <div class="agent-block reveal">
+            <h2>{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h2>
+            <div class="agent-grid">
+                <div>
+                    <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">
+                        {{ "Расскажите о ваших пожеланиях — подберём маршрут, отель и экскурсии. Бесплатно." if lang == "ru" else "Tell us your preferences — we'll help plan your route, hotel, and excursions. Free of charge." }}
+                    </p>
+                    <ul class="agent-benefits">
+                        <li>{{ "Бесплатная консультация" if lang == "ru" else "Free consultation" }}</li>
+                        <li>{{ "Подбор по вашим параметрам" if lang == "ru" else "Tailored to your preferences" }}</li>
+                        <li>{{ "Помощь с бронированием" if lang == "ru" else "Booking assistance" }}</li>
+                        <li>{{ "Работаем с 2019 года" if lang == "ru" else "Since 2019" }}</li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
+                        <input type="text" name="name" placeholder="{{ 'Как вас зовут? *' if lang == 'ru' else 'Your name *' }}" required>
+                        <input type="tel" name="phone" placeholder="{{ 'Телефон или Telegram *' if lang == 'ru' else 'Phone or Telegram *' }}" required>
+                        <textarea name="message" rows="3" placeholder="{{ 'Даты, бюджет, пожелания...' if lang == 'ru' else 'Dates, budget, preferences...' }}"></textarea>
+                        <input type="hidden" name="destination" value="{{ rname }}">
+                        <input type="hidden" name="_subject" value="{{ 'Заявка: ' + rname if lang == 'ru' else 'Request: ' + rname }}">
+                        {% if recaptcha_site_key %}
+                        <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
+                        {% endif %}
+                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ 'Home' if lang == 'en' else 'Главная' }}",
+      "item": "{{ site_url }}/{{ lang }}/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ cname_nom }}",
+      "item": "{{ site_url }}/{{ lang }}/{{ country.slug }}/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ rname }}",
+      "item": "{{ site_url }}/{{ lang }}/{{ country.slug }}/{{ region.slug }}/index.html"
+    }
+  ]
+}
+</script>
+
+{% endblock %}

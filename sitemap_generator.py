@@ -54,11 +54,15 @@ def generate_lang_sitemap(lang):
     for country_slug, country in DESTINATIONS.items():
         lines.append(f"  <url><loc>{SITE_URL}/{lang}/{country_slug}/index.html</loc><priority>0.9</priority><lastmod>{TODAY}</lastmod></url>")
 
-        for city_slug in country["cities"]:
-            for ct_slug in ["guide", "hotels", "flights", "attractions", "seasons"]:
-                page_slug = get_url_slug(ct_slug, city_slug, lang)
-                priority = priority_map.get(ct_slug, "0.6")
-                lines.append(f"  <url><loc>{SITE_URL}/{lang}/{country_slug}/{page_slug}.html</loc><priority>{priority}</priority><lastmod>{TODAY}</lastmod></url>")
+        # Region pages
+        for region_slug, region in country.get("regions", {}).items():
+            lines.append(f"  <url><loc>{SITE_URL}/{lang}/{country_slug}/{region_slug}/index.html</loc><priority>0.8</priority><lastmod>{TODAY}</lastmod></url>")
+
+            for city_slug in region.get("cities", {}):
+                for ct_slug in ["guide", "hotels", "flights", "attractions", "seasons"]:
+                    page_slug = get_url_slug(ct_slug, city_slug, lang)
+                    priority = priority_map.get(ct_slug, "0.6")
+                    lines.append(f"  <url><loc>{SITE_URL}/{lang}/{country_slug}/{page_slug}.html</loc><priority>{priority}</priority><lastmod>{TODAY}</lastmod></url>")
 
     lines.append("</urlset>")
 

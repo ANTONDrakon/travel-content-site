@@ -14,12 +14,13 @@ def replace_placeholders(body, city_name_en, lang):
     # Look up proper IATA airport code for the city
     destination_code = city_name_en.upper()[:3]
     for country in DESTINATIONS.values():
-        for c_slug, city_data in country.get("cities", {}).items():
-            if city_data.get("name_en", "").lower() == city_name_en.lower():
-                codes = city_data.get("airport_codes", [])
-                if codes:
-                    destination_code = codes[0]
-                break
+        for region in country.get("regions", {}).values():
+            for c_slug, city_data in region.get("cities", {}).items():
+                if city_data.get("name_en", "").lower() == city_name_en.lower():
+                    codes = city_data.get("airport_codes", [])
+                    if codes:
+                        destination_code = codes[0]
+                    break
 
     suffix = "_en" if lang == "en" else ""
 

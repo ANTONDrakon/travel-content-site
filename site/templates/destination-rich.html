@@ -3,8 +3,8 @@
 {% set cname_prep = country.name_en if lang == "en" else country.name_ru_prepositional %}
 {% set cname_nom = country.name_en if lang == "en" else country.name_ru %}
 {% set prep = "Vacation in " if lang == "en" else ("Отдых на " if country.slug == "maldives" else "Отдых в ") %}
-{% block title %}{{ cname_prep }} {{ "— полный путеводитель 2026" if lang == "en" else "— полный путеводитель 2026" }} | TravelHub{% endblock %}
-{% block meta_description %}{{ cname_prep }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд с советами и рекомендациями." if lang == "en" else "best resorts, hotels, prices, seasons, attractions. Complete guide with tips and recommendations." }}{% endblock %}
+{% block title %}{{ cname_prep }} {{ "— полный путеводитель 2026" if lang == "ru" else "— complete travel guide 2026" }} | TravelHub{% endblock %}
+{% block meta_description %}{{ cname_prep }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд с советами и рекомендациями." if lang == "ru" else "best resorts, hotels, prices, seasons, attractions. Complete guide with tips and recommendations." }}{% endblock %}
 
 {% block en_alt %}{{ country.slug }}/index.html{% endblock %}
 {% block ru_alt %}{{ country.slug }}/index.html{% endblock %}
@@ -12,11 +12,11 @@
 {% set en_alternate_url = country.slug + "/index.html" %}
 {% set canonical = "/" + lang + "/" + country.slug + "/index.html" %}
 
-{% block og_title %}{{ cname_prep }} {{ "— полный путеводитель 2026" if lang == "en" else "— полный путеводитель 2026" }} | TravelHub{% endblock %}
-{% block og_description %}{{ cname_prep }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд с советами и рекомендациями." if lang == "en" else "best resorts, hotels, prices, seasons, attractions. Complete guide with tips and recommendations." }}{% endblock %}
+{% block og_title %}{{ cname_prep }} {{ "— полный путеводитель 2026" if lang == "ru" else "— complete travel guide 2026" }} | TravelHub{% endblock %}
+{% block og_description %}{{ cname_prep }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд с советами и рекомендациями." if lang == "ru" else "best resorts, hotels, prices, seasons, attractions. Complete guide with tips and recommendations." }}{% endblock %}
 {% block og_image_alt %}{{ cname_nom }} {{ "путеводитель" if lang == "ru" else "travel guide" }}{% endblock %}
 {% block twitter_title %}{{ cname_prep }} | TravelHub{% endblock %}
-{% block twitter_description %}{{ cname_prep }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности." if lang == "en" else "best resorts, hotels, prices, seasons, attractions." }}{% endblock %}
+{% block twitter_description %}{{ cname_prep }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности." if lang == "ru" else "best resorts, hotels, prices, seasons, attractions." }}{% endblock %}
 
 {% block content %}
 
@@ -92,7 +92,7 @@
             <h2>{{ "Когда лучше ехать в " if lang == "ru" else "Best time to visit " }}{{ cname_prep }}</h2>
         </div>
         {% set seas = country_data.seasons_en if lang == "en" else country_data.seasons_ru %}
-        {% if data and seas %}
+        {% if country_data and seas %}
         <div class="grid grid-4" style="gap:var(--sp-4);">
             {% for emoji, title, temp, desc in seas %}
             <div class="weather-card reveal" style="background:var(--card);box-shadow:var(--shadow-sm);">
@@ -121,23 +121,17 @@
         </div>
         <div class="grid grid-3">
             {% for region_slug, region in regions.items() %}
-            <div class="card reveal" style="cursor:default;">
+            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ region_slug }}/index.html" class="card reveal" style="cursor:pointer;">
                 <div class="card-body" style="padding:var(--sp-8);">
                     <h3 class="h3" style="margin-bottom:var(--sp-3);">{{ region.name_en if lang == "en" else region.name_ru }}</h3>
-                    <div class="grid grid-2" style="gap:var(--sp-3);">
-                        {% for city_slug, city in region.cities.items() %}
-                        <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card" style="margin:0;">
-                            <div class="card-img" style="height:120px;">
-                                <img src="{{ city.image }}" alt="{{ city.name_en if lang == 'en' else city.name_ru }}" loading="lazy">
-                            </div>
-                            <div class="card-body" style="padding:var(--sp-3);">
-                                <h4 style="font-size:14px;font-weight:600;">{{ city.name_en if lang == "en" else city.name_ru }}</h4>
-                            </div>
-                        </a>
-                        {% endfor %}
+                    <p class="body-s" style="color:var(--text-secondary);margin-bottom:var(--sp-3);">
+                        {{ region.cities|length }} {{ "городов" if lang == "ru" else "cities" }}
+                    </p>
+                    <div class="card-meta">
+                        <span class="badge badge-accent">{{ "Подробнее →" if lang == "ru" else "View details →" }}</span>
                     </div>
                 </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
     </div>
@@ -153,7 +147,7 @@
             <h2>{{ "Практическая информация" if lang == "ru" else "Practical information" }}</h2>
         </div>
         {% set prac = country_data.practical_en if lang == "en" else country_data.practical_ru %}
-        {% if data and prac %}
+        {% if country_data and prac %}
         <div class="grid grid-3" style="gap:var(--sp-4);">
             {% if lang == "en" %}
             {% set labels = {"visa":"🛂 Visa","currency":"💱 Currency","language":"🗣 Language","transport":"🚌 Transport","safety":"🛡 Safety","internet":"📶 Internet & SIM"} %}
@@ -277,7 +271,7 @@
             <h2>{{ "Часто задаваемые вопросы" if lang == "ru" else "Frequently Asked Questions" }}</h2>
         </div>
         {% set faqs = country_data.faq_en if lang == "en" else country_data.faq_ru %}
-        {% if data and faqs %}
+        {% if country_data and faqs %}
         <div class="faq-list">
             {% for q, a in faqs %}
             <details class="faq-item reveal">
