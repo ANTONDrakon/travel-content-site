@@ -19,17 +19,39 @@ from agents.affiliate_matcher import process_article_body
 
 
 def build_prompt(content_type, lang, city, country, destination):
+    from agents.fact_checker import KNOWN_FACTS
+    from config.prompts import CONTENT_TYPES
+
     airports = ", ".join(city.get("airport_codes", ["N/A"]))
     visa_info = destination["visa_en"] if lang == "en" else destination["visa_ru"]
+
+    # Get currency and timezone from fact checker data
+    country_slug = destination.get("slug", country)
+    facts = KNOWN_FACTS.get(country_slug, {})
+    currency = facts.get("currency", {})
+    currency_info = f"{currency.get('name_ru', 'местная валюта')} ({currency.get('code', '')}), символ {currency.get('symbol', '')}" if lang == "ru" else f"{currency.get('name_en', 'local currency')} ({currency.get('code', '')}), symbol {currency.get('symbol', '')}"
+    timezone_info = facts.get("timezone", "UTC")
+
+    # Get content type name for context
+    ct_info = CONTENT_TYPES.get(content_type, {})
+    ct_name = ct_info.get("category_ru" if lang == "ru" else "category_en", content_type)
 
     prompt = PROMPTS[content_type][lang].format(
         city_name=city["name_en"] if lang == "en" else city["name_ru"],
         country_name=destination["name_en"] if lang == "en" else destination["name_ru"],
         airports=airports,
         visa_info=visa_info,
+        currency_info=currency_info,
+        timezone_info=timezone_info,
         hotels_placeholder="{hotels_placeholder}",
         flights_placeholder="{flights_placeholder}",
         tours_placeholder="{tours_placeholder}",
+        excursions_placeholder="{excursions_placeholder}",
+        transfers_placeholder="{transfers_placeholder}",
+        esim_placeholder="{esim_placeholder}",
+        car_rental_placeholder="{car_rental_placeholder}",
+        insurance_placeholder="{insurance_placeholder}",
+        tickets_placeholder="{tickets_placeholder}",
     )
     return prompt
 
@@ -159,18 +181,33 @@ def build_site():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="AI Travel Content Factory")
+    parser = argparse.ArgumentParser(description="AI Travel Content Factory 2.0")
     sub = parser.add_subparsers(dest="command")
 
-    gen = sub.add_parser("generate", help="Generate content with AI")
+    gen = sub.add_parser("generate", help="Generate content with AI (legacy pipeline)")
     gen.add_argument("--country", type=str, help="Country slug (e.g. turkey)")
     gen.add_argument("--city", type=str, help="City slug (e.g. istanbul)")
     gen.add_argument("--lang", type=str, default="both", choices=["ru", "en", "both"])
     gen.add_argument("--type", type=str, help="Content type (guide, hotels, flights, attractions, seasons)")
 
+    pipe = sub.add_parser("pipeline", help="Generate with full 12-agent pipeline")
+    pipe.add_argument("--country", type=str, help="Country slug")
+    pipe.add_argument("--city", type=str, help="City slug")
+    pipe.add_argument("--type", type=str, help="Content type")
+    pipe.add_argument("--lang", type=str, default="both", choices=["ru", "en", "both"])
+    pipe.add_argument("--force", action="store_true", help="Regenerate even if file exists")
+
     sub.add_parser("build", help="Build static site + sitemaps")
 
     sub.add_parser("all", help="Generate all content + build site")
+
+    sub.add_parser("analyze", help="Analyze project state and content gaps")
+
+    plan_p = sub.add_parser("plan", help="Content architecture planning")
+    plan_p.add_argument("--country", type=str, help="Country slug to plan for")
+
+    qa_p = sub.add_parser("qa", help="Run QA checks on existing content")
+    qa_p.add_argument("--agent", type=str, choices=["fact", "seo", "ux", "links", "images", "all"], default="all")
 
     ls = sub.add_parser("list", help="List available destinations")
 
@@ -198,12 +235,51 @@ def main():
         else:
             generate_all(langs)
 
+    elif args.command == "pipeline":
+        from agents.pipeline import run_pipeline, run_country_pipeline
+        langs = ["ru", "en"] if args.lang == "both" else [args.lang]
+
+        if args.city and args.type:
+            for lang in langs:
+                result = run_pipeline(args.country, args.city, args.type, lang, force=args.force)
+                result.report()
+        elif args.country:
+            run_country_pipeline(args.country, langs, force=args.force)
+        else:
+            print("Error: --country is required for pipeline command")
+            sys.exit(1)
+
     elif args.command == "build":
         build_site()
 
     elif args.command == "all":
         generate_all(["ru", "en"])
         build_site()
+
+    elif args.command == "analyze":
+        from agents.project_analyzer import generate_report
+        generate_report()
+
+    elif args.command == "plan":
+        from agents.content_architect import generate_report
+        generate_report(args.country)
+
+    elif args.command == "qa":
+        if args.agent == "fact" or args.agent == "all":
+            from agents.fact_checker import run as fact_run
+            fact_run()
+        if args.agent == "seo" or args.agent == "all":
+            from agents.copy_seo_agent import run as seo_run
+            seo_run()
+        if args.agent == "ux" or args.agent == "all":
+            from agents.ux_copywriter import run as ux_run
+            ux_run()
+        if args.agent == "links" or args.agent == "all":
+            from agents.link_agent import run as link_run
+            link_run()
+        if args.agent == "images" or args.agent == "all":
+            from agents.image_agent import run as image_run
+            image_run()
 
     else:
         parser.print_help()

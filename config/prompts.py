@@ -52,19 +52,37 @@ PROMPTS = {
 <h2>Где поесть</h2>
 Рестораны, уличная еда, местная кухня. Цены.
 
+<h2>Экскурсии и туры</h2>
+Лучшие экскурсии, цены, что посмотреть. Упомяни что подходящие экскурсии можно {excursions_placeholder}.
+
+<h2>Трансфер из аэропорта</h2>
+Как добраться из аэропорта: такси, трансфер, общественный транспорт. Упомяни что удобный трансфер можно {transfers_placeholder}.
+
+<h2>Связь и интернет</h2>
+Wi-Fi, местная SIM-карта, eSIM. Упомяни что eSIM для поездки можно {esim_placeholder}.
+
 <h2>Лучшее время для поездки</h2>
 Погода по месяцам, сезоны, цены.
 
 <h2>Виза и документы</h2>
 {visa_info}
 
+<h2>Валюта и деньги</h2>
+Местная валюта: {currency_info}. Где обменять, можно ли платить картой, сколько наличных брать.
+
+<h2>Часовой пояс</h2>
+{timezone_info}. Разница с Москвой.
+
 <h2>Бюджет поездки на неделю</h2>
-Проживание, еда, транспорт, развлечения — примерные суммы.
+Проживание, еда, транспорт, развлечения — примерные суммы в местной валюте.
+
+<h2>Страхование</h2>
+Обязательно ли, что покрывает, сколько стоит. Оформить страховку можно {insurance_placeholder}.
 
 <h2>10 советов путешественникам</h2>
 Практические советы для тех, кто едет впервые.</article>
 
-Объём: 2000-3000 слов. Пиши полезно, с цифрами и фактами. Встраивай ссылки {hotels_placeholder} и {flights_placeholder} как часть предложений, не как отдельные блоки.""",
+Объём: 2000-3000 слов. Пиши полезно, с цифрами и фактами. Встраивай ссылки естественно как часть предложений, не как отдельные блоки.""",
 
         "en": """Write a travel guide article: <article><h1>{city_name} Travel Guide 2026</h1>
 
@@ -85,19 +103,37 @@ Metro, buses, taxis, rental. Prices.
 <h2>Where to Eat</h2>
 Restaurants, street food, local cuisine. Price ranges.
 
+<h2>Tours & Excursions</h2>
+Best excursions, prices, what to see. Mention that tours can be {excursions_placeholder}.
+
+<h2>Airport Transfer</h2>
+How to get from the airport: taxi, transfer, public transport. Mention that a convenient transfer can be {transfers_placeholder}.
+
+<h2>Connectivity</h2>
+Wi-Fi, local SIM, eSIM. Mention that an eSIM for the trip can be {esim_placeholder}.
+
 <h2>Best Time to Visit</h2>
 Weather by month, seasons, prices.
 
 <h2>Visa & Documents</h2>
 {visa_info}
 
+<h2>Currency & Money</h2>
+Local currency: {currency_info}. Where to exchange, can you pay by card, how much cash to bring.
+
+<h2>Time Zone</h2>
+{timezone_info}. Difference from major hubs.
+
 <h2>Weekly Trip Budget</h2>
-Accommodation, food, transport, entertainment — approximate costs.
+Accommodation, food, transport, entertainment — approximate costs in local currency.
+
+<h2>Travel Insurance</h2>
+Is it mandatory, what it covers, how much it costs. Get insurance via {insurance_placeholder}.
 
 <h2>10 Travel Tips</h2>
 Practical tips for first-time visitors.</article>
 
-Length: 2000-3000 words. Be useful, with numbers and facts. Weave {hotels_placeholder} and {flights_placeholder} links into sentences, not as separate blocks."""
+Length: 2000-3000 words. Be useful, with numbers and facts. Weave affiliate links naturally into sentences, not as separate blocks."""
     },
 
     "hotels": {
@@ -116,6 +152,9 @@ Length: 2000-3000 words. Be useful, with numbers and facts. Weave {hotels_placeh
 
 <h2>Как выбрать район</h2>
 По целям поездки: пляж, экскурсии, ночная жизнь.
+
+<h2>Как добраться из аэропорта</h2>
+Трансферы до отелей. Упомяни что удобный трансфер можно {transfers_placeholder}.
 
 <h2>Советы по бронированию</h2>
 Как сэкономить, когда бронировать, лучшие сервисы. Упомяни что на многих площадках можно {hotels_placeholder} и сравнить цены.</article>
@@ -137,6 +176,9 @@ Hotel infrastructure, neighborhoods, prices (2 paragraphs). Naturally mention th
 
 <h2>How to Choose the Right Area</h2>
 By purpose: beach, sightseeing, nightlife.
+
+<h2>Airport Transfers</h2>
+Getting to hotels from the airport. Mention that a convenient transfer can be {transfers_placeholder}.
 
 <h2>Booking Tips</h2>
 How to save, when to book, best services. Mention that you can {hotels_placeholder} to compare prices.</article>
@@ -162,7 +204,10 @@ How to save, when to book, best services. Mention that you can {hotels_placehold
 Конкретные советы с сервисами.
 
 <h2>Когда покупать билеты</h2>
-Оптимальные сроки до вылета.</article>
+Оптимальные сроки до вылета.
+
+<h2>Страхование полёта</h2>
+Что делать при задержке или отмене рейса. Упомяни что компенсацию можно получить через {insurance_placeholder}.</article>
 
 1500-2000 слов.""",
 
@@ -183,7 +228,10 @@ Table of average 2026 prices: January-December.
 Specific tips with services.
 
 <h2>When to Book</h2>
-Optimal timing before departure.</article>
+Optimal timing before departure.
+
+<h2>Flight Insurance</h2>
+What to do if your flight is delayed or cancelled. Mention compensation via {insurance_placeholder}.</article>
 
 1500-2000 words."""
     },
@@ -200,7 +248,10 @@ Optimal timing before departure.</article>
 Оптимальные маршруты по городу.
 
 <h2>Экскурсии и туры</h2>
-Какие экскурсии стоит взять, цены. Упомяни что подходящие экскурсии можно {tours_placeholder}.
+Какие экскурсии стоит взять, цены. Упомяни что подходящие экскурсии можно {excursions_placeholder}.
+
+<h2>Билеты онлайн</h2>
+Где покупать билеты дешевле. Упомяни что билеты на достопримечательности можно {tickets_placeholder}.
 
 <h2>Бесплатные достопримечательности</h2>
 Что можно посмотреть без билетов.
@@ -221,7 +272,10 @@ Each: name, description (3-4 sentences), ticket price, hours, how to get there, 
 Optimal city routes.
 
 <h2>Tours & Excursions</h2>
-Which tours to take, prices. Mention that tours can be {tours_placeholder}.
+Which tours to take, prices. Mention that tours can be {excursions_placeholder}.
+
+<h2>Book Tickets Online</h2>
+Where to buy tickets cheaper. Mention that attraction tickets can be {tickets_placeholder}.
 
 <h2>Free Attractions</h2>
 What to see without tickets.
@@ -250,7 +304,7 @@ Transportation, combo tickets.</article>
 Оптимальные месяцы для купания.
 
 <h2>Лучшее время для экскурсий</h2>
-Когда комфортнее осматривать город.
+Когда комфортнее осматривать город. Экскурсии можно {excursions_placeholder}.
 
 <h2>Сезон дождей</h2>
 Когда, насколько сильные, стоит ли ехать.
@@ -280,7 +334,7 @@ When, pros/cons, weather, prices.
 Optimal months for swimming.
 
 <h2>Best Time for Sightseeing</h2>
-Most comfortable months.
+Most comfortable months. Excursions can be {excursions_placeholder}.
 
 <h2>Rainy Season</h2>
 When, intensity, worth visiting?

@@ -3,6 +3,8 @@ import re
 def replace_placeholders(body, city_name_en, lang):
     from config.affiliates import (
         hotels_link, flights_link, tours_link, insurance_link,
+        excursions_link, transfers_link, esim_link, car_rental_link,
+        tickets_link,
         AFFILIATE_HTML, PLACEHOLDERS,
     )
     from config.destinations import DESTINATIONS
@@ -19,15 +21,35 @@ def replace_placeholders(body, city_name_en, lang):
                     destination_code = codes[0]
                 break
 
+    suffix = "_en" if lang == "en" else ""
+
     replacements = {
-        "{hotels_placeholder}": AFFILIATE_HTML["hotels_en" if lang == "en" else "hotels"].format(
+        "{hotels_placeholder}": AFFILIATE_HTML[f"hotels{suffix}"].format(
             url=hotels_link(city_slug), city=city_name_en
         ),
-        "{flights_placeholder}": AFFILIATE_HTML["flights_en" if lang == "en" else "flights"].format(
+        "{flights_placeholder}": AFFILIATE_HTML[f"flights{suffix}"].format(
             url=flights_link(destination=destination_code), city=city_name_en
         ),
-        "{tours_placeholder}": AFFILIATE_HTML["tours_en" if lang == "en" else "tours"].format(
+        "{tours_placeholder}": AFFILIATE_HTML[f"tours{suffix}"].format(
             url=tours_link(city_name_en), city=city_name_en
+        ),
+        "{excursions_placeholder}": AFFILIATE_HTML[f"excursions{suffix}"].format(
+            url=excursions_link(city_name_en), city=city_name_en
+        ),
+        "{transfers_placeholder}": AFFILIATE_HTML[f"transfers{suffix}"].format(
+            url=transfers_link(city_name_en), city=city_name_en
+        ),
+        "{esim_placeholder}": AFFILIATE_HTML[f"esim{suffix}"].format(
+            url=esim_link(), city=city_name_en
+        ),
+        "{car_rental_placeholder}": AFFILIATE_HTML[f"car_rental{suffix}"].format(
+            url=car_rental_link(city_name_en), city=city_name_en
+        ),
+        "{insurance_placeholder}": AFFILIATE_HTML[f"insurance{suffix}"].format(
+            url=insurance_link()
+        ),
+        "{tickets_placeholder}": AFFILIATE_HTML[f"tickets{suffix}"].format(
+            url=tickets_link(city_name_en), city=city_name_en
         ),
     }
 
@@ -39,11 +61,11 @@ def replace_placeholders(body, city_name_en, lang):
 
 def inject_insurance_block(body, lang):
     from config.affiliates import insurance_link, AFFILIATE_HTML
-    insurance_html = AFFILIATE_HTML["insurance_en" if lang == "en" else "insurance"].format(url=insurance_link())
+    suffix = "_en" if lang == "en" else ""
+    insurance_html = AFFILIATE_HTML[f"insurance{suffix}"].format(url=insurance_link())
     insurance_block = f'\n<div class="affiliate-block"><p>{"Don\'t forget travel insurance!" if lang == "en" else "Не забудьте оформить страховку для путешествия!"}</p>{insurance_html}</div>\n'
 
     # Find safe insertion point: after the last </p> or </h2> in the second half of body
-    # This avoids breaking mid-paragraph text
     last_h2 = body.rfind("</h2>")
     last_p = body.rfind("</p>")
     insert_after = max(last_h2, last_p)

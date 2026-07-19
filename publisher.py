@@ -2,35 +2,21 @@ import os
 import re
 import json
 from pathlib import Path
+from config.affiliates import SERVICE_REGISTRY, SERVICES_FLAT
 
 MARKER = os.getenv("TRAVELPAYOUTS_MARKER", "736226")
 
-SERVICES = [
-    ("Aviasales", f"https://tp.media/click?shmarker={MARKER}&promo_id=3770&source_type=link&type=click&campaign_id=100&trs=aviasales"),
-    ("Hotellook", f"https://tp.media/click?shmarker={MARKER}&promo_id=3772&source_type=link&type=click&campaign_id=101&trs=hotellook"),
-    ("Booking.com", f"https://tp.media/click?shmarker={MARKER}&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking"),
-    ("Agoda", f"https://tp.media/click?shmarker={MARKER}&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda"),
-    ("GetYourGuide", f"https://tp.media/click?shmarker={MARKER}&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide"),
-    ("Viator", f"https://tp.media/click?shmarker={MARKER}&promo_id=3775&source_type=link&type=click&campaign_id=107&trs=viator"),
-    ("Kiwitaxi", f"https://tp.media/click?shmarker={MARKER}&promo_id=3782&source_type=link&type=click&campaign_id=112&trs=kiwitaxi"),
-    ("Airalo", f"https://tp.media/click?shmarker={MARKER}&promo_id=3803&source_type=link&type=click&campaign_id=118&trs=airalo"),
-    ("DiscoverCars", f"https://tp.media/click?shmarker={MARKER}&promo_id=3780&source_type=link&type=click&campaign_id=111&trs=discovercars"),
-    ("Localrent", f"https://tp.media/click?shmarker={MARKER}&promo_id=3783&source_type=link&type=click&campaign_id=113&trs=localrent"),
-    ("Tiqets", f"https://tp.media/click?shmarker={MARKER}&promo_id=3801&source_type=link&type=click&campaign_id=116&trs=tiqets"),
-    ("Klook", f"https://tp.media/click?shmarker={MARKER}&promo_id=3797&source_type=link&type=click&campaign_id=120&trs=klook"),
-    ("Kiwi.com", f"https://tp.media/click?shmarker={MARKER}&promo_id=3799&source_type=link&type=click&campaign_id=114&trs=kiwicom"),
-    ("Trip.com", f"https://tp.media/click?shmarker={MARKER}&promo_id=3802&source_type=link&type=click&campaign_id=119&trs=tripcom"),
-    ("Compensair", f"https://tp.media/click?shmarker={MARKER}&promo_id=3800&source_type=link&type=click&campaign_id=117&trs=compensair"),
-    ("Cherehapa", f"https://tp.media/click?shmarker={MARKER}&promo_id=3773&source_type=link&type=click&campaign_id=102&trs=insurance"),
-    ("12Go", f"https://tp.media/click?shmarker={MARKER}&promo_id=4127&source_type=link&type=click&campaign_id=121&trs=12go"),
-]
+# Backward-compatible flat list: [(name, url), ...]
+SERVICES = SERVICES_FLAT
 
 def linkify_services(body):
-    for name, url in SERVICES:
-        if name in body:
-            pattern = re.compile(r'(?<!["\'>])(' + re.escape(name) + r')(?!["\'<])')
-            replacement = f'<a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">{name}</a>'
-            body = pattern.sub(replacement, body, count=1)
+    """Auto-link partner service names in article text using the centralized registry."""
+    for svc in SERVICE_REGISTRY.values():
+        for alias in svc["aliases"]:
+            if alias in body:
+                pattern = re.compile(r'(?<!["\'>])(' + re.escape(alias) + r')(?!["\'<])')
+                replacement = f'<a href="{svc["url"]}" target="_blank" rel="nofollow sponsored" class="partner-link">{alias}</a>'
+                body = pattern.sub(replacement, body, count=1)
     return body
 
 # Exchange rates to RUB — auto-fetched from API, with fallback defaults
@@ -361,6 +347,7 @@ DESTINATIONS_LIST = [
     {"slug": "dagestan", "name_ru": "Дагестан", "name_en": "Dagestan", "group": "russia"},
     {"slug": "kamchatka", "name_ru": "Камчатка", "name_en": "Kamchatka", "group": "russia"},
     {"slug": "mineral-vody", "name_ru": "Кавказские Минеральные Воды", "name_en": "Caucasian Mineral Waters", "group": "russia"},
+    {"slug": "kavkaz", "name_ru": "Кавказ", "name_en": "Caucasus", "group": "russia"},
     {"slug": "vladivostok", "name_ru": "Владивосток", "name_en": "Vladivostok", "group": "russia"},
     # International
     {"slug": "turkey", "name_ru": "Турция", "name_en": "Turkey", "group": "international"},
@@ -391,6 +378,7 @@ COUNTRY_IMAGES = {
     "dagestan": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?w=1200&q=80",
     "kamchatka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
     "mineral-vody": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
+    "kavkaz": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
     "vladivostok": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=80",
     "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
     "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
@@ -509,6 +497,10 @@ CITY_IMAGES = {
     # Vladivostok
     "vladivostok-city": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=800&q=80",
     "russky-island": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=800&q=80",
+    # Caucasus
+    "dombay": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "elbrus": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "kislovodsk-c": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
 }
 
 
@@ -755,6 +747,13 @@ def build_destination_page(country_slug, lang):
         "essentuki_en": "Mineral waters: drinking springs, parks.",
         "vladivostok-city_en": "Port on the Pacific: bridges, bays, APEC venue.",
         "russky-island_en": "Island near Vladivostok: bridge, beaches, parks.",
+        # Caucasus
+        "dombay": "Горнолыжный курорт: канатная дорога, горы, отели у подножия.",
+        "elbrus": "Высочайшая точка Европы: канатные дороги, ледники, треккинг.",
+        "kislovodsk-c": "Курортный город: Нарзанная галерея, парки, долина роз.",
+        "dombay_en": "Ski resort: cable car, mountains, hotels at the foot.",
+        "elbrus_en": "Highest point in Europe: cable cars, glaciers, trekking.",
+        "kislovodsk-c_en": "Spa city: Narzan Gallery, parks, rose valley.",
     }
 
     for city_slug in cities_with_images:

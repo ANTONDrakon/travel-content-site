@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% set sticky_cta_target = "agent-form" %}
-{% block title %}{{ article.title }}{% endblock %}
+{% block title %}{{ article.title }} | TravelHub{% endblock %}
 {% block meta_description %}{{ article.meta_description }}{% endblock %}
 
 {% block en_alt %}{{ en_alt_url }}{% endblock %}
@@ -8,10 +8,10 @@
 {% set ru_alternate_url = ru_alt_url %}
 {% set en_alternate_url = en_alt_url %}
 
-{% block og_title %}{{ article.title }}{% endblock %}
+{% block og_title %}{{ article.title }} | TravelHub{% endblock %}
 {% block og_description %}{{ article.meta_description }}{% endblock %}
 {% block og_image_alt %}{{ article.h1 }}{% endblock %}
-{% block twitter_title %}{{ article.title }}{% endblock %}
+{% block twitter_title %}{{ article.title }} | TravelHub{% endblock %}
 {% block twitter_description %}{{ article.meta_description }}{% endblock %}
 
 {% block article_meta %}
@@ -69,6 +69,33 @@
             {{ article.body | safe }}
         </div>
 
+        <!-- ═══════════════ TRAVELER HELP BLOCK ═══════════════ -->
+        <div style="margin-top:var(--sp-10);padding:var(--sp-8);background:var(--surface);border-radius:var(--radius-lg);border-left:4px solid var(--accent);">
+            <h3 style="font-size:20px;font-weight:600;margin-bottom:var(--sp-4);">{{ "Помощь путешественнику" if lang == "ru" else "Traveler's Help" }}</h3>
+            <div class="grid grid-2" style="gap:var(--sp-6);">
+                <div>
+                    <h4 style="font-size:16px;font-weight:600;margin-bottom:var(--sp-3);">{{ "Полезные сервисы" if lang == "ru" else "Useful Services" }}</h4>
+                    <ul style="list-style:none;padding:0;">
+                        <li style="margin-bottom:var(--sp-2);">✈️ {{ "Авиабилеты:" if lang == "ru" else "Flights:" }} <a href="https://aviasales.tpx.lt/Qs0r4qBM" target="_blank" rel="nofollow sponsored">Aviasales</a></li>
+                        <li style="margin-bottom:var(--sp-2);">🏨 {{ "Отели:" if lang == "ru" else "Hotels:" }} <a href="https://ostrovok.tpx.lt/WTfOjDtx" target="_blank" rel="nofollow sponsored">Ostrovok</a></li>
+                        <li style="margin-bottom:var(--sp-2);">🚌 {{ "Трансфер:" if lang == "ru" else "Transfer:" }} <a href="https://kiwitaxi.tpx.lt/iz2LnXtA" target="_blank" rel="nofollow sponsored">Kiwitaxi</a></li>
+                        <li style="margin-bottom:var(--sp-2);">📱 {{ "eSIM:" if lang == "ru" else "eSIM:" }} <a href="https://airalo.tpx.lt/5wLtYsdL" target="_blank" rel="nofollow sponsored">Airalo</a></li>
+                        <li style="margin-bottom:var(--sp-2);">🛡 {{ "Страховка:" if lang == "ru" else "Insurance:" }} <a href="https://cherehapa.tpx.lt/sFJxxZaP" target="_blank" rel="nofollow sponsored">Cherehapa</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-size:16px;font-weight:600;margin-bottom:var(--sp-3);">{{ "Что делать дальше" if lang == "ru" else "What to do next" }}</h4>
+                    <ul style="list-style:none;padding:0;">
+                        <li style="margin-bottom:var(--sp-2);">1. {{ "Сравните цены на авиабилеты" if lang == "ru" else "Compare flight prices" }}</li>
+                        <li style="margin-bottom:var(--sp-2);">2. {{ "Забронируйте отель заранее" if lang == "ru" else "Book hotel in advance" }}</li>
+                        <li style="margin-bottom:var(--sp-2);">3. {{ "Оформите страховку" if lang == "ru" else "Get travel insurance" }}</li>
+                        <li style="margin-bottom:var(--sp-2);">4. {{ "Закажите трансфер из аэропорта" if lang == "ru" else "Order airport transfer" }}</li>
+                        <li style="margin-bottom:var(--sp-2);">5. {{ "Купите eSIM для связи" if lang == "ru" else "Get eSIM for connectivity" }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <!-- ═══════════════ TRAVEL ASSISTANCE CARD ═══════════════ -->
         {% if travel_assist %}
         <div style="margin-top:var(--sp-10);">
@@ -110,9 +137,9 @@
 
         <!-- ═══════════════ CTA ═══════════════ -->
         <div style="margin-top:var(--sp-16);padding:var(--sp-10);background:var(--surface);border-radius:var(--radius-xl);text-align:center;">
-            <h3 style="margin-bottom:var(--sp-3);">{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h3>
-            <p class="body-m" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">{{ "Наши эксперты помогут с визами, отелями и маршрутом." if lang == "ru" else "Our experts will help with visas, hotels, and itinerary." }}</p>
-            <a href="#agent-form" class="btn btn-accent btn-lg">{{ "Спланировать поездку" if lang == "ru" else "Plan my trip" }}</a>
+            <h3 style="margin-bottom:var(--sp-3);">{{ "Нужна помощь с подбором тура?" if lang == "ru" else "Need help choosing a trip?" }}</h3>
+            <p class="body-m" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">{{ "Не знаете, какой отель выбрать или как спланировать маршрут? Расскажите о ваших пожеланиях — мы поможем бесплатно." if lang == "ru" else "Not sure which hotel to choose or how to plan your route? Tell us your preferences — we'll help for free." }}</p>
+            <a href="#agent-form" class="btn btn-accent btn-lg">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</a>
         </div>
     </div>
 </section>

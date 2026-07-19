@@ -38,6 +38,7 @@
             <a href="{{ root }}/ru/baikal/index.html" class="hero-pill">💎 Байкал</a>
             <a href="{{ root }}/ru/karelia/index.html" class="hero-pill">🌲 Карелия</a>
             <a href="{{ root }}/ru/altai/index.html" class="hero-pill">🏔 Алтай</a>
+            <a href="{{ root }}/ru/kavkaz/index.html" class="hero-pill">⛰️ Кавказ</a>
             {% else %}
             <a href="{{ root }}/en/russia/index.html" class="hero-pill">🇷🇺 Russia</a>
             <a href="{{ root }}/en/turkey/index.html" class="hero-pill">🇹🇷 Turkey</a>
@@ -95,7 +96,8 @@
                 ("kaliningrad", "russia", "🌊", "Калининград", "Kaliningrad", "Россия", "Russia", "Балтика: янтарь, форты, пляжи", "Baltic: amber, forts, beaches", "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80"),
                 ("baikal", "baikal", "💎", "Байкал", "Lake Baikal", "Байкал", "Baikal", "Глубочайшее озеро: лёд, омуль, тайга", "Deepest lake: ice, omul, taiga", "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=600&q=80"),
                 ("karelia", "karelia", "🌲", "Карелия", "Karelia", "Карелия", "Karelia", "Озёра, водопады, Кижи", "Lakes, waterfalls, Kizhi", "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80"),
-                ("altai", "altai", "🏔", "Алтай", "Altai", "Алтай", "Altai", "Горы, реки, Чуйский тракт", "Mountains, rivers, Chuya Highway", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80")
+                ("altai", "altai", "🏔", "Алтай", "Altai", "Алтай", "Altai", "Горы, реки, Чуйский тракт", "Mountains, rivers, Chuya Highway", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"),
+                ("kavkaz", "kavkaz", "⛰️", "Кавказ", "Caucasus", "Кавказ", "Caucasus", "Домбай, Эльбрус, водопады", "Dombay, Elbrus, waterfalls", "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80")
             ] %}
             {% for city_slug, country_slug, emoji, name_ru, name_en, country_ru, country_en, desc_ru, desc_en, img in russia_cities %}
             <a href="{{ root }}/{{ lang }}/{{ country_slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card reveal">
@@ -153,6 +155,54 @@
                 </div>
             </a>
             {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     POPULAR HOTELS — Top rated accommodations
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Отели" if lang == "ru" else "Hotels" }}</p>
+            <h2>{{ "Популярные отели" if lang == "ru" else "Popular hotels" }}</h2>
+            <p>{{ "Лучшие отели с проверенными отзывами и актуальными ценами." if lang == "ru" else "Top-rated hotels with verified reviews and current prices." }}</p>
+        </div>
+        <div class="grid grid-4">
+            {% set popular_hotels = [
+                ("Rixos Premium Dubai", "Dubai", "ОАЭ", "⭐ 5.0", "$180/ночь", "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80"),
+                ("Soneva Fushi", "Maldives", "Мальдивы", "⭐ 4.9", "$450/ночь", "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80"),
+                ("Four Seasons Resort Bali", "Bali", "Индонезия", "⭐ 4.9", "$320/ночь", "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80"),
+                ("Burj Al Arab", "Dubai", "ОАЭ", "⭐ 4.8", "$890/ночь", "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80"),
+                ("Anantara Bophut", "Koh Samui", "Таиланд", "⭐ 4.8", "$150/ночь", "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80"),
+                ("Kempinski Hotel", "Sochi", "Россия", "⭐ 4.7", "$200/ночь", "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80"),
+                ("Hotel & Spa Noruz", "Tbilisi", "Грузия", "⭐ 4.7", "$95/ночь", "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80"),
+                ("Jumeirah Al Naseem", "Dubai", "ОАЭ", "⭐ 4.9", "$420/ночь", "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80")
+            ] %}
+            {% for name, city, country, rating, price, img in popular_hotels %}
+            <div class="card reveal" style="cursor:pointer;">
+                <div class="card-img">
+                    <img src="{{ img }}" alt="{{ name }}" loading="lazy">
+                    <span class="badge badge-popular card-badge">{{ rating }}</span>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ name }}</h4>
+                    <p class="body-s card-country">{{ city }}, {{ country }}</p>
+                    <div class="card-meta">
+                        <span class="card-price">{{ price }}</span>
+                        <a href="https://www.booking.com/searchresults.html?ss={{ name | urlencode }}" target="_blank" rel="nofollow sponsored" class="btn btn-outline btn-sm">
+                            {{ "Проверить цену" if lang == "ru" else "Check price" }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align:center;margin-top:var(--sp-6);">
+            <a href="https://www.booking.com" target="_blank" rel="nofollow sponsored" class="btn btn-outline btn-md">
+                {{ "Все отели на Booking.com →" if lang == "ru" else "All hotels on Booking.com →" }}
+            </a>
         </div>
     </div>
 </section>
