@@ -27,7 +27,7 @@
     <div class="hero-content">
         <p class="section-eyebrow" style="color:rgba(255,255,255,0.7);">{{ "Путеводитель" if lang == "ru" else "Travel Guide" }}</p>
         <h1 class="display-l">{{ cname_prep }} 2026</h1>
-        <p class="hero-subtitle" style="max-width:600px;">{{ data.hero_subtitle_en if lang == "en" and data.hero_subtitle_en else data.hero_subtitle_ru if data.hero_subtitle_ru else '' }}</p>
+        <p class="hero-subtitle" style="max-width:600px;">{{ country_data.hero_subtitle_en if lang == "en" and country_data.hero_subtitle_en else country_data.hero_subtitle_ru if country_data.hero_subtitle_ru else '' }}</p>
         <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
             <a href="#cities" class="btn btn-white btn-lg">{{ "Города" if lang == "ru" else "Cities" }}</a>
             <a href="#agent" class="btn btn-white btn-lg" style="background:rgba(255,255,255,0.1);">{{ "Помощь с планированием" if lang == "ru" else "Get help planning" }}</a>
@@ -41,8 +41,8 @@
 <section class="section-sm" style="background:var(--bg);">
     <div class="container">
         <div class="quick-facts">
-            {% set adv = data.advantages_en if lang == "en" else data.advantages_ru %}
-            {% if data and adv %}
+            {% set adv = country_data.advantages_en if lang == "en" else country_data.advantages_ru %}
+            {% if country_data and adv %}
             {% for emoji, title, desc in adv[:4] %}
             <div class="quick-fact reveal">
                 <div style="font-size:28px;margin-bottom:var(--sp-2);">{{ emoji }}</div>
@@ -65,7 +65,7 @@
             <h2>{{ "Почему туристы выбирают " if lang == "ru" else "Why travelers choose " }}{{ cname_nom }}</h2>
         </div>
         <div class="grid grid-3">
-            {% if data and adv %}
+            {% if country_data and adv %}
             {% for emoji, title, desc in adv %}
             <div class="card reveal" style="cursor:default;">
                 <div class="card-body" style="padding:var(--sp-8);">
@@ -91,7 +91,7 @@
             <p class="section-eyebrow">{{ "Погода" if lang == "ru" else "Weather" }}</p>
             <h2>{{ "Когда лучше ехать в " if lang == "ru" else "Best time to visit " }}{{ cname_prep }}</h2>
         </div>
-        {% set seas = data.seasons_en if lang == "en" else data.seasons_ru %}
+        {% set seas = country_data.seasons_en if lang == "en" else country_data.seasons_ru %}
         {% if data and seas %}
         <div class="grid grid-4" style="gap:var(--sp-4);">
             {% for emoji, title, temp, desc in seas %}
@@ -110,32 +110,34 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     CITIES — Main cities grid
+     REGIONS — Main regions grid
      ═══════════════════════════════════════════════════════════════ -->
 <section class="section" style="background:var(--surface);" id="cities">
     <div class="container">
         <div class="section-header">
-            <p class="section-eyebrow">{{ "Города" if lang == "ru" else "Cities" }}</p>
-            <h2>{{ "Города и курорты " if lang == "ru" else "Cities & resorts of " }}{{ cname_nom }}</h2>
-            <p>{{ "Подробные путеводители по каждому городу — отели, экскурсии, цены." if lang == "ru" else "Detailed guides for each city — hotels, excursions, prices." }}</p>
+            <p class="section-eyebrow">{{ "Регионы" if lang == "ru" else "Regions" }}</p>
+            <h2>{{ "Регионы и города " if lang == "ru" else "Regions & cities of " }}{{ cname_nom }}</h2>
+            <p>{{ "Подробные путеводители по каждому региону и городу." if lang == "ru" else "Detailed guides for each region and city." }}</p>
         </div>
-        <div class="grid grid-4">
-            {% for city_slug, city_data in cities.items() %}
-            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city_data.articles[0].url }}.html" class="card city-card reveal">
-                <div class="card-img">
-                    <img src="{{ city_data.image }}" alt="{{ city_data.name_en if lang == 'en' else city_data.name_ru }}" loading="lazy">
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">{{ city_data.name_en if lang == "en" else city_data.name_ru }}</h4>
-                    {% if city_data.desc %}<p class="card-desc">{{ city_data.desc[:80] }}{% if city_data.desc|length > 80 %}...{% endif %}</p>{% endif %}
-                    <div class="card-meta" style="margin-top:var(--sp-3);display:flex;gap:var(--sp-2);flex-wrap:wrap;">
-                        <span class="badge badge-accent" style="font-size:11px;">{{ "Путеводитель" if lang == "ru" else "Guide" }}</span>
-                        {% if city_data.articles|length > 1 %}
-                        <span class="badge" style="font-size:11px;background:var(--bg);color:var(--text-secondary);">{{ city_data.articles|length }} {{ "статей" if lang == "ru" else "articles" }}</span>
-                        {% endif %}
+        <div class="grid grid-3">
+            {% for region_slug, region in regions.items() %}
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-8);">
+                    <h3 class="h3" style="margin-bottom:var(--sp-3);">{{ region.name_en if lang == "en" else region.name_ru }}</h3>
+                    <div class="grid grid-2" style="gap:var(--sp-3);">
+                        {% for city_slug, city in region.cities.items() %}
+                        <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card" style="margin:0;">
+                            <div class="card-img" style="height:120px;">
+                                <img src="{{ city.image }}" alt="{{ city.name_en if lang == 'en' else city.name_ru }}" loading="lazy">
+                            </div>
+                            <div class="card-body" style="padding:var(--sp-3);">
+                                <h4 style="font-size:14px;font-weight:600;">{{ city.name_en if lang == "en" else city.name_ru }}</h4>
+                            </div>
+                        </a>
+                        {% endfor %}
                     </div>
                 </div>
-            </a>
+            </div>
             {% endfor %}
         </div>
     </div>
@@ -150,7 +152,7 @@
             <p class="section-eyebrow">{{ "Информация" if lang == "ru" else "Information" }}</p>
             <h2>{{ "Практическая информация" if lang == "ru" else "Practical information" }}</h2>
         </div>
-        {% set prac = data.practical_en if lang == "en" else data.practical_ru %}
+        {% set prac = country_data.practical_en if lang == "en" else country_data.practical_ru %}
         {% if data and prac %}
         <div class="grid grid-3" style="gap:var(--sp-4);">
             {% if lang == "en" %}
@@ -274,7 +276,7 @@
             <p class="section-eyebrow">FAQ</p>
             <h2>{{ "Часто задаваемые вопросы" if lang == "ru" else "Frequently Asked Questions" }}</h2>
         </div>
-        {% set faqs = data.faq_en if lang == "en" else data.faq_ru %}
+        {% set faqs = country_data.faq_en if lang == "en" else country_data.faq_ru %}
         {% if data and faqs %}
         <div class="faq-list">
             {% for q, a in faqs %}

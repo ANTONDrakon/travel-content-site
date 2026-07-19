@@ -20,7 +20,13 @@ def plan_content_hierarchy(country_slug=None):
     countries = {country_slug: DESTINATIONS[country_slug]} if country_slug else DESTINATIONS
 
     for c_slug, dest in countries.items():
-        for city_slug, city in dest.get("cities", {}).items():
+        # Handle both old structure (cities) and new structure (regions -> cities)
+        cities = dest.get("cities", {})
+        if not cities:
+            for region_data in dest.get("regions", {}).values():
+                cities.update(region_data.get("cities", {}))
+
+        for city_slug, city in cities.items():
             for ct_slug, ct_info in sorted(CONTENT_TYPES.items(), key=lambda x: x[1]["priority"]):
                 for lang in ["ru", "en"]:
                     content_path = _get_content_path(c_slug, city_slug, ct_slug, lang)

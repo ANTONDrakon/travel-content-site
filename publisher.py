@@ -348,6 +348,8 @@ DESTINATIONS_LIST = [
     {"slug": "kamchatka", "name_ru": "Камчатка", "name_en": "Kamchatka", "group": "russia"},
     {"slug": "mineral-vody", "name_ru": "Кавказские Минеральные Воды", "name_en": "Caucasian Mineral Waters", "group": "russia"},
     {"slug": "kavkaz", "name_ru": "Кавказ", "name_en": "Caucasus", "group": "russia"},
+    {"slug": "kaliningrad", "name_ru": "Калининград", "name_en": "Kaliningrad", "group": "russia"},
+    {"slug": "kamchatka", "name_ru": "Камчатка", "name_en": "Kamchatka", "group": "russia"},
     {"slug": "vladivostok", "name_ru": "Владивосток", "name_en": "Vladivostok", "group": "russia"},
     # International
     {"slug": "turkey", "name_ru": "Турция", "name_en": "Turkey", "group": "international"},
@@ -379,6 +381,8 @@ COUNTRY_IMAGES = {
     "kamchatka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
     "mineral-vody": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
     "kavkaz": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
+    "kaliningrad": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80",
+    "kamchatka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
     "vladivostok": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=80",
     "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
     "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
@@ -501,6 +505,13 @@ CITY_IMAGES = {
     "dombay": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
     "elbrus": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
     "kislovodsk-c": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80",
+    # Kaliningrad
+    "kaliningrad-city": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+    "zelenogradsk": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+    "svetlogorsk": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+    # Kamchatka
+    "petropavlovsk-kamchatsky": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "paratunka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
 }
 
 
@@ -549,15 +560,19 @@ def build_home_page(lang):
 
     countries_data = []
     for slug, country in DESTINATIONS.items():
+        regions = country.get("regions", {})
+        cities_count = 0
+        for region in regions.values():
+            cities_count += len(region.get("cities", {}))
+        
         countries_data.append({
             "slug": slug,
             "name_ru": country["name_ru"],
             "name_en": country["name_en"],
             "emoji": get_country_emoji(slug),
             "image": get_country_image(slug),
-            "cities": country["cities"],
-            "cities_count": len(country["cities"]),
-            "guides_count": len(country["cities"]) * 5,
+            "regions_count": len(regions),
+            "cities_count": cities_count,
         })
 
     template = env.get_template("home.html")
@@ -603,191 +618,101 @@ def build_destination_page(country_slug, lang):
             "attractions": "Attractions", "seasons": "Seasons & Weather",
         }
 
-    all_articles = {}
-    for city_slug, city_data in country["cities"].items():
-        city_articles = []
-        for ct_slug in ["guide", "hotels", "flights", "attractions", "seasons"]:
-            url_slug = get_url_slug(ct_slug, city_slug, lang)
-            city_articles.append({
-                "url": url_slug,
-                "label": labels.get(ct_slug, ct_slug),
-                "icon": icons.get(ct_slug, "📄"),
-            })
-        all_articles[city_slug] = city_articles
-
-    cities_with_images = {}
-    for city_slug, city_data in country["cities"].items():
-        cities_with_images[city_slug] = {
-            "name_ru": city_data["name_ru"],
-            "name_en": city_data["name_en"],
-            "articles": all_articles[city_slug],
-            "image": get_city_image(city_slug),
+    # Build regions data with cities
+    regions = country.get("regions", {})
+    regions_data = {}
+    for region_slug, region in regions.items():
+        cities_data = {}
+        for city_slug, city in region.get("cities", {}).items():
+            city_articles = []
+            for ct_slug in ["guide", "hotels", "flights", "attractions", "seasons"]:
+                url_slug = get_url_slug(ct_slug, city_slug, lang)
+                city_articles.append({
+                    "url": url_slug,
+                    "label": labels.get(ct_slug, ct_slug),
+                    "icon": icons.get(ct_slug, "📄"),
+                })
+            cities_data[city_slug] = {
+                "name_ru": city["name_ru"],
+                "name_en": city["name_en"],
+                "slug": city_slug,
+                "articles": city_articles,
+                "image": get_city_image(city_slug),
+            }
+        regions_data[region_slug] = {
+            "name_ru": region["name_ru"],
+            "name_en": region["name_en"],
+            "slug": region_slug,
+            "cities": cities_data,
         }
 
-    city_names_list = [c["name_en"] if lang == "en" else c["name_ru"] for c in country["cities"].values()]
+    city_names_list = []
+    for region in regions.values():
+        for city in region.get("cities", {}).values():
+            city_names_list.append(city["name_en"] if lang == "en" else city["name_ru"])
 
     city_descriptions = {
-        "istanbul": "Город на двух континентах: дворцы, мечети, базары. Культурная столица страны.",
-        "antalya": "Средиземноморский курорт: пляжи, All Inclusive, Старый город. Универсальный выбор.",
-        "alanya": "Бюджетный курорт с крепостью и пляжем Клеопатры. Отличный сервис за разумные деньги.",
-        "bodrum": "Эгейский курорт европейского стиля: марина, белые дома, ночная жизнь.",
-        "cappadocia": "Лунный пейзаж, воздушные шары, пещерные отели. Уникальный регион.",
-        "bangkok": "Мегаполис контрастов: храмы, небоскрёбы, стритфуд. Ворота в Юго-Восточную Азию.",
-        "phuket": "Крупнейший остров Таиланда: пляжи, дайвинг, ночная жизнь.",
-        "pattaya": "Курортный город с активной ночной жизнью. Бюджетно, весело, близко к Бангкоку.",
-        "koh-samui": "Остров с кокосовыми рощами и спа. Спокойный, семейный, живописный.",
-        "krabi": "Провинция с карстовыми скалами и изумрудным морем. Для любителей природы.",
-        "sharm-el-sheikh": "Дайверская столица Красного моря. Кораллы, рыбы, заповедник Рас-Мохаммед.",
-        "hurghada": "Самый доступный курорт Египта. Пляжный отдых, дайвинг, экскурсии.",
-        "cairo": "Мегаполис у пирамид. Гизы, Каирский музей, базар Хан-эль-Халили.",
-        "luxor": "Древние Фивы: Долина царей, Карнакский храм. Музей под открытым небом.",
-        "marsa-alam": "Уединённый дайверский рай на юге. Дюгони, нетронутые рифы.",
-        "dubai": "Город будущего: небоскрёбы, шопинг, развлечения. Самый популярный эмират.",
-        "abu-dhabi": "Столица ОАЭ: культура, Лувр, мечеть шейха Зайда. Спокойный и респектабельный.",
-        "sharjah": "Культурная столица: музеи, heritage-районы. Самый строгий, но бюджетный.",
-        "fujairah": "Единственный эмират на Индийском океане. Дайвинг, снорклинг, горы Хаджар.",
-        "ras-al-khaimah": "Природа и приключения: гора Джебель-Джейс, мангровые заросли, уединение.",
-        "ubud": "Духовное сердце Бали: рисовые террасы, йога, храмы. Для творческих натур.",
-        "kuta": "Пляжный и серф-центр Бали. Бюджетно, шумно, весело.",
-        "seminyak": "Богемный район Бали: модные кафе, бутики, закатные бары.",
-        "canggu": "Хипстерский серф-район Бали: кофе, бассейны, коворкинги.",
-        "nusa-dua": "Элитный анклав Бали: люксовые курорты, гольф, белый песок.",
-        "sanya": "Тропический рай Хайнаня: пальмы, пляжи, бухты. Китайские Гавайи.",
-        "haikou": "Столица Хайнаня: колониальная архитектура, вулканические парки.",
-        "beijing": "Великая столица: Запретный город, Великая стена, хутуны.",
-        "shanghai": "Футуристический мегаполис: Вайтань, небоскрёбы Пудуна.",
-        "xian": "Древняя столица: Терракотовая армия, мусульманский квартал.",
-        "male": "Столица Мальдив: коралловая мечеть, рыбный рынок, отправная точка.",
-        "maafushi": "Бюджетный локальный остров: бикини-бич, экскурсии, гестхаусы.",
-        "hulhumale": "Искусственный остров: широкие пляжи, новый аэропорт.",
-        "thulusdhoo": "Сёрф-остров: волны, кокосовая фабрика, аутентичный быт.",
-        "dhigurah": "Длинный песчаный остров: китовые акулы, дайвинг, уединение.",
-        "istanbul_en": "City on two continents: palaces, mosques, bazaars. Cultural capital.",
-        "antalya_en": "Mediterranean resort: beaches, All Inclusive, Old Town. Universal choice.",
-        "alanya_en": "Budget resort with castle and Cleopatra Beach. Great value for money.",
-        "bodrum_en": "Aegean resort with European flair: marina, white houses, nightlife.",
-        "cappadocia_en": "Lunar landscape, balloons, cave hotels. Unique region of Turkey.",
-        "bangkok_en": "Megacity of contrasts: temples, skyscrapers, street food. Gateway to SE Asia.",
-        "phuket_en": "Thailand's largest island: beaches, diving, nightlife. For everyone.",
-        "pattaya_en": "Resort city with vibrant nightlife. Budget-friendly, close to Bangkok.",
-        "koh-samui_en": "Island with coconut groves and spas. Relaxed, family-friendly, scenic.",
-        "krabi_en": "Province with karst cliffs and emerald sea. For nature lovers.",
-        "sharm-el-sheikh_en": "Diving capital of the Red Sea. Corals, fish, Ras Mohammed Reserve.",
-        "hurghada_en": "Egypt's most affordable resort. Beach vacation, diving, excursions.",
-        "cairo_en": "Megacity by the pyramids. Giza, Egyptian Museum, Khan El Khalili.",
-        "luxor_en": "Ancient Thebes: Valley of Kings, Karnak Temple. Open-air museum.",
-        "marsa-alam_en": "Secluded diving paradise in the south. Dugongs, pristine reefs.",
-        "dubai_en": "City of the future: skyscrapers, shopping, entertainment. Most popular emirate.",
-        "abu-dhabi_en": "Capital of UAE: culture, Louvre, Sheikh Zayed Mosque. Calm and respectable.",
-        "sharjah_en": "Cultural capital: museums, heritage districts. Strictest but affordable.",
-        "fujairah_en": "Only emirate on Indian Ocean. Diving, snorkeling, Hajar Mountains.",
-        "ras-al-khaimah_en": "Nature & adventure: Jebel Jais, mangroves, total seclusion.",
-        "ubud_en": "Spiritual heart of Bali: rice terraces, yoga, temples. For creatives.",
-        "kuta_en": "Beach and surf center of Bali. Budget, loud, fun.",
-        "seminyak_en": "Bohemian Bali: trendy cafes, boutiques, sunset bars.",
-        "canggu_en": "Hipster surf area: coffee, pools, co-working spaces.",
-        "nusa-dua_en": "Elite Bali enclave: luxury resorts, golf, white sand.",
-        "sanya_en": "Hainan's tropical paradise: palms, beaches, bays. China's Hawaii.",
-        "haikou_en": "Hainan's capital: colonial architecture, volcanic parks, spa.",
-        "beijing_en": "Great capital: Forbidden City, Great Wall, hutongs.",
-        "shanghai_en": "Futuristic megacity: Bund waterfront, Pudong skyscrapers.",
-        "xian_en": "Ancient capital: Terracotta Army, Muslim Quarter, city wall.",
-        "male_en": "Maldives capital: coral mosque, fish market, departure point.",
-        "maafushi_en": "Budget local island: bikini beach, excursions, guesthouses.",
-        "hulhumale_en": "Artificial island: wide beaches, new airport, modern.",
-        "thulusdhoo_en": "Surf island: waves, coconut factory, authentic island life.",
-        "dhigurah_en": "Long sandbank island: whale sharks, diving, total seclusion.",
-        # Russian destinations
-        "moscow": "Столица России: Кремль, Красная площадь, Третьяковка. Сердце страны.",
-        "saint-petersburg": "Северная Венеция: Эрмитаж, белые ночи, дворцы и разводные мосты.",
-        "sochi": "Курортное сердце Черноморья: пляжи, Олимпиада, Красная Поляна.",
-        "kaliningrad": "Русская Европа: янтарь, форты, балтийские пляжи.",
-        "kazan": "Столица Татарстана: Кремль, мечеть Кул-Шариф, восточный колорит.",
-        "irkutsk": "Врата к Байкалу: деревянные дома, озёра, тайга.",
-        "listvyanka": "Посёлок на берегу Байкала: музей озера, промысел, свежая рыба.",
-        "olkhon": "Остров в сердце Байкала: шаманские места, скалы, пляжи.",
-        "gorno-altaysk": "Горная столица Алтая: природа, горы, реки.",
-        "chemyal": "Живописное ущелье на Чемале: Аккемский водопад, мосты.",
-        "akkem": "Лагерь у подножия Белухи: треккинг, горные озёра.",
-        "petrozavodsk": "Столица Карелии: озёра, национальные парки, традиции.",
-        "sortavala": "Город у Ладожского озера: крепость, парки, острова.",
-        "kizhi": "Остров-музей: Преображенская церковь, деревянное зодчество.",
-        "makhachkala": "Столица Дагестана: горы, базары, гостеприимство.",
-        "derbent": "Древнейший город России: Нарын-кала, старый город.",
-        "kizlyar": "Ворота Дагестана: виноделие, казачья культура.",
-        "petropavlovsk-kamchatsky": "Столица Камчатки: вулканы, гейзеры, медведи.",
-        "paratunka": "Курорт с горячими источниками: термальные ванны.",
-        "pyatigorsk": "Столица КМВ: серные источники, Лермонтовские места.",
-        "kislovodsk": "Город-курорт: Нарзанная галерея, долина роз.",
-        "essentuki": "Минеральные воды: питьевые источники, парки.",
-        "vladivostok-city": "Порт на Тихом океане: мосты, бухты, Азиатско-Тихоокеанская конференция.",
-        "russky-island": "Остров у Владивостока: мост, пляжи, парки.",
-        # English
-        "moscow_en": "Capital of Russia: Kremlin, Red Square, Tretyakov Gallery. Heart of the country.",
-        "saint-petersburg_en": "Northern Venice: Hermitage, White Nights, palaces and drawbridges.",
-        "sochi_en": "Black Sea resort: beaches, Olympics, Krasnaya Polyana skiing.",
-        "kaliningrad_en": "Russian Europe: amber, forts, Baltic beaches.",
-        "kazan_en": "Capital of Tatarstan: Kremlin, Kul-Sharif mosque, Eastern flair.",
-        "irkutsk_en": "Gateway to Baikal: wooden houses, lakes, taiga.",
-        "listvyanka_en": "Village on Lake Baikal: museum, fishing, fresh omul.",
-        "olkhon_en": "Island in the heart of Baikal: shamanic sites, cliffs, beaches.",
-        "gorno-altaysk_en": "Mountain capital of Altai: nature, rivers, peaks.",
-        "chemyal_en": "Scenic Chemal gorge: Akkem waterfall, bridges.",
-        "akkem_en": "Camp at the foot of Belukha: trekking, mountain lakes.",
-        "petrozavodsk_en": "Capital of Karelia: lakes, national parks, traditions.",
-        "sortavala_en": "City by Lake Ladoga: fortress, parks, islands.",
-        "kizhi_en": "Museum island: Transfiguration Church, wooden architecture.",
-        "makhachkala_en": "Capital of Dagestan: mountains, bazaars, hospitality.",
-        "derbent_en": "Russia's oldest city: Naryn-Kala fortress, old town.",
-        "kizlyar_en": "Gateway to Dagestan: winemaking, Cossack culture.",
-        "petropavlovsk-kamchatsky_en": "Capital of Kamchatka: volcanoes, geysers, bears.",
-        "paratunka_en": "Resort with hot springs: thermal baths.",
-        "pyatigorsk_en": "Capital of Caucasian Mineral Waters: sulfur springs, Lermontov heritage.",
-        "kislovodsk_en": "Spa city: Narzan gallery, rose valley.",
-        "essentuki_en": "Mineral waters: drinking springs, parks.",
-        "vladivostok-city_en": "Port on the Pacific: bridges, bays, APEC venue.",
-        "russky-island_en": "Island near Vladivostok: bridge, beaches, parks.",
-        # Caucasus
-        "dombay": "Горнолыжный курорт: канатная дорога, горы, отели у подножия.",
-        "elbrus": "Высочайшая точка Европы: канатные дороги, ледники, треккинг.",
-        "kislovodsk-c": "Курортный город: Нарзанная галерея, парки, долина роз.",
-        "dombay_en": "Ski resort: cable car, mountains, hotels at the foot.",
-        "elbrus_en": "Highest point in Europe: cable cars, glaciers, trekking.",
-        "kislovodsk-c_en": "Spa city: Narzan Gallery, parks, rose valley.",
+        "moscow": "Столица: Кремль, Третьяковка, парки",
+        "saint-petersburg": "Северная Венеция: Эрмитаж, белые ночи",
+        "sochi": "Черноморский курорт: пляжи, горы",
+        "kazan": "Столица Татарстана: Кремль, мечеть",
+        "kaliningrad": "Балтика: янтарь, форты, пляжи",
+        "irkutsk": "Врата к Байкалу: деревянные дома, озёра",
+        "listvyanka": "Посёлок на берегу Байкала: музей, промысел",
+        "olkhon": "Остров в сердце Байкала: шаманские места",
+        "gorno-altaysk": "Горная столица Алтая: природа, горы",
+        "makhachkala": "Столица Дагестана: горы, базары",
+        "derbent": "Древнейший город России: Нарын-кала",
+        "petropavlovsk-kamchatsky": "Столица Камчатки: вулканы, гейзеры",
+        "pyatigorsk": "Столица КМВ: серные источники",
+        "vladivostok": "Порт на Тихом океане: мосты, бухты",
+        "istanbul": "Город на двух континентах: дворцы, мечети, базары",
+        "antalya": "Средиземноморский курорт: пляжи, All Inclusive",
+        "bodrum": "Эгейский курорт европейского стиля: марина, белые дома",
+        "goreme": "Лунный пейзаж, воздушные шары, пещерные отели",
+        "bangkok": "Мегаполис контрастов: храмы, небоскрёбы, стритфуд",
+        "phuket": "Крупнейший остров Таиланда: пляжи, дайвинг",
+        "pattaya": "Курортный город с активной ночной жизнью",
+        "koh-samui": "Остров с кокосовыми рощами и спа",
+        "krabi": "Карстовые скалы и изумрудное море",
+        "sharm-el-sheikh": "Дайверская столица Красного моря",
+        "hurghada": "Самый доступный курорт Египта",
+        "cairo": "Мегаполис у пирамид",
+        "luxor": "Древние Фивы: Долина царей",
+        "dubai": "Город будущего: небоскрёбы, шопинг",
+        "abu-dhabi": "Столица ОАЭ: культура, Лувр",
+        "ubud": "Духовное сердце Бали: рисовые террасы",
+        "kuta": "Пляжный и серф-центр Бали",
+        "beijing": "Великая столица: Запретный город, Великая стена",
+        "shanghai": "Футуристический мегаполис",
+        "male": "Столица Мальдив: коралловая мечеть",
+        "maafushi": "Бюджетный локальный остров",
+        "colombo": "Столица Шри-Ланки: океан, храмы",
+        "budva": "Черноморская жемчужина: Старый город, пляжи",
+        "kotor": "Средневековая крепость на бухте",
+        "da-nang": "Горы, пляжи, старый город Хой-Ан",
+        "hanoi": "Столица Вьетнама: озёра, храмы",
+        "tbilisi": "Столица Грузии: старый город, бани",
+        "batumi": "Черноморский курорт: набережная",
+        "limassol": "Средиземноморье: пляжи, крепость",
+        "muscat": "Столица Омана: горы, побережье",
     }
 
-    for city_slug in cities_with_images:
-        desc_key = f"{city_slug}_en" if lang == "en" else city_slug
-        cities_with_images[city_slug]["desc"] = city_descriptions.get(desc_key, "")
+    # Count cities and regions
+    total_cities = sum(len(r.get("cities", {})) for r in regions.values())
+    total_regions = len(regions)
 
     template = env.get_template("destination-rich.html")
-
-    og_images = {
-        "russia": "https://images.unsplash.com/photo-1513326738677-b964603b136d?w=1200&q=80",
-        "baikal": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=1200&q=80",
-        "altai": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
-        "karelia": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&q=80",
-        "dagestan": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?w=1200&q=80",
-        "kamchatka": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80",
-        "mineral-vody": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80",
-        "vladivostok": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=1200&q=80",
-        "turkey": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80",
-        "thailand": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200&q=80",
-        "egypt": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1200&q=80",
-        "uae": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
-        "indonesia": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1200&q=80",
-        "china": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200&q=80",
-        "maldives": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
-    }
     html = template.render(
         lang=lang,
         country=country,
-        cities=cities_with_images,
+        country_data=country_data,
+        regions=regions_data,
         city_names=city_names_list,
-        articles_count=len(country["cities"]) * 5,
+        regions_count=total_regions,
+        cities_count=total_cities,
         hero_image=get_country_image(country_slug),
         insurance_link=insurance_link(),
-        data=country_data,
         agent_photo=AGENT_PHOTO,
         agent_photos=AGENT_PHOTOS,
         alternate_url=f"{country_slug}/index.html",
@@ -796,7 +721,8 @@ def build_destination_page(country_slug, lang):
             {"label": country["name_en"] if lang == "en" else country["name_ru"],
              "url": f"/{lang}/{country_slug}/index.html"},
         ],
-        og_image=og_images.get(country_slug, ""),
+        og_image=get_country_image(country_slug),
+        city_descriptions=city_descriptions,
     )
 
     out = OUTPUT_DIR / lang / country_slug / "index.html"
@@ -806,85 +732,47 @@ def build_destination_page(country_slug, lang):
 
 
 def _build_travel_assist_card(content_type, city_name, lang, country_slug):
-    """Generate Travel Assistance Card HTML based on article content type.
-    Uses affiliate links from config/affiliates.py."""
-    from config.affiliates import hotels_link, flights_link, tours_link, insurance_link
+    """Generate Travel Assistance Card HTML based on article content type."""
+    from config.affiliates import hotels_link, flights_link, tours_link
 
     city_slug = city_name.lower().replace(" ", "-")
 
-    # Get airport code for flights
-    from config.destinations import DESTINATIONS
-    destination_code = "MOW"
-    country = DESTINATIONS.get(country_slug, {})
-    for c_slug, city_data in country.get("cities", {}).items():
-        if city_data.get("name_en", "").lower() == city_name.lower():
-            codes = city_data.get("airport_codes", [])
-            if codes:
-                destination_code = codes[0]
-            break
-
     if lang == "ru":
         title = "Помощь с планированием поездки"
-        desc = "Если вы планируете поездку в этот регион, вы можете самостоятельно сравнить предложения у проверенных сервисов или оставить заявку на индивидуальный подбор тура."
+        desc = "Если вы планируете поездку, вы можете самостоятельно сравнить предложения или оставить заявку."
         btn_tour = "Подобрать тур"
-        btn_compare = "Сравнить предложения"
-        note = "Ссылки ведут на проверенные сервисы с актуальными ценами."
+        note = "Ссылки ведут на проверенные сервисы."
     else:
         title = "Help planning your trip"
-        desc = "If you're planning a trip to this region, you can compare offers from trusted services or leave a request for personalized tour selection."
+        desc = "If you're planning a trip, you can compare offers or leave a request."
         btn_tour = "Plan a trip"
-        btn_compare = "Compare offers"
-        note = "Links lead to trusted services with current prices."
+        note = "Links lead to trusted services."
 
-    # Choose relevant services based on content type
     buttons = []
-
     if content_type in ("guide", "hotels"):
-        buttons.append(("🏨 " + ("Забронировать отель" if lang == "ru" else "Book a hotel"),
-                        hotels_link(city_slug)))
-        buttons.append(("✈ " + ("Найти авиабилеты" if lang == "ru" else "Find flights"),
-                        flights_link(destination=destination_code)))
-        buttons.append(("🚕 " + ("Заказать трансфер" if lang == "ru" else "Book transfer"),
-                        "https://tp.media/click?shmarker=736226&promo_id=3782&source_type=link&type=click&campaign_id=112&trs=kiwitaxi"))
-        buttons.append(("📱 " + ("Купить eSIM" if lang == "ru" else "Get eSIM"),
-                        "https://tp.media/click?shmarker=736226&promo_id=3803&source_type=link&type=click&campaign_id=118&trs=airalo"))
-
+        buttons.append(("🏨 " + ("Отели" if lang == "ru" else "Hotels"), hotels_link(city_slug)))
+        buttons.append(("✈ " + ("Билеты" if lang == "ru" else "Flights"), flights_link()))
+        buttons.append(("🚕 " + ("Трансфер" if lang == "ru" else "Transfer"), "https://tp.media/click?shmarker=736226&promo_id=3782&source_type=link&type=click&campaign_id=112&trs=kiwitaxi"))
     elif content_type == "flights":
-        buttons.append(("✈ " + ("Найти авиабилеты" if lang == "ru" else "Find flights"),
-                        flights_link(destination=destination_code)))
-        buttons.append(("🏨 " + ("Забронировать отель" if lang == "ru" else "Book a hotel"),
-                        hotels_link(city_slug)))
-        buttons.append(("🚌 " + ("Сравнить рейсы" if lang == "ru" else "Compare routes"),
-                        "https://tp.media/click?shmarker=736226&promo_id=3799&source_type=link&type=click&campaign_id=114&trs=kiwicom"))
-
+        buttons.append(("✈ " + ("Билеты" if lang == "ru" else "Flights"), flights_link()))
+        buttons.append(("🏨 " + ("Отели" if lang == "ru" else "Hotels"), hotels_link(city_slug)))
     elif content_type == "attractions":
-        buttons.append(("🎟 " + ("Забронировать экскурсии" if lang == "ru" else "Book excursions"),
-                        "https://tp.media/click?shmarker=736226&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide"))
-        buttons.append(("🏨 " + ("Забронировать отель" if lang == "ru" else "Book a hotel"),
-                        hotels_link(city_slug)))
-        buttons.append(("🚕 " + ("Заказать трансфер" if lang == "ru" else "Book transfer"),
-                        "https://tp.media/click?shmarker=736226&promo_id=3782&source_type=link&type=click&campaign_id=112&trs=kiwitaxi"))
+        buttons.append(("🎟 " + ("Экскурсии" if lang == "ru" else "Excursions"), "https://tp.media/click?shmarker=736226&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide"))
+        buttons.append(("🏨 " + ("Отели" if lang == "ru" else "Hotels"), hotels_link(city_slug)))
+    else:
+        buttons.append(("🏨 " + ("Отели" if lang == "ru" else "Hotels"), hotels_link(city_slug)))
+        buttons.append(("✈ " + ("Билеты" if lang == "ru" else "Flights"), flights_link()))
 
-    elif content_type == "seasons":
-        buttons.append(("🏨 " + ("Забронировать отель" if lang == "ru" else "Book a hotel"),
-                        hotels_link(city_slug)))
-        buttons.append(("✈ " + ("Найти авиабилеты" if lang == "ru" else "Find flights"),
-                        flights_link(destination=destination_code)))
-        buttons.append(("🗺 " + ("Подобрать тур" if lang == "ru" else "Find a tour"),
-                        tours_link(city_name)))
-
-    # Always add tour request button
     buttons.append(("🎯 " + btn_tour, "#agent-form"))
 
-    # Build HTML
     actions_html = ""
     for label, url in buttons:
         if url.startswith("#"):
-            actions_html += f'<a href="{url}" class="travel-assist-btn travel-assist-btn-primary">{label}</a>\n'
+            actions_html += f'<a href="{url}" class="btn btn-accent btn-sm">{label}</a>\n'
         else:
-            actions_html += f'<a href="{url}" target="_blank" rel="nofollow sponsored" class="travel-assist-btn travel-assist-btn-outline">{label}</a>\n'
+            actions_html += f'<a href="{url}" target="_blank" rel="nofollow sponsored" class="btn btn-outline btn-sm">{label}</a>\n'
 
-    card_html = f'''<div class="travel-assist">
+    return f'''<div class="travel-assist">
     <div class="travel-assist-header">
         <div class="travel-assist-icon">✈️</div>
         <div class="travel-assist-title">{title}</div>
@@ -895,8 +783,6 @@ def _build_travel_assist_card(content_type, city_name, lang, country_slug):
     </div>
     <p class="travel-assist-note">{note}</p>
 </div>'''
-
-    return card_html
 
 
 def build_article_page(country_slug, city_slug, content_type, lang):
@@ -909,7 +795,14 @@ def build_article_page(country_slug, city_slug, content_type, lang):
     if not country:
         return
 
-    city = country["cities"].get(city_slug)
+    # Find city in regions
+    city = None
+    regions = country.get("regions", {})
+    for region in regions.values():
+        city = region.get("cities", {}).get(city_slug)
+        if city:
+            break
+    
     if not city:
         return
 
@@ -1175,9 +1068,12 @@ def build_all():
         for lang in ["ru", "en"]:
             print(f"\n[{lang.upper()}] Building {country_slug}...")
             build_destination_page(country_slug, lang)
-            for city_slug in DESTINATIONS[country_slug]["cities"]:
-                for ct_slug in CONTENT_TYPES:
-                    build_article_page(country_slug, city_slug, ct_slug, lang)
+            # Build articles for all cities in all regions
+            regions = DESTINATIONS[country_slug].get("regions", {})
+            for region in regions.values():
+                for city_slug in region.get("cities", {}):
+                    for ct_slug in CONTENT_TYPES:
+                        build_article_page(country_slug, city_slug, ct_slug, lang)
 
     build_index_redirect()
     

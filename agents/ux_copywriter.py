@@ -104,52 +104,70 @@ def validate_structure(body):
             issues.append(f"HEADING_HIERARCHY: h{prev_level} → h{level} skip (text: {text[:50]})")
         prev_level = level
 
-    # Check for very long paragraphs (>600 chars without line breaks)
-    paragraphs = re.split(r'</p>', body)
+    # Check for very long paragraphs (>500 chars without line breaks)
+    paragraphs = re.findall(r'<p>(.*?)</p>', body, re.DOTALL)
     for i, p in enumerate(paragraphs):
         clean = re.sub(r'<[^>]+>', '', p)
-        if len(clean) > 600:
+        if len(clean) > 500:
             issues.append(f"LONG_PARAGRAPH: Paragraph {i+1} is {len(clean)} chars — consider breaking it up")
 
     # Check for orphan headings (heading with no content after)
-    for match in re.finditer(r'<h[23]>(.*?)</h[23]>\s*<(?:h[23]|/)', body):
-        issues.append(f"ORPHAN_HEADING: {match.group(1)[:50]}")
+    # Only flag if H2 is followed by H2, or H3 is followed by H3 (same level)
+    # H2→H3 is legitimate hierarchy (category → item)
+    for match in re.finditer(r'<h([23])>(.*?)</h\1>\s*<h\1>', body):
+        level = match.group(1)
+        heading_text = match.group(2)[:50]
+        # Skip common navigation/table-of-contents headings
+        skip_patterns = ['содержание', 'contents', 'навигация', 'navigation', 'таблица', 'table']
+        if not any(p in heading_text.lower() for p in skip_patterns):
+            issues.append(f"ORPHAN_HEADING: h{level} '{heading_text}'")
 
     return issues
 
 
 def break_long_paragraphs(body, max_chars=500):
-    """Automatically break long paragraphs into shorter ones at sentence boundaries."""
+    """Automatically break long paragraphs into shorter ones at sentence boundaries.
+
+    Handles HTML content inside paragraphs by working with the full HTML string.
+    """
     def break_paragraph(match):
+        full_tag = match.group(0)
         p_content = match.group(1)
         clean = re.sub(r'<[^>]+>', '', p_content)
 
         if len(clean) <= max_chars:
-            return match.group(0)
+            return full_tag
 
-        # Find sentence boundaries (. ! ?) followed by space
-        sentences = re.split(r'(?<=[.!?])\s+', clean)
-        if len(sentences) <= 1:
-            return match.group(0)
+        # Find sentence boundaries (. ! ?) followed by space or end
+        # We need to find positions in the ORIGINAL html, not clean text
+        sentence_ends = []
+        i = 0
+        clean_pos = 0
+        while i < len(p_content):
+            if p_content[i] in '.!?':
+                # Check if this is followed by space or end
+                next_char = p_content[i+1] if i+1 < len(p_content) else ' '
+                if next_char in ' \n\t' or i+1 == len(p_content):
+                    # Calculate clean text position up to this point
+                    clean_before = len(re.sub(r'<[^>]+>', '', p_content[:i+1]))
+                    sentence_ends.append((i+1, clean_before))
+            i += 1
 
-        # Group sentences into paragraphs of max_chars
-        paragraphs = []
-        current = ""
-        for sentence in sentences:
-            if len(current) + len(sentence) + 1 > max_chars and current:
-                paragraphs.append(current.strip())
-                current = sentence
-            else:
-                current = current + " " + sentence if current else sentence
-        if current.strip():
-            paragraphs.append(current.strip())
+        if len(sentence_ends) < 2:
+            return full_tag
+
+        # Find the best split point (closest to middle)
+        mid_clean = len(clean) // 2
+        best_split = min(sentence_ends, key=lambda x: abs(x[1] - mid_clean))
+
+        # Split the HTML content at this position
+        split_html = p_content[:best_split[0]].rstrip()
+        second_html = p_content[best_split[0]:].lstrip()
 
         # Rebuild as HTML paragraphs
-        if len(paragraphs) > 1:
-            return "</p><p>".join(paragraphs)
-        return match.group(0)
+        return f"<p>{split_html}</p>\n<p>{second_html}</p>"
 
-    # Process each <p>...</p> block
+    # Process each <p>...</p> block (allow nested tags)
     body = re.sub(r'<p>(.*?)</p>', break_paragraph, body, flags=re.DOTALL)
     return body
 

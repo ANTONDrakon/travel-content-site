@@ -72,7 +72,14 @@ def run_pipeline(country_slug, city_slug, content_type, lang, force=False):
                 result.add_step("Travel Writer", False, [f"Unknown country: {country_slug}"])
                 return result
 
-            city = destination["cities"].get(city_slug)
+            # Handle both old structure (cities) and new structure (regions -> cities)
+            city = destination.get("cities", {}).get(city_slug)
+            if not city:
+                # New structure: search through regions
+                for region_data in destination.get("regions", {}).values():
+                    city = region_data.get("cities", {}).get(city_slug)
+                    if city:
+                        break
             if not city:
                 result.add_step("Travel Writer", False, [f"Unknown city: {city_slug}"])
                 return result
@@ -133,7 +140,7 @@ def run_pipeline(country_slug, city_slug, content_type, lang, force=False):
         # Step 2: Fact Checker — verify claims
         print(f"[Step 2] Fact Checker — verifying claims...")
         from agents.fact_checker import check_article
-        fact_issues = check_article(article_data["body"], country_slug, lang)
+        fact_issues = check_article(article_data["body"], country_slug, lang, content_type)
         if fact_issues:
             result.add_step("Fact Checker", False, fact_issues)
             # If critical issues, retry
@@ -181,7 +188,18 @@ def run_pipeline(country_slug, city_slug, content_type, lang, force=False):
         print(f"[Step 6] UX Copywriter — polishing content...")
         from agents.ux_copywriter import remove_ai_fingerprints, validate_structure, check_cta_presence, break_long_paragraphs
         article_data["body"] = remove_ai_fingerprints(article_data["body"], lang)
+        body_before_break = article_data["body"]
         article_data["body"] = break_long_paragraphs(article_data["body"], max_chars=500)
+        body_after_break = article_data["body"]
+
+        # Debug: check if break function worked
+        import re as _re
+        paras_before = len(_re.findall(r'<p>(.*?)</p>', body_before_break, _re.DOTALL))
+        paras_after = len(_re.findall(r'<p>(.*?)</p>', body_after_break, _re.DOTALL))
+        long_before = sum(1 for p in _re.findall(r'<p>(.*?)</p>', body_before_break, _re.DOTALL) if len(_re.sub(r'<[^>]+>', '', p)) > 500)
+        long_after = sum(1 for p in _re.findall(r'<p>(.*?)</p>', body_after_break, _re.DOTALL) if len(_re.sub(r'<[^>]+>', '', p)) > 500)
+        print(f"  Break: {paras_before} -> {paras_after} paragraphs, {long_before} -> {long_after} long")
+
         struct_issues = validate_structure(article_data["body"])
         cta_issues = check_cta_presence(article_data["body"], lang)
         all_ux_issues = struct_issues + cta_issues
@@ -198,12 +216,9 @@ def run_pipeline(country_slug, city_slug, content_type, lang, force=False):
         out_dir.mkdir(parents=True, exist_ok=True)
         out_path = out_dir / f"{content_slug}.json"
 
-        if not out_path.exists():
-            with open(out_path, "w", encoding="utf-8") as f:
-                json.dump(article_data, f, ensure_ascii=False, indent=2)
-            print(f"  Saved: {out_path}")
-        else:
-            print(f"  Exists: {out_path}")
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(article_data, f, ensure_ascii=False, indent=2)
+        print(f"  Saved: {out_path}")
 
         result.add_step("Save", True)
         break  # Success — exit retry loop
@@ -224,8 +239,15 @@ def run_country_pipeline(country_slug, langs=None, force=False):
         print(f"Unknown country: {country_slug}")
         return
 
+    # Handle both old structure (cities) and new structure (regions -> cities)
+    cities = dest.get("cities", {})
+    if not cities:
+        # New structure: iterate through regions
+        for region_slug, region_data in dest.get("regions", {}).items():
+            cities.update(region_data.get("cities", {}))
+
     results = []
-    for city_slug, city_data in dest.get("cities", {}).items():
+    for city_slug, city_data in cities.items():
         for lang in langs:
             for ct_slug in CONTENT_TYPES:
                 print(f"\n{'='*60}")

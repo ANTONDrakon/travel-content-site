@@ -407,8 +407,13 @@ def verify_names(country_slug, body):
     return issues
 
 
-def check_article(body, country_slug, lang="ru"):
-    """Run all verification checks on article body."""
+def check_article(body, country_slug, lang="ru", content_type="guide"):
+    """Run all verification checks on article body.
+
+    Checks are context-aware: not all article types need all facts.
+    - guide: all checks (visa, currency, timezone, airports)
+    - hotels/flights/attractions/seasons: currency + timezone only (visa/airports optional)
+    """
     issues = []
 
     # Suspicious patterns
@@ -416,12 +421,16 @@ def check_article(body, country_slug, lang="ru"):
         if re.search(pattern, body, re.IGNORECASE):
             issues.append(f"UNVERIFIED: {desc}")
 
-    # Country-specific checks
+    # Country-specific checks (context-aware)
     if country_slug:
-        issues.extend(verify_visa(country_slug, body, lang))
+        # Currency is important for all article types
         issues.extend(verify_currency(country_slug, body, lang))
-        issues.extend(verify_airports(country_slug, body))
-        issues.extend(verify_timezone(country_slug, body))
+
+        # Only check visa, airports, timezone for guide articles
+        if content_type == "guide":
+            issues.extend(verify_visa(country_slug, body, lang))
+            issues.extend(verify_airports(country_slug, body))
+            issues.extend(verify_timezone(country_slug, body))
 
     # Price checks
     issues.extend(verify_prices(country_slug, body, lang))
@@ -443,8 +452,9 @@ def check_article_file(path):
     body = data.get("body", "")
     country_slug = data.get("country", "")
     lang = data.get("lang", "ru")
+    content_type = data.get("content_type", "guide")
 
-    return check_article(body, country_slug, lang)
+    return check_article(body, country_slug, lang, content_type)
 
 
 def run():

@@ -26,7 +26,13 @@ def analyze_coverage():
             "total_expected": 0,
             "total_generated": 0,
         }
-        for city_slug, city in dest.get("cities", {}).items():
+        # Handle both old structure (cities) and new structure (regions -> cities)
+        cities = dest.get("cities", {})
+        if not cities:
+            for region_data in dest.get("regions", {}).values():
+                cities.update(region_data.get("cities", {}))
+
+        for city_slug, city in cities.items():
             city_coverage = {}
             for ct_slug in CONTENT_TYPES:
                 expected = 2  # ru + en
