@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-{% block title %}{{ "TravelHub — Путеводители 2026" if lang == "ru" else "TravelHub — Travel Guides 2026" }}{% endblock %}
-{% block meta_description %}{{ "Экспертные путеводители по 50+ городам в 20 странах. Отели, билеты, достопримечательности." if lang == "ru" else "Expert travel guides for 50+ cities across 20 countries. Hotels, flights, attractions." }}{% endblock %}
+{% block title %}{{ "TravelHub — Путеводители и гиды по путешествиям 2026" if lang == "ru" else "TravelHub — Travel Guides & Trip Planning 2026" }}{% endblock %}
+{% block meta_description %}{{ "Бесплатные путеводители по 80+ городам: отели, билеты, достопримечательности, советы. Россия, Турция, Таиланд, Египет и другие страны." if lang == "ru" else "Free travel guides for 80+ cities: hotels, flights, attractions, tips. Russia, Turkey, Thailand, Egypt and more destinations." }}{% endblock %}
 
 {% block en_alt %}index.html{% endblock %}
 {% block ru_alt %}index.html{% endblock %}
@@ -16,8 +16,8 @@
      ═══════════════════════════════════════════════════════════════ -->
 <section class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85');">
     <div class="hero-content">
-        <h1 class="display-l">{{ "Путешествуйте осознанно" if lang == "ru" else "Travel with purpose" }}</h1>
-        <p class="hero-subtitle">{{ "Полные путеводители, советы, маршруты и лучшие места для отдыха по всему миру." if lang == "ru" else "Complete guides, tips, routes, and the best places to stay around the world." }}</p>
+        <h1 class="display-l">{{ "Путешествуйте с умом" if lang == "ru" else "Travel smarter" }}</h1>
+        <p class="hero-subtitle">{{ "Честные путеводители с реальными ценами, советами местных и проверенными сервисами для бронирования." if lang == "ru" else "Honest guides with real prices, local tips, and trusted booking services." }}</p>
 
         <div class="hero-search">
             <input type="text" id="hero-search" placeholder="{{ 'Куда хотите поехать?' if lang == 'ru' else 'Where do you want to go?' }}">
@@ -27,21 +27,27 @@
         </div>
 
         <div class="hero-pills">
-            {% set popular = [
-                ("🇹🇭", "Таиланд", "Thailand", "thailand"),
-                ("🇹🇷", "Турция", "Turkey", "turkey"),
-                ("🇻🇳", "Вьетнам", "Vietnam", "vietnam"),
-                ("🇦🇪", "ОАЭ", "UAE", "uae"),
-                ("🇪🇬", "Египет", "Egypt", "egypt"),
-                ("🇷🇺", "Россия", "Russia", "russia"),
-                ("🇲🇻", "Мальдивы", "Maldives", "maldives"),
-                ("🇬🇪", "Грузия", "Georgia", "georgia")
-            ] %}
-            {% for emoji, ru, en, slug in popular %}
-            <a href="{{ root }}/{{ lang }}/{{ slug }}/index.html" class="hero-pill">
-                {{ emoji }} {{ ru if lang == "ru" else en }}
-            </a>
-            {% endfor %}
+            {% if lang == "ru" %}
+            <a href="{{ root }}/ru/russia/index.html" class="hero-pill">🇷🇺 Россия</a>
+            <a href="{{ root }}/ru/turkey/index.html" class="hero-pill">🇹🇷 Турция</a>
+            <a href="{{ root }}/ru/thailand/index.html" class="hero-pill">🇹🇭 Таиланд</a>
+            <a href="{{ root }}/ru/egypt/index.html" class="hero-pill">🇪🇬 Египет</a>
+            <a href="{{ root }}/ru/uae/index.html" class="hero-pill">🇦🇪 ОАЭ</a>
+            <a href="{{ root }}/ru/maldives/index.html" class="hero-pill">🇲🇻 Мальдивы</a>
+            <a href="{{ root }}/ru/georgia/index.html" class="hero-pill">🇬🇪 Грузия</a>
+            <a href="{{ root }}/ru/baikal/index.html" class="hero-pill">💎 Байкал</a>
+            <a href="{{ root }}/ru/karelia/index.html" class="hero-pill">🌲 Карелия</a>
+            <a href="{{ root }}/ru/altai/index.html" class="hero-pill">🏔 Алтай</a>
+            {% else %}
+            <a href="{{ root }}/en/russia/index.html" class="hero-pill">🇷🇺 Russia</a>
+            <a href="{{ root }}/en/turkey/index.html" class="hero-pill">🇹🇷 Turkey</a>
+            <a href="{{ root }}/en/thailand/index.html" class="hero-pill">🇹🇭 Thailand</a>
+            <a href="{{ root }}/en/egypt/index.html" class="hero-pill">🇪🇬 Egypt</a>
+            <a href="{{ root }}/en/uae/index.html" class="hero-pill">🇦🇪 UAE</a>
+            <a href="{{ root }}/en/maldives/index.html" class="hero-pill">🇲🇻 Maldives</a>
+            <a href="{{ root }}/en/georgia/index.html" class="hero-pill">🇬🇪 Georgia</a>
+            <a href="{{ root }}/en/vietnam/index.html" class="hero-pill">🇻🇳 Vietnam</a>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -71,36 +77,79 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     CITIES — Compact cards with country name (4-col)
+     RUSSIA — Home section (priority)
      ═══════════════════════════════════════════════════════════════ -->
 <section class="section section-alt">
     <div class="container">
         <div class="section-header">
-            <p class="section-eyebrow">{{ "Города" if lang == "ru" else "Cities" }}</p>
-            <h2>{{ "Популярные города" if lang == "ru" else "Popular cities" }}</h2>
-            <p>{{ "Красивые карточки с лучшими местами для отдыха." if lang == "ru" else "Beautiful cards with the best places to stay." }}</p>
+            <p class="section-eyebrow">{{ "Россия" if lang == "ru" else "Russia" }}</p>
+            <h2>{{ "Путешествия по России" if lang == "ru" else "Travel across Russia" }}</h2>
+            <p>{{ "Откройте красоту родных просторов — от Байкала до Камчатки." if lang == "ru" else "Discover the beauty of Russia — from Baikal to Kamchatka." }}</p>
         </div>
         <div class="grid grid-4">
-            {% set top_cities = [
-                ("istanbul", "turkey", "Стамбул", "Istanbul", "Турция", "Turkey", "Город на двух континентах", "City on two continents", "⭐⭐⭐⭐⭐"),
-                ("bangkok", "thailand", "Бангкок", "Bangkok", "Таиланд", "Thailand", "Мегаполис контрастов", "Megacity of contrasts", "⭐⭐⭐⭐⭐"),
-                ("phuket", "thailand", "Пхукет", "Phuket", "Таиланд", "Thailand", "Лучшие пляжи Таиланда", "Thailand's best beaches", "⭐⭐⭐⭐⭐"),
-                ("dubai", "uae", "Дубай", "Dubai", "ОАЭ", "UAE", "Город будущего", "City of the future", "⭐⭐⭐⭐⭐"),
-                ("maldives", "maldives", "Мальдивы", "Maldives", "Мальдивы", "Maldives", "Рай на земле", "Paradise on earth", "⭐⭐⭐⭐⭐"),
-                ("sochi", "russia", "Сочи", "Sochi", "Россия", "Russia", "Курортное сердце Черноморья", "Black Sea resort heart", "⭐⭐⭐⭐⭐"),
-                ("tbilisi", "georgia", "Тбилиси", "Tbilisi", "Грузия", "Georgia", "Древняя столица Грузии", "Ancient Georgian capital", "⭐⭐⭐⭐⭐"),
-                ("hanoi", "vietnam", "Ханой", "Hanoi", "Вьетнам", "Vietnam", "Столица Вьетнама", "Capital of Vietnam", "⭐⭐⭐⭐⭐")
+            {% set russia_cities = [
+                ("moscow", "russia", "🏛", "Москва", "Moscow", "Россия", "Russia", "Столица: Кремль, Третьяковка, парки", "Capital: Kremlin, Tretyakov, parks", "https://images.unsplash.com/photo-1513326738677-b964603b136d?w=600&q=80"),
+                ("saint-petersburg", "russia", "🏛", "Санкт-Петербург", "St. Petersburg", "Россия", "Russia", "Северная Венеция: Эрмитаж, белые ночи", "Northern Venice: Hermitage, White Nights", "https://images.unsplash.com/photo-1556610930-e515011324f3?w=600&q=80"),
+                ("sochi", "russia", "🏖", "Сочи", "Sochi", "Россия", "Russia", "Черноморский курорт: пляжи, горы", "Black Sea resort: beaches, mountains", "https://images.unsplash.com/photo-1548636800-4abe7e58658e?w=600&q=80"),
+                ("kazan", "russia", "🕌", "Казань", "Kazan", "Россия", "Russia", "Столица Татарстана: Кремль, мечеть", "Tatarstan capital: Kremlin, mosque", "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=600&q=80"),
+                ("kaliningrad", "russia", "🌊", "Калининград", "Kaliningrad", "Россия", "Russia", "Балтика: янтарь, форты, пляжи", "Baltic: amber, forts, beaches", "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80"),
+                ("baikal", "baikal", "💎", "Байкал", "Lake Baikal", "Байкал", "Baikal", "Глубочайшее озеро: лёд, омуль, тайга", "Deepest lake: ice, omul, taiga", "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?w=600&q=80"),
+                ("karelia", "karelia", "🌲", "Карелия", "Karelia", "Карелия", "Karelia", "Озёра, водопады, Кижи", "Lakes, waterfalls, Kizhi", "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80"),
+                ("altai", "altai", "🏔", "Алтай", "Altai", "Алтай", "Altai", "Горы, реки, Чуйский тракт", "Mountains, rivers, Chuya Highway", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80")
             ] %}
-            {% for city_slug, country_slug, name_ru, name_en, country_ru, country_en, desc_ru, desc_en, stars in top_cities %}
-            <a href="{{ root }}/{{ lang }}/{{ country_slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card city-card reveal">
+            {% for city_slug, country_slug, emoji, name_ru, name_en, country_ru, country_en, desc_ru, desc_en, img in russia_cities %}
+            <a href="{{ root }}/{{ lang }}/{{ country_slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card reveal">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-{{ ['1524231757912-21f4fe3a7200','1508009603885-50cf7c579365','1589394815804-964ed0be2eb5','1512453979798-5ea266f8880c','1573843981267-be1999ff37cd','1548636800-4abe7e58658e','1565008576549-57569a49371d','1528127269322-539801943592'][loop.index0] }}?w=600&q=80" alt="{{ name_en }}" loading="lazy">
+                    <img src="{{ img }}" alt="{{ name_en }}" loading="lazy">
+                    <span class="badge badge-popular card-badge">{{ emoji }}</span>
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ name_ru if lang == "ru" else name_en }}</h4>
                     <p class="body-s card-country">{{ country_ru if lang == "ru" else country_en }}</p>
                     <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
-                    <div class="card-meta">{{ stars }}</div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div style="text-align:center;margin-top:var(--sp-6);">
+            <a href="{{ root }}/{{ lang }}/russia/index.html" class="btn btn-outline btn-md">
+                {{ "Все направления России →" if lang == "ru" else "All Russia destinations →" }}
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     POPULAR DESTINATIONS — Specific places to visit
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ "Зарубежье" if lang == "ru" else "International" }}</p>
+            <h2>{{ "Популярные направления" if lang == "ru" else "Popular destinations" }}</h2>
+            <p>{{ "Проверенные курорты и города, которые выбирают путешественники." if lang == "ru" else "Proven resorts and cities chosen by travelers." }}</p>
+        </div>
+        <div class="grid grid-4">
+            {% set popular_dest = [
+                ("thailand", "phuket", "🏖", "Пхукет", "Phuket", "Таиланд", "Thailand", "Бирюзовое море и пляжи", "Turquoise sea and beaches", "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=600&q=80"),
+                ("turkey", "istanbul", "🏛", "Стамбул", "Istanbul", "Турция", "Turkey", "Дворцы и базары", "Palaces and bazaars", "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80"),
+                ("maldives", "male", "🏝", "Мальдивы", "Maldives", "Мальдивы", "Maldives", "Водные виллы и дайвинг", "Overwater villas and diving", "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80"),
+                ("uae", "dubai", "🏙", "Дубай", "Dubai", "ОАЭ", "UAE", "Шопинг и развлечения", "Shopping and entertainment", "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80"),
+                ("egypt", "hurghada", "🤿", "Хургада", "Hurghada", "Египет", "Egypt", "Дайвинг в Красном море", "Red Sea diving", "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=600&q=80"),
+                ("georgia", "tbilisi", "🍷", "Тбилиси", "Tbilisi", "Грузия", "Georgia", "Вино и кухня", "Wine and cuisine", "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&q=80"),
+                ("vietnam", "nha-trang", "🌊", "Нячанг", "Nha Trang", "Вьетнам", "Vietnam", "Пляжи и экскурсии", "Beaches and excursions", "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80"),
+                ("indonesia", "bali", "🌴", "Бали", "Bali", "Индонезия", "Indonesia", "Террасы, храмы, серф", "Terraces, temples, surf", "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80")
+            ] %}
+            {% for country_slug, city_slug, emoji, name_ru, name_en, country_ru, country_en, desc_ru, desc_en, img in popular_dest %}
+            <a href="{{ root }}/{{ lang }}/{{ country_slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card reveal">
+                <div class="card-img">
+                    <img src="{{ img }}" alt="{{ name_en }}" loading="lazy">
+                    <span class="badge badge-popular card-badge">{{ emoji }}</span>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ name_ru if lang == "ru" else name_en }}</h4>
+                    <p class="body-s card-country">{{ country_ru if lang == "ru" else country_en }}</p>
+                    <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
                 </div>
             </a>
             {% endfor %}
@@ -109,23 +158,23 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     SEASONAL — Where to go now
+     SEASONAL — Where to go now (July 2026)
      ═══════════════════════════════════════════════════════════════ -->
 <section class="section">
     <div class="container">
         <div class="section-header">
-            <p class="section-eyebrow">{{ "Сейчас" if lang == "ru" else "Now" }}</p>
-            <h2>{{ "Куда поехать сейчас" if lang == "ru" else "Where to go now" }}</h2>
-            <p>{{ "Лучшие направления для путешествий в текущем сезоне." if lang == "ru" else "Best destinations for this season." }}</p>
+            <p class="section-eyebrow">{{ "Июль 2026" if lang == "ru" else "July 2026" }}</p>
+            <h2>{{ "Куда поехать летом" if lang == "ru" else "Where to go this summer" }}</h2>
+            <p>{{ "Лучшие направления для летнего отдыха — пляжи, горы, города." if lang == "ru" else "Best summer destinations — beaches, mountains, cities." }}</p>
         </div>
         <div class="grid grid-3">
             {% set seasonal = [
-                ("🇹🇭", "Таиланд", "Thailand", "thailand", "+28-32°C", "Высокий сезон", "Peak season", "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80"),
-                ("🇲🇻", "Мальдивы", "Maldives", "maldives", "+27-30°C", "Сухой сезон", "Dry season", "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80"),
-                ("🇦🇪", "ОАЭ", "UAE", "uae", "+22-28°C", "Идеальная погода", "Perfect weather", "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80"),
+                ("🇷🇺", "Сочи", "Sochi", "russia", "+27-32°C", "Черноморский сезон", "Black Sea season", "https://images.unsplash.com/photo-1548636800-4abe7e58658e?w=600&q=80"),
+                ("🇷🇺", "Карелия", "Karelia", "karelia", "+18-25°C", "Белые ночи, озёра", "White Nights, lakes", "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80"),
+                ("🇷🇺", "Алтай", "Altai", "altai", "+20-30°C", "Горы и реки", "Mountains and rivers", "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"),
                 ("🇬🇪", "Грузия", "Georgia", "georgia", "+25-35°C", "Лето в горах", "Mountain summer", "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&q=80"),
-                ("🇲🇪", "Черногория", "Montenegro", "montenegro", "+28-35°C", "Пляжный сезон", "Beach season", "https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80"),
-                ("🇻🇳", "Вьетнам", "Vietnam", "vietnam", "+28-33°C", "Юг: сухо", "South: dry", "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80")
+                ("🇲🇪", "Черногория", "Montenegro", "montenegro", "+28-35°C", "Адриатическое море", "Adriatic Sea", "https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80"),
+                ("🇹🇷", "Стамбул", "Istanbul", "turkey", "+28-33°C", "Город и море", "City and sea", "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80")
             ] %}
             {% for emoji, name_ru, name_en, slug, temp, desc_ru, desc_en, img in seasonal %}
             <a href="{{ root }}/{{ lang }}/{{ slug }}/index.html" class="card reveal">
@@ -144,100 +193,222 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     COLLECTIONS — Editorial scroll
+     COLLECTIONS — Editorial categories
      ═══════════════════════════════════════════════════════════════ -->
 <section class="section section-alt">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Подборки" if lang == "ru" else "Collections" }}</p>
-            <h2>{{ "Что вам интересно?" if lang == "ru" else "What interests you?" }}</h2>
+            <h2>{{ "Какой отдых вам интересен?" if lang == "ru" else "What kind of vacation interests you?" }}</h2>
         </div>
         <div class="collections-scroll">
-            {% set collections = [
-                ("🏖", "Лучшие пляжи", "Best Beaches", "/en/seasonal/july.html"),
-                ("🏨", "Лучшие курорты", "Best Resorts", "/en/compare/maldives-vs-sri-lanka.html"),
-                ("⛷", "Горнолыжные курорты", "Ski Resorts", "/en/seasonal/january.html"),
-                ("👨‍👩‍👧", "Отдых с детьми", "Family Travel", "/en/seasonal/june.html"),
-                ("💑", "Романтический отдых", "Romantic Trips", "/en/compare/maldives-vs-sri-lanka.html"),
-                ("💰", "Бюджетный отдых", "Budget Travel", "/en/seasonal/october.html"),
-                ("🌍", "Экскурсии", "Sightseeing", "/en/seasonal/may.html"),
-                ("🍜", "Гастрономия", "Food & Dining", "/en/turkey/index.html")
-            ] %}
-            {% for emoji, title_ru, title_en, url in collections %}
-            <a href="{{ root }}{{ url }}" class="collection-card reveal">
-                <div class="icon">{{ emoji }}</div>
-                <h4>{{ title_ru if lang == "ru" else title_en }}</h4>
-                <p>{{ "Подборка лучших направлений" if lang == "ru" else "Curated collection of top destinations" }}</p>
+            {% if lang == "ru" %}
+            <a href="{{ root }}/ru/thailand/index.html" class="collection-card reveal">
+                <div class="icon">🏖</div>
+                <h4>Пляжный отдых</h4>
+                <p>Лучшие пляжи мира — от Бали до Карибов</p>
             </a>
-            {% endfor %}
+            <a href="{{ root }}/ru/baikal/index.html" class="collection-card reveal">
+                <div class="icon">🏔</div>
+                <h4>Горы и природа</h4>
+                <p>Алтай, Кавказ, Карелия, Байкал</p>
+            </a>
+            <a href="{{ root }}/ru/russia/index.html" class="collection-card reveal">
+                <div class="icon">🏛</div>
+                <h4>Экскурсии</h4>
+                <p>Музеи, архитектура, история</p>
+            </a>
+            <a href="{{ root }}/ru/mineral-vody/index.html" class="collection-card reveal">
+                <div class="icon">♨️</div>
+                <h4>Санатории</h4>
+                <p>Оздоровительный отдых по всей России</p>
+            </a>
+            <a href="{{ root }}/ru/georgia/index.html" class="collection-card reveal">
+                <div class="icon">🍷</div>
+                <h4>Гастрономия</h4>
+                <p>Вина, кухня, гастротуры</p>
+            </a>
+            <a href="{{ root }}/ru/maldives/index.html" class="collection-card reveal">
+                <div class="icon">💑</div>
+                <h4>Романтический отдых</h4>
+                <p>Мальдивы, Сейшелы, Бали</p>
+            </a>
+            {% else %}
+            <a href="{{ root }}/en/thailand/index.html" class="collection-card reveal">
+                <div class="icon">🏖</div>
+                <h4>Beach Holidays</h4>
+                <p>World's best beaches — from Bali to Caribbean</p>
+            </a>
+            <a href="{{ root }}/en/georgia/index.html" class="collection-card reveal">
+                <div class="icon">🏔</div>
+                <h4>Mountains & Nature</h4>
+                <p>Caucasus, Karelia, Baikal, Altai</p>
+            </a>
+            <a href="{{ root }}/en/turkey/index.html" class="collection-card reveal">
+                <div class="icon">🏛</div>
+                <h4>Sightseeing</h4>
+                <p>Museums, architecture, history</p>
+            </a>
+            <a href="{{ root }}/en/maldives/index.html" class="collection-card reveal">
+                <div class="icon">💑</div>
+                <h4>Romantic Trips</h4>
+                <p>Maldives, Seychelles, Bali</p>
+            </a>
+            <a href="{{ root }}/en/vietnam/index.html" class="collection-card reveal">
+                <div class="icon">🍜</div>
+                <h4>Food & Culture</h4>
+                <p>Street food, local cuisine, cooking classes</p>
+            </a>
+            <a href="{{ root }}/en/uae/index.html" class="collection-card reveal">
+                <div class="icon">🛍</div>
+                <h4>Shopping & Entertainment</h4>
+                <p>Dubai, Abu Dhabi, world-class malls</p>
+            </a>
+            {% endif %}
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     ARTICLES — Medium-style editorial cards
+     ARTICLES — Latest guides
      ═══════════════════════════════════════════════════════════════ -->
 <section class="section">
     <div class="container">
         <div class="section-header">
-            <p class="section-eyebrow">{{ "Статьи" if lang == "ru" else "Articles" }}</p>
-            <h2>{{ "Последние путеводители" if lang == "ru" else "Latest guides" }}</h2>
-            <p>{{ "Подробные гайды с советами, ценами и маршрутами." if lang == "ru" else "Detailed guides with tips, prices, and routes." }}</p>
+            <p class="section-eyebrow">{{ "Путеводители" if lang == "ru" else "Travel Guides" }}</p>
+            <h2>{{ "Читайте наши гайды" if lang == "ru" else "Read our guides" }}</h2>
+            <p>{{ "Подробные статьи с советами, ценами и проверенными маршрутами." if lang == "ru" else "Detailed articles with tips, prices, and verified routes." }}</p>
         </div>
         <div class="grid grid-3">
-            {% set articles = [
-                ("turkey", "istanbul", "guide", "🇹🇷", "Путеводитель", "Travel Guide", "Стамбул: полный путеводитель 2026", "Istanbul: Complete Travel Guide 2026", "Город на двух континентах — дворцы, мечети, базары и лучшие рестораны.", "City on two continents — palaces, mosques, bazaars, and top restaurants.", "Июль 2026", "July 2026", "8 мин", "8 min", "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80"),
-                ("thailand", "phuket", "guide", "🇹🇭", "Путеводитель", "Travel Guide", "Пхукет: лучшие пляжи и курорты", "Phuket: Best Beaches and Resorts", "Остров с бирюзовым морем, тропическими лесами и ночными рынками.", "Island with turquoise sea, tropical forests, and night markets.", "Июнь 2026", "June 2026", "7 мин", "7 min", "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80"),
-                ("maldives", "male", "guide", "🇲🇻", "Путеводитель", "Travel Guide", "Мальдивы: как выбрать остров", "Maldives: How to Choose an Island", "Бюджетные локальные острова vs курорты. Полное сравнение.", "Budget local islands vs resorts. Full comparison.", "Июль 2026", "July 2026", "10 мин", "10 min", "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80")
-            ] %}
-            {% for c_slug, city, ct, emoji, cat_ru, cat_en, title_ru, title_en, desc_ru, desc_en, date_ru, date_en, time_ru, time_en, img in articles %}
-            <a href="{{ root }}/{{ lang }}/{{ c_slug }}/{{ city }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card reveal">
+            {% if lang == "ru" %}
+            <a href="{{ root }}/ru/russia/moscow-putevoditel.html" class="card reveal">
                 <div class="card-img">
-                    <img src="{{ img }}" alt="{{ title_en }}" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80" alt="Москва" loading="lazy">
                 </div>
                 <div class="card-body">
-                    <span class="label card-category">{{ emoji }} {{ cat_ru if lang == "ru" else cat_en }}</span>
-                    <h4 class="card-title">{{ title_ru if lang == "ru" else title_en }}</h4>
-                    <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
+                    <span class="label card-category">🇷🇺 Россия</span>
+                    <h4 class="card-title">Москва: полный путеводитель 2026</h4>
+                    <p class="card-desc">Кремль, Третьяковка, Парк Горького и лучшие рестораны столицы.</p>
                     <div class="card-meta">
-                        <span>{{ date_ru if lang == "ru" else date_en }}</span>
+                        <span>Июль 2026</span>
                         <span>·</span>
-                        <span>⏱ {{ time_ru if lang == "ru" else time_en }}</span>
+                        <span>⏱ 12 мин</span>
                     </div>
                 </div>
             </a>
-            {% endfor %}
+            <a href="{{ root }}/ru/russia/saint-petersburg-putevoditel.html" class="card reveal">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1556610930-e515011324f3?w=800&q=80" alt="Санкт-Петербург" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <span class="label card-category">🇷🇺 Россия</span>
+                    <h4 class="card-title">Петербург: Эрмитаж, белые ночи, дворцы</h4>
+                    <p class="card-desc">Северная Венеция: музеи, разводные мосты и летние фестивали.</p>
+                    <div class="card-meta">
+                        <span>Июнь 2026</span>
+                        <span>·</span>
+                        <span>⏱ 10 мин</span>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ root }}/ru/turkey/istanbul-putevoditel.html" class="card reveal">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80" alt="Стамбул" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <span class="label card-category">🇹🇷 Турция</span>
+                    <h4 class="card-title">Стамбул: дворцы, базары и кухня</h4>
+                    <p class="card-desc">Город на двух континентах — что увидеть, где поесть и как сэкономить.</p>
+                    <div class="card-meta">
+                        <span>Июль 2026</span>
+                        <span>·</span>
+                        <span>⏱ 8 мин</span>
+                    </div>
+                </div>
+            </a>
+            {% else %}
+            <a href="{{ root }}/en/russia/moscow-travel-guide.html" class="card reveal">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80" alt="Moscow" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <span class="label card-category">🇷🇺 Russia</span>
+                    <h4 class="card-title">Moscow: Complete Travel Guide 2026</h4>
+                    <p class="card-desc">Kremlin, Tretyakov Gallery, Gorky Park and the best capital restaurants.</p>
+                    <div class="card-meta">
+                        <span>July 2026</span>
+                        <span>·</span>
+                        <span>⏱ 12 min</span>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ root }}/en/turkey/istanbul-travel-guide.html" class="card reveal">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80" alt="Istanbul" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <span class="label card-category">🇹🇷 Turkey</span>
+                    <h4 class="card-title">Istanbul: Palaces, Bazaars & Cuisine</h4>
+                    <p class="card-desc">City on two continents — what to see, where to eat, how to save.</p>
+                    <div class="card-meta">
+                        <span>July 2026</span>
+                        <span>·</span>
+                        <span>⏱ 8 min</span>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ root }}/en/thailand/phuket-travel-guide.html" class="card reveal">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80" alt="Phuket" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <span class="label card-category">🇹🇭 Thailand</span>
+                    <h4 class="card-title">Phuket: Best Beaches and Resorts</h4>
+                    <p class="card-desc">Turquoise sea, tropical forests, night markets and island hopping.</p>
+                    <div class="card-meta">
+                        <span>June 2026</span>
+                        <span>·</span>
+                        <span>⏱ 7 min</span>
+                    </div>
+                </div>
+            </a>
+            {% endif %}
+        </div>
+        <div style="text-align:center;margin-top:var(--sp-6);">
+            <a href="{{ root }}/{{ lang }}/russia/index.html" class="btn btn-outline btn-md">
+                {{ "Все путеводители →" if lang == "ru" else "All travel guides →" }}
+            </a>
         </div>
     </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     AGENT FORM
+     AGENT FORM — Travel help
      ═══════════════════════════════════════════════════════════════ -->
 <section class="section section-alt">
     <div class="container">
         <div class="agent-block reveal" id="agent-form">
-            <h2>{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h2>
+            <h2>{{ "Нужна помощь с подбором тура?" if lang == "ru" else "Need help choosing a trip?" }}</h2>
             <div class="agent-grid">
                 <div>
                     <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">
-                        {{ "Расскажите о пожеланиях — поможем с визами, трансферами, eSIM и подбором отелей. Все цены ориентировочные." if lang == "ru" else "Tell us your wishes — we'll help with visas, transfers, eSIM and hotels. All prices are estimates." }}
+                        {{ "Не знаете, куда поехать? Расскажите о ваших пожеланиях — подберём направление, отель и маршрут. Поможем с визами, трансферами и страховкой. Бесплатно." if lang == "ru" else "Not sure where to go? Tell us your preferences — we'll help choose a destination, hotel, and itinerary. Visa, transfer, and insurance assistance included. Free of charge." }}
                     </p>
                     <ul class="agent-benefits">
-                        <li>{{ "Экспертные гайды" if lang == "ru" else "Expert guides" }}</li>
-                        <li>{{ "Честные оценки цен" if lang == "ru" else "Honest price estimates" }}</li>
-                        <li>{{ "21 страна, 80+ городов" if lang == "ru" else "21 countries, 80+ cities" }}</li>
-                        <li>{{ "Поддержка 24/7" if lang == "ru" else "24/7 support" }}</li>
+                        <li>{{ "Бесплатная консультация" if lang == "ru" else "Free consultation" }}</li>
+                        <li>{{ "Подбор по вашим параметрам" if lang == "ru" else "Tailored to your preferences" }}</li>
+                        <li>{{ "Помощь с визами и страховкой" if lang == "ru" else "Visa and insurance help" }}</li>
+                        <li>{{ "Работаем с 2019 года" if lang == "ru" else "Since 2019" }}</li>
                     </ul>
                 </div>
                 <div>
                     <form class="form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
                         <div class="grid grid-2" style="gap:var(--sp-3);">
-                            <input type="text" name="name" placeholder="{{ 'Имя *' if lang == 'ru' else 'Name *' }}" required>
-                            <input type="tel" name="phone" placeholder="{{ 'Телефон *' if lang == 'ru' else 'Phone *' }}" required>
+                            <input type="text" name="name" placeholder="{{ 'Как вас зовут? *' if lang == 'ru' else 'Your name *' }}" required>
+                            <input type="tel" name="phone" placeholder="{{ 'Телефон или Telegram *' if lang == 'ru' else 'Phone or Telegram *' }}" required>
                         </div>
                         <select name="destination">
-                            <option value="">{{ "Направление" if lang == "ru" else "Destination" }}</option>
+                            <option value="">{{ "Куда хотите поехать?" if lang == "ru" else "Where do you want to go?" }}</option>
                             {% for d in russia_destinations %}
                             <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
                             {% endfor %}
@@ -245,12 +416,12 @@
                             <option value="{{ d.slug }}">{{ d.name_en if lang == "en" else d.name_ru }}</option>
                             {% endfor %}
                         </select>
-                        <textarea name="message" rows="2" placeholder="{{ 'Пожелания, даты, бюджет...' if lang == 'ru' else 'Wishes, dates, budget...' }}"></textarea>
+                        <textarea name="message" rows="3" placeholder="{{ 'Даты, количество человек, бюджет, пожелания...' if lang == 'ru' else 'Dates, number of people, budget, preferences...' }}"></textarea>
                         <input type="hidden" name="_subject" value="{{ 'Заявка с TravelHub' if lang == 'ru' else 'Request from TravelHub' }}">
                         {% if recaptcha_site_key %}
                         <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
                         {% endif %}
-                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">{{ "Отправить заявку →" if lang == "ru" else "Send request →" }}</button>
+                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</button>
                     </form>
                 </div>
             </div>
@@ -259,7 +430,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     FAQ
+     FAQ — Expanded
      ═══════════════════════════════════════════════════════════════ -->
 <section class="section">
     <div class="container">
@@ -269,17 +440,23 @@
         </div>
         <div class="faq-list">
             {% if lang == "ru" %}
-            <details class="faq-item reveal"><summary>Сколько стоят путеводители?</summary><p>Все путеводители на сайте бесплатны. Мы зарабатываем через партнёрские ссылки — это бесплатно для вас.</p></details>
-            <details class="faq-item reveal"><summary>Как забронировать отель дешевле?</summary><p>Бронируйте за 2-3 месяца до поездки. Сравнивайте цены на Hotellook и Booking.com. В низкий сезон цены ниже на 30-50%.</p></details>
-            <details class="faq-item reveal"><summary>Нужна ли виза?</summary><p>Зависит от направления. Многие страны доступны без визы для граждан РФ. Подробности в путеводителе по каждой стране.</p></details>
-            <details class="faq-item reveal"><summary>Как получить помощь с планированием?</summary><p>Оставьте заявку на сайте или напишите нам. Наши эксперты помогут с визами, отелями, трансферами и маршрутом.</p></details>
-            <details class="faq-item reveal"><summary>Как вы зарабатываете?</summary><p>Мы получаем небольшую комиссию, когда вы бронируете через наши партнёрские ссылки. Это бесплатно для вас и не влияет на цену.</p></details>
+            <details class="faq-item reveal"><summary>Сколько стоят путеводители?</summary><p>Все путеводители на сайте бесплатны. Мы зарабатываем через партнёрские ссылки — это бесплатно для вас и не влияет на цены.</p></details>
+            <details class="faq-item reveal"><summary>Как забронировать отель дешевле?</summary><p>Бронируйте за 2-3 месяца до поездки. Сравнивайте цены на нескольких сайтах. В низкий сезон цены ниже на 30-50%. Советуем проверять цены на Aviasales и Ostrovok.</p></details>
+            <details class="faq-item reveal"><summary>Нужна ли виза?</summary><p>Зависит от направления. Многие страны доступны без визы для граждан РФ: Турция, Таиланд, Египет, Черногория, Грузия. Подробности в путеводителе по каждой стране.</p></details>
+            <details class="faq-item reveal"><summary>Как заказать страховку?</summary><p>Страховка — обязательна для заграничных поездок. Рекомендуем оформлять через EKTA, Tripinsurance или Cherehapa. Стоимость — от $2-5 в день.</p></details>
+            <details class="faq-item reveal"><summary>Как добраться до курорта?</summary><p>Для каждого направления в путеводителе есть раздел «Как добраться». Рекомендуем искать билеты на Aviasales, а трансферы заказывать через Kiwitaxi или GetTransfer.</p></details>
+            <details class="faq-item reveal"><summary>Нужна ли eSIM?</summary><p>Для зарубежных поездок eSIM — удобное решение. Рекомендуем Airalo или Drimsim. Стоимость — от $3-5 за ГБ. Подключаете онлайн, не нужно искать сим-карты.</p></details>
+            <details class="faq-item reveal"><summary>Как получить помощь с планированием?</summary><p>Оставьте заявку на сайте или напишите нам. Поможем с подбором направления, отеля, маршрута, визами и страховкой. Бесплатно.</p></details>
+            <details class="faq-item reveal"><summary>Как вы зарабатываете?</summary><p>Мы получаем небольшую комиссию, когда вы бронируете через партнёрские ссылки. Это бесплатно для вас и не влияет на цену. Мы не продаём туры напрямую — только рекомендуем проверенные сервисы.</p></details>
             {% else %}
-            <details class="faq-item reveal"><summary>Are the travel guides free?</summary><p>Yes, all guides on the site are free. We earn through affiliate partnerships — this costs you nothing extra.</p></details>
-            <details class="faq-item reveal"><summary>How to book hotels cheaper?</summary><p>Book 2-3 months ahead. Compare prices on Hotellook and Booking.com. Low season prices are 30-50% lower.</p></details>
-            <details class="faq-item reveal"><summary>Do I need a visa?</summary><p>It depends on the destination. Many countries are visa-free for Russian citizens. Check the guide for each country.</p></details>
-            <details class="faq-item reveal"><summary>How to get help with planning?</summary><p>Leave a request on the site or contact us. Our experts will help with visas, hotels, transfers, and itinerary.</p></details>
-            <details class="faq-item reveal"><summary>How do you make money?</summary><p>We earn a small commission when you book through our affiliate links. This costs you nothing extra and doesn't affect the price.</p></details>
+            <details class="faq-item reveal"><summary>Are the travel guides free?</summary><p>Yes, all guides on the site are free. We earn through affiliate partnerships — this costs you nothing extra and doesn't affect prices.</p></details>
+            <details class="faq-item reveal"><summary>How to book hotels cheaper?</summary><p>Book 2-3 months ahead. Compare prices on multiple platforms. Low season prices are 30-50% lower. We recommend checking Aviasales and Ostrovok.</p></details>
+            <details class="faq-item reveal"><summary>Do I need a visa?</summary><p>It depends on the destination. Many countries offer visa-free entry: Turkey, Thailand, Egypt, Montenegro, Georgia. Check the guide for each country.</p></details>
+            <details class="faq-item reveal"><summary>How to get travel insurance?</summary><p>Insurance is essential for international trips. We recommend EKTA, Tripinsurance, or Cherehapa. Costs start from $2-5 per day.</p></details>
+            <details class="faq-item reveal"><summary>How to get to the resort?</summary><p>Each guide includes a "How to get there" section. We recommend searching flights on Aviasales and booking transfers through Kiwitaxi or GetTransfer.</p></details>
+            <details class="faq-item reveal"><summary>Do I need an eSIM?</summary><p>For international trips, eSIM is convenient. We recommend Airalo or Drimsim. Costs start from $3-5 per GB. Activate online, no need to find local SIM cards.</p></details>
+            <details class="faq-item reveal"><summary>How to get help with planning?</summary><p>Leave a request on the site or contact us. We'll help with destination, hotel, itinerary, visas, and insurance. Free of charge.</p></details>
+            <details class="faq-item reveal"><summary>How do you make money?</summary><p>We earn a small commission when you book through affiliate links. This costs you nothing extra and doesn't affect the price. We don't sell tours directly — we only recommend trusted services.</p></details>
             {% endif %}
         </div>
     </div>
