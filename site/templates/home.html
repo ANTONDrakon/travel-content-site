@@ -12,7 +12,7 @@
 {% block content %}
 
 <!-- ═══════════════════════════════════════════════════════════════
-     HERO — 75vh, Apple-style, emotional
+     HERO — 75vh, emotional, search + pills
      ═══════════════════════════════════════════════════════════════ -->
 <section class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85');">
     <div class="hero-content">
@@ -47,9 +47,9 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     COUNTRIES — Large editorial cards
+     COUNTRIES — Large editorial cards (3-col)
      ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--bg);">
+<section class="section">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Направления" if lang == "ru" else "Destinations" }}</p>
@@ -71,9 +71,9 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     CITIES — Compact cards with ratings
+     CITIES — Compact cards with country name (4-col)
      ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--surface);">
+<section class="section section-alt">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Города" if lang == "ru" else "Cities" }}</p>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ name_ru if lang == "ru" else name_en }}</h4>
-                    <p class="body-s" style="color:var(--accent);font-weight:500;margin-bottom:var(--sp-1);">{{ country_ru if lang == "ru" else country_en }}</p>
+                    <p class="body-s card-country">{{ country_ru if lang == "ru" else country_en }}</p>
                     <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
                     <div class="card-meta">{{ stars }}</div>
                 </div>
@@ -111,7 +111,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      SEASONAL — Where to go now
      ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--bg);">
+<section class="section">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Сейчас" if lang == "ru" else "Now" }}</p>
@@ -120,18 +120,18 @@
         </div>
         <div class="grid grid-3">
             {% set seasonal = [
-                ("🇹🇭", "Таиланд", "Thailand", "thailand", "+28-32°C", "Высокий сезон", "Peak season"),
-                ("🇲🇻", "Мальдивы", "Maldives", "maldives", "+27-30°C", "Сухой сезон", "Dry season"),
-                ("🇦🇪", "ОАЭ", "UAE", "uae", "+22-28°C", "Идеальная погода", "Perfect weather"),
-                ("🇬🇪", "Грузия", "Georgia", "georgia", "+25-35°C", "Лето в горах", "Mountain summer"),
-                ("🇲🇪", "Черногория", "Montenegro", "montenegro", "+28-35°C", "Пляжный сезон", "Beach season"),
-                ("🇻🇳", "Вьетнам", "Vietnam", "vietnam", "+28-33°C", "Юг: сухо", "South: dry")
+                ("🇹🇭", "Таиланд", "Thailand", "thailand", "+28-32°C", "Высокий сезон", "Peak season", "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80"),
+                ("🇲🇻", "Мальдивы", "Maldives", "maldives", "+27-30°C", "Сухой сезон", "Dry season", "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80"),
+                ("🇦🇪", "ОАЭ", "UAE", "uae", "+22-28°C", "Идеальная погода", "Perfect weather", "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80"),
+                ("🇬🇪", "Грузия", "Georgia", "georgia", "+25-35°C", "Лето в горах", "Mountain summer", "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=600&q=80"),
+                ("🇲🇪", "Черногория", "Montenegro", "montenegro", "+28-35°C", "Пляжный сезон", "Beach season", "https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80"),
+                ("🇻🇳", "Вьетнам", "Vietnam", "vietnam", "+28-33°C", "Юг: сухо", "South: dry", "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&q=80")
             ] %}
-            {% for emoji, name_ru, name_en, slug, temp, desc_ru, desc_en in seasonal %}
+            {% for emoji, name_ru, name_en, slug, temp, desc_ru, desc_en, img in seasonal %}
             <a href="{{ root }}/{{ lang }}/{{ slug }}/index.html" class="card reveal">
-                <div class="card-img" style="position:relative;">
-                    <img src="{{ countries|selectattr('slug','equalto',slug)|map(attribute='image')|first }}" alt="{{ name_en }}" loading="lazy">
-                    <span class="badge badge-accent" style="position:absolute;top:12px;right:12px;">{{ temp }}</span>
+                <div class="card-img">
+                    <img src="{{ img }}" alt="{{ name_en }}" loading="lazy">
+                    <span class="badge badge-accent card-badge">{{ temp }}</span>
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ emoji }} {{ name_ru if lang == "ru" else name_en }}</h4>
@@ -146,7 +146,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      COLLECTIONS — Editorial scroll
      ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--surface);">
+<section class="section section-alt">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Подборки" if lang == "ru" else "Collections" }}</p>
@@ -154,14 +154,14 @@
         </div>
         <div class="collections-scroll">
             {% set collections = [
-                ("🏖", "Лучшие пляжи", "Best Beaches", "/ru/seasonal/july.html"),
-                ("🏨", "Лучшие курорты", "Best Resorts", "/ru/compare/maldives-vs-sri-lanka.html"),
-                ("⛷", "Горнолыжные курорты", "Ski Resorts", "/ru/seasonal/january.html"),
-                ("👨‍👩‍👧", "Отдых с детьми", "Family Travel", "/ru/seasonal/june.html"),
-                ("💑", "Романтический отдых", "Romantic Trips", "/ru/compare/maldives-vs-sri-lanka.html"),
-                ("💰", "Бюджетный отдых", "Budget Travel", "/ru/seasonal/october.html"),
-                ("🌍", "Экскурсии", "Sightseeing", "/ru/seasonal/may.html"),
-                ("🍜", "Гастрономия", "Food & Dining", "/ru/turkey/index.html")
+                ("🏖", "Лучшие пляжи", "Best Beaches", "/en/seasonal/july.html"),
+                ("🏨", "Лучшие курорты", "Best Resorts", "/en/compare/maldives-vs-sri-lanka.html"),
+                ("⛷", "Горнолыжные курорты", "Ski Resorts", "/en/seasonal/january.html"),
+                ("👨‍👩‍👧", "Отдых с детьми", "Family Travel", "/en/seasonal/june.html"),
+                ("💑", "Романтический отдых", "Romantic Trips", "/en/compare/maldives-vs-sri-lanka.html"),
+                ("💰", "Бюджетный отдых", "Budget Travel", "/en/seasonal/october.html"),
+                ("🌍", "Экскурсии", "Sightseeing", "/en/seasonal/may.html"),
+                ("🍜", "Гастрономия", "Food & Dining", "/en/turkey/index.html")
             ] %}
             {% for emoji, title_ru, title_en, url in collections %}
             <a href="{{ root }}{{ url }}" class="collection-card reveal">
@@ -177,7 +177,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      ARTICLES — Medium-style editorial cards
      ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--bg);">
+<section class="section">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Статьи" if lang == "ru" else "Articles" }}</p>
@@ -186,18 +186,18 @@
         </div>
         <div class="grid grid-3">
             {% set articles = [
-                ("turkey", "istanbul", "guide", "🇹🇷", "Путеводитель", "Travel Guide", "Стамбул: полный путеводитель 2026", "Istanbul: Complete Travel Guide 2026", "Город на двух континентах — дворцы, мечети, базары и лучшие рестораны.", "City on two continents — palaces, mosques, bazaars, and top restaurants.", "Июль 2026", "July 2026", "8 мин", "8 min"),
-                ("thailand", "phuket", "guide", "🇹🇭", "Путеводитель", "Travel Guide", "Пхукет: лучшие пляжи и курорты", "Phuket: Best Beaches and Resorts", "Остров с бирюзовым морем, тропическими лесами и ночными рынками.", "Island with turquoise sea, tropical forests, and night markets.", "Июнь 2026", "June 2026", "7 мин", "7 min"),
-                ("maldives", "male", "guide", "🇲🇻", "Путеводитель", "Travel Guide", "Мальдивы: как выбрать остров", "Maldives: How to Choose an Island", "Бюджетные локальные острова vs курорты. Полное сравнение.", "Budget local islands vs resorts. Full comparison.", "Июль 2026", "July 2026", "10 мин", "10 min")
+                ("turkey", "istanbul", "guide", "🇹🇷", "Путеводитель", "Travel Guide", "Стамбул: полный путеводитель 2026", "Istanbul: Complete Travel Guide 2026", "Город на двух континентах — дворцы, мечети, базары и лучшие рестораны.", "City on two continents — palaces, mosques, bazaars, and top restaurants.", "Июль 2026", "July 2026", "8 мин", "8 min", "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80"),
+                ("thailand", "phuket", "guide", "🇹🇭", "Путеводитель", "Travel Guide", "Пхукет: лучшие пляжи и курорты", "Phuket: Best Beaches and Resorts", "Остров с бирюзовым морем, тропическими лесами и ночными рынками.", "Island with turquoise sea, tropical forests, and night markets.", "Июнь 2026", "June 2026", "7 мин", "7 min", "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80"),
+                ("maldives", "male", "guide", "🇲🇻", "Путеводитель", "Travel Guide", "Мальдивы: как выбрать остров", "Maldives: How to Choose an Island", "Бюджетные локальные острова vs курорты. Полное сравнение.", "Budget local islands vs resorts. Full comparison.", "Июль 2026", "July 2026", "10 мин", "10 min", "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80")
             ] %}
-            {% for c_slug, city, ct, emoji, cat_ru, cat_en, title_ru, title_en, desc_ru, desc_en, date_ru, date_en, time_ru, time_en in articles %}
+            {% for c_slug, city, ct, emoji, cat_ru, cat_en, title_ru, title_en, desc_ru, desc_en, date_ru, date_en, time_ru, time_en, img in articles %}
             <a href="{{ root }}/{{ lang }}/{{ c_slug }}/{{ city }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card reveal">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-{{ ['1524231757912-21f4fe3a7200','1589394815804-964ed0be2eb5','1573843981267-be1999ff37cd'][loop.index0] }}?w=800&q=80" alt="{{ title_en }}" loading="lazy">
+                    <img src="{{ img }}" alt="{{ title_en }}" loading="lazy">
                 </div>
                 <div class="card-body">
-                    <span class="label" style="color:var(--accent);">{{ emoji }} {{ cat_ru if lang == "ru" else cat_en }}</span>
-                    <h4 class="card-title" style="margin-top:var(--sp-2);">{{ title_ru if lang == "ru" else title_en }}</h4>
+                    <span class="label card-category">{{ emoji }} {{ cat_ru if lang == "ru" else cat_en }}</span>
+                    <h4 class="card-title">{{ title_ru if lang == "ru" else title_en }}</h4>
                     <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
                     <div class="card-meta">
                         <span>{{ date_ru if lang == "ru" else date_en }}</span>
@@ -214,7 +214,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      AGENT FORM
      ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--surface);">
+<section class="section section-alt">
     <div class="container">
         <div class="agent-block reveal" id="agent-form">
             <h2>{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h2>
@@ -261,7 +261,7 @@
 <!-- ═══════════════════════════════════════════════════════════════
      FAQ
      ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--bg);">
+<section class="section">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">FAQ</p>
@@ -288,11 +288,11 @@
 <!-- ═══════════════════════════════════════════════════════════════
      NEWSLETTER + RSS
      ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--surface);padding-bottom:0;">
+<section class="section section-alt" style="padding-bottom:0;">
     <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
+        <div class="grid grid-2" style="gap:var(--sp-8);align-items:start;">
             {% if brevo_form_url %}
-            <div class="newsletter reveal" style="margin:0;">
+            <div class="newsletter reveal">
                 <h3>{{ "Подпишитесь на советы путешественника" if lang == "ru" else "Subscribe to travel tips" }}</h3>
                 <p>{{ "Лучшие предложения, путеводители и советы. Без спама, отписка в один клик." if lang == "ru" else "Best deals, guides, and tips. No spam, unsubscribe anytime." }}</p>
                 <form action="{{ brevo_form_url }}" method="POST" target="_blank" class="newsletter-form">
@@ -301,11 +301,13 @@
                 </form>
             </div>
             {% endif %}
-            <div class="reveal" style="background:var(--card);border-radius:var(--radius-xl);padding:var(--sp-8);box-shadow:var(--shadow-sm);">
-                <div style="font-size:32px;margin-bottom:var(--sp-4);">📡</div>
-                <h3 style="font-size:20px;font-weight:600;margin-bottom:var(--sp-2);">{{ "RSS-лента" if lang == "ru" else "RSS Feed" }}</h3>
-                <p class="body-s" style="color:var(--text-secondary);margin-bottom:var(--sp-4);">{{ "Подпишитесь на RSS, чтобы не пропускать новые путеводители и обновления." if lang == "ru" else "Subscribe to RSS to never miss new guides and updates." }}</p>
-                <a href="{{ site_url }}/feed-{{ lang }}.xml" class="btn btn-outline btn-md" target="_blank">{{ "Открыть RSS" if lang == "ru" else "Open RSS" }}</a>
+            <div class="card reveal" style="cursor:default;">
+                <div class="card-body" style="padding:var(--sp-8);">
+                    <div style="font-size:32px;margin-bottom:var(--sp-4);">📡</div>
+                    <h3 style="font-size:20px;font-weight:600;margin-bottom:var(--sp-2);">{{ "RSS-лента" if lang == "ru" else "RSS Feed" }}</h3>
+                    <p class="body-s" style="color:var(--text-secondary);margin-bottom:var(--sp-4);">{{ "Подпишитесь на RSS, чтобы не пропускать новые путеводители и обновления." if lang == "ru" else "Subscribe to RSS to never miss new guides and updates." }}</p>
+                    <a href="{{ site_url }}/feed-{{ lang }}.xml" class="btn btn-outline btn-md" target="_blank">{{ "Открыть RSS" if lang == "ru" else "Open RSS" }}</a>
+                </div>
             </div>
         </div>
     </div>
