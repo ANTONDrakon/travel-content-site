@@ -377,6 +377,38 @@ h4, .h4 { font-size: clamp(18px, 2vw, 22px); font-weight: 600; letter-spacing: -
 .article-body img { width: 100%; border-radius: var(--radius-lg); margin: 24px 0; }
 
 /* ═══════════════════════════════════════════════════════════════
+   TRAVEL ASSISTANCE CARD — Unified affiliate component
+   ═══════════════════════════════════════════════════════════════ */
+.travel-assist {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius-xl); padding: var(--sp-8);
+    margin: var(--sp-10) 0; box-shadow: var(--shadow-sm);
+}
+.travel-assist-header {
+    display: flex; align-items: center; gap: var(--sp-3);
+    margin-bottom: var(--sp-4);
+}
+.travel-assist-icon {
+    width: 48px; height: 48px; border-radius: var(--radius-md);
+    background: var(--surface); display: flex; align-items: center;
+    justify-content: center; font-size: 24px;
+}
+.travel-assist-title { font-size: 20px; font-weight: 600; }
+.travel-assist-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--sp-5); }
+.travel-assist-actions { display: flex; gap: var(--sp-3); flex-wrap: wrap; }
+.travel-assist-btn {
+    display: inline-flex; align-items: center; gap: var(--sp-2);
+    padding: 10px 20px; border-radius: var(--radius-md);
+    font-size: 14px; font-weight: 600; text-decoration: none;
+    transition: all var(--duration) var(--ease);
+}
+.travel-assist-btn-primary { background: var(--accent); color: #fff; }
+.travel-assist-btn-primary:hover { background: #0e7490; }
+.travel-assist-btn-outline { border: 1.5px solid var(--border); color: var(--text); background: transparent; }
+.travel-assist-btn-outline:hover { border-color: var(--text); }
+.travel-assist-note { font-size: 13px; color: var(--text-muted); margin-top: var(--sp-4); }
+
+/* ═══════════════════════════════════════════════════════════════
    AFFILIATE / PARTNER
    ═══════════════════════════════════════════════════════════════ */
 .affiliate-block {

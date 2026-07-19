@@ -82,22 +82,23 @@
         </div>
         <div class="grid grid-4">
             {% set top_cities = [
-                ("istanbul", "turkey", "Стамбул", "Istanbul", "Город на двух континентах", "City on two continents", "⭐⭐⭐⭐⭐"),
-                ("bangkok", "thailand", "Бангкок", "Bangkok", "Мегаполис контрастов", "Megacity of contrasts", "⭐⭐⭐⭐⭐"),
-                ("phuket", "thailand", "Пхукет", "Phuket", "Лучшие пляжи Таиланда", "Thailand's best beaches", "⭐⭐⭐⭐⭐"),
-                ("dubai", "uae", "Дубай", "Dubai", "Город будущего", "City of the future", "⭐⭐⭐⭐⭐"),
-                ("maldives", "maldives", "Мальдивы", "Maldives", "Рай на земле", "Paradise on earth", "⭐⭐⭐⭐⭐"),
-                ("sochi", "russia", "Сочи", "Sochi", "Курортное сердце Черноморья", "Black Sea resort heart", "⭐⭐⭐⭐⭐"),
-                ("tbilisi", "georgia", "Тбилиси", "Tbilisi", "Древняя столица Грузии", "Ancient Georgian capital", "⭐⭐⭐⭐⭐"),
-                ("hanoi", "vietnam", "Ханой", "Hanoi", "Столица Вьетнама", "Capital of Vietnam", "⭐⭐⭐⭐⭐")
+                ("istanbul", "turkey", "Стамбул", "Istanbul", "Турция", "Turkey", "Город на двух континентах", "City on two continents", "⭐⭐⭐⭐⭐"),
+                ("bangkok", "thailand", "Бангкок", "Bangkok", "Таиланд", "Thailand", "Мегаполис контрастов", "Megacity of contrasts", "⭐⭐⭐⭐⭐"),
+                ("phuket", "thailand", "Пхукет", "Phuket", "Таиланд", "Thailand", "Лучшие пляжи Таиланда", "Thailand's best beaches", "⭐⭐⭐⭐⭐"),
+                ("dubai", "uae", "Дубай", "Dubai", "ОАЭ", "UAE", "Город будущего", "City of the future", "⭐⭐⭐⭐⭐"),
+                ("maldives", "maldives", "Мальдивы", "Maldives", "Мальдивы", "Maldives", "Рай на земле", "Paradise on earth", "⭐⭐⭐⭐⭐"),
+                ("sochi", "russia", "Сочи", "Sochi", "Россия", "Russia", "Курортное сердце Черноморья", "Black Sea resort heart", "⭐⭐⭐⭐⭐"),
+                ("tbilisi", "georgia", "Тбилиси", "Tbilisi", "Грузия", "Georgia", "Древняя столица Грузии", "Ancient Georgian capital", "⭐⭐⭐⭐⭐"),
+                ("hanoi", "vietnam", "Ханой", "Hanoi", "Вьетнам", "Vietnam", "Столица Вьетнама", "Capital of Vietnam", "⭐⭐⭐⭐⭐")
             ] %}
-            {% for city_slug, country_slug, name_ru, name_en, desc_ru, desc_en, stars in top_cities %}
+            {% for city_slug, country_slug, name_ru, name_en, country_ru, country_en, desc_ru, desc_en, stars in top_cities %}
             <a href="{{ root }}/{{ lang }}/{{ country_slug }}/{{ city_slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card city-card reveal">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-{{ ['1524231757912-21f4fe3a7200','1508009603885-50cf7c579365','1589394815804-964ed0be2eb5','1512453979798-5ea266f8880c','1573843981267-be1999ff37cd','1548636800-4abe7e58658e','1565008576549-57569a49371d','1528127269322-539801943592'][loop.index0] }}?w=600&q=80" alt="{{ name_en }}" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ name_ru if lang == "ru" else name_en }}</h4>
+                    <p class="body-s" style="color:var(--accent);font-weight:500;margin-bottom:var(--sp-1);">{{ country_ru if lang == "ru" else country_en }}</p>
                     <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
                     <div class="card-meta">{{ stars }}</div>
                 </div>
@@ -285,21 +286,29 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     NEWSLETTER
+     NEWSLETTER + RSS
      ═══════════════════════════════════════════════════════════════ -->
-{% if brevo_form_url %}
 <section class="section" style="background:var(--surface);padding-bottom:0;">
     <div class="container">
-        <div class="newsletter reveal">
-            <h3>{{ "Подпишитесь на советы путешественника" if lang == "ru" else "Subscribe to travel tips" }}</h3>
-            <p>{{ "Лучшие предложения, путеводители и советы. Без спама, отписка в один клик." if lang == "ru" else "Best deals, guides, and tips. No spam, unsubscribe anytime." }}</p>
-            <form action="{{ brevo_form_url }}" method="POST" target="_blank" class="newsletter-form">
-                <input type="email" name="email" placeholder="{{ 'Ваш email' if lang == 'ru' else 'Your email' }}" required>
-                <button type="submit">{{ "Подписаться" if lang == "ru" else "Subscribe" }}</button>
-            </form>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
+            {% if brevo_form_url %}
+            <div class="newsletter reveal" style="margin:0;">
+                <h3>{{ "Подпишитесь на советы путешественника" if lang == "ru" else "Subscribe to travel tips" }}</h3>
+                <p>{{ "Лучшие предложения, путеводители и советы. Без спама, отписка в один клик." if lang == "ru" else "Best deals, guides, and tips. No spam, unsubscribe anytime." }}</p>
+                <form action="{{ brevo_form_url }}" method="POST" target="_blank" class="newsletter-form">
+                    <input type="email" name="email" placeholder="{{ 'Ваш email' if lang == 'ru' else 'Your email' }}" required>
+                    <button type="submit">{{ "Подписаться" if lang == "ru" else "Subscribe" }}</button>
+                </form>
+            </div>
+            {% endif %}
+            <div class="reveal" style="background:var(--card);border-radius:var(--radius-xl);padding:var(--sp-8);box-shadow:var(--shadow-sm);">
+                <div style="font-size:32px;margin-bottom:var(--sp-4);">📡</div>
+                <h3 style="font-size:20px;font-weight:600;margin-bottom:var(--sp-2);">{{ "RSS-лента" if lang == "ru" else "RSS Feed" }}</h3>
+                <p class="body-s" style="color:var(--text-secondary);margin-bottom:var(--sp-4);">{{ "Подпишитесь на RSS, чтобы не пропускать новые путеводители и обновления." if lang == "ru" else "Subscribe to RSS to never miss new guides and updates." }}</p>
+                <a href="{{ site_url }}/feed-{{ lang }}.xml" class="btn btn-outline btn-md" target="_blank">{{ "Открыть RSS" if lang == "ru" else "Open RSS" }}</a>
+            </div>
         </div>
     </div>
 </section>
-{% endif %}
 
 {% endblock %}
