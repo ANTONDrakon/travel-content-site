@@ -654,6 +654,23 @@ def build_home_page(lang):
 
     popular_hotels = get_hotels_for_home()
 
+    # Convert hotel prices for EN/ES: show USD instead of RUB
+    if lang != "ru":
+        rates = _get_rates()
+        rub_per_usd = rates["$"]
+        for h in popular_hotels:
+            price_raw = h.get("price", "")
+            if "₽" in price_raw or "р" in price_raw.lower():
+                import re as _re
+                nums = _re.findall(r"[\d\s]+", price_raw)
+                if nums:
+                    try:
+                        rub = int(nums[0].replace(" ", ""))
+                        usd = rub / rub_per_usd
+                        h["price"] = f"${usd:,.0f}"
+                    except (ValueError, KeyError, TypeError):
+                        pass
+
     template = env.get_template("home.html")
     html = template.render(
         lang=lang,
