@@ -628,6 +628,22 @@ def get_hotels_for_home():
                 })
                 if len(result) >= 6:
                     break
+    # Map hotels to specific Unsplash photos for homepage display
+    HOTEL_IMAGES = {
+        "aman-summer-palace": "https://images.unsplash.com/photo-1606046604972-87cc5ee7d5bf?fm=webp&w=600&q=80",
+        "four-seasons-hotel-cairo": "https://images.unsplash.com/photo-1582719508461-905c673771fd?fm=webp&w=600&q=80",
+        "chang-luxury-beach-resort": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?fm=webp&w=600&q=80",
+        "hilton-garden-inn-hulhumale": "https://images.unsplash.com/photo-1540541338287-41700207dee6?fm=webp&w=600&q=80",
+        "amari-bangkok": "https://images.unsplash.com/photo-1566073771259-6a8506099945?fm=webp&w=600&q=80",
+        "mardan-palace": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?fm=webp&w=600&q=80",
+        "rixos-premium-seagate": "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?fm=webp&w=600&q=80",
+    }
+
+    for h in result:
+        slug = h["name"].lower().replace(" ", "-").replace("'", "")
+        if slug in HOTEL_IMAGES:
+            h["image"] = HOTEL_IMAGES[slug]
+
     return result
 
 
