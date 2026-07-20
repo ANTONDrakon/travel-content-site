@@ -228,10 +228,12 @@ DESTINATIONS = {
         "name_ru": "Турция",
         "name_ru_prepositional": "Турции",
         "name_en": "Turkey",
+        "name_es": "Turquía",
         "slug": "turkey",
         "currency": "TRY",
         "visa_ru": "безвизовый въезд до 90 дней для граждан РФ",
         "visa_en": "visa-free for Russian citizens up to 90 days",
+        "visa_es": "sin visa para ciudadanos rusos hasta 90 días",
         "airport_code": "IST",
         "regions": {
             "marmara-region": {
@@ -314,10 +316,12 @@ DESTINATIONS = {
         "name_ru": "Таиланд",
         "name_ru_prepositional": "Таиланде",
         "name_en": "Thailand",
+        "name_es": "Tailandia",
         "slug": "thailand",
         "currency": "THB",
         "visa_ru": "безвизовый въезд до 60 дней для граждан РФ",
         "visa_en": "visa-free for Russian citizens up to 60 days",
+        "visa_es": "sin visa para ciudadanos rusos hasta 60 días",
         "airport_code": "BKK",
         "regions": {
             "bangkok-region": {
@@ -400,10 +404,12 @@ DESTINATIONS = {
         "name_ru": "Египет",
         "name_ru_prepositional": "Египте",
         "name_en": "Egypt",
+        "name_es": "Egipto",
         "slug": "egypt",
         "currency": "EGP",
         "visa_ru": "виза по прибытии ($25)",
         "visa_en": "visa on arrival ($25)",
+        "visa_es": "visa a la llegada ($25)",
         "airport_code": "SSH",
         "regions": {
             "red-sea": {
@@ -472,10 +478,12 @@ DESTINATIONS = {
         "name_ru": "ОАЭ",
         "name_ru_prepositional": "ОАЭ",
         "name_en": "UAE",
+        "name_es": "EAU",
         "slug": "uae",
         "currency": "AED",
         "visa_ru": "безвизовый въезд до 90 дней для граждан РФ",
         "visa_en": "visa-free for Russian citizens up to 90 days",
+        "visa_es": "sin visa para ciudadanos rusos hasta 90 días",
         "airport_code": "DXB",
         "regions": {
             "dubai-emirate": {
@@ -544,10 +552,12 @@ DESTINATIONS = {
         "name_ru": "Индонезия",
         "name_ru_prepositional": "Индонезии",
         "name_en": "Indonesia",
+        "name_es": "Indonesia",
         "slug": "indonesia",
         "currency": "IDR",
         "visa_ru": "виза по прибытии (500 000 IDR)",
         "visa_en": "visa on arrival (500,000 IDR)",
+        "visa_es": "visa a la llegada (500,000 IDR)",
         "airport_code": "DPS",
         "regions": {
             "bali": {

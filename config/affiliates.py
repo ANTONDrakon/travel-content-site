@@ -19,15 +19,29 @@ SERVICE_REGISTRY = {
         "name": "Kiwi.com",
         "category": "flights",
         "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3799&source_type=link&type=click&campaign_id=114&trs=kiwicom",
-        "langs": ["en"],
+        "langs": ["en", "es"],
         "aliases": ["Kiwi.com", "Kiwi"],
     },
     "trip": {
         "name": "Trip.com",
         "category": "flights",
         "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3802&source_type=link&type=click&campaign_id=119&trs=tripcom",
-        "langs": ["en"],
+        "langs": ["en", "es"],
         "aliases": ["Trip.com"],
+    },
+    "skyscanner": {
+        "name": "Skyscanner",
+        "category": "flights",
+        "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3804&source_type=link&type=click&campaign_id=160&trs=skyscanner",
+        "langs": ["en", "es"],
+        "aliases": ["Skyscanner", "Escáner de vuelos"],
+    },
+    "edreams": {
+        "name": "eDreams",
+        "category": "flights",
+        "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3805&source_type=link&type=click&campaign_id=161&trs=edreams",
+        "langs": ["es", "en"],
+        "aliases": ["eDreams", "edreams", "eDreams ODIGEO"],
     },
 
     # ── Hotels ───────────────────────────────────────────────────────────
@@ -42,14 +56,14 @@ SERVICE_REGISTRY = {
         "name": "Booking.com",
         "category": "hotels",
         "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3776&source_type=link&type=click&campaign_id=108&trs=booking",
-        "langs": ["en"],
+        "langs": ["en", "es"],
         "aliases": ["Booking.com", "Booking"],
     },
     "agoda": {
         "name": "Agoda",
         "category": "hotels",
         "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3779&source_type=link&type=click&campaign_id=110&trs=agoda",
-        "langs": ["en"],
+        "langs": ["en", "es"],
         "aliases": ["Agoda"],
     },
     "ostrovok": {
@@ -65,6 +79,13 @@ SERVICE_REGISTRY = {
         "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=4129&source_type=link&type=click&campaign_id=123&trs=sutochno",
         "langs": ["ru"],
         "aliases": ["Суточно.ру", "Sutochno", "sutochno.ru"],
+    },
+    "edreams_hotels": {
+        "name": "eDreams Hoteles",
+        "category": "hotels",
+        "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3806&source_type=link&type=click&campaign_id=162&trs=edreams_hotels",
+        "langs": ["es"],
+        "aliases": ["eDreams Hoteles", "eDreams Hotels"],
     },
 
     # ── Tours ────────────────────────────────────────────────────────────
@@ -144,22 +165,36 @@ SERVICE_REGISTRY = {
         "name": "GetYourGuide",
         "category": "excursions",
         "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3798&source_type=link&type=click&campaign_id=115&trs=getyourguide",
-        "langs": ["en"],
+        "langs": ["en", "es"],
         "aliases": ["GetYourGuide"],
     },
     "viator": {
         "name": "Viator",
         "category": "excursions",
         "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3775&source_type=link&type=click&campaign_id=107&trs=viator",
-        "langs": ["en"],
+        "langs": ["en", "es"],
         "aliases": ["Viator"],
     },
     "klook": {
         "name": "Klook",
         "category": "excursions",
         "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3797&source_type=link&type=click&campaign_id=120&trs=klook",
-        "langs": ["en"],
+        "langs": ["en", "es"],
         "aliases": ["Klook"],
+    },
+    "civitatis": {
+        "name": "Civitatis",
+        "category": "excursions",
+        "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3807&source_type=link&type=click&campaign_id=163&trs=civitatis",
+        "langs": ["es", "en"],
+        "aliases": ["Civitatis", "civitatis.com"],
+    },
+    "hoppa": {
+        "name": "Hoppa",
+        "category": "excursions",
+        "url": f"https://tp.media/click?shmarker={MARKER}&promo_id=3808&source_type=link&type=click&campaign_id=164&trs=hoppa",
+        "langs": ["en", "es"],
+        "aliases": ["Hoppa", "hoppa.com"],
     },
 
     # ── Transfers ────────────────────────────────────────────────────────
@@ -690,36 +725,47 @@ AFFILIATE_HTML = {
     # Hotels
     "hotels": '<div class="affiliate-block"><p>Проверьте актуальные цены на Hotellook:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">сравнить цены на отели в {city}</a></div>',
     "hotels_en": '<div class="affiliate-block"><p>Check real-time prices on Hotellook:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">compare hotel prices in {city}</a></div>',
+    "hotels_es": '<div class="affiliate-block"><p>Compara precios de hoteles en tiempo real:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">comparar precios de hoteles en {city}</a></div>',
     # Flights
     "flights": '<div class="affiliate-block"><p>Сравните цены на авиабилеты:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">посмотреть билеты в {city}</a></div>',
     "flights_en": '<div class="affiliate-block"><p>Compare flight prices:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">check flights to {city}</a></div>',
+    "flights_es": '<div class="affiliate-block"><p>Compara precios de vuelos:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">buscar vuelos a {city}</a></div>',
     # Tours
     "tours": '<div class="affiliate-block"><p>Подберите тур с лучшими ценами:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">подобрать тур в {city}</a></div>',
     "tours_en": '<div class="affiliate-block"><p>Find the best tour deals:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">find tours to {city}</a></div>',
+    "tours_es": '<div class="affiliate-block"><p>Encuentra los mejores tours:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">buscar tours en {city}</a></div>',
     # Insurance
     "insurance": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">оформить страховку</a>',
     "insurance_en": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">get travel insurance</a>',
+    "insurance_es": '<a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">contratar seguro de viaje</a>',
     # Excursions
     "excursions": '<div class="affiliate-block"><p>Забронируйте экскурсию заранее:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">экскурсии в {city}</a></div>',
     "excursions_en": '<div class="affiliate-block"><p>Book excursions in advance:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">excursions in {city}</a></div>',
+    "excursions_es": '<div class="affiliate-block"><p>Reserva excursiones con antelación:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">excursiones en {city}</a></div>',
     # Transfers
     "transfers": '<div class="affiliate-block"><p>Закажите трансфер из аэропорта:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">трансфер в {city}</a></div>',
     "transfers_en": '<div class="affiliate-block"><p>Book an airport transfer:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">airport transfer to {city}</a></div>',
+    "transfers_es": '<div class="affiliate-block"><p>Reserva un transfer desde el aeropuerto:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">transfer aeropuerto a {city}</a></div>',
     # eSIM
     "esim": '<div class="affiliate-block"><p>Купите eSIM для поездки:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">eSIM для {city}</a></div>',
     "esim_en": '<div class="affiliate-block"><p>Get an eSIM for your trip:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">eSIM for {city}</a></div>',
+    "esim_es": '<div class="affiliate-block"><p>Consigue una eSIM para tu viaje:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">eSIM para {city}</a></div>',
     # Car Rental
     "car_rental": '<div class="affiliate-block"><p>Арендуйте автомобиль:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">аренда авто в {city}</a></div>',
     "car_rental_en": '<div class="affiliate-block"><p>Rent a car:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">car rental in {city}</a></div>',
+    "car_rental_es": '<div class="affiliate-block"><p>Alquila un coche:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">alquilar coche en {city}</a></div>',
     # Tickets
     "tickets": '<div class="affiliate-block"><p>Купите билеты онлайн:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">билеты в {city}</a></div>',
     "tickets_en": '<div class="affiliate-block"><p>Book tickets online:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">tickets in {city}</a></div>',
+    "tickets_es": '<div class="affiliate-block"><p>Compra entradas online:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">entradas en {city}</a></div>',
     # Trains
     "trains": '<div class="affiliate-block"><p>Купите ж/д билеты:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">билеты на поезд</a></div>',
     "trains_en": '<div class="affiliate-block"><p>Book train tickets:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">train tickets</a></div>',
+    "trains_es": '<div class="affiliate-block"><p>Compra billetes de tren:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">billetes de tren</a></div>',
     # Buses
     "buses": '<div class="affiliate-block"><p>Купите билеты на автобус:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">автобусы</a></div>',
     "buses_en": '<div class="affiliate-block"><p>Book bus tickets:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">bus tickets</a></div>',
+    "buses_es": '<div class="affiliate-block"><p>Compra billetes de autobús:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">billetes de autobús</a></div>',
     # Sanatoriums (RU only)
     "sanatoriums": '<div class="affiliate-block"><p>Подберите санаторий:</p><a href="{url}" target="_blank" rel="nofollow sponsored" class="partner-link">санатории</a></div>',
 }

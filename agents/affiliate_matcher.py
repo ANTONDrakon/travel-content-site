@@ -22,7 +22,7 @@ def replace_placeholders(body, city_name_en, lang):
                         destination_code = codes[0]
                     break
 
-    suffix = "_en" if lang == "en" else ""
+    suffix = f"_{lang}" if lang in ["en", "es"] else ""
 
     replacements = {
         "{hotels_placeholder}": AFFILIATE_HTML[f"hotels{suffix}"].format(
@@ -62,9 +62,17 @@ def replace_placeholders(body, city_name_en, lang):
 
 def inject_insurance_block(body, lang):
     from config.affiliates import insurance_link, AFFILIATE_HTML
-    suffix = "_en" if lang == "en" else ""
+    suffix = f"_{lang}" if lang in ["en", "es"] else ""
     insurance_html = AFFILIATE_HTML[f"insurance{suffix}"].format(url=insurance_link())
-    insurance_block = f'\n<div class="affiliate-block"><p>{"Don\'t forget travel insurance!" if lang == "en" else "Не забудьте оформить страховку для путешествия!"}</p>{insurance_html}</div>\n'
+
+    # Language-specific messages
+    messages = {
+        "ru": "Не забудьте оформить страховку для путешествия!",
+        "en": "Don't forget travel insurance!",
+        "es": "¡No olvides el seguro de viaje!",
+    }
+    msg = messages.get(lang, messages["en"])
+    insurance_block = f'\n<div class="affiliate-block"><p>{msg}</p>{insurance_html}</div>\n'
 
     # Find safe insertion point: after the last </p> or </h2> in the second half of body
     last_h2 = body.rfind("</h2>")
@@ -89,7 +97,7 @@ def process_article_body(body, city_name_en, lang):
     # Fallback: if no affiliate links found, inject at the end
     if 'partner-link' not in body:
         from config.affiliates import AFFILIATE_HTML, hotels_link, flights_link
-        suffix = "_en" if lang == "en" else ""
+        suffix = f"_{lang}" if lang in ["en", "es"] else ""
         city_slug = city_name_en.lower().replace(" ", "-")
 
         # Get airport code

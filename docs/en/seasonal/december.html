@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
 
     <link rel="preload" href="/travel-content-site/assets/styles.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
@@ -16,8 +18,13 @@
     <title>Best Places to Visit in December 2026</title>
     <meta name="description" content="Best travel destinations for December 2026. Weather, prices, tips.">
 
+    seasonal/december.html
+    seasonal/december.html
+    
+
     <link rel="alternate" hreflang="ru" href="https://antondrakon.github.io/travel-content-site/ru/seasonal/december.html">
     <link rel="alternate" hreflang="en" href="https://antondrakon.github.io/travel-content-site/en/seasonal/december.html">
+    <link rel="alternate" hreflang="es" href="https://antondrakon.github.io/travel-content-site/es/seasonal/december.html">
     <link rel="alternate" hreflang="x-default" href="https://antondrakon.github.io/travel-content-site/en/seasonal/december.html">
     <link rel="canonical" href="https://antondrakon.github.io/travel-content-site/en/seasonal/december.html">
 
@@ -53,12 +60,15 @@
       "logo": "https://antondrakon.github.io/travel-content-site/assets/countries/travel-hero.webp",
       "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
       "foundingDate": "2026",
-      "sameAs": [],
+      "sameAs": [
+        "https://t.me/travelhub",
+        "https://max.vk.com/"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "i@turkov-1.ru",
         "contactType": "customer service",
-        "availableLanguage": ["Russian", "English"]
+        "availableLanguage": ["Russian", "English", "Spanish"]
       },
       "areaServed": { "@type": "Place", "name": "Worldwide" },
       "knowsAbout": ["Travel", "Hotels", "Flights", "Tourism", "Travel Guides"]
@@ -150,7 +160,7 @@
         var header = document.querySelector('.header');
         if (header) {
             window.addEventListener('scroll', function() {
-                header.classList.toggle('solid', window.scrollY > 10);
+                header.classList.toggle('header--scrolled', window.scrollY > 10);
             });
         }
 
@@ -212,32 +222,40 @@
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" role="banner">
     <div class="header-inner">
-        <a href="/travel-content-site/en/index.html" class="logo">
-            <span class="logo-icon">✈</span>
+        <a href="/travel-content-site/en/index.html" class="logo" aria-label="TravelHub — Home">
+            <span class="logo-icon" aria-hidden="true">✈</span>
             TravelHub
         </a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Main navigation">
             <a href="/travel-content-site/en/index.html" class="nav-link">Home</a>
+            <a href="/travel-content-site/en/russia/index.html" class="nav-link">Destinations</a>
+            <a href="/travel-content-site/en/russia/moscow-travel-guide.html" class="nav-link">Guides</a>
+            <a href="/travel-content-site/en/russia/moscow-hotels.html" class="nav-link">Hotels</a>
             <a href="/travel-content-site/en/about.html" class="nav-link">About</a>
             <a href="/travel-content-site/en/contacts.html" class="nav-link">Contacts</a>
         </nav>
-        <div class="lang-switcher">
-            <a href="/travel-content-site/ru/seasonal/december.html" class="lang-btn ">Русский</a>
-            <a href="/travel-content-site/en/seasonal/december.html" class="lang-btn active">English</a>
+        <div class="lang-switcher" aria-label="Language selection">
+            <a href="/travel-content-site/ru/seasonal/december.html" class="lang-btn " title="Русский" lang="ru">🇷🇺</a>
+            <a href="/travel-content-site/en/seasonal/december.html" class="lang-btn lang-btn--active" title="English" lang="en">🇬🇧</a>
+            <a href="/travel-content-site/es/" class="lang-btn " title="Español" lang="es">🇪🇸</a>
         </div>
-        <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Menu">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('mobile-nav--open')" aria-label="Open menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
         <a href="/travel-content-site/en/index.html">Home</a>
+        <a href="/travel-content-site/en/russia/index.html">Destinations</a>
+        <a href="/travel-content-site/en/russia/moscow-travel-guide.html">Guides</a>
+        <a href="/travel-content-site/en/russia/moscow-hotels.html">Hotels</a>
         <a href="/travel-content-site/en/about.html">About</a>
         <a href="/travel-content-site/en/contacts.html">Contacts</a>
         <div class="mobile-lang-switcher">
-            <a href="/travel-content-site/ru/seasonal/december.html" class="lang-btn ">Русский</a>
-            <a href="/travel-content-site/en/seasonal/december.html" class="lang-btn active">English</a>
+            <a href="/travel-content-site/ru/seasonal/december.html" class="lang-btn " title="Русский" lang="ru">🇷🇺</a>
+            <a href="/travel-content-site/en/seasonal/december.html" class="lang-btn lang-btn--active" title="English" lang="en">🇬🇧</a>
+            <a href="/travel-content-site/es/" class="lang-btn " title="Español" lang="es">🇪🇸</a>
         </div>
     </nav>
 </header>
@@ -443,7 +461,7 @@
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
                     <input type="text" name="name" placeholder="Your name *" required>
                     <input type="email" name="email" placeholder="Email">
-                    <input type="tel" name="phone" placeholder="Phone *" required>
+                    <input type="tel" name="phone" placeholder="Phone or messenger *" required>
                     <select name="destination">
                         <option value="">Preferred destination</option>
                         
@@ -493,6 +511,10 @@
                         <option value="cyprus">Cyprus</option>
                         
                         <option value="oman">Oman</option>
+                        
+                        <option value="kazakhstan">Kazakhstan</option>
+                        
+                        <option value="uzbekistan">Uzbekistan</option>
                         
                         <option value="other">Other</option>
                     </select>

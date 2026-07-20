@@ -87,18 +87,40 @@ def run_pipeline(country_slug, city_slug, content_type, lang, force=False):
             # Build prompt
             from agents.fact_checker import KNOWN_FACTS
             airports = ", ".join(city.get("airport_codes", ["N/A"]))
-            visa_info = destination["visa_en"] if lang == "en" else destination["visa_ru"]
-            city_name = city["name_en"] if lang == "en" else city["name_ru"]
+
+            # Language-specific names
+            if lang == "es":
+                visa_info = destination.get("visa_es", destination.get("visa_en", ""))
+                city_name = city.get("name_es", city.get("name_en", city_slug))
+            elif lang == "en":
+                visa_info = destination["visa_en"]
+                city_name = city["name_en"]
+            else:
+                visa_info = destination["visa_ru"]
+                city_name = city["name_ru"]
 
             # Get currency and timezone from fact checker data
             facts = KNOWN_FACTS.get(country_slug, {})
             currency = facts.get("currency", {})
-            currency_info = f"{currency.get('name_ru', 'местная валюта')} ({currency.get('code', '')}), символ {currency.get('symbol', '')}" if lang == "ru" else f"{currency.get('name_en', 'local currency')} ({currency.get('code', '')}), symbol {currency.get('symbol', '')}"
+            if lang == "ru":
+                currency_info = f"{currency.get('name_ru', 'местная валюта')} ({currency.get('code', '')}), символ {currency.get('symbol', '')}"
+            elif lang == "es":
+                currency_info = f"{currency.get('name_es', currency.get('name_en', 'local currency'))} ({currency.get('code', '')}), símbolo {currency.get('symbol', '')}"
+            else:
+                currency_info = f"{currency.get('name_en', 'local currency')} ({currency.get('code', '')}), symbol {currency.get('symbol', '')}"
             timezone_info = facts.get("timezone", "UTC")
+
+            # Country name by language
+            if lang == "es":
+                country_name = destination.get("name_es", destination.get("name_en", country_slug))
+            elif lang == "en":
+                country_name = destination["name_en"]
+            else:
+                country_name = destination["name_ru"]
 
             prompt = PROMPTS[content_type][lang].format(
                 city_name=city_name,
-                country_name=destination["name_en"] if lang == "en" else destination["name_ru"],
+                country_name=country_name,
                 airports=airports,
                 visa_info=visa_info,
                 currency_info=currency_info,
@@ -235,7 +257,7 @@ def run_country_pipeline(country_slug, langs=None, force=False):
     from config.prompts import CONTENT_TYPES
 
     if langs is None:
-        langs = ["ru", "en"]
+        langs = ["ru", "en", "es"]
 
     dest = DESTINATIONS.get(country_slug)
     if not dest:
@@ -273,7 +295,7 @@ def run_all_pipelines(langs=None):
     from config.destinations import DESTINATIONS
 
     if langs is None:
-        langs = ["ru", "en"]
+        langs = ["ru", "en", "es"]
 
     for country_slug in DESTINATIONS:
         run_country_pipeline(country_slug, langs)

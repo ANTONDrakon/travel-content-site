@@ -115,7 +115,7 @@
                 <div class="card-body">
                     <h3 class="h3">{{ region.name_en if lang == "en" else region.name_ru }}</h3>
                     <p class="body-s text-secondary">
-                        {{ region.cities|length }} {{ "городов" if lang == "ru" else "cities" }}
+                        {{ region.cities|length }} {{ ru_count(region.cities|length, "город", "города", "городов") if lang == "ru" else ("city" if region.cities|length == 1 else "cities") }}
                     </p>
                     <div class="card-meta">
                         <span class="badge badge-accent">{{ "Подробнее →" if lang == "ru" else "View details →" }}</span>

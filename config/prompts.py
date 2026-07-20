@@ -3,30 +3,35 @@ CONTENT_TYPES = {
         "slug": "guide",
         "category_ru": "Путеводители",
         "category_en": "Travel Guides",
+        "category_es": "Guías de Viaje",
         "priority": 1,
     },
     "hotels": {
         "slug": "hotels",
         "category_ru": "Отели",
         "category_en": "Hotels",
+        "category_es": "Hoteles",
         "priority": 2,
     },
     "flights": {
         "slug": "flights",
         "category_ru": "Авиабилеты",
         "category_en": "Flights",
+        "category_es": "Vuelos",
         "priority": 3,
     },
     "attractions": {
         "slug": "attractions",
         "category_ru": "Достопримечательности",
         "category_en": "Attractions",
+        "category_es": "Atracciones",
         "priority": 4,
     },
     "seasons": {
         "slug": "seasons",
         "category_ru": "Сезоны и погода",
         "category_en": "Seasons & Weather",
+        "category_es": "Temporadas y Clima",
         "priority": 5,
     },
 }
@@ -133,7 +138,58 @@ Is it mandatory, what it covers, how much it costs. Get insurance via {insurance
 <h2>10 Travel Tips</h2>
 Practical tips for first-time visitors.</article>
 
-Length: 2000-3000 words. Be useful, with numbers and facts. Weave affiliate links naturally into sentences, not as separate blocks."""
+Length: 2000-3000 words. Be useful, with numbers and facts. Weave affiliate links naturally into sentences, not as separate blocks.""",
+
+        "es": """Escribe un artículo guía de viaje: <article><h1>Guía de viaje de {city_name} 2026</h1>
+
+Describe la ciudad, la atmósfera, por qué visitar (2-3 párrafos).
+
+<h2>Cómo Llegar</h2>
+Aeropuertos: {airports}. Vuelos desde ciudades principales, precios promedio. Menciona naturalmente que los vuelos se pueden {flights_placeholder} al final del párrafo.
+
+<h2>Dónde Alojarse</h2>
+Barrios y hoteles para todos los presupuestos. Menciona naturalmente que los precios de hoteles se pueden {hotels_placeholder} en el texto.
+
+<h2>Top 15 Atracciones</h2>
+15 lugares: nombre, descripción (2-3 oraciones), precio de entrada, horarios.
+
+<h2>Cómo Movilizarse</h2>
+Metro, autobuses, taxis, alquiler. Precios.
+
+<h2>Dónde Comer</h2>
+Restaurantes, comida callejera, cocina local. Rangos de precios.
+
+<h2>Tours y Excursiones</h2>
+Mejores excursiones, precios, qué ver. Menciona que los tours se pueden {excursions_placeholder}.
+
+<h2>Transfer desde el Aeropuerto</h2>
+Cómo llegar desde el aeropuerto: taxi, transfer, transporte público. Menciona que un transfer conveniente se puede {transfers_placeholder}.
+
+<h2>Conectividad</h2>
+Wi-Fi, SIM local, eSIM. Menciona que una eSIM para el viaje se puede {esim_placeholder}.
+
+<h2>Mejor Época para Visitar</h2>
+Clima por mes, temporadas, precios.
+
+<h2>Visa y Documentos</h2>
+{visa_info}
+
+<h2>Moneda y Dinero</h2>
+Moneda local: {currency_info}. Dónde cambiar, se puede pagar con tarjeta, cuánto efectivo llevar.
+
+<h2>Zona Horaria</h2>
+{timezone_info}. Diferencia con los principales hubs.
+
+<h2>Presupuesto Semanal de Viaje</h2>
+Alojamiento, comida, transporte, entretenimiento — costos aproximados en moneda local.
+
+<h2>Seguro de Viaje</h2>
+¿Es obligatorio, qué cubre, cuánto cuesta? Contrata seguro vía {insurance_placeholder}.
+
+<h2>10 Consejos para Viajeros</h2>
+Consejos prácticos para visitantes por primera vez.</article>
+
+Longitud: 2000-3000 palabras. Sé útil, con números y datos. Integra los enlaces de afiliados de forma natural en las oraciones, no como bloques separados."""
     },
 
     "hotels": {
@@ -183,7 +239,31 @@ Getting to hotels from the airport. Mention that a convenient transfer can be {t
 <h2>Booking Tips</h2>
 How to save, when to book, best services. Mention that you can {hotels_placeholder} to compare prices.</article>
 
-1500-2500 words."""
+1500-2500 words.""",
+
+        "es": """Escribe un artículo: <article><h1>Top 10 Hoteles en {city_name} 2026: De Económico a Lujo</h1>
+
+Infraestructura hotelera, barrios, precios (2 párrafos). Menciona naturalmente que los precios de hoteles en {city_name} se pueden {hotels_placeholder} al final de la introducción.
+
+<h2>Hoteles Económicos (menos de $50/noche)</h2>
+3 hoteles: nombre, descripción, precios, pros/contras.
+
+<h2>Hoteles de Gama Media ($50-150/noche)</h2>
+4 hoteles: nombre, descripción, precios, aspectos destacados.
+
+<h2>Hoteles de Lujo ($150+/noche)</h2>
+3 hoteles: nombre, descripción, características.
+
+<h2>Cómo Elegir el Barrio Correcto</h2>
+Según el propósito: playa, turismo, vida nocturna.
+
+<h2>Transfers desde el Aeropuerto</h2>
+Cómo llegar a los hoteles desde el aeropuerto. Menciona que un transfer conveniente se puede {transfers_placeholder}.
+
+<h2>Consejos de Reserva</h2>
+Cómo ahorrar, cuándo reservar, mejores servicios. Menciona que puedes {hotels_placeholder} para comparar precios.</article>
+
+1500-2500 palabras."""
     },
 
     "flights": {
@@ -233,7 +313,31 @@ Optimal timing before departure.
 <h2>Flight Insurance</h2>
 What to do if your flight is delayed or cancelled. Mention compensation via {insurance_placeholder}.</article>
 
-1500-2000 words."""
+1500-2000 words.""",
+
+        "es": """Escribe un artículo: <article><h1>Cómo Encontrar Vuelos Baratos a {city_name} 2026</h1>
+
+Aeropuertos de {city_name}: {airports}. Aerolíneas que cubren la ruta.
+
+<h2>Vuelos Directos</h2>
+Aerolíneas, ciudades de salida, precios estimados.
+
+<h2>Vuelos con Escala</h2>
+Opciones más baratas, a través de qué ciudades, duración. Menciona que los vuelos se pueden {flights_placeholder} y comparar precios entre fechas.
+
+<h2>Precios por Mes</h2>
+Tabla de precios promedio 2026: enero-diciembre.
+
+<h2>10 Trucos para Vuelos Baratos</h2>
+Consejos específicos con servicios.
+
+<h2>Cuándo Comprar</h2>
+Momento óptimo antes de la salida.
+
+<h2>Seguro de Vuelo</h2>
+Qué hacer si tu vuelo se retrasa o cancela. Menciona compensación vía {insurance_placeholder}.</article>
+
+1500-2000 palabras."""
     },
 
     "attractions": {
@@ -283,7 +387,31 @@ What to see without tickets.
 <h2>Practical Tips</h2>
 Transportation, combo tickets.</article>
 
-2000-2500 words."""
+2000-2500 words.""",
+
+        "es": """Escribe un artículo: <article><h1>15 Mejores Cosas para Hacer en {city_name} 2026</h1>
+
+Por qué visitar {city_name} por sus atracciones.
+
+<h2>15 Mejores Atracciones</h2>
+Cada una: nombre, descripción (3-4 oraciones), precio de entrada, horarios, cómo llegar, consejo.
+
+<h2>Itinerarios de 1, 2 y 3 Días</h2>
+Rutas óptimas por la ciudad.
+
+<h2>Tours y Excursiones</h2>
+Qué tours tomar, precios. Menciona que los tours se pueden {excursions_placeholder}.
+
+<h2>Reserva Entradas Online</h2>
+Dónde comprar entradas más baratas. Menciona que las entradas a atracciones se pueden {tickets_placeholder}.
+
+<h2>Atracciones Gratuitas</h2>
+Qué ver sin entradas.
+
+<h2>Consejos Prácticos</h2>
+Transporte, entradas combinadas.</article>
+
+2000-2500 palabras."""
     },
 
     "seasons": {
@@ -345,6 +473,36 @@ Major events by month.
 <h2>Conclusion</h2>
 Best months — summary. Flights for those dates can be {flights_placeholder}.</article>
 
-1500-2000 words."""
+1500-2000 words.""",
+
+        "es": """Escribe un artículo: <article><h1>Mejor Época para Visitar {city_name} 2026: Temporadas y Clima</h1>
+
+Información general sobre el clima.
+
+<h2>Clima por Mes</h2>
+Tabla: temperatura del aire, del agua, precipitación, días soleados — enero a diciembre.
+
+<h2>Alta Temporada</h2>
+Cuándo, por qué, precios. Menciona que en alta temporada vale la pena reservar hoteles pronto vía {hotels_placeholder}.
+
+<h2>Baja Temporada</h2>
+Cuándo, pros/contras, clima, precios.
+
+<h2>Mejor Época para Vacaciones de Playa</h2>
+Meses óptimos para nadar.
+
+<h2>Mejor Época para Turismo</h2>
+Meses más cómodos. Excursiones se pueden {excursions_placeholder}.
+
+<h2>Temporada de Lluvias</h2>
+Cuándo, intensidad, ¿vale la pena visitar?
+
+<h2>Eventos y Festivales</h2>
+Principales eventos por mes.
+
+<h2>Conclusión</h2>
+Mejores meses — resumen. Vuelos para esas fechas se pueden {flights_placeholder}.</article>
+
+1500-2000 palabras."""
     },
 }

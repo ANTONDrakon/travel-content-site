@@ -1,3 +1,5 @@
+{% macro t(ru, es, en) %}{{ ru if lang == "ru" else (es if lang == "es" else en) }}{% endmacro %}
+{% macro ru_count(n, one, few, many) %}{% if n % 10 == 1 and n % 100 != 11 %}{{ one }}{% elif n % 10 >= 2 and n % 10 <= 4 and (n % 100 < 10 or n % 100 >= 20) %}{{ few }}{% else %}{{ many }}{% endif %}{% endmacro %}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
@@ -15,6 +17,10 @@
 
     <title>{% block title %}TravelHub — Travel Guides{% endblock %}</title>
     <meta name="description" content="{% block meta_description %}Expert travel guides for destinations worldwide.{% endblock %}">
+
+    {% block ru_alt %}{% endblock %}
+    {% block en_alt %}{% endblock %}
+    {% block es_alt %}{% endblock %}
 
     <link rel="alternate" hreflang="ru" href="{{ site_url }}/ru/{{ ru_alternate_url or alternate_url or '' }}">
     <link rel="alternate" hreflang="en" href="{{ site_url }}/en/{{ en_alternate_url or alternate_url or '' }}">

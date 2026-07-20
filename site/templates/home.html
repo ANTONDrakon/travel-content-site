@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% macro ru_count(n, one, few, many) %}{% if n % 10 == 1 and n % 100 != 11 %}{{ one }}{% elif n % 10 >= 2 and n % 10 <= 4 and (n % 100 < 10 or n % 100 >= 20) %}{{ few }}{% else %}{{ many }}{% endif %}{% endmacro %}
-{% macro t(ru, es, en) %}{{ ru if lang == "ru" else (es if lang == "es" else en) }}{% endmacro %}
-
 {% block title %}{{ t("TravelHub — Путеводители и гиды по путешествиям 2026", "TravelHub — Guías de Viaje 2026", "TravelHub — Travel Guides & Trip Planning 2026") }}{% endblock %}
 {% block meta_description %}{{ t("Бесплатные путеводители по 80+ направлениям: отели, билеты, достопримечательности, советы экспертов.", "Guías gratuitas para 80+ destinos: hoteles, vuelos, atracciones, consejos.", "Free travel guides for 80+ destinations: hotels, flights, attractions, expert tips.") }}{% endblock %}
 {% block en_alt %}index.html{% endblock %}
