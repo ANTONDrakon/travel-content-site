@@ -3,8 +3,8 @@
 {% set cname_prep = country.name_en if lang == "en" else country.name_ru_prepositional %}
 {% set cname_nom = country.name_en if lang == "en" else country.name_ru %}
 {% set prep = "Vacation in " if lang == "en" else ("Отдых на " if country.slug == "maldives" else "Отдых в ") %}
-{% block title %}{{ cname_prep }} {{ "— полный путеводитель 2026" if lang == "ru" else "— complete travel guide 2026" }} | TravelHub{% endblock %}
-{% block meta_description %}{{ cname_prep }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд с советами и рекомендациями." if lang == "ru" else "best resorts, hotels, prices, seasons, attractions. Complete guide with tips and recommendations." }}{% endblock %}
+{% block title %}{{ cname_nom }} {{ "— полный путеводитель 2026" if lang == "ru" else "— complete travel guide 2026" }} | TravelHub{% endblock %}
+{% block meta_description %}{{ cname_nom }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд с советами и рекомендациями." if lang == "ru" else "best resorts, hotels, prices, seasons, attractions. Complete guide with tips and recommendations." }}{% endblock %}
 
 {% block en_alt %}{{ country.slug }}/index.html{% endblock %}
 {% block ru_alt %}{{ country.slug }}/index.html{% endblock %}
@@ -12,7 +12,7 @@
 {% set en_alternate_url = country.slug + "/index.html" %}
 {% set canonical = "/" + lang + "/" + country.slug + "/index.html" %}
 
-{% block og_title %}{{ cname_prep }} {{ "— полный путеводитель 2026" if lang == "ru" else "— complete travel guide 2026" }} | TravelHub{% endblock %}
+{% block og_title %}{{ cname_nom }} {{ "— полный путеводитель 2026" if lang == "ru" else "— complete travel guide 2026" }} | TravelHub{% endblock %}
 {% block og_description %}{{ cname_prep }}: {{ "лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд с советами и рекомендациями." if lang == "ru" else "best resorts, hotels, prices, seasons, attractions. Complete guide with tips and recommendations." }}{% endblock %}
 {% block og_image_alt %}{{ cname_nom }} {{ "путеводитель" if lang == "ru" else "travel guide" }}{% endblock %}
 {% block twitter_title %}{{ cname_prep }} | TravelHub{% endblock %}
