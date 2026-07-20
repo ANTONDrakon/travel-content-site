@@ -199,6 +199,8 @@ def run_pipeline(country_slug, city_slug, content_type, lang, force=False):
         long_before = sum(1 for p in _re.findall(r'<p>(.*?)</p>', body_before_break, _re.DOTALL) if len(_re.sub(r'<[^>]+>', '', p)) > 500)
         long_after = sum(1 for p in _re.findall(r'<p>(.*?)</p>', body_after_break, _re.DOTALL) if len(_re.sub(r'<[^>]+>', '', p)) > 500)
         print(f"  Break: {paras_before} -> {paras_after} paragraphs, {long_before} -> {long_after} long")
+        if body_before_break == body_after_break:
+            print("  WARNING: Break function did NOT change body!")
 
         struct_issues = validate_structure(article_data["body"])
         cta_issues = check_cta_presence(article_data["body"], lang)

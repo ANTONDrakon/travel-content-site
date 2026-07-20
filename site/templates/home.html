@@ -13,13 +13,15 @@
 {% block content %}
 
 <!-- HERO -->
-<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85');">
+<section class="hero">
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85')"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1 class="hero-title">{{ "Путешествуйте с умом" if lang == "ru" else "Travel smarter" }}</h1>
-        <p class="hero-subtitle">{{ "Честные путеводители с реальными ценами, советами местных и проверенными сервисами для бронирования." if lang == "ru" else "Honest guides with real prices, local tips, and trusted booking services." }}</p>
+        <h1 class="hero-title">{{ "Путешествуйте по-новому" if lang == "ru" else "Discover the world" }}</h1>
+        <p class="hero-subtitle">{{ "Путеводители по 80+ городам с реальными ценами, честными отзывами и проверенными сервисами бронирования." if lang == "ru" else "Guides to 80+ cities with real prices, honest reviews, and trusted booking services." }}</p>
         <div class="hero-search">
             <input type="text" id="hero-search" placeholder="{{ 'Куда хотите поехать?' if lang == 'ru' else 'Where do you want to go?' }}">
-            <button type="button" onclick="var q=document.getElementById('hero-search').value; if(q)document.getElementById('hero-search').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter'}))">
+            <button type="button" class="hero-search-btn" onclick="var q=document.getElementById('hero-search').value; if(q)document.getElementById('hero-search').dispatchEvent(new KeyboardEvent('keydown',{key:'Enter'}))">
                 {{ "Найти" if lang == "ru" else "Search" }}
             </button>
         </div>
