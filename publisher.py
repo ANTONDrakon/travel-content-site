@@ -364,7 +364,16 @@ DESTINATIONS_LIST = [
     {"slug": "georgia", "name_ru": "Грузия", "name_en": "Georgia", "group": "international"},
     {"slug": "cyprus", "name_ru": "Кипр", "name_en": "Cyprus", "group": "international"},
     {"slug": "oman", "name_ru": "Оман", "name_en": "Oman", "group": "international"},
+    {"slug": "kazakhstan", "name_ru": "Казахстан", "name_en": "Kazakhstan", "group": "international"},
+    {"slug": "uzbekistan", "name_ru": "Узбекистан", "name_en": "Uzbekistan", "group": "international"},
 ]
+
+# Russian region slugs that appear as standalone entries in DESTINATIONS
+# but should NOT be displayed as independent countries on the homepage
+RUSSIA_STANDALONE_SLUGS = {
+    "baikal", "altai", "karelia", "dagestan", "kamchatka",
+    "mineral-vody", "kavkaz", "kaliningrad", "vladivostok",
+}
 
 env.globals["destinations_list"] = DESTINATIONS_LIST
 env.globals["russia_destinations"] = [d for d in DESTINATIONS_LIST if d["group"] == "russia"]
@@ -572,22 +581,76 @@ def find_city_region(country_slug, city_slug):
     return None, None
 
 
+def get_hotels_for_home():
+    """Load popular hotels from hotels.json for homepage display."""
+    hotels_path = Path(__file__).parent / "data" / "hotels.json"
+    all_hotels = load_json(hotels_path)
+    if not all_hotels or not isinstance(all_hotels, list):
+        return []
+    seen_countries = set()
+    result = []
+    priority_order = ["luxury", "mid-range", "budget"]
+    for cat in priority_order:
+        for h in all_hotels:
+            country = h.get("country_slug", "")
+            if country in seen_countries or country in RUSSIA_STANDALONE_SLUGS:
+                continue
+            if h.get("category") == cat and h.get("images"):
+                seen_countries.add(country)
+                result.append({
+                    "name": h.get("name", ""),
+                    "country_slug": country,
+                    "city_name_ru": h.get("city_name_ru", ""),
+                    "city_name_en": h.get("city_name_en", ""),
+                    "rating": h.get("rating"),
+                    "price": h.get("price", ""),
+                    "image": h["images"][0].get("src", "") if h.get("images") else "",
+                    "page_url": h.get("page_url", ""),
+                    "page_url_en": h.get("page_url_en", ""),
+                })
+                if len(result) >= 6:
+                    break
+        if len(result) >= 6:
+            break
+    if len(result) < 6:
+        for h in all_hotels:
+            country = h.get("country_slug", "")
+            if country in {r["country_slug"] for r in result} or country in RUSSIA_STANDALONE_SLUGS:
+                continue
+            if h.get("images"):
+                result.append({
+                    "name": h.get("name", ""),
+                    "country_slug": country,
+                    "city_name_ru": h.get("city_name_ru", ""),
+                    "city_name_en": h.get("city_name_en", ""),
+                    "rating": h.get("rating"),
+                    "price": h.get("price", ""),
+                    "image": h["images"][0].get("src", "") if h.get("images") else "",
+                    "page_url": h.get("page_url", ""),
+                    "page_url_en": h.get("page_url_en", ""),
+                })
+                if len(result) >= 6:
+                    break
+    return result
+
+
 def build_home_page(lang):
     from config.destinations import DESTINATIONS
 
     countries_data = []
     for slug, country in DESTINATIONS.items():
+        if slug in RUSSIA_STANDALONE_SLUGS:
+            continue
         regions = country.get("regions", {})
         cities_direct = country.get("cities", {})
-        
-        # Handle both formats: with regions or direct cities
+
         if regions:
             cities_count = sum(len(r.get("cities", {})) for r in regions.values())
             regions_count = len(regions)
         else:
             cities_count = len(cities_direct)
             regions_count = 1 if cities_count > 0 else 0
-        
+
         countries_data.append({
             "slug": slug,
             "name_ru": country["name_ru"],
@@ -598,10 +661,13 @@ def build_home_page(lang):
             "cities_count": cities_count,
         })
 
+    popular_hotels = get_hotels_for_home()
+
     template = env.get_template("home.html")
     html = template.render(
         lang=lang,
         countries=countries_data,
+        popular_hotels=popular_hotels,
         alternate_url="index.html",
         breadcrumbs=None,
     )

@@ -85,4 +85,29 @@ def inject_insurance_block(body, lang):
 def process_article_body(body, city_name_en, lang):
     body = replace_placeholders(body, city_name_en, lang)
     body = inject_insurance_block(body, lang)
+
+    # Fallback: if no affiliate links found, inject at the end
+    if 'partner-link' not in body:
+        from config.affiliates import AFFILIATE_HTML, hotels_link, flights_link
+        suffix = "_en" if lang == "en" else ""
+        city_slug = city_name_en.lower().replace(" ", "-")
+
+        # Get airport code
+        from config.destinations import DESTINATIONS
+        destination_code = city_name_en.upper()[:3]
+        for country in DESTINATIONS.values():
+            for region in country.get("regions", {}).values():
+                for c_slug, city_data in region.get("cities", {}).items():
+                    if city_data.get("name_en", "").lower() == city_name_en.lower():
+                        codes = city_data.get("airport_codes", [])
+                        if codes:
+                            destination_code = codes[0]
+                        break
+
+        hotels_html = AFFILIATE_HTML[f"hotels{suffix}"].format(url=hotels_link(city_slug), city=city_name_en)
+        flights_html = AFFILIATE_HTML[f"flights{suffix}"].format(url=flights_link(destination=destination_code), city=city_name_en)
+
+        fallback_block = f'\n<div class="affiliate-block">{hotels_html}</div>\n<div class="affiliate-block">{flights_html}</div>\n'
+        body += fallback_block
+
     return body
