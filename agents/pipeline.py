@@ -304,23 +304,43 @@ def run_all_pipelines(langs=None):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python -m agents.pipeline <country> [city] [content_type] [lang]")
-        print("       python -m agents.pipeline --all")
+        print("       python -m agents.pipeline --all [--lang ru|en|es|all]")
+        print("       python -m agents.pipeline <country> --lang es")
         sys.exit(1)
 
-    if sys.argv[1] == "--all":
-        run_all_pipelines()
-    elif len(sys.argv) >= 2:
-        country = sys.argv[1]
-        city = sys.argv[2] if len(sys.argv) > 2 else None
-        ct = sys.argv[3] if len(sys.argv) > 3 else None
-        lang = sys.argv[4] if len(sys.argv) > 4 else "both"
+    # Parse --lang argument
+    langs = None
+    force = "--force" in sys.argv
+    args = [a for a in sys.argv[1:] if a not in ["--force"]]
+
+    if "--lang" in args:
+        lang_idx = args.index("--lang")
+        if lang_idx + 1 < len(args):
+            lang_val = args[lang_idx + 1]
+            if lang_val == "all":
+                langs = ["ru", "en", "es"]
+            else:
+                langs = [lang_val]
+            args = args[:lang_idx] + args[lang_idx + 2:]
+
+    if args[0] == "--all":
+        run_all_pipelines(langs)
+    elif len(args) >= 2:
+        country = args[0]
+        city = args[1] if len(args) > 1 else None
+        ct = args[2] if len(args) > 2 else None
+        lang = args[3] if len(args) > 3 else "both"
 
         if city and ct:
-            langs = ["ru", "en"] if lang == "both" else [lang]
+            if langs is None:
+                langs = ["ru", "en", "es"] if lang == "both" else [lang]
             for l in langs:
-                result = run_pipeline(country, city, ct, l)
+                result = run_pipeline(country, city, ct, l, force=force)
                 result.report()
         elif city:
-            run_country_pipeline(country)
+            run_country_pipeline(country, langs, force=force)
         else:
-            run_country_pipeline(country)
+            run_country_pipeline(country, langs, force=force)
+    else:
+        country = args[0]
+        run_country_pipeline(country, langs, force=force)

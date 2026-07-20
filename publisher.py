@@ -107,7 +107,7 @@ def convert_prices_to_rub(body, lang="ru"):
                 return _f
             body = re.sub(r'(?<![\(\d])(\d[\d,.]*(?:\s*\d{3})*)\s*' + code, _make_conv(code, sym_icon), body)
     else:
-        # EN: USD main + (local in parentheses)
+        # EN/ES: USD only (no local currency in parentheses)
         rates = _get_rates()
         usd_rate = rates["$"]
         def _en_convert(m):
@@ -118,22 +118,13 @@ def convert_prices_to_rub(body, lang="ru"):
                 usd = rub / usd_rate
                 if sym == "$":
                     return f"${amt}"
-                elif sym == "€":
-                    return f"${usd:,.0f} (€{amt})".replace(",", " ")
-                elif sym == "₺":
-                    return f"${usd:,.0f} ({amt} ₺)".replace(",", " ")
-                elif sym == "฿":
-                    return f"${usd:,.0f} ({amt} ฿)".replace(",", " ")
-                elif sym == "¥":
-                    return f"${usd:,.0f} ({amt} ¥)".replace(",", " ")
                 else:
-                    return f"${usd:,.0f} ({amt} {sym})".replace(",", " ")
+                    return f"${usd:,.0f}".replace(",", " ")
             except (ValueError, KeyError, TypeError):
                 return m.group(0)
 
         for sym in ["$", "€", "₺", "฿", "¥"]:
             escaped = re.escape(sym)
-            # For EN, skip $ if already in parentheses (pre-converted)
             if sym == "$":
                 body = re.sub(r'(?<![\(\d])' + escaped + r'(\d[\d,.]*(?:\s*\d{3})*)', lambda m: _en_convert(m) if "₽" not in m.group(0) else m.group(0), body)
             else:
@@ -146,7 +137,7 @@ def convert_prices_to_rub(body, lang="ru"):
                     try:
                         rub = float(amt) * rates.get(c, 1)
                         usd = rub / usd_rate
-                        return f"${usd:,.0f} ({amt} {si})".replace(",", " ")
+                        return f"${usd:,.0f}".replace(",", " ")
                     except (ValueError, KeyError, TypeError):
                         return m.group(0)
                 return _f
