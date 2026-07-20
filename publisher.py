@@ -427,7 +427,7 @@ CITY_IMAGES = {
     "fujairah": "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?fm=webp&w=800&q=80",
     # Indonesia
     "ubud": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?fm=webp&w=800&q=80",
-    "kuta": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?fm=webp&w=800&q=80",
+    "kuta": "https://images.unsplash.com/photo-1573790387438-4da905039392?fm=webp&w=800&q=80",
     "seminyak": "https://images.unsplash.com/photo-1573790387438-4da905039392?fm=webp&w=800&q=80",
     "canggu": "https://images.unsplash.com/photo-1569284345574-bdd2e0f3e4b6?fm=webp&w=800&q=80",
     "nusa-dua": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?fm=webp&w=800&q=80",
@@ -481,8 +481,8 @@ CITY_IMAGES = {
     # Kazakhstan
     "almaty": "https://images.unsplash.com/photo-1568411221171-6b98eb0b022f?fm=webp&w=800&q=80",
     "astana": "https://images.unsplash.com/photo-1586259395085-bb171e693c8e?fm=webp&w=800&q=80",
-    "charyn": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=webp&w=800&q=80",
-    "burabay": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?fm=webp&w=800&q=80",
+    "charyn": "https://images.unsplash.com/photo-1548013146-72479768bada?fm=webp&w=800&q=80",
+    "burabay": "https://images.unsplash.com/photo-1519681393784-d120267933ba?fm=webp&w=800&q=80",
     # Russia
     "moscow": "https://images.unsplash.com/photo-1513326738677-b964603b136d?fm=webp&w=800&q=80",
     "saint-petersburg": "https://images.unsplash.com/photo-1556610930-e515011324f3?fm=webp&w=800&q=80",
@@ -521,7 +521,7 @@ CITY_IMAGES = {
     "kislovodsk-c": "https://images.unsplash.com/photo-1548013146-72479768bada?fm=webp&w=800&q=80",
     # Kaliningrad
     "kaliningrad-city": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?fm=webp&w=800&q=80",
-    "zelenogradsk": "https://images.unsplash.com/photo-1544984243-ec32ea7037f9?fm=webp&w=800&q=80",
+    "zelenogradsk": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?fm=webp&w=800&q=80",
     "svetlogorsk": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?fm=webp&w=800&q=80",
 }
 
