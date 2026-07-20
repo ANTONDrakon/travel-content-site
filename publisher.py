@@ -427,7 +427,7 @@ CITY_IMAGES = {
     "fujairah": "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?fm=webp&w=800&q=80",
     # Indonesia
     "ubud": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?fm=webp&w=800&q=80",
-    "kuta": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?fm=webp&w=800&q=80",
+    "kuta": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?fm=webp&w=800&q=80",
     "seminyak": "https://images.unsplash.com/photo-1573790387438-4da905039392?fm=webp&w=800&q=80",
     "canggu": "https://images.unsplash.com/photo-1569284345574-bdd2e0f3e4b6?fm=webp&w=800&q=80",
     "nusa-dua": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?fm=webp&w=800&q=80",
@@ -472,9 +472,9 @@ CITY_IMAGES = {
     "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?fm=webp&w=800&q=80",
     "salalah": "https://images.unsplash.com/photo-1599571234909-29ed5d62da5e?fm=webp&w=800&q=80",
     "musandam": "https://images.unsplash.com/photo-1580060836725-2e7636e9b20a?fm=webp&w=800&q=80",
-    "khasab": "https://images.unsplash.com/photo-1597212618440-806262de4f6b?fm=webp&w=800&q=80",
+    "khasab": "https://images.unsplash.com/photo-1580060836725-2e7636e9b20a?fm=webp&w=800&q=80",
     # Uzbekistan
-    "tashkent": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?fm=webp&w=800&q=80",
+    "tashkent": "https://images.unsplash.com/photo-1603899122634-f086ca5a5513?fm=webp&w=800&q=80",
     "samarkand": "https://images.unsplash.com/photo-1575590994855-8738d06c4c2b?fm=webp&w=800&q=80",
     "bukhara": "https://images.unsplash.com/photo-1603834305855-eaf93d5f260f?fm=webp&w=800&q=80",
     "khiva": "https://images.unsplash.com/photo-1599758682310-826b55fee431?fm=webp&w=800&q=80",
@@ -495,33 +495,33 @@ CITY_IMAGES = {
     "olkhon": "https://images.unsplash.com/photo-1596740287555-d2a73e4157b0?fm=webp&w=800&q=80",
     # Altai
     "gorno-altaysk": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=webp&w=800&q=80",
-    "chemyal": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=webp&w=800&q=80",
-    "akkem": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?fm=webp&w=800&q=80",
+    "chemyal": "https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?fm=webp&w=800&q=80",
+    "akkem": "https://images.unsplash.com/photo-1519681393784-d120267933ba?fm=webp&w=800&q=80",
     # Karelia
     "petrozavodsk": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?fm=webp&w=800&q=80",
-    "sortavala": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=webp&w=800&q=80",
-    "kizhi": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?fm=webp&w=800&q=80",
+    "sortavala": "https://images.unsplash.com/photo-1544984243-ec32ea7037f9?fm=webp&w=800&q=80",
+    "kizhi": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?fm=webp&w=800&q=80",
     # Dagestan
     "makhachkala": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?fm=webp&w=800&q=80",
-    "derbent": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?fm=webp&w=800&q=80",
-    "kizlyar": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?fm=webp&w=800&q=80",
+    "derbent": "https://images.unsplash.com/photo-1581351123004-757df051db8e?fm=webp&w=800&q=80",
+    "kizlyar": "https://images.unsplash.com/photo-1566837945700-30057527ade0?fm=webp&w=800&q=80",
     # Kamchatka
-    "petropavlovsk-kamchatsky": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=webp&w=800&q=80",
-    "paratunka": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?fm=webp&w=800&q=80",
+    "petropavlovsk-kamchatsky": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?fm=webp&w=800&q=80",
+    "paratunka": "https://images.unsplash.com/photo-1500534623283-312aade485b7?fm=webp&w=800&q=80",
     # Mineral Waters
     "pyatigorsk": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?fm=webp&w=800&q=80",
-    "kislovodsk": "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?fm=webp&w=800&q=80",
+    "kislovodsk": "https://images.unsplash.com/photo-1548013146-72479768bada?fm=webp&w=800&q=80",
     "essentuki": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=webp&w=800&q=80",
     # Vladivostok
     "vladivostok-city": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?fm=webp&w=800&q=80",
-    "russky-island": "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?fm=webp&w=800&q=80",
+    "russky-island": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=webp&w=800&q=80",
     # Caucasus
-    "dombay": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=webp&w=800&q=80",
-    "elbrus": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=webp&w=800&q=80",
-    "kislovodsk-c": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?fm=webp&w=800&q=80",
+    "dombay": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?fm=webp&w=800&q=80",
+    "elbrus": "https://images.unsplash.com/photo-1519681393784-d120267933ba?fm=webp&w=800&q=80",
+    "kislovodsk-c": "https://images.unsplash.com/photo-1548013146-72479768bada?fm=webp&w=800&q=80",
     # Kaliningrad
     "kaliningrad-city": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?fm=webp&w=800&q=80",
-    "zelenogradsk": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?fm=webp&w=800&q=80",
+    "zelenogradsk": "https://images.unsplash.com/photo-1544984243-ec32ea7037f9?fm=webp&w=800&q=80",
     "svetlogorsk": "https://images.unsplash.com/photo-1519197924294-4ba991a11128?fm=webp&w=800&q=80",
 }
 
