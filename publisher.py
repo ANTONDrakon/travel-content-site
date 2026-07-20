@@ -396,6 +396,7 @@ COUNTRY_IMAGES = {
     "cyprus": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
     "oman": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1200&q=80",
     "uzbekistan": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=1200&q=80",
+    "kazakhstan": "https://images.unsplash.com/photo-1568411221171-6b98eb0b022f?w=1200&q=80",
 }
 
 CITY_IMAGES = {
@@ -470,6 +471,10 @@ CITY_IMAGES = {
     "samarkand": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=800&q=80",
     "bukhara": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=800&q=80",
     "khiva": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=800&q=80",
+    "almaty": "https://images.unsplash.com/photo-1568411221171-6b98eb0b022f?w=800&q=80",
+    "astana": "https://images.unsplash.com/photo-1568411221171-6b98eb0b022f?w=800&q=80",
+    "charyn": "https://images.unsplash.com/photo-1568411221171-6b98eb0b022f?w=800&q=80",
+    "burabay": "https://images.unsplash.com/photo-1568411221171-6b98eb0b022f?w=800&q=80",
     "salalah": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
     "musandam": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
     # Russia
@@ -550,6 +555,7 @@ def get_country_emoji(slug):
         "sri-lanka": "🇱🇰", "montenegro": "🇲🇪", "vietnam": "🇻🇳",
         "georgia": "🇬🇪", "cyprus": "🇨🇾", "oman": "🇴🇲",
         "uzbekistan": "🇺🇿",
+        "kazakhstan": "🇰🇿",
     }
     return emojis.get(slug, "🌍")
 
@@ -955,6 +961,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         "cyprus": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
         "oman": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1200&q=80",
     "uzbekistan": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=1200&q=80",
+    "kazakhstan": "https://images.unsplash.com/photo-1568411221171-6b98eb0b022f?w=1200&q=80",
     }
     seo["og_image"] = _og_map.get(country_slug, f"{os.getenv('SITE_URL', 'https://antondrakon.github.io/travel-content-site')}/assets/countries/travel-hero.webp")
 

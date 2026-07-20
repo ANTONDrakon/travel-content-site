@@ -1435,4 +1435,45 @@ DESTINATIONS = {
             },
         },
     },
+
+    "kazakhstan": {
+        "name_ru": "Казахстан",
+        "name_ru_prepositional": "Казахстане",
+        "name_en": "Kazakhstan",
+        "slug": "kazakhstan",
+        "currency": "KZT",
+        "visa_ru": "безвизовый въезд до 30 дней для граждан РФ",
+        "visa_en": "visa-free entry up to 30 days for Russian citizens",
+        "airport_code": "NQZ",
+        "cities": {
+            "almaty": {
+                "name_ru": "Алматы",
+                "name_en": "Almaty",
+                "slug": "almaty",
+                "airport_codes": ["ALA"],
+                "lat": 43.2380, "lon": 76.9455,
+            },
+            "astana": {
+                "name_ru": "Астана",
+                "name_en": "Astana",
+                "slug": "astana",
+                "airport_codes": ["NQZ"],
+                "lat": 51.1282, "lon": 71.4304,
+            },
+            "charyn": {
+                "name_ru": "Чарынский каньон",
+                "name_en": "Charyn Canyon",
+                "slug": "charyn",
+                "airport_codes": ["ALA"],
+                "lat": 43.3558, "lon": 79.0711,
+            },
+            "burabay": {
+                "name_ru": "Бурабай",
+                "name_en": "Burabay",
+                "slug": "burabay",
+                "airport_codes": ["NQZ"],
+                "lat": 53.0833, "lon": 70.2833,
+            },
+        },
+    },
 }
