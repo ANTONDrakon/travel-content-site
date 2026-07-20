@@ -250,21 +250,29 @@
             <a href="{{ root }}/en/{{ self.en_alt() }}" class="lang-btn {% if lang == 'en' %}lang-btn--active{% endif %}" title="English" lang="en">🇬🇧</a>
             <a href="{{ root }}/es/{{ self.es_alt() }}" class="lang-btn {% if lang == 'es' %}lang-btn--active{% endif %}" title="Español" lang="es">🇪🇸</a>
         </div>
-        <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('mobile-nav--open')" aria-label="{{ t('Открыть меню', 'Abrir menú', 'Open menu') }}" aria-expanded="false">
+        <button class="hamburger" onclick="var m=document.getElementById('mobile-nav');m.classList.toggle('mobile-nav--open');this.setAttribute('aria-expanded',m.classList.contains('mobile-nav--open'))" aria-label="{{ t('Открыть меню', 'Abrir menú', 'Open menu') }}" aria-expanded="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="{{ t('Мобильная навигация', 'Navegación móvil', 'Mobile navigation') }}">
-        <a href="{{ root }}/{{ lang }}/index.html">{{ t("Главная", "Inicio", "Home") }}</a>
-        <a href="{{ root }}/{{ lang }}/russia/index.html">{{ t("Направления", "Destinos", "Destinations") }}</a>
-        <a href="{{ root }}/{{ lang }}/russia/moscow-{{ 'putevoditel' if lang == 'ru' else ('guia-de-viaje' if lang == 'es' else 'travel-guide') }}.html">{{ t("Путеводители", "Guías", "Guides") }}</a>
-        <a href="{{ root }}/{{ lang }}/russia/moscow-{{ 'oteli' if lang == 'ru' else ('hoteles' if lang == 'es' else 'hotels') }}.html">{{ t("Отели", "Hoteles", "Hotels") }}</a>
-        <a href="{{ root }}/{{ lang }}/about.html">{{ t("О нас", "Sobre nosotros", "About") }}</a>
-        <a href="{{ root }}/{{ lang }}/contacts.html">{{ t("Контакты", "Contacto", "Contacts") }}</a>
-        <div class="mobile-lang-switcher">
-            <a href="{{ root }}/ru/{{ self.ru_alt() }}" class="lang-btn {% if lang == 'ru' %}lang-btn--active{% endif %}" title="Русский" lang="ru">🇷🇺</a>
-            <a href="{{ root }}/en/{{ self.en_alt() }}" class="lang-btn {% if lang == 'en' %}lang-btn--active{% endif %}" title="English" lang="en">🇬🇧</a>
-            <a href="{{ root }}/es/{{ self.es_alt() }}" class="lang-btn {% if lang == 'es' %}lang-btn--active{% endif %}" title="Español" lang="es">🇪🇸</a>
+        <div class="mobile-nav-backdrop" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')" aria-hidden="true"></div>
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="logo" style="font-size:var(--font-size-lg);">
+                    <span class="logo-icon" aria-hidden="true">✈</span>
+                    TravelHub
+                </span>
+                <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')" aria-label="{{ t('Закрыть меню', 'Cerrar menú', 'Close menu') }}">✕</button>
+            </div>
+            <a href="{{ root }}/{{ lang }}/index.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">{{ t("Главная", "Inicio", "Home") }}</a>
+            <a href="{{ root }}/{{ lang }}/russia/index.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">{{ t("Направления", "Destinos", "Destinations") }}</a>
+            <a href="{{ root }}/{{ lang }}/about.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">{{ t("О нас", "Sobre nosotros", "About") }}</a>
+            <a href="{{ root }}/{{ lang }}/contacts.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">{{ t("Контакты", "Contacto", "Contacts") }}</a>
+            <div class="mobile-lang-switcher">
+                <a href="{{ root }}/ru/{{ self.ru_alt() }}" class="lang-btn {% if lang == 'ru' %}lang-btn--active{% endif %}" title="Русский" lang="ru">🇷🇺</a>
+                <a href="{{ root }}/en/{{ self.en_alt() }}" class="lang-btn {% if lang == 'en' %}lang-btn--active{% endif %}" title="English" lang="en">🇬🇧</a>
+                <a href="{{ root }}/es/{{ self.es_alt() }}" class="lang-btn {% if lang == 'es' %}lang-btn--active{% endif %}" title="Español" lang="es">🇪🇸</a>
+            </div>
         </div>
     </nav>
 </header>

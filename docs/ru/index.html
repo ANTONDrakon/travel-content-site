@@ -240,21 +240,29 @@
             <a href="/travel-content-site/en/index.html" class="lang-btn " title="English" lang="en">🇬🇧</a>
             <a href="/travel-content-site/es/index.html" class="lang-btn " title="Español" lang="es">🇪🇸</a>
         </div>
-        <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('mobile-nav--open')" aria-label="Открыть меню" aria-expanded="false">
+        <button class="hamburger" onclick="var m=document.getElementById('mobile-nav');m.classList.toggle('mobile-nav--open');this.setAttribute('aria-expanded',m.classList.contains('mobile-nav--open'))" aria-label="Открыть меню" aria-expanded="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
-        <a href="/travel-content-site/ru/index.html">Главная</a>
-        <a href="/travel-content-site/ru/russia/index.html">Направления</a>
-        <a href="/travel-content-site/ru/russia/moscow-putevoditel.html">Путеводители</a>
-        <a href="/travel-content-site/ru/russia/moscow-oteli.html">Отели</a>
-        <a href="/travel-content-site/ru/about.html">О нас</a>
-        <a href="/travel-content-site/ru/contacts.html">Контакты</a>
-        <div class="mobile-lang-switcher">
-            <a href="/travel-content-site/ru/index.html" class="lang-btn lang-btn--active" title="Русский" lang="ru">🇷🇺</a>
-            <a href="/travel-content-site/en/index.html" class="lang-btn " title="English" lang="en">🇬🇧</a>
-            <a href="/travel-content-site/es/index.html" class="lang-btn " title="Español" lang="es">🇪🇸</a>
+        <div class="mobile-nav-backdrop" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')" aria-hidden="true"></div>
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="logo" style="font-size:var(--font-size-lg);">
+                    <span class="logo-icon" aria-hidden="true">✈</span>
+                    TravelHub
+                </span>
+                <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')" aria-label="Закрыть меню">✕</button>
+            </div>
+            <a href="/travel-content-site/ru/index.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">Главная</a>
+            <a href="/travel-content-site/ru/russia/index.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">Направления</a>
+            <a href="/travel-content-site/ru/about.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">О нас</a>
+            <a href="/travel-content-site/ru/contacts.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">Контакты</a>
+            <div class="mobile-lang-switcher">
+                <a href="/travel-content-site/ru/index.html" class="lang-btn lang-btn--active" title="Русский" lang="ru">🇷🇺</a>
+                <a href="/travel-content-site/en/index.html" class="lang-btn " title="English" lang="en">🇬🇧</a>
+                <a href="/travel-content-site/es/index.html" class="lang-btn " title="Español" lang="es">🇪🇸</a>
+            </div>
         </div>
     </nav>
 </header>
