@@ -101,8 +101,8 @@
     </div>
 </section>
 
-<!-- REGIONS — Main regions grid -->
-<section class="section section-surface" id="cities">
+<!-- REGIONS -->
+<section class="section section--alt" id="cities">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Регионы" if lang == "ru" else "Regions" }}</p>
@@ -111,14 +111,22 @@
         </div>
         <div class="grid grid-3">
             {% for region_slug, region in regions.items() %}
-            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ region_slug }}/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">{{ region.name_en if lang == "en" else region.name_ru }}</h3>
-                    <p class="body-s text-secondary">
-                        {{ region.cities|length }} {{ ru_count(region.cities|length, "город", "города", "городов") if lang == "ru" else ("city" if region.cities|length == 1 else "cities") }}
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">{{ "Подробнее →" if lang == "ru" else "View details →" }}</span>
+            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ region_slug }}/index.html" class="region-card">
+                {% if region_slug in get_region_image(country.slug) %}
+                <div class="region-card-img">
+                    <img src="{{ get_region_image(country.slug, region_slug) }}" alt="{{ region.name_en if lang == 'en' else region.name_ru }}" loading="lazy" width="600" height="400">
+                </div>
+                {% endif %}
+                <div class="region-card-body">
+                    <h3>{{ region.name_en if lang == "en" else region.name_ru }}</h3>
+                    <div class="region-card-cities">
+                        {% for city_slug, city in region.cities.items() %}
+                        <span class="city-tag">{{ city.name_en if lang == "en" else city.name_ru }}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="region-card-meta">
+                        <span>{{ region.cities|length }} {{ ru_count(region.cities|length, "город", "города", "городов") if lang == "ru" else ("city" if region.cities|length == 1 else "cities") }}</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>

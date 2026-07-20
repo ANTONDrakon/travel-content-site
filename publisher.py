@@ -566,6 +566,87 @@ def get_country_emoji(slug):
     return emojis.get(slug, "🌍")
 
 
+# Region images for destination pages
+REGION_IMAGES = {
+    # Russia regions
+    ("russia", "moscow-region"): "https://images.unsplash.com/photo-1513326738677-b964603b136d?fm=webp&w=600&q=80",
+    ("russia", "leningrad-region"): "https://images.unsplash.com/photo-1556610930-e515011324f3?fm=webp&w=600&q=80",
+    ("russia", "krasnodar-krai"): "https://images.unsplash.com/photo-1548636800-4abe7e58658e?fm=webp&w=600&q=80",
+    ("russia", "republic-of-tatarstan"): "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?fm=webp&w=600&q=80",
+    ("russia", "kaliningrad-region"): "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?fm=webp&w=600&q=80",
+    ("russia", "republic-of-karelia"): "https://images.unsplash.com/photo-1509316785289-025f5b846b35?fm=webp&w=600&q=80",
+    ("russia", "irkutsk-region"): "https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?fm=webp&w=600&q=80",
+    ("russia", "republic-of-altai"): "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=webp&w=600&q=80",
+    ("russia", "republic-of-dagestan"): "https://images.unsplash.com/photo-1568702846914-96b305d2ead1?fm=webp&w=600&q=80",
+    ("russia", "kamchatka-krai"): "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=webp&w=600&q=80",
+    ("russia", "stavropol-krai"): "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?fm=webp&w=600&q=80",
+    ("russia", "primorsky-krai"): "https://images.unsplash.com/photo-1519197924294-4ba991a11128?fm=webp&w=600&q=80",
+    # Turkey
+    ("turkey", "marmara-region"): "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?fm=webp&w=600&q=80",
+    ("turkey", "mediterranean-coast"): "https://images.unsplash.com/photo-1570789210967-2cac24afeb00?fm=webp&w=600&q=80",
+    ("turkey", "aegean-coast"): "https://images.unsplash.com/photo-1591994843349-f415f2e6e1a0?fm=webp&w=600&q=80",
+    ("turkey", "cappadocia"): "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?fm=webp&w=600&q=80",
+    # Thailand
+    ("thailand", "bangkok-region"): "https://images.unsplash.com/photo-1508009603885-50cf7c579365?fm=webp&w=600&q=80",
+    ("thailand", "phuket-province"): "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?fm=webp&w=600&q=80",
+    ("thailand", "chonburi-province"): "https://images.unsplash.com/photo-1569154941061-e231b4725ef1?fm=webp&w=600&q=80",
+    ("thailand", "surat-thani-province"): "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?fm=webp&w=600&q=80",
+    ("thailand", "krabi-province"): "https://images.unsplash.com/photo-1559564474-47ea8aa3c65e?fm=webp&w=600&q=80",
+    # Egypt
+    ("egypt", "red-sea"): "https://images.unsplash.com/photo-1546026423-cc4642628d2b?fm=webp&w=600&q=80",
+    ("egypt", "cairo-region"): "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?fm=webp&w=600&q=80",
+    ("egypt", "luxor-region"): "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?fm=webp&w=600&q=80",
+    # UAE
+    ("uae", "dubai-emirate"): "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?fm=webp&w=600&q=80",
+    ("uae", "abu-dhabi-emirate"): "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?fm=webp&w=600&q=80",
+    ("uae", "sharjah-emirate"): "https://images.unsplash.com/photo-1570481661834-3e355b8eed37?fm=webp&w=600&q=80",
+    ("uae", "ras-al-khaimah-emirate"): "https://images.unsplash.com/photo-1597212618440-806262de4f6b?fm=webp&w=600&q=80",
+    # Indonesia
+    ("indonesia", "bali"): "https://images.unsplash.com/photo-1555400038-63f5ba517a47?fm=webp&w=600&q=80",
+    # China
+    ("china", "hainan"): "https://images.unsplash.com/photo-1559827291-fd44efbab7c5?fm=webp&w=600&q=80",
+    ("china", "beijing-region"): "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?fm=webp&w=600&q=80",
+    ("china", "shanghai-region"): "https://images.unsplash.com/photo-1546412414-e1885e5109b5?fm=webp&w=600&q=80",
+    ("china", "shaanxi"): "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?fm=webp&w=600&q=80",
+    # Maldives
+    ("maldives", "north-male-atoll"): "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?fm=webp&w=600&q=80",
+    ("maldives", "south-male-atoll"): "https://images.unsplash.com/photo-1540202404-a2f29016b523?fm=webp&w=600&q=80",
+    ("maldives", "other-atolls"): "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?fm=webp&w=600&q=80",
+    # Sri Lanka
+    ("sri-lanka", "western-province"): "https://images.unsplash.com/photo-1586526399017-e6d8cd50e1f7?fm=webp&w=600&q=80",
+    ("sri-lanka", "southern-province"): "https://images.unsplash.com/photo-1569180885957-478155b6ecd9?fm=webp&w=600&q=80",
+    ("sri-lanka", "central-province"): "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?fm=webp&w=600&q=80",
+    # Montenegro
+    ("montenegro", "budva-riviera"): "https://images.unsplash.com/photo-1555990793-da11153b2473?fm=webp&w=600&q=80",
+    ("montenegro", "kotor-bay"): "https://images.unsplash.com/photo-1591287083773-9a52db81836a?fm=webp&w=600&q=80",
+    ("montenegro", "tivat-area"): "https://images.unsplash.com/photo-1560703650-ef3e0f254ae0?fm=webp&w=600&q=80",
+    # Vietnam
+    ("vietnam", "south"): "https://images.unsplash.com/photo-1583417319070-4a69db38a624?fm=webp&w=600&q=80",
+    ("vietnam", "central"): "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?fm=webp&w=600&q=80",
+    ("vietnam", "north"): "https://images.unsplash.com/photo-1557750255-c34172a7e76e?fm=webp&w=600&q=80",
+    # Georgia
+    ("georgia", "tbilisi-region"): "https://images.unsplash.com/photo-1565008576549-57569a49371d?fm=webp&w=600&q=80",
+    ("georgia", "adjara"): "https://images.unsplash.com/photo-1604328716579-c326ac44070b?fm=webp&w=600&q=80",
+    ("georgia", "imereti"): "https://images.unsplash.com/photo-1598560917807-1b269a0f45d0?fm=webp&w=600&q=80",
+    # Cyprus
+    ("cyprus", "limassol-district"): "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?fm=webp&w=600&q=80",
+    ("cyprus", "famagusta-district"): "https://images.unsplash.com/photo-1504150558240-0b4fd8946624?fm=webp&w=600&q=80",
+    ("cyprus", "paphos-district"): "https://images.unsplash.com/photo-1565967511849-76e411cf3a00?fm=webp&w=600&q=80",
+    # Oman
+    ("oman", "muscat-region"): "https://images.unsplash.com/photo-1512100356356-de1b84283e18?fm=webp&w=600&q=80",
+    ("oman", "dhofar"): "https://images.unsplash.com/photo-1599571234909-29ed5d62da5e?fm=webp&w=600&q=80",
+    ("oman", "musandam"): "https://images.unsplash.com/photo-1580060836725-2e7636e9b20a?fm=webp&w=600&q=80",
+}
+
+def get_region_image(country_slug, region_slug=None):
+    """Get image for a region, or all region images dict for a country."""
+    if region_slug is None:
+        return {k: v for (c, k), v in REGION_IMAGES.items() if c == country_slug}
+    return REGION_IMAGES.get((country_slug, region_slug), "")
+
+env.globals["get_region_image"] = get_region_image
+
+
 def find_city_region(country_slug, city_slug):
     """Find which region a city belongs to. Returns (region_slug, region) or (None, None)."""
     from config.destinations import DESTINATIONS

@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0c2340">
     <link rel="icon" type="image/svg+xml" href="/travel-content-site/favicon.svg">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preload" href="/travel-content-site/assets/styles.css" as="style">
+
+    <!-- Async Google Fonts (non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="dns-prefetch" href="https://images.unsplash.com">
-
-    <link rel="preload" href="/travel-content-site/assets/styles.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
     <title>Россия — полный путеводитель 2026 | TravelHub</title>
     <meta name="description" content="Россия: лучшие курорты, отели, цены, сезоны, достопримечательности. Полный гайд с советами и рекомендациями.">
@@ -239,21 +240,29 @@
             <a href="/travel-content-site/en/russia/index.html" class="lang-btn " title="English" lang="en">🇬🇧</a>
             <a href="/travel-content-site/es/" class="lang-btn " title="Español" lang="es">🇪🇸</a>
         </div>
-        <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('mobile-nav--open')" aria-label="Открыть меню" aria-expanded="false">
+        <button class="hamburger" onclick="var m=document.getElementById('mobile-nav');m.classList.toggle('mobile-nav--open');this.setAttribute('aria-expanded',m.classList.contains('mobile-nav--open'))" aria-label="Открыть меню" aria-expanded="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация">
-        <a href="/travel-content-site/ru/index.html">Главная</a>
-        <a href="/travel-content-site/ru/russia/index.html">Направления</a>
-        <a href="/travel-content-site/ru/russia/moscow-putevoditel.html">Путеводители</a>
-        <a href="/travel-content-site/ru/russia/moscow-oteli.html">Отели</a>
-        <a href="/travel-content-site/ru/about.html">О нас</a>
-        <a href="/travel-content-site/ru/contacts.html">Контакты</a>
-        <div class="mobile-lang-switcher">
-            <a href="/travel-content-site/ru/russia/index.html" class="lang-btn lang-btn--active" title="Русский" lang="ru">🇷🇺</a>
-            <a href="/travel-content-site/en/russia/index.html" class="lang-btn " title="English" lang="en">🇬🇧</a>
-            <a href="/travel-content-site/es/" class="lang-btn " title="Español" lang="es">🇪🇸</a>
+        <div class="mobile-nav-backdrop" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')" aria-hidden="true"></div>
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="logo" style="font-size:var(--font-size-lg);">
+                    <span class="logo-icon" aria-hidden="true">✈</span>
+                    TravelHub
+                </span>
+                <button class="mobile-nav-close" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')" aria-label="Закрыть меню">✕</button>
+            </div>
+            <a href="/travel-content-site/ru/index.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">Главная</a>
+            <a href="/travel-content-site/ru/russia/index.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">Направления</a>
+            <a href="/travel-content-site/ru/about.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">О нас</a>
+            <a href="/travel-content-site/ru/contacts.html" onclick="document.getElementById('mobile-nav').classList.remove('mobile-nav--open')">Контакты</a>
+            <div class="mobile-lang-switcher">
+                <a href="/travel-content-site/ru/russia/index.html" class="lang-btn lang-btn--active" title="Русский" lang="ru">🇷🇺</a>
+                <a href="/travel-content-site/en/russia/index.html" class="lang-btn " title="English" lang="en">🇬🇧</a>
+                <a href="/travel-content-site/es/" class="lang-btn " title="Español" lang="es">🇪🇸</a>
+            </div>
         </div>
     </nav>
 </header>
@@ -431,8 +440,8 @@
     </div>
 </section>
 
-<!-- REGIONS — Main regions grid -->
-<section class="section section-surface" id="cities">
+<!-- REGIONS -->
+<section class="section section--alt" id="cities">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">Регионы</p>
@@ -441,146 +450,250 @@
         </div>
         <div class="grid grid-3">
             
-            <a href="/travel-content-site/ru/russia/moscow-region/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Москва и Московская область</h3>
-                    <p class="body-s text-secondary">
-                        1 город
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/moscow-region/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?fm=webp&amp;w=600&amp;q=80" alt="Москва и Московская область" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Москва и Московская область</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Москва</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>1 город</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/leningrad-region/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Ленинградская область</h3>
-                    <p class="body-s text-secondary">
-                        1 город
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/leningrad-region/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1556610930-e515011324f3?fm=webp&amp;w=600&amp;q=80" alt="Ленинградская область" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Ленинградская область</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Санкт-Петербург</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>1 город</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/krasnodar-krai/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Краснодарский край</h3>
-                    <p class="body-s text-secondary">
-                        1 город
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/krasnodar-krai/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1548636800-4abe7e58658e?fm=webp&amp;w=600&amp;q=80" alt="Краснодарский край" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Краснодарский край</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Сочи</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>1 город</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/republic-of-tatarstan/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Республика Татарстан</h3>
-                    <p class="body-s text-secondary">
-                        1 город
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/republic-of-tatarstan/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?fm=webp&amp;w=600&amp;q=80" alt="Республика Татарстан" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Республика Татарстан</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Казань</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>1 город</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/kaliningrad-region/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Калининградская область</h3>
-                    <p class="body-s text-secondary">
-                        1 город
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/kaliningrad-region/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?fm=webp&amp;w=600&amp;q=80" alt="Калининградская область" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Калининградская область</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Калининград</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>1 город</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/republic-of-karelia/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Республика Карелия</h3>
-                    <p class="body-s text-secondary">
-                        2 города
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/republic-of-karelia/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?fm=webp&amp;w=600&amp;q=80" alt="Республика Карелия" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Республика Карелия</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Петрозаводск</span>
+                        
+                        <span class="city-tag">Сортавала</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>2 города</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/irkutsk-region/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Иркутская область</h3>
-                    <p class="body-s text-secondary">
-                        2 города
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/irkutsk-region/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1551843073-4a9a5b6fcd5f?fm=webp&amp;w=600&amp;q=80" alt="Иркутская область" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Иркутская область</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Иркутск</span>
+                        
+                        <span class="city-tag">Листвянка</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>2 города</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/republic-of-altai/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Республика Алтай</h3>
-                    <p class="body-s text-secondary">
-                        1 город
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/republic-of-altai/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=webp&amp;w=600&amp;q=80" alt="Республика Алтай" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Республика Алтай</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Горно-Алтайск</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>1 город</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/republic-of-dagestan/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Республика Дагестан</h3>
-                    <p class="body-s text-secondary">
-                        2 города
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/republic-of-dagestan/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1568702846914-96b305d2ead1?fm=webp&amp;w=600&amp;q=80" alt="Республика Дагестан" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Республика Дагестан</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Махачкала</span>
+                        
+                        <span class="city-tag">Дербент</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>2 города</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/kamchatka-krai/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Камчатский край</h3>
-                    <p class="body-s text-secondary">
-                        1 город
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/kamchatka-krai/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fm=webp&amp;w=600&amp;q=80" alt="Камчатский край" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Камчатский край</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Петропавловск-Камчатский</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>1 город</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/stavropol-krai/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Ставропольский край</h3>
-                    <p class="body-s text-secondary">
-                        2 города
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/stavropol-krai/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?fm=webp&amp;w=600&amp;q=80" alt="Ставропольский край" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Ставропольский край</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Пятигорск</span>
+                        
+                        <span class="city-tag">Кисловодск</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>2 города</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
             
-            <a href="/travel-content-site/ru/russia/primorsky-krai/index.html" class="card card-link reveal">
-                <div class="card-body">
-                    <h3 class="h3">Приморский край</h3>
-                    <p class="body-s text-secondary">
-                        1 город
-                    </p>
-                    <div class="card-meta">
-                        <span class="badge badge-accent">Подробнее →</span>
+            <a href="/travel-content-site/ru/russia/primorsky-krai/index.html" class="region-card">
+                
+                <div class="region-card-img">
+                    <img src="https://images.unsplash.com/photo-1519197924294-4ba991a11128?fm=webp&amp;w=600&amp;q=80" alt="Приморский край" loading="lazy" width="600" height="400">
+                </div>
+                
+                <div class="region-card-body">
+                    <h3>Приморский край</h3>
+                    <div class="region-card-cities">
+                        
+                        <span class="city-tag">Владивосток</span>
+                        
+                    </div>
+                    <div class="region-card-meta">
+                        <span>1 город</span>
+                        <span class="region-card-arrow">→</span>
                     </div>
                 </div>
             </a>
