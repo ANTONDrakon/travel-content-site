@@ -11,6 +11,7 @@
 {% set en_alternate_url = "index.html" %}
 {% set canonical = "/" + lang + "/index.html" %}
 {% set hide_back = True %}
+{% set hide_agent = True %}
 
 {% block content %}
 
@@ -122,23 +123,23 @@
         </div>
         <div class="grid grid-4">
             {% set popular_cities = [
-                ("turkey", "istanbul", "🇹🇷", "Стамбул", "Istanbul", "Estambul", "Турция"),
-                ("thailand", "phuket", "🇹🇭", "Пхукет", "Phuket", "Phuket", "Таиланд"),
-                ("uae", "dubai", "🇦🇪", "Дубай", "Dubai", "Dubai", "ОАЭ"),
-                ("indonesia", "kuta", "🇮🇩", "Бали", "Bali", "Bali", "Индонезия"),
-                ("russia", "moscow", "🇷🇺", "Москва", "Moscow", "Moscú", "Россия"),
-                ("egypt", "hurghada", "🇪🇬", "Хургада", "Hurghada", "Hurghada", "Египет"),
-                ("vietnam", "nha-trang", "🇻🇳", "Нячанг", "Nha Trang", "Nha Trang", "Вьетнам"),
-                ("georgia", "tbilisi", "🇬🇪", "Тбилиси", "Tbilisi", "Tiflis", "Грузия")
+                ("turkey", "istanbul", "🇹🇷", "Стамбул", "Istanbul", "Estambul", "Турция", "Turkey", "Turquía"),
+                ("thailand", "phuket", "🇹🇭", "Пхукет", "Phuket", "Phuket", "Таиланд", "Thailand", "Tailandia"),
+                ("uae", "dubai", "🇦🇪", "Дубай", "Dubai", "Dubai", "ОАЭ", "UAE", "EAU"),
+                ("indonesia", "kuta", "🇮🇩", "Бали", "Bali", "Bali", "Индонезия", "Indonesia", "Indonesia"),
+                ("russia", "moscow", "🇷🇺", "Москва", "Moscow", "Moscú", "Россия", "Russia", "Rusia"),
+                ("egypt", "hurghada", "🇪🇬", "Хургада", "Hurghada", "Hurghada", "Египет", "Egypt", "Egipto"),
+                ("vietnam", "nha-trang", "🇻🇳", "Нячанг", "Nha Trang", "Nha Trang", "Вьетнам", "Vietnam", "Vietnam"),
+                ("georgia", "tbilisi", "🇬🇪", "Тбилиси", "Tbilisi", "Tiflis", "Грузия", "Georgia", "Georgia")
             ] %}
-            {% for country_slug, city_slug, flag, name_ru, name_en, name_es, country in popular_cities %}
+            {% for country_slug, city_slug, flag, name_ru, name_en, name_es, country_ru, country_en, country_es in popular_cities %}
             <a href="{{ root }}/{{ lang }}/{{ country_slug }}/index.html" class="dest-card">
                 <div class="dest-card-img">
                     <img src="https://images.unsplash.com/photo-{{ {'istanbul':'1524231757912-21f4fe3a7200','phuket':'1589394815804-964ed0be2eb5','dubai':'1512453979798-5ea266f8880c','kuta':'1555400038-63f5ba517a47','moscow':'1513326738677-b964603b136d','hurghada':'1546026423-cc4642628d2b','nha-trang':'1528127269322-539801943592','tbilisi':'1565008576549-57569a49371d'}[city_slug] }}?w=600&q=80" alt="{{ name_en }}" loading="lazy" width="600" height="372">
                 </div>
                 <div class="dest-card-body">
                     <h4>{{ flag }} {{ name_ru if lang == "ru" else (name_es if lang == "es" else name_en) }}</h4>
-                    <p class="dest-country">{{ country }}</p>
+                    <p class="dest-country">{{ country_ru if lang == "ru" else (country_es if lang == "es" else country_en) }}</p>
                 </div>
             </a>
             {% endfor %}
@@ -173,58 +174,6 @@
                 </div>
             </a>
             {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- CATEGORIES -->
-<section class="section" aria-labelledby="categories-heading">
-    <div class="container">
-        <div class="section-header">
-            <p class="section-eyebrow">{{ t("Тип отдыха", "Tipo de vacaciones", "Vacation type") }}</p>
-            <h2 id="categories-heading">{{ t("Какой отдых вам интересен?", "¿Qué tipo de vacaciones te interesan?", "What kind of vacation interests you?") }}</h2>
-        </div>
-        <div class="categories-grid">
-            <a href="{{ root }}/{{ lang }}/thailand/index.html" class="category-tile">
-                <div class="cat-icon" aria-hidden="true">🏖️</div>
-                <div class="cat-label">{{ t("Пляжи", "Playa", "Beach") }}</div>
-                <div class="cat-count">5 {{ t("направлений", "destinos", "destinations") }}</div>
-            </a>
-            <a href="{{ root }}/{{ lang }}/russia/index.html" class="category-tile">
-                <div class="cat-icon" aria-hidden="true">🏔️</div>
-                <div class="cat-label">{{ t("Горы", "Montañas", "Mountains") }}</div>
-                <div class="cat-count">8 {{ t("направлений", "destinos", "destinations") }}</div>
-            </a>
-            <a href="{{ root }}/{{ lang }}/georgia/index.html" class="category-tile">
-                <div class="cat-icon" aria-hidden="true">🍜</div>
-                <div class="cat-label">{{ t("Гастрономия", "Gastronomía", "Gastronomy") }}</div>
-                <div class="cat-count">3 {{ t("направления", "destinos", "destinations") }}</div>
-            </a>
-            <a href="{{ root }}/{{ lang }}/turkey/index.html" class="category-tile">
-                <div class="cat-icon" aria-hidden="true">🏛️</div>
-                <div class="cat-label">{{ t("История", "Historia", "History") }}</div>
-                <div class="cat-count">4 {{ t("направления", "destinos", "destinations") }}</div>
-            </a>
-            <a href="{{ root }}/{{ lang }}/georgia/index.html" class="category-tile">
-                <div class="cat-icon" aria-hidden="true">🚶</div>
-                <div class="cat-label">{{ t("Экскурсии", "Excursiones", "Sightseeing") }}</div>
-                <div class="cat-count">4 {{ t("направления", "destinos", "destinations") }}</div>
-            </a>
-            <a href="{{ root }}/{{ lang }}/maldives/index.html" class="category-tile">
-                <div class="cat-icon" aria-hidden="true">💕</div>
-                <div class="cat-label">{{ t("Романтика", "Romanticismo", "Romance") }}</div>
-                <div class="cat-count">3 {{ t("направления", "destinos", "destinations") }}</div>
-            </a>
-            <a href="{{ root }}/{{ lang }}/russia/index.html" class="category-tile">
-                <div class="cat-icon" aria-hidden="true">🌋</div>
-                <div class="cat-label">{{ t("Природа", "Naturaleza", "Nature") }}</div>
-                <div class="cat-count">10 {{ t("направлений", "destinos", "destinations") }}</div>
-            </a>
-            <a href="{{ root }}/{{ lang }}/uae/index.html" class="category-tile">
-                <div class="cat-icon" aria-hidden="true">🏙️</div>
-                <div class="cat-label">{{ t("Города", "Ciudades", "Cities") }}</div>
-                <div class="cat-count">6 {{ t("направлений", "destinos", "destinations") }}</div>
-            </a>
         </div>
     </div>
 </section>
@@ -323,6 +272,58 @@
                 </div>
             </a>
             {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" aria-labelledby="categories-heading">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">{{ t("Тип отдыха", "Tipo de vacaciones", "Vacation type") }}</p>
+            <h2 id="categories-heading">{{ t("Какой отдых вам интересен?", "¿Qué tipo de vacaciones te interesan?", "What kind of vacation interests you?") }}</h2>
+        </div>
+        <div class="categories-grid">
+            <a href="{{ root }}/{{ lang }}/thailand/index.html" class="category-tile">
+                <div class="cat-icon" aria-hidden="true">🏖️</div>
+                <div class="cat-label">{{ t("Пляжи", "Playa", "Beach") }}</div>
+                <div class="cat-count">5 {{ t("направлений", "destinos", "destinations") }}</div>
+            </a>
+            <a href="{{ root }}/{{ lang }}/russia/index.html" class="category-tile">
+                <div class="cat-icon" aria-hidden="true">🏔️</div>
+                <div class="cat-label">{{ t("Горы", "Montañas", "Mountains") }}</div>
+                <div class="cat-count">8 {{ t("направлений", "destinos", "destinations") }}</div>
+            </a>
+            <a href="{{ root }}/{{ lang }}/georgia/index.html" class="category-tile">
+                <div class="cat-icon" aria-hidden="true">🍜</div>
+                <div class="cat-label">{{ t("Гастрономия", "Gastronomía", "Gastronomy") }}</div>
+                <div class="cat-count">3 {{ t("направления", "destinos", "destinations") }}</div>
+            </a>
+            <a href="{{ root }}/{{ lang }}/turkey/index.html" class="category-tile">
+                <div class="cat-icon" aria-hidden="true">🏛️</div>
+                <div class="cat-label">{{ t("История", "Historia", "History") }}</div>
+                <div class="cat-count">4 {{ t("направления", "destinos", "destinations") }}</div>
+            </a>
+            <a href="{{ root }}/{{ lang }}/georgia/index.html" class="category-tile">
+                <div class="cat-icon" aria-hidden="true">🚶</div>
+                <div class="cat-label">{{ t("Экскурсии", "Excursiones", "Sightseeing") }}</div>
+                <div class="cat-count">4 {{ t("направления", "destinos", "destinations") }}</div>
+            </a>
+            <a href="{{ root }}/{{ lang }}/maldives/index.html" class="category-tile">
+                <div class="cat-icon" aria-hidden="true">💕</div>
+                <div class="cat-label">{{ t("Романтика", "Romanticismo", "Romance") }}</div>
+                <div class="cat-count">3 {{ t("направления", "destinos", "destinations") }}</div>
+            </a>
+            <a href="{{ root }}/{{ lang }}/russia/index.html" class="category-tile">
+                <div class="cat-icon" aria-hidden="true">🌋</div>
+                <div class="cat-label">{{ t("Природа", "Naturaleza", "Nature") }}</div>
+                <div class="cat-count">10 {{ t("направлений", "destinos", "destinations") }}</div>
+            </a>
+            <a href="{{ root }}/{{ lang }}/uae/index.html" class="category-tile">
+                <div class="cat-icon" aria-hidden="true">🏙️</div>
+                <div class="cat-label">{{ t("Города", "Ciudades", "Cities") }}</div>
+                <div class="cat-count">6 {{ t("направлений", "destinos", "destinations") }}</div>
+            </a>
         </div>
     </div>
 </section>
