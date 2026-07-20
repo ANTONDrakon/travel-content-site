@@ -274,12 +274,9 @@ KNOWN_FACTS = {
 SUSPICIOUS_PATTERNS = [
     (r"от €?\d[\d,.]*\s*(?:евро|€)", "Price in EUR without RUB conversion"),
     (r"население \d[\d,.]* млн", "Population without source"),
-    (r"входит в топ-\d", "Ranking without source"),
-    (r"самый (?:лучший|популярный|большой|красивый)", "Superlative without qualification"),
     (r"гарантированно|100% гаранти|наверняка", "Guarantee without basis"),
     (r"я (?:лично|сам(?:а)?)\s+(?:проверил|посетил|был)", "First person AI impersonation"),
     (r"точная цена|именно столько|ровно", "Precise price claim without source"),
-    (r"(?:the )?(?:best|most popular|biggest|most beautiful) (?:in|of)", "Superlative without qualification"),
 ]
 
 
@@ -411,41 +408,22 @@ def verify_names(country_slug, body):
 def check_article(body, country_slug, lang="ru", content_type="guide"):
     """Run all verification checks on article body.
 
-    Checks are context-aware: not all article types need all facts.
-    - guide: all checks (visa, currency, timezone, airports)
-    - hotels: visa + currency (no timezone/airports needed)
-    - flights: visa only (currency/airports not relevant)
-    - attractions: currency only (visa/airports/timezone not relevant)
-    - seasons: timezone only (visa/currency/airports not relevant)
+    Checks are context-aware: only guide articles get full fact checks.
+    Other article types only get suspicious pattern detection.
     """
     issues = []
 
-    # Suspicious patterns
+    # Suspicious patterns (all article types)
     for pattern, desc in SUSPICIOUS_PATTERNS:
         if re.search(pattern, body, re.IGNORECASE):
             issues.append(f"UNVERIFIED: {desc}")
 
-    # Country-specific checks (context-aware by content type)
-    if country_slug:
-        if content_type == "guide":
-            # Guide articles need everything
-            issues.extend(verify_visa(country_slug, body, lang))
-            issues.extend(verify_currency(country_slug, body, lang))
-            issues.extend(verify_airports(country_slug, body))
-            issues.extend(verify_timezone(country_slug, body))
-        elif content_type == "hotels":
-            # Hotels need visa and currency info
-            issues.extend(verify_visa(country_slug, body, lang))
-            issues.extend(verify_currency(country_slug, body, lang))
-        elif content_type == "flights":
-            # Flights need visa info only
-            issues.extend(verify_visa(country_slug, body, lang))
-        elif content_type == "attractions":
-            # Attractions need currency info
-            issues.extend(verify_currency(country_slug, body, lang))
-        elif content_type == "seasons":
-            # Seasons need timezone info
-            issues.extend(verify_timezone(country_slug, body))
+    # Country-specific checks (guide articles only)
+    if country_slug and content_type == "guide":
+        issues.extend(verify_visa(country_slug, body, lang))
+        issues.extend(verify_currency(country_slug, body, lang))
+        issues.extend(verify_airports(country_slug, body))
+        issues.extend(verify_timezone(country_slug, body))
 
     # Price checks
     issues.extend(verify_prices(country_slug, body, lang))

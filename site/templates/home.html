@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% macro ru_count(n, one, few, many) %}{% if n % 10 == 1 and n % 100 != 11 %}{{ one }}{% elif n % 10 >= 2 and n % 10 <= 4 and (n % 100 < 10 or n % 100 >= 20) %}{{ few }}{% else %}{{ many }}{% endif %}{% endmacro %}
 {% block title %}{{ "TravelHub — Путеводители и гиды по путешествиям 2026" if lang == "ru" else "TravelHub — Travel Guides & Trip Planning 2026" }}{% endblock %}
 {% block meta_description %}{{ "Бесплатные путеводители по 80+ городам: отели, билеты, достопримечательности, советы. Россия, Турция, Таиланд, Египет и другие страны." if lang == "ru" else "Free travel guides for 80+ cities: hotels, flights, attractions, tips. Russia, Turkey, Thailand, Egypt and more destinations." }}{% endblock %}
 
@@ -64,7 +65,7 @@
                 <img src="{{ country.image }}" alt="{{ country.name_en if lang == 'en' else country.name_ru }}" loading="lazy">
                 <div class="country-card-body">
                     <h3>{{ country.name_en if lang == "en" else country.name_ru }}</h3>
-                    <span class="count">{{ country.regions_count }} {{ "регионов" if lang == "ru" else "regions" }} · {{ country.cities_count }} {{ "городов" if lang == "ru" else "cities" }}</span>
+                    <span class="count">{% if lang == "ru" %}{{ country.regions_count }} {{ ru_count(country.regions_count, "регион", "региона", "регионов") }} · {{ country.cities_count }} {{ ru_count(country.cities_count, "город", "города", "городов") }}{% else %}{{ country.regions_count }} {{ "region" if country.regions_count == 1 else "regions" }} · {{ country.cities_count }} {{ "city" if country.cities_count == 1 else "cities" }}{% endif %}</span>
                 </div>
             </a>
             {% endfor %}

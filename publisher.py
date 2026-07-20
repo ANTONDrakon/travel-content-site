@@ -566,9 +566,15 @@ def build_home_page(lang):
     countries_data = []
     for slug, country in DESTINATIONS.items():
         regions = country.get("regions", {})
-        cities_count = 0
-        for region in regions.values():
-            cities_count += len(region.get("cities", {}))
+        cities_direct = country.get("cities", {})
+        
+        # Handle both formats: with regions or direct cities
+        if regions:
+            cities_count = sum(len(r.get("cities", {})) for r in regions.values())
+            regions_count = len(regions)
+        else:
+            cities_count = len(cities_direct)
+            regions_count = 1 if cities_count > 0 else 0
         
         countries_data.append({
             "slug": slug,
@@ -576,7 +582,7 @@ def build_home_page(lang):
             "name_en": country["name_en"],
             "emoji": get_country_emoji(slug),
             "image": get_country_image(slug),
-            "regions_count": len(regions),
+            "regions_count": regions_count,
             "cities_count": cities_count,
         })
 
