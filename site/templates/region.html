@@ -12,26 +12,26 @@
 {% block content %}
 
 <!-- HERO -->
-<section class="hero" style="background-image:url('{{ hero_image }}');">
+<section class="hero" style="background-image:url('{{ hero_image }}'); height:50vh; min-height:350px; max-height:500px;">
     <div class="hero-content">
-        <p class="section-eyebrow" style="color:rgba(255,255,255,0.7);">{{ cname_nom }}</p>
+        <p class="section-eyebrow">{{ cname_nom }}</p>
         <h1 class="display-l">{{ rname }}</h1>
-        <p class="hero-subtitle" style="max-width:600px;">{{ description }}</p>
-        <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
+        <p class="hero-subtitle">{{ description }}</p>
+        <div class="hero-actions">
             <a href="#cities" class="btn btn-white btn-lg">{{ "Города" if lang == "ru" else "Cities" }}</a>
-            <a href="#agent" class="btn btn-white btn-lg" style="background:rgba(255,255,255,0.1);">{{ "Помощь с планированием" if lang == "ru" else "Get help planning" }}</a>
+            <a href="#agent" class="btn btn-white btn-outline btn-lg">{{ "Помощь с планированием" if lang == "ru" else "Get help planning" }}</a>
         </div>
     </div>
 </section>
 
 <!-- QUICK FACTS -->
-<section class="section-sm" style="background:var(--bg);">
+<section class="section-sm">
     <div class="container">
         <div class="quick-facts">
             {% if facts %}
             {% for emoji, title, desc in facts[:4] %}
             <div class="quick-fact reveal">
-                <div style="font-size:28px;margin-bottom:var(--sp-2);">{{ emoji }}</div>
+                <div class="quick-fact-icon">{{ emoji }}</div>
                 <div class="quick-fact-value">{{ title }}</div>
                 <div class="quick-fact-label">{{ desc[:50] }}{% if desc|length > 50 %}...{% endif %}</div>
             </div>
@@ -42,7 +42,7 @@
 </section>
 
 <!-- CITIES -->
-<section class="section" style="background:var(--surface);" id="cities">
+<section class="section section-surface" id="cities">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Города" if lang == "ru" else "Cities" }}</p>
@@ -51,16 +51,16 @@
         </div>
         <div class="grid grid-3">
             {% for city in cities %}
-            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city.slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card reveal">
+            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ city.slug }}-{{ 'putevoditel' if lang == 'ru' else 'travel-guide' }}.html" class="card card-link reveal">
                 <div class="card-img">
                     <img src="{{ city.image }}" alt="{{ city.name }}" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ city.name }}</h4>
-                    <div class="card-meta" style="margin-top:var(--sp-3);display:flex;gap:var(--sp-2);flex-wrap:wrap;">
-                        <span class="badge badge-accent" style="font-size:11px;">{{ "Путеводитель" if lang == "ru" else "Guide" }}</span>
+                    <div class="card-meta">
+                        <span class="badge badge-accent">{{ "Путеводитель" if lang == "ru" else "Guide" }}</span>
                         {% if city.has_articles %}
-                        <span class="badge" style="font-size:11px;background:var(--bg);color:var(--text-secondary);">{{ city.article_count }} {{ "статей" if lang == "ru" else "articles" }}</span>
+                        <span class="badge badge-muted">{{ city.article_count }} {{ "статей" if lang == "ru" else "articles" }}</span>
                         {% endif %}
                     </div>
                 </div>
@@ -71,10 +71,10 @@
 </section>
 
 <!-- CTA -->
-<section class="section-sm" style="background:var(--bg);">
-    <div class="container" style="text-align:center;max-width:700px;">
-        <h2 style="margin-bottom:var(--sp-3);">{{ "Не знаете, с чего начать?" if lang == "ru" else "Not sure where to start?" }}</h2>
-        <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-6);">
+<section class="section-sm">
+    <div class="container container-narrow text-center">
+        <h2>{{ "Не знаете, с чего начать?" if lang == "ru" else "Not sure where to start?" }}</h2>
+        <p class="body-l text-secondary">
             {{ "Расскажите о ваших пожеланиях — мы подберём идеальный маршрут по " + cname_prep + "." if lang == "ru" else "Tell us your preferences — we'll create the perfect itinerary for " + cname_prep + "." }}
         </p>
         <a href="#agent" class="btn btn-accent btn-lg">{{ "Получить подборку →" if lang == "ru" else "Get recommendations →" }}</a>
@@ -83,7 +83,7 @@
 
 <!-- FAQ -->
 {% if faqs %}
-<section class="section" style="background:var(--surface);">
+<section class="section section-surface">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">FAQ</p>
@@ -102,13 +102,13 @@
 {% endif %}
 
 <!-- AGENT FORM -->
-<section class="section" id="agent" style="background:var(--bg);scroll-margin-top:80px;">
+<section class="section" id="agent">
     <div class="container">
         <div class="agent-block reveal">
             <h2>{{ "Нужна помощь с планированием?" if lang == "ru" else "Need help planning?" }}</h2>
             <div class="agent-grid">
                 <div>
-                    <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">
+                    <p class="body-l text-secondary">
                         {{ "Расскажите о ваших пожеланиях — подберём маршрут, отель и экскурсии. Бесплатно." if lang == "ru" else "Tell us your preferences — we'll help plan your route, hotel, and excursions. Free of charge." }}
                     </p>
                     <ul class="agent-benefits">
@@ -128,7 +128,7 @@
                         {% if recaptcha_site_key %}
                         <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
                         {% endif %}
-                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</button>
+                        <button type="submit" class="btn btn-accent btn-lg btn-full">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</button>
                     </form>
                 </div>
             </div>

@@ -20,32 +20,28 @@
 
 {% block content %}
 
-<!-- ═══════════════════════════════════════════════════════════════
-     HERO — Country page
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="hero" style="background-image:url('{{ hero_image }}');">
+<!-- HERO — Country page -->
+<section class="hero" style="background-image:url('{{ hero_image }}'); height:50vh; min-height:350px; max-height:500px;">
     <div class="hero-content">
-        <p class="section-eyebrow" style="color:rgba(255,255,255,0.7);">{{ "Путеводитель" if lang == "ru" else "Travel Guide" }}</p>
+        <p class="section-eyebrow">{{ "Путеводитель" if lang == "ru" else "Travel Guide" }}</p>
         <h1 class="display-l">{{ cname_prep }} 2026</h1>
-        <p class="hero-subtitle" style="max-width:600px;">{{ country_data.hero_subtitle_en if lang == "en" and country_data.hero_subtitle_en else country_data.hero_subtitle_ru if country_data.hero_subtitle_ru else '' }}</p>
-        <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
+        <p class="hero-subtitle">{{ country_data.hero_subtitle_en if lang == "en" and country_data.hero_subtitle_en else country_data.hero_subtitle_ru if country_data.hero_subtitle_ru else '' }}</p>
+        <div class="hero-actions">
             <a href="#cities" class="btn btn-white btn-lg">{{ "Города" if lang == "ru" else "Cities" }}</a>
-            <a href="#agent" class="btn btn-white btn-lg" style="background:rgba(255,255,255,0.1);">{{ "Помощь с планированием" if lang == "ru" else "Get help planning" }}</a>
+            <a href="#agent" class="btn btn-white btn-outline btn-lg">{{ "Помощь с планированием" if lang == "ru" else "Get help planning" }}</a>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     QUICK FACTS
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="section-sm" style="background:var(--bg);">
+<!-- QUICK FACTS -->
+<section class="section-sm">
     <div class="container">
         <div class="quick-facts">
             {% set adv = country_data.advantages_en if lang == "en" else country_data.advantages_ru %}
             {% if country_data and adv %}
             {% for emoji, title, desc in adv[:4] %}
             <div class="quick-fact reveal">
-                <div style="font-size:28px;margin-bottom:var(--sp-2);">{{ emoji }}</div>
+                <div class="quick-fact-icon">{{ emoji }}</div>
                 <div class="quick-fact-value">{{ title }}</div>
                 <div class="quick-fact-label">{{ desc[:50] }}{% if desc|length > 50 %}...{% endif %}</div>
             </div>
@@ -55,10 +51,8 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     WHY CHOOSE — Advantages grid
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--surface);">
+<!-- WHY CHOOSE — Advantages grid -->
+<section class="section section-surface">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Преимущества" if lang == "ru" else "Advantages" }}</p>
@@ -67,25 +61,23 @@
         <div class="grid grid-3">
             {% if country_data and adv %}
             {% for emoji, title, desc in adv %}
-            <div class="card reveal" style="cursor:default;">
-                <div class="card-body" style="padding:var(--sp-8);">
-                    <div style="font-size:40px;margin-bottom:var(--sp-4);">{{ emoji }}</div>
-                    <h3 class="h4" style="margin-bottom:var(--sp-2);">{{ title }}</h3>
-                    <p class="body-s" style="color:var(--text-secondary);">{{ desc }}</p>
+            <div class="card reveal">
+                <div class="card-body">
+                    <div class="card-icon">{{ emoji }}</div>
+                    <h3 class="h4">{{ title }}</h3>
+                    <p class="body-s text-secondary">{{ desc }}</p>
                 </div>
             </div>
             {% endfor %}
             {% else %}
-            <p style="color:var(--text-muted);">{{ "Данные уточняются." if lang == "ru" else "Data is being updated." }}</p>
+            <p class="text-muted">{{ "Данные уточняются." if lang == "ru" else "Data is being updated." }}</p>
             {% endif %}
         </div>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     WEATHER — Best time to visit
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--bg);">
+<!-- WEATHER — Best time to visit -->
+<section class="section">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Погода" if lang == "ru" else "Weather" }}</p>
@@ -93,26 +85,24 @@
         </div>
         {% set seas = country_data.seasons_en if lang == "en" else country_data.seasons_ru %}
         {% if country_data and seas %}
-        <div class="grid grid-4" style="gap:var(--sp-4);">
+        <div class="grid grid-4">
             {% for emoji, title, temp, desc in seas %}
-            <div class="weather-card reveal" style="background:var(--card);box-shadow:var(--shadow-sm);">
-                <div style="font-size:32px;margin-bottom:var(--sp-2);">{{ emoji }}</div>
+            <div class="weather-card card reveal">
+                <div class="card-icon">{{ emoji }}</div>
                 <div class="month">{{ title }}</div>
                 <div class="temp">{{ temp }}</div>
-                <p class="body-s" style="margin-top:var(--sp-2);">{{ desc }}</p>
+                <p class="body-s">{{ desc }}</p>
             </div>
             {% endfor %}
         </div>
         {% else %}
-        <p style="color:var(--text-muted);">{{ "Данные по сезонам уточняются." if lang == "ru" else "Season data is being updated." }}</p>
+        <p class="text-muted">{{ "Данные по сезонам уточняются." if lang == "ru" else "Season data is being updated." }}</p>
         {% endif %}
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     REGIONS — Main regions grid
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--surface);" id="cities">
+<!-- REGIONS — Main regions grid -->
+<section class="section section-surface" id="cities">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Регионы" if lang == "ru" else "Regions" }}</p>
@@ -121,10 +111,10 @@
         </div>
         <div class="grid grid-3">
             {% for region_slug, region in regions.items() %}
-            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ region_slug }}/index.html" class="card reveal" style="cursor:pointer;">
-                <div class="card-body" style="padding:var(--sp-8);">
-                    <h3 class="h3" style="margin-bottom:var(--sp-3);">{{ region.name_en if lang == "en" else region.name_ru }}</h3>
-                    <p class="body-s" style="color:var(--text-secondary);margin-bottom:var(--sp-3);">
+            <a href="{{ root }}/{{ lang }}/{{ country.slug }}/{{ region_slug }}/index.html" class="card card-link reveal">
+                <div class="card-body">
+                    <h3 class="h3">{{ region.name_en if lang == "en" else region.name_ru }}</h3>
+                    <p class="body-s text-secondary">
                         {{ region.cities|length }} {{ "городов" if lang == "ru" else "cities" }}
                     </p>
                     <div class="card-meta">
@@ -137,10 +127,8 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     PRACTICAL INFO
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--bg);">
+<!-- PRACTICAL INFO -->
+<section class="section">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">{{ "Информация" if lang == "ru" else "Information" }}</p>
@@ -148,17 +136,17 @@
         </div>
         {% set prac = country_data.practical_en if lang == "en" else country_data.practical_ru %}
         {% if country_data and prac %}
-        <div class="grid grid-3" style="gap:var(--sp-4);">
+        <div class="grid grid-3">
             {% if lang == "en" %}
             {% set labels = {"visa":"🛂 Visa","currency":"💱 Currency","language":"🗣 Language","transport":"🚌 Transport","safety":"🛡 Safety","internet":"📶 Internet & SIM"} %}
             {% else %}
             {% set labels = {"visa":"🛂 Виза","currency":"💱 Валюта","language":"🗣 Язык","transport":"🚌 Транспорт","safety":"🛡 Безопасность","internet":"📶 Связь и интернет"} %}
             {% endif %}
             {% for key, value in prac.items() %}
-            <div class="card reveal" style="cursor:default;">
-                <div class="card-body" style="padding:var(--sp-6);">
-                    <h4 style="font-size:16px;font-weight:600;margin-bottom:var(--sp-2);">{{ labels.get(key, key) }}</h4>
-                    <p class="body-s" style="color:var(--text-secondary);">{{ value }}</p>
+            <div class="card reveal">
+                <div class="card-body card-body-compact">
+                    <h4 class="card-label">{{ labels.get(key, key) }}</h4>
+                    <p class="body-s text-secondary">{{ value }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -167,26 +155,22 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CTA — Mid-page
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="section-sm" style="background:var(--surface);">
-    <div class="container" style="text-align:center;max-width:700px;">
-        <h2 style="margin-bottom:var(--sp-3);">{{ "Не знаете, с чего начать?" if lang == "ru" else "Not sure where to start?" }}</h2>
-        <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-6);">
+<!-- CTA — Mid-page -->
+<section class="section-sm section-surface">
+    <div class="container container-narrow text-center">
+        <h2>{{ "Не знаете, с чего начать?" if lang == "ru" else "Not sure where to start?" }}</h2>
+        <p class="body-l text-secondary">
             {{ "Ответьте на несколько вопросов — мы подберём идеальный маршрут по " + cname_prep + ". Бесплатно." if lang == "ru" else "Answer a few questions — we'll create the perfect itinerary for " + cname_prep + ". Free of charge." }}
         </p>
         <a href="#agent" class="btn btn-accent btn-lg">{{ "Получить подборку →" if lang == "ru" else "Get recommendations →" }}</a>
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CHINA / MALDIVES — Special instructions
-     ═══════════════════════════════════════════════════════════════ -->
+<!-- CHINA / MALDIVES — Special instructions -->
 {% if country.slug == "china" %}
-<section class="section" style="background:var(--bg);">
-    <div class="container" style="max-width:800px;">
-        <div class="section-header" style="text-align:left;">
+<section class="section">
+    <div class="container container-narrow">
+        <div class="section-header section-header-left">
             <h2>{{ "Как получить QR-код для Китая" if lang == "ru" else "How to Get a QR Code for China" }}</h2>
         </div>
         <div class="article-body">
@@ -214,8 +198,8 @@
             </ol>
             {% endif %}
         </div>
-        <div style="text-align:center;margin-top:var(--sp-6);padding:var(--sp-6);background:var(--surface);border-radius:var(--radius-lg);">
-            <p class="body-m" style="font-weight:600;margin-bottom:var(--sp-3);">{{ "Сложно? Мы всё сделаем за вас." if lang == "ru" else "Too complicated? We handle everything for you." }}</p>
+        <div class="cta-inline">
+            <p class="body-m font-semibold">{{ "Сложно? Мы всё сделаем за вас." if lang == "ru" else "Too complicated? We handle everything for you." }}</p>
             <a href="#agent" class="btn btn-accent btn-md">{{ "Помощь эксперта" if lang == "ru" else "Get help" }}</a>
         </div>
     </div>
@@ -223,9 +207,9 @@
 {% endif %}
 
 {% if country.slug == "maldives" %}
-<section class="section" style="background:var(--bg);">
-    <div class="container" style="max-width:800px;">
-        <div class="section-header" style="text-align:left;">
+<section class="section">
+    <div class="container container-narrow">
+        <div class="section-header section-header-left">
             <h2>{{ "Как заполнить декларацию IMUGA" if lang == "ru" else "IMUGA Declaration & QR Code" }}</h2>
         </div>
         <div class="article-body">
@@ -253,18 +237,16 @@
             </ol>
             {% endif %}
         </div>
-        <div style="text-align:center;margin-top:var(--sp-6);padding:var(--sp-6);background:var(--surface);border-radius:var(--radius-lg);">
-            <p class="body-m" style="font-weight:600;margin-bottom:var(--sp-3);">{{ "Нужна помощь с IMUGA или бронью?" if lang == "ru" else "Need help with IMUGA or booking?" }}</p>
+        <div class="cta-inline">
+            <p class="body-m font-semibold">{{ "Нужна помощь с IMUGA или бронью?" if lang == "ru" else "Need help with IMUGA or booking?" }}</p>
             <a href="#agent" class="btn btn-accent btn-md">{{ "Помощь эксперта" if lang == "ru" else "Get help" }}</a>
         </div>
     </div>
 </section>
 {% endif %}
 
-<!-- ═══════════════════════════════════════════════════════════════
-     FAQ with Schema
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="section" style="background:var(--surface);">
+<!-- FAQ with Schema -->
+<section class="section section-surface">
     <div class="container">
         <div class="section-header">
             <p class="section-eyebrow">FAQ</p>
@@ -302,16 +284,14 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     AGENT FORM — Travel help
-     ═══════════════════════════════════════════════════════════════ -->
-<section class="section" id="agent" style="background:var(--bg);scroll-margin-top:80px;">
+<!-- AGENT FORM — Travel help -->
+<section class="section" id="agent">
     <div class="container">
         <div class="agent-block reveal">
             <h2>{{ "Нужна помощь с подбором тура?" if lang == "ru" else "Need help choosing a trip?" }}</h2>
             <div class="agent-grid">
                 <div>
-                    <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">
+                    <p class="body-l text-secondary">
                         {{ "Не знаете, какой город выбрать? Расскажите о ваших пожеланиях — подберём маршрут, отель и экскурсии. Бесплатно." if lang == "ru" else "Not sure which city to choose? Tell us your preferences — we'll help plan your route, hotel, and excursions. Free of charge." }}
                     </p>
                     <ul class="agent-benefits">
@@ -331,7 +311,7 @@
                         {% if recaptcha_site_key %}
                         <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
                         {% endif %}
-                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</button>
+                        <button type="submit" class="btn btn-accent btn-lg btn-full">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</button>
                     </form>
                 </div>
             </div>
@@ -339,9 +319,7 @@
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════
-     Breadcrumb Schema
-     ═══════════════════════════════════════════════════════════════ -->
+<!-- Breadcrumb Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

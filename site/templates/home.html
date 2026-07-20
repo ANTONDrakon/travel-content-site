@@ -15,7 +15,7 @@
 <!-- HERO -->
 <section class="hero" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85');">
     <div class="hero-content">
-        <h1 class="display-l">{{ "Путешествуйте с умом" if lang == "ru" else "Travel smarter" }}</h1>
+        <h1 class="hero-title">{{ "Путешествуйте с умом" if lang == "ru" else "Travel smarter" }}</h1>
         <p class="hero-subtitle">{{ "Честные путеводители с реальными ценами, советами местных и проверенными сервисами для бронирования." if lang == "ru" else "Honest guides with real prices, local tips, and trusted booking services." }}</p>
         <div class="hero-search">
             <input type="text" id="hero-search" placeholder="{{ 'Куда хотите поехать?' if lang == 'ru' else 'Where do you want to go?' }}">
@@ -59,13 +59,17 @@
             <h2>{{ "Выберите страну" if lang == "ru" else "Choose a country" }}</h2>
             <p>{{ "Откройте для себя лучшие направления для путешествий по всему миру." if lang == "ru" else "Discover the best travel destinations around the world." }}</p>
         </div>
-        <div class="grid grid-4">
+        <div class="grid grid-3">
             {% for country in countries %}
             <a href="{{ root }}/{{ lang }}/{{ country.slug }}/index.html" class="country-card reveal">
-                <img src="{{ country.image }}" alt="{{ country.name_en if lang == 'en' else country.name_ru }}" loading="lazy">
+                <div class="card-img">
+                    <img src="{{ country.image }}" alt="{{ country.name_en if lang == 'en' else country.name_ru }}" loading="lazy">
+                </div>
                 <div class="country-card-body">
                     <h3>{{ country.name_en if lang == "en" else country.name_ru }}</h3>
-                    <span class="count">{% if lang == "ru" %}{{ country.regions_count }} {{ ru_count(country.regions_count, "регион", "региона", "регионов") }} · {{ country.cities_count }} {{ ru_count(country.cities_count, "город", "города", "городов") }}{% else %}{{ country.regions_count }} {{ "region" if country.regions_count == 1 else "regions" }} · {{ country.cities_count }} {{ "city" if country.cities_count == 1 else "cities" }}{% endif %}</span>
+                    <div class="country-card-meta">
+                        <span>{% if lang == "ru" %}{{ country.regions_count }} {{ ru_count(country.regions_count, "регион", "региона", "регионов") }} · {{ country.cities_count }} {{ ru_count(country.cities_count, "город", "города", "городов") }}{% else %}{{ country.regions_count }} {{ "region" if country.regions_count == 1 else "regions" }} · {{ country.cities_count }} {{ "city" if country.cities_count == 1 else "cities" }}{% endif %}</span>
+                    </div>
                 </div>
             </a>
             {% endfor %}
@@ -93,15 +97,15 @@
                 ("sri-lanka", "🌴", "Шри-Ланка", "Sri Lanka", "Шри-Ланка", "Sri Lanka", "Пляжи и храмы", "Beaches and temples", "https://images.unsplash.com/photo-1586526399017-e6d8cd50e1f7?w=600&q=80")
             ] %}
             {% for country_slug, emoji, name_ru, name_en, country_ru, country_en, desc_ru, desc_en, img in popular_dest %}
-            <a href="{{ root }}/{{ lang }}/{{ country_slug }}/index.html" class="card reveal">
+            <a href="{{ root }}/{{ lang }}/{{ country_slug }}/index.html" class="dest-card reveal">
                 <div class="card-img">
                     <img src="{{ img }}" alt="{{ name_en }}" loading="lazy">
-                    <span class="badge badge-popular card-badge">{{ emoji }}</span>
+                    <span class="card-badge">{{ emoji }}</span>
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">{{ name_ru if lang == "ru" else name_en }}</h4>
-                    <p class="body-s card-country">{{ country_ru if lang == "ru" else country_en }}</p>
-                    <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
+                    <h4>{{ name_ru if lang == "ru" else name_en }}</h4>
+                    <p>{{ country_ru if lang == "ru" else country_en }}</p>
+                    <p>{{ desc_ru if lang == "ru" else desc_en }}</p>
                 </div>
             </a>
             {% endfor %}
@@ -117,7 +121,7 @@
             <h2>{{ "Популярные отели" if lang == "ru" else "Popular hotels" }}</h2>
             <p>{{ "Лучшие отели с проверенными отзывами и актуальными ценами." if lang == "ru" else "Top-rated hotels with verified reviews and current prices." }}</p>
         </div>
-        <div class="grid grid-4">
+        <div class="grid grid-3">
             {% set popular_hotels = [
                 ("Rixos Premium Dubai", "Dubai", "ОАЭ", "⭐ 5.0", "$180/ночь", "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80"),
                 ("Soneva Fushi", "Maldives", "Мальдивы", "⭐ 4.9", "$450/ночь", "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80"),
@@ -129,25 +133,20 @@
                 ("Jumeirah Al Naseem", "Dubai", "ОАЭ", "⭐ 4.9", "$420/ночь", "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=80")
             ] %}
             {% for name, city, country, rating, price, img in popular_hotels %}
-            <div class="card reveal" style="cursor:pointer;">
-                <div class="card-img">
+            <a href="https://www.booking.com/searchresults.html?ss={{ name | urlencode }}" target="_blank" rel="nofollow sponsored" class="hotel-card reveal">
+                <div class="hotel-card-img">
                     <img src="{{ img }}" alt="{{ name }}" loading="lazy">
-                    <span class="badge badge-popular card-badge">{{ rating }}</span>
                 </div>
-                <div class="card-body">
-                    <h4 class="card-title">{{ name }}</h4>
-                    <p class="body-s card-country">{{ city }}, {{ country }}</p>
-                    <div class="card-meta">
-                        <span class="card-price">{{ price }}</span>
-                        <a href="https://www.booking.com/searchresults.html?ss={{ name | urlencode }}" target="_blank" rel="nofollow sponsored" class="btn btn-outline btn-sm">
-                            {{ "Проверить цену" if lang == "ru" else "Check price" }}
-                        </a>
-                    </div>
+                <div class="hotel-card-body">
+                    <h4 class="hotel-card-title">{{ name }}</h4>
+                    <p class="hotel-card-location">{{ city }}, {{ country }}</p>
+                    <div class="hotel-card-rating">{{ rating }}</div>
+                    <div class="hotel-card-price">{{ price }}</div>
                 </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
-        <div style="text-align:center;margin-top:var(--sp-6);">
+        <div class="section-cta">
             <a href="https://www.booking.com" target="_blank" rel="nofollow sponsored" class="btn btn-outline btn-md">
                 {{ "Все отели на Booking.com →" if lang == "ru" else "All hotels on Booking.com →" }}
             </a>
@@ -173,14 +172,14 @@
                 ("🇹🇷", "Стамбул", "Istanbul", "turkey", "+28-33°C", "Город и море", "City and sea", "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80")
             ] %}
             {% for emoji, name_ru, name_en, slug, temp, desc_ru, desc_en, img in seasonal %}
-            <a href="{{ root }}/{{ lang }}/{{ slug }}/index.html" class="card reveal">
+            <a href="{{ root }}/{{ lang }}/{{ slug }}/index.html" class="season-card reveal">
                 <div class="card-img">
                     <img src="{{ img }}" alt="{{ name_en }}" loading="lazy">
-                    <span class="badge badge-accent card-badge">{{ temp }}</span>
+                    <span class="season-card-temp">{{ temp }}</span>
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">{{ emoji }} {{ name_ru if lang == "ru" else name_en }}</h4>
-                    <p class="card-desc">{{ desc_ru if lang == "ru" else desc_en }}</p>
+                    <h4>{{ emoji }} {{ name_ru if lang == "ru" else name_en }}</h4>
+                    <p>{{ desc_ru if lang == "ru" else desc_en }}</p>
                 </div>
             </a>
             {% endfor %}
@@ -273,76 +272,76 @@
         </div>
         <div class="grid grid-3">
             {% if lang == "ru" %}
-            <a href="{{ root }}/ru/russia/moscow-putevoditel.html" class="card reveal">
+            <a href="{{ root }}/ru/russia/moscow-putevoditel.html" class="article-card reveal">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80" alt="Москва" loading="lazy">
                 </div>
-                <div class="card-body">
-                    <span class="label card-category">🇷🇺 Россия</span>
-                    <h4 class="card-title">Москва: полный путеводитель 2026</h4>
-                    <p class="card-desc">Кремль, Третьяковка, Парк Горького и лучшие рестораны столицы.</p>
-                    <div class="card-meta"><span>Июль 2026</span><span>·</span><span>⏱ 12 мин</span></div>
+                <div class="article-card-body">
+                    <span class="article-card-tag">🇷🇺 Россия</span>
+                    <h4 class="article-card-title">Москва: полный путеводитель 2026</h4>
+                    <p class="article-card-excerpt">Кремль, Третьяковка, Парк Горького и лучшие рестораны столицы.</p>
+                    <div class="article-card-date">Июль 2026 · ⏱ 12 мин</div>
                 </div>
             </a>
-            <a href="{{ root }}/ru/russia/saint-petersburg-putevoditel.html" class="card reveal">
+            <a href="{{ root }}/ru/russia/saint-petersburg-putevoditel.html" class="article-card reveal">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1556610930-e515011324f3?w=800&q=80" alt="Санкт-Петербург" loading="lazy">
                 </div>
-                <div class="card-body">
-                    <span class="label card-category">🇷🇺 Россия</span>
-                    <h4 class="card-title">Петербург: Эрмитаж, белые ночи, дворцы</h4>
-                    <p class="card-desc">Северная Венеция: музеи, разводные мосты и летние фестивали.</p>
-                    <div class="card-meta"><span>Июнь 2026</span><span>·</span><span>⏱ 10 мин</span></div>
+                <div class="article-card-body">
+                    <span class="article-card-tag">🇷🇺 Россия</span>
+                    <h4 class="article-card-title">Петербург: Эрмитаж, белые ночи, дворцы</h4>
+                    <p class="article-card-excerpt">Северная Венеция: музеи, разводные мосты и летние фестивали.</p>
+                    <div class="article-card-date">Июнь 2026 · ⏱ 10 мин</div>
                 </div>
             </a>
-            <a href="{{ root }}/ru/turkey/istanbul-putevoditel.html" class="card reveal">
+            <a href="{{ root }}/ru/turkey/istanbul-putevoditel.html" class="article-card reveal">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80" alt="Стамбул" loading="lazy">
                 </div>
-                <div class="card-body">
-                    <span class="label card-category">🇹🇷 Турция</span>
-                    <h4 class="card-title">Стамбул: дворцы, базары и кухня</h4>
-                    <p class="card-desc">Город на двух континентах — что увидеть, где поесть и как сэкономить.</p>
-                    <div class="card-meta"><span>Июль 2026</span><span>·</span><span>⏱ 8 мин</span></div>
+                <div class="article-card-body">
+                    <span class="article-card-tag">🇹🇷 Турция</span>
+                    <h4 class="article-card-title">Стамбул: дворцы, базары и кухня</h4>
+                    <p class="article-card-excerpt">Город на двух континентах — что увидеть, где поесть и как сэкономить.</p>
+                    <div class="article-card-date">Июль 2026 · ⏱ 8 мин</div>
                 </div>
             </a>
             {% else %}
-            <a href="{{ root }}/en/russia/moscow-travel-guide.html" class="card reveal">
+            <a href="{{ root }}/en/russia/moscow-travel-guide.html" class="article-card reveal">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80" alt="Moscow" loading="lazy">
                 </div>
-                <div class="card-body">
-                    <span class="label card-category">🇷🇺 Russia</span>
-                    <h4 class="card-title">Moscow: Complete Travel Guide 2026</h4>
-                    <p class="card-desc">Kremlin, Tretyakov Gallery, Gorky Park and the best capital restaurants.</p>
-                    <div class="card-meta"><span>July 2026</span><span>·</span><span>⏱ 12 min</span></div>
+                <div class="article-card-body">
+                    <span class="article-card-tag">🇷🇺 Russia</span>
+                    <h4 class="article-card-title">Moscow: Complete Travel Guide 2026</h4>
+                    <p class="article-card-excerpt">Kremlin, Tretyakov Gallery, Gorky Park and the best capital restaurants.</p>
+                    <div class="article-card-date">July 2026 · ⏱ 12 min</div>
                 </div>
             </a>
-            <a href="{{ root }}/en/turkey/istanbul-travel-guide.html" class="card reveal">
+            <a href="{{ root }}/en/turkey/istanbul-travel-guide.html" class="article-card reveal">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80" alt="Istanbul" loading="lazy">
                 </div>
-                <div class="card-body">
-                    <span class="label card-category">🇹🇷 Turkey</span>
-                    <h4 class="card-title">Istanbul: Palaces, Bazaars & Cuisine</h4>
-                    <p class="card-desc">City on two continents — what to see, where to eat, how to save.</p>
-                    <div class="card-meta"><span>July 2026</span><span>·</span><span>⏱ 8 min</span></div>
+                <div class="article-card-body">
+                    <span class="article-card-tag">🇹🇷 Turkey</span>
+                    <h4 class="article-card-title">Istanbul: Palaces, Bazaars & Cuisine</h4>
+                    <p class="article-card-excerpt">City on two continents — what to see, where to eat, how to save.</p>
+                    <div class="article-card-date">July 2026 · ⏱ 8 min</div>
                 </div>
             </a>
-            <a href="{{ root }}/en/thailand/phuket-travel-guide.html" class="card reveal">
+            <a href="{{ root }}/en/thailand/phuket-travel-guide.html" class="article-card reveal">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80" alt="Phuket" loading="lazy">
                 </div>
-                <div class="card-body">
-                    <span class="label card-category">🇹🇭 Thailand</span>
-                    <h4 class="card-title">Phuket: Best Beaches and Resorts</h4>
-                    <p class="card-desc">Turquoise sea, tropical forests, night markets and island hopping.</p>
-                    <div class="card-meta"><span>June 2026</span><span>·</span><span>⏱ 7 min</span></div>
+                <div class="article-card-body">
+                    <span class="article-card-tag">🇹🇭 Thailand</span>
+                    <h4 class="article-card-title">Phuket: Best Beaches and Resorts</h4>
+                    <p class="article-card-excerpt">Turquoise sea, tropical forests, night markets and island hopping.</p>
+                    <div class="article-card-date">June 2026 · ⏱ 7 min</div>
                 </div>
             </a>
             {% endif %}
         </div>
-        <div style="text-align:center;margin-top:var(--sp-6);">
+        <div class="section-cta">
             <a href="{{ root }}/{{ lang }}/russia/index.html" class="btn btn-outline btn-md">
                 {{ "Все путеводители →" if lang == "ru" else "All travel guides →" }}
             </a>
@@ -357,7 +356,7 @@
             <h2>{{ "Нужна помощь с подбором тура?" if lang == "ru" else "Need help choosing a trip?" }}</h2>
             <div class="agent-grid">
                 <div>
-                    <p class="body-l" style="color:var(--text-secondary);margin-bottom:var(--sp-5);">
+                    <p class="body-l">
                         {{ "Не знаете, куда поехать? Расскажите о ваших пожеланиях — подберём направление, отель и маршрут. Поможем с визами, трансферами и страховкой. Бесплатно." if lang == "ru" else "Not sure where to go? Tell us your preferences — we'll help choose a destination, hotel, and itinerary. Visa, transfer, and insurance assistance included. Free of charge." }}
                     </p>
                     <ul class="agent-benefits">
@@ -369,7 +368,7 @@
                 </div>
                 <div>
                     <form class="form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
-                        <div class="grid grid-2" style="gap:var(--sp-3);">
+                        <div class="grid grid-2">
                             <input type="text" name="name" placeholder="{{ 'Как вас зовут? *' if lang == 'ru' else 'Your name *' }}" required>
                             <input type="tel" name="phone" placeholder="{{ 'Телефон или Telegram *' if lang == 'ru' else 'Phone or Telegram *' }}" required>
                         </div>
@@ -387,7 +386,7 @@
                         {% if recaptcha_site_key %}
                         <div class="g-recaptcha" data-sitekey="{{ recaptcha_site_key }}" data-size="normal"></div>
                         {% endif %}
-                        <button type="submit" class="btn btn-accent btn-lg" style="width:100%;">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</button>
+                        <button type="submit" class="btn btn-accent btn-lg btn-full">{{ "Получить подборку бесплатно →" if lang == "ru" else "Get free recommendations →" }}</button>
                     </form>
                 </div>
             </div>
@@ -427,7 +426,7 @@
 <!-- NEWSLETTER + RSS -->
 <section class="section">
     <div class="container">
-        <div class="grid grid-2" style="gap:var(--sp-8);align-items:start;">
+        <div class="grid grid-2">
             {% if brevo_form_url %}
             <div class="newsletter reveal">
                 <h3>{{ "Подпишитесь на советы путешественника" if lang == "ru" else "Subscribe to travel tips" }}</h3>
@@ -438,11 +437,11 @@
                 </form>
             </div>
             {% endif %}
-            <div class="card reveal" style="cursor:default;">
-                <div class="card-body" style="padding:var(--sp-8);">
-                    <div style="font-size:32px;margin-bottom:var(--sp-4);">📡</div>
-                    <h3 style="font-size:20px;font-weight:600;margin-bottom:var(--sp-2);">{{ "RSS-лента" if lang == "ru" else "RSS Feed" }}</h3>
-                    <p class="body-s" style="color:var(--text-secondary);margin-bottom:var(--sp-4);">{{ "Подпишитесь на RSS, чтобы не пропускать новые путеводители и обновления." if lang == "ru" else "Subscribe to RSS to never miss new guides and updates." }}</p>
+            <div class="card reveal">
+                <div class="card-body">
+                    <div class="icon">📡</div>
+                    <h3>{{ "RSS-лента" if lang == "ru" else "RSS Feed" }}</h3>
+                    <p>{{ "Подпишитесь на RSS, чтобы не пропускать новые путеводители и обновления." if lang == "ru" else "Subscribe to RSS to never miss new guides and updates." }}</p>
                     <a href="{{ site_url }}/feed-{{ lang }}.xml" class="btn btn-outline btn-md" target="_blank">{{ "Открыть RSS" if lang == "ru" else "Open RSS" }}</a>
                 </div>
             </div>

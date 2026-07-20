@@ -129,6 +129,7 @@ def break_long_paragraphs(body, max_chars=500):
     """Automatically break long paragraphs into shorter ones at sentence boundaries.
 
     Handles HTML content inside paragraphs by working with the full HTML string.
+    Falls back to comma/newline/word boundary if no sentence ends found.
     """
     def break_paragraph(match):
         full_tag = match.group(0)
@@ -139,35 +140,55 @@ def break_long_paragraphs(body, max_chars=500):
             return full_tag
 
         # Find sentence boundaries (. ! ?) followed by space or end
-        # We need to find positions in the ORIGINAL html, not clean text
         sentence_ends = []
         i = 0
-        clean_pos = 0
         while i < len(p_content):
             if p_content[i] in '.!?':
-                # Check if this is followed by space or end
                 next_char = p_content[i+1] if i+1 < len(p_content) else ' '
                 if next_char in ' \n\t' or i+1 == len(p_content):
-                    # Calculate clean text position up to this point
                     clean_before = len(re.sub(r'<[^>]+>', '', p_content[:i+1]))
                     sentence_ends.append((i+1, clean_before))
             i += 1
 
-        if len(sentence_ends) < 2:
-            return full_tag
+        # Find comma breaks as fallback
+        comma_ends = []
+        i = 0
+        while i < len(p_content):
+            if p_content[i] == ',':
+                next_char = p_content[i+1] if i+1 < len(p_content) else ' '
+                if next_char in ' \n\t':
+                    clean_before = len(re.sub(r'<[^>]+>', '', p_content[:i+1]))
+                    comma_ends.append((i+1, clean_before))
+            i += 1
+
+        # Prefer sentence ends, fallback to commas
+        breaks = sentence_ends if len(sentence_ends) >= 2 else comma_ends
+
+        if not breaks:
+            # Last resort: find space near middle
+            mid = len(clean) // 2
+            # Find HTML position of the space near the middle
+            clean_pos = 0
+            for i in range(len(p_content)):
+                if p_content[i] not in '<>':
+                    clean_pos += 1
+                if clean_pos >= mid and p_content[i] == ' ':
+                    breaks = [(i, mid)]
+                    break
+            if not breaks:
+                return full_tag
 
         # Find the best split point (closest to middle)
         mid_clean = len(clean) // 2
-        best_split = min(sentence_ends, key=lambda x: abs(x[1] - mid_clean))
+        best_split = min(breaks, key=lambda x: abs(x[1] - mid_clean))
 
         # Split the HTML content at this position
         split_html = p_content[:best_split[0]].rstrip()
         second_html = p_content[best_split[0]:].lstrip()
 
-        # Rebuild as HTML paragraphs
         return f"<p>{split_html}</p>\n<p>{second_html}</p>"
 
-    # Process each <p>...</p> block (allow nested tags)
+    # Process each <p>...</p> block
     body = re.sub(r'<p>(.*?)</p>', break_paragraph, body, flags=re.DOTALL)
     return body
 
