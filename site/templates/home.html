@@ -15,7 +15,7 @@
 
 <!-- HERO -->
 <section class="hero" role="banner">
-    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85')"></div>
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=webp&amp;w=1920&q=85')"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1 class="hero-title">{{ t("Путешествуйте по-новому", "Viaja de otra manera", "Discover the world") }}</h1>
@@ -98,7 +98,7 @@
             {% for country_slug, city_slug, flag, name_ru, name_en, name_es, country_ru, country_en, country_es, desc_ru, desc_en, desc_es in popular_dest %}
             <a href="{{ root }}/{{ lang }}/{{ country_slug }}/index.html" class="dest-card">
                 <div class="dest-card-img">
-                    <img src="https://images.unsplash.com/photo-{{ {'phuket':'1589394815804-964ed0be2eb5','istanbul':'1524231757912-21f4fe3a7200','dubai':'1512453979798-5ea266f8880c','sochi':'1548636800-4abe7e58658e','kuta':'1555400038-63f5ba517a47','hurghada':'1546026423-cc4642628d2b','nha-trang':'1528127269322-539801943592','male':'1573843981267-be1999ff37cd'}[city_slug] }}?w=600&q=80" alt="{{ name_en }}" loading="lazy" width="600" height="372">
+                    <img src="https://images.unsplash.com/photo-{{ {'phuket':'1589394815804-964ed0be2eb5','istanbul':'1524231757912-21f4fe3a7200','dubai':'1512453979798-5ea266f8880c','sochi':'1548636800-4abe7e58658e','kuta':'1555400038-63f5ba517a47','hurghada':'1546026423-cc4642628d2b','nha-trang':'1528127269322-539801943592','male':'1573843981267-be1999ff37cd'}[city_slug] }}?fm=webp&amp;w=600&q=80" alt="{{ name_en }}" loading="lazy" width="600" height="372">
                 </div>
                 <div class="dest-card-body">
                     <h4>{{ flag }} {{ name_ru if lang == "ru" else (name_es if lang == "es" else name_en) }}</h4>
@@ -133,7 +133,7 @@
             {% for country_slug, city_slug, flag, name_ru, name_en, name_es, country_ru, country_en, country_es in popular_cities %}
             <a href="{{ root }}/{{ lang }}/{{ country_slug }}/index.html" class="dest-card">
                 <div class="dest-card-img">
-                    <img src="https://images.unsplash.com/photo-{{ {'istanbul':'1524231757912-21f4fe3a7200','phuket':'1589394815804-964ed0be2eb5','dubai':'1512453979798-5ea266f8880c','kuta':'1555400038-63f5ba517a47','moscow':'1513326738677-b964603b136d','hurghada':'1546026423-cc4642628d2b','nha-trang':'1528127269322-539801943592','tbilisi':'1565008576549-57569a49371d'}[city_slug] }}?w=600&q=80" alt="{{ name_en }}" loading="lazy" width="600" height="372">
+                    <img src="https://images.unsplash.com/photo-{{ {'istanbul':'1524231757912-21f4fe3a7200','phuket':'1589394815804-964ed0be2eb5','dubai':'1512453979798-5ea266f8880c','kuta':'1555400038-63f5ba517a47','moscow':'1513326738677-b964603b136d','hurghada':'1546026423-cc4642628d2b','nha-trang':'1528127269322-539801943592','tbilisi':'1565008576549-57569a49371d'}[city_slug] }}?fm=webp&amp;w=600&q=80" alt="{{ name_en }}" loading="lazy" width="600" height="372">
                 </div>
                 <div class="dest-card-body">
                     <h4>{{ flag }} {{ name_ru if lang == "ru" else (name_es if lang == "es" else name_en) }}</h4>
@@ -187,7 +187,7 @@
         <div class="grid grid-3">
             {% if lang == "ru" %}
             <a href="{{ root }}/ru/russia/moscow-putevoditel.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80" alt="Москва" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?fm=webp&amp;w=800&q=80" alt="Москва" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇷🇺 Россия</span>
                     <h3 class="article-card-title">Москва: полный путеводитель 2026</h3>
@@ -196,7 +196,7 @@
                 </div>
             </a>
             <a href="{{ root }}/ru/turkey/istanbul-putevoditel.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80" alt="Стамбул" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?fm=webp&amp;w=800&q=80" alt="Стамбул" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇹🇷 Турция</span>
                     <h3 class="article-card-title">Стамбул: дворцы, базары и кухня</h3>
@@ -205,7 +205,7 @@
                 </div>
             </a>
             <a href="{{ root }}/ru/thailand/phuket-putevoditel.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80" alt="Пхукет" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?fm=webp&amp;w=800&q=80" alt="Пхукет" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇹🇭 Таиланд</span>
                     <h3 class="article-card-title">Пхукет: лучшие пляжи и курорты</h3>
@@ -215,7 +215,7 @@
             </a>
             {% elif lang == "es" %}
             <a href="{{ root }}/es/russia/moscow-guia-de-viaje.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80" alt="Москва" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?fm=webp&amp;w=800&q=80" alt="Москва" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇷🇺 Rusia</span>
                     <h3 class="article-card-title">Moscú: guía completa 2026</h3>
@@ -224,7 +224,7 @@
                 </div>
             </a>
             <a href="{{ root }}/es/turkey/istanbul-guia-de-viaje.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80" alt="Estambul" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?fm=webp&amp;w=800&q=80" alt="Estambul" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇹🇷 Turquía</span>
                     <h3 class="article-card-title">Estambul: palacios, bazares y cocina</h3>
@@ -233,7 +233,7 @@
                 </div>
             </a>
             <a href="{{ root }}/es/thailand/phuket-guia-de-viaje.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80" alt="Phuket" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?fm=webp&amp;w=800&q=80" alt="Phuket" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇹🇭 Tailandia</span>
                     <h3 class="article-card-title">Phuket: las mejores playas y resorts</h3>
@@ -243,7 +243,7 @@
             </a>
             {% else %}
             <a href="{{ root }}/en/russia/moscow-travel-guide.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=800&q=80" alt="Moscow" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1513326738677-b964603b136d?fm=webp&amp;w=800&q=80" alt="Moscow" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇷🇺 Russia</span>
                     <h3 class="article-card-title">Moscow: Complete Travel Guide 2026</h3>
@@ -252,7 +252,7 @@
                 </div>
             </a>
             <a href="{{ root }}/en/turkey/istanbul-travel-guide.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80" alt="Istanbul" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?fm=webp&amp;w=800&q=80" alt="Istanbul" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇹🇷 Turkey</span>
                     <h3 class="article-card-title">Istanbul: Palaces, Bazaars & Cuisine</h3>
@@ -261,7 +261,7 @@
                 </div>
             </a>
             <a href="{{ root }}/en/thailand/phuket-travel-guide.html" class="article-card">
-                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&q=80" alt="Phuket" loading="lazy" width="800" height="450"></div>
+                <div class="article-card-img"><img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?fm=webp&amp;w=800&q=80" alt="Phuket" loading="lazy" width="800" height="450"></div>
                 <div class="article-card-body">
                     <span class="article-card-tag">🇹🇭 Thailand</span>
                     <h3 class="article-card-title">Phuket: Best Beaches and Resorts</h3>
