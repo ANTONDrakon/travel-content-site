@@ -395,6 +395,7 @@ COUNTRY_IMAGES = {
     "georgia": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=80",
     "cyprus": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
     "oman": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1200&q=80",
+    "uzbekistan": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=1200&q=80",
 }
 
 CITY_IMAGES = {
@@ -465,6 +466,10 @@ CITY_IMAGES = {
     "paphos": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
     # Oman
     "muscat": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
+    "tashkent": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=800&q=80",
+    "samarkand": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=800&q=80",
+    "bukhara": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=800&q=80",
+    "khiva": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=800&q=80",
     "salalah": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
     "musandam": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800&q=80",
     # Russia
@@ -544,6 +549,7 @@ def get_country_emoji(slug):
         "uae": "🇦🇪", "indonesia": "🇮🇩", "china": "🇨🇳", "maldives": "🇲🇻",
         "sri-lanka": "🇱🇰", "montenegro": "🇲🇪", "vietnam": "🇻🇳",
         "georgia": "🇬🇪", "cyprus": "🇨🇾", "oman": "🇴🇲",
+        "uzbekistan": "🇺🇿",
     }
     return emojis.get(slug, "🌍")
 
@@ -948,6 +954,7 @@ def build_article_page(country_slug, city_slug, content_type, lang):
         "georgia": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=80",
         "cyprus": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&q=80",
         "oman": "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=1200&q=80",
+    "uzbekistan": "https://images.unsplash.com/photo-1590076215667-875d4ef2d7de?w=1200&q=80",
     }
     seo["og_image"] = _og_map.get(country_slug, f"{os.getenv('SITE_URL', 'https://antondrakon.github.io/travel-content-site')}/assets/countries/travel-hero.webp")
 

@@ -59,7 +59,7 @@
             <h2>{{ "Выберите страну" if lang == "ru" else "Choose a country" }}</h2>
             <p>{{ "Откройте для себя лучшие направления для путешествий по всему миру." if lang == "ru" else "Discover the best travel destinations around the world." }}</p>
         </div>
-        <div class="grid grid-3">
+        <div class="grid grid-4">
             {% for country in countries %}
             <a href="{{ root }}/{{ lang }}/{{ country.slug }}/index.html" class="country-card reveal">
                 <img src="{{ country.image }}" alt="{{ country.name_en if lang == 'en' else country.name_ru }}" loading="lazy">

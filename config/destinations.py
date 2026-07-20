@@ -1394,4 +1394,45 @@ DESTINATIONS = {
             },
         },
     },
+
+    "uzbekistan": {
+        "name_ru": "Узбекистан",
+        "name_ru_prepositional": "Узбекистане",
+        "name_en": "Uzbekistan",
+        "slug": "uzbekistan",
+        "currency": "UZS",
+        "visa_ru": "безвизовый въезд до 30 дней для граждан РФ",
+        "visa_en": "visa-free entry up to 30 days for Russian citizens",
+        "airport_code": "TAS",
+        "cities": {
+            "tashkent": {
+                "name_ru": "Ташкент",
+                "name_en": "Tashkent",
+                "slug": "tashkent",
+                "airport_codes": ["TAS"],
+                "lat": 41.2995, "lon": 69.2401,
+            },
+            "samarkand": {
+                "name_ru": "Самарканд",
+                "name_en": "Samarkand",
+                "slug": "samarkand",
+                "airport_codes": ["SKD"],
+                "lat": 39.6542, "lon": 66.9597,
+            },
+            "bukhara": {
+                "name_ru": "Бухара",
+                "name_en": "Bukhara",
+                "slug": "bukhara",
+                "airport_codes": ["BHK"],
+                "lat": 39.7681, "lon": 64.4556,
+            },
+            "khiva": {
+                "name_ru": "Хива",
+                "name_en": "Khiva",
+                "slug": "khiva",
+                "airport_codes": ["UGC"],
+                "lat": 41.3786, "lon": 60.3564,
+            },
+        },
+    },
 }
