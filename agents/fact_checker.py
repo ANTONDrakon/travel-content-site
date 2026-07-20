@@ -413,7 +413,10 @@ def check_article(body, country_slug, lang="ru", content_type="guide"):
 
     Checks are context-aware: not all article types need all facts.
     - guide: all checks (visa, currency, timezone, airports)
-    - hotels/flights/attractions/seasons: currency + timezone only (visa/airports optional)
+    - hotels: visa + currency (no timezone/airports needed)
+    - flights: visa only (currency/airports not relevant)
+    - attractions: currency only (visa/airports/timezone not relevant)
+    - seasons: timezone only (visa/currency/airports not relevant)
     """
     issues = []
 
@@ -422,15 +425,26 @@ def check_article(body, country_slug, lang="ru", content_type="guide"):
         if re.search(pattern, body, re.IGNORECASE):
             issues.append(f"UNVERIFIED: {desc}")
 
-    # Country-specific checks (context-aware)
+    # Country-specific checks (context-aware by content type)
     if country_slug:
-        # Currency is important for all article types
-        issues.extend(verify_currency(country_slug, body, lang))
-
-        # Only check visa, airports, timezone for guide articles
         if content_type == "guide":
+            # Guide articles need everything
             issues.extend(verify_visa(country_slug, body, lang))
+            issues.extend(verify_currency(country_slug, body, lang))
             issues.extend(verify_airports(country_slug, body))
+            issues.extend(verify_timezone(country_slug, body))
+        elif content_type == "hotels":
+            # Hotels need visa and currency info
+            issues.extend(verify_visa(country_slug, body, lang))
+            issues.extend(verify_currency(country_slug, body, lang))
+        elif content_type == "flights":
+            # Flights need visa info only
+            issues.extend(verify_visa(country_slug, body, lang))
+        elif content_type == "attractions":
+            # Attractions need currency info
+            issues.extend(verify_currency(country_slug, body, lang))
+        elif content_type == "seasons":
+            # Seasons need timezone info
             issues.extend(verify_timezone(country_slug, body))
 
     # Price checks

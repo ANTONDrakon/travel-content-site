@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block en_alt %}terms.html{% endblock %}
+{% block ru_alt %}terms.html{% endblock %}
+{% set ru_alternate_url = "terms.html" %}
+{% set en_alternate_url = "terms.html" %}
+{% block title %}{{ "Условия использования" if lang == "ru" else "Terms of Use" }} | TravelHub{% endblock %}
+{% block meta_description %}{{ "Условия использования сайта TravelHub." if lang == "ru" else "Terms of use for the TravelHub website." }}{% endblock %}
+{% set canonical = "/" + lang + "/terms.html" %}
+{% set hide_back = True %}
+
+{% block content %}
+<section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+        <h1 class="h1" style="margin-bottom:var(--sp-6);">{{ "Условия использования" if lang == "ru" else "Terms of Use" }}</h1>
+        <p class="body-s" style="color:var(--text-muted);margin-bottom:var(--sp-6);">{{ "Последнее обновление: Июль 2026" if lang == "ru" else "Last updated: July 2026" }}</p>
+
+        <div class="article-body">
+            {% if lang == "ru" %}
+            <h2>1. Общие положения</h2>
+            <p>Используя сайт TravelHub, вы соглашаетесь с данными условиями. Если вы не согласны — пожалуйста, покиньте сайт.</p>
+
+            <h2>2. Информация на сайте</h2>
+            <p>Мы стараемся предоставлять точную и актуальную информацию, но не гарантируем её полноту. Цены, расписания и условия могут меняться. Всегда проверяйте актуальную информацию на сайтах партнёров.</p>
+
+            <h2>3. Партнёрские ссылки</h2>
+            <p>TravelHub содержит партнёрские ссылки. Переходы по ним помогают поддерживать сайт. Это не влияет на стоимость услуг для вас.</p>
+
+            <h2>4. Авторское право</h2>
+            <p>Весь контент сайта (тексты, изображения, дизайн) защищён авторским правом. Копирование без разрешения запрещено.</p>
+
+            <h2>5. Ограничение ответственности</h2>
+            <p>TravelHub не несёт ответственности за решения, принятые на основе информации на сайте. Все поездки — на ваш риск.</p>
+
+            <h2>6. Контакты</h2>
+            <p>Вопросы: <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a></p>
+
+            {% else %}
+
+            <h2>1. General</h2>
+            <p>By using the TravelHub website, you agree to these terms. If you do not agree — please leave the site.</p>
+
+            <h2>2. Information on the site</h2>
+            <p>We strive to provide accurate and current information, but do not guarantee its completeness. Prices, schedules, and conditions may change. Always verify current information on partner sites.</p>
+
+            <h2>3. Affiliate links</h2>
+            <p>TravelHub contains affiliate links. Clicking them helps support the site. This does not affect the cost of services for you.</p>
+
+            <h2>4. Copyright</h2>
+            <p>All site content (texts, images, design) is protected by copyright. Copying without permission is prohibited.</p>
+
+            <h2>5. Limitation of liability</h2>
+            <p>TravelHub is not responsible for decisions made based on information on the site. All travel is at your own risk.</p>
+
+            <h2>6. Contact</h2>
+            <p>Questions: <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a></p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

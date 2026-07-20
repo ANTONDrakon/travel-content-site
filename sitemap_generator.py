@@ -39,6 +39,9 @@ def generate_lang_sitemap(lang):
     lines.append(f"  <url><loc>{SITE_URL}/{lang}/index.html</loc><priority>1.0</priority><lastmod>{TODAY}</lastmod></url>")
     lines.append(f"  <url><loc>{SITE_URL}/{lang}/about.html</loc><priority>0.7</priority><lastmod>{TODAY}</lastmod></url>")
     lines.append(f"  <url><loc>{SITE_URL}/{lang}/contacts.html</loc><priority>0.7</priority><lastmod>{TODAY}</lastmod></url>")
+    lines.append(f"  <url><loc>{SITE_URL}/{lang}/privacy.html</loc><priority>0.3</priority><lastmod>{TODAY}</lastmod></url>")
+    lines.append(f"  <url><loc>{SITE_URL}/{lang}/cookies.html</loc><priority>0.3</priority><lastmod>{TODAY}</lastmod></url>")
+    lines.append(f"  <url><loc>{SITE_URL}/{lang}/terms.html</loc><priority>0.3</priority><lastmod>{TODAY}</lastmod></url>")
 
     # Seasonal pages
     months = ["january", "february", "march", "april", "may", "june",

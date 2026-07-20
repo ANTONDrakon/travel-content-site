@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block en_alt %}cookies.html{% endblock %}
+{% block ru_alt %}cookies.html{% endblock %}
+{% set ru_alternate_url = "cookies.html" %}
+{% set en_alternate_url = "cookies.html" %}
+{% block title %}{{ "Политика cookies" if lang == "ru" else "Cookie Policy" }} | TravelHub{% endblock %}
+{% block meta_description %}{{ "Как TravelHub использует cookies и аналогичные технологии." if lang == "ru" else "How TravelHub uses cookies and similar technologies." }}{% endblock %}
+{% set canonical = "/" + lang + "/cookies.html" %}
+{% set hide_back = True %}
+
+{% block content %}
+<section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+        <h1 class="h1" style="margin-bottom:var(--sp-6);">{{ "Политика cookies" if lang == "ru" else "Cookie Policy" }}</h1>
+        <p class="body-s" style="color:var(--text-muted);margin-bottom:var(--sp-6);">{{ "Последнее обновление: Июль 2026" if lang == "ru" else "Last updated: July 2026" }}</p>
+
+        <div class="article-body">
+            {% if lang == "ru" %}
+            <h2>Что такое cookies</h2>
+            <p>Cookies — это небольшие текстовые файлы, которые сохраняются в вашем браузере при посещении сайта.</p>
+
+            <h2>Какие cookies мы используем</h2>
+            <ul>
+                <li><strong>Yandex.Metrika</strong> — аналитика посещений</li>
+                <li><strong>Google Analytics</strong> — статистика трафика</li>
+                <li><strong>Formspree</strong> — обработка форм</li>
+            </ul>
+
+            <h2>Как отключить cookies</h2>
+            <p>Вы можете настроить браузер для отклонения cookies или уведомления об их отправке:</p>
+            <ul>
+                <li>Chrome: Настройки → Конфиденциальность → Cookies</li>
+                <li>Firefox: Настройки → Приватность → Cookies</li>
+                <li>Safari: Настройки → Конфиденциальность → Cookies</li>
+            </ul>
+
+            <h2>Контакты</h2>
+            <p>Вопросы: <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a></p>
+
+            {% else %}
+
+            <h2>What are cookies</h2>
+            <p>Cookies are small text files saved in your browser when you visit a website.</p>
+
+            <h2>Cookies we use</h2>
+            <ul>
+                <li><strong>Yandex.Metrika</strong> — visit analytics</li>
+                <li><strong>Google Analytics</strong> — traffic statistics</li>
+                <li><strong>Formspree</strong> — form processing</li>
+            </ul>
+
+            <h2>How to disable cookies</h2>
+            <p>You can configure your browser to reject cookies or notify you when they are sent:</p>
+            <ul>
+                <li>Chrome: Settings → Privacy → Cookies</li>
+                <li>Firefox: Settings → Privacy → Cookies</li>
+                <li>Safari: Settings → Privacy → Cookies</li>
+            </ul>
+
+            <h2>Contact</h2>
+            <p>Questions: <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a></p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

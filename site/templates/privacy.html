@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block en_alt %}privacy.html{% endblock %}
+{% block ru_alt %}privacy.html{% endblock %}
+{% set ru_alternate_url = "privacy.html" %}
+{% set en_alternate_url = "privacy.html" %}
+{% block title %}{{ "Политика конфиденциальности" if lang == "ru" else "Privacy Policy" }} | TravelHub{% endblock %}
+{% block meta_description %}{{ "Политика конфиденциальности TravelHub. Как мы собираем, используем и защищаем ваши данные." if lang == "ru" else "TravelHub Privacy Policy. How we collect, use, and protect your data." }}{% endblock %}
+{% set canonical = "/" + lang + "/privacy.html" %}
+{% set hide_back = True %}
+
+{% block content %}
+<section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+        <h1 class="h1" style="margin-bottom:var(--sp-6);">{{ "Политика конфиденциальности" if lang == "ru" else "Privacy Policy" }}</h1>
+        <p class="body-s" style="color:var(--text-muted);margin-bottom:var(--sp-6);">{{ "Последнее обновление: Июль 2026" if lang == "ru" else "Last updated: July 2026" }}</p>
+
+        <div class="article-body">
+            {% if lang == "ru" %}
+            <h2>1. Общие положения</h2>
+            <p>TravelHub (далее — «Мы») уважает вашу конфиденциальность. Настоящая Политика описывает, как мы собираем, используем и защищаем информацию, полученную от пользователей сайта antondrakon.github.io/travel-content-site.</p>
+
+            <h2>2. Какую информацию мы собираем</h2>
+            <p><strong>Автоматически:</strong> IP-адрес, тип браузера,.operating system, время посещения, страницы просмотра.</p>
+            <p><strong>Добровольно:</strong> Имя, email, телефон — при заполнении форм на сайте.</p>
+
+            <h2>3. Как мы используем информацию</h2>
+            <ul>
+                <li>Для обработки заявок на подбор тура</li>
+                <li>Для улучшения качества контента и сервиса</li>
+                <li>Для отправки newsletters (с согласия)</li>
+                <li>Для аналитики и статистики посещений</li>
+            </ul>
+
+            <h2>4. Партнёрские ссылки</h2>
+            <p>Содержимое TravelHub содержит партнёрские ссылки (Booking.com, Aviasales и др.). Переходы по партнёрским ссылкам не влияют на стоимость услуг для вас. Мы получаем небольшую комиссию при бронировании.</p>
+
+            <h2>5. Cookies</h2>
+            <p>Мы используем cookies для аналитики (Yandex.Metrika, Google Analytics). Вы можете отключить cookies в настройках браузера.</p>
+
+            <h2>6. Защита данных</h2>
+            <p>Мы принимаем разумные меры для защиты вашей информации. Персональные данные не продаются и не передаются третьим лицам, за исключением необходимых случаев (Formspree для обработки форм).</p>
+
+            <h2>7. Ваши права</h2>
+            <p>Вы можете запросить удаление ваших данных, написав на <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a>.</p>
+
+            <h2>8. Контакты</h2>
+            <p>По вопросам конфиденциальности: <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a></p>
+
+            {% else %}
+
+            <h2>1. General</h2>
+            <p>TravelHub ("We") respects your privacy. This Policy describes how we collect, use, and protect information from users of antondrakon.github.io/travel-content-site.</p>
+
+            <h2>2. Information We Collect</h2>
+            <p><strong>Automatically:</strong> IP address, browser type, operating system, visit time, pages viewed.</p>
+            <p><strong>Voluntarily:</strong> Name, email, phone — when filling out forms on the site.</p>
+
+            <h2>3. How We Use Information</h2>
+            <ul>
+                <li>To process trip planning requests</li>
+                <li>To improve content and service quality</li>
+                <li>To send newsletters (with consent)</li>
+                <li>For analytics and visit statistics</li>
+            </ul>
+
+            <h2>4. Affiliate Links</h2>
+            <p>TravelHub content contains affiliate links (Booking.com, Aviasales, etc.). Clicking affiliate links does not affect the cost of services. We receive a small commission on bookings.</p>
+
+            <h2>5. Cookies</h2>
+            <p>We use cookies for analytics (Yandex.Metrika, Google Analytics). You can disable cookies in your browser settings.</p>
+
+            <h2>6. Data Protection</h2>
+            <p>We take reasonable measures to protect your information. Personal data is not sold or shared with third parties, except as necessary (Formspree for form processing).</p>
+
+            <h2>7. Your Rights</h2>
+            <p>You may request deletion of your data by writing to <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a>.</p>
+
+            <h2>8. Contact</h2>
+            <p>For privacy inquiries: <a href="mailto:i@turkov-1.ru">i@turkov-1.ru</a></p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -362,6 +362,11 @@
     </div>
     <div class="footer-bottom">
         <span>&copy; {{ current_year }} TravelHub. {{ "Все права защищены." if lang == "ru" else "All rights reserved." }}</span>
+        <div class="footer-bottom-links">
+            <a href="{{ root }}/{{ lang }}/privacy.html">{{ "Политика конфиденциальности" if lang == "ru" else "Privacy Policy" }}</a>
+            <a href="{{ root }}/{{ lang }}/cookies.html">{{ "Политика cookies" if lang == "ru" else "Cookie Policy" }}</a>
+            <a href="{{ root }}/{{ lang }}/terms.html">{{ "Условия использования" if lang == "ru" else "Terms of Use" }}</a>
+        </div>
     </div>
 </footer>
 

@@ -1110,6 +1110,19 @@ def build_contacts_page(lang):
     print(f"  Built: {out}")
 
 
+def build_legal_pages(lang):
+    """Build privacy, cookies, and terms pages."""
+    for slug, tpl in [("privacy", "privacy.html"), ("cookies", "cookies.html"), ("terms", "terms.html")]:
+        template = env.get_template(tpl)
+        html = template.render(lang=lang, breadcrumbs=[
+            {"label": "Home" if lang == "en" else "Главная", "url": f"/{lang}/index.html"},
+        ])
+        out = OUTPUT_DIR / lang / f"{slug}.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(html, encoding="utf-8")
+        print(f"  Built: {out}")
+
+
 def build_all():
     print("\n=== Building site ===\n")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -1143,6 +1156,8 @@ def build_all():
         build_about_page(lang)
         print(f"\n[{lang.upper()}] Building contacts page...")
         build_contacts_page(lang)
+        print(f"\n[{lang.upper()}] Building legal pages...")
+        build_legal_pages(lang)
 
     for country_slug in DESTINATIONS:
         for lang in ["ru", "en"]:
