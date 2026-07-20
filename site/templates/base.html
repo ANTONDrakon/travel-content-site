@@ -300,7 +300,7 @@
                 <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
                     <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required>
                     <input type="email" name="email" placeholder="Email">
-                    <input type="tel" name="phone" placeholder="{{ 'Phone *' if lang == 'en' else 'Телефон *' }}" required>
+                    <input type="tel" name="phone" placeholder="{{ 'Phone or messenger *' if lang == 'en' else ('Teléfono o messenger *' if lang == 'es' else 'Телефон или мессенджер *') }}" required>
                     <select name="destination">
                         <option value="">{{ "Preferred destination" if lang == "en" else "Желаемое направление" }}</option>
                         {% for d in russia_destinations %}
