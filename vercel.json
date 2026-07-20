@@ -1,24 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "docs/**",
-      "use": "@vercel/static"
-    }
-  ],
+  "outputDirectory": "docs",
   "routes": [
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/ru/(.*)", "dest": "/ru/$1" },
-    { "src": "/en/(.*)", "dest": "/en/$1" },
-    { "src": "/es/(.*)", "dest": "/es/$1" },
-    { "src": "/feed-ru.xml", "dest": "/feed-ru.xml" },
-    { "src": "/feed-en.xml", "dest": "/feed-en.xml" },
-    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
-    { "src": "/sitemap-ru.xml", "dest": "/sitemap-ru.xml" },
-    { "src": "/sitemap-en.xml", "dest": "/sitemap-en.xml" },
-    { "src": "/robots.txt", "dest": "/robots.txt" },
-    { "src": "/sw.js", "dest": "/sw.js" },
-    { "src": "/favicon.svg", "dest": "/favicon.svg" },
+    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
