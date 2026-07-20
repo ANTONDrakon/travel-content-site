@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
 
     <link rel="preload" href="{{ root }}/assets/styles.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
@@ -18,6 +18,7 @@
 
     <link rel="alternate" hreflang="ru" href="{{ site_url }}/ru/{{ ru_alternate_url or alternate_url or '' }}">
     <link rel="alternate" hreflang="en" href="{{ site_url }}/en/{{ en_alternate_url or alternate_url or '' }}">
+    <link rel="alternate" hreflang="es" href="{{ site_url }}/es/{{ es_alternate_url or alternate_url or '' }}">
     <link rel="alternate" hreflang="x-default" href="{{ site_url }}/en/{{ en_alternate_url or alternate_url or '' }}">
     {% if canonical %}<link rel="canonical" href="{{ site_url }}{{ canonical }}">{% endif %}
 
@@ -53,12 +54,15 @@
       "logo": "{{ site_url }}/assets/countries/travel-hero.webp",
       "description": "Expert travel guides with real prices, hotel reviews, and personal travel agent support.",
       "foundingDate": "2026",
-      "sameAs": [],
+      "sameAs": [
+        "https://t.me/travelhub",
+        "https://max.vk.com/"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "i@turkov-1.ru",
         "contactType": "customer service",
-        "availableLanguage": ["Russian", "English"]
+        "availableLanguage": ["Russian", "English", "Spanish"]
       },
       "areaServed": { "@type": "Place", "name": "Worldwide" },
       "knowsAbout": ["Travel", "Hotels", "Flights", "Tourism", "Travel Guides"]
@@ -246,6 +250,8 @@
     <nav class="mobile-nav" id="mobile-nav" aria-label="{{ t('Мобильная навигация', 'Navegación móvil', 'Mobile navigation') }}">
         <a href="{{ root }}/{{ lang }}/index.html">{{ t("Главная", "Inicio", "Home") }}</a>
         <a href="{{ root }}/{{ lang }}/russia/index.html">{{ t("Направления", "Destinos", "Destinations") }}</a>
+        <a href="{{ root }}/{{ lang }}/russia/moscow-{{ 'putevoditel' if lang == 'ru' else ('guia-de-viaje' if lang == 'es' else 'travel-guide') }}.html">{{ t("Путеводители", "Guías", "Guides") }}</a>
+        <a href="{{ root }}/{{ lang }}/russia/moscow-{{ 'oteli' if lang == 'ru' else ('hoteles' if lang == 'es' else 'hotels') }}.html">{{ t("Отели", "Hoteles", "Hotels") }}</a>
         <a href="{{ root }}/{{ lang }}/about.html">{{ t("О нас", "Sobre nosotros", "About") }}</a>
         <a href="{{ root }}/{{ lang }}/contacts.html">{{ t("Контакты", "Contacto", "Contacts") }}</a>
         <div class="mobile-lang-switcher">

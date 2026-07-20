@@ -595,14 +595,14 @@ def get_hotels_for_home():
             country = h.get("country_slug", "")
             if country in seen_countries or country in RUSSIA_STANDALONE_SLUGS:
                 continue
-            if h.get("category") == cat and h.get("images"):
+            if h.get("category") == cat and h.get("images") and h.get("price"):
                 seen_countries.add(country)
                 result.append({
                     "name": h.get("name", ""),
                     "country_slug": country,
                     "city_name_ru": h.get("city_name_ru", ""),
                     "city_name_en": h.get("city_name_en", ""),
-                    "rating": h.get("rating"),
+                    "rating": h.get("rating") or 4.5,
                     "price": h.get("price", ""),
                     "image": h["images"][0].get("src", "") if h.get("images") else "",
                     "page_url": h.get("page_url", ""),
@@ -617,13 +617,13 @@ def get_hotels_for_home():
             country = h.get("country_slug", "")
             if country in {r["country_slug"] for r in result} or country in RUSSIA_STANDALONE_SLUGS:
                 continue
-            if h.get("images"):
+            if h.get("images") and h.get("price"):
                 result.append({
                     "name": h.get("name", ""),
                     "country_slug": country,
                     "city_name_ru": h.get("city_name_ru", ""),
                     "city_name_en": h.get("city_name_en", ""),
-                    "rating": h.get("rating"),
+                    "rating": h.get("rating") or 4.5,
                     "price": h.get("price", ""),
                     "image": h["images"][0].get("src", "") if h.get("images") else "",
                     "page_url": h.get("page_url", ""),
@@ -1212,6 +1212,15 @@ def build_legal_pages(lang):
 def build_all():
     print("\n=== Building site ===\n")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Copy static assets (CSS, JS, images) to docs
+    print("Copying static assets...")
+    import shutil
+    site_assets = Path(__file__).parent / "site" / "assets"
+    docs_assets = OUTPUT_DIR / "assets"
+    if site_assets.exists():
+        shutil.copytree(site_assets, docs_assets, dirs_exist_ok=True)
+        print("  Static assets copied to docs/assets/")
 
     # Build Tailwind CSS
     print("Building Tailwind CSS...")
