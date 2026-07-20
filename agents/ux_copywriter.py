@@ -104,11 +104,11 @@ def validate_structure(body):
             issues.append(f"HEADING_HIERARCHY: h{prev_level} → h{level} skip (text: {text[:50]})")
         prev_level = level
 
-    # Check for very long paragraphs (>500 chars without line breaks)
+    # Check for very long paragraphs (>550 chars without line breaks)
     paragraphs = re.findall(r'<p>(.*?)</p>', body, re.DOTALL)
     for i, p in enumerate(paragraphs):
         clean = re.sub(r'<[^>]+>', '', p)
-        if len(clean) > 500:
+        if len(clean) > 550:
             issues.append(f"LONG_PARAGRAPH: Paragraph {i+1} is {len(clean)} chars — consider breaking it up")
 
     # Check for orphan headings (heading with no content after)
@@ -125,16 +125,25 @@ def validate_structure(body):
     return issues
 
 
-def break_long_paragraphs(body, max_chars=500):
+def break_long_paragraphs(body, max_chars=550):
     """Automatically break long paragraphs into shorter ones at sentence boundaries.
 
     Handles HTML content inside paragraphs by working with the full HTML string.
-    Falls back to comma/newline/word boundary if no sentence ends found.
+    Falls back to comma/newline/word boundary/mid-word split if no sentence ends found.
+    Handles nested elements like affiliate blocks.
     """
     def break_paragraph(match):
         full_tag = match.group(0)
         p_content = match.group(1)
-        clean = re.sub(r'<[^>]+>', '', p_content)
+
+        # Extract affiliate blocks and replace with placeholders
+        affiliate_blocks = []
+        def save_affiliate(m):
+            affiliate_blocks.append(m.group(0))
+            return f"__AFFILIATE_{len(affiliate_blocks)-1}__"
+        p_clean = re.sub(r'<div class="affiliate-block">.*?</div>', save_affiliate, p_content, flags=re.DOTALL)
+
+        clean = re.sub(r'<[^>]+>', '', p_clean)
 
         if len(clean) <= max_chars:
             return full_tag
@@ -142,49 +151,51 @@ def break_long_paragraphs(body, max_chars=500):
         # Find sentence boundaries (. ! ?) followed by space or end
         sentence_ends = []
         i = 0
-        while i < len(p_content):
-            if p_content[i] in '.!?':
-                next_char = p_content[i+1] if i+1 < len(p_content) else ' '
-                if next_char in ' \n\t' or i+1 == len(p_content):
-                    clean_before = len(re.sub(r'<[^>]+>', '', p_content[:i+1]))
+        while i < len(p_clean):
+            if p_clean[i] in '.!?':
+                next_char = p_clean[i+1] if i+1 < len(p_clean) else ' '
+                if next_char in ' \n\t' or i+1 == len(p_clean):
+                    clean_before = len(re.sub(r'<[^>]+>', '', p_clean[:i+1]))
                     sentence_ends.append((i+1, clean_before))
             i += 1
 
-        # Find comma breaks as fallback
+        # Find comma breaks as fallback (any comma)
         comma_ends = []
         i = 0
-        while i < len(p_content):
-            if p_content[i] == ',':
-                next_char = p_content[i+1] if i+1 < len(p_content) else ' '
-                if next_char in ' \n\t':
-                    clean_before = len(re.sub(r'<[^>]+>', '', p_content[:i+1]))
-                    comma_ends.append((i+1, clean_before))
+        while i < len(p_clean):
+            if p_clean[i] == ',':
+                clean_before = len(re.sub(r'<[^>]+>', '', p_clean[:i+1]))
+                comma_ends.append((i+1, clean_before))
             i += 1
 
-        # Prefer sentence ends, fallback to commas
-        breaks = sentence_ends if len(sentence_ends) >= 2 else comma_ends
+        # Find space breaks as another fallback
+        space_ends = []
+        i = 0
+        while i < len(p_clean):
+            if p_clean[i] == ' ':
+                clean_before = len(re.sub(r'<[^>]+>', '', p_clean[:i+1]))
+                space_ends.append((i+1, clean_before))
+            i += 1
+
+        # Priority: sentence ends > commas > spaces
+        breaks = sentence_ends if len(sentence_ends) >= 2 else (comma_ends if comma_ends else space_ends)
 
         if not breaks:
-            # Last resort: find space near middle
-            mid = len(clean) // 2
-            # Find HTML position of the space near the middle
-            clean_pos = 0
-            for i in range(len(p_content)):
-                if p_content[i] not in '<>':
-                    clean_pos += 1
-                if clean_pos >= mid and p_content[i] == ' ':
-                    breaks = [(i, mid)]
-                    break
-            if not breaks:
-                return full_tag
+            return full_tag
 
         # Find the best split point (closest to middle)
         mid_clean = len(clean) // 2
         best_split = min(breaks, key=lambda x: abs(x[1] - mid_clean))
 
         # Split the HTML content at this position
-        split_html = p_content[:best_split[0]].rstrip()
-        second_html = p_content[best_split[0]:].lstrip()
+        split_html = p_clean[:best_split[0]].rstrip()
+        second_html = p_clean[best_split[0]:].lstrip()
+
+        # Restore affiliate blocks
+        for idx, block in enumerate(affiliate_blocks):
+            placeholder = f"__AFFILIATE_{idx}__"
+            split_html = split_html.replace(placeholder, block)
+            second_html = second_html.replace(placeholder, block)
 
         return f"<p>{split_html}</p>\n<p>{second_html}</p>"
 

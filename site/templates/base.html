@@ -230,9 +230,11 @@
             <a href="{{ root }}/{{ lang }}/index.html" class="nav-link">{{ "Home" if lang == "en" else "Главная" }}</a>
             <a href="{{ root }}/{{ lang }}/about.html" class="nav-link">{{ "About" if lang == "en" else "О нас" }}</a>
             <a href="{{ root }}/{{ lang }}/contacts.html" class="nav-link">{{ "Contacts" if lang == "en" else "Контакты" }}</a>
-            <a href="{{ root }}/en/{{ self.en_alt() }}" class="lang-btn {% if lang == 'en' %}active{% endif %}">EN</a>
-            <a href="{{ root }}/ru/{{ self.ru_alt() }}" class="lang-btn {% if lang == 'ru' %}active{% endif %}">RU</a>
         </nav>
+        <div class="lang-switcher">
+            <a href="{{ root }}/ru/{{ self.ru_alt() }}" class="lang-btn {% if lang == 'ru' %}active{% endif %}">Русский</a>
+            <a href="{{ root }}/en/{{ self.en_alt() }}" class="lang-btn {% if lang == 'en' %}active{% endif %}">English</a>
+        </div>
         <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
@@ -241,8 +243,10 @@
         <a href="{{ root }}/{{ lang }}/index.html">{{ "Home" if lang == "en" else "Главная" }}</a>
         <a href="{{ root }}/{{ lang }}/about.html">{{ "About" if lang == "en" else "О нас" }}</a>
         <a href="{{ root }}/{{ lang }}/contacts.html">{{ "Contacts" if lang == "en" else "Контакты" }}</a>
-        <a href="{{ root }}/en/{{ self.en_alt() }}">English</a>
-        <a href="{{ root }}/ru/{{ self.ru_alt() }}">Русский</a>
+        <div class="mobile-lang-switcher">
+            <a href="{{ root }}/ru/{{ self.ru_alt() }}" class="lang-btn {% if lang == 'ru' %}active{% endif %}">Русский</a>
+            <a href="{{ root }}/en/{{ self.en_alt() }}" class="lang-btn {% if lang == 'en' %}active{% endif %}">English</a>
+        </div>
     </nav>
 </header>
 
@@ -269,7 +273,7 @@
         <h2>{{ "Need help planning your trip?" if lang == "en" else "Нужна помощь в организации путешествия?" }}</h2>
         <div class="agent-grid">
             <div>
-                <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:16px;">
+                <p class="body-m" style="color:var(--text-secondary);margin-bottom:var(--sp-4);">
                     {{ "Welcome to our travel guides! We are a team of travel experts who research destinations worldwide to bring you honest, practical information. Our guides include tips on how to save on flights, book great hotels, arrange affordable transfers, and stay connected with eSIM. All prices are approximate estimates — always check current rates on partner sites. Want personalized help? Contact us and we'll help plan your perfect trip." if lang == "en" else "Добро пожаловать в наши путеводители! Мы — команда travel-экспертов, которые исследуют направления по всему миру, чтобы дать вам честную и практичную информацию. В гайдах — советы, как сэкономить на билетах, выбрать хороший отель, заказать трансфер и оставаться на связи с eSIM. Все цены ориентировочные — всегда проверяйте актуальные на сайтах партнёров. Нужна помощь в организации? Свяжитесь с нами — поможем спланировать поездку." }}
                 </p>
                 <ul class="agent-benefits">
@@ -280,7 +284,7 @@
                 </ul>
             </div>
             <div>
-                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">{{ "Plan your perfect trip — we'll handle the details" if lang == "en" else "Спланируйте идеальную поездку — мы поможем с деталями" }}</p>
+                <p class="h4" style="margin-bottom:var(--sp-4);">{{ "Plan your perfect trip — we'll handle the details" if lang == "en" else "Спланируйте идеальную поездку — мы поможем с деталями" }}</p>
                 <form class="contact-form" action="https://formspree.io/f/{{ formspree_id }}" method="POST">
                     <input type="text" name="name" placeholder="{{ 'Your name *' if lang == 'en' else 'Ваше имя *' }}" required>
                     <input type="email" name="email" placeholder="Email">
@@ -331,7 +335,7 @@
                 <span class="logo-icon">✈</span>
                 TravelHub
             </a>
-            <p style="margin-top:var(--sp-3);font-size:14px;color:var(--text-secondary);">{{ "Ваш надёжный путеводитель: отели, билеты, достопримечательности и советы экспертов." if lang == "ru" else "Your trusted travel guide: hotels, flights, attractions, and expert tips." }}</p>
+            <p class="footer-brand-desc">{{ "Ваш надёжный путеводитель: отели, билеты, достопримечательности и советы экспертов." if lang == "ru" else "Your trusted travel guide: hotels, flights, attractions, and expert tips." }}</p>
         </div>
         <div class="footer-col">
             <h5>{{ "Направления" if lang == "ru" else "Destinations" }}</h5>
@@ -357,7 +361,7 @@
                 <li>💬 <a href="https://t.me/travelhub" target="_blank">Telegram</a></li>
                 <li>📱 <a href="https://max.vk.com/" target="_blank">MAX Messenger</a></li>
             </ul>
-            <p style="font-size:13px;color:var(--text-muted);margin-top:var(--sp-4);">{{ "Все цены ориентировочные. Уточняйте на сайтах партнёров." if lang == "ru" else "All prices are approximate. Verify on partner sites." }}</p>
+            <p class="footer-disclaimer">{{ "Все цены ориентировочные. Уточняйте на сайтах партнёров." if lang == "ru" else "All prices are approximate. Verify on partner sites." }}</p>
         </div>
     </div>
     <div class="footer-bottom">
@@ -378,7 +382,7 @@
             <p><strong>{{ "Write to us in MAX" if lang == "en" else "Напишите нам в Макс" }}</strong></p>
             <div class="msg-text" id="prefilled-msg">{{ "Hello! I'm interested in a tour. Can you help?" if lang == "en" else "Здравствуйте! Интересует тур. Подскажите цены?" }}</div>
             <button class="copy-btn" onclick="copyMsg()">{{ "Copy text" if lang == "en" else "Скопировать текст" }}</button>
-            <a href="https://max.vk.com/" target="_blank" class="copy-btn" style="display:inline-block;margin-top:6px;text-decoration:none;background:#0077FF;text-align:center;">{{ "Open MAX" if lang == "en" else "Открыть Макс" }}</a>
+            <a href="https://max.vk.com/" target="_blank" class="copy-btn" style="display:inline-block;margin-top:6px;text-decoration:none;text-align:center;">{{ "Open MAX" if lang == "en" else "Открыть Макс" }}</a>
         </div>
     </div>
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="{{ 'Back to top' if lang == 'en' else 'Наверх' }}" title="{{ 'Back to top' if lang == 'en' else 'Наверх' }}">↑</button>
@@ -386,7 +390,7 @@
 
 <!-- Sticky mobile CTA -->
 <div class="sticky-cta">
-    <a href="#agent-form" class="btn btn-primary" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
+    <a href="#agent-form" class="btn btn-accent btn-lg btn-full">{{ "Plan my trip →" if lang == "en" else "Спланировать поездку →" }}</a>
 </div>
 
 <script>

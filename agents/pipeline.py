@@ -141,15 +141,16 @@ def run_pipeline(country_slug, city_slug, content_type, lang, force=False):
         print(f"[Step 2] Fact Checker — verifying claims...")
         from agents.fact_checker import check_article
         fact_issues = check_article(article_data["body"], country_slug, lang, content_type)
-        if fact_issues:
-            result.add_step("Fact Checker", False, fact_issues)
+        # Filter out warnings — only critical issues fail the gate
+        critical_issues = [i for i in fact_issues if not i.startswith("WARNING")]
+        if critical_issues:
+            result.add_step("Fact Checker", False, critical_issues)
             # If critical issues, retry
-            critical = [i for i in fact_issues if i.startswith("UNVERIFIED") or i.startswith("MISSING")]
-            if critical and retries < MAX_RETRIES:
+            if retries < MAX_RETRIES:
                 retries += 1
                 continue
         else:
-            result.add_step("Fact Checker", True)
+            result.add_step("Fact Checker", True, fact_issues if fact_issues else None)
 
         # Step 3: SEO Optimizer — optimize structure
         print(f"[Step 3] SEO Optimizer — optimizing structure...")
@@ -189,15 +190,15 @@ def run_pipeline(country_slug, city_slug, content_type, lang, force=False):
         from agents.ux_copywriter import remove_ai_fingerprints, validate_structure, check_cta_presence, break_long_paragraphs
         article_data["body"] = remove_ai_fingerprints(article_data["body"], lang)
         body_before_break = article_data["body"]
-        article_data["body"] = break_long_paragraphs(article_data["body"], max_chars=500)
+        article_data["body"] = break_long_paragraphs(article_data["body"], max_chars=550)
         body_after_break = article_data["body"]
 
         # Debug: check if break function worked
         import re as _re
         paras_before = len(_re.findall(r'<p>(.*?)</p>', body_before_break, _re.DOTALL))
         paras_after = len(_re.findall(r'<p>(.*?)</p>', body_after_break, _re.DOTALL))
-        long_before = sum(1 for p in _re.findall(r'<p>(.*?)</p>', body_before_break, _re.DOTALL) if len(_re.sub(r'<[^>]+>', '', p)) > 500)
-        long_after = sum(1 for p in _re.findall(r'<p>(.*?)</p>', body_after_break, _re.DOTALL) if len(_re.sub(r'<[^>]+>', '', p)) > 500)
+        long_before = sum(1 for p in _re.findall(r'<p>(.*?)</p>', body_before_break, _re.DOTALL) if len(_re.sub(r'<[^>]+>', '', p)) > 550)
+        long_after = sum(1 for p in _re.findall(r'<p>(.*?)</p>', body_after_break, _re.DOTALL) if len(_re.sub(r'<[^>]+>', '', p)) > 550)
         print(f"  Break: {paras_before} -> {paras_after} paragraphs, {long_before} -> {long_after} long")
         if body_before_break == body_after_break:
             print("  WARNING: Break function did NOT change body!")

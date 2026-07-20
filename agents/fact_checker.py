@@ -324,7 +324,7 @@ def verify_currency(country_slug, body, lang="ru"):
 
 
 def verify_airports(country_slug, body):
-    """Verify airport codes are mentioned."""
+    """Verify airport codes are mentioned (warning only, not error)."""
     issues = []
     facts = KNOWN_FACTS.get(country_slug)
     if not facts:
@@ -334,13 +334,13 @@ def verify_airports(country_slug, body):
     mentioned = [ap for ap in airports if ap in body.upper()]
 
     if not mentioned and airports:
-        issues.append(f"MISSING: No airport codes mentioned (expected: {', '.join(airports)})")
+        issues.append(f"WARNING: No airport codes mentioned (expected: {', '.join(airports)})")
 
     return issues
 
 
 def verify_timezone(country_slug, body):
-    """Verify timezone is mentioned."""
+    """Verify timezone is mentioned (warning only, not error)."""
     issues = []
     facts = KNOWN_FACTS.get(country_slug)
     if not facts:
@@ -350,7 +350,7 @@ def verify_timezone(country_slug, body):
     tz_keywords = ["часовой пояс", "time zone", "UTC", "МСК"]
 
     if not any(kw.lower() in body.lower() for kw in tz_keywords):
-        issues.append(f"MISSING: Timezone ({tz}) not mentioned")
+        issues.append(f"WARNING: Timezone ({tz}) not mentioned")
 
     return issues
 

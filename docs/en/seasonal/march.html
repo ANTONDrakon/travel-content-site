@@ -222,9 +222,11 @@
             <a href="/travel-content-site/en/index.html" class="nav-link">Home</a>
             <a href="/travel-content-site/en/about.html" class="nav-link">About</a>
             <a href="/travel-content-site/en/contacts.html" class="nav-link">Contacts</a>
-            <a href="/travel-content-site/en/seasonal/march.html" class="lang-btn active">EN</a>
-            <a href="/travel-content-site/ru/seasonal/march.html" class="lang-btn ">RU</a>
         </nav>
+        <div class="lang-switcher">
+            <a href="/travel-content-site/ru/seasonal/march.html" class="lang-btn ">Русский</a>
+            <a href="/travel-content-site/en/seasonal/march.html" class="lang-btn active">English</a>
+        </div>
         <button class="hamburger" onclick="document.getElementById('mobile-nav').classList.toggle('open')" aria-label="Menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
@@ -233,8 +235,10 @@
         <a href="/travel-content-site/en/index.html">Home</a>
         <a href="/travel-content-site/en/about.html">About</a>
         <a href="/travel-content-site/en/contacts.html">Contacts</a>
-        <a href="/travel-content-site/en/seasonal/march.html">English</a>
-        <a href="/travel-content-site/ru/seasonal/march.html">Русский</a>
+        <div class="mobile-lang-switcher">
+            <a href="/travel-content-site/ru/seasonal/march.html" class="lang-btn ">Русский</a>
+            <a href="/travel-content-site/en/seasonal/march.html" class="lang-btn active">English</a>
+        </div>
     </nav>
 </header>
 
@@ -434,7 +438,7 @@
         <h2>Need help planning your trip?</h2>
         <div class="agent-grid">
             <div>
-                <p style="font-size:16px;color:var(--charcoal);line-height:1.7;margin-bottom:16px;">
+                <p class="body-m" style="color:var(--text-secondary);margin-bottom:var(--sp-4);">
                     Welcome to our travel guides! We are a team of travel experts who research destinations worldwide to bring you honest, practical information. Our guides include tips on how to save on flights, book great hotels, arrange affordable transfers, and stay connected with eSIM. All prices are approximate estimates — always check current rates on partner sites. Want personalized help? Contact us and we&#39;ll help plan your perfect trip.
                 </p>
                 <ul class="agent-benefits">
@@ -445,7 +449,7 @@
                 </ul>
             </div>
             <div>
-                <p style="font-weight:700;font-size:18px;margin-bottom:16px;color:var(--ink);">Plan your perfect trip — we&#39;ll handle the details</p>
+                <p class="h4" style="margin-bottom:var(--sp-4);">Plan your perfect trip — we&#39;ll handle the details</p>
                 <form class="contact-form" action="https://formspree.io/f/xnjyjnnd" method="POST">
                     <input type="text" name="name" placeholder="Your name *" required>
                     <input type="email" name="email" placeholder="Email">
@@ -527,7 +531,7 @@
                 <span class="logo-icon">✈</span>
                 TravelHub
             </a>
-            <p style="margin-top:var(--sp-3);font-size:14px;color:var(--text-secondary);">Your trusted travel guide: hotels, flights, attractions, and expert tips.</p>
+            <p class="footer-brand-desc">Your trusted travel guide: hotels, flights, attractions, and expert tips.</p>
         </div>
         <div class="footer-col">
             <h5>Destinations</h5>
@@ -571,7 +575,7 @@
                 <li>💬 <a href="https://t.me/travelhub" target="_blank">Telegram</a></li>
                 <li>📱 <a href="https://max.vk.com/" target="_blank">MAX Messenger</a></li>
             </ul>
-            <p style="font-size:13px;color:var(--text-muted);margin-top:var(--sp-4);">All prices are approximate. Verify on partner sites.</p>
+            <p class="footer-disclaimer">All prices are approximate. Verify on partner sites.</p>
         </div>
     </div>
     <div class="footer-bottom">
@@ -592,7 +596,7 @@
             <p><strong>Write to us in MAX</strong></p>
             <div class="msg-text" id="prefilled-msg">Hello! I&#39;m interested in a tour. Can you help?</div>
             <button class="copy-btn" onclick="copyMsg()">Copy text</button>
-            <a href="https://max.vk.com/" target="_blank" class="copy-btn" style="display:inline-block;margin-top:6px;text-decoration:none;background:#0077FF;text-align:center;">Open MAX</a>
+            <a href="https://max.vk.com/" target="_blank" class="copy-btn" style="display:inline-block;margin-top:6px;text-decoration:none;text-align:center;">Open MAX</a>
         </div>
     </div>
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed-btn" aria-label="Back to top" title="Back to top">↑</button>
@@ -600,7 +604,7 @@
 
 <!-- Sticky mobile CTA -->
 <div class="sticky-cta">
-    <a href="#agent-form" class="btn btn-primary" style="display:block;text-align:center;width:100%;padding:14px;font-size:16px;">Plan my trip →</a>
+    <a href="#agent-form" class="btn btn-accent btn-lg btn-full">Plan my trip →</a>
 </div>
 
 <script>
